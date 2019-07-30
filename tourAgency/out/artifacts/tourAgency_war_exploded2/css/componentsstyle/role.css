@@ -1,0 +1,34 @@
+.role {
+    justify-content: flex-end;
+    display: flex;
+    color: #fff;
+    flex-grow: 1;
+}
+.client{
+    margin-right: 10px;
+    color: greenyellow;
+}
+.agent{
+    margin-right: 10px;
+    color: blue;
+}
+.admin{
+    margin-right: 10px;
+    color: red;
+}
+.guest{
+    margin-right: 10px;
+    color: gold;
+}
+.userName{
+    text-transform: none;
+    font-weight: normal;
+    color: white;
+}
+.userName:hover{
+    color: purple;
+}
+.navigationRef{
+    color: #fff;
+    margin-right: 41px;
+}

@@ -1,0 +1,31 @@
+.tourRegistrationForm{
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: -webkit-fill-available;
+}
+.tourContent{
+    align-items: center;
+    justify-content: center;
+    padding: 10px 40px 50px 40px;
+    background-color: white;
+    display: block;
+    font-size: 20px;
+    text-transform: none;
+    color: black;
+    text-align: left;
+    position: absolute;
+    width: 16cm;
+    margin-top: 7cm;
+    height: 24cm;
+}
+.contentItemMsg{
+    font-weight: bold;
+    color: darkgray;
+}
+.contentItem{
+    margin: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+}

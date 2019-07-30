@@ -1,0 +1,24 @@
+.navigation {
+    justify-content: center;
+    flex-grow: 1;
+    display: flex;
+    position: relative;
+    outline-width: 0 !important;
+
+    font-size: 16px;
+    font-family: Arial, serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.navigationRef {
+    color: #fff;
+    margin-right: 41px;
+}
+
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: purple;
+}
+

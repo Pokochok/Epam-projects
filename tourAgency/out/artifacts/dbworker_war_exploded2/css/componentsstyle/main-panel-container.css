@@ -1,0 +1,35 @@
+*{
+    font-family: Arial, serif;
+}
+.container {
+    background: rgb(119, 206, 227);
+    display: flex;
+    padding: 10px 10px 10px 30px;
+    height: 55px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    font-size: 16px;
+    text-transform: uppercase;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+html{
+    background: linear-gradient(rgba(0, 78, 90, 0.45), rgba(0, 78, 90, 0.45)),  url(../../images/background.jpg) center center no-repeat fixed;
+    background-size: cover;
+}
+
+.logo{
+    flex-grow: 0.5;
+    justify-content: flex-end;
+    padding-left: 10px;
+    height: 55px;
+}
+#auxiliary{
+    flex-grow: 4;
+}

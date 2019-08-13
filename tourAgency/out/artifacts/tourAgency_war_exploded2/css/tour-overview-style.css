@@ -1,18 +1,27 @@
 .contentForm{
-    padding: 30px;
+    padding-top: 40px;
+    position: static;
+    display: flex;
+    align-items: normal;
+    justify-content: center;
+    height: -webkit-fill-available;
+}
+.contentContainer{
+    padding: 10px 70px 50px 70px;
     background-color: white;
     display: block;
-    justify-content: space-between;
-    position: absolute;
-    margin-right: 3cm;
-    margin-left: 2.5cm;
-    top: 4cm;
-    left: auto;
-    height: auto;
-    width: -webkit-fill-available;
+    font-size: 20px;
+    text-transform: none;
+    color: black;
+    text-align: -webkit-center;
+    position: inherit;
+    width: fit-content;
+    height: fit-content;
+    justify-content: center;
+    margin: 2cm 3cm;
 }
 .tourName{
-    font-size: x-large;
+    font-size: xx-large;
     font-weight: bold;
 }
 .itemMsg{
@@ -20,7 +29,6 @@
 }
 .contentItem{
     margin: 30px 15px;
-    width: 10cm;
     justify-content: space-between;
     display: flex;
 }

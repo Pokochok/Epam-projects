@@ -2,7 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
-<fmt:setBundle basename="jsp/Tours"/>
+<fmt:setBundle basename="jsp/tours"/>
 <html>
 
 <body>
@@ -10,7 +10,7 @@
 <div class="tourItem">
 
     <div class="MinInf">
-        <div class="TourName">
+        <div class="TourName" <c:if test="${param.status == 'NOT_AVAILABLE'}"> style="color: red" </c:if> >
             <c:out value="${param.tourName}"/>
         </div>
 
@@ -23,6 +23,7 @@
         <form method="POST" action="controller">
             <input type="hidden" name="command" value="to_tour_overview"/>
             <input type="hidden" name="tourName" value="${param.tourName}"/>
+            <input type="hidden" name="tourId" value="${param.tourId}"/>
             <input type="hidden" name="arrivalCountry" value="${param.arrivalCountry}"/>
             <input type="hidden" name="arrivalCity" value="${param.arrivalCity}"/>
             <input type="hidden" name="departureCity" value="${param.departureCity}"/>
@@ -33,6 +34,7 @@
             <input type="hidden" name="adultsNumber" value="${param.adultsNumber}"/>
             <input type="hidden" name="childrenNumber" value="${param.childrenNumber}"/>
             <input type="hidden" name="price" value="${param.price}"/>
+            <input type="hidden" name="status" value="${param.status}"/>
 
             <fmt:message key="common.tourForm.submit.from" var="from"/>
             <div>

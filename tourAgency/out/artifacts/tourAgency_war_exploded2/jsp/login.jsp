@@ -1,19 +1,15 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<c:set var="language"
-       value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}"
-       scope="session"/>
-<fmt:setLocale value="${language}" scope="session"/>
-<fmt:setBundle basename="jsp/Login"/>
 
 <html>
 <head>
+    <%@include file="components/another-panel.jsp"%>
     <link href="../css/login-style.css" rel="stylesheet" type="text/css">
+    <fmt:setBundle basename="jsp/login"/>
     <title><fmt:message key="login.title"/></title>
 </head>
 <body>
-<c:import url="components/another-panel.jsp"/>
 
 <form class="loginForm" method="POST" action="controller">
     <input type="hidden" name="command" value="Login"/>
@@ -40,9 +36,12 @@
             </label>
         </div>
 
-        <br> ${errorLoginPassMessage}
-        <br> ${wrongAction}
-        <br> ${nullPage}
+        <div class="InfMsg">
+            <br> ${param.notAuthorized}
+            <br> ${errorLoginPassMessage}
+            <br> ${wrongAction}
+            <br> ${nullPage}
+        </div>
 
         <fmt:message key="login.submit.login" var="logInButton"/>
         <label>

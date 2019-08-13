@@ -1,4 +1,5 @@
 .language {
+    font-size: 15px;
     width: 190px;
     justify-content: flex-end;
     color: #fff;
@@ -8,7 +9,6 @@
 }
 
 .selection-handle{
-    font-size: 16px;
     font-family: sans-serif;
     font-weight: 500;
     color: #444;

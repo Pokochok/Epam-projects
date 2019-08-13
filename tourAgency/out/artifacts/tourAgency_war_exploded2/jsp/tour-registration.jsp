@@ -2,16 +2,16 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
-<fmt:setBundle basename="jsp/TourRegistration"/>
 <html>
 <head>
-    <link href="../css/tour-registration-style.css" rel="stylesheet" type="text/css">
+    <%@include file="components/another-panel.jsp" %>
+    <link href="../css/registration-style.css" rel="stylesheet" type="text/css">
+    <fmt:setBundle basename="jsp/tour-registration"/>
     <title><fmt:message key="message.title"/></title>
 </head>
 <body>
-<c:import url="components/another-panel.jsp"/>
 
-<form class="tourRegistrationForm" method="POST" action="controller">
+<form class="registrationForm" method="POST" action="controller">
 
 
     <div class="tourContent">
@@ -25,10 +25,10 @@
             </div>
 
             <label>
-                <input type="text" name="tourName" required maxlength="40" minlength="1"/>
+                <input type="text" name="tourName" required maxlength="40" minlength="1"
+                       pattern="^[\sa-zA-Z.,_%+-]{1,40}$"/>
             </label>
         </div>
-        <br>
         ${errorTourNameExists}
 
         <div class="contentItem">
@@ -58,7 +58,7 @@
             </div>
 
             <label>
-                <input type="text" name="departureCity" required pattern="^[A-zА-яЁё]+$"/>
+                <input type="text" name="departureCity" required pattern="^[\sa-zA-Z.,_%+-]{1,40}$""/>
             </label>
         </div>
 
@@ -68,7 +68,7 @@
             </div>
 
             <label>
-                <input type="text" name="arrivalCity" required pattern="^[A-zА-яЁё]+$"/>
+                <input type="text" name="arrivalCity" required pattern="^[\sa-zA-Z.,_%+-]{1,40}$"/>
             </label>
         </div>
 
@@ -78,7 +78,7 @@
             </div>
 
             <label>
-                <input type="text" name="arrivalCountry" required pattern="^[A-zА-яЁё]+$"/>
+                <input type="text" name="arrivalCountry" required pattern="^[\sa-zA-Z.,_%+-]{1,40}$"/>
             </label>
         </div>
 
@@ -88,7 +88,7 @@
             </div>
 
             <label>
-                <input type="text" name="hotel" required />
+                <input type="text" name="hotel" required pattern="^[\sa-zA-Z.,_%+-]{1,40}$"/>
             </label>
         </div>
 
@@ -98,7 +98,7 @@
             </div>
 
             <label>
-                <input type="text" name="nutrition" required />
+                <input type="text" name="nutrition" required pattern="^[A-Z]{2,3}[+]?$"/>
             </label>
         </div>
 
@@ -108,7 +108,7 @@
             </div>
 
             <label>
-                <input type="text" name="numberOfAdults" required pattern="^\d+$" min="0" max="100"/>
+                <input type="text" name="adultsNumber" required pattern="^([0-4]?\d|50)$" min="0" max="50"/>
             </label>
         </div>
 
@@ -118,7 +118,7 @@
             </div>
 
             <label>
-                <input type="text" name="numberOfChildren" required pattern="^\d+$" min="0" max="100"/>
+                <input type="text" name="childrenNumber" required pattern="^([0-4]?\d|50)$" min="0" max="50"/>
             </label>
         </div>
 
@@ -128,12 +128,12 @@
             </div>
 
             <label>
-                <input type="text" name="price" required pattern="^\d+$" min="1" max="200000"/>
+                <input type="text" name="price" required pattern="^([1]?\d?\d?\d?\d?\d([.]\d\d)?|200000([.]\d\d)?)$" min="1" max="200000"/>
             </label>
         </div>
 
         <div class="contentItem">
-            <label>
+            <label class="radio-button">
                 <input type="radio" name="isAvailable" value="AVAILABLE" checked><fmt:message
                     key="message.radio.available"/> <br>
                 <input type="radio" name="isAvailable" value="NOT_AVAILABLE"><fmt:message

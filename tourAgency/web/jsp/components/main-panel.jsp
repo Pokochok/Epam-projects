@@ -1,8 +1,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-
-<fmt:setBundle basename="jsp/Home"/>
+<c:set var="language"
+       value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}"
+       scope="session"/>
+<fmt:setLocale value="${language}" scope="session"/>
+<fmt:setBundle basename="jsp/home"/>
 <html>
 <head>
     <link href="../../css/componentsstyle/main-panel-container.css" rel="stylesheet" type="text/css">
@@ -12,7 +15,7 @@
     <div class="logo">
         <img src="../../images/logo.png" alt="">
     </div>
-    <c:import url="components/home-navigation.jsp"/>
+    <c:import url="components/main-panel-action.jsp"/>
 </header>
 </body>
 </html>

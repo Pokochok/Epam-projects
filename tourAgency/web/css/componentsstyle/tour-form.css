@@ -1,7 +1,7 @@
 .tourItem{
     background-color: ghostwhite;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     top: auto;
     left: auto;
@@ -10,7 +10,7 @@
     width: 15cm;
 }
 .MinInf{
-    display: block;
+    display: flex;
 }
 .TourName{
     font-weight: bold;

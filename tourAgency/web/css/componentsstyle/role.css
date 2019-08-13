@@ -1,5 +1,7 @@
 .role {
+    font-size: 15px;
     justify-content: flex-end;
+    align-items: center;
     display: flex;
     color: #fff;
     flex-grow: 1;
@@ -30,5 +32,8 @@
 }
 .navigationRef{
     color: #fff;
-    margin-right: 41px;
+    margin-right: 33px;
+}
+.userName{
+    display: block;
 }

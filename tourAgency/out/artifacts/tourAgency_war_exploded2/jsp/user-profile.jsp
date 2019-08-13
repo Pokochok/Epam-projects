@@ -1,34 +1,85 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<c:set var="language"
-       value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}"
-       scope="session"/>
-<fmt:setLocale value="${language}" scope="session"/>
-<fmt:setBundle basename="jsp/userProfile"/>
 
 <html>
 <head>
+    <%@include file="components/main-panel.jsp"%>
     <link href="../css/profile-style.css" rel="stylesheet" type="text/css"/>
+    <fmt:setBundle basename="jsp/user-profile"/>
     <title><fmt:message key="common.title"/></title>
 </head>
 <body>
-<c:import url="components/main-panel.jsp"/>
 
 <form class="mainProfileContainer">
     <div class="userContent">
-        <div class="userContentItem">
-            <div class="userContentItemMsg">
-                <fmt:message key="common.message.name"/>
+        <form class="userContentItem" method="POST" action="controller">
+            <div class="userContentItemMsg"><fmt:message key="common.message.name"/></div>
+
+            <c:out value="${userName}"/>
+
+            <a id="changeUserNameMsg" onclick="document.getElementById('changeUserNameMsg').hidden=true;
+               document.getElementById('changeUserNameDiv').hidden=false;
+               document.getElementById('newUserName').required=true">
+                <fmt:message key="common.change"/>
+            </a>
+
+            <div hidden
+                 id="changeUserNameDiv">
+                <a id="closeUserName" onclick="document.getElementById('changeUserNameMsg').hidden=false;
+                document.getElementById('changeUserNameDiv').hidden=true;
+                document.getElementById('newUserName').required=false">
+                    <fmt:message key="common.close"/>
+                </a>
+
+                <div id="changeUserName">
+                    <label>
+                        <input type="hidden" name="command" value="change_user_name"/>
+
+                        <input type="text" id="newUserName" name="newUserName" pattern="^[^!@#$%^&*().,_\d=|?`~/<>]{1,30}$">
+
+                        <fmt:message key="common.changeUserName" var="changeUserNameButton"/>
+
+                        <input type="submit" value="${changeUserNameButton}">
+                    </label>
+                </div>
             </div>
-            <c:out value="${userName}"/> <a href=""> <fmt:message key="common.change"/></a>
-        </div>
-        <div class="userContentItem">
-            <div class="userContentItemMsg">
-                <fmt:message key="common.message.surname"/>
+            ${errorChangeUserName}
+        </form>
+
+        <form class="userContentItem" method="POST" action="controller">
+            <div class="userContentItemMsg"><fmt:message key="common.message.surname"/></div>
+
+            <c:out value="${userSurname}"/>
+
+            <a id="changeUserSurnameMsg" onclick="document.getElementById('changeUserSurnameMsg').hidden=true;
+               document.getElementById('changeUserSurnameDiv').hidden=false;
+               document.getElementById('newUserSurname').required=true">
+                <fmt:message key="common.change"/>
+            </a>
+
+            <div hidden
+                 id="changeUserSurnameDiv">
+                <a id="closeUserSurname" onclick="document.getElementById('changeUserSurnameMsg').hidden=false;
+                document.getElementById('changeUserSurnameDiv').hidden=true;
+                document.getElementById('newUserSurname').required=false">
+                    <fmt:message key="common.close"/>
+                </a>
+
+                <div id="changeUserSurname">
+                    <label>
+                        <input type="hidden" name="command" value="change_user_surname"/>
+
+                        <input type="text" id="newUserSurname" name="newUserSurname" pattern="^[^!@#$%^&*().,_\d=|?`~/<>]{1,30}$">
+
+                        <fmt:message key="common.changeUserSurname" var="changeUserSurnameButton"/>
+
+                        <input type="submit" value="${changeUserSurnameButton}">
+                    </label>
+                </div>
             </div>
-            <c:out value="${userSurname}"/> <a href=""> <fmt:message key="common.change"/> </a>
-        </div>
+            ${errorChangeUserSurname}
+        </form>
 
         <form class="userContentItem" method="POST" action="controller">
             <div class="userContentItemMsg"><fmt:message key="common.message.phoneNumber"/></div>
@@ -62,21 +113,78 @@
                 </div>
             </div>
             ${errorChangePhoneNumber}
+            ${errorPNExistsMessage}
         </form>
 
-        <div class="userContentItem">
-            <div class="userContentItemMsg">
-                <fmt:message key="common.message.email"/>
-            </div>
-            <c:out value="${userEmail}"/> <a href=""> <fmt:message key="common.change"/> </a>
-        </div>
+        <form class="userContentItem" method="POST" action="controller">
+            <div class="userContentItemMsg"><fmt:message key="common.message.email"/></div>
 
-        <div class="userContentItem">
-            <div class="userContentItemMsg">
-                <fmt:message key="common.message.login"/>
+            <c:out value="${userEmail}"/>
+
+            <a id="changeEmailMsg" onclick="document.getElementById('changeEmailMsg').hidden=true;
+               document.getElementById('changeEmailDiv').hidden=false;
+               document.getElementById('newEmail').required=true">
+                <fmt:message key="common.change"/>
+            </a>
+
+            <div hidden
+                 id="changeEmailDiv">
+                <a id="closeChangeEmail" onclick="document.getElementById('changeEmailMsg').hidden=false;
+                document.getElementById('changeEmailDiv').hidden=true;
+                document.getElementById('newEmail').required=false">
+                    <fmt:message key="common.close"/>
+                </a>
+
+                <div id="changeEmail">
+                    <label>
+                        <input type="hidden" name="command" value="change_email"/>
+
+                        <input type="text" id="newEmail" name="newEmail" pattern="^[a-zA-Z0-9.,_%+-]+@(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}$">
+
+                        <fmt:message key="common.changeEmail" var="changeEmailButton"/>
+
+                        <input type="submit" value="${changeEmailButton}">
+                    </label>
+                </div>
             </div>
-            <c:out value="${userLogin}"/> <a href=""> <fmt:message key="common.change"/> </a>
-        </div>
+            ${errorChangeEmail}
+            ${errorEmailExistsMessage}
+        </form>
+
+        <form class="userContentItem" method="POST" action="controller">
+            <div class="userContentItemMsg"><fmt:message key="common.message.login"/></div>
+
+            <c:out value="${userLogin}"/>
+
+            <a id="changeLoginMsg" onclick="document.getElementById('changeLoginMsg').hidden=true;
+               document.getElementById('changeLoginDiv').hidden=false;
+               document.getElementById('newLogin').required=true">
+                <fmt:message key="common.change"/>
+            </a>
+
+            <div hidden
+                 id="changeLoginDiv">
+                <a id="closeChangeLogin" onclick="document.getElementById('changeLoginMsg').hidden=false;
+                document.getElementById('changeLoginDiv').hidden=true;
+                document.getElementById('newLogin').required=false">
+                    <fmt:message key="common.close"/>
+                </a>
+
+                <div id="changeLogin">
+                    <label>
+                        <input type="hidden" name="command" value="change_login"/>
+
+                        <input type="text" id="newLogin" name="newLogin">
+
+                        <fmt:message key="common.changeLogin" var="changeLoginButton"/>
+
+                        <input type="submit" value="${changeLoginButton}">
+                    </label>
+                </div>
+            </div>
+            ${errorChangeLogin}
+            ${errorLoginExistsMessage}
+        </form>
 
         <form class="userContentItem" method="POST" action="controller">
             <div class="userContentItemMsg">

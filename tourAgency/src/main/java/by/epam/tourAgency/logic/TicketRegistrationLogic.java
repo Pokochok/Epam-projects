@@ -8,7 +8,21 @@ import by.epam.tourAgency.specification.Specification;
 import by.epam.tourAgency.specification.impl.ticket.AddTicketSpecification;
 import by.epam.tourAgency.specification.impl.ticket.FindTicketsByAllContentSpecification;
 
+/**
+ * For ticket registration logic
+ */
 public class TicketRegistrationLogic {
+    /**
+     * Checks, if ticket with such parameters exists
+     * @param flightNumber flight number
+     * @param ticketNumber ticket number
+     * @param departureCity departure city
+     * @param arrivalCity arrival city
+     * @param departureDate departure date
+     * @param arrivalDate arrival date
+     * @return true, if ticket exists, and false - if not
+     * @throws LogicException if handled RepositoryException
+     */
     public static boolean isTicketExists(String flightNumber, String ticketNumber, String departureCity,
                                          String arrivalCity, long departureDate, long arrivalDate) throws LogicException {
         boolean flag = false;
@@ -24,6 +38,16 @@ public class TicketRegistrationLogic {
         return flag;
     }
 
+    /**
+     * Adds ticket to database
+     * @param flightNumber flight number
+     * @param ticketNumber ticket number
+     * @param departureCity departure city
+     * @param arrivalCity arrival city
+     * @param departureDate departure date
+     * @param arrivalDate arrival date
+     * @throws LogicException if handled RepositoryException
+     */
     public static void addTicket(String flightNumber, String ticketNumber, String departureCity,
                                  String arrivalCity, long departureDate, long arrivalDate) throws LogicException {
         Ticket ticket = new Ticket.TicketBuilder()

@@ -2,6 +2,9 @@ package by.epam.tourAgency.command;
 
 import by.epam.tourAgency.command.impl.*;
 
+/**
+ * Enum for defining command, received from request
+ */
 public enum CommandEnum {
     LOGIN {
         {
@@ -201,6 +204,10 @@ public enum CommandEnum {
 
     ActionCommand command;
 
+    /**
+     * Returns command, which was created
+     * @return command
+     */
     public ActionCommand getCurrentCommand() {
         return command;
     }

@@ -4,14 +4,40 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Enumeration;
 import java.util.HashMap;
 
+/**
+ * Class-wrapper, which contains all data from HttpServletRequest object,
+ * that command needs, to perform action
+ */
 public class SessionRequestContent {
+    /**
+     * Request attributes from HttpServletRequest
+     */
     private HashMap<String, Object> requestAttributes;
+    /**
+     * Values of parameters in request from HttpServletRequest
+     */
     private HashMap<String, String[]> requestParametersValues;
+    /**
+     * Request parameters from HttpServletRequest
+     */
     private HashMap<String, String> requestParameters;
+    /**
+     * Session attributes from HttpServletRequest
+     */
     private HashMap<String, Object> sessionAttributes;
+    /**
+     * Field for defining locale
+     */
     private String localName;
+    /**
+     * Flag for determine whether to invalidate session
+     */
     private boolean invalidateSession;
 
+    /**
+     * Constructs a new object that will contain request
+     * content
+     */
     public SessionRequestContent() {
         requestAttributes = new HashMap<>();
         requestParametersValues = new HashMap<>();
@@ -19,6 +45,11 @@ public class SessionRequestContent {
         requestParameters = new HashMap<>();
     }
 
+    /**
+     * Receives data from request
+     * @param request the object of HttpServletRequest type, from
+     *                which data will be obtained
+     */
     public void extractValues(HttpServletRequest request) {
         Enumeration<String> attributeNames = request.getAttributeNames();
         while (attributeNames.hasMoreElements()) {
@@ -48,6 +79,11 @@ public class SessionRequestContent {
         invalidateSession = false;
     }
 
+    /**
+     * Unload data to request
+     * @param request the object of HttpServletRequest type,
+     *                to which data will be transferred
+     */
     public void insertAttributes(HttpServletRequest request) {
         for (String attributeName : requestAttributes.keySet()) {
             request.setAttribute(attributeName, requestAttributes.get(attributeName));

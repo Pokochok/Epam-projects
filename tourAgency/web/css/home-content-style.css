@@ -3,11 +3,17 @@
      position: absolute;
      margin-right: 3cm;
      margin-left: 2.5cm;
-     top: 15cm;
+     top: 14cm;
      left: auto;
-     height: auto;
+     height: fit-content;
      width: -webkit-fill-available;
  }
+a{
+    color: darkturquoise;
+}
+a:hover{
+    color: purple;
+}
 .startMessage{
     font-size: 45px;
     font-family: Arial, serif;
@@ -29,7 +35,7 @@
     text-transform: none;
     color: black;
     text-align: center;
-    position: absolute;
+    position: initial;
     top: 0.6cm;
     width: -webkit-fill-available;
     margin: 10px;

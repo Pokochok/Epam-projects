@@ -13,6 +13,9 @@
         <div class="TourName"
                 <c:if test="${param.paymentState == 'false'}"> style="color: orange" </c:if>
                 <c:if test="${param.paymentState == 'true'}"> style="color: green"</c:if> >
+            <div class="MinInfMsg">
+                <fmt:message key="common.message.tourName"/>
+            </div>
             <c:if test="${param.tourName == 'not defined'}">
                 <c:out value="--"/>
             </c:if>
@@ -22,6 +25,9 @@
         </div>
 
         <div class="ticketInf">
+            <div class="MinInfMsg">
+                <fmt:message key="common.message.ticketInf"/>
+            </div>
             <c:if test="${param.ticketId != '0'}">
                 <div class="ticketPlace">
                     <c:out value="${param.departureCity} - ${param.arrivalCity}"/>
@@ -36,6 +42,9 @@
         </div>
 
         <div class="clientInf">
+            <div class="MinInfMsg">
+                <fmt:message key="common.message.clientInf"/>
+            </div>
             <div>
                 <c:out value="${param.clientName}"/>
             </div>
@@ -46,6 +55,9 @@
 
 
         <div class="agentInf">
+            <div class="MinInfMsg">
+                <fmt:message key="common.message.agentInf"/>
+            </div>
             <c:if test="${param.agentName != 'not defined'}">
                 <div>
                     <c:out value="${param.agentName}"/>

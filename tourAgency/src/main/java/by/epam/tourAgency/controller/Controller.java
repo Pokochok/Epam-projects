@@ -6,8 +6,6 @@ import by.epam.tourAgency.exception.CommandException;
 import by.epam.tourAgency.logic.DefineActionCommandLogic;
 import by.epam.tourAgency.resource.ConfigurationManager;
 import by.epam.tourAgency.resource.MessageManager;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -19,11 +17,14 @@ import java.io.IOException;
 import java.util.Locale;
 
 import static by.epam.tourAgency.util.PageMsgConstant.*;
+import static by.epam.tourAgency.util.PageMsgConstant.LOGGER;
 import static by.epam.tourAgency.util.ParameterConstant.*;
 
+/**
+ * Main application servlet
+ */
 @WebServlet("/controller")
 public class Controller extends HttpServlet {
-    private static final Logger LOGGER = LogManager.getLogger();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -43,8 +44,16 @@ public class Controller extends HttpServlet {
     @Override
     public void init() throws ServletException {
         super.init();
+        LOGGER.info("Servlet was initialized successfully");
     }
 
+    /**
+     * Process request
+     * @param request object of HttpServletRequest type
+     * @param response object of HttpServletResponse type
+     * @throws ServletException if forward not completed with success
+     * @throws IOException if forward, redirect or error sending not completed with success
+     */
     private void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         SessionRequestContent requestContent = new SessionRequestContent();
         requestContent.extractValues(request);
@@ -55,6 +64,7 @@ public class Controller extends HttpServlet {
         try {
             page = command.execute(requestContent);
         } catch (CommandException e) {
+            LOGGER.error("User role is not defined while updating login", e);
             response.sendError(500, e.toString());
         }
         requestContent.insertAttributes(request);

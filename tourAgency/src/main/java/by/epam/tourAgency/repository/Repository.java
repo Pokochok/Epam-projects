@@ -15,15 +15,49 @@ import java.util.Set;
 
 import static by.epam.tourAgency.util.PageMsgConstant.LOGGER;
 
+/**
+ * Class, which simplifies database interaction
+ * @param <T> the type of elements processed by this repository
+ */
 public interface Repository<T> {
+    /**
+     * Adds element in database according to specification
+     * @param item
+     * @param specification which determine adding
+     * @throws RepositoryException if handled ConnectionPoolException or other
+     */
     void add(T item, Specification specification) throws RepositoryException;
 
-    void update(T entity, Specification specification) throws RepositoryException; // FIXME: 16/07/2019 убрать T entity из параметров, сделать абстрактным классом и имплементировать репозиторий с добавлением default  методов
+    /**
+     * Updates element in database according to specification
+     * @param entity
+     * @param specification which determine updating
+     * @throws RepositoryException if handled ConnectionPoolException or other
+     */
+    void update(T entity, Specification specification) throws RepositoryException;
 
+    /**
+     * Removes element in database according to specification
+     * @param entity
+     * @param specification which determine removing
+     * @throws RepositoryException if handled ConnectionPoolException or other
+     */
     void remove(T entity, Specification specification) throws RepositoryException;
 
+    /**
+     * Makes a request to database according to specification
+     * @param specification which determine request
+     * @return entities set
+     * @throws RepositoryException  if handled ConnectionPoolException or other
+     */
     Set<T> query(Specification specification) throws RepositoryException;
 
+    /**
+     * Defines if database has elements according to specification
+     * @param specification which determine request
+     * @return true if database found element, false - if not
+     * @throws RepositoryException if handled ConnectionPoolException or other
+     */
     default boolean isExistsQuery(Specification specification) throws RepositoryException {
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
@@ -53,6 +87,12 @@ public interface Repository<T> {
         return flag;
     }
 
+    /**
+     * Sets values from specification to prepared statement
+     * @param preparedStatement in which values will be sets
+     * @param specification this values will be sets in prepared statement
+     * @throws SQLException if prepared statement actions not completed with success
+     */
     default void setPreparedStatementValues(PreparedStatement preparedStatement, Specification specification) throws SQLException {
         int i = 0;
         ArrayDeque params = specification.getParameterQueue();
@@ -70,6 +110,10 @@ public interface Repository<T> {
         }
     }
 
+    /**
+     * Closes prepared statement
+     * @param preparedStatement which will be closed
+     */
     default void closePreparedStatement(PreparedStatement preparedStatement) {
         try {
             preparedStatement.close();
@@ -79,6 +123,10 @@ public interface Repository<T> {
         }
     }
 
+    /**
+     * Closes result set
+     * @param resultSet which will be closed
+     */
     default void closeResultSet(ResultSet resultSet) {
         try {
             resultSet.close();

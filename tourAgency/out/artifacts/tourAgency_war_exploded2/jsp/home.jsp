@@ -16,18 +16,14 @@
 </div>
 
 <form class="contentForm">
-    <div class="contentHeader">
-        <fmt:message key="common.message.availableTours"/>
-        <hr/>
-    </div>
-
     <div class="time-inf">
         <ctg:time-inf/>
     </div>
 
-    <div class="tours">
-
+    <div class="contentHeader">
+        <a href="controller?command=to_tours"> <fmt:message key="common.message.availableTours"/> </a>
     </div>
+
 </form>
 </body>
 </html>

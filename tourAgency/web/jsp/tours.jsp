@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<form class="contentForm" method="post" action="controller">
+<div class="contentForm" >
 
     <div class="menu">
         <c:if test="${userRole == 'ADMIN'}">
@@ -55,7 +55,10 @@
             </div>
 
             <nav>
-                <div class="pagination">
+                <form class="pagination" id="paginationForm" method="post" action="controller">
+                    <input type="hidden" id="command" name="command" value="to_tours">
+                    <input type="hidden" name="index" value="${startIndexOfTours/toursPerPage + 1}"/>
+
                     <c:if test="${startIndexOfTours == 0}">
                         <div class="page-item disabled">
                             <a class="page-link"><fmt:message key="common.ref.previousPage"/> </a>
@@ -63,11 +66,12 @@
                     </c:if>
                     <c:if test="${startIndexOfTours > 0}">
                         <div class="page-item">
-                            <form id="previousPageForm" method="post" action="controller">
-                                <a class="page-link"
-                                   href="controller?command=to_tours&changePage=-1&index=${startIndexOfTours/toursPerPage + 1}">
+                            <div id="previousPageForm">
+                                <input type="hidden" id="previousPage" name="changePage" value="-1" disabled>
+                                <a class="page-link" href="#" onclick="document.getElementById('previousPage').disabled = false;
+                                    document.getElementById('paginationForm').submit()">
                                     <fmt:message key="common.ref.previousPage"/></a>
-                            </form>
+                            </div>
                         </div>
                     </c:if>
 
@@ -75,11 +79,12 @@
 
                     <c:if test="${startIndexOfTours + toursPerPage < numberOfTours}">
                         <div class="page-item">
-                            <form id="nextPageForm" method="post" action="controller">
-                                <a class="page-link"
-                                   href="controller?command=to_tours&changePage=1&index=${startIndexOfTours/toursPerPage + 1}" >
+                            <div id="nextPageForm">
+                                <input type="hidden" id="nextPage" name="changePage" value="1" disabled>
+                                <a class="page-link" href="#" onclick="document.getElementById('nextPage').disabled = false;
+                                    document.getElementById('paginationForm').submit()">
                                     <fmt:message key="common.ref.nextPage"/> </a>
-                            </form>
+                            </div>
                         </div>
                     </c:if>
                     <c:if test="${startIndexOfTours + toursPerPage >= numberOfTours}">
@@ -87,11 +92,11 @@
                             <a class="page-link"><fmt:message key="common.ref.nextPage"/></a>
                         </div>
                     </c:if>
-                </div>
+                </form>
             </nav>
         </div>
     </div>
-</form>
+</div>
 
 </body>
 </html>

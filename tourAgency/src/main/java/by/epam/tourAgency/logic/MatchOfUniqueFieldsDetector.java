@@ -1,6 +1,5 @@
 package by.epam.tourAgency.logic;
 
-import by.epam.tourAgency.entity.Role;
 import by.epam.tourAgency.exception.LogicException;
 import by.epam.tourAgency.exception.RepositoryException;
 import by.epam.tourAgency.repository.Repository;
@@ -18,7 +17,16 @@ import by.epam.tourAgency.specification.impl.client.FindClientByLoginSpecificati
 import by.epam.tourAgency.specification.impl.client.FindClientByPhoneNumberSpecification;
 import by.epam.tourAgency.specification.impl.tour.FindTourByNameSpecification;
 
+/**
+ * For matching unique fields
+ */
 public class MatchOfUniqueFieldsDetector {
+    /**
+     * Checks, if such email exists
+     * @param email to check
+     * @return true, if email exists, and false - if not
+     * @throws LogicException if handled RepositoryException
+     */
     public static boolean isExistsEmail(String email) throws LogicException {
         boolean flag = false;
         Repository repository = UserRepository.getInstance();
@@ -35,6 +43,12 @@ public class MatchOfUniqueFieldsDetector {
         return flag;
     }
 
+    /**
+     * Checks, if such phone number exists
+     * @param phoneNumber to check
+     * @return true, if phone number exists, and false - if not
+     * @throws LogicException if handled RepositoryException
+     */
     public static boolean isExistsPhoneNumber(String phoneNumber) throws LogicException {
         boolean flag = false;
         Repository repository = UserRepository.getInstance();
@@ -51,6 +65,12 @@ public class MatchOfUniqueFieldsDetector {
         return flag;
     }
 
+    /**
+     * Checks, if such login exists
+     * @param login to check
+     * @return true, if phone number exists, and false - if not
+     * @throws LogicException if handled RepositoryException
+     */
     public static boolean isExistsLogin(String login) throws LogicException {
         boolean flag = false;
         Repository repository = UserRepository.getInstance();
@@ -67,6 +87,12 @@ public class MatchOfUniqueFieldsDetector {
         return flag;
     }
 
+    /**
+     * Checks, if such tour name exists
+     * @param tourName to check
+     * @return true, if phone number exists, and false - if not
+     * @throws LogicException if handled RepositoryException
+     */
     public static boolean isExistsTourName(String tourName) throws LogicException {
         Specification specification = new FindTourByNameSpecification(tourName);
         try {

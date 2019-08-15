@@ -5,6 +5,10 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.Executor;
 
+/**
+ * Connection, used in ProxyConnectionPool
+ * @see ProxyConnectionPool
+ */
 public class ProxyConnection implements Connection {
 
     private Connection connection;
@@ -45,10 +49,17 @@ public class ProxyConnection implements Connection {
         connection.rollback();
     }
 
+    /**
+     * Returns connection back to connection pool
+     */
     public void close() {
         ProxyConnectionPool.getInstance().returnConnection(this);
     }
 
+    /**
+     * Closes a connection
+     * @throws SQLException
+     */
     void finallyClose() throws SQLException {
         connection.close();
     }

@@ -38,4 +38,21 @@
         <exception-type>java.lang.RuntimeException</exception-type>
         <location>/jsp/error/error.jsp</location>
     </error-page>
+
+    <listener>
+        <listener-class>by.epam.tourAgency.listener.SimpleContextListener</listener-class>
+    </listener>
+
+    <listener>
+        <listener-class>by.epam.tourAgency.listener.SessionListenerImpl</listener-class>
+    </listener>
+
+    <listener>
+        <listener-class>by.epam.tourAgency.listener.SimpleRequestListener</listener-class>
+    </listener>
+
+    <context-param>
+        <param-name>feedback</param-name>
+        <param-value>tourAgency</param-value>
+    </context-param>
 </web-app>

@@ -9,6 +9,9 @@
 .radio-button{
     text-align: left;
 }
+a{
+    color: skyblue;
+}
 .tourContent, .ticketContent, .userContent{
     align-items: center;
     justify-content: center;

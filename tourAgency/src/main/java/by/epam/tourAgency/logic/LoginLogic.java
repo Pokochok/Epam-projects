@@ -6,19 +6,26 @@ import by.epam.tourAgency.exception.RepositoryException;
 import by.epam.tourAgency.repository.impl.UserRepository;
 import by.epam.tourAgency.specification.impl.admin.FindAdminByLoginPasswordSpecification;
 import by.epam.tourAgency.specification.impl.agent.FindAgentByLoginPasswordSpecification;
-import by.epam.tourAgency.specification.impl.agent.FindAgentByLoginSpecification;
 import by.epam.tourAgency.specification.impl.client.FindClientByLoginPasswordSpecification;
 import by.epam.tourAgency.specification.Specification;
-import by.epam.tourAgency.specification.impl.client.FindClientByLoginSpecification;
 import by.epam.tourAgency.util.SHAEncrypting;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import java.util.Set;
 
-public class LoginLogic {
-    private static final Logger LOGGER = LogManager.getLogger();
+import static by.epam.tourAgency.util.PageMsgConstant.LOGGER;
 
+/**
+ * For business logic of login command
+ */
+public class LoginLogic {
+
+    /**
+     * Verifies entered login and password
+     * @param enterLogin login to verify
+     * @param password password to verify
+     * @return user if verifies completed successfully, and null - if not
+     * @throws LogicException if handled RepositoryException
+     */
     public static User checkLoginPassword(String enterLogin, String password) throws LogicException {
         String enterPass = SHAEncrypting.hidePassword(password);
         User user = null;

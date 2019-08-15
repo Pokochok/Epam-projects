@@ -5,7 +5,7 @@
 
 <html>
 <head>
-    <%@include file="components/main-panel.jsp"%>
+    <%@include file="components/main-panel.jsp" %>
     <link href="../css/componentsstyle/ticket-form.css" rel="stylesheet" type="text/css">
     <link href="../css/flights-style.css" rel="stylesheet" type="text/css">
     <fmt:setBundle basename="jsp/tickets"/>
@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<form class="contentForm" method="post" action="controller">
+<div class="contentForm">
 
     <div class="menu">
         <c:if test="${sessionScope.userRole == 'ADMIN'}">
@@ -56,7 +56,7 @@
                 <c:out value="${param.tourName}"/>
 
                 <c:if test="${param.tourId != null}">
-                    <form class="continueBooking" method="post">
+                    <form class="continueBooking" method="post" action="controller">
                         <input type="hidden" name="tourId" value="${param.tourId}"/>
                         <input type="hidden" name="tourName" value="${param.tourName}"/>
                         <input type="hidden" name="arrivalCountry" value="${param.arrivalCountry}"/>
@@ -86,21 +86,36 @@
                     </form>
                 </c:if>
 
-
                 <nav>
-                    <div class="pagination">
+                    <form class="pagination" id="paginationForm" method="post" action="controller">
+                        <input type="hidden" id="command" name="command" value="to_tickets">
+                        <input type="hidden" name="index" value="${startIndexOfTicket/ticketsPerPage + 1}"/>
+
+                        <input type="hidden" name="tourId" value="${param.tourId}"/>
+                        <input type="hidden" name="tourName" value="${param.tourName}"/>
+                        <input type="hidden" name="arrivalCountry" value="${param.arrivalCountry}"/>
+                        <input type="hidden" name="arrivalCity" value="${param.arrivalCity}"/>
+                        <input type="hidden" name="departureCity" value="${param.departureCity}"/>
+                        <input type="hidden" name="departureDate" value="${param.departureDate}"/>
+                        <input type="hidden" name="arrivalDate" value="${param.arrivalDate}"/>
+                        <input type="hidden" name="hotel" value="${param.hotel}"/>
+                        <input type="hidden" name="nutrition" value="${param.nutrition}"/>
+                        <input type="hidden" name="adultsNumber" value="${param.adultsNumber}"/>
+                        <input type="hidden" name="childrenNumber" value="${param.childrenNumber}"/>
+                        <input type="hidden" name="price" value="${param.price}"/>
                         <c:if test="${startIndexOfTicket == 0}">
-                            <div class="page-item" >
+                            <div class="page-item">
                                 <a class="page-link"><fmt:message key="common.ref.previousPage"/> </a>
                             </div>
                         </c:if>
                         <c:if test="${startIndexOfTicket > 0}">
                             <div class="page-item">
-                                <form id="previousPageForm" method="post" action="controller">
-                                    <a class="page-link"
-                                       href="controller?command=to_tickets&changePage=-1&index=${startIndexOfTicket/ticketsPerPage + 1}">
+                                <div id="previousPageForm">
+                                    <input type="hidden" id="previousPage" name="changePage" value="-1" disabled>
+                                    <a class="page-link" href="#" onclick="document.getElementById('previousPage').disabled=false;
+                                    document.getElementById('paginationForm').submit()">
                                         <fmt:message key="common.ref.previousPage"/></a>
-                                </form>
+                                </div>
                             </div>
                         </c:if>
 
@@ -108,23 +123,24 @@
 
                         <c:if test="${startIndexOfTicket + ticketsPerPage < numberOfTickets}">
                             <div class="page-item">
-                                <form id="nextPageForm" method="post" action="controller">
-                                    <a class="page-link"
-                                       href="controller?command=to_tickets&changePage=1&index=${startIndexOfTicket/ticketsPerPage + 1}">
+                                <div id="nextPageForm">
+                                    <input type="hidden" id="nextPage" name="changePage" value="1" disabled>
+                                    <a class="page-link" href="#" onclick="document.getElementById('nextPage').disabled = false;
+                                    document.getElementById('paginationForm').submit()">
                                         <fmt:message key="common.ref.nextPage"/></a>
-                                </form>
+                                </div>
                             </div>
                         </c:if>
                         <c:if test="${startIndexOfTicket + ticketsPerPage >= numberOfTickets}">
-                            <div class="page-item" >
+                            <div class="page-item">
                                 <a class="page-link"><fmt:message key="common.ref.nextPage"/></a>
                             </div>
                         </c:if>
-                    </div>
+                    </form>
                 </nav>
             </c:if>
         </div>
     </div>
-</form>
+</div>
 </body>
 </html>

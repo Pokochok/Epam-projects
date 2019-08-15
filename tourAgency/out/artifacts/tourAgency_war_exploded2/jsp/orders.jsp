@@ -33,7 +33,7 @@
         <div class="orders">
             <c:if test="${empty orderList}"> <fmt:message key="common.message.noReservations"/> </c:if>
 
-            <c:forEach begin="${startIndexOfOrders}" end="${startIndexOfOrders + ordersPerPage}" var="order"
+            <c:forEach begin="${startIndexOfOrders}" end="${startIndexOfOrders + ordersPerPage - 1}" var="order"
                        items="${orderList}">
                 <c:import url="components/order-form.jsp">
                     <c:param name="orderId" value="${order.getId()}"/>
@@ -53,7 +53,10 @@
         </div>
 
         <nav>
-            <form class="pagination">
+            <form class="pagination" id="paginationForm" method="post" action="controller">
+                <input type="hidden" id="command" name="command" value="to_orders">
+                <input type="hidden" name="index" value="${startIndexOfOrders/ordersPerPage + 1}"/>
+
                 <c:if test="${startIndexOfOrders == 0}">
                     <div class="page-item disabled">
                         <a class="page-link"><fmt:message key="common.ref.previousPage"/> </a>
@@ -61,12 +64,12 @@
                 </c:if>
                 <c:if test="${startIndexOfOrders > 0}">
                     <div class="page-item">
-                        <form id="previousPageForm" method="post" action="controller">
-                            <input type="hidden" name="toursPerPage" value="${ordersPerPage}">
-                            <a class="page-link"
-                               href="controller?command=to_orders&changePage=-1&index=${startIndexOfOrders/startIndexOfOrders + 1}">
+                        <div id="previousPageForm">
+                            <input type="hidden" id="previousPage" name="changePage" value="-1" disabled>
+                            <a class="page-link" href="#" onclick="document.getElementById('previousPage').disabled=false;
+                                    document.getElementById('paginationForm').submit()">
                                 <fmt:message key="common.ref.previousPage"/></a>
-                        </form>
+                        </div>
                     </div>
                 </c:if>
 
@@ -74,11 +77,12 @@
 
                 <c:if test="${startIndexOfOrders + ordersPerPage < numberOfOrders}">
                     <div class="page-item">
-                        <form id="nextPageForm" method="post" action="controller">
-                            <a class="page-link"
-                               href="controller?command=to_orders&changePage=1&index=${startIndexOfOrders/startIndexOfOrders + 1}">
+                        <div id="nextPageForm">
+                            <input type="hidden" id="nextPage" name="changePage" value="1" disabled>
+                            <a class="page-link" href="#" onclick="document.getElementById('nextPage').disabled = false;
+                                    document.getElementById('paginationForm').submit()">
                                 <fmt:message key="common.ref.nextPage"/></a>
-                        </form>
+                        </div>
                     </div>
                 </c:if>
                 <c:if test="${startIndexOfOrders + ordersPerPage >= numberOfOrders}">

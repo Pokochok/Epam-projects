@@ -26,7 +26,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import static by.epam.tourAgency.util.PageMsgConstant.MAIN_PAGE_PATH;
-import static by.epam.tourAgency.util.PageMsgConstant.TO_TOURS_PAGE_PATH;
 import static by.epam.tourAgency.util.ParameterConstant.*;
 
 @WebFilter(urlPatterns = {"/controller"}, servletNames = {"MainServlet"})
@@ -44,7 +43,6 @@ public class ServletSecurityFilter implements Filter {
         Object login = session.getAttribute(ATTR_NAME_USER_LOGIN);
         RequestDispatcher dispatcher;
         if (role == null || (login == null && Role.GUEST != Role.valueOf(String.valueOf(role).toUpperCase()))) {
-            System.out.println(1);
             session.setAttribute(PARAM_NAME_ROLE, Role.GUEST);
             page = ConfigurationManager.getProperty(MAIN_PAGE_PATH);
             dispatcher = request.getServletContext().getRequestDispatcher(page);
@@ -54,7 +52,6 @@ public class ServletSecurityFilter implements Filter {
         dispatcher = null;
 
         if (login == null){
-            System.out.println(2);
             chain.doFilter(request, response);
             return;
         }
@@ -62,16 +59,13 @@ public class ServletSecurityFilter implements Filter {
         Role userRole = null;
         try {
             userRole = getByLogin(String.valueOf(login)).getRole();
-            System.out.println(3);
         } catch (LogicException e) {
-            System.out.println(4);
             session.setAttribute(ATTR_NAME_USER_LOGIN, null);
             resp.sendError(500, e.toString());
             return;
         }
 
         if (!userRole.equals(Role.valueOf(String.valueOf(role).toUpperCase()))) {
-            System.out.println(5);
             session.setAttribute(ATTR_NAME_USER_LOGIN, null);
             resp.sendError(500, "Illegal access to role");
             return;

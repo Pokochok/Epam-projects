@@ -12,6 +12,10 @@
 .MinInf{
     display: flex;
 }
+.MinInfMsg{
+    color: black;
+    font-weight: bold;
+}
 .ticketDate, .ticketPlace{
     display: flex;
 }
@@ -20,6 +24,7 @@
     font-weight: bold;
     font-size: medium;
     justify-content: center;
+    display: block;
 }
 .TourName:hover{
     color: purple;

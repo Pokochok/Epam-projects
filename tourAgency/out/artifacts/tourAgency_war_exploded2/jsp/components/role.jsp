@@ -2,23 +2,12 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <c:set var="userId" value="${userId}" scope="session"/>
-<c:set var="userName" value="${userName}"
-       scope="session"/>
-<c:set var="userSurname"
-       value="${userSurname}"
-       scope="session"/>
-<c:set var="userPhoneNumber"
-       value="${userPhoneNumber}"
-       scope="session"/>
-<c:set var="userEmail"
-       value="${userEmail}"
-       scope="session"/>
-<c:set var="userLogin"
-       value="${userLogin}"
-       scope="session"/>
-<c:set var="userRole"
-       value="${not empty userRole ? userRole : 'GUEST'}"
-       scope="session"/>
+<c:set var="userName" value="${userName}" scope="session"/>
+<c:set var="userSurname" value="${userSurname}" scope="session"/>
+<c:set var="userPhoneNumber" value="${userPhoneNumber}" scope="session"/>
+<c:set var="userEmail" value="${userEmail}" scope="session"/>
+<c:set var="userLogin" value="${userLogin}" scope="session"/>
+<c:set var="userRole" value="${not empty userRole ? userRole : 'GUEST'}" scope="session"/>
 
 <fmt:setBundle basename="jsp/home"/>
 <html>

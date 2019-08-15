@@ -24,9 +24,17 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.Set;
 
+/**
+ * Contains business logic of booking logic
+ */
 public class BookingLogic {
-    private static final Logger LOGGER = LogManager.getLogger();
 
+    /**
+     * Check if client with such email exists
+     * @param clientEmail for checking
+     * @return true if client exists, false - if not
+     * @throws LogicException if handled RepositoryException
+     */
     public static boolean isClientExists(String clientEmail) throws LogicException {
         Specification clientByEmail = new FindClientByEmailSpecification(clientEmail);
         try {
@@ -36,6 +44,13 @@ public class BookingLogic {
         }
     }
 
+    /**
+     * Defines, what specification will be used in client query
+     * @param clientId clients ID
+     * @param clientEmail clients email
+     * @param agentId agents ID
+     * @return specification
+     */
     private static Specification defineClientSpecification(String clientId, String clientEmail, String agentId){
         Specification clientQuery = null;
         if (agentId.equals("0")) {
@@ -46,6 +61,17 @@ public class BookingLogic {
         return clientQuery;
     }
 
+    /**
+     * Processes parameters and create oreder
+     * @param tourId tour ID
+     * @param ticketId ticket ID
+     * @param clientId client ID
+     * @param clientEmail client email
+     * @param agentId agent ID
+     * @return order if all parameters are valid, and
+     * returns null - if not
+     * @throws LogicException if handled RepositoryException
+     */
     private static Order orderProcessing(String tourId, String ticketId, String clientId, String clientEmail, String agentId) throws LogicException {
         agentId = Validation.validateId(agentId) ? agentId : "0";
         tourId = Validation.validateId(tourId) ? tourId : "0";
@@ -82,6 +108,16 @@ public class BookingLogic {
         return order;
     }
 
+    /**
+     * Adds order to database
+     * @param tourId tour ID
+     * @param ticketId ticket ID
+     * @param clientId client ID
+     * @param clientEmail client email
+     * @param agentId agent ID
+     * @return true, if order was added, and false - if not
+     * @throws LogicException if handled RepositoryException
+     */
     public static boolean addOrder(String tourId, String ticketId, String clientId, String clientEmail, String agentId)
             throws LogicException {
         boolean flag = false;

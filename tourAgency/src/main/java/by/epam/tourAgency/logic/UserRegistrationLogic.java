@@ -11,7 +11,23 @@ import by.epam.tourAgency.specification.impl.agent.AddAgentSpecification;
 import by.epam.tourAgency.specification.impl.client.AddClientSpecification;
 import by.epam.tourAgency.util.SHAEncrypting;
 
+import static by.epam.tourAgency.util.PageMsgConstant.LOGGER;
+
+/**
+ * For user registration logic
+ */
 public class UserRegistrationLogic {
+    /**
+     * Adds new user to database
+     * @param name user name
+     * @param surname user surname
+     * @param email user email
+     * @param phoneNumber user phone number
+     * @param login user login
+     * @param password user password
+     * @param role user rolee
+     * @throws LogicException if handled RepositoryException
+     */
     public static void addUser(String name, String surname, String email, String phoneNumber, String login,
                                String password, Role role) throws LogicException {
         Repository repository = UserRepository.getInstance();
@@ -31,6 +47,13 @@ public class UserRegistrationLogic {
         }
     }
 
+    /**
+     * Defines for what role specification needed
+     * @param role user role
+     * @param user user instance
+     * @return specification
+     * @throws LogicException if user role not defined
+     */
     private static Specification defineAddUserSpecification(Role role, User user) throws LogicException {
         Specification specification = null;
         switch (role) {
@@ -43,6 +66,7 @@ public class UserRegistrationLogic {
                 break;
             }
             default: {
+                LOGGER.error("User role is not defined at user registration");
                 throw new LogicException("Registered user role is not defined");
             }
         }

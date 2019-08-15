@@ -15,12 +15,12 @@
     <a class="navigationRef" href="controller?command=to_tours"> <fmt:message key="common.ref.page.tours"/> </a>
     <a class="navigationRef" href="controller?command=to_tickets"> <fmt:message key="common.ref.page.flights"/> </a>
 
-    <c:if test="${sessionScope.userRole == 'CLIENT'}">
+    <c:if test="${userRole == 'CLIENT'}">
         <a class="navigationRef" href="controller?command=to_orders"><fmt:message
                 key="client.ref.page.myReservation"/> </a>
     </c:if>
 
-    <c:if test="${sessionScope.userRole == 'AGENT' || sessionScope.userRole == 'ADMIN'}">
+    <c:if test="${userRole == 'AGENT' || userRole == 'ADMIN'}">
         <a class="navigationRef" href="controller?command=to_orders"><fmt:message
                 key="agentAdmin.ref.page.reservation"/> </a>
     </c:if>

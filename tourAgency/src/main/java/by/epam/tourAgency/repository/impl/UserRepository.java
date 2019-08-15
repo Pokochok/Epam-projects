@@ -7,8 +7,6 @@ import by.epam.tourAgency.exception.ConnectionPoolException;
 import by.epam.tourAgency.exception.RepositoryException;
 import by.epam.tourAgency.repository.Repository;
 import by.epam.tourAgency.specification.Specification;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -17,8 +15,9 @@ import java.sql.SQLException;
 import java.util.HashSet;
 import java.util.Set;
 
+import static by.epam.tourAgency.util.PageMsgConstant.LOGGER;
+
 public class UserRepository implements Repository<User> {
-    private static final Logger LOGGER = LogManager.getLogger();
 
     private UserRepository() {
     }
@@ -42,10 +41,10 @@ public class UserRepository implements Repository<User> {
             preparedStatement.executeUpdate();
             LOGGER.info("New " + user.getRole() + " was added");
         } catch (SQLException e) {
-            LOGGER.error("Error in adding user: ", e);
+            LOGGER.error("Error in adding user: ");
             throw new RepositoryException(e);
         } catch (ConnectionPoolException e) {
-            LOGGER.fatal("Error in connection pool", e);
+            LOGGER.fatal("Error in connection pool");
             throw new RepositoryException(e);
         } finally {
             if (preparedStatement != null) {
@@ -66,10 +65,10 @@ public class UserRepository implements Repository<User> {
             preparedStatement.executeUpdate();
             LOGGER.info("User was updated");
         } catch (SQLException e) {
-            LOGGER.error("Error in updating: ", e);
+            LOGGER.error("Error in updating: ");
             throw new RepositoryException(e);
         } catch (ConnectionPoolException e) {
-            LOGGER.fatal("Error in connection pool", e);
+            LOGGER.fatal("Error in connection pool");
             throw new RepositoryException(e);
         } finally {
             if (preparedStatement != null) {
@@ -86,10 +85,10 @@ public class UserRepository implements Repository<User> {
             setPreparedStatementValues(preparedStatement, specification);
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
-            LOGGER.error("Error in removing: ", e);
+            LOGGER.error("Error in removing: ");
             throw new RepositoryException(e);
         } catch (ConnectionPoolException e) {
-            LOGGER.fatal("Error in connection pool", e);
+            LOGGER.fatal("Error in connection pool");
             throw new RepositoryException(e);
         }
     }
@@ -119,10 +118,10 @@ public class UserRepository implements Repository<User> {
                 userSet.add(user);
             }
         } catch (SQLException e) {
-            LOGGER.error("Error in query: ", e);
+            LOGGER.error("Error in query: ");
             throw new RepositoryException(e);
         } catch (ConnectionPoolException e) {
-            LOGGER.fatal("Error in connection pool", e);
+            LOGGER.fatal("Error in connection pool");
             throw new RepositoryException(e);
         } finally {
             if (resultSet != null) {

@@ -4,14 +4,14 @@
 
 <html>
 <head>
-    <%@include file="components/main-panel.jsp"%>
+    <%@include file="components/main-panel.jsp" %>
     <link href="../css/profile-style.css" rel="stylesheet" type="text/css"/>
     <fmt:setBundle basename="jsp/user-profile"/>
     <title><fmt:message key="common.title"/></title>
 </head>
 <body>
 
-<form class="mainProfileContainer">
+<div class="mainProfileContainer">
     <div class="userContent">
         <form class="userContentItem" method="POST" action="controller">
             <div class="userContentItemMsg"><fmt:message key="common.message.name"/></div>
@@ -36,7 +36,8 @@
                     <label>
                         <input type="hidden" name="command" value="change_user_name"/>
 
-                        <input type="text" id="newUserName" name="newUserName" pattern="^[^!@#$%^&*().,_\d=|?`~/<>]{1,30}$">
+                        <input type="text" id="newUserName" name="newUserName"
+                               pattern="^[^!@#$%^&*().,_\d=|?`~/<>]{1,30}$">
 
                         <fmt:message key="common.changeUserName" var="changeUserNameButton"/>
 
@@ -70,7 +71,8 @@
                     <label>
                         <input type="hidden" name="command" value="change_user_surname"/>
 
-                        <input type="text" id="newUserSurname" name="newUserSurname" pattern="^[^!@#$%^&*().,_\d=|?`~/<>]{1,30}$">
+                        <input type="text" id="newUserSurname" name="newUserSurname"
+                               pattern="^[^!@#$%^&*().,_\d=|?`~/<>]{1,30}$">
 
                         <fmt:message key="common.changeUserSurname" var="changeUserSurnameButton"/>
 
@@ -139,7 +141,8 @@
                     <label>
                         <input type="hidden" name="command" value="change_email"/>
 
-                        <input type="text" id="newEmail" name="newEmail" pattern="^[a-zA-Z0-9.,_%+-]+@(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}$">
+                        <input type="text" id="newEmail" name="newEmail"
+                               pattern="^[a-zA-Z0-9.,_%+-]+@(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}$">
 
                         <fmt:message key="common.changeEmail" var="changeEmailButton"/>
 
@@ -198,19 +201,12 @@
                 <fmt:message key="common.change"/>
             </a>
 
-            <a id="closeChangePassword" hidden
-               onclick="document.getElementById('changePassword').hidden=true;
-               document.getElementById('closeChangePassword').hidden=true;
-               document.getElementById('changePasswordMsg').hidden=false;
-               document.getElementById('password').required=false;document.getElementById('newPassword').required=false">
-                <fmt:message key="common.close"/>
-            </a>
-
             <div id="changePassword" hidden>
                 <label>
                     <input type="hidden" name="command" value="change_password"/>
                     <fmt:message key="common.message.oldPassword"/>
                     <input type="password" id="password" name="password" minlength="6" maxlength="50">
+                    <br>
                     <fmt:message key="common.message.newPassword"/>
                     <input type="password" id="newPassword" name="newPassword" minlength="6" maxlength="50">
                     <fmt:message key="common.changePassword" var="changePNButton"/>
@@ -219,9 +215,17 @@
             </div>
             ${errorChangePassword}
             ${resultChangePassword}
+
+            <a id="closeChangePassword" hidden
+               onclick="document.getElementById('changePassword').hidden=true;
+               document.getElementById('closeChangePassword').hidden=true;
+               document.getElementById('changePasswordMsg').hidden=false;
+               document.getElementById('password').required=false;document.getElementById('newPassword').required=false">
+                <fmt:message key="common.close"/>
+            </a>
         </form>
     </div>
-</form>
+</div>
 
 </body>
 </html>

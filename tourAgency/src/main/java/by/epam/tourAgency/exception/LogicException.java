@@ -1,5 +1,8 @@
 package by.epam.tourAgency.exception;
 
+/**
+ * Can be thrown in business logic layer
+ */
 public class LogicException extends Exception {
     public LogicException() {
         super();

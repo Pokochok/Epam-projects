@@ -10,7 +10,26 @@ import by.epam.tourAgency.specification.impl.tour.FindTourByNameSpecification;
 
 import java.math.BigDecimal;
 
+/**
+ * For tour registration logic
+ */
 public class TourRegistrationLogic {
+    /**
+     * Adds tour to database
+     * @param tourName tour name
+     * @param departureDate departure date
+     * @param arrivalDate arrival date
+     * @param departureCity departure city
+     * @param arrivalCity arrival city
+     * @param arrivalCountry arrival country
+     * @param hotel hotel
+     * @param nutrition nutrition
+     * @param numberOfAdults adults number
+     * @param numberOfChildren children number
+     * @param price tour price
+     * @param isAvailable tour status
+     * @throws LogicException if handled RepositoryException
+     */
     public static void addTour(String tourName, long departureDate, long arrivalDate, String departureCity, String arrivalCity,
                                String arrivalCountry, String hotel, String nutrition, int numberOfAdults, int numberOfChildren,
                                BigDecimal price, String isAvailable) throws LogicException {

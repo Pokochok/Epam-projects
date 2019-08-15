@@ -25,7 +25,6 @@ public class LoginCommand implements ActionCommand {
                 content.getSessionAttribute(ATTR_NAME_LANGUAGE).toString()
                 : content.getLocalName();
         boolean flag = Validation.validateLogin(login) && Validation.validatePassword(password);
-        System.out.println(flag + ", "+login+", "+password);
         User user = null;
         if (flag) {
             try {

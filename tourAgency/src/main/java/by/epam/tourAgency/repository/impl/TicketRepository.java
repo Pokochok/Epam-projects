@@ -6,8 +6,6 @@ import by.epam.tourAgency.exception.ConnectionPoolException;
 import by.epam.tourAgency.exception.RepositoryException;
 import by.epam.tourAgency.repository.Repository;
 import by.epam.tourAgency.specification.Specification;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -16,8 +14,9 @@ import java.sql.SQLException;
 import java.util.HashSet;
 import java.util.Set;
 
+import static by.epam.tourAgency.util.PageMsgConstant.LOGGER;
+
 public class TicketRepository implements Repository<Ticket> {
-    private static final Logger LOGGER = LogManager.getLogger();
 
     private TicketRepository() {
     }
@@ -41,10 +40,10 @@ public class TicketRepository implements Repository<Ticket> {
             preparedStatement.executeUpdate();
             LOGGER.info("New ticket was added");
         } catch (SQLException e) {
-            LOGGER.error("Error in adding ticket: ", e);
+            LOGGER.error("Error in adding ticket: ");
             throw new RepositoryException(e);
         } catch (ConnectionPoolException e) {
-            LOGGER.fatal("Error in connection pool", e);
+            LOGGER.fatal("Error in connection pool");
             throw new RepositoryException(e);
         } finally {
             if (preparedStatement != null) {
@@ -65,10 +64,10 @@ public class TicketRepository implements Repository<Ticket> {
             preparedStatement.executeUpdate();
             LOGGER.info("Ticket was updated");
         } catch (SQLException e) {
-            LOGGER.error("Error in updating ticket: ", e);
+            LOGGER.error("Error in updating ticket: ");
             throw new RepositoryException(e);
         } catch (ConnectionPoolException e) {
-            LOGGER.fatal("Error in connection pool", e);
+            LOGGER.fatal("Error in connection pool");
             throw new RepositoryException(e);
         } finally {
             if (preparedStatement != null) {
@@ -85,10 +84,10 @@ public class TicketRepository implements Repository<Ticket> {
             setPreparedStatementValues(preparedStatement, specification);
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
-            LOGGER.error("Error in removing the ticket: ", e);
+            LOGGER.error("Error in removing the ticket: ");
             throw new RepositoryException(e);
         } catch (ConnectionPoolException e) {
-            LOGGER.fatal("Error in connection pool", e);
+            LOGGER.fatal("Error in connection pool");
             throw new RepositoryException(e);
         }
     }
@@ -116,10 +115,10 @@ public class TicketRepository implements Repository<Ticket> {
                 ticketSet.add(ticket);
             }
         } catch (SQLException e) {
-            LOGGER.error("Error in query: ", e);
+            LOGGER.error("Error in query: ");
             throw new RepositoryException(e);
         } catch (ConnectionPoolException e) {
-            LOGGER.fatal("Error in connection pool", e);
+            LOGGER.fatal("Error in connection pool");
             throw new RepositoryException(e);
         } finally {
             if (resultSet != null) {

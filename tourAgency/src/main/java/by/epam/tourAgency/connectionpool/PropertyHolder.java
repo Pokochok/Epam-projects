@@ -1,13 +1,17 @@
 package by.epam.tourAgency.connectionpool;
 
 import by.epam.tourAgency.exception.ConnectionPoolException;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
+import static by.epam.tourAgency.util.PageMsgConstant.LOGGER;
+
+/**
+ * Class, which contains all properties, to connect
+ * with database, the connection pool needs
+ */
 class PropertyHolder {
     private static final String FILE_NAME = "dbdriver/driverProp.properties";
     private static final String DRIVER_FIELD = "driverName";
@@ -17,14 +21,30 @@ class PropertyHolder {
     private static final String POOL_SIZE = "poolSize";
     private static final String INIT_COUNT = "initCount";
 
+    /**
+     * Contains a driver name
+     */
     private final String driverName;
+    /**
+     * Contains a user name
+     */
     private final String userName;
+    /**
+     * Contains a password
+     */
     private final String password;
+    /**
+     * Contains a url
+     */
     private final String url;
+    /**
+     * Contains a size of connection pool
+     */
     private final int poolSize;
+    /**
+     * Contains an amount of connections to initialize firs time
+     */
     private final int initCount;
-
-    private static final Logger LOGGER = LogManager.getLogger();
 
     PropertyHolder() {
         Properties properties = new Properties();

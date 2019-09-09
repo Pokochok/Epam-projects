@@ -129,7 +129,7 @@ public class ValidationTest {
     @Test
     public void testValidateDateValid() {
         long actual = Validation.validateDate("2019-08-22");
-        long expected = 1566424800000L;
+        long expected = 1566421200000L;
         Assert.assertEquals(actual, expected);
     }
 

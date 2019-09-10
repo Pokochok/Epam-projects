@@ -8,12 +8,15 @@
 <fmt:setBundle basename="jsp/home"/>
 <html>
 <head>
-    <link href="../../css/componentsstyle/main-panel-container.css" rel="stylesheet" type="text/css">
+    <style>
+        <%@include file="../../css/componentsstyle/main-panel-container.css"%>
+    </style>
 </head>
 <body>
 <header  class="container">
     <div class="logo">
-        <a href="controller?command=back_to_main"> <img src="../../images/logo.png" alt=""></a>
+        <!--<a href="controller?command=back_to_main"> <img src="../../images/logo.png" alt=""></a>-->
+        <a href="controller?command=back_to_main"> <img src="images/logo.png" alt=""/></a>
     </div>
     <c:import url="components/main-panel-action.jsp"/>
 </header>

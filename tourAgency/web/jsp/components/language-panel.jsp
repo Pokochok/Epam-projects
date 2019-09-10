@@ -8,7 +8,9 @@
 <fmt:setBundle basename="jsp/home"/>
 <html>
 <head>
-    <link href="../../css/componentsstyle/language-panel.css" rel="stylesheet" type="text/css">
+    <style>
+        <%@include file="../../css/componentsstyle/language-panel.css"%>
+    </style>
 </head>
 <body>
 

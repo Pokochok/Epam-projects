@@ -5,8 +5,10 @@
 <html>
 <head>
     <%@include file="components/main-panel.jsp" %>
-    <link href="../css/componentsstyle/order-form.css" rel="stylesheet" type="text/css">
-    <link href="../css/orders-style.css" rel="stylesheet" type="text/css">
+    <style>
+        <%@include file="../css/componentsstyle/order-form.css"%>
+        <%@include file="../css/orders-style.css"%>
+    </style>
     <fmt:setBundle basename="jsp/orders"/>
     <c:if test="${userRole == 'CLIENT'}">
         <title><fmt:message key="client.title.orders"/></title>

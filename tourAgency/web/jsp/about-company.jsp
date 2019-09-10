@@ -5,7 +5,9 @@
 <html>
 <head>
     <%@include file="components/main-panel.jsp" %>
-    <link href="../css/booking-style.css" rel="stylesheet" type="text/css">
+    <style>
+            <%@include file="../css/booking-style.css"%>
+    </style>
     <fmt:setBundle basename="jsp/about-company"/>
     <title><fmt:message key="aboutCompany.title"/></title>
 </head>

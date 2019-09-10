@@ -8,7 +8,9 @@
     <%@include file="components/main-panel.jsp" %>
     <fmt:setBundle basename="jsp/home"/>
     <title class="header"><fmt:message key="common.title"/></title>
-    <link href="../css/home-content-style.css" rel="stylesheet" type="text/css">
+    <style>
+        <%@include file="../css/home-content-style.css"%>
+    </style>
 </head>
 <body>
 <div class="startMessage">

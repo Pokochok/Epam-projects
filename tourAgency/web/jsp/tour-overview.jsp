@@ -18,7 +18,9 @@
 <html>
 <head>
     <%@include file="components/main-panel.jsp" %>
-    <link href="../css/tour-overview-style.css" rel="stylesheet" type="text/css">
+    <style>
+        <%@include file="../css/tour-overview-style.css"%>
+    </style>
     <fmt:setBundle basename="jsp/tour-overview"/>
     <title><c:out value="${tourName}"/></title>
 </head>

@@ -20,7 +20,7 @@
 }
 
 html{
-    background: linear-gradient(rgba(0, 78, 90, 0.45), rgba(0, 78, 90, 0.45)),  url(../../images/background.jpg) center center no-repeat fixed;
+    background: linear-gradient(rgba(0, 78, 90, 0.45), rgba(0, 78, 90, 0.45)),  url(images/background.jpg) center center no-repeat fixed;
     background-size: cover;
 }
 

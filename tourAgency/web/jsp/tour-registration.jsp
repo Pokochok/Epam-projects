@@ -5,7 +5,9 @@
 <html>
 <head>
     <%@include file="components/another-panel.jsp" %>
-    <link href="../css/registration-style.css" rel="stylesheet" type="text/css">
+    <style>
+        <%@include file="../css/registration-style.css"%>
+    </style>
     <fmt:setBundle basename="jsp/tour-registration"/>
     <title><fmt:message key="message.title"/></title>
 </head>

@@ -6,7 +6,9 @@
 <html>
 <head>
     <%@include file="components/another-panel.jsp"%>
-    <link href="../css/login-style.css" rel="stylesheet" type="text/css">
+    <style>
+        <%@include file="../css/login-style.css"%>
+    </style>
     <fmt:setBundle basename="jsp/home"/>
     <title><fmt:message key="common.companyName"/></title>
 </head>

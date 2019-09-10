@@ -12,7 +12,9 @@
 <fmt:setBundle basename="jsp/home"/>
 <html>
 <head>
-    <link href="../../css/componentsstyle/role.css" rel="stylesheet" type="text/css">
+    <style>
+        <%@include file="../../css/componentsstyle/role.css"%>
+    </style>
 </head>
 <body>
 

@@ -5,7 +5,9 @@
 <fmt:setBundle basename="jsp/home"/>
 <html>
 <head>
-    <link href="../../css/componentsstyle/main-panel-action-style.css" rel="stylesheet" type="text/css">
+    <style>
+        <%@include file="../../css/componentsstyle/main-panel-action-style.css"%>
+    </style>
 </head>
 <body>
 <c:import url="components/main-navigation.jsp"/>

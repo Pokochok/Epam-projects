@@ -18,10 +18,11 @@ a{
     font-size: 20px;
     text-transform: none;
     color: black;
-    text-align: -webkit-center;
+    text-align: center;
     position: absolute;
     width: 16cm;
     margin: 10px;
+    top: 4cm
 }
 .contentItemMsg{
     font-weight: bold;

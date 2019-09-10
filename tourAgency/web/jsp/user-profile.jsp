@@ -5,7 +5,9 @@
 <html>
 <head>
     <%@include file="components/main-panel.jsp" %>
-    <link href="../css/profile-style.css" rel="stylesheet" type="text/css"/>
+    <style>
+        <%@include file="../css/profile-style.css"%>
+    </style>
     <fmt:setBundle basename="jsp/user-profile"/>
     <title><fmt:message key="common.title"/></title>
 </head>

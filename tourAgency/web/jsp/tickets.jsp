@@ -6,8 +6,10 @@
 <html>
 <head>
     <%@include file="components/main-panel.jsp" %>
-    <link href="../css/componentsstyle/ticket-form.css" rel="stylesheet" type="text/css">
-    <link href="../css/flights-style.css" rel="stylesheet" type="text/css">
+    <style>
+        <%@include file="../css/componentsstyle/ticket-form.css"%>
+        <%@include file="../css/flights-style.css"%>
+    </style>
     <fmt:setBundle basename="jsp/tickets"/>
     <title><fmt:message key="common.title.flights"/></title>
 </head>

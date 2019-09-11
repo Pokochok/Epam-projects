@@ -7,34 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8fe1f99-c105-42e2-9621-f5911c5badb0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dbdriver/driverProp.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dbdriver/driverProp.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dbdriver/driverProp.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dbdriver/driverProp.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/booking-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/booking-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/componentsstyle/main-panel-container.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/componentsstyle/main-panel-container.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/home-content-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/home-content-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/login-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/login-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/orders-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/orders-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/tours-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/tours-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/about-company.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/about-company.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/booking.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/booking.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/components/another-panel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/components/another-panel.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/components/language-panel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/components/language-panel.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/components/main-navigation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/components/main-navigation.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/components/main-panel-action.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/components/main-panel-action.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/components/main-panel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/components/main-panel.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/components/role.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/components/role.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/inf.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/inf.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/orders.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/orders.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/registration.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/ticket-registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/ticket-registration.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/tickets.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/tickets.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/tour-overview.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/tour-overview.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/tour-registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/tour-registration.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/tours.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/tours.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/user-profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/user-profile.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -427,7 +401,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

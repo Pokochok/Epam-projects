@@ -21,7 +21,7 @@ public class MatchOfUniqueFieldsDetectorTest {
 
     @Test
     public void testIsExistsPhoneNumberExists() throws LogicException {
-        boolean actual = MatchOfUniqueFieldsDetector.isExistsPhoneNumber("+30012345666");
+        boolean actual = MatchOfUniqueFieldsDetector.isExistsPhoneNumber("+000000000000");
         Assert.assertTrue(actual);
     }
 

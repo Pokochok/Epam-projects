@@ -7,16 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8fe1f99-c105-42e2-9621-f5911c5badb0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/by/epam/tourAgency/connectionpool/ProxyConnectionPoolTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/connectionpool/ProxyConnectionPoolTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/by/epam/tourAgency/logic/LoginLogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/logic/LoginLogicTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/by/epam/tourAgency/logic/MatchOfUniqueFieldsDetectorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/logic/MatchOfUniqueFieldsDetectorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/by/epam/tourAgency/logic/TicketRegistrationLogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/logic/TicketRegistrationLogicTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/by/epam/tourAgency/logic/ToPageWithListLogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/logic/ToPageWithListLogicTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/by/epam/tourAgency/logic/UpdateTourLogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/logic/UpdateTourLogicTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/by/epam/tourAgency/logic/UpdateUserLogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/logic/UpdateUserLogicTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/by/epam/tourAgency/util/ValidationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/util/ValidationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource/logs/logfile.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/logic/LoginLogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/logic/LoginLogicTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/logic/MatchOfUniqueFieldsDetectorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/logic/MatchOfUniqueFieldsDetectorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/logic/UpdateUserLogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/logic/UpdateUserLogicTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/log4j2.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/log4j2.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -135,16 +132,21 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.MatchOfUniqueFieldsDetectorTest.testIsExistsPhoneNumberExists">
-    <configuration name="DBWorker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="by.epam.tourAgency.DBWorker" />
+  <component name="RunManager" selected="TestNG.&lt;default&gt;">
+    <configuration name="LoginLogicTest.testCheckLoginPasswordExists" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="tourAgency" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="by.epam.tourAgency.*" />
+          <option name="PATTERN" value="by.epam.tourAgency.logic.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="by.epam.tourAgency.logic" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.tourAgency.logic.LoginLogicTest" />
+      <option name="METHOD_NAME" value="testCheckLoginPasswordExists" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -285,19 +287,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.DBWorker" />
       <item itemvalue="TestNG.ValidationTest" />
       <item itemvalue="TestNG.&lt;default&gt;" />
       <item itemvalue="TestNG.MatchOfUniqueFieldsDetectorTest" />
       <item itemvalue="TestNG.MatchOfUniqueFieldsDetectorTest.testIsExistsPhoneNumberExists" />
+      <item itemvalue="TestNG.LoginLogicTest.testCheckLoginPasswordExists" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.&lt;default&gt;" />
+        <item itemvalue="TestNG.LoginLogicTest.testCheckLoginPasswordExists" />
         <item itemvalue="TestNG.MatchOfUniqueFieldsDetectorTest.testIsExistsPhoneNumberExists" />
         <item itemvalue="TestNG.MatchOfUniqueFieldsDetectorTest" />
         <item itemvalue="TestNG.ValidationTest" />
-        <item itemvalue="TestNG.&lt;default&gt;" />
-        <item itemvalue="Application.DBWorker" />
       </list>
     </recent_temporary>
   </component>

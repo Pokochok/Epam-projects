@@ -49,7 +49,7 @@ public class UpdateUserLogicTest {
 
     @Test
     public void testUpdatePasswordTrue() throws LogicException {
-        boolean actual = UpdateUserLogic.updatePassword("AGENT", "not defined", "not defined", "not defined");
+        boolean actual = UpdateUserLogic.updatePassword("AGENT", "not defined", "1234567890", "1234567890");
         Assert.assertTrue(actual);
     }
 

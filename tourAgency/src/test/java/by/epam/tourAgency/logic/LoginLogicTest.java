@@ -1,12 +1,12 @@
 package by.epam.tourAgency.logic;
 
-import by.epam.tourAgency.connectionpool.ProxyConnectionPool;
 import by.epam.tourAgency.entity.User;
 import by.epam.tourAgency.exception.LogicException;
 import by.epam.tourAgency.exception.RepositoryException;
 import by.epam.tourAgency.repository.impl.UserRepository;
 import by.epam.tourAgency.specification.Specification;
-import by.epam.tourAgency.specification.impl.admin.FindAdminByLoginPasswordSpecification;
+import by.epam.tourAgency.specification.impl.agent.FindAgentByLoginPasswordSpecification;
+import by.epam.tourAgency.util.SHAEncrypting;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -16,10 +16,10 @@ public class LoginLogicTest {
 
     @Test
     public void testCheckLoginPasswordExists() throws LogicException, RepositoryException {
-        Specification specification = new FindAdminByLoginPasswordSpecification("grekovaAnn",
-                "x3Xnt1ft5jDNCqERO9ECZhqziCnKUqZCKreChi8mhkY=");
+        Specification specification = new FindAgentByLoginPasswordSpecification("not defined",
+                SHAEncrypting.hidePassword("1234567890"));
         User expected = UserRepository.getInstance().query(specification).iterator().next();
-        User actual = LoginLogic.checkLoginPassword("grekovaAnn", "1234567890");
+        User actual = LoginLogic.checkLoginPassword("not defined", "1234567890");
         Assert.assertEquals(actual, expected);
     }
 

@@ -10,7 +10,7 @@ public class MatchOfUniqueFieldsDetectorTest {
 
     @Test
     public void testIsExistsEmailExists() throws LogicException {
-        boolean actual = MatchOfUniqueFieldsDetector.isExistsEmail("fomich@mail.ru");
+        boolean actual = MatchOfUniqueFieldsDetector.isExistsEmail("not defined");
         Assert.assertTrue(actual);
     }
     @Test
@@ -21,7 +21,7 @@ public class MatchOfUniqueFieldsDetectorTest {
 
     @Test
     public void testIsExistsPhoneNumberExists() throws LogicException {
-        boolean actual = MatchOfUniqueFieldsDetector.isExistsPhoneNumber("+000000000000");
+        boolean actual = MatchOfUniqueFieldsDetector.isExistsPhoneNumber("not defined");
         Assert.assertTrue(actual);
     }
 
@@ -33,7 +33,7 @@ public class MatchOfUniqueFieldsDetectorTest {
 
     @Test
     public void testIsExistsLoginExists() throws LogicException {
-        boolean actual = MatchOfUniqueFieldsDetector.isExistsLogin("ppavlushka");
+        boolean actual = MatchOfUniqueFieldsDetector.isExistsLogin("not defined");
         Assert.assertTrue(actual);
     }
 

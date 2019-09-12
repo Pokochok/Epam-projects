@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="ISO-8859-1">
+    <file url="file://$PROJECT_DIR$/pgsqlinit/alldb_travel_agency.sql" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resource/logs/logfile.log" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/resource/logs/test1-08-15-19-11-55-2.log" charset="windows-1251" />
   </component>
 </project>

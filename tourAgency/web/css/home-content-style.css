@@ -3,7 +3,7 @@
      position: relative;
      margin-right: 3cm;
      margin-left: 2.5cm;
-     top: 12cm;
+     margin: 6cm 0;
      left: auto;
      height: fit-content;
      width: -webkit-fill-available;
@@ -22,7 +22,7 @@ a:hover{
     color: white;
     text-align: center;
     position: relative;
-    top: 6cm;
+    margin-top: 6cm;
     left: 0;
     width: -webkit-fill-available;
     padding: 0 15px

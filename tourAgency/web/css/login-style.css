@@ -1,4 +1,5 @@
 .loginForm{
+    margin: 10cm 0;
     position: static;
     display: flex;
     align-items: center;

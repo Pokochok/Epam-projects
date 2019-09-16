@@ -32,4 +32,5 @@
 </form>
 
 </body>
+<c:import url="components/timestamp.jsp"></c:import>
 </html>

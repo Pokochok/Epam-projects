@@ -14,13 +14,11 @@ import by.epam.tourAgency.specification.impl.order.FindClientOrdersSpecification
 import by.epam.tourAgency.specification.impl.ticket.FindAllTicketsSpecification;
 import by.epam.tourAgency.specification.impl.tour.FindAllToursSpecification;
 import by.epam.tourAgency.specification.impl.tour.FindAvailableToursSpecification;
-import org.testng.Assert;
-import org.testng.annotations.Test;
+import org.junit.Assert;
+import org.junit.Test;
 
 import java.util.Date;
 import java.util.Set;
-
-import static org.testng.Assert.*;
 
 public class ToPageWithListLogicTest {
 

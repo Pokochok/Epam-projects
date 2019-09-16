@@ -7,10 +7,9 @@ import by.epam.tourAgency.repository.impl.UserRepository;
 import by.epam.tourAgency.specification.Specification;
 import by.epam.tourAgency.specification.impl.agent.FindAgentByLoginPasswordSpecification;
 import by.epam.tourAgency.util.SHAEncrypting;
-import org.testng.Assert;
-import org.testng.annotations.Test;
+import org.junit.Assert;
+import org.junit.Test;
 
-import static org.testng.Assert.*;
 
 public class LoginLogicTest {
 

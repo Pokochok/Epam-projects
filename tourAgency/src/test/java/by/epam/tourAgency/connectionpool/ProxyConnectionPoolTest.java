@@ -1,17 +1,14 @@
 package by.epam.tourAgency.connectionpool;
 
-import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.Test;
+import org.junit.AfterClass;
+import org.junit.Assert;
+import org.junit.Test;
 
 import java.sql.Connection;
 
-import static org.testng.Assert.*;
-
 public class ProxyConnectionPoolTest {
-    @AfterTest
-    public void after(){
+    @AfterClass
+    public static void after(){
         ProxyConnectionPool.getInstance().closePool();
     }
 

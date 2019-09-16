@@ -1,10 +1,8 @@
 package by.epam.tourAgency.util;
 
 import by.epam.tourAgency.util.Validation;
-import org.testng.Assert;
-import org.testng.annotations.Test;
-
-import static org.testng.Assert.*;
+import org.junit.Assert;
+import org.junit.Test;
 
 public class ValidationTest {
     @Test

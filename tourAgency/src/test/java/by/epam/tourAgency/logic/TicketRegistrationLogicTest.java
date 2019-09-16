@@ -1,10 +1,8 @@
 package by.epam.tourAgency.logic;
 
 import by.epam.tourAgency.exception.LogicException;
-import org.testng.Assert;
-import org.testng.annotations.Test;
-
-import static org.testng.Assert.*;
+import org.junit.Assert;
+import org.junit.Test;
 
 public class TicketRegistrationLogicTest {
 

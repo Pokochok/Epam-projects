@@ -3,7 +3,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <fmt:setBundle basename="jsp/orders"/>
-<html>
+<!DOCTYPE html>
 
 <body>
 

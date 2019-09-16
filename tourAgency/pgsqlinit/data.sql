@@ -5,7 +5,7 @@
 -- Dumped from database version 10.10
 -- Dumped by pg_dump version 11.5
 
--- Started on 2019-09-12 10:24:37
+-- Started on 2019-09-16 18:09:50
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -24,7 +24,9 @@ SET row_security = off;
 -- Data for Name: admins; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.admins VALUES ('Грекова', 'grekovaAnn@mail.com', '+30011115777', 'grekovaAnn', 'x3Xnt1ft5jDNCqERO9ECZhqziCnKUqZCKreChi8mhkY=', 2, 'Анна', 'ADMIN', 'ACTIVE');
+COPY public.admins (surname, email, phone_number, login, password, id, name, role, status) FROM stdin;
+Грекова	grekovaAnn@mail.com	+30011115777	grekovaAnn	x3Xnt1ft5jDNCqERO9ECZhqziCnKUqZCKreChi8mhkY=	2	Анна	ADMIN	ACTIVE
+\.
 
 
 --
@@ -33,10 +35,12 @@ INSERT INTO public.admins VALUES ('Грекова', 'grekovaAnn@mail.com', '+300
 -- Data for Name: agents; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.agents VALUES (1, 'pavel', 'pokonechny', 'pokonechny@mail.ru', '+37545678901', 'pavlik995', 'ZehL4zUy+3hMSBKWdfnv86aCsnFowOp0Syz1juAjN8U=', 'AGENT', 'ACTIVE');
-INSERT INTO public.agents VALUES (4, 'Maria', 'Konovalova', 'konovalova@grem.com', '+375889135568', 'konovalovaM', 'x3Xnt1ft5jDNCqERO9ECZhqziCnKUqZCKreChi8mhkY=', 'AGENT', 'ACTIVE');
-INSERT INTO public.agents VALUES (3, 'Игорь', 'Крутой', 'igorKrutoy@mylo.com', '+3003456788', 'igorKrutoy', 'x3Xnt1ft5jDNCqERO9ECZhqziCnKUqZCKreChi8mhkY=', 'AGENT', 'ACTIVE');
-INSERT INTO public.agents VALUES (0, 'not defined', 'not defined', 'not defined', 'not defined', 'not defined', 'i/rpWfCJgnphEQLNyanpSDsvOLqL3NVXkEaAgd98qrU=', 'AGENT', 'ACTIVE');
+COPY public.agents (id, name, surname, email, phone_number, login, password, role, status) FROM stdin;
+1	pavel	pokonechny	pokonechny@mail.ru	+37545678901	pavlik995	ZehL4zUy+3hMSBKWdfnv86aCsnFowOp0Syz1juAjN8U=	AGENT	ACTIVE
+4	Maria	Konovalova	konovalova@grem.com	+375889135568	konovalovaM	x3Xnt1ft5jDNCqERO9ECZhqziCnKUqZCKreChi8mhkY=	AGENT	ACTIVE
+3	Игорь	Крутой	igorKrutoy@mylo.com	+3003456788	igorKrutoy	x3Xnt1ft5jDNCqERO9ECZhqziCnKUqZCKreChi8mhkY=	AGENT	ACTIVE
+0	not defined	not defined	not defined	not defined	not defined	x3Xnt1ft5jDNCqERO9ECZhqziCnKUqZCKreChi8mhkY=	AGENT	ACTIVE
+\.
 
 
 --
@@ -45,10 +49,12 @@ INSERT INTO public.agents VALUES (0, 'not defined', 'not defined', 'not defined'
 -- Data for Name: clients; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.clients VALUES ('Толик', 'Фамич', 'fomich@mail.ru', '+375456789010', 'fomich', 'x3Xnt1ft5jDNCqERO9ECZhqziCnKUqZCKreChi8mhkY=', 15, 'CLIENT', 'ACTIVE');
-INSERT INTO public.clients VALUES ('Andrey', 'Korneshonok', 'andreyKo@gmail.com', '+30054815777', 'andreyKo', 'x3Xnt1ft5jDNCqERO9ECZhqziCnKUqZCKreChi8mhkY=', 16, 'CLIENT', 'ACTIVE');
-INSERT INTO public.clients VALUES ('Pavel', 'pokonechny', 'pokonechny@mail.com', '+375336586922', 'ppavlushka', 'dpI68jpx4zojCdJvTlSUueq0wPDEEy0Ax22KvHGwzy0=', 1, 'CLIENT', 'ACTIVE');
-INSERT INTO public.clients VALUES ('name', 'myname', 'pokon12@gmail.com', '+30054235777', 'test', 'x3Xnt1ft5jDNCqERO9ECZhqziCnKUqZCKreChi8mhkY=', 17, 'CLIENT', 'ACTIVE');
+COPY public.clients (name, surname, email, phone_number, login, password, id, role, status) FROM stdin;
+Толик	Фамич	fomich@mail.ru	+375456789010	fomich	x3Xnt1ft5jDNCqERO9ECZhqziCnKUqZCKreChi8mhkY=	15	CLIENT	ACTIVE
+Andrey	Korneshonok	andreyKo@gmail.com	+30054815777	andreyKo	x3Xnt1ft5jDNCqERO9ECZhqziCnKUqZCKreChi8mhkY=	16	CLIENT	ACTIVE
+Pavel	pokonechny	pokonechny@mail.com	+375336586922	ppavlushka	dpI68jpx4zojCdJvTlSUueq0wPDEEy0Ax22KvHGwzy0=	1	CLIENT	ACTIVE
+name	myname	pokon12@gmail.com	+30054235777	test	x3Xnt1ft5jDNCqERO9ECZhqziCnKUqZCKreChi8mhkY=	17	CLIENT	ACTIVE
+\.
 
 
 --
@@ -57,6 +63,8 @@ INSERT INTO public.clients VALUES ('name', 'myname', 'pokon12@gmail.com', '+3005
 -- Data for Name: credit_cards; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
+COPY public.credit_cards (id_card, number, owner, validity) FROM stdin;
+\.
 
 
 --
@@ -65,35 +73,37 @@ INSERT INTO public.clients VALUES ('name', 'myname', 'pokon12@gmail.com', '+3005
 -- Data for Name: tickets; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.tickets VALUES (2, 1, 1, 'Moscow', 'Minsk', 61527513600000, 61527945600000);
-INSERT INTO public.tickets VALUES (17, 2, 2, 'Minsk', 'Kiev', 61527513600000, 61527945600000);
-INSERT INTO public.tickets VALUES (0, 0, 0, 'not defined', 'not defined', 0, 0);
-INSERT INTO public.tickets VALUES (18, 627, 5543, 'Minsk', 'Moscow', 1564956000000, 1565128800000);
-INSERT INTO public.tickets VALUES (19, 633, 1112, 'Ternopol', 'Warsaw', 1566252000000, 1566856800000);
-INSERT INTO public.tickets VALUES (20, 633, 1112, 'Ternopol', 'Warsaw', 1566252000000, 1566856800000);
-INSERT INTO public.tickets VALUES (21, 633, 1112, 'Ternopol', 'Warsaw', 1566252000000, 1566856800000);
-INSERT INTO public.tickets VALUES (22, 632, 1112, 'Warsaw', 'Berlin', 1564956000000, 1565042400000);
-INSERT INTO public.tickets VALUES (23, 1402, 12223, 'Amsterdam', 'Paris', 1566338400000, 1566943200000);
-INSERT INTO public.tickets VALUES (25, 1568, 11235, 'Warsaw', 'Moscow', 1566165600000, 1566770400000);
-INSERT INTO public.tickets VALUES (47, 1402, 5543, 'Moscow', 'Warsaw', 1566511200000, 1567116000000);
-INSERT INTO public.tickets VALUES (48, 1402, 5543, 'Moscow', 'Warsaw', 1566424800000, 1567029600000);
-INSERT INTO public.tickets VALUES (49, 8879, 11897, 'Kiev', 'Riga', 1566684000000, 1567288800000);
-INSERT INTO public.tickets VALUES (50, 3254, 1234500, 'Minsk', 'Singapore', 1566684000000, 1567288800000);
-INSERT INTO public.tickets VALUES (51, 34562, 233441, 'Minsk', 'Chernovtsy', 1566424800000, 1567029600000);
-INSERT INTO public.tickets VALUES (52, 34562, 1234500, 'Minsk', 'Chernovtsy', 1566511200000, 1567116000000);
-INSERT INTO public.tickets VALUES (53, 34562, 23344123, 'Minsk', 'Chernovtsy', 1566338400000, 1566943200000);
-INSERT INTO public.tickets VALUES (54, 56236, 546568, 'Minsk', 'Singapore', 1566338400000, 1566943200000);
-INSERT INTO public.tickets VALUES (55, 135121, 9875184, 'Minsk', 'Singapore', 1566597600000, 1567202400000);
-INSERT INTO public.tickets VALUES (56, 111, 111, 'Minsk', 'Sochi', 1566424800000, 1567029600000);
-INSERT INTO public.tickets VALUES (57, 111, 112, 'Minsk', 'Sochi', 1566252000000, 1566856800000);
-INSERT INTO public.tickets VALUES (58, 111, 113, 'Minsk', 'Sochi', 1566597600000, 1567202400000);
-INSERT INTO public.tickets VALUES (59, 111, 114, 'Minsk', 'Sochi', 1566684000000, 1567288800000);
-INSERT INTO public.tickets VALUES (60, 112, 111, 'Minsk', 'Tokio', 1566165600000, 1566770400000);
-INSERT INTO public.tickets VALUES (61, 112, 112, 'Minsk', 'Tokio', 1566252000000, 1566856800000);
-INSERT INTO public.tickets VALUES (62, 112, 114, 'Minsk', 'Tokio', 1566424800000, 1567029600000);
-INSERT INTO public.tickets VALUES (63, 113, 111, 'Minsk', 'Saint Petersburg', 1566165600000, 1566770400000);
-INSERT INTO public.tickets VALUES (64, 113, 113, 'Minsk', 'Tokio', 1566511200000, 1567116000000);
-INSERT INTO public.tickets VALUES (65, 777, 777, 'Minsk', 'Test', 1565992800000, 1567202400000);
+COPY public.tickets (id, flight_number, ticket_number, departure_city, arrival_city, departure_datetime, arrival_datetime) FROM stdin;
+2	1	1	Moscow	Minsk	61527513600000	61527945600000
+17	2	2	Minsk	Kiev	61527513600000	61527945600000
+0	0	0	not defined	not defined	0	0
+18	627	5543	Minsk	Moscow	1564956000000	1565128800000
+19	633	1112	Ternopol	Warsaw	1566252000000	1566856800000
+20	633	1112	Ternopol	Warsaw	1566252000000	1566856800000
+21	633	1112	Ternopol	Warsaw	1566252000000	1566856800000
+22	632	1112	Warsaw	Berlin	1564956000000	1565042400000
+23	1402	12223	Amsterdam	Paris	1566338400000	1566943200000
+25	1568	11235	Warsaw	Moscow	1566165600000	1566770400000
+47	1402	5543	Moscow	Warsaw	1566511200000	1567116000000
+48	1402	5543	Moscow	Warsaw	1566424800000	1567029600000
+49	8879	11897	Kiev	Riga	1566684000000	1567288800000
+50	3254	1234500	Minsk	Singapore	1566684000000	1567288800000
+51	34562	233441	Minsk	Chernovtsy	1566424800000	1567029600000
+52	34562	1234500	Minsk	Chernovtsy	1566511200000	1567116000000
+53	34562	23344123	Minsk	Chernovtsy	1566338400000	1566943200000
+54	56236	546568	Minsk	Singapore	1566338400000	1566943200000
+55	135121	9875184	Minsk	Singapore	1566597600000	1567202400000
+56	111	111	Minsk	Sochi	1566424800000	1567029600000
+57	111	112	Minsk	Sochi	1566252000000	1566856800000
+58	111	113	Minsk	Sochi	1566597600000	1567202400000
+59	111	114	Minsk	Sochi	1566684000000	1567288800000
+60	112	111	Minsk	Tokio	1566165600000	1566770400000
+61	112	112	Minsk	Tokio	1566252000000	1566856800000
+62	112	114	Minsk	Tokio	1566424800000	1567029600000
+63	113	111	Minsk	Saint Petersburg	1566165600000	1566770400000
+64	113	113	Minsk	Tokio	1566511200000	1567116000000
+65	777	777	Minsk	Test	1565992800000	1567202400000
+\.
 
 
 --
@@ -102,16 +112,18 @@ INSERT INTO public.tickets VALUES (65, 777, 777, 'Minsk', 'Test', 1565992800000,
 -- Data for Name: tours; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.tours VALUES (1566511200000, 1567116000000, 'Moscow', 'Sochi', 'Russia', 'Moscow city', 'FB', 2, 2, '$650.00', 13, 'AVAILABLE', 'Walk in Sochi');
-INSERT INTO public.tours VALUES (0, 0, 'not defined', 'not defined', 'not defined', 'not defined', 'not defined', 0, 0, '$0.00', 0, 'not defined', 'not defined');
-INSERT INTO public.tours VALUES (1566511200000, 1567116000000, 'Minsk', 'Moscow', 'Russia', 'Moscow city', 'RO', 2, 1, '$586.00', 11, 'AVAILABLE', 'Tour in Moscow');
-INSERT INTO public.tours VALUES (1566424800000, 1567029600000, 'Minsk', 'Tokio', 'Japan', 'Tokio', 'AI', 2, 0, '$840.00', 20, 'AVAILABLE', 'Beautiful Japan');
-INSERT INTO public.tours VALUES (1565128800000, 1566597600000, 'Minsk', 'Moscow', 'Russia', 'Европа', 'HB+', 4, 2, '$700.00', 14, 'AVAILABLE', 'Beautiful MSK');
-INSERT INTO public.tours VALUES (1566684000000, 1567288800000, 'Minsk', 'Singapore', 'Singapore', 'AndazSingapore', 'AI', 3, 0, '$840.00', 17, 'NOT_AVAILABLE', 'PicturesqueSingapore');
-INSERT INTO public.tours VALUES (1565820000000, 1565215200000, 'Minsk', 'Test', 'Test', 'Test', 'AI', 2, 0, '$300.00', 21, 'NOT_AVAILABLE', 'Test tour');
-INSERT INTO public.tours VALUES (100000, 100100, 'Minsk', 'Moscow', 'Russia', 'Москва', 'RO', 2, 1, '$500.00', 15, 'AVAILABLE', 'beautiful MSK');
-INSERT INTO public.tours VALUES (1566597600000, 1567202400000, 'Minsk', 'Chernovtsy', 'Ukrainee', 'Москва', 'RO', 2, 1, '$300.00', 10, 'AVAILABLE', 'tour in Ukraine');
-INSERT INTO public.tours VALUES (100000, 100100, 'Minsk', 'Moscow', 'Russia', 'Москва', 'RO', 2, 1, '$500.00', 12, 'AVAILABLE', 'Walk in MSK');
+COPY public.tours (departure_date, arrival_date, departure_city, arrival_city, arrival_country, hotel, nutrition, adults_number, children_number, price, id, status, tour_name) FROM stdin;
+1566511200000	1567116000000	Moscow	Sochi	Russia	Moscow city	FB	2	2	$650.00	13	AVAILABLE	Walk in Sochi
+0	0	not defined	not defined	not defined	not defined	not defined	0	0	$0.00	0	not defined	not defined
+1566511200000	1567116000000	Minsk	Moscow	Russia	Moscow city	RO	2	1	$586.00	11	AVAILABLE	Tour in Moscow
+1566424800000	1567029600000	Minsk	Tokio	Japan	Tokio	AI	2	0	$840.00	20	AVAILABLE	Beautiful Japan
+1565128800000	1566597600000	Minsk	Moscow	Russia	Европа	HB+	4	2	$700.00	14	AVAILABLE	Beautiful MSK
+1566684000000	1567288800000	Minsk	Singapore	Singapore	AndazSingapore	AI	3	0	$840.00	17	NOT_AVAILABLE	PicturesqueSingapore
+1565820000000	1565215200000	Minsk	Test	Test	Test	AI	2	0	$300.00	21	NOT_AVAILABLE	Test tour
+100000	100100	Minsk	Moscow	Russia	Москва	RO	2	1	$500.00	15	AVAILABLE	beautiful MSK
+1566597600000	1567202400000	Minsk	Chernovtsy	Ukrainee	Москва	RO	2	1	$300.00	10	AVAILABLE	tour in Ukraine
+100000	100100	Minsk	Moscow	Russia	Москва	RO	2	1	$500.00	12	AVAILABLE	Walk in MSK
+\.
 
 
 --
@@ -120,11 +132,13 @@ INSERT INTO public.tours VALUES (100000, 100100, 'Minsk', 'Moscow', 'Russia', '�
 -- Data for Name: orders; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.orders VALUES (13, 'false', 13, 57, 16, 0);
-INSERT INTO public.orders VALUES (14, 'false', 20, 61, 16, 0);
-INSERT INTO public.orders VALUES (16, 'false', 11, 0, 1, 3);
-INSERT INTO public.orders VALUES (17, 'false', 0, 61, 15, 0);
-INSERT INTO public.orders VALUES (5, 'true', 10, 0, 15, 3);
+COPY public.orders (id, payment_state, id_tour, id_ticket, id_client, id_agent) FROM stdin;
+13	false	13	57	16	0
+14	false	20	61	16	0
+16	false	11	0	1	3
+5	true	10	0	15	3
+17	true	0	61	15	0
+\.
 
 
 --
@@ -217,7 +231,7 @@ SELECT pg_catalog.setval('public.tickets_id_ticket_seq', 65, true);
 SELECT pg_catalog.setval('public.tours_id_seq', 21, true);
 
 
--- Completed on 2019-09-12 10:24:37
+-- Completed on 2019-09-16 18:09:51
 
 --
 -- PostgreSQL database dump complete

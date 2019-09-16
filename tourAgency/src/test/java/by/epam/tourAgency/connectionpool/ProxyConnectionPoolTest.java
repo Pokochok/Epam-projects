@@ -1,6 +1,5 @@
 package by.epam.tourAgency.connectionpool;
 
-import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.Test;
 

@@ -3,7 +3,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="ctg" uri="customtags" %>
 
-<html>
+<!DOCTYPE html>
 <head>
     <%@include file="components/main-panel.jsp" %>
     <fmt:setBundle basename="jsp/home"/>

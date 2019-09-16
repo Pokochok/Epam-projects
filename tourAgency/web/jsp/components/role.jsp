@@ -10,7 +10,7 @@
 <c:set var="userRole" value="${not empty userRole ? userRole : 'GUEST'}" scope="session"/>
 
 <fmt:setBundle basename="jsp/home"/>
-<html>
+<!DOCTYPE html>
 <head>
     <style>
         <%@include file="../../css/componentsstyle/role.css"%>

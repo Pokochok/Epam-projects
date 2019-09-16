@@ -2,46 +2,32 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 9.3.3
--- Dumped by pg_dump version 9.3.3
--- Started on 2019-09-10 10:44:49
+-- Dumped from database version 10.10
+-- Dumped by pg_dump version 11.5
+
+-- Started on 2019-09-16 18:09:02
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
+SET xmloption = content;
 SET client_min_messages = warning;
-
---
--- TOC entry 188 (class 3079 OID 11750)
--- Name: plpgsql; Type: EXTENSION; Schema: -; Owner:
---
-
-CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
-
-
---
--- TOC entry 2038 (class 0 OID 0)
--- Dependencies: 188
--- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner:
---
-
-COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
-
-
-SET search_path = public, pg_catalog;
+SET row_security = off;
 
 SET default_tablespace = '';
 
 SET default_with_oids = false;
 
 --
--- TOC entry 182 (class 1259 OID 41186)
--- Name: admins; Type: TABLE; Schema: public; Owner: postgres; Tablespace:
+-- TOC entry 196 (class 1259 OID 16394)
+-- Name: admins; Type: TABLE; Schema: public; Owner: postgres
 --
 
-CREATE TABLE admins (
+CREATE TABLE public.admins (
     surname character varying(30) NOT NULL,
     email character varying(100) NOT NULL,
     phone_number character varying(15) NOT NULL,
@@ -57,11 +43,11 @@ CREATE TABLE admins (
 ALTER TABLE public.admins OWNER TO postgres;
 
 --
--- TOC entry 181 (class 1259 OID 41184)
+-- TOC entry 197 (class 1259 OID 16399)
 -- Name: admins_id_admin_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
-CREATE SEQUENCE admins_id_admin_seq
+CREATE SEQUENCE public.admins_id_admin_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -72,20 +58,20 @@ CREATE SEQUENCE admins_id_admin_seq
 ALTER TABLE public.admins_id_admin_seq OWNER TO postgres;
 
 --
--- TOC entry 2039 (class 0 OID 0)
--- Dependencies: 181
+-- TOC entry 2897 (class 0 OID 0)
+-- Dependencies: 197
 -- Name: admins_id_admin_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
-ALTER SEQUENCE admins_id_admin_seq OWNED BY admins.id;
+ALTER SEQUENCE public.admins_id_admin_seq OWNED BY public.admins.id;
 
 
 --
--- TOC entry 174 (class 1259 OID 24706)
--- Name: agents; Type: TABLE; Schema: public; Owner: postgres; Tablespace:
+-- TOC entry 198 (class 1259 OID 16401)
+-- Name: agents; Type: TABLE; Schema: public; Owner: postgres
 --
 
-CREATE TABLE agents (
+CREATE TABLE public.agents (
     id integer NOT NULL,
     name character varying(30) NOT NULL,
     surname character varying(30) NOT NULL,
@@ -101,11 +87,11 @@ CREATE TABLE agents (
 ALTER TABLE public.agents OWNER TO postgres;
 
 --
--- TOC entry 173 (class 1259 OID 24704)
+-- TOC entry 199 (class 1259 OID 16406)
 -- Name: agents_id_agent_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
-CREATE SEQUENCE agents_id_agent_seq
+CREATE SEQUENCE public.agents_id_agent_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -116,20 +102,20 @@ CREATE SEQUENCE agents_id_agent_seq
 ALTER TABLE public.agents_id_agent_seq OWNER TO postgres;
 
 --
--- TOC entry 2040 (class 0 OID 0)
--- Dependencies: 173
+-- TOC entry 2898 (class 0 OID 0)
+-- Dependencies: 199
 -- Name: agents_id_agent_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
-ALTER SEQUENCE agents_id_agent_seq OWNED BY agents.id;
+ALTER SEQUENCE public.agents_id_agent_seq OWNED BY public.agents.id;
 
 
 --
--- TOC entry 170 (class 1259 OID 24688)
--- Name: clients; Type: TABLE; Schema: public; Owner: postgres; Tablespace:
+-- TOC entry 200 (class 1259 OID 16408)
+-- Name: clients; Type: TABLE; Schema: public; Owner: postgres
 --
 
-CREATE TABLE clients (
+CREATE TABLE public.clients (
     name character varying(30) NOT NULL,
     surname character varying(30) NOT NULL,
     email character varying(100) NOT NULL,
@@ -145,11 +131,11 @@ CREATE TABLE clients (
 ALTER TABLE public.clients OWNER TO postgres;
 
 --
--- TOC entry 180 (class 1259 OID 24780)
+-- TOC entry 201 (class 1259 OID 16413)
 -- Name: clients_id_client_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
-CREATE SEQUENCE clients_id_client_seq
+CREATE SEQUENCE public.clients_id_client_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -160,20 +146,20 @@ CREATE SEQUENCE clients_id_client_seq
 ALTER TABLE public.clients_id_client_seq OWNER TO postgres;
 
 --
--- TOC entry 2041 (class 0 OID 0)
--- Dependencies: 180
+-- TOC entry 2899 (class 0 OID 0)
+-- Dependencies: 201
 -- Name: clients_id_client_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
-ALTER SEQUENCE clients_id_client_seq OWNED BY clients.id;
+ALTER SEQUENCE public.clients_id_client_seq OWNED BY public.clients.id;
 
 
 --
--- TOC entry 172 (class 1259 OID 24696)
--- Name: credit_cards; Type: TABLE; Schema: public; Owner: postgres; Tablespace:
+-- TOC entry 202 (class 1259 OID 16415)
+-- Name: credit_cards; Type: TABLE; Schema: public; Owner: postgres
 --
 
-CREATE TABLE credit_cards (
+CREATE TABLE public.credit_cards (
     id_card integer NOT NULL,
     number character varying(16) NOT NULL,
     owner character varying(60) NOT NULL,
@@ -184,11 +170,11 @@ CREATE TABLE credit_cards (
 ALTER TABLE public.credit_cards OWNER TO postgres;
 
 --
--- TOC entry 171 (class 1259 OID 24694)
+-- TOC entry 203 (class 1259 OID 16418)
 -- Name: credit_cards_id_card_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
-CREATE SEQUENCE credit_cards_id_card_seq
+CREATE SEQUENCE public.credit_cards_id_card_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -199,20 +185,20 @@ CREATE SEQUENCE credit_cards_id_card_seq
 ALTER TABLE public.credit_cards_id_card_seq OWNER TO postgres;
 
 --
--- TOC entry 2042 (class 0 OID 0)
--- Dependencies: 171
+-- TOC entry 2900 (class 0 OID 0)
+-- Dependencies: 203
 -- Name: credit_cards_id_card_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
-ALTER SEQUENCE credit_cards_id_card_seq OWNED BY credit_cards.id_card;
+ALTER SEQUENCE public.credit_cards_id_card_seq OWNED BY public.credit_cards.id_card;
 
 
 --
--- TOC entry 177 (class 1259 OID 24725)
--- Name: orders; Type: TABLE; Schema: public; Owner: postgres; Tablespace:
+-- TOC entry 204 (class 1259 OID 16420)
+-- Name: orders; Type: TABLE; Schema: public; Owner: postgres
 --
 
-CREATE TABLE orders (
+CREATE TABLE public.orders (
     id integer NOT NULL,
     payment_state character varying(40) NOT NULL,
     id_tour integer NOT NULL,
@@ -225,11 +211,11 @@ CREATE TABLE orders (
 ALTER TABLE public.orders OWNER TO postgres;
 
 --
--- TOC entry 186 (class 1259 OID 41259)
+-- TOC entry 205 (class 1259 OID 16424)
 -- Name: orders_id_client_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
-CREATE SEQUENCE orders_id_client_seq
+CREATE SEQUENCE public.orders_id_client_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -240,20 +226,20 @@ CREATE SEQUENCE orders_id_client_seq
 ALTER TABLE public.orders_id_client_seq OWNER TO postgres;
 
 --
--- TOC entry 2043 (class 0 OID 0)
--- Dependencies: 186
+-- TOC entry 2901 (class 0 OID 0)
+-- Dependencies: 205
 -- Name: orders_id_client_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
-ALTER SEQUENCE orders_id_client_seq OWNED BY orders.id_client;
+ALTER SEQUENCE public.orders_id_client_seq OWNED BY public.orders.id_client;
 
 
 --
--- TOC entry 176 (class 1259 OID 24723)
+-- TOC entry 206 (class 1259 OID 16426)
 -- Name: orders_id_order_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
-CREATE SEQUENCE orders_id_order_seq
+CREATE SEQUENCE public.orders_id_order_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -264,20 +250,20 @@ CREATE SEQUENCE orders_id_order_seq
 ALTER TABLE public.orders_id_order_seq OWNER TO postgres;
 
 --
--- TOC entry 2044 (class 0 OID 0)
--- Dependencies: 176
+-- TOC entry 2902 (class 0 OID 0)
+-- Dependencies: 206
 -- Name: orders_id_order_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
-ALTER SEQUENCE orders_id_order_seq OWNED BY orders.id;
+ALTER SEQUENCE public.orders_id_order_seq OWNED BY public.orders.id;
 
 
 --
--- TOC entry 185 (class 1259 OID 41241)
+-- TOC entry 207 (class 1259 OID 16428)
 -- Name: orders_id_ticket_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
-CREATE SEQUENCE orders_id_ticket_seq
+CREATE SEQUENCE public.orders_id_ticket_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -288,20 +274,20 @@ CREATE SEQUENCE orders_id_ticket_seq
 ALTER TABLE public.orders_id_ticket_seq OWNER TO postgres;
 
 --
--- TOC entry 2045 (class 0 OID 0)
--- Dependencies: 185
+-- TOC entry 2903 (class 0 OID 0)
+-- Dependencies: 207
 -- Name: orders_id_ticket_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
-ALTER SEQUENCE orders_id_ticket_seq OWNED BY orders.id_ticket;
+ALTER SEQUENCE public.orders_id_ticket_seq OWNED BY public.orders.id_ticket;
 
 
 --
--- TOC entry 184 (class 1259 OID 41234)
+-- TOC entry 208 (class 1259 OID 16430)
 -- Name: orders_id_tour_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
-CREATE SEQUENCE orders_id_tour_seq
+CREATE SEQUENCE public.orders_id_tour_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -312,20 +298,20 @@ CREATE SEQUENCE orders_id_tour_seq
 ALTER TABLE public.orders_id_tour_seq OWNER TO postgres;
 
 --
--- TOC entry 2046 (class 0 OID 0)
--- Dependencies: 184
+-- TOC entry 2904 (class 0 OID 0)
+-- Dependencies: 208
 -- Name: orders_id_tour_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
-ALTER SEQUENCE orders_id_tour_seq OWNED BY orders.id_tour;
+ALTER SEQUENCE public.orders_id_tour_seq OWNED BY public.orders.id_tour;
 
 
 --
--- TOC entry 175 (class 1259 OID 24716)
--- Name: tours; Type: TABLE; Schema: public; Owner: postgres; Tablespace:
+-- TOC entry 209 (class 1259 OID 16432)
+-- Name: tours; Type: TABLE; Schema: public; Owner: postgres
 --
 
-CREATE TABLE tours (
+CREATE TABLE public.tours (
     departure_date bigint NOT NULL,
     arrival_date bigint NOT NULL,
     departure_city character varying(40) NOT NULL,
@@ -345,25 +331,25 @@ CREATE TABLE tours (
 ALTER TABLE public.tours OWNER TO postgres;
 
 --
--- TOC entry 187 (class 1259 OID 41285)
+-- TOC entry 210 (class 1259 OID 16436)
 -- Name: su; Type: VIEW; Schema: public; Owner: postgres
 --
 
-CREATE VIEW su AS
+CREATE VIEW public.su AS
  SELECT sum(tours.price) AS pric
-   FROM (orders
-   JOIN tours ON ((orders.id_tour = tours.id)))
+   FROM (public.orders
+     JOIN public.tours ON ((orders.id_tour = tours.id)))
   GROUP BY orders.id_client;
 
 
 ALTER TABLE public.su OWNER TO postgres;
 
 --
--- TOC entry 179 (class 1259 OID 24733)
--- Name: tickets; Type: TABLE; Schema: public; Owner: postgres; Tablespace:
+-- TOC entry 211 (class 1259 OID 16440)
+-- Name: tickets; Type: TABLE; Schema: public; Owner: postgres
 --
 
-CREATE TABLE tickets (
+CREATE TABLE public.tickets (
     id integer NOT NULL,
     flight_number integer NOT NULL,
     ticket_number integer NOT NULL,
@@ -377,11 +363,11 @@ CREATE TABLE tickets (
 ALTER TABLE public.tickets OWNER TO postgres;
 
 --
--- TOC entry 178 (class 1259 OID 24731)
+-- TOC entry 212 (class 1259 OID 16443)
 -- Name: tickets_id_ticket_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
-CREATE SEQUENCE tickets_id_ticket_seq
+CREATE SEQUENCE public.tickets_id_ticket_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -392,20 +378,20 @@ CREATE SEQUENCE tickets_id_ticket_seq
 ALTER TABLE public.tickets_id_ticket_seq OWNER TO postgres;
 
 --
--- TOC entry 2047 (class 0 OID 0)
--- Dependencies: 178
+-- TOC entry 2905 (class 0 OID 0)
+-- Dependencies: 212
 -- Name: tickets_id_ticket_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
-ALTER SEQUENCE tickets_id_ticket_seq OWNED BY tickets.id;
+ALTER SEQUENCE public.tickets_id_ticket_seq OWNED BY public.tickets.id;
 
 
 --
--- TOC entry 183 (class 1259 OID 41193)
+-- TOC entry 213 (class 1259 OID 16445)
 -- Name: tours_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
-CREATE SEQUENCE tours_id_seq
+CREATE SEQUENCE public.tours_id_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -416,144 +402,126 @@ CREATE SEQUENCE tours_id_seq
 ALTER TABLE public.tours_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2048 (class 0 OID 0)
--- Dependencies: 183
+-- TOC entry 2906 (class 0 OID 0)
+-- Dependencies: 213
 -- Name: tours_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
-ALTER SEQUENCE tours_id_seq OWNED BY tours.id;
+ALTER SEQUENCE public.tours_id_seq OWNED BY public.tours.id;
 
 
 --
--- TOC entry 1884 (class 2604 OID 41189)
--- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+-- TOC entry 2718 (class 2604 OID 16447)
+-- Name: admins id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY admins ALTER COLUMN id SET DEFAULT nextval('admins_id_admin_seq'::regclass);
-
-
---
--- TOC entry 1873 (class 2604 OID 24709)
--- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY agents ALTER COLUMN id SET DEFAULT nextval('agents_id_agent_seq'::regclass);
+ALTER TABLE ONLY public.admins ALTER COLUMN id SET DEFAULT nextval('public.admins_id_admin_seq'::regclass);
 
 
 --
--- TOC entry 1869 (class 2604 OID 24782)
--- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+-- TOC entry 2721 (class 2604 OID 16448)
+-- Name: agents id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY clients ALTER COLUMN id SET DEFAULT nextval('clients_id_client_seq'::regclass);
-
-
---
--- TOC entry 1872 (class 2604 OID 24699)
--- Name: id_card; Type: DEFAULT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY credit_cards ALTER COLUMN id_card SET DEFAULT nextval('credit_cards_id_card_seq'::regclass);
+ALTER TABLE ONLY public.agents ALTER COLUMN id SET DEFAULT nextval('public.agents_id_agent_seq'::regclass);
 
 
 --
--- TOC entry 1878 (class 2604 OID 24728)
--- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+-- TOC entry 2724 (class 2604 OID 16449)
+-- Name: clients id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY orders ALTER COLUMN id SET DEFAULT nextval('orders_id_order_seq'::regclass);
-
-
---
--- TOC entry 1879 (class 2604 OID 41236)
--- Name: id_tour; Type: DEFAULT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY orders ALTER COLUMN id_tour SET DEFAULT nextval('orders_id_tour_seq'::regclass);
+ALTER TABLE ONLY public.clients ALTER COLUMN id SET DEFAULT nextval('public.clients_id_client_seq'::regclass);
 
 
 --
--- TOC entry 1880 (class 2604 OID 41243)
--- Name: id_ticket; Type: DEFAULT; Schema: public; Owner: postgres
+-- TOC entry 2725 (class 2604 OID 16450)
+-- Name: credit_cards id_card; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY orders ALTER COLUMN id_ticket SET DEFAULT nextval('orders_id_ticket_seq'::regclass);
-
-
---
--- TOC entry 1881 (class 2604 OID 41261)
--- Name: id_client; Type: DEFAULT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY orders ALTER COLUMN id_client SET DEFAULT nextval('orders_id_client_seq'::regclass);
+ALTER TABLE ONLY public.credit_cards ALTER COLUMN id_card SET DEFAULT nextval('public.credit_cards_id_card_seq'::regclass);
 
 
 --
--- TOC entry 1883 (class 2604 OID 24736)
--- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+-- TOC entry 2727 (class 2604 OID 16451)
+-- Name: orders id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY tickets ALTER COLUMN id SET DEFAULT nextval('tickets_id_ticket_seq'::regclass);
-
-
---
--- TOC entry 1876 (class 2604 OID 41195)
--- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY tours ALTER COLUMN id SET DEFAULT nextval('tours_id_seq'::regclass);
+ALTER TABLE ONLY public.orders ALTER COLUMN id SET DEFAULT nextval('public.orders_id_order_seq'::regclass);
 
 
 --
--- TOC entry 2026 (class 0 OID 41186)
--- Dependencies: 182
+-- TOC entry 2728 (class 2604 OID 16452)
+-- Name: orders id_tour; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.orders ALTER COLUMN id_tour SET DEFAULT nextval('public.orders_id_tour_seq'::regclass);
+
+
+--
+-- TOC entry 2729 (class 2604 OID 16453)
+-- Name: orders id_ticket; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.orders ALTER COLUMN id_ticket SET DEFAULT nextval('public.orders_id_ticket_seq'::regclass);
+
+
+--
+-- TOC entry 2730 (class 2604 OID 16454)
+-- Name: orders id_client; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.orders ALTER COLUMN id_client SET DEFAULT nextval('public.orders_id_client_seq'::regclass);
+
+
+--
+-- TOC entry 2733 (class 2604 OID 16455)
+-- Name: tickets id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.tickets ALTER COLUMN id SET DEFAULT nextval('public.tickets_id_ticket_seq'::regclass);
+
+
+--
+-- TOC entry 2732 (class 2604 OID 16456)
+-- Name: tours id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.tours ALTER COLUMN id SET DEFAULT nextval('public.tours_id_seq'::regclass);
+
+
+--
+-- TOC entry 2875 (class 0 OID 16394)
+-- Dependencies: 196
 -- Data for Name: admins; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY admins (surname, email, phone_number, login, password, id, name, role, status) FROM stdin;
+COPY public.admins (surname, email, phone_number, login, password, id, name, role, status) FROM stdin;
 Грекова	grekovaAnn@mail.com	+30011115777	grekovaAnn	x3Xnt1ft5jDNCqERO9ECZhqziCnKUqZCKreChi8mhkY=	2	Анна	ADMIN	ACTIVE
 \.
 
 
 --
--- TOC entry 2049 (class 0 OID 0)
--- Dependencies: 181
--- Name: admins_id_admin_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('admins_id_admin_seq', 2, true);
-
-
---
--- TOC entry 2018 (class 0 OID 24706)
--- Dependencies: 174
+-- TOC entry 2877 (class 0 OID 16401)
+-- Dependencies: 198
 -- Data for Name: agents; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY agents (id, name, surname, email, phone_number, login, password, role, status) FROM stdin;
+COPY public.agents (id, name, surname, email, phone_number, login, password, role, status) FROM stdin;
 1	pavel	pokonechny	pokonechny@mail.ru	+37545678901	pavlik995	ZehL4zUy+3hMSBKWdfnv86aCsnFowOp0Syz1juAjN8U=	AGENT	ACTIVE
-0	not defined	not defined	not defined	not defined	not defined	i/rpWfCJgnphEQLNyanpSDsvOLqL3NVXkEaAgd98qrU=	AGENT	ACTIVE
 4	Maria	Konovalova	konovalova@grem.com	+375889135568	konovalovaM	x3Xnt1ft5jDNCqERO9ECZhqziCnKUqZCKreChi8mhkY=	AGENT	ACTIVE
 3	Игорь	Крутой	igorKrutoy@mylo.com	+3003456788	igorKrutoy	x3Xnt1ft5jDNCqERO9ECZhqziCnKUqZCKreChi8mhkY=	AGENT	ACTIVE
+0	not defined	not defined	not defined	not defined	not defined	x3Xnt1ft5jDNCqERO9ECZhqziCnKUqZCKreChi8mhkY=	AGENT	ACTIVE
 \.
 
 
 --
--- TOC entry 2050 (class 0 OID 0)
--- Dependencies: 173
--- Name: agents_id_agent_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('agents_id_agent_seq', 4, true);
-
-
---
--- TOC entry 2014 (class 0 OID 24688)
--- Dependencies: 170
+-- TOC entry 2879 (class 0 OID 16408)
+-- Dependencies: 200
 -- Data for Name: clients; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY clients (name, surname, email, phone_number, login, password, id, role, status) FROM stdin;
+COPY public.clients (name, surname, email, phone_number, login, password, id, role, status) FROM stdin;
 Толик	Фамич	fomich@mail.ru	+375456789010	fomich	x3Xnt1ft5jDNCqERO9ECZhqziCnKUqZCKreChi8mhkY=	15	CLIENT	ACTIVE
 Andrey	Korneshonok	andreyKo@gmail.com	+30054815777	andreyKo	x3Xnt1ft5jDNCqERO9ECZhqziCnKUqZCKreChi8mhkY=	16	CLIENT	ACTIVE
 Pavel	pokonechny	pokonechny@mail.com	+375336586922	ppavlushka	dpI68jpx4zojCdJvTlSUueq0wPDEEy0Ax22KvHGwzy0=	1	CLIENT	ACTIVE
@@ -562,90 +530,37 @@ name	myname	pokon12@gmail.com	+30054235777	test	x3Xnt1ft5jDNCqERO9ECZhqziCnKUqZC
 
 
 --
--- TOC entry 2051 (class 0 OID 0)
--- Dependencies: 180
--- Name: clients_id_client_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('clients_id_client_seq', 17, true);
-
-
---
--- TOC entry 2016 (class 0 OID 24696)
--- Dependencies: 172
+-- TOC entry 2881 (class 0 OID 16415)
+-- Dependencies: 202
 -- Data for Name: credit_cards; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY credit_cards (id_card, number, owner, validity) FROM stdin;
+COPY public.credit_cards (id_card, number, owner, validity) FROM stdin;
 \.
 
 
 --
--- TOC entry 2052 (class 0 OID 0)
--- Dependencies: 171
--- Name: credit_cards_id_card_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('credit_cards_id_card_seq', 1, false);
-
-
---
--- TOC entry 2021 (class 0 OID 24725)
--- Dependencies: 177
+-- TOC entry 2883 (class 0 OID 16420)
+-- Dependencies: 204
 -- Data for Name: orders; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY orders (id, payment_state, id_tour, id_ticket, id_client, id_agent) FROM stdin;
-5	false	10	0	15	3
+COPY public.orders (id, payment_state, id_tour, id_ticket, id_client, id_agent) FROM stdin;
 13	false	13	57	16	0
 14	false	20	61	16	0
 16	false	11	0	1	3
+5	true	10	0	15	3
+17	true	0	61	15	0
 \.
 
 
 --
--- TOC entry 2053 (class 0 OID 0)
--- Dependencies: 186
--- Name: orders_id_client_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('orders_id_client_seq', 1, false);
-
-
---
--- TOC entry 2054 (class 0 OID 0)
--- Dependencies: 176
--- Name: orders_id_order_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('orders_id_order_seq', 16, true);
-
-
---
--- TOC entry 2055 (class 0 OID 0)
--- Dependencies: 185
--- Name: orders_id_ticket_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('orders_id_ticket_seq', 1, false);
-
-
---
--- TOC entry 2056 (class 0 OID 0)
--- Dependencies: 184
--- Name: orders_id_tour_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('orders_id_tour_seq', 1, false);
-
-
---
--- TOC entry 2023 (class 0 OID 24733)
--- Dependencies: 179
+-- TOC entry 2889 (class 0 OID 16440)
+-- Dependencies: 211
 -- Data for Name: tickets; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY tickets (id, flight_number, ticket_number, departure_city, arrival_city, departure_datetime, arrival_datetime) FROM stdin;
+COPY public.tickets (id, flight_number, ticket_number, departure_city, arrival_city, departure_datetime, arrival_datetime) FROM stdin;
 2	1	1	Moscow	Minsk	61527513600000	61527945600000
 17	2	2	Minsk	Kiev	61527513600000	61527945600000
 0	0	0	not defined	not defined	0	0
@@ -679,21 +594,12 @@ COPY tickets (id, flight_number, ticket_number, departure_city, arrival_city, de
 
 
 --
--- TOC entry 2057 (class 0 OID 0)
--- Dependencies: 178
--- Name: tickets_id_ticket_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('tickets_id_ticket_seq', 65, true);
-
-
---
--- TOC entry 2019 (class 0 OID 24716)
--- Dependencies: 175
+-- TOC entry 2888 (class 0 OID 16432)
+-- Dependencies: 209
 -- Data for Name: tours; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY tours (departure_date, arrival_date, departure_city, arrival_city, arrival_country, hotel, nutrition, adults_number, children_number, price, id, status, tour_name) FROM stdin;
+COPY public.tours (departure_date, arrival_date, departure_city, arrival_city, arrival_country, hotel, nutrition, adults_number, children_number, price, id, status, tour_name) FROM stdin;
 1566511200000	1567116000000	Moscow	Sochi	Russia	Moscow city	FB	2	2	$650.00	13	AVAILABLE	Walk in Sochi
 0	0	not defined	not defined	not defined	not defined	not defined	0	0	$0.00	0	not defined	not defined
 1566511200000	1567116000000	Minsk	Moscow	Russia	Moscow city	RO	2	1	$586.00	11	AVAILABLE	Tour in Moscow
@@ -708,127 +614,197 @@ COPY tours (departure_date, arrival_date, departure_city, arrival_city, arrival_
 
 
 --
--- TOC entry 2058 (class 0 OID 0)
--- Dependencies: 183
+-- TOC entry 2907 (class 0 OID 0)
+-- Dependencies: 197
+-- Name: admins_id_admin_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.admins_id_admin_seq', 2, true);
+
+
+--
+-- TOC entry 2908 (class 0 OID 0)
+-- Dependencies: 199
+-- Name: agents_id_agent_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.agents_id_agent_seq', 4, true);
+
+
+--
+-- TOC entry 2909 (class 0 OID 0)
+-- Dependencies: 201
+-- Name: clients_id_client_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.clients_id_client_seq', 17, true);
+
+
+--
+-- TOC entry 2910 (class 0 OID 0)
+-- Dependencies: 203
+-- Name: credit_cards_id_card_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.credit_cards_id_card_seq', 1, false);
+
+
+--
+-- TOC entry 2911 (class 0 OID 0)
+-- Dependencies: 205
+-- Name: orders_id_client_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.orders_id_client_seq', 1, false);
+
+
+--
+-- TOC entry 2912 (class 0 OID 0)
+-- Dependencies: 206
+-- Name: orders_id_order_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.orders_id_order_seq', 17, true);
+
+
+--
+-- TOC entry 2913 (class 0 OID 0)
+-- Dependencies: 207
+-- Name: orders_id_ticket_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.orders_id_ticket_seq', 1, false);
+
+
+--
+-- TOC entry 2914 (class 0 OID 0)
+-- Dependencies: 208
+-- Name: orders_id_tour_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.orders_id_tour_seq', 1, false);
+
+
+--
+-- TOC entry 2915 (class 0 OID 0)
+-- Dependencies: 212
+-- Name: tickets_id_ticket_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.tickets_id_ticket_seq', 65, true);
+
+
+--
+-- TOC entry 2916 (class 0 OID 0)
+-- Dependencies: 213
 -- Name: tours_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('tours_id_seq', 21, true);
+SELECT pg_catalog.setval('public.tours_id_seq', 21, true);
 
 
 --
--- TOC entry 1902 (class 2606 OID 41191)
--- Name: admins_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace:
+-- TOC entry 2735 (class 2606 OID 16458)
+-- Name: admins admins_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY admins
+ALTER TABLE ONLY public.admins
     ADD CONSTRAINT admins_pkey PRIMARY KEY (id);
 
 
 --
--- TOC entry 1894 (class 2606 OID 24711)
--- Name: agents_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace:
+-- TOC entry 2737 (class 2606 OID 16460)
+-- Name: agents agents_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY agents
+ALTER TABLE ONLY public.agents
     ADD CONSTRAINT agents_pkey PRIMARY KEY (id);
 
 
 --
--- TOC entry 1888 (class 2606 OID 24787)
--- Name: clients_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace:
+-- TOC entry 2739 (class 2606 OID 16462)
+-- Name: clients clients_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY clients
+ALTER TABLE ONLY public.clients
     ADD CONSTRAINT clients_pkey PRIMARY KEY (id);
 
 
 --
--- TOC entry 1890 (class 2606 OID 24703)
--- Name: credit_cards_id_card_number_key; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace:
+-- TOC entry 2741 (class 2606 OID 16464)
+-- Name: credit_cards credit_cards_id_card_number_key; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY credit_cards
+ALTER TABLE ONLY public.credit_cards
     ADD CONSTRAINT credit_cards_id_card_number_key UNIQUE (id_card, number);
 
 
 --
--- TOC entry 1892 (class 2606 OID 24701)
--- Name: credit_cards_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace:
+-- TOC entry 2743 (class 2606 OID 16466)
+-- Name: credit_cards credit_cards_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY credit_cards
+ALTER TABLE ONLY public.credit_cards
     ADD CONSTRAINT credit_cards_pkey PRIMARY KEY (id_card);
 
 
 --
--- TOC entry 1898 (class 2606 OID 24730)
--- Name: orders_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace:
+-- TOC entry 2745 (class 2606 OID 16468)
+-- Name: orders orders_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY orders
+ALTER TABLE ONLY public.orders
     ADD CONSTRAINT orders_pkey PRIMARY KEY (id);
 
 
 --
--- TOC entry 1900 (class 2606 OID 24738)
--- Name: tickets_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace:
+-- TOC entry 2749 (class 2606 OID 16470)
+-- Name: tickets tickets_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY tickets
+ALTER TABLE ONLY public.tickets
     ADD CONSTRAINT tickets_pkey PRIMARY KEY (id);
 
 
 --
--- TOC entry 1896 (class 2606 OID 41204)
--- Name: tours_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace:
+-- TOC entry 2747 (class 2606 OID 16472)
+-- Name: tours tours_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY tours
+ALTER TABLE ONLY public.tours
     ADD CONSTRAINT tours_pkey PRIMARY KEY (id);
 
 
 --
--- TOC entry 1905 (class 2606 OID 41266)
--- Name: orders_id_client_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- TOC entry 2750 (class 2606 OID 16473)
+-- Name: orders orders_id_client_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY orders
-    ADD CONSTRAINT orders_id_client_fkey FOREIGN KEY (id_client) REFERENCES clients(id);
-
-
---
--- TOC entry 1904 (class 2606 OID 41253)
--- Name: orders_id_ticket_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY orders
-    ADD CONSTRAINT orders_id_ticket_fkey FOREIGN KEY (id_ticket) REFERENCES tickets(id);
+ALTER TABLE ONLY public.orders
+    ADD CONSTRAINT orders_id_client_fkey FOREIGN KEY (id_client) REFERENCES public.clients(id);
 
 
 --
--- TOC entry 1903 (class 2606 OID 41248)
--- Name: orders_id_tour_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- TOC entry 2751 (class 2606 OID 16478)
+-- Name: orders orders_id_ticket_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY orders
-    ADD CONSTRAINT orders_id_tour_fkey FOREIGN KEY (id_tour) REFERENCES tours(id);
+ALTER TABLE ONLY public.orders
+    ADD CONSTRAINT orders_id_ticket_fkey FOREIGN KEY (id_ticket) REFERENCES public.tickets(id);
 
 
 --
--- TOC entry 2037 (class 0 OID 0)
--- Dependencies: 5
--- Name: public; Type: ACL; Schema: -; Owner: postgres
+-- TOC entry 2752 (class 2606 OID 16483)
+-- Name: orders orders_id_tour_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
-REVOKE ALL ON SCHEMA public FROM PUBLIC;
-REVOKE ALL ON SCHEMA public FROM postgres;
-GRANT ALL ON SCHEMA public TO postgres;
-GRANT ALL ON SCHEMA public TO PUBLIC;
+ALTER TABLE ONLY public.orders
+    ADD CONSTRAINT orders_id_tour_fkey FOREIGN KEY (id_tour) REFERENCES public.tours(id);
 
 
--- Completed on 2019-09-10 10:44:51
+-- Completed on 2019-09-16 18:09:02
 
 --
 -- PostgreSQL database dump complete
 --
+

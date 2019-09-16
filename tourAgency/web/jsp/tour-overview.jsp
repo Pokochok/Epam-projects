@@ -15,7 +15,7 @@
 <c:set value="${not empty price ? price : param.price}" scope="page" var="price"/>
 <c:set value="${not empty status ? status : param.status}" scope="page" var="status"/>
 
-<html>
+<!DOCTYPE html>
 <head>
     <%@include file="components/main-panel.jsp" %>
     <style>

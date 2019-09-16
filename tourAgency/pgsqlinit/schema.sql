@@ -5,7 +5,7 @@
 -- Dumped from database version 10.10
 -- Dumped by pg_dump version 11.5
 
--- Started on 2019-09-12 10:24:16
+-- Started on 2019-09-16 18:10:29
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -589,7 +589,7 @@ ALTER TABLE ONLY public.orders
     ADD CONSTRAINT orders_id_tour_fkey FOREIGN KEY (id_tour) REFERENCES public.tours(id);
 
 
--- Completed on 2019-09-12 10:24:17
+-- Completed on 2019-09-16 18:10:29
 
 --
 -- PostgreSQL database dump complete

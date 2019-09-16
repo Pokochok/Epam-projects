@@ -6,7 +6,7 @@
        scope="session"/>
 <fmt:setLocale value="${language}" scope="session"/>
 <fmt:setBundle basename="jsp/home"/>
-<html>
+<!DOCTYPE html>
 <head>
     <style>
         <%@include file="../../css/componentsstyle/language-panel.css"%>

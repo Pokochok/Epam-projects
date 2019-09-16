@@ -4,6 +4,7 @@
 
 <fmt:setBundle basename="jsp/tickets"/>
 <!DOCTYPE html>
+<html>
 
 <body>
 

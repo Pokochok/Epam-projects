@@ -4,6 +4,7 @@
 <%@ taglib prefix="ctg" uri="customtags" %>
 
 <!DOCTYPE html>
+<html>
 <head>
     <%@include file="components/main-panel.jsp" %>
     <fmt:setBundle basename="jsp/home"/>

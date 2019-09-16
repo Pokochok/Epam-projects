@@ -4,6 +4,7 @@
 
 <fmt:setBundle basename="jsp/tours"/>
 <!DOCTYPE html>
+<html>
 
 <body>
 

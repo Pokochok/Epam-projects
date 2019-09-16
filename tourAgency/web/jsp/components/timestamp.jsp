@@ -4,7 +4,7 @@
 
 <fmt:setBundle basename="jsp/timestamp"/>
 <footer style="text-align: center; position: relative;">
-    <div style="background:white; position:relative; padding:60 10;">
+    <div style="background:white; position:relative; padding:60px 10px;">
         <fmt:message key="build.timestamp"/>
     </div>
 </footer>

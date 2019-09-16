@@ -4,6 +4,7 @@
 
 <fmt:setBundle basename="jsp/home"/>
 <!DOCTYPE html>
+<html>
 <head>
     <style>
         <%@include file="../../css/componentsstyle/main-panel-action-style.css"%>

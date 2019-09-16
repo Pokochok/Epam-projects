@@ -7,11 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8fe1f99-c105-42e2-9621-f5911c5badb0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/connectionpool/ProxyConnectionPoolTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/connectionpool/ProxyConnectionPoolTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/jsp/about-company.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/about-company.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/jsp/booking.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/booking.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/jsp/components/another-panel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/components/another-panel.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/jsp/components/language-panel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/components/language-panel.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/jsp/components/main-navigation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/components/main-navigation.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/jsp/components/main-panel-action.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/components/main-panel-action.jsp" afterDir="false" />

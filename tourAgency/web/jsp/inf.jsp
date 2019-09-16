@@ -4,6 +4,7 @@
 
 
 <!DOCTYPE html>
+<html>
 <head>
     <%@include file="components/another-panel.jsp"%>
     <style>

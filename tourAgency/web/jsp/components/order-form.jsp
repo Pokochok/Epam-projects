@@ -4,6 +4,7 @@
 
 <fmt:setBundle basename="jsp/orders"/>
 <!DOCTYPE html>
+<html>
 
 <body>
 

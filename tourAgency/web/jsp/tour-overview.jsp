@@ -16,6 +16,7 @@
 <c:set value="${not empty status ? status : param.status}" scope="page" var="status"/>
 
 <!DOCTYPE html>
+<html>
 <head>
     <%@include file="components/main-panel.jsp" %>
     <style>

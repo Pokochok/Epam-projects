@@ -71,7 +71,7 @@ public class ProxyConnectionPool {
             createConnection();
         }
         LOGGER.debug("ProxyConnectionPool was created");
-        if (availableConnections.size() == 0) {
+        if (availableConnections.isEmpty()) {
             LOGGER.fatal("Fatal error in initializer: connection pool hasn't any connections");
             throw new ConnectionPoolException("Connection pool hasn't any connections");
         }
@@ -84,7 +84,7 @@ public class ProxyConnectionPool {
         /**
          * Hold the instance of connection pool
          */
-        private static ProxyConnectionPool POOL = new ProxyConnectionPool();
+        private static final ProxyConnectionPool POOL = new ProxyConnectionPool();
     }
 
     /**
@@ -125,7 +125,7 @@ public class ProxyConnectionPool {
     public Connection takeConnection() {
         ProxyConnection connection = null;
         try {
-            if (availableConnections.size() == 0 && usingConnections.size() < propertyHolder.getPoolSize()) {
+            if (availableConnections.isEmpty() && usingConnections.size() < propertyHolder.getPoolSize()) {
                 LOGGER.debug("A lack of connections");
                 new Thread(this::createConnection).start();
             }

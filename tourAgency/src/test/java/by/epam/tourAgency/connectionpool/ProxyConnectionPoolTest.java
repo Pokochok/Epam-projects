@@ -7,10 +7,6 @@ import org.junit.Test;
 import java.sql.Connection;
 
 public class ProxyConnectionPoolTest {
-    @AfterClass
-    public static void after(){
-        ProxyConnectionPool.getInstance().closePool();
-    }
 
     @Test
     public void testGetInstance() {

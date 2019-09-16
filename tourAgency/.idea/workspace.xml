@@ -7,17 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8fe1f99-c105-42e2-9621-f5911c5badb0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/connectionpool/ProxyConnectionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/connectionpool/ProxyConnectionPool.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/connectionpool/ProxyConnectionPoolTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/connectionpool/ProxyConnectionPoolTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/logic/LoginLogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/logic/LoginLogicTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/logic/MatchOfUniqueFieldsDetectorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/logic/MatchOfUniqueFieldsDetectorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/logic/TicketRegistrationLogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/logic/TicketRegistrationLogicTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/logic/ToPageWithListLogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/logic/ToPageWithListLogicTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/logic/UpdateTourLogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/logic/UpdateTourLogicTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/logic/UpdateUserLogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/logic/UpdateUserLogicTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/util/ValidationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/util/ValidationTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -137,6 +129,21 @@
     </option>
   </component>
   <component name="RunManager" selected="JUnit.ProxyConnectionPoolTest">
+    <configuration name="LoginLogicTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tourAgency" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.epam.tourAgency.logic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="by.epam.tourAgency.logic" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.tourAgency.logic.LoginLogicTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProxyConnectionPoolTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tourAgency" />
       <extension name="coverage">
@@ -152,6 +159,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="by.epam.tourAgency in tourAgency" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tourAgency" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.epam.tourAgency.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="by.epam.tourAgency" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LoginLogicTest.testCheckLoginPasswordExists" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="tourAgency" />
       <extension name="coverage">
@@ -163,41 +184,6 @@
       <option name="PACKAGE_NAME" value="by.epam.tourAgency.logic" />
       <option name="MAIN_CLASS_NAME" value="by.epam.tourAgency.logic.LoginLogicTest" />
       <option name="METHOD_NAME" value="testCheckLoginPasswordExists" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MatchOfUniqueFieldsDetectorTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="tourAgency" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="by.epam.tourAgency.logic.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="by.epam.tourAgency.logic" />
-      <option name="MAIN_CLASS_NAME" value="by.epam.tourAgency.logic.MatchOfUniqueFieldsDetectorTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MatchOfUniqueFieldsDetectorTest.testIsExistsPhoneNumberExists" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="tourAgency" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="by.epam.tourAgency.logic.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="by.epam.tourAgency.logic" />
-      <option name="MAIN_CLASS_NAME" value="by.epam.tourAgency.logic.MatchOfUniqueFieldsDetectorTest" />
-      <option name="METHOD_NAME" value="testIsExistsPhoneNumberExists" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -290,18 +276,18 @@
     </configuration>
     <list>
       <item itemvalue="TestNG.&lt;default&gt;" />
-      <item itemvalue="TestNG.MatchOfUniqueFieldsDetectorTest" />
-      <item itemvalue="TestNG.MatchOfUniqueFieldsDetectorTest.testIsExistsPhoneNumberExists" />
       <item itemvalue="TestNG.LoginLogicTest.testCheckLoginPasswordExists" />
       <item itemvalue="JUnit.ProxyConnectionPoolTest" />
+      <item itemvalue="JUnit.LoginLogicTest" />
+      <item itemvalue="JUnit.by.epam.tourAgency in tourAgency" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ProxyConnectionPoolTest" />
+        <item itemvalue="JUnit.by.epam.tourAgency in tourAgency" />
         <item itemvalue="TestNG.&lt;default&gt;" />
+        <item itemvalue="JUnit.LoginLogicTest" />
         <item itemvalue="TestNG.LoginLogicTest.testCheckLoginPasswordExists" />
-        <item itemvalue="TestNG.MatchOfUniqueFieldsDetectorTest.testIsExistsPhoneNumberExists" />
-        <item itemvalue="TestNG.MatchOfUniqueFieldsDetectorTest" />
       </list>
     </recent_temporary>
   </component>

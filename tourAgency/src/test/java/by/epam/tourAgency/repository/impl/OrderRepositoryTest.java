@@ -62,7 +62,7 @@ public class OrderRepositoryTest {
         Specification specification = new AddOrderSpecification(order);
         OrderRepository.getInstance().add(order, specification);
         int expected = OrderRepository.getInstance().query(new FindAllOrdersSpecification()).size() - 1;
-        OrderRepository.getInstance().remove(order, new RemoveOrderByIdSpecification(18));
+        OrderRepository.getInstance().remove(order, new RemoveOrderByIdSpecification(5));
         int actual = OrderRepository.getInstance().query(new FindAllOrdersSpecification()).size();
         Assert.assertEquals(expected, actual);
     }

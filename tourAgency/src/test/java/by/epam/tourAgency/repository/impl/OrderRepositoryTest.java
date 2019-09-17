@@ -6,7 +6,6 @@ import by.epam.tourAgency.exception.RepositoryException;
 import by.epam.tourAgency.specification.Specification;
 import by.epam.tourAgency.specification.impl.order.AddOrderSpecification;
 import by.epam.tourAgency.specification.impl.order.FindAllOrdersSpecification;
-import by.epam.tourAgency.specification.impl.order.RemoveOrderByIdSpecification;
 import com.opentable.db.postgres.embedded.EmbeddedPostgres;
 import org.flywaydb.core.Flyway;
 import org.junit.Assert;
@@ -52,17 +51,6 @@ public class OrderRepositoryTest {
         Specification specification = new AddOrderSpecification(order);
         int expected = OrderRepository.getInstance().query(new FindAllOrdersSpecification()).size() + 1;
         OrderRepository.getInstance().add(order, specification);
-        int actual = OrderRepository.getInstance().query(new FindAllOrdersSpecification()).size();
-        Assert.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void remove() throws RepositoryException {
-        Order order = new Order.OrderBuilder().setTour(tour).setTicket(ticket).setPaymentState(false).setClient(client).setAgent(agent).setId(18).build();
-        Specification specification = new AddOrderSpecification(order);
-        OrderRepository.getInstance().add(order, specification);
-        int expected = OrderRepository.getInstance().query(new FindAllOrdersSpecification()).size() - 1;
-        OrderRepository.getInstance().remove(order, new RemoveOrderByIdSpecification(13));
         int actual = OrderRepository.getInstance().query(new FindAllOrdersSpecification()).size();
         Assert.assertEquals(expected, actual);
     }

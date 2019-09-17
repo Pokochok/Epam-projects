@@ -6,7 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8fe1f99-c105-42e2-9621-f5911c5badb0" name="Default Changelist" comment="" />
+    <list default="true" id="c8fe1f99-c105-42e2-9621-f5911c5badb0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/repository/impl/OrderRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/repository/impl/OrderRepositoryTest.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +129,15 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.OrderRepositoryTest">
+  <component name="RunManager" selected="JUnit.All in tourAgency">
+    <configuration name="All in tourAgency" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tourAgency" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="OrderRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tourAgency" />
       <extension name="coverage">
@@ -139,22 +149,6 @@
       <option name="PACKAGE_NAME" value="by.epam.tourAgency.repository.impl" />
       <option name="MAIN_CLASS_NAME" value="by.epam.tourAgency.repository.impl.OrderRepositoryTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OrderRepositoryTest.add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tourAgency" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="by.epam.tourAgency.repository.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="by.epam.tourAgency.repository.impl" />
-      <option name="MAIN_CLASS_NAME" value="by.epam.tourAgency.repository.impl.OrderRepositoryTest" />
-      <option name="METHOD_NAME" value="add" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -280,18 +274,18 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.OrderRepositoryTest" />
-      <item itemvalue="JUnit.OrderRepositoryTest.add" />
       <item itemvalue="JUnit.TicketRepositoryTest" />
       <item itemvalue="JUnit.TourRepositoryTest" />
       <item itemvalue="JUnit.OrderRepositoryTest.remove" />
+      <item itemvalue="JUnit.All in tourAgency" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in tourAgency" />
         <item itemvalue="JUnit.OrderRepositoryTest" />
         <item itemvalue="JUnit.OrderRepositoryTest.remove" />
         <item itemvalue="JUnit.TourRepositoryTest" />
         <item itemvalue="JUnit.TicketRepositoryTest" />
-        <item itemvalue="JUnit.OrderRepositoryTest.add" />
       </list>
     </recent_temporary>
   </component>

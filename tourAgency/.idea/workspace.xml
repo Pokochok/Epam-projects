@@ -7,30 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8fe1f99-c105-42e2-9621-f5911c5badb0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/repository/impl/OrderRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/repository/impl/TicketRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/repository/impl/TourRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/db/migration/V1__init.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/about-company.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/about-company.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/booking.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/booking.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/components/another-panel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/components/another-panel.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/components/language-panel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/components/language-panel.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/components/main-navigation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/components/main-navigation.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/components/main-panel-action.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/components/main-panel-action.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/components/main-panel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/components/main-panel.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/components/order-form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/components/order-form.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/components/role.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/components/role.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/components/ticket-form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/components/ticket-form.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/components/tour-form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/components/tour-form.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/inf.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/inf.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/orders.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/orders.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/registration.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/ticket-registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/ticket-registration.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/tickets.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/tickets.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/tour-overview.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/tour-overview.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/tour-registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/tour-registration.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/tours.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/tours.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/user-profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/user-profile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/connectionpool/PropertyHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/connectionpool/PropertyHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/connectionpool/ProxyConnectionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/connectionpool/ProxyConnectionPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/entity/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/repository/impl/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/repository/impl/OrderRepository.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,6 +50,7 @@
         <option value="Tag Library Descriptor" />
         <option value="TestNG Test Class" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -94,7 +81,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="TestNG" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG" value="" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="last.edited.regexp" value="Sample Text" />
@@ -108,6 +96,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="by.epam.tourAgency.repository.impl" />
       <recent name="by.epam.tourAgency.connectionpool" />
       <recent name="by.epam.tourAgency.logic" />
       <recent name="test.by.epam.tourAgency.util" />
@@ -120,11 +109,11 @@
       <recent name="by.epam.dbworker.specification.impl.tourspecification" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Java Lab\touragency\tourAgency\src\test" />
       <recent name="C:\Java Lab\touragency\tourAgency\web\jsp\components" />
       <recent name="C:\Java Lab\touragency\tourAgency\src\test\java" />
       <recent name="C:\Java Lab\touragency\tourAgency\pgsqlinit" />
       <recent name="E:\repositories\epam\tourAgency\src" />
-      <recent name="E:\repositories\epam\tourAgency\src\main" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\repositories\epam\tourAgency\src\main\java\by\epam\tourAgency" />
@@ -149,75 +138,79 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ProxyConnectionPoolTest">
-    <configuration name="LoginLogicTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TourRepositoryTest">
+    <configuration name="OrderRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tourAgency" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="by.epam.tourAgency.logic.*" />
+          <option name="PATTERN" value="by.epam.tourAgency.repository.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="by.epam.tourAgency.logic" />
-      <option name="MAIN_CLASS_NAME" value="by.epam.tourAgency.logic.LoginLogicTest" />
+      <option name="PACKAGE_NAME" value="by.epam.tourAgency.repository.impl" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.tourAgency.repository.impl.OrderRepositoryTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProxyConnectionPoolTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderRepositoryTest.add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tourAgency" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="by.epam.tourAgency.connectionpool.*" />
+          <option name="PATTERN" value="by.epam.tourAgency.repository.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="by.epam.tourAgency.connectionpool" />
-      <option name="MAIN_CLASS_NAME" value="by.epam.tourAgency.connectionpool.ProxyConnectionPoolTest" />
+      <option name="PACKAGE_NAME" value="by.epam.tourAgency.repository.impl" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.tourAgency.repository.impl.OrderRepositoryTest" />
+      <option name="METHOD_NAME" value="add" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TicketRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tourAgency" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.epam.tourAgency.repository.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="by.epam.tourAgency.repository.impl" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.tourAgency.repository.impl.TicketRepositoryTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="by.epam.tourAgency in tourAgency" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TourRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tourAgency" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="by.epam.tourAgency.*" />
+          <option name="PATTERN" value="by.epam.tourAgency.repository.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="by.epam.tourAgency" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="PACKAGE_NAME" value="by.epam.tourAgency.repository.impl" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.tourAgency.repository.impl.TourRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginLogicTest.testCheckLoginPasswordExists" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UserRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tourAgency" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="by.epam.tourAgency.logic.*" />
+          <option name="PATTERN" value="by.epam.tourAgency.repository.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="by.epam.tourAgency.logic" />
-      <option name="MAIN_CLASS_NAME" value="by.epam.tourAgency.logic.LoginLogicTest" />
-      <option name="METHOD_NAME" value="testCheckLoginPasswordExists" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="&lt;default&gt;" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="tourAgency" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="PACKAGE" />
-      <properties />
-      <listeners />
+      <option name="PACKAGE_NAME" value="by.epam.tourAgency.repository.impl" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.tourAgency.repository.impl.UserRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -296,19 +289,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.ProxyConnectionPoolTest" />
-      <item itemvalue="JUnit.LoginLogicTest" />
-      <item itemvalue="JUnit.by.epam.tourAgency in tourAgency" />
-      <item itemvalue="TestNG.&lt;default&gt;" />
-      <item itemvalue="TestNG.LoginLogicTest.testCheckLoginPasswordExists" />
+      <item itemvalue="JUnit.UserRepositoryTest" />
+      <item itemvalue="JUnit.OrderRepositoryTest" />
+      <item itemvalue="JUnit.OrderRepositoryTest.add" />
+      <item itemvalue="JUnit.TicketRepositoryTest" />
+      <item itemvalue="JUnit.TourRepositoryTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ProxyConnectionPoolTest" />
-        <item itemvalue="JUnit.by.epam.tourAgency in tourAgency" />
-        <item itemvalue="TestNG.&lt;default&gt;" />
-        <item itemvalue="JUnit.LoginLogicTest" />
-        <item itemvalue="TestNG.LoginLogicTest.testCheckLoginPasswordExists" />
+        <item itemvalue="JUnit.TourRepositoryTest" />
+        <item itemvalue="JUnit.TicketRepositoryTest" />
+        <item itemvalue="JUnit.OrderRepositoryTest" />
+        <item itemvalue="JUnit.OrderRepositoryTest.add" />
+        <item itemvalue="JUnit.UserRepositoryTest" />
       </list>
     </recent_temporary>
   </component>

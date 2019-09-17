@@ -12,7 +12,7 @@ import static by.epam.tourAgency.util.PageMsgConstant.LOGGER;
  * Class, which contains all properties, to connect
  * with database, the connection pool needs
  */
-class PropertyHolder {
+public class PropertyHolder {
     private static final String FILE_NAME = "dbdriver/driverProp.properties";
     private static final String DRIVER_FIELD = "driverName";
     private static final String USER_FIELD = "dbUser";
@@ -45,8 +45,29 @@ class PropertyHolder {
      * Contains an amount of connections to initialize firs time
      */
     private final int initCount;
+    /**
+     * Contains instance of PropertyHolder
+     */
+    private static PropertyHolder instance;
 
-    PropertyHolder() {
+    /**
+     * Constructor for database with another url
+     * @param url of database to connect
+     */
+    private PropertyHolder(String url){
+        PropertyHolder propertyHolder = new PropertyHolder();
+        driverName = propertyHolder.driverName;
+        userName = propertyHolder.userName;
+        password = propertyHolder.password;
+        poolSize = propertyHolder.poolSize;
+        initCount = propertyHolder.initCount;
+        this.url = url;
+    }
+
+    /**
+     * Constructor for main database
+     */
+    private PropertyHolder() {
         Properties properties = new Properties();
         try (InputStream inputStream = PropertyHolder.class.getClassLoader().getResourceAsStream(FILE_NAME)) {
             properties.load(inputStream);
@@ -61,6 +82,21 @@ class PropertyHolder {
             LOGGER.fatal("Fatal error in reading file:", e);
             throw new ConnectionPoolException("Error in reading file: ", e);
         }
+    }
+
+    public static PropertyHolder getInstance(){
+        if (instance == null){
+            instance = new PropertyHolder();
+        }
+        return instance;
+    }
+
+
+    public static PropertyHolder getInstance(String url){
+        if (instance == null){
+            instance = new PropertyHolder(url);
+        }
+        return instance;
     }
 
     String getDriverName() {

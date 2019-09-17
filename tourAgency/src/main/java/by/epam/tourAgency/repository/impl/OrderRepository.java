@@ -114,7 +114,7 @@ public class OrderRepository implements Repository<Order> {
                 Specification agentQuery = new FindAgentByIdSpecification(resultSet.getInt("id_agent"));
                 Order order = new Order.OrderBuilder()
                 .setId(resultSet.getInt("id"))
-                .setPaymentState(Boolean.valueOf(resultSet.getString("payment_state")))
+                .setPaymentState(Boolean.parseBoolean(resultSet.getString("payment_state")))
                 .setTour(TourRepository.getInstance().query(tourQuery).iterator().next())
                 .setTicket(TicketRepository.getInstance().query(ticketQuery).iterator().next())
                 .setClient(UserRepository.getInstance().query(userQuery).iterator().next())

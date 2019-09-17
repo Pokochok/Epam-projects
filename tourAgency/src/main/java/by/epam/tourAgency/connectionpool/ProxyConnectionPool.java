@@ -39,7 +39,7 @@ public class ProxyConnectionPool {
      * Initialize a pool.
      */
     private ProxyConnectionPool() {
-        propertyHolder = new PropertyHolder();
+        propertyHolder = PropertyHolder.getInstance();
         registerDriver();
         LOGGER.debug("Driver was register");
         init();

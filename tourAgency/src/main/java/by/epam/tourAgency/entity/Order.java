@@ -98,8 +98,8 @@ public class Order {
         Order order = (Order) o;
         return id == order.id &&
                 paymentState == order.paymentState &&
-                Objects.equals(tour, order.tour) &&
-                Objects.equals(ticket, order.ticket);
+                tour.equals(order.tour) &&
+                ticket.equals(order.ticket);
     }
 
     @Override

@@ -1,4 +1,0 @@
-
-_squid:S00107"BConstructor has 13 parameters, which is greater than 7 authorized.(“״ֵÿÿÿÿÿ
-squid:S1186z"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(סהנשÿÿÿÿ
-wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(י³ֿüûÿÿÿÿ

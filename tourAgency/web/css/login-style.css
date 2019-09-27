@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: -webkit-fill-available;
+    height:  fit-content;
 }
 .header{
     margin: 50px;

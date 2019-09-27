@@ -6,7 +6,7 @@
      margin: 6cm 0;
      left: auto;
      height: fit-content;
-     width: -webkit-fill-available;
+     width: initial;
  }
 a{
     color: darkturquoise;

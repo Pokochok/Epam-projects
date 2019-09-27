@@ -1,13 +1,795 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ArtifactsWorkspaceSettings">
-    <artifacts-to-build>
-      <artifact name="tourAgency:war exploded2" />
-    </artifacts-to-build>
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8fe1f99-c105-42e2-9621-f5911c5badb0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/repository/impl/OrderRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/repository/impl/OrderRepositoryTest.java" afterDir="false" />
+    <list default="true" id="e6cf249f-abee-4fa2-b06c-4b2f6579adc5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/tourAgency_war_exploded2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/render.experimental.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/1/0154f69275a2a0dc893c430cf1563800c0568f87" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/1/11075bdf70dccf941a30b9ee5cee3ceac9b6f378" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/7/17cf1a5c07ab2f6a353c75634ab13363c18e1366" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/8/1854d6d51e93fcc87d9bfa5032dd025442a3ccb3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/9/19166ba4fa74433175d744ea30805ea750938482" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/a/1a0d4209e06655ed27171447b19aeaba5dd43a1f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/6/26c5d96ed94c292a8067757ce4769e0135bd304c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/7/272ee0fd8a6280ef7d77c4eb48a10d05592c9aed" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/8/28d44b46d209ff19974f3eada1186c5b5f935545" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/e/2e50ee02f0bf88607a90d426c5ec094561e83fbf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/f/2f7dedb2c4e72d3fd754f3eff4b9b81df332b170" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/0/30bf4e2f340f5942861f27830325512e9740eeca" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/2/42ced4c3740a2cc304fc5774d3c5daf7c13e8491" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/3/43491aa38c27b4ddec9be32594b3d66433007b2f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/7/473f09f0ad1afa036a1aeeb1ca1f1b7b7493f5aa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/1/5194b861ea233967c4bd4f7c956f14ef49c700ae" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/1/51d4b9ebd513d3b141d49ee4bfa08cdc948c961d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/9/5960ad41396e020693f2994342125921413a70b1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/e/5e9abd7dfd7a77044cb9328c7ba28fb1d3d5edb4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/e/5ed29a2fdecb59bd72eb3d63ee9f8a44f1442630" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/3/6375d4b6ee8bdd238e06e052defe883e91339b38" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/4/64a8a19c24df084fd06ff7fae38240a5610e39ac" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/7/670fb50af4fe3996732758b4210fd0d4fcfeae57" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/7/67205ba2c9780bf9a77bd1c813c98d80d2143456" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/9/69a11355f9277975870d52a310d9b677afa720f7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/1/71339eed7d5e8e6b3a98703afbba7272efecefeb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/2/728ab6f36b38a3c9dfa64480c334fe7ffd8cd2da" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/5/75a1ab05d06dae8b102a2257c3e5b4fb8555e09a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/6/76713860ed2feba34b7758ba59e4d780ed56960c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/7/777dc2d232ed5d0ffa73f50ad86b06268e5b9eec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/8/7892811f9c57542d96282c83d1ca5153e3069f09" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/a/7a847b2683b17334725388102dbb9354468117d1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/0/80f4265e5849f754851d6efb09fbdc9387ecfc53" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/3/83dfe1706234b3f72e4b1bca583f54a1b7977c0c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/d/8d4d8d0c43d4bceb99560aaf86263be1c618dc0d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/f/8ff1ee0df1262e23a035e52f021ee2a455e17786" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/9551a27f5e7731b1b10e0416d76a6bda5367de14" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/959ee8f2068c84d26d084ae54b05c9f7f6c2f511" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/7/97bf5583039c5aaeaef9a69ba2990e359811fd1e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/9/99e54029658197055545538d868513f0ae87e9af" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/d/9d0046c9b64b439ee93809f4374db6f1d6d67312" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/f/9f198ed450f32e45b10ec3c2b1406e609b4a96cd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/7/b75b4f250036ab9d5f701378716391f8575dbbf6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/3/d3295fcca8474dc98cbdba83ee0f3f2161fab0c0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/c/eceb9ec66955d7fa875698bcc4cd9e4abd7a7446" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/e/eeb0ce6f12d604adb2d3f040adfd0d70826595d4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/0/f0a54f346db82d1fb8616be18627cc54c95a5522" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/2/f29b07a93df1a4e1b9bd594caf7cce3f5ee9d6ae" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/6/f6052adda535f141e2e2d2b8451a01bba7108b63" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/6/f6192dd7bc2efd3d69a07d41249c5b4e72aac35c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/6/f640f8bb201c86d09d48837dc05a9a77a44a3e75" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/d/fdcf1a8f50118bd3ec53741930826c40c7790cb6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/e/fe3cebe84b5636d2437064c12b1ddcb1b6243d7e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/META-INF/dbworker.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/DBWorker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/command/ActionCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/command/CommandEnum$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/command/CommandEnum$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/command/CommandEnum$11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/command/CommandEnum$12.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/command/CommandEnum$13.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/command/CommandEnum$14.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/command/CommandEnum$15.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/command/CommandEnum$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/command/CommandEnum$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/command/CommandEnum$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/command/CommandEnum$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/command/CommandEnum$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/command/CommandEnum$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/command/CommandEnum$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/command/CommandEnum$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/command/CommandEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/command/impl/BackToMainCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/command/impl/Booking.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/command/impl/ChangeEmail.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/command/impl/ChangePassword$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/command/impl/ChangePassword.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/command/impl/ChangePhoneNumber$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/command/impl/ChangePhoneNumber.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/command/impl/EmptyCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/command/impl/LoginCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/command/impl/LogoutCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/command/impl/RegisterCommand$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/command/impl/RegisterCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/command/impl/ToAboutCompany.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/command/impl/ToLogin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/command/impl/ToRegistration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/command/impl/ToTourOverview.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/command/impl/ToTourRegistration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/command/impl/ToTourSearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/command/impl/ToTours.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/command/impl/ToUserProfile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/command/impl/TourRegisterCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/connectionpool/PropertyHolder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/connectionpool/ProxyConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/connectionpool/ProxyConnectionPool$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/connectionpool/ProxyConnectionPool$ConnectionPoolHolder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/connectionpool/ProxyConnectionPool.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/controller/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/controller/CookieAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/controller/SessionRequestContent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/entity/CreditCard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/entity/Order.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/entity/Role.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/entity/Ticket.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/entity/Tour.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/entity/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/exception/ConnectionPoolException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/factory/ActionFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/filter/EncodingFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/filter/PageRedirectSecurityFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/filter/ServletSecurityFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/listener/SessionListenerImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/listener/SimpleRequestListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/manager/BookingService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/manager/BookongLogic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/manager/LoginLogic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/manager/MatchOfUniqueFieldsDetector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/manager/PaymentService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/repository/Repository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/repository/impl/BookingRepository$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/repository/impl/BookingRepository$RepositoryHolder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/repository/impl/BookingRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/repository/impl/TicketRepository$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/repository/impl/TicketRepository$RepositoryHolder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/repository/impl/TicketRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/repository/impl/TourRepository$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/repository/impl/TourRepository$RepositoryHolder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/repository/impl/TourRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/repository/impl/UserRepository$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/repository/impl/UserRepository$RepositoryHolder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/repository/impl/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/resource/ConfigurationManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/resource/MessageManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/specification/Specification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/specification/SqlSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/specification/impl/adminspecification/FindAdminByEmailSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/specification/impl/adminspecification/FindAdminByLoginPasswordSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/specification/impl/adminspecification/FindAdminByLoginSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/specification/impl/adminspecification/FindAdminByPhoneNumberSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/specification/impl/adminspecification/UpdateAdminPasswordByLoginPassword.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/specification/impl/adminspecification/UpdateAdminPhoneNumberByLogin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/specification/impl/agentspecification/AddAgentSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/specification/impl/agentspecification/FindAgentByEmailSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/specification/impl/agentspecification/FindAgentByLoginPasswordSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/specification/impl/agentspecification/FindAgentByLoginSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/specification/impl/agentspecification/FindAgentByPhoneNumberSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/specification/impl/agentspecification/UpdateAgentPasswordByLoginPassword.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/specification/impl/agentspecification/UpdateAgentPhoneNumberByLogin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/specification/impl/clientspecification/AddClientSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/specification/impl/clientspecification/FindClientByEmailSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/specification/impl/clientspecification/FindClientByIdSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/specification/impl/clientspecification/FindClientByLoginPasswordSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/specification/impl/clientspecification/FindClientByLoginSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/specification/impl/clientspecification/FindClientByNameSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/specification/impl/clientspecification/FindClientByNameSurnameSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/specification/impl/clientspecification/FindClientByPhoneNumberSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/specification/impl/clientspecification/FindClientBySurnameSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/specification/impl/clientspecification/UpdateClientEmailById.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/specification/impl/clientspecification/UpdateClientLoginById.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/specification/impl/clientspecification/UpdateClientLoginPasswordById.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/specification/impl/clientspecification/UpdateClientPasswordByLoginPassword.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/specification/impl/clientspecification/UpdateClientPhoneByLogin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/specification/impl/orderspecification/AddOrderSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/specification/impl/ticketspecification/AddTicketSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/specification/impl/ticketspecification/FindTicketByIdSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/specification/impl/tourspecification/AddTourSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/specification/impl/tourspecification/FindAllToursSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/specification/impl/tourspecification/FindTourByIdSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/by/epam/dbworker/util/SHAEncrypting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/dbdriver/driverProp.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/AboutCompany.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/AboutCompany_en.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/AboutCompany_pl.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/AboutCompany_ru.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/GuestMain.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/GuestMain_en.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/GuestMain_pl.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/GuestMain_ru.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/Home.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/Home_en.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/Home_pl.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/Home_ru.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/Login.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/Login_en.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/Login_pl.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/Login_ru.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/Registration.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/Registration_en.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/Registration_pl.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/Registration_ru.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/TourOverview.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/TourOverview_en.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/TourOverview_pl.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/TourOverview_ru.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/TourRegistration.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/TourRegistration_en.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/TourRegistration_pl.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/TourRegistration_ru.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/Tours.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/Tours_en.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/Tours_pl.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/Tours_ru.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/infMessages.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/infMessages_en.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/infMessages_pl.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/infMessages_ru.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/userProfile.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/userProfile_en.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/userProfile_pl.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/jsp/userProfile_ru.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/classes/log4j2.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/lib/log4j-api-2.11.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/lib/log4j-core-2.11.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/lib/log4j-web-2.11.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/lib/postgresql-9.3-1102-jdbc41.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/css/componentsstyle/guest-navigation.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/css/componentsstyle/home-navigation-style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/css/componentsstyle/language-panel.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/css/componentsstyle/main-panel-container.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/css/componentsstyle/role.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/css/componentsstyle/tour-form.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/css/home-content-style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/css/login-style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/css/profile-style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/css/tour-overview-style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/css/tour-registration-style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/css/tours-style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/font/CircularStd-Bold.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/images/background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/jsp/about-company.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/jsp/completion-registration.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/jsp/components/another-panel.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/jsp/components/guest-navigation.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/jsp/components/home-navigation.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/jsp/components/language-panel.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/jsp/components/main-panel.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/jsp/components/role.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/jsp/components/tour-form.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/jsp/error/error.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/jsp/home.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/jsp/login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/jsp/registration.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/jsp/tour-overview.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/jsp/tour-registration.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/jsp/tour-search.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/jsp/tours.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dbworker_war_exploded2/jsp/user-profile.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/META-INF/tourAgency.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/ActionCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum$11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum$12.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum$13.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum$14.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum$15.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum$16.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum$17.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum$18.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum$19.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum$20.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum$21.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum$22.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum$23.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum$24.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum$25.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum$26.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum$27.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum$28.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum$29.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum$30.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum$31.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum$32.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum$33.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum$34.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum$35.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum$36.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum$37.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum$38.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum$39.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/CommandEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/BackToMainCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/BookingCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/ChangeAdultsNumberCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/ChangeArrivalCityCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/ChangeArrivalCountryCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/ChangeArrivalDateCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/ChangeChildrenNumberCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/ChangeDepartureCityCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/ChangeDepartureDateCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/ChangeEmailCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/ChangeHotelCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/ChangeLoginCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/ChangeNameCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/ChangeNutritionCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/ChangePasswordCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/ChangePhoneNumberCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/ChangePriceCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/ChangeStatusCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/ChangeSurnameCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/ChangeTourNameCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/EmptyCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/LoginCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/LogoutCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/PayOrderCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/RegisterCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/RemoveOrderCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/TicketRegisterCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/ToAboutCompanyCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/ToBookingCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/ToInfCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/ToLoginCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/ToOrdersCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/ToRegistrationCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/ToTicketRegistrationCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/ToTicketsCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/ToTourOverviewCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/ToTourRegistrationCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/ToToursCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/ToUserProfileCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/command/impl/TourRegisterCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/connectionpool/PropertyHolder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/connectionpool/ProxyConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/connectionpool/ProxyConnectionPool$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/connectionpool/ProxyConnectionPool$ConnectionPoolHolder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/connectionpool/ProxyConnectionPool.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/controller/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/controller/SessionRequestContent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/entity/CreditCard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/entity/Order$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/entity/Order$OrderBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/entity/Order.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/entity/Role.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/entity/Ticket$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/entity/Ticket$TicketBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/entity/Ticket.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/entity/Tour$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/entity/Tour$TourBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/entity/Tour.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/entity/User$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/entity/User$UserBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/entity/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/exception/CommandException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/exception/ConnectionPoolException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/exception/LogicException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/exception/RepositoryException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/filter/EncodingFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/filter/PageRedirectSecurityFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/filter/ServletSecurityFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/filter/XSSFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/filter/XSSRequestWrapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/listener/SessionListenerImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/listener/SimpleContextListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/listener/SimpleRequestListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/logic/BookingLogic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/logic/DefineActionCommandLogic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/logic/LoginLogic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/logic/MatchOfUniqueFieldsDetector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/logic/OrderChangeLogic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/logic/TicketRegistrationLogic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/logic/ToPageWithListLogic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/logic/TourRegistrationLogic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/logic/UpdateTourLogic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/logic/UpdateUserLogic$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/logic/UpdateUserLogic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/logic/UserRegistrationLogic$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/logic/UserRegistrationLogic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/repository/Repository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/repository/impl/OrderRepository$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/repository/impl/OrderRepository$RepositoryHolder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/repository/impl/OrderRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/repository/impl/TicketRepository$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/repository/impl/TicketRepository$RepositoryHolder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/repository/impl/TicketRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/repository/impl/TourRepository$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/repository/impl/TourRepository$RepositoryHolder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/repository/impl/TourRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/repository/impl/UserRepository$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/repository/impl/UserRepository$RepositoryHolder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/repository/impl/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/resource/ConfigurationManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/resource/MessageManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/Specification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/admin/FindAdminByEmailSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/admin/FindAdminByLoginPasswordSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/admin/FindAdminByLoginSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/admin/FindAdminByPhoneNumberSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/admin/UpdateAdminEmailByLoginSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/admin/UpdateAdminLoginByEmailSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/admin/UpdateAdminNameByLoginSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/admin/UpdateAdminPasswordByLoginPasswordSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/admin/UpdateAdminPhoneNumberByLoginSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/admin/UpdateAdminSurnameByLoginSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/agent/AddAgentSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/agent/FindAgentByEmailSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/agent/FindAgentByIdSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/agent/FindAgentByLoginPasswordSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/agent/FindAgentByLoginSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/agent/FindAgentByPhoneNumberSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/agent/UpdateAgentEmailByLoginSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/agent/UpdateAgentLoginByEmailSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/agent/UpdateAgentNameByLoginSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/agent/UpdateAgentPasswordByLoginPasswordSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/agent/UpdateAgentPhoneNumberByLoginSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/agent/UpdateAgentSurnameByLoginSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/client/AddClientSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/client/FindClientByEmailSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/client/FindClientByIdSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/client/FindClientByLoginPasswordSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/client/FindClientByLoginSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/client/FindClientByNameSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/client/FindClientByNameSurnameSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/client/FindClientByPhoneNumberSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/client/FindClientBySurnameSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/client/UpdateClientEmailByIdSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/client/UpdateClientEmailByLoginSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/client/UpdateClientLoginByEmailSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/client/UpdateClientLoginByIdSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/client/UpdateClientLoginPasswordByIdSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/client/UpdateClientNameByLoginSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/client/UpdateClientPasswordByLoginPasswordSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/client/UpdateClientPhoneByLoginSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/client/UpdateClientSurnameByLoginSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/order/AddOrderSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/order/FindAllOrdersSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/order/FindClientOrdersSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/order/RemoveOrderByIdSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/order/UpdatePaymentStateByIdSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/ticket/AddTicketSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/ticket/FindAllTicketsSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/ticket/FindTicketByIdSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/ticket/FindTicketsByAllContentSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/tour/AddTourSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/tour/FindAllToursSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/tour/FindAvailableToursSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/tour/FindTourByIdSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/tour/FindTourByNameSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/tour/UpdateAdultsNumberByIdSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/tour/UpdateArrivalCityByIdSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/tour/UpdateArrivalCountryByIdSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/tour/UpdateArrivalDateByIdSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/tour/UpdateChildrenNumberByIdSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/tour/UpdateDepartureCityByIdSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/tour/UpdateDepartureDateByIdSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/tour/UpdateHotelByIdSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/tour/UpdateNutritionByIdSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/tour/UpdatePriceByIdSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/tour/UpdateStatusByIdSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/specification/impl/tour/UpdateTourNameByIdSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/tag/TimeTag.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/util/PageMsgConstant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/util/ParameterConstant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/util/SHAEncrypting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/by/epam/tourAgency/util/Validation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/dbdriver/driverProp.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/Home.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/Home_en.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/Home_pl.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/Home_ru.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/Login.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/Login_en.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/Login_pl.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/Login_ru.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/Registration.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/Registration_en.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/Registration_pl.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/Registration_ru.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/Tours.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/Tours_en.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/Tours_pl.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/Tours_ru.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/about-company.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/about-company_en.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/about-company_pl.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/about-company_ru.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/booking.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/booking_en.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/booking_pl.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/booking_ru.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/infMessages.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/infMessages_en.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/infMessages_pl.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/infMessages_ru.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/orders.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/orders_en.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/orders_pl.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/orders_ru.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/ticket-registration.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/ticket-registration_en.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/ticket-registration_pl.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/ticket-registration_ru.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/tickets.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/tickets_en.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/tickets_pl.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/tickets_ru.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/tour-overview.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/tour-overview_en.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/tour-overview_pl.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/tour-overview_ru.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/tour-registration.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/tour-registration_en.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/tour-registration_pl.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/tour-registration_ru.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/user-profile.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/user-profile_en.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/user-profile_pl.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/classes/jsp/user-profile_ru.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/lib/log4j-api-2.11.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/lib/log4j-core-2.11.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/lib/log4j-web-2.11.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/lib/postgresql-9.3-1102-jdbc41.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/log4j2.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/tld/customtag.tld" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/css/booking-style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/css/componentsstyle/language-panel.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/css/componentsstyle/main-navigation.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/css/componentsstyle/main-panel-action-style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/css/componentsstyle/main-panel-container.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/css/componentsstyle/order-form.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/css/componentsstyle/role.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/css/componentsstyle/ticket-form.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/css/componentsstyle/tour-form.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/css/flights-style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/css/home-content-style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/css/login-style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/css/orders-style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/css/profile-style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/css/registration-style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/css/tour-overview-style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/css/tours-style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/images/background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/jsp/about-company.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/jsp/booking.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/jsp/components/another-panel.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/jsp/components/language-panel.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/jsp/components/main-navigation.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/jsp/components/main-panel-action.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/jsp/components/main-panel.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/jsp/components/order-form.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/jsp/components/role.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/jsp/components/ticket-form.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/jsp/components/tour-form.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/jsp/error/error.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/jsp/home.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/jsp/inf.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/jsp/login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/jsp/orders.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/jsp/registration.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/jsp/ticket-registration.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/jsp/tickets.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/jsp/tour-overview.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/jsp/tour-registration.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/jsp/tours.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tourAgency_war_exploded2/jsp/user-profile.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/META-INF/webResources.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/SessionRequestContent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/command/ActionCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/command/CommandEnum$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/command/CommandEnum$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/command/CommandEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/command/EmptyCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/command/LoginCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/command/LogoutCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/factory/ActionFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/logic/LoginLogic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/resource/ConfigurationManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/resource/MessageManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/resources/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/resources/messages.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/servlet/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/jsp/ClientMain.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/jsp/Login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/jsp/error/Error.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/webResources/META-INF/webResources.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/webResources/resources/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/webResources/resources/messages.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/ActionCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/ActionCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/CommandEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/CommandEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/BackToMainCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/BackToMainCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/BookingCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/BookingCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/ChangeAdultsNumberCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeAdultsNumberCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/ChangeArrivalCityCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeArrivalCityCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/ChangeArrivalCountryCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeArrivalCountryCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/ChangeArrivalDateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeArrivalDateCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/ChangeChildrenNumberCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeChildrenNumberCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/ChangeDepartureCityCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeDepartureCityCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/ChangeDepartureDateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeDepartureDateCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/ChangeEmailCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeEmailCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/ChangeHotelCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeHotelCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/ChangeLoginCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeLoginCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/ChangeNameCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeNameCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/ChangeNutritionCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeNutritionCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/ChangePasswordCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangePasswordCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/ChangePhoneNumberCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangePhoneNumberCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/ChangePriceCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangePriceCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/ChangeStatusCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeStatusCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/ChangeSurnameCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeSurnameCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/ChangeTourNameCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeTourNameCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/EmptyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/EmptyCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/LoginCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/LoginCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/LogoutCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/LogoutCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/PayOrderCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/PayOrderCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/RegisterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/RegisterCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/RemoveOrderCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/RemoveOrderCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/TicketRegisterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/TicketRegisterCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/ToAboutCompanyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ToAboutCompanyCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/ToBookingCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ToBookingCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/ToInfCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ToInfCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/ToLoginCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ToLoginCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/ToOrdersCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ToOrdersCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/ToRegistrationCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ToRegistrationCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/ToTicketRegistrationCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ToTicketRegistrationCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/ToTicketsCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ToTicketsCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/ToTourOverviewCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ToTourOverviewCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/ToTourRegistrationCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ToTourRegistrationCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/ToToursCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ToToursCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/ToUserProfileCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ToUserProfileCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/command/impl/TourRegisterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/TourRegisterCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/connectionpool/PropertyHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/connectionpool/PropertyHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/connectionpool/ProxyConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/connectionpool/ProxyConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/connectionpool/ProxyConnectionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/connectionpool/ProxyConnectionPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/controller/SessionRequestContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/controller/SessionRequestContent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/entity/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/entity/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/entity/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/entity/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/entity/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/entity/Tour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/entity/Tour.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/exception/CommandException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/exception/CommandException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/exception/ConnectionPoolException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/exception/ConnectionPoolException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/exception/LogicException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/exception/LogicException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/exception/RepositoryException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/exception/RepositoryException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/filter/EncodingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/filter/EncodingFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/filter/PageRedirectSecurityFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/filter/PageRedirectSecurityFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/filter/ServletSecurityFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/filter/ServletSecurityFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/filter/XSSFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/filter/XSSFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/filter/XSSRequestWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/filter/XSSRequestWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/listener/SessionListenerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/listener/SessionListenerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/listener/SimpleContextListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/listener/SimpleContextListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/listener/SimpleRequestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/listener/SimpleRequestListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/logic/BookingLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/BookingLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/logic/DefineActionCommandLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/DefineActionCommandLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/logic/LoginLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/LoginLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/logic/MatchOfUniqueFieldsDetector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/MatchOfUniqueFieldsDetector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/logic/OrderChangeLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/OrderChangeLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/logic/TicketRegistrationLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/TicketRegistrationLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/logic/ToPageWithListLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/ToPageWithListLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/logic/TourRegistrationLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/TourRegistrationLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/logic/UpdateTourLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/UpdateTourLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/logic/UpdateUserLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/UpdateUserLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/logic/UserRegistrationLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/UserRegistrationLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/repository/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/repository/impl/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/repository/impl/OrderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/repository/impl/TicketRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/repository/impl/TicketRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/repository/impl/TourRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/repository/impl/TourRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/repository/impl/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/repository/impl/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/resource/ConfigurationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/resource/ConfigurationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/resource/MessageManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/resource/MessageManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/Specification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/Specification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/admin/FindAdminByEmailSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/admin/FindAdminByEmailSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/admin/FindAdminByLoginPasswordSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/admin/FindAdminByLoginPasswordSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/admin/FindAdminByLoginSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/admin/FindAdminByLoginSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/admin/FindAdminByPhoneNumberSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/admin/FindAdminByPhoneNumberSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/admin/UpdateAdminEmailByLoginSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/admin/UpdateAdminEmailByLoginSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/admin/UpdateAdminLoginByEmailSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/admin/UpdateAdminLoginByEmailSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/admin/UpdateAdminNameByLoginSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/admin/UpdateAdminNameByLoginSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/admin/UpdateAdminPasswordByLoginPasswordSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/admin/UpdateAdminPasswordByLoginPasswordSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/admin/UpdateAdminPhoneNumberByLoginSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/admin/UpdateAdminPhoneNumberByLoginSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/admin/UpdateAdminSurnameByLoginSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/admin/UpdateAdminSurnameByLoginSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/agent/AddAgentSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/agent/AddAgentSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/agent/FindAgentByEmailSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/agent/FindAgentByEmailSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/agent/FindAgentByIdSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/agent/FindAgentByIdSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/agent/FindAgentByLoginPasswordSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/agent/FindAgentByLoginPasswordSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/agent/FindAgentByLoginSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/agent/FindAgentByLoginSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/agent/FindAgentByPhoneNumberSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/agent/FindAgentByPhoneNumberSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/agent/UpdateAgentEmailByLoginSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/agent/UpdateAgentEmailByLoginSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/agent/UpdateAgentLoginByEmailSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/agent/UpdateAgentLoginByEmailSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/agent/UpdateAgentNameByLoginSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/agent/UpdateAgentNameByLoginSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/agent/UpdateAgentPasswordByLoginPasswordSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/agent/UpdateAgentPasswordByLoginPasswordSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/agent/UpdateAgentPhoneNumberByLoginSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/agent/UpdateAgentPhoneNumberByLoginSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/agent/UpdateAgentSurnameByLoginSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/agent/UpdateAgentSurnameByLoginSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/client/AddClientSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/client/AddClientSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/client/FindClientByEmailSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/client/FindClientByEmailSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/client/FindClientByIdSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/client/FindClientByIdSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/client/FindClientByLoginPasswordSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/client/FindClientByLoginPasswordSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/client/FindClientByLoginSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/client/FindClientByLoginSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/client/FindClientByNameSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/client/FindClientByNameSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/client/FindClientByNameSurnameSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/client/FindClientByNameSurnameSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/client/FindClientByPhoneNumberSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/client/FindClientByPhoneNumberSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/client/FindClientBySurnameSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/client/FindClientBySurnameSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/client/UpdateClientEmailByIdSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/client/UpdateClientEmailByIdSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/client/UpdateClientEmailByLoginSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/client/UpdateClientEmailByLoginSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/client/UpdateClientLoginByEmailSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/client/UpdateClientLoginByEmailSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/client/UpdateClientLoginByIdSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/client/UpdateClientLoginByIdSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/client/UpdateClientLoginPasswordByIdSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/client/UpdateClientLoginPasswordByIdSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/client/UpdateClientNameByLoginSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/client/UpdateClientNameByLoginSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/client/UpdateClientPasswordByLoginPasswordSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/client/UpdateClientPasswordByLoginPasswordSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/client/UpdateClientPhoneByLoginSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/client/UpdateClientPhoneByLoginSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/client/UpdateClientSurnameByLoginSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/client/UpdateClientSurnameByLoginSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/order/AddOrderSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/order/AddOrderSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/order/FindAllOrdersSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/order/FindAllOrdersSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/order/FindClientOrdersSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/order/FindClientOrdersSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/order/RemoveOrderByIdSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/order/RemoveOrderByIdSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/order/UpdatePaymentStateByIdSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/order/UpdatePaymentStateByIdSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/ticket/AddTicketSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/ticket/AddTicketSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/ticket/FindAllTicketsSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/ticket/FindAllTicketsSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/ticket/FindTicketByIdSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/ticket/FindTicketByIdSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/ticket/FindTicketsByAllContentSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/ticket/FindTicketsByAllContentSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/tour/AddTourSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/tour/AddTourSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/tour/FindAllToursSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/tour/FindAllToursSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/tour/FindAvailableToursSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/tour/FindAvailableToursSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/tour/FindTourByIdSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/tour/FindTourByIdSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/tour/FindTourByNameSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/tour/FindTourByNameSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/tour/UpdateAdultsNumberByIdSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/tour/UpdateAdultsNumberByIdSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/tour/UpdateArrivalCityByIdSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/tour/UpdateArrivalCityByIdSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/tour/UpdateArrivalCountryByIdSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/tour/UpdateArrivalCountryByIdSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/tour/UpdateArrivalDateByIdSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/tour/UpdateArrivalDateByIdSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/tour/UpdateChildrenNumberByIdSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/tour/UpdateChildrenNumberByIdSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/tour/UpdateDepartureCityByIdSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/tour/UpdateDepartureCityByIdSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/tour/UpdateDepartureDateByIdSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/tour/UpdateDepartureDateByIdSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/tour/UpdateHotelByIdSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/tour/UpdateHotelByIdSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/tour/UpdateNutritionByIdSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/tour/UpdateNutritionByIdSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/tour/UpdatePriceByIdSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/tour/UpdatePriceByIdSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/tour/UpdateStatusByIdSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/tour/UpdateStatusByIdSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/specification/impl/tour/UpdateTourNameByIdSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/tour/UpdateTourNameByIdSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/tag/TimeTag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/tag/TimeTag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/util/PageMsgConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/util/PageMsgConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/util/ParameterConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/util/ParameterConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/util/SHAEncrypting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/util/SHAEncrypting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/tourAgency/util/Validation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/util/Validation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/connectionpool/ProxyConnectionPoolTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/connectionpool/ProxyConnectionPoolTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/logic/LoginLogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/LoginLogicTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/logic/MatchOfUniqueFieldsDetectorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/MatchOfUniqueFieldsDetectorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/logic/TicketRegistrationLogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/TicketRegistrationLogicTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/logic/ToPageWithListLogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/ToPageWithListLogicTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/logic/UpdateTourLogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/UpdateTourLogicTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/logic/UpdateUserLogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/UpdateUserLogicTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/repository/impl/OrderRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/repository/impl/OrderRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/repository/impl/TicketRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/repository/impl/TicketRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/repository/impl/TourRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/repository/impl/TourRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/repository/impl/UserRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/repository/impl/UserRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/tourAgency/util/ValidationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/util/ValidationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/log4j2.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/log4j2.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/tld/customtag.tld" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/tld/customtag.tld" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/booking-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/booking-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/flights-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/flights-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/home-content-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/home-content-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/login-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/login-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/orders-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/orders-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/profile-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/profile-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/registration-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/registration-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/tour-overview-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/tour-overview-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/tours-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/tours-style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,45 +797,15 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand />
-    <select />
-  </component>
-  <component name="DefaultGradleProjectSettings">
-    <option name="isMigrated" value="true" />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
-        <option value="Jsp File" />
-        <option value="CSS File" />
-        <option value="Tag Library Descriptor" />
-        <option value="TestNG Test Class" />
         <option value="Class" />
-        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="LogFilters">
-    <option name="FILTER_ERRORS" value="false" />
-    <option name="FILTER_WARNINGS" value="false" />
-    <option name="FILTER_INFO" value="true" />
-    <option name="FILTER_DEBUG" value="true" />
-    <option name="CUSTOM_FILTER" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -62,60 +814,13 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectId" id="1QbPYOcqW7212ZbRhY9MH0gTxBy" />
+  <component name="ProjectId" id="1RKhk4e3bvVmPJ4SCQcTKzhA5MQ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="Downloaded.Files.Path.Enabled" value="false" />
-    <property name="Repository.Attach.Annotations" value="false" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG" value="" />
-    <property name="create.test.in.the.same.root" value="true" />
-    <property name="last.edited.regexp" value="Sample Text" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../bomberman-servers" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.15" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../spring-core/springCore" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.29425287" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="by.epam.tourAgency.repository.impl" />
-      <recent name="by.epam.tourAgency.connectionpool" />
-      <recent name="by.epam.tourAgency.logic" />
-      <recent name="test.by.epam.tourAgency.util" />
-      <recent name="by.epam.tourAgency.util" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="by.epam.dbworker.specification.impl.tourspecification" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Java Lab\touragency\tourAgency\src\test" />
-      <recent name="C:\Java Lab\touragency\tourAgency\web\jsp\components" />
-      <recent name="C:\Java Lab\touragency\tourAgency\src\test\java" />
-      <recent name="C:\Java Lab\touragency\tourAgency\pgsqlinit" />
-      <recent name="E:\repositories\epam\tourAgency\src" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\repositories\epam\tourAgency\src\main\java\by\epam\tourAgency" />
-      <recent name="E:\repositories\epam\tourAgency\web\WEB-INF" />
-      <recent name="E:\repositories\epam\tourAgency\web\images" />
-      <recent name="E:\учеба\java\просто\dbWorker\web\font" />
-      <recent name="E:\учеба\java\просто\dbWorker\web\WEB-INF\lib" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="by.epam.dbworker.command" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -129,56 +834,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in tourAgency">
-    <configuration name="All in tourAgency" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tourAgency" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.by.epam.touragency.repository.impl in tourAgency">
     <configuration name="OrderRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tourAgency" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="by.epam.tourAgency.repository.impl.*" />
+          <option name="PATTERN" value="by.epam.touragency.repository.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="by.epam.tourAgency.repository.impl" />
-      <option name="MAIN_CLASS_NAME" value="by.epam.tourAgency.repository.impl.OrderRepositoryTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OrderRepositoryTest.remove" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tourAgency" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="by.epam.tourAgency.repository.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="by.epam.tourAgency.repository.impl" />
-      <option name="MAIN_CLASS_NAME" value="by.epam.tourAgency.repository.impl.OrderRepositoryTest" />
-      <option name="METHOD_NAME" value="remove" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TicketRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tourAgency" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="by.epam.tourAgency.repository.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="by.epam.tourAgency.repository.impl" />
-      <option name="MAIN_CLASS_NAME" value="by.epam.tourAgency.repository.impl.TicketRepositoryTest" />
+      <option name="PACKAGE_NAME" value="by.epam.touragency.repository.impl" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.touragency.repository.impl.OrderRepositoryTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -188,104 +854,52 @@
       <module name="tourAgency" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="by.epam.tourAgency.repository.impl.*" />
+          <option name="PATTERN" value="by.epam.touragency.repository.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="by.epam.tourAgency.repository.impl" />
-      <option name="MAIN_CLASS_NAME" value="by.epam.tourAgency.repository.impl.TourRepositoryTest" />
+      <option name="PACKAGE_NAME" value="by.epam.touragency.repository.impl" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.touragency.repository.impl.TourRepositoryTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tomcat 9.0.21" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.21" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8081/index.jsp" />
-      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
-      <deployment>
-        <artifact name="tourAgency:war exploded2">
-          <settings>
-            <option name="CONTEXT_PATH" value="/" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Tomcat_9_0_21_dbWorker_2" />
-      </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="50141" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
+    <configuration name="UserRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tourAgency" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.epam.touragency.repository.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="by.epam.touragency.repository.impl" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.touragency.repository.impl.UserRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="tourAgency:war exploded2" />
-        </option>
       </method>
     </configuration>
-    <list>
-      <item itemvalue="JUnit.OrderRepositoryTest" />
-      <item itemvalue="JUnit.TicketRepositoryTest" />
-      <item itemvalue="JUnit.TourRepositoryTest" />
-      <item itemvalue="JUnit.OrderRepositoryTest.remove" />
-      <item itemvalue="JUnit.All in tourAgency" />
-    </list>
+    <configuration name="by.epam.touragency.repository.impl in tourAgency" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tourAgency" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.epam.touragency.repository.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="by.epam.touragency.repository.impl" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in tourAgency" />
-        <item itemvalue="JUnit.OrderRepositoryTest" />
-        <item itemvalue="JUnit.OrderRepositoryTest.remove" />
+        <item itemvalue="JUnit.by.epam.touragency.repository.impl in tourAgency" />
         <item itemvalue="JUnit.TourRepositoryTest" />
-        <item itemvalue="JUnit.TicketRepositoryTest" />
+        <item itemvalue="JUnit.UserRepositoryTest" />
+        <item itemvalue="JUnit.OrderRepositoryTest" />
       </list>
     </recent_temporary>
   </component>
@@ -294,120 +908,23 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c8fe1f99-c105-42e2-9621-f5911c5badb0" name="Default Changelist" comment="" />
-      <created>1560945130172</created>
+      <changelist id="e6cf249f-abee-4fa2-b06c-4b2f6579adc5" name="Default Changelist" comment="" />
+      <created>1569421834124</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1560945130172</updated>
-      <workItem from="1562185731405" duration="11690000" />
-      <workItem from="1562235004075" duration="1298000" />
-      <workItem from="1562263111865" duration="855000" />
-      <workItem from="1562264213203" duration="10182000" />
-      <workItem from="1562322334421" duration="4280000" />
-      <workItem from="1562336823628" duration="484000" />
-      <workItem from="1562338074558" duration="5911000" />
-      <workItem from="1562413375969" duration="11167000" />
-      <workItem from="1562443399986" duration="5585000" />
-      <workItem from="1562494666503" duration="3251000" />
-      <workItem from="1562500010868" duration="4916000" />
-      <workItem from="1562518056632" duration="3225000" />
-      <workItem from="1562595900937" duration="6437000" />
-      <workItem from="1562666590490" duration="8137000" />
-      <workItem from="1562708728124" duration="64000" />
-      <workItem from="1562752692435" duration="862000" />
-      <workItem from="1562763522639" duration="25700000" />
-      <workItem from="1562830639778" duration="2806000" />
-      <workItem from="1562857861144" duration="18189000" />
-      <workItem from="1562927035199" duration="21517000" />
-      <workItem from="1563009062878" duration="14192000" />
-      <workItem from="1563025052220" duration="2990000" />
-      <workItem from="1563039970049" duration="2090000" />
-      <workItem from="1563046074270" duration="4087000" />
-      <workItem from="1563112021471" duration="9231000" />
-      <workItem from="1563130068777" duration="4207000" />
-      <workItem from="1563278447376" duration="7043000" />
-      <workItem from="1563304843243" duration="6463000" />
-      <workItem from="1563349725587" duration="2230000" />
-      <workItem from="1563368252085" duration="9548000" />
-      <workItem from="1563385925716" duration="10085000" />
-      <workItem from="1563441688375" duration="25843000" />
-      <workItem from="1563484038700" duration="1605000" />
-      <workItem from="1563527266849" duration="12489000" />
-      <workItem from="1563545213174" duration="1641000" />
-      <workItem from="1563613051826" duration="32210000" />
-      <workItem from="1563702030855" duration="11232000" />
-      <workItem from="1563736303161" duration="2754000" />
-      <workItem from="1563784180967" duration="15852000" />
-      <workItem from="1563818432269" duration="11552000" />
-      <workItem from="1563830665630" duration="7362000" />
-      <workItem from="1563874327359" duration="18475000" />
-      <workItem from="1563958841883" duration="41382000" />
-      <workItem from="1564044617464" duration="11224000" />
-      <workItem from="1564155564963" duration="15806000" />
-      <workItem from="1564227401249" duration="835000" />
-      <workItem from="1564228527814" duration="15000" />
-      <workItem from="1564228935592" duration="8219000" />
-      <workItem from="1564311342123" duration="6555000" />
-      <workItem from="1564387702811" duration="18034000" />
-      <workItem from="1564477438642" duration="25142000" />
-      <workItem from="1564515145135" duration="1998000" />
-      <workItem from="1564519470289" duration="1039000" />
-      <workItem from="1564558979125" duration="16221000" />
-      <workItem from="1564599913579" duration="8451000" />
-      <workItem from="1564647869740" duration="705000" />
-      <workItem from="1564656999674" duration="2270000" />
-      <workItem from="1564754102429" duration="26082000" />
-      <workItem from="1564818533423" duration="16178000" />
-      <workItem from="1564839653848" duration="23136000" />
-      <workItem from="1564932270437" duration="14318000" />
-      <workItem from="1564995624544" duration="16867000" />
-      <workItem from="1565023184974" duration="21902000" />
-      <workItem from="1565077555608" duration="47423000" />
-      <workItem from="1565158905944" duration="34747000" />
-      <workItem from="1565258854165" duration="16499000" />
-      <workItem from="1565375760915" duration="12317000" />
-      <workItem from="1565434948632" duration="7196000" />
-      <workItem from="1565550722365" duration="10702000" />
-      <workItem from="1565601671723" duration="28009000" />
-      <workItem from="1565684676153" duration="41149000" />
-      <workItem from="1565762831996" duration="9109000" />
-      <workItem from="1565789691251" duration="36537000" />
-      <workItem from="1565862255474" duration="805000" />
-      <workItem from="1565877255897" duration="246000" />
-      <workItem from="1565877796613" duration="78000" />
+      <updated>1569421834124</updated>
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="880933000" />
-  </component>
-  <component name="TodoView" selected-index="2">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
-  </component>
-  <component name="antWorkspaceConfiguration">
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
-    <option name="FILTER_TARGETS" value="false" />
   </component>
 </project>

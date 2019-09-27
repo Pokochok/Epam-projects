@@ -11,7 +11,7 @@
 
     <tag>
         <name>time-inf</name>
-        <tag-class>by.epam.tourAgency.tag.TimeTag</tag-class>
+        <tag-class>by.epam.touragency.tag.TimeTag</tag-class>
         <body-content>empty</body-content>
     </tag>
 </taglib>

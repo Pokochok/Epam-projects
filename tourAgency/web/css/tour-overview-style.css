@@ -4,7 +4,8 @@
     display: flex;
     align-items: normal;
     justify-content: center;
-    height: -webkit-fill-available;
+    height:  fit-content;
+    margin-bottom: 70%;
 }
 .contentContainer{
     align-items: center;

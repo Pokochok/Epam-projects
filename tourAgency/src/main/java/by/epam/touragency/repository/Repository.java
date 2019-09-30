@@ -4,6 +4,8 @@ import by.epam.touragency.connectionpool.ProxyConnectionPool;
 import by.epam.touragency.exception.ConnectionPoolException;
 import by.epam.touragency.exception.RepositoryException;
 import by.epam.touragency.specification.Specification;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.math.BigDecimal;
 import java.sql.Connection;
@@ -20,6 +22,7 @@ import static by.epam.touragency.util.PageMsgConstant.LOGGER;
  * @param <T> the type of elements processed by this repository
  */
 public interface Repository<T> {
+
     /**
      * Adds element in database according to specification
      * @param item

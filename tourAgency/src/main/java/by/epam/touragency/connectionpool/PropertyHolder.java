@@ -101,19 +101,19 @@ public class PropertyHolder {
         return instance;
     }
 
-    String getDriverName() {
+    public String getDriverName() {
         return driverName;
     }
 
-    String getUserName() {
+    public String getUserName() {
         return userName;
     }
 
-    String getPassword() {
+    public String getPassword() {
         return password;
     }
 
-    String getUrl() {
+    public String getUrl() {
         return url;
     }
 

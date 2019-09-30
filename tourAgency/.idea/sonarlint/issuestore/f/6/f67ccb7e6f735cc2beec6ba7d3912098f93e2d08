@@ -1,0 +1,5 @@
+
+Ksquid:S2864X"4Iterate over the "entrySet" instead of the "keySet".(¬ÖŞÎ
+Ssquid:S2441]"<Make "Object" serializable or don't store it in the session.(¬©–„
+Psquid:S2864\"4Iterate over the "entrySet" instead of the "keySet".(Òä‹Ğÿÿÿÿÿ
+‘squid:S1319„"mThe return type of this method should be an interface such as "Map" rather than the implementation "HashMap".(Ô¤İÚøÿÿÿÿ8å­íÖ-

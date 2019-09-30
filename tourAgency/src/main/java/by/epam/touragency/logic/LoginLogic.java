@@ -33,7 +33,6 @@ public class LoginLogic {
         Specification clientSpecification = new FindClientByLoginPasswordSpecification(enterLogin, enterPass);
         Specification agentSpecification = new FindAgentByLoginPasswordSpecification(enterLogin, enterPass);
         Specification adminSpecification = new FindAdminByLoginPasswordSpecification(enterLogin, enterPass);
-
         try {
             Set<User> users;
             if (!(users = repository.query(clientSpecification)).isEmpty()) {

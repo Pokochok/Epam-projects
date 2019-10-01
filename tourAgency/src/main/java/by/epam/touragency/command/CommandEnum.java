@@ -6,11 +6,11 @@ import by.epam.touragency.command.impl.*;
  * Enum for defining command, received from request
  */
 public enum CommandEnum {
-    LOGIN {
-        {
-            this.command = new LoginCommand();
-        }
-    },
+//    LOGIN {
+//        {
+//            this.command = new LoginCommand();
+//        }
+//    },
     LOGOUT {
         {
             this.command = new LogoutCommand();

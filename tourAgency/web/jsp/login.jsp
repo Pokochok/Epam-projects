@@ -14,8 +14,7 @@
 </head>
 <body>
 
-<form class="loginForm" method="POST" action="controller">
-    <input type="hidden" name="command" value="Login"/>
+<form class="loginForm" method="POST" action="login">
 
     <div class="userContent">
         <h2 class="header"><fmt:message key="login.message.authorization"/></h2>

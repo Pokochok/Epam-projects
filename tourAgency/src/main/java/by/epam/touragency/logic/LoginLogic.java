@@ -9,6 +9,7 @@ import by.epam.touragency.specification.impl.agent.FindAgentByLoginPasswordSpeci
 import by.epam.touragency.specification.impl.client.FindClientByLoginPasswordSpecification;
 import by.epam.touragency.specification.Specification;
 import by.epam.touragency.util.SHAEncrypting;
+import by.epam.touragency.util.Validation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
@@ -34,7 +35,7 @@ public class LoginLogic {
      * @return user if verifies completed successfully, and null - if not
      * @throws LogicException if handled RepositoryException
      */
-    public User checkLoginPassword(String enterLogin, String password) throws LogicException {
+    private User checkLoginPassword(String enterLogin, String password) throws LogicException {
         String enterPass = SHAEncrypting.hidePassword(password);
         User user = null;
         Specification clientSpecification = new FindClientByLoginPasswordSpecification(enterLogin, enterPass);
@@ -54,6 +55,19 @@ public class LoginLogic {
             }
         } catch (RepositoryException e) {
             throw new LogicException(e);
+        }
+        return user;
+    }
+
+    public User checkedUser(String login, String password) throws LogicException {
+        boolean flag = Validation.validateLogin(login) && Validation.validatePassword(password);
+        User user = null;
+        if (flag) {
+            try {
+                user = checkLoginPassword(login, password);
+            } catch (LogicException e) {
+                throw new LogicException(e);
+            }
         }
         return user;
     }

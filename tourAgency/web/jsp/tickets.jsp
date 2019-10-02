@@ -21,7 +21,7 @@
     <div class="menu">
         <c:if test="${sessionScope.userRole == 'ADMIN'}">
             <div class="registerNewTicket">
-                <a class="menuRef" href="controller?command=to_ticket_registration">
+                <a class="menuRef" href="to_ticket_registration">
                     <fmt:message key="admin.ref.registerNewTicket"/>
                 </a>
             </div>
@@ -60,26 +60,40 @@
 
                 <c:if test="${param.tourId != null}">
                     <form class="continueBooking" method="post" action="controller">
-                        <input type="hidden" name="tourId" value="${param.tourId}"/>
-                        <input type="hidden" name="tourName" value="${param.tourName}"/>
-                        <input type="hidden" name="arrivalCountry" value="${param.arrivalCountry}"/>
-                        <input type="hidden" name="arrivalCity" value="${param.arrivalCity}"/>
-                        <input type="hidden" name="departureCity" value="${param.departureCity}"/>
-                        <input type="hidden" name="departureDate" value="${param.departureDate}"/>
-                        <input type="hidden" name="arrivalDate" value="${param.arrivalDate}"/>
-                        <input type="hidden" name="hotel" value="${param.hotel}"/>
-                        <input type="hidden" name="nutrition" value="${param.nutrition}"/>
-                        <input type="hidden" name="adultsNumber" value="${param.adultsNumber}"/>
-                        <input type="hidden" name="childrenNumber" value="${param.childrenNumber}"/>
-                        <input type="hidden" name="price" value="${param.price}"/>
 
                         <c:if test="${sessionScope.userRole != 'GUEST'}">
-                            <input type="hidden" name="command" value="to_booking"/>
+                            <form method="post" action="to_booking"/>
+                            <input type="hidden" name="tourId" value="${param.tourId}"/>
+                                                    <input type="hidden" name="tourName" value="${param.tourName}"/>
+                                                    <input type="hidden" name="arrivalCountry" value="${param.arrivalCountry}"/>
+                                                    <input type="hidden" name="arrivalCity" value="${param.arrivalCity}"/>
+                                                    <input type="hidden" name="departureCity" value="${param.departureCity}"/>
+                                                    <input type="hidden" name="departureDate" value="${param.departureDate}"/>
+                                                    <input type="hidden" name="arrivalDate" value="${param.arrivalDate}"/>
+                                                    <input type="hidden" name="hotel" value="${param.hotel}"/>
+                                                    <input type="hidden" name="nutrition" value="${param.nutrition}"/>
+                                                    <input type="hidden" name="adultsNumber" value="${param.adultsNumber}"/>
+                                                    <input type="hidden" name="childrenNumber" value="${param.childrenNumber}"/>
+                                                    <input type="hidden" name="price" value="${param.price}"/>
+                            <form/>
                         </c:if>
                         <c:if test="${sessionScope.userRole == 'GUEST'}">
-                            <input type="hidden" name="command" value="to_login"/>
+                            <form method="post" action="to_login"/>
+                            <input type="hidden" name="tourId" value="${param.tourId}"/>
+                                                    <input type="hidden" name="tourName" value="${param.tourName}"/>
+                                                    <input type="hidden" name="arrivalCountry" value="${param.arrivalCountry}"/>
+                                                    <input type="hidden" name="arrivalCity" value="${param.arrivalCity}"/>
+                                                    <input type="hidden" name="departureCity" value="${param.departureCity}"/>
+                                                    <input type="hidden" name="departureDate" value="${param.departureDate}"/>
+                                                    <input type="hidden" name="arrivalDate" value="${param.arrivalDate}"/>
+                                                    <input type="hidden" name="hotel" value="${param.hotel}"/>
+                                                    <input type="hidden" name="nutrition" value="${param.nutrition}"/>
+                                                    <input type="hidden" name="adultsNumber" value="${param.adultsNumber}"/>
+                                                    <input type="hidden" name="childrenNumber" value="${param.childrenNumber}"/>
+                                                    <input type="hidden" name="price" value="${param.price}"/>
                             <fmt:message key="guest.attrValue.notAuthorized" var="notAuthorized"/>
                             <input type="hidden" name="notAuthorized" value="${notAuthorized}"/>
+                            <form/>
                         </c:if>
 
                         <label>

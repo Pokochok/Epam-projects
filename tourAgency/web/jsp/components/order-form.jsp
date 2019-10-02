@@ -74,8 +74,7 @@
     </div>
 
     <div class="orderMore">
-        <form method="POST" action="controller">
-            <input type="hidden" name="command" value="pay_order"/>
+        <form method="POST" action="pay_order">
             <input type="hidden" name="orderId" value="${param.orderId}"/>
 
             <c:if test="${param.paymentState == 'false' && userRole == 'CLIENT'}">
@@ -88,9 +87,9 @@
             </c:if>
         </form>
 
-        <form class="remove" method="post" action="controller">
+        <form class="remove" method="post" action="remove_order">
             <c:if test="${userRole == 'AGENT' || userRole == 'CLIENT'}">
-                <a href="controller?command=remove_order&orderId=${param.orderId}">
+                <a href="remove_order?orderId=${param.orderId}">
                     <fmt:message key="clientAgent.orderForm.ref.removeOrder"/>
                 </a>
             </c:if>

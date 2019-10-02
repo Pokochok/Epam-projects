@@ -14,13 +14,12 @@
 </head>
 <body>
 
-<form class="registrationForm" method="POST" action="controller">
+<form class="registrationForm" method="POST" action="tour_register_command">
 
 
     <div class="tourContent">
         <h2><fmt:message key="message.registration"/></h2>
         <hr/>
-        <input type="hidden" name="command" value="tour_register_command"/>
 
         <div class="contentItem">
             <div class="contentItemMsg">

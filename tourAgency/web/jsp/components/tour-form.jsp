@@ -21,8 +21,7 @@
     </div>
 
     <div class="departureCity">
-        <form method="POST" action="controller">
-            <input type="hidden" name="command" value="to_tour_overview"/>
+        <form method="POST" action="to_tour_overview">
             <input type="hidden" name="tourName" value="${param.tourName}"/>
             <input type="hidden" name="tourId" value="${param.tourId}"/>
             <input type="hidden" name="arrivalCountry" value="${param.arrivalCountry}"/>

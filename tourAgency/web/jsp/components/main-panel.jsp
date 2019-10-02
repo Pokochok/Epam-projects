@@ -16,7 +16,7 @@
 <body>
 <header  class="container">
     <div class="logo">
-        <a href="controller?command=back_to_main"> <img src="images/logo.png" alt=""/></a>
+        <a href="back_to_main"> <img src="images/logo.png" alt=""/></a>
     </div>
     <c:import url="components/main-panel-action.jsp"/>
 </header>

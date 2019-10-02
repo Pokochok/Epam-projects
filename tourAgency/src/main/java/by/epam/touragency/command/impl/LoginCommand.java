@@ -6,7 +6,6 @@ import by.epam.touragency.exception.LogicException;
 import by.epam.touragency.logic.LoginLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.resource.MessageManager;
-import by.epam.touragency.util.Validation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,7 +19,6 @@ import static by.epam.touragency.util.ParameterConstant.*;
 
 @Controller
 public class LoginCommand {
-    private final String EN_LOCALE = "en";
 
     @Autowired
     private LoginLogic loginLogic;
@@ -31,12 +29,17 @@ public class LoginCommand {
             @RequestParam(value = PARAM_NAME_PASSWORD) String password,
             @RequestParam(value = ATTR_NAME_LANGUAGE, required = false) String language
     ) throws CommandException {
-        if (language != null){
+        if (language == null){
             language = EN_LOCALE;
         }
-        String page = null;
         ModelAndView modelAndView = new ModelAndView();
-        User user = checkedUser(login, password);
+        String page = null;
+        User user = null;
+        try {
+            user = loginLogic.checkedUser(login, password);
+        } catch (LogicException e) {
+            throw new CommandException(e);
+        }
         if (user != null && user.getId() != 0) {
             modelAndView.addObject(ATTR_NAME_USER_ID, user.getId());
             modelAndView.addObject(ATTR_NAME_USER_NAME, user.getName());
@@ -57,16 +60,5 @@ public class LoginCommand {
         return modelAndView;
     }
 
-    private User checkedUser(String login, String password) throws CommandException {
-        boolean flag = Validation.validateLogin(login) && Validation.validatePassword(password);
-        User user = null;
-        if (flag) {
-            try {
-                user = loginLogic.checkLoginPassword(login, password);
-            } catch (LogicException e) {
-                throw new CommandException(e);
-            }
-        }
-        return user;
-    }
+
 }

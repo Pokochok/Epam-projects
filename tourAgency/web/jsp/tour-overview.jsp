@@ -480,15 +480,18 @@
                        onclick="document.getElementById('change_status').disabled=false">
             </div>
         </c:if>
+    <form/>
 
+    <form method="post" action="to_tours"
         <div class="contentItem">
             <label>
-                <input type="hidden" name="command" value="to_tours" id="to_tours" disabled/>
                 <fmt:message key="common.submit.back" var="back"/>
                 <input type="submit" name="back"
                        onclick="document.getElementById('to_tours').disabled=false" value="${back}">
             </label>
+    <form/>
 
+    <form method="post" action="to_tickets"
             <c:if test="${userRole != 'ADMIN'}">
                 <input type="hidden" name="command" value="to_tickets"/>
                 <fmt:message key="notAdmin.submit.ticketSelection" var="ticketSelection"/>

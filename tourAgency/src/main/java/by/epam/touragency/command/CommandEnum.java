@@ -6,51 +6,13 @@ import by.epam.touragency.command.impl.*;
  * Enum for defining command, received from request
  */
 public enum CommandEnum {
-//    LOGIN {
-//        {
-//            this.command = new LoginCommand();
-//        }
-//    },
-    LOGOUT {
-        {
-            this.command = new LogoutCommand();
-        }
-    },
+
     REGISTRATION {
         {
             this.command = new RegisterCommand();
         }
     },
-    BACK_TO_MAIN {
-        {
-            this.command = new BackToMainCommand();
-        }
-    },
-    TO_ABOUT_COMPANY {
-        {
-            this.command = new ToAboutCompanyCommand();
-        }
-    },
-    TO_TOURS {
-        {
-            this.command = new ToToursCommand();
-        }
-    },
-    TO_USER_PROFILE {
-        {
-            this.command = new ToUserProfileCommand();
-        }
-    },
-    TO_REGISTRATION {
-        {
-            this.command = new ToRegistrationCommand();
-        }
-    },
-    TO_LOGIN {
-        {
-            this.command = new ToLoginCommand();
-        }
-    },
+
     CHANGE_PHONE_NUMBER {
         {
             this.command = new ChangePhoneNumberCommand();
@@ -81,16 +43,7 @@ public enum CommandEnum {
             this.command = new ChangeSurnameCommand();
         }
     },
-    TO_TOUR_OVERVIEW {
-        {
-            this.command = new ToTourOverviewCommand();
-        }
-    },
-    TO_TOUR_REGISTRATION {
-        {
-            this.command = new ToTourRegistrationCommand();
-        }
-    },
+
     CHANGE_TOUR_NAME {
         {
             this.command = new ChangeTourNameCommand();
@@ -151,56 +104,8 @@ public enum CommandEnum {
             this.command = new ChangeStatusCommand();
         }
     },
-    TO_TICKET_REGISTRATION {
-        {
-            this.command = new ToTicketRegistrationCommand();
-        }
-    },
-    TOUR_REGISTER_COMMAND {
-        {
-            this.command = new TourRegisterCommand();
-        }
-    },
-    TICKET_REGISTER_COMMAND {
-        {
-            this.command = new TicketRegisterCommand();
-        }
-    },
-    TO_TICKETS {
-        {
-            this.command = new ToTicketsCommand();
-        }
-    },
-    TO_BOOKING {
-        {
-            this.command = new ToBookingCommand();
-        }
-    },
-    TO_ORDERS{
-        {
-            this.command = new ToOrdersCommand();
-        }
-    },
-    PAY_ORDER{
-        {
-            this.command = new PayOrderCommand();
-        }
-    },
-    REMOVE_ORDER{
-        {
-            this.command = new RemoveOrderCommand();
-        }
-    },
-    BOOKING {
-        {
-            this.command = new BookingCommand();
-        }
-    },
-    TO_INF{
-        {
-            this.command = new ToInfCommand();
-        }
-    };
+
+;
 
     ActionCommand command;
 

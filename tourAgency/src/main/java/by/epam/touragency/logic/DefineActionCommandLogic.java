@@ -24,7 +24,7 @@ public class DefineActionCommandLogic {
         ActionCommand current = null;
         String action = request.getParameter("command");
         if (action == null || action.isEmpty()) {
-            return new EmptyCommand();
+//            return new EmptyCommand();
         }
         try {
             CommandEnum currentEnum = CommandEnum.valueOf(action.toUpperCase());
@@ -33,7 +33,7 @@ public class DefineActionCommandLogic {
             LOGGER.warn("Wrong action detected");
             request.setAttribute("wrongAction", action + MessageManager.getProperty("logIn.message.wrongAction",
                     new Locale(request.getSessionAttribute("language").toString())));
-            current = new EmptyCommand();
+//            current = new EmptyCommand();
         }
         return current;
     }

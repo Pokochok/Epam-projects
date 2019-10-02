@@ -102,6 +102,7 @@ public class ParameterConstant {
     public static final String ATTR_NAME_ARRIVAL_CITY = "arrivalCity";
     public static final String ATTR_NAME_ADULTS_NUMBER = "adultsNumber";
     public static final String ATTR_NAME_LANGUAGE = "language";
+    public static final String EN_LOCALE = "en";
     public static final String ATTR_NAME_RESULT_INF = "resultInformation";
     public static final String ATTR_NAME_ERROR_EMAIL = "errorEmail";
     public static final String ATTR_NAME_NULL_PAGE = "nullPage";

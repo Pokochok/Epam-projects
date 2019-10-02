@@ -14,12 +14,11 @@
 </head>
 <body>
 
-<form class="registrationForm" method="POST" action="controller">
+<form class="registrationForm" method="POST" action="ticket_register_command">
 
     <div class="ticketContent">
         <h2><fmt:message key="message.title.ticketRegistration"/></h2>
         <hr/>
-        <input type="hidden" name="command" value="ticket_register_command"/>
 
         <div class="contentItem">
             <div class="contentItemMsg">

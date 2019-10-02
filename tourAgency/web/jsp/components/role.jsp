@@ -20,7 +20,7 @@
 <body>
 
 <div class="role">
-    <a class="userName" href="controller?command=to_user_profile">
+    <a class="userName" href="to_user_profile">
         <div>${userName}</div>
         <div>${userSurname}</div>
     </a>
@@ -30,10 +30,10 @@
     <div class="guest"><c:if test="${userRole == 'GUEST'}"> <fmt:message key="guest.message.role"/> </c:if></div>
 
     <c:if test="${userRole == 'GUEST'}">
-        <a class="navigationRef" href="controller?command=to_login"><fmt:message key="guest.ref.page.login"/> </a>
+        <a class="navigationRef" href="to_login"><fmt:message key="guest.ref.page.login"/> </a>
     </c:if>
     <c:if test="${userRole != 'GUEST'}">
-        <a class="navigationRef" href="controller?command=Logout"> <fmt:message key="common.ref.logout"/> </a>
+        <a class="navigationRef" href="logout"> <fmt:message key="common.ref.logout"/> </a>
     </c:if>
 </div>
 

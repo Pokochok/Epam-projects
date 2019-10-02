@@ -15,8 +15,7 @@
 </head>
 <body>
 
-<form class="loginForm" method="POST" action="controller">
-    <input type="hidden" name="command" value="back_to_main"/>
+<form class="loginForm" method="POST" action="back_to_main">
 
     <div class="userContent">
         <h2 class="header"><fmt:message key="common.message.notification"/></h2>

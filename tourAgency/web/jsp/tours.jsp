@@ -21,7 +21,7 @@
     <div class="menu">
         <c:if test="${userRole == 'ADMIN'}">
             <div class="registerNewTour">
-                <a class="menuRef" href="controller?command=to_tour_registration">
+                <a class="menuRef" href="to_tour_registration">
                     <fmt:message key="admin.ref.registerNewTour"/>
                 </a>
             </div>

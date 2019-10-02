@@ -13,8 +13,7 @@
     <title><fmt:message key="common.title.booking"/></title>
 </head>
 <body>
-<form class="contentForm" method="post" action="controller">
-    <input type="hidden" name="command" value="booking"/>
+<form class="contentForm" method="post" action="booking">
     <c:if test="${userRole == 'CLIENT' || userRole == 'AGENT'}">
         <div class="contentContainer">
             <div class="allInf">

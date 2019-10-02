@@ -4,10 +4,15 @@ import by.epam.touragency.entity.Tour;
 import by.epam.touragency.exception.LogicException;
 import by.epam.touragency.exception.RepositoryException;
 import by.epam.touragency.repository.impl.TourRepository;
+import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.specification.Specification;
 import by.epam.touragency.specification.impl.tour.AddTourSpecification;
+import by.epam.touragency.util.Validation;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.math.BigDecimal;
+
+import static by.epam.touragency.util.PageMsgConstant.TO_TOUR_REGISTRATION_PAGE_PATH;
 
 /**
  * For tour registration logic
@@ -51,5 +56,16 @@ public class TourRegistrationLogic {
         } catch (RepositoryException e) {
             throw new LogicException(e);
         }
+    }
+
+    public static boolean isValidData(String tourName, String departureCity, String arrivalCity, String arrivalCountry,
+                                      String hotel, String nutrition, String childrenNumber, String adultsNumber,
+                                      String price){
+         return Validation.validateName(tourName) && Validation.validateTourStringItems(departureCity) &&
+                Validation.validateTourStringItems(arrivalCity) && Validation.validateTourStringItems(arrivalCountry) &&
+                Validation.validateTourStringItems(hotel) && Validation.validateNutrition(nutrition) &&
+                Validation.validateNumberOfPeople(childrenNumber) &&
+                Validation.validateNumberOfPeople(adultsNumber) &&
+                Validation.validatePrice(price);
     }
 }

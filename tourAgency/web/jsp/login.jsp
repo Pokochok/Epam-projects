@@ -51,7 +51,7 @@
         </label>
         <br/>
         <br/>
-        <a href="controller?command=to_registration"> <fmt:message key="login.ref.page.register"/> </a>
+        <a href="to_registration"> <fmt:message key="login.ref.page.register"/> </a>
     </div>
 </form>
 </body>

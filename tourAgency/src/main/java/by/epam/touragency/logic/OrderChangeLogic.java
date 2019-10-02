@@ -7,24 +7,33 @@ import by.epam.touragency.repository.impl.OrderRepository;
 import by.epam.touragency.specification.Specification;
 import by.epam.touragency.specification.impl.order.RemoveOrderByIdSpecification;
 import by.epam.touragency.specification.impl.order.UpdatePaymentStateByIdSpecification;
+import by.epam.touragency.util.Validation;
 
 /**
  * For order updating logic
  */
 public class OrderChangeLogic {
+
+    private OrderChangeLogic() {
+    }
+
     /**
      * Set payment state of order as paid
      * @param orderId order ID
      * @throws LogicException if handled RepositoryException
      */
-    public static void payOrder(int orderId) throws LogicException {
-        Specification specification = new UpdatePaymentStateByIdSpecification(orderId);
-        Repository repository = OrderRepository.getInstance();
+    public static boolean payOrder(String orderId) throws LogicException {
+        if (!Validation.validateId(orderId)){
+            return false;
+        }
+        Specification specification = new UpdatePaymentStateByIdSpecification(Integer.parseInt(orderId));
         try {
+            Repository repository = OrderRepository.getInstance();
             repository.update(null, specification);
         } catch (RepositoryException e) {
             throw new LogicException(e);
         }
+        return true;
     }
 
     /**
@@ -32,11 +41,13 @@ public class OrderChangeLogic {
      * @param orderId order ID
      * @throws LogicException if handled RepositoryException
      */
-    public static void removeOrder(int orderId) throws LogicException {
-        Specification specification = new RemoveOrderByIdSpecification(orderId);
-        Repository repository = OrderRepository.getInstance();
+    public static void removeOrder(String orderId) throws LogicException {
         try {
-            repository.remove(null, specification);
+            if (Validation.validateId(orderId)) {
+                Specification specification = new RemoveOrderByIdSpecification(Integer.parseInt(orderId));
+                Repository repository = OrderRepository.getInstance();
+                repository.remove(null, specification);
+            }
         } catch (RepositoryException e) {
             throw new LogicException(e);
         }

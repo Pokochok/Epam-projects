@@ -1,16 +1,21 @@
 package by.epam.touragency.command.impl;
 
-import by.epam.touragency.command.ActionCommand;
-import by.epam.touragency.controller.SessionRequestContent;
 import by.epam.touragency.resource.ConfigurationManager;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import static by.epam.touragency.util.PageMsgConstant.WELCOME_PAGE_PATH;
 
-public class LogoutCommand implements ActionCommand {
-    @Override
-    public String execute(SessionRequestContent content) {
+@Controller
+@RequestMapping("/logout")
+public class LogoutCommand {
+    @GetMapping
+    public ModelAndView execute() {
         String page = ConfigurationManager.getProperty(WELCOME_PAGE_PATH);
-        content.invalidate();
-        return page;
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName(page);
+        return modelAndView;
     }
 }

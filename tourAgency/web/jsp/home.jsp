@@ -24,7 +24,7 @@
     </div>
 
     <div class="contentHeader">
-        <a href="controller?command=to_tours"> <fmt:message key="common.message.availableTours"/> </a>
+        <a href="to_tours"> <fmt:message key="common.message.availableTours"/> </a>
     </div>
 
 </form>

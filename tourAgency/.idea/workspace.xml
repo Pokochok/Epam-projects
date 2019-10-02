@@ -2,17 +2,52 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6cf249f-abee-4fa2-b06c-4b2f6579adc5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/entity/UserRowMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/CommandEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/CommandEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/BackToMainCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/BackToMainCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/BookingCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/BookingCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/EmptyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/EmptyCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/LoginCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/LoginCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/config/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/config/WebInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/config/WebInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/controller/SessionRequestContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/controller/SessionRequestContent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/LogoutCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/LogoutCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/PayOrderCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/PayOrderCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/RemoveOrderCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/RemoveOrderCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/TicketRegisterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/TicketRegisterCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ToAboutCompanyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ToAboutCompanyCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ToBookingCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ToBookingCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ToInfCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ToInfCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ToLoginCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ToLoginCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ToOrdersCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ToOrdersCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ToRegistrationCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ToRegistrationCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ToTicketRegistrationCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ToTicketRegistrationCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ToTicketsCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ToTicketsCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ToTourOverviewCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ToTourOverviewCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ToTourRegistrationCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ToTourRegistrationCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ToToursCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ToToursCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ToUserProfileCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ToUserProfileCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/TourRegisterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/TourRegisterCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/DefineActionCommandLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/DefineActionCommandLogic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/LoginLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/LoginLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/repository/impl/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/repository/impl/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/OrderChangeLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/OrderChangeLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/TourRegistrationLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/TourRegistrationLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/util/ParameterConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/util/ParameterConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/jsp/booking.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/booking.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/jsp/components/another-panel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/components/another-panel.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/jsp/components/main-navigation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/components/main-navigation.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/jsp/components/main-panel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/components/main-panel.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/jsp/components/order-form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/components/order-form.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/jsp/components/role.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/components/role.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/jsp/components/ticket-form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/components/ticket-form.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/jsp/components/tour-form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/components/tour-form.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/jsp/error/error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/error/error.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/jsp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/jsp/inf.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/inf.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/jsp/orders.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/orders.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/jsp/ticket-registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/ticket-registration.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/jsp/tickets.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/tickets.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/jsp/tour-overview.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/tour-overview.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/jsp/tour-registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/tour-registration.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/jsp/tours.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/tours.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

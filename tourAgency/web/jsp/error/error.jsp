@@ -9,7 +9,7 @@ Servlet name or type: ${pageContext.errorData.servletName} <br/>
 Status code: ${pageContext.errorData.statusCode} <br/>
 Exception: ${pageContext.errorData.throwable} <br/>
 <br/>
-<a href="controller?command=Back_To_Main">Go to home page</a>
+<a href="back_to_main">Go to home page</a>
 
 </body>
 </html>

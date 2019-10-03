@@ -191,8 +191,8 @@ public class UpdateUserLogic {
      * @throws LogicException if handled RepositoryException or if user role is not defined
      */
     public static boolean updatePassword(String role, String login, String password, String newPassword) throws LogicException {
-        String encryptedPassword = SHAEncrypting.hidePassword(password);
-        String encryptedNewPassword = SHAEncrypting.hidePassword(newPassword);
+        String encryptedPassword =  SHAEncrypting.getInstance().encode(password);
+        String encryptedNewPassword =  SHAEncrypting.getInstance().encode(newPassword);
         boolean flag = false;
         Specification specificationForValidate = null;
         Specification specification = null;

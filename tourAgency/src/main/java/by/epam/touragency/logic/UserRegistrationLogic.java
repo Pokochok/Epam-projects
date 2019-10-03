@@ -37,7 +37,7 @@ public class UserRegistrationLogic {
                 .setEmail(email)
                 .setPhoneNumber(phoneNumber)
                 .setLogin(login)
-                .setPassword(SHAEncrypting.hidePassword(password))
+                .setPassword(SHAEncrypting.getInstance().encode(password))
                 .setRole(role).build();
         Specification specification = defineAddUserSpecification(role, user);
         try {

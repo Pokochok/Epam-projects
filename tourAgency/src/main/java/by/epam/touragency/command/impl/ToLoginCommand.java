@@ -10,7 +10,10 @@ import static by.epam.touragency.util.PageMsgConstant.TO_LOGIN_PAGE_PATH;
 @Controller
 public class ToLoginCommand {
     @RequestMapping("/to_login")
-    public ModelAndView execute() {
-        return new ModelAndView(ConfigurationManager.getProperty(TO_LOGIN_PAGE_PATH));
+    public String execute(){
+        return ConfigurationManager.getProperty(TO_LOGIN_PAGE_PATH);
     }
+//    public ModelAndView execute() {
+//        return new ModelAndView(ConfigurationManager.getProperty(TO_LOGIN_PAGE_PATH));
+//    }
 }

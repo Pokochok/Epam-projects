@@ -24,41 +24,44 @@ public class LoginCommand {
     private LoginLogic loginLogic;
 
     @PostMapping(value = "/login")
-    public ModelAndView execute(
-            @RequestParam(value = PARAM_NAME_LOGIN) String login,
-            @RequestParam(value = PARAM_NAME_PASSWORD) String password,
-            @RequestParam(value = ATTR_NAME_LANGUAGE, required = false) String language
-    ) throws CommandException {
-        if (language == null){
-            language = EN_LOCALE;
-        }
-        ModelAndView modelAndView = new ModelAndView();
-        String page = null;
-        User user = null;
-        try {
-            user = loginLogic.checkedUser(login, password);
-        } catch (LogicException e) {
-            throw new CommandException(e);
-        }
-        if (user != null && user.getId() != 0) {
-            modelAndView.addObject(ATTR_NAME_USER_ID, user.getId());
-            modelAndView.addObject(ATTR_NAME_USER_NAME, user.getName());
-            modelAndView.addObject(ATTR_NAME_USER_SURNAME, user.getSurname());
-            modelAndView.addObject(ATTR_NAME_USER_EMAIL, user.getEmail());
-            modelAndView.addObject(ATTR_NAME_USER_PHONE_NUMBER, user.getPhoneNumber());
-            modelAndView.addObject(ATTR_NAME_USER_LOGIN, user.getLogin());
-            modelAndView.addObject(ATTR_NAME_USER_STATUS, user.getStatus());
-            modelAndView.addObject(ATTR_NAME_USER_ROLE, user.getRole().toString());
-            page = ConfigurationManager.getProperty(HOME_PAGE_PATH);
-        } else {
-            LOGGER.debug("Incorrect login or password");
-            modelAndView.addObject(ATTR_NAME_ERROR_LOGIN,
-                    MessageManager.getProperty(LOGIN_ERROR_MSG_KEY, new Locale(language)));
-            page = ConfigurationManager.getProperty(LOGIN_PAGE_PATH);
-        }
-        modelAndView.setViewName(page);
-        return modelAndView;
+    public ModelAndView execute(){
+        return new ModelAndView(ConfigurationManager.getProperty(HOME_PAGE_PATH));
     }
+//    public ModelAndView execute(
+//            @RequestParam(value = PARAM_NAME_LOGIN) String login,
+//            @RequestParam(value = PARAM_NAME_PASSWORD) String password,
+//            @RequestParam(value = ATTR_NAME_LANGUAGE, required = false) String language
+//    ) throws CommandException {
+//        if (language == null){
+//            language = EN_LOCALE;
+//        }
+//        ModelAndView modelAndView = new ModelAndView();
+//        String page = null;
+//        User user = null;
+//        try {
+//            user = loginLogic.checkedUser(login, password);
+//        } catch (LogicException e) {
+//            throw new CommandException(e);
+//        }
+//        if (user != null && user.getId() != 0) {
+//            modelAndView.addObject(ATTR_NAME_USER_ID, user.getId());
+//            modelAndView.addObject(ATTR_NAME_USER_NAME, user.getName());
+//            modelAndView.addObject(ATTR_NAME_USER_SURNAME, user.getSurname());
+//            modelAndView.addObject(ATTR_NAME_USER_EMAIL, user.getEmail());
+//            modelAndView.addObject(ATTR_NAME_USER_PHONE_NUMBER, user.getPhoneNumber());
+//            modelAndView.addObject(ATTR_NAME_USER_LOGIN, user.getLogin());
+//            modelAndView.addObject(ATTR_NAME_USER_STATUS, user.getStatus());
+//            modelAndView.addObject(ATTR_NAME_USER_ROLE, user.getRole().toString());
+//            page = ConfigurationManager.getProperty(HOME_PAGE_PATH);
+//        } else {
+//            LOGGER.debug("Incorrect login or password");
+//            modelAndView.addObject(ATTR_NAME_ERROR_LOGIN,
+//                    MessageManager.getProperty(LOGIN_ERROR_MSG_KEY, new Locale(language)));
+//            page = ConfigurationManager.getProperty(LOGIN_PAGE_PATH);
+//        }
+//        modelAndView.setViewName(page);
+//        return modelAndView;
+//    }
 
 
 }

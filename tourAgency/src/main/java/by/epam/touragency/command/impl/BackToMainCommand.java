@@ -9,7 +9,7 @@ import static by.epam.touragency.util.PageMsgConstant.MAIN_PAGE_PATH;
 
 @Controller
 public class BackToMainCommand {
-    @RequestMapping("/back_to_main")
+    @RequestMapping(value = {"/back_to_main", "/home"})
     public ModelAndView execute() {
         return new ModelAndView(ConfigurationManager.getProperty(MAIN_PAGE_PATH));
     }

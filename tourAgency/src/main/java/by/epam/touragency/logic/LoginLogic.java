@@ -11,10 +11,8 @@ import by.epam.touragency.specification.Specification;
 import by.epam.touragency.util.SHAEncrypting;
 import by.epam.touragency.util.Validation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.PostConstruct;
 import java.util.Set;
 
 import static by.epam.touragency.util.PageMsgConstant.LOGGER;
@@ -36,7 +34,7 @@ public class LoginLogic {
      * @throws LogicException if handled RepositoryException
      */
     private User checkLoginPassword(String enterLogin, String password) throws LogicException {
-        String enterPass = SHAEncrypting.hidePassword(password);
+        String enterPass = SHAEncrypting.getInstance().encode(password);
         User user = null;
         Specification clientSpecification = new FindClientByLoginPasswordSpecification(enterLogin, enterPass);
         Specification agentSpecification = new FindAgentByLoginPasswordSpecification(enterLogin, enterPass);

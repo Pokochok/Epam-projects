@@ -55,7 +55,6 @@ public class MainController {
     private ModelAndView processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException {
         SessionRequestContent requestContent = new SessionRequestContent();
         requestContent.extractValues(request);
-
         ModelAndView modelAndView = new ModelAndView();
         String page = null;
         DefineActionCommandLogic defineActionCommandLogic = new DefineActionCommandLogic();

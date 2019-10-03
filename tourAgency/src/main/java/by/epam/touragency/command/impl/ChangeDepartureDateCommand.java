@@ -1,13 +1,16 @@
 package by.epam.touragency.command.impl;
 
-import by.epam.touragency.command.ActionCommand;
-import by.epam.touragency.controller.SessionRequestContent;
 import by.epam.touragency.exception.CommandException;
 import by.epam.touragency.exception.LogicException;
 import by.epam.touragency.logic.UpdateTourLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.resource.MessageManager;
 import by.epam.touragency.util.Validation;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttribute;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Date;
 import java.util.Locale;
@@ -17,19 +20,26 @@ import static by.epam.touragency.util.PageMsgConstant.DATE_ERROR_MSG_KEY;
 import static by.epam.touragency.util.PageMsgConstant.TOUR_OVERVIEW_PAGE_PATH;
 import static by.epam.touragency.util.ParameterConstant.*;
 
-public class ChangeDepartureDateCommand implements ActionCommand {
-    @Override
-    public String execute(SessionRequestContent content) throws CommandException {
-        String language = content.getSessionAttribute(ATTR_NAME_LANGUAGE) != null ?
-                content.getSessionAttribute(ATTR_NAME_LANGUAGE).toString()
-                : content.getLocalName();
-
-        if (!Validation.validateId(content.getParameter(PARAM_NAME_TOUR_ID))){
-            return ConfigurationManager.getProperty(TOUR_OVERVIEW_PAGE_PATH);
+@Controller
+public class ChangeDepartureDateCommand {
+    @PostMapping("/change_departure_date")
+    public ModelAndView execute(
+            @RequestParam(PARAM_NAME_NEW_DEPARTURE_DATE) String newDepartureDateStr,
+            @RequestParam(PARAM_NAME_ARRIVAL_DATE) String arrivalDateStr,
+            @RequestParam(value = PARAM_NAME_TOUR_ID) String tourIdStr,
+            @SessionAttribute(value = ATTR_NAME_LANGUAGE) Locale language
+    ) throws CommandException {
+        if (language == null){
+            language = new Locale(EN_LOCALE);
         }
-        int tourId = Integer.parseInt(content.getParameter(PARAM_NAME_TOUR_ID));
-        long    newDepartureDate = Validation.validateDate(content.getParameter(PARAM_NAME_NEW_DEPARTURE_DATE));
-        long    arrivalDate = Validation.validateDate(content.getParameter(PARAM_NAME_ARRIVAL_DATE));
+        ModelAndView modelAndView = new ModelAndView();
+        if (!Validation.validateId(tourIdStr)){
+            modelAndView.setViewName(ConfigurationManager.getProperty(TOUR_OVERVIEW_PAGE_PATH));
+            return modelAndView;
+        }
+        int tourId = Integer.parseInt(tourIdStr);
+        long    newDepartureDate = Validation.validateDate(newDepartureDateStr);
+        long    arrivalDate = Validation.validateDate(arrivalDateStr);
         if (newDepartureDate == -1 || arrivalDate == -1){
             LOGGER.debug("Error in date parsing");
         }
@@ -37,14 +47,15 @@ public class ChangeDepartureDateCommand implements ActionCommand {
         try {
             if (newDepartureDate < arrivalDate && new Date().before(new Date(newDepartureDate))) {
                 UpdateTourLogic.updateDepartureDate(newDepartureDate, tourId);
-                content.setAttribute(ATTR_NAME_DEPARTURE_DATE, Validation.dateToFormat(newDepartureDate));
+                modelAndView.addObject(ATTR_NAME_DEPARTURE_DATE, Validation.dateToFormat(newDepartureDate));
             } else {
-                content.setAttribute(ATTR_NAME_ERROR_DATE,
-                        MessageManager.getProperty(DATE_ERROR_MSG_KEY, new Locale(language)));
+                modelAndView.addObject(ATTR_NAME_ERROR_DATE,
+                        MessageManager.getProperty(DATE_ERROR_MSG_KEY, language));
             }
         }catch (LogicException e){
             throw new CommandException(e);
         }
-        return ConfigurationManager.getProperty(TOUR_OVERVIEW_PAGE_PATH);
+        modelAndView.setViewName(ConfigurationManager.getProperty(TOUR_OVERVIEW_PAGE_PATH));
+        return modelAndView;
     }
 }

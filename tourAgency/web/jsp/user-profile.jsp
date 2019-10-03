@@ -37,7 +37,6 @@
 
                 <div id="changeUserName">
                     <label>
-
                         <input type="text" id="newUserName" name="newUserName"
                                pattern="^[^!@#$%^&*().,_\d=|?`~/<>]{1,30}$">
 

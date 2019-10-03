@@ -1,33 +1,40 @@
 package by.epam.touragency.command.impl;
 
-import by.epam.touragency.command.ActionCommand;
-import by.epam.touragency.controller.SessionRequestContent;
 import by.epam.touragency.exception.CommandException;
 import by.epam.touragency.exception.LogicException;
 import by.epam.touragency.logic.UpdateTourLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.util.Validation;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import static by.epam.touragency.util.PageMsgConstant.TOUR_OVERVIEW_PAGE_PATH;
 import static by.epam.touragency.util.ParameterConstant.*;
 
-public class ChangeArrivalCityCommand implements ActionCommand {
-    @Override
-    public String execute(SessionRequestContent content) throws CommandException {
-        String newArrivalCountry = content.getParameter(PARAM_NAME_NEW_ARRIVAL_CITY);
-
+@Controller
+public class ChangeArrivalCityCommand {
+    @PostMapping("/change_arrival_city")
+    public ModelAndView execute(
+            @RequestParam(value = PARAM_NAME_NEW_ARRIVAL_CITY) String newArrivalCountry,
+            @RequestParam(value = PARAM_NAME_TOUR_ID) String tourIdStr
+    ) throws CommandException {
+        ModelAndView modelAndView = new ModelAndView();
         if (!Validation.validateTourStringItems(newArrivalCountry) ||
-                !Validation.validateId(content.getParameter(PARAM_NAME_TOUR_ID))) {
-            return ConfigurationManager.getProperty(TOUR_OVERVIEW_PAGE_PATH);
+                !Validation.validateId(tourIdStr)) {
+            modelAndView.setViewName(ConfigurationManager.getProperty(TOUR_OVERVIEW_PAGE_PATH));
+            return modelAndView;
         }
 
-        int tourId = Integer.parseInt(content.getParameter(PARAM_NAME_TOUR_ID));
+        int tourId = Integer.parseInt(tourIdStr);
         try {
             UpdateTourLogic.updateArrivalCity(newArrivalCountry, tourId);
         } catch (LogicException e) {
             throw new CommandException(e);
         }
-        content.setAttribute(ATTR_NAME_ARRIVAL_CITY, newArrivalCountry);
-        return ConfigurationManager.getProperty(TOUR_OVERVIEW_PAGE_PATH);
+        modelAndView.addObject(ATTR_NAME_ARRIVAL_CITY, newArrivalCountry);
+        modelAndView.setViewName(ConfigurationManager.getProperty(TOUR_OVERVIEW_PAGE_PATH));
+        return modelAndView;
     }
 }

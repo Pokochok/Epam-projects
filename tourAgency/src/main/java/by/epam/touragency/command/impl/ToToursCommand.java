@@ -6,7 +6,7 @@ import by.epam.touragency.exception.LogicException;
 import by.epam.touragency.logic.ToPageWithListLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttribute;
 import org.springframework.web.servlet.ModelAndView;
@@ -18,7 +18,7 @@ import static by.epam.touragency.util.ParameterConstant.*;
 
 @Controller
 public class ToToursCommand {
-    @GetMapping("/to_tours")
+    @RequestMapping("/to_tours")
     public ModelAndView execute(@SessionAttribute(value = ATTR_NAME_USER_ROLE)String role,
                                 @RequestParam(value = ATTR_NAME_INDEX, required = false) String index,
                                 @RequestParam(value = ATTR_NAME_CHANGE_PAGE, required = false) String toChangePage) throws CommandException {

@@ -1,3 +1,5 @@
 
-…squid:S1488"gImmediately return this expression instead of assigning it to the temporary variable "servletMappings".(©±ïç8“ÕÌîÖ-
-‚squid:S1488"eImmediately return this expression instead of assigning it to the temporary variable "configClasses".(¨‚c8öÉĞîÖ-
+†squid:UselessImportCheck"VRemove this unused import 'org.springframework.context.ApplicationContextInitializer'.(¹¥Ò±ÿÿÿÿÿ8£áÜ¾Ø-
+‚squid:S1488"eImmediately return this expression instead of assigning it to the temporary variable "configClasses".(¨‚c8öÉĞîÖ-
+Fsquid:S1185"(Remove this method to simply inherit it.(ÃÆê®8ÚâÛ¾Ø-
+…squid:S1488"gImmediately return this expression instead of assigning it to the temporary variable "servletMappings".(©±ïç8“ÕÌîÖ-

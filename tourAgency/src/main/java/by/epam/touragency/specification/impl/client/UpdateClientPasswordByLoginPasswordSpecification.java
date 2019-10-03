@@ -26,9 +26,9 @@ public class UpdateClientPasswordByLoginPasswordSpecification implements Specifi
     @Override
     public ArrayDeque<Object> getParameterQueue() {
         ArrayDeque<Object> values = new ArrayDeque<>(3);
-        values.push(newPassword);
-        values.push(login);
         values.push(password);
+        values.push(login);
+        values.push(newPassword);
         return values;
     }
 }

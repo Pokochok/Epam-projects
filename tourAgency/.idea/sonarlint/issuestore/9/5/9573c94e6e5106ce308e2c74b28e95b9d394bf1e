@@ -1,7 +1,2 @@
 
-Vsquid:S1854Z"8Remove this useless assignment to local variable "page".(ù©¬8´ıñêÖ-
-nsquid:CommentedOutCodeLine]"<This block of commented-out lines of code should be removed.(ù›Óìûÿÿÿÿ8´ıñêÖ-
-isquid:CommentedOutCodeLineJ"<This block of commented-out lines of code should be removed.(œÈş8Çø‚íÖ-
-¯%squid:RedundantThrowsDeclarationCheck<"wRemove the declaration of thrown exception 'javax.servlet.ServletException', as it cannot be thrown from method's body.(®á÷û8ÜÙîÖ-
-nsquid:CommentedOutCodeLineM"<This block of commented-out lines of code should be removed.(ö¹ß©ÿÿÿÿÿ8ß³ˆêÖ-
-nsquid:CommentedOutCodeLineV"<This block of commented-out lines of code should be removed.(ö¹ß©ÿÿÿÿÿ8Ó êÖ-
+fsquid:UselessImportCheck";Remove this unused import 'javax.servlet.ServletException'.(Š‰™Œ8¾àìºØ-

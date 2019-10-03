@@ -27,7 +27,7 @@
 </head>
 <body>
 <div class="contentForm">
-    <form class="contentContainer" method="post" action="controller">
+    <div class="contentContainer">
         <input type="hidden" name="tourId" value="${param.tourId}"/>
         <input type="hidden" name="tourName" value="${tourName}"/>
         <input type="hidden" name="arrivalCountry" value="${arrivalCountry}"/>
@@ -480,7 +480,7 @@
                        onclick="document.getElementById('change_status').disabled=false">
             </div>
         </c:if>
-    <form/>
+    <div/>
 
     <form method="post" action="to_tours"
         <div class="contentItem">
@@ -493,7 +493,6 @@
 
     <form method="post" action="to_tickets"
             <c:if test="${userRole != 'ADMIN'}">
-                <input type="hidden" name="command" value="to_tickets"/>
                 <fmt:message key="notAdmin.submit.ticketSelection" var="ticketSelection"/>
                 <label>
                     <input type="submit" name="ticketSelection" value="${ticketSelection}">

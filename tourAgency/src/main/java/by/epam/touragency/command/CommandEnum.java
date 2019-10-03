@@ -6,44 +6,6 @@ import by.epam.touragency.command.impl.*;
  * Enum for defining command, received from request
  */
 public enum CommandEnum {
-
-    REGISTRATION {
-        {
-            this.command = new RegisterCommand();
-        }
-    },
-
-    CHANGE_PHONE_NUMBER {
-        {
-            this.command = new ChangePhoneNumberCommand();
-        }
-    },
-    CHANGE_PASSWORD {
-        {
-            this.command = new ChangePasswordCommand();
-        }
-    },
-    CHANGE_EMAIL {
-        {
-            this.command = new ChangeEmailCommand();
-        }
-    },
-    CHANGE_LOGIN {
-        {
-            this.command = new ChangeLoginCommand();
-        }
-    },
-    CHANGE_USER_NAME {
-        {
-            this.command = new ChangeNameCommand();
-        }
-    },
-    CHANGE_USER_SURNAME {
-        {
-            this.command = new ChangeSurnameCommand();
-        }
-    },
-
     CHANGE_TOUR_NAME {
         {
             this.command = new ChangeTourNameCommand();

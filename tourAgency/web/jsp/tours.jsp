@@ -58,8 +58,7 @@
             </div>
 
             <nav>
-                <form class="pagination" id="paginationForm" method="post" action="controller">
-                    <input type="hidden" id="command" name="command" value="to_tours">
+                <form class="pagination" id="paginationForm" method="post" action="to_tours">
                     <input type="hidden" name="index" value="${startIndexOfTours/toursPerPage + 1}"/>
 
                     <c:if test="${startIndexOfTours == 0}">

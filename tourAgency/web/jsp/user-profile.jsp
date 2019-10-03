@@ -16,7 +16,7 @@
 
 <div class="mainProfileContainer">
     <div class="userContent">
-        <form class="userContentItem" method="POST" action="controller">
+        <form class="userContentItem" method="POST" action="change_user_name">
             <div class="userContentItemMsg"><fmt:message key="common.message.name"/></div>
 
             <c:out value="${userName}"/>
@@ -37,7 +37,6 @@
 
                 <div id="changeUserName">
                     <label>
-                        <input type="hidden" name="command" value="change_user_name"/>
 
                         <input type="text" id="newUserName" name="newUserName"
                                pattern="^[^!@#$%^&*().,_\d=|?`~/<>]{1,30}$">
@@ -51,7 +50,7 @@
             ${errorChangeUserName}
         </form>
 
-        <form class="userContentItem" method="POST" action="controller">
+        <form class="userContentItem" method="POST" action="change_user_surname">
             <div class="userContentItemMsg"><fmt:message key="common.message.surname"/></div>
 
             <c:out value="${userSurname}"/>
@@ -72,7 +71,6 @@
 
                 <div id="changeUserSurname">
                     <label>
-                        <input type="hidden" name="command" value="change_user_surname"/>
 
                         <input type="text" id="newUserSurname" name="newUserSurname"
                                pattern="^[^!@#$%^&*().,_\d=|?`~/<>]{1,30}$">
@@ -86,7 +84,7 @@
             ${errorChangeUserSurname}
         </form>
 
-        <form class="userContentItem" method="POST" action="controller">
+        <form class="userContentItem" method="POST" action="change_phone_number">
             <div class="userContentItemMsg"><fmt:message key="common.message.phoneNumber"/></div>
 
             <c:out value="${userPhoneNumber}"/>
@@ -107,8 +105,6 @@
 
                 <div id="changePhoneNumber">
                     <label>
-                        <input type="hidden" name="command" value="change_phone_number"/>
-
                         <input type="text" id="newPhoneNumber" name="newPhoneNumber" pattern="^[+]\d{10,12}$">
 
                         <fmt:message key="common.changePN" var="changePNButton"/>
@@ -121,7 +117,7 @@
             ${errorPNExistsMessage}
         </form>
 
-        <form class="userContentItem" method="POST" action="controller">
+        <form class="userContentItem" method="POST" action="change_email">
             <div class="userContentItemMsg"><fmt:message key="common.message.email"/></div>
 
             <c:out value="${userEmail}"/>
@@ -142,8 +138,6 @@
 
                 <div id="changeEmail">
                     <label>
-                        <input type="hidden" name="command" value="change_email"/>
-
                         <input type="text" id="newEmail" name="newEmail"
                                pattern="^[a-zA-Z0-9.,_%+-]+@(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}$">
 
@@ -157,7 +151,7 @@
             ${errorEmailExistsMessage}
         </form>
 
-        <form class="userContentItem" method="POST" action="controller">
+        <form class="userContentItem" method="POST" action="change_login">
             <div class="userContentItemMsg"><fmt:message key="common.message.login"/></div>
 
             <c:out value="${userLogin}"/>
@@ -178,8 +172,6 @@
 
                 <div id="changeLogin">
                     <label>
-                        <input type="hidden" name="command" value="change_login"/>
-
                         <input type="text" id="newLogin" name="newLogin">
 
                         <fmt:message key="common.changeLogin" var="changeLoginButton"/>
@@ -192,7 +184,7 @@
             ${errorLoginExistsMessage}
         </form>
 
-        <form class="userContentItem" method="POST" action="controller">
+        <form class="userContentItem" method="POST" action="change_password">
             <div class="userContentItemMsg">
                 <fmt:message key="common.message.password"/>
             </div>
@@ -206,7 +198,6 @@
 
             <div id="changePassword" hidden>
                 <label>
-                    <input type="hidden" name="command" value="change_password"/>
                     <fmt:message key="common.message.oldPassword"/>
                     <input type="password" id="password" name="password" minlength="6" maxlength="50">
                     <br>

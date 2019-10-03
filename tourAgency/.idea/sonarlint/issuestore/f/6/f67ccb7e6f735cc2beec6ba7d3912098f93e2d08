@@ -1,5 +1,8 @@
 
-Ksquid:S2864X"4Iterate over the "entrySet" instead of the "keySet".(¬ÖŞÎ
-Ssquid:S2441]"<Make "Object" serializable or don't store it in the session.(¬©–„
-Psquid:S2864\"4Iterate over the "entrySet" instead of the "keySet".(Òä‹Ğÿÿÿÿÿ
-‘squid:S1319„"mThe return type of this method should be an interface such as "Map" rather than the implementation "HashMap".(Ô¤İÚøÿÿÿÿ8å­íÖ-
+Wsquid:S2864`"4Iterate over the "entrySet" instead of the "keySet".(Òä‹Ğÿÿÿÿÿ8³óõ¾Ø-
+‘squid:S1319ˆ"mThe return type of this method should be an interface such as "Map" rather than the implementation "HashMap".(Ô¤İÚøÿÿÿÿ8å­íÖ-
+Ssquid:S2441a"<Make "Object" serializable or don't store it in the session.(¬©–„
+Ksquid:S2864\"4Iterate over the "entrySet" instead of the "keySet".(¬ÖŞÎ
+usquid:UselessImportCheck"ERemove this unused import 'org.springframework.stereotype.Component'.(Ş÷Ñ¸ÿÿÿÿÿ8ªİõÀØ-
+ƒsquid:UselessImportCheck"SRemove this unused import 'org.springframework.beans.factory.annotation.Autowired'.(¡¸Îùÿÿÿÿ8ªİõÀØ-
+ysquid:UselessImportCheck"IRemove this unused import 'org.springframework.context.annotation.Scope'.(şè®€ÿÿÿÿÿ8ªİõÀØ-

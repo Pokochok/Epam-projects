@@ -14,11 +14,10 @@
 </head>
 <body>
 
-<form name="registrationForm" method="POST" action="controller">
+<form name="registrationForm" method="POST" action="registration">
     <div class="userContent">
         <h2><fmt:message key="registration.message.headline"/></h2>
         <hr/>
-        <input type="hidden" name="command" value="registration"/>
 
         <div class="contentItem">
             <fmt:message key="registration.message.name"/>

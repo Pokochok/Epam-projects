@@ -24,8 +24,8 @@ public class UpdateClientEmailByLoginSpecification implements Specification<User
     @Override
     public ArrayDeque<Object> getParameterQueue() {
         ArrayDeque<Object> values = new ArrayDeque<>(2);
-        values.push(email);
         values.push(login);
+        values.push(email);
         return values;
     }
 }

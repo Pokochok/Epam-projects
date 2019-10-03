@@ -24,7 +24,7 @@ public class UpdateAdminSurnameByLoginSpecification implements Specification<Use
     @Override
     public ArrayDeque<Object> getParameterQueue() {
         ArrayDeque<Object> values = new ArrayDeque<>(2);
-        values.push(surname);
         values.push(login);
+        values.push(surname);
         return values;    }
 }

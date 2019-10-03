@@ -1,0 +1,34 @@
+
+psquid:S1192D"YDefine a constant instead of duplicating this literal "User role is not defined" 6 times.(î—À
+Isquid:S11996"-Extract this nested code block into a method.(²”ì‹øÿÿÿÿ
+Isquid:S1199:"-Extract this nested code block into a method.(¡–ıùüÿÿÿÿ
+Isquid:S1199>"-Extract this nested code block into a method.(¥’¬…úÿÿÿÿ
+Isquid:S1199B"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ
+Isquid:S1199m"-Extract this nested code block into a method.(²”ì‹øÿÿÿÿ
+Isquid:S1199q"-Extract this nested code block into a method.(¡–ıùüÿÿÿÿ
+Isquid:S1199u"-Extract this nested code block into a method.(¥’¬…úÿÿÿÿ
+Isquid:S1199y"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ
+Jsquid:S1199¤"-Extract this nested code block into a method.(²”ì‹øÿÿÿÿ
+Jsquid:S1199¨"-Extract this nested code block into a method.(¡–ıùüÿÿÿÿ
+Jsquid:S1199¬"-Extract this nested code block into a method.(¥’¬…úÿÿÿÿ
+Jsquid:S1199°"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ
+Jsquid:S1199È"-Extract this nested code block into a method.(²”ì‹øÿÿÿÿ
+Jsquid:S1199Í"-Extract this nested code block into a method.(¡–ıùüÿÿÿÿ
+Jsquid:S1199Ò"-Extract this nested code block into a method.(¥’¬…úÿÿÿÿ
+Jsquid:S1199×"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ
+Jsquid:S1199Š"-Extract this nested code block into a method.(²”ì‹øÿÿÿÿ
+Jsquid:S1199"-Extract this nested code block into a method.(¡–ıùüÿÿÿÿ
+Jsquid:S1199’"-Extract this nested code block into a method.(¥’¬…úÿÿÿÿ
+Jsquid:S1199–"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ
+Jsquid:S1199À"-Extract this nested code block into a method.(²”ì‹øÿÿÿÿ
+Jsquid:S1199Ä"-Extract this nested code block into a method.(¡–ıùüÿÿÿÿ
+Jsquid:S1199È"-Extract this nested code block into a method.(¥’¬…úÿÿÿÿ
+Jsquid:S1199Ì"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ
+^$squid:AssignmentInSubExpressionCheck!".Extract the assignment out of this expression.(Í™ÿ
+^$squid:AssignmentInSubExpressionCheckX".Extract the assignment out of this expression.(¿­„Â
+d$squid:AssignmentInSubExpressionCheck".Extract the assignment out of this expression.(ãçöŒşÿÿÿÿ
+_$squid:AssignmentInSubExpressionCheckß".Extract the assignment out of this expression.(¦™Îù
+d$squid:AssignmentInSubExpressionCheckö".Extract the assignment out of this expression.(êù˜Ñÿÿÿÿÿ
+d$squid:AssignmentInSubExpressionCheck¬".Extract the assignment out of this expression.(êù˜Ñÿÿÿÿÿ
+@squid:S1148”"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+Qsquid:S1118":Add a private constructor to hide the implicit public one.(åñÂû

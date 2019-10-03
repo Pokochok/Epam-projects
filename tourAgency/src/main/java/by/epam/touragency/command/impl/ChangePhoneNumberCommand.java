@@ -1,44 +1,52 @@
 package by.epam.touragency.command.impl;
 
-import by.epam.touragency.command.ActionCommand;
-import by.epam.touragency.controller.SessionRequestContent;
 import by.epam.touragency.exception.CommandException;
 import by.epam.touragency.exception.LogicException;
 import by.epam.touragency.logic.UpdateUserLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.resource.MessageManager;
 import by.epam.touragency.util.Validation;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttribute;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Locale;
 
 import static by.epam.touragency.util.PageMsgConstant.*;
 import static by.epam.touragency.util.ParameterConstant.*;
 
-public class ChangePhoneNumberCommand implements ActionCommand {
-    @Override
-    public String execute(SessionRequestContent content) throws CommandException {
-        String login = String.valueOf(content.getSessionAttribute(PARAM_NAME_USER_LOGIN));
-        String newPhoneNumber = content.getParameter(PARAM_NAME_NEW_PHONE_NUMBER);
-        String role = String.valueOf(content.getSessionAttribute(PARAM_NAME_ROLE));
-        String language = content.getSessionAttribute(ATTR_NAME_LANGUAGE) != null ?
-                content.getSessionAttribute(ATTR_NAME_LANGUAGE).toString()
-                : content.getLocalName();
-
+@Controller
+public class ChangePhoneNumberCommand {
+    @PostMapping("/change_phone_number")
+    public ModelAndView execute(
+            @SessionAttribute(value = PARAM_NAME_USER_LOGIN) String login,
+            @RequestParam(value = PARAM_NAME_NEW_PHONE_NUMBER) String newPhoneNumber,
+            @SessionAttribute(value = PARAM_NAME_ROLE) String role,
+            @SessionAttribute(value = ATTR_NAME_LANGUAGE) Locale language
+    ) throws CommandException {
+        if (language == null){
+            language = new Locale(EN_LOCALE);
+        }
+        ModelAndView modelAndView = new ModelAndView();
         if(!Validation.validatePhoneNumber(newPhoneNumber)){
-            content.setAttribute(ATTR_NAME_ERROR_CHANGE_PN,
-                    MessageManager.getProperty(CHANGE_PN_ERROR_MSG_KEY, new Locale(language)));
-            return ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH);
+            modelAndView.addObject(ATTR_NAME_ERROR_CHANGE_PN,
+                    MessageManager.getProperty(CHANGE_PN_ERROR_MSG_KEY, language));
+            modelAndView.setViewName(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH));
+            return modelAndView;
         }
         try {
             if (UpdateUserLogic.updatePhoneNumber(role, newPhoneNumber, login)) {
-                content.setAttribute(ATTR_NAME_USER_PHONE_NUMBER, newPhoneNumber);
+                modelAndView.addObject(ATTR_NAME_USER_PHONE_NUMBER, newPhoneNumber);
             } else {
-                content.setAttribute(ATTR_NAME_ERROR_PN_EXISTS,
-                        MessageManager.getProperty(PHONE_NUMBER_EXISTS_MSG_KEY, new Locale(language)));
+                modelAndView.addObject(ATTR_NAME_ERROR_PN_EXISTS,
+                        MessageManager.getProperty(PHONE_NUMBER_EXISTS_MSG_KEY, language));
             }
         }catch (LogicException e){
             throw new CommandException(e);
         }
-        return ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH);
+        modelAndView.setViewName(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH));
+        return modelAndView;
     }
 }

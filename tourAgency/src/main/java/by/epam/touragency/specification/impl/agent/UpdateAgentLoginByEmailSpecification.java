@@ -24,8 +24,8 @@ public class UpdateAgentLoginByEmailSpecification implements Specification<User>
     @Override
     public ArrayDeque<Object> getParameterQueue() {
         ArrayDeque<Object> values = new ArrayDeque<>(2);
-        values.push(login);
         values.push(email);
+        values.push(login);
         return values;
     }
 }

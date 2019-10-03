@@ -104,8 +104,7 @@
                 </c:if>
 
                 <nav>
-                    <form class="pagination" id="paginationForm" method="post" action="controller">
-                        <input type="hidden" id="command" name="command" value="to_tickets">
+                    <form class="pagination" id="paginationForm" method="post" action="to_tickets">
                         <input type="hidden" name="index" value="${startIndexOfTicket/ticketsPerPage + 1}"/>
 
                         <input type="hidden" name="tourId" value="${param.tourId}"/>

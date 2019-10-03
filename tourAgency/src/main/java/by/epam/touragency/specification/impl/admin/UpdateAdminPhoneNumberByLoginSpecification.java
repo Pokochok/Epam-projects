@@ -24,7 +24,7 @@ public class UpdateAdminPhoneNumberByLoginSpecification implements Specification
     @Override
     public ArrayDeque<Object> getParameterQueue() {
         ArrayDeque<Object> values = new ArrayDeque<>(2);
-        values.push(phoneNumber);
         values.push(login);
+        values.push(phoneNumber);
         return values;    }
 }

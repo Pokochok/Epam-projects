@@ -60,6 +60,19 @@
         <listener-class>by.epam.touragency.listener.SimpleRequestListener</listener-class>
     </listener>
 
+    <filter>
+        <filter-name>springSecurityFilterChain</filter-name>
+        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>springSecurityFilterChain</filter-name>
+        <url-pattern>/logout</url-pattern>
+        <url-pattern>/to_tour_registration</url-pattern>
+        <url-pattern>/to_tours</url-pattern>
+        <url-pattern>/login</url-pattern>
+    </filter-mapping>
+
     <context-param>
         <param-name>feedback</param-name>
         <param-value>touragency</param-value>

@@ -23,7 +23,7 @@ public class FindAvailableToursSpecification implements Specification<Tour> {
     @Override
     public ArrayDeque<Object> getParameterQueue() {
         ArrayDeque<Object> values = new ArrayDeque<>(1);
-        values.push(departureDate);
+        values.add(departureDate);
         return values;
     }
 }

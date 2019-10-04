@@ -9,7 +9,7 @@ import by.epam.touragency.repository.impl.UserRepository;
 import by.epam.touragency.specification.Specification;
 import by.epam.touragency.specification.impl.agent.AddAgentSpecification;
 import by.epam.touragency.specification.impl.client.AddClientSpecification;
-import by.epam.touragency.util.SHAEncrypting;
+import org.springframework.security.crypto.bcrypt.BCrypt;
 
 import static by.epam.touragency.util.PageMsgConstant.LOGGER;
 
@@ -37,7 +37,7 @@ public class UserRegistrationLogic {
                 .setEmail(email)
                 .setPhoneNumber(phoneNumber)
                 .setLogin(login)
-                .setPassword(SHAEncrypting.getInstance().encode(password))
+                .setPassword(BCrypt.hashpw(password, BCrypt.gensalt()))
                 .setRole(role).build();
         Specification specification = defineAddUserSpecification(role, user);
         try {

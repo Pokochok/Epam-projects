@@ -24,8 +24,8 @@ public class UpdateArrivalCountryByIdSpecification implements Specification<Tour
     @Override
     public ArrayDeque<Object> getParameterQueue() {
         ArrayDeque<Object> values = new ArrayDeque<>(2);
-        values.push(arrivalCountry);
-        values.push(id);
+        values.add(arrivalCountry);
+        values.add(id);
         return values;
     }
 }

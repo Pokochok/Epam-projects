@@ -24,8 +24,8 @@ public class UpdateDepartureCityByIdSpecification implements Specification<Tour>
     @Override
     public ArrayDeque<Object> getParameterQueue() {
         ArrayDeque<Object> values = new ArrayDeque<>(2);
-        values.push(departureCity);
-        values.push(id);
+        values.add(departureCity);
+        values.add(id);
         return values;
     }
 }

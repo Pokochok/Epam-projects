@@ -8,7 +8,7 @@ import by.epam.touragency.specification.Specification;
 import by.epam.touragency.specification.impl.admin.*;
 import by.epam.touragency.specification.impl.agent.*;
 import by.epam.touragency.specification.impl.client.*;
-import by.epam.touragency.util.SHAEncrypting;
+import org.springframework.security.crypto.bcrypt.BCrypt;
 
 import static by.epam.touragency.util.PageMsgConstant.LOGGER;
 
@@ -191,8 +191,8 @@ public class UpdateUserLogic {
      * @throws LogicException if handled RepositoryException or if user role is not defined
      */
     public static boolean updatePassword(String role, String login, String password, String newPassword) throws LogicException {
-        String encryptedPassword =  SHAEncrypting.getInstance().encode(password);
-        String encryptedNewPassword =  SHAEncrypting.getInstance().encode(newPassword);
+        String encryptedPassword = BCrypt.hashpw(password, BCrypt.gensalt());
+        String encryptedNewPassword =  BCrypt.hashpw(password, BCrypt.gensalt());
         boolean flag = false;
         Specification specificationForValidate = null;
         Specification specification = null;

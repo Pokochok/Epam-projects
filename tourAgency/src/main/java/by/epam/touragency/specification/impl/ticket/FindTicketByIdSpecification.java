@@ -22,7 +22,7 @@ public class FindTicketByIdSpecification implements Specification<Ticket> {
     @Override
     public ArrayDeque<Object> getParameterQueue() {
         ArrayDeque<Object> values = new ArrayDeque<>(1);
-        values.push(id);
+        values.add(id);
         return values;
     }
 }

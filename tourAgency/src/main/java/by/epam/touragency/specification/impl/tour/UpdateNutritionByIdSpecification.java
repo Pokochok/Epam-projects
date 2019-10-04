@@ -24,8 +24,8 @@ public class UpdateNutritionByIdSpecification implements Specification<Tour> {
     @Override
     public ArrayDeque<Object> getParameterQueue() {
         ArrayDeque<Object> values = new ArrayDeque<>(2);
-        values.push(nutrition);
-        values.push(id);
+        values.add(nutrition);
+        values.add(id);
         return values;
     }
 }

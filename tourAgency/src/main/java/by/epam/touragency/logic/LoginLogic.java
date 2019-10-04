@@ -8,9 +8,9 @@ import by.epam.touragency.specification.impl.admin.FindAdminByLoginPasswordSpeci
 import by.epam.touragency.specification.impl.agent.FindAgentByLoginPasswordSpecification;
 import by.epam.touragency.specification.impl.client.FindClientByLoginPasswordSpecification;
 import by.epam.touragency.specification.Specification;
-import by.epam.touragency.util.SHAEncrypting;
 import by.epam.touragency.util.Validation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
@@ -34,7 +34,7 @@ public class LoginLogic {
      * @throws LogicException if handled RepositoryException
      */
     private User checkLoginPassword(String enterLogin, String password) throws LogicException {
-        String enterPass = SHAEncrypting.getInstance().encode(password);
+        String enterPass = BCrypt.hashpw(password, BCrypt.gensalt());
         User user = null;
         Specification clientSpecification = new FindClientByLoginPasswordSpecification(enterLogin, enterPass);
         Specification agentSpecification = new FindAgentByLoginPasswordSpecification(enterLogin, enterPass);

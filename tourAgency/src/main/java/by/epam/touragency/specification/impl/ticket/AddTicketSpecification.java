@@ -23,12 +23,12 @@ public class AddTicketSpecification implements Specification<Ticket> {
     @Override
     public ArrayDeque<Object> getParameterQueue() {
         ArrayDeque<Object> values = new ArrayDeque<>(6);
-        values.push(ticket.getFlightNumber());
-        values.push(ticket.getTicketNumber());
-        values.push(ticket.getDepartureCity());
-        values.push(ticket.getArrivalCity());
-        values.push(ticket.getDepartureDateTimeLong());
-        values.push(ticket.getArrivalDateTimeLong());
+        values.add(ticket.getFlightNumber());
+        values.add(ticket.getTicketNumber());
+        values.add(ticket.getDepartureCity());
+        values.add(ticket.getArrivalCity());
+        values.add(ticket.getDepartureDateTimeLong());
+        values.add(ticket.getArrivalDateTimeLong());
         return values;
     }
 }

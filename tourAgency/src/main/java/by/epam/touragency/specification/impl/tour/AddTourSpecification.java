@@ -23,18 +23,18 @@ public class AddTourSpecification implements Specification<Tour> {
     @Override
     public ArrayDeque<Object> getParameterQueue() {
         ArrayDeque<Object> values = new ArrayDeque<>(12);
-        values.push(tour.getTourName());
-        values.push(tour.getDepartureDateLong());
-        values.push(tour.getArrivalDateLong());
-        values.push(tour.getDepartureCity());
-        values.push(tour.getArrivalCity());
-        values.push(tour.getArrivalCountry());
-        values.push(tour.getHotel());
-        values.push(tour.getNutrition());
-        values.push(tour.getAdultsNumber());
-        values.push(tour.getChildrenNumber());
-        values.push(tour.getPrice());
-        values.push(tour.getStatus());
+        values.add(tour.getTourName());
+        values.add(tour.getDepartureDateLong());
+        values.add(tour.getArrivalDateLong());
+        values.add(tour.getDepartureCity());
+        values.add(tour.getArrivalCity());
+        values.add(tour.getArrivalCountry());
+        values.add(tour.getHotel());
+        values.add(tour.getNutrition());
+        values.add(tour.getAdultsNumber());
+        values.add(tour.getChildrenNumber());
+        values.add(tour.getPrice());
+        values.add(tour.getStatus());
         return values;
     }
 }

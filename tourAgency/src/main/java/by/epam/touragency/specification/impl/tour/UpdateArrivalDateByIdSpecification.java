@@ -24,8 +24,8 @@ public class UpdateArrivalDateByIdSpecification implements Specification<Tour> {
     @Override
     public ArrayDeque<Object> getParameterQueue() {
         ArrayDeque<Object> values = new ArrayDeque<>(2);
-        values.push(arrivalDate);
-        values.push(id);
+        values.add(arrivalDate);
+        values.add(id);
         return values;
     }
 }

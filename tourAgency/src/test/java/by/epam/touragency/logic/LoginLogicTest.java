@@ -6,8 +6,8 @@ import by.epam.touragency.exception.RepositoryException;
 import by.epam.touragency.repository.impl.UserRepository;
 import by.epam.touragency.specification.Specification;
 import by.epam.touragency.specification.impl.agent.FindAgentByLoginPasswordSpecification;
-import by.epam.touragency.util.SHAEncrypting;
 import org.junit.Test;
+import org.springframework.security.crypto.bcrypt.BCrypt;
 
 
 public class LoginLogicTest {
@@ -15,7 +15,7 @@ public class LoginLogicTest {
     @Test
     public void testCheckLoginPasswordExists() throws LogicException, RepositoryException {
         Specification specification = new FindAgentByLoginPasswordSpecification("not defined",
-                SHAEncrypting.getInstance().encode("1234567890"));
+                BCrypt.hashpw("1234567890", BCrypt.gensalt()));
         User expected = UserRepository.getInstance().query(specification).iterator().next();
 //        User actual = LoginLogic.checkLoginPassword("not defined", "1234567890");
 //        Assert.assertEquals(actual, expected);

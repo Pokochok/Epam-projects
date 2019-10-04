@@ -117,11 +117,11 @@ public class PropertyHolder {
         return url;
     }
 
-    int getInitCount() {
+    public int getInitCount() {
         return initCount;
     }
 
-    int getPoolSize() {
+    public int getPoolSize() {
         return poolSize;
     }
 }

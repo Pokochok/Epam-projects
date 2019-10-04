@@ -34,12 +34,12 @@ public class FindTicketsByAllContentSpecification implements Specification<Ticke
     @Override
     public ArrayDeque<Object> getParameterQueue() {
         ArrayDeque<Object> values = new ArrayDeque<>(1);
-        values.push(flightNumber);
-        values.push(ticketNumber);
-        values.push(departureCity);
-        values.push(arrivalCity);
-        values.push(departureDateTime);
-        values.push(arrivalDateTime);
+        values.add(flightNumber);
+        values.add(ticketNumber);
+        values.add(departureCity);
+        values.add(arrivalCity);
+        values.add(departureDateTime);
+        values.add(arrivalDateTime);
         return values;
     }
 }

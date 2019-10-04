@@ -1,8 +1,7 @@
 package by.epam.touragency.repository.impl;
 
-import by.epam.touragency.connectionpool.ProxyConnectionPool;
 import by.epam.touragency.entity.Order;
-import by.epam.touragency.exception.ConnectionPoolException;
+import by.epam.touragency.entity.OrderRowMapper;
 import by.epam.touragency.exception.RepositoryException;
 import by.epam.touragency.repository.Repository;
 import by.epam.touragency.specification.Specification;
@@ -10,132 +9,72 @@ import by.epam.touragency.specification.impl.agent.FindAgentByIdSpecification;
 import by.epam.touragency.specification.impl.client.FindClientByIdSpecification;
 import by.epam.touragency.specification.impl.ticket.FindTicketByIdSpecification;
 import by.epam.touragency.specification.impl.tour.FindTourByIdSpecification;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.HashSet;
 import java.util.Set;
 
-import static by.epam.touragency.util.PageMsgConstant.LOGGER;
-
+@org.springframework.stereotype.Repository
 public class OrderRepository implements Repository<Order> {
+
+    private JdbcTemplate jdbcTemplate;
+    private static OrderRepository orderRepository;
 
     private OrderRepository() {
     }
 
-    private static class RepositoryHolder {
-        private static final OrderRepository REPOSITORY = new OrderRepository();
+    @Autowired
+    private OrderRepository(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
     }
 
     public static OrderRepository getInstance() {
-        return RepositoryHolder.REPOSITORY;
+        if (orderRepository != null) {
+            return orderRepository;
+        } else {
+            orderRepository = new OrderRepository();
+            return orderRepository;
+        }
     }
 
     @Override
-    public void add(Order item, Specification specification) throws RepositoryException {
-        Connection connection = null;
-        PreparedStatement preparedStatement = null;
-        try {
-            connection = ProxyConnectionPool.getInstance().takeConnection();
-            preparedStatement = connection.prepareStatement(specification.sqlQuery());
-            setPreparedStatementValues(preparedStatement, specification);
-            preparedStatement.executeUpdate();
-            LOGGER.info("New order was added");
-        } catch (SQLException e) {
-            LOGGER.error("Error in adding tour: ");
-            throw new RepositoryException(e);
-        } catch (ConnectionPoolException e) {
-            LOGGER.fatal("Error in connection pool: ");
-            throw new RepositoryException(e);
-        } finally {
-            if (preparedStatement != null) {
-                closePreparedStatement(preparedStatement);
-            }
-            ProxyConnectionPool.getInstance().returnConnection(connection);
-        }
+    public void add(Order order, Specification specification) throws RepositoryException {
+        jdbcTemplate.update(specification.sqlQuery(), order.getTour().getId(), order.getTicket().getId(),
+                order.getClient().getId(), order.getAgent().getId());
     }
 
     @Override
     public void update(Order entity, Specification specification) throws RepositoryException {
-        PreparedStatement preparedStatement = null;
-        Connection connection = null;
-        try {
-            connection = ProxyConnectionPool.getInstance().takeConnection();
-            preparedStatement = connection.prepareStatement(specification.sqlQuery());
-            setPreparedStatementValues(preparedStatement, specification);
-            preparedStatement.executeUpdate();
-            LOGGER.info("Order was updated");
-        } catch (SQLException e) {
-            LOGGER.error("Error in updating order: ");
-            throw new RepositoryException(e);
-        } catch (ConnectionPoolException e) {
-            LOGGER.fatal("Error in connection pool: ");
-            throw new RepositoryException(e);
-        } finally {
-            if (preparedStatement != null) {
-                closePreparedStatement(preparedStatement);
-            }
-            ProxyConnectionPool.getInstance().returnConnection(connection);
-        }
+        jdbcTemplate.update(specification.sqlQuery(), specification.getParameterQueue().toArray());
     }
 
     @Override
     public void remove(Order entity, Specification specification) throws RepositoryException {
-        try (PreparedStatement preparedStatement = ProxyConnectionPool.getInstance().takeConnection()
-                .prepareStatement(specification.sqlQuery())) {
-            setPreparedStatementValues(preparedStatement, specification);
-            preparedStatement.executeUpdate();
-        } catch (SQLException e) {
-            LOGGER.error("Error in removing the order: ");
-            throw new RepositoryException(e);
-        } catch (ConnectionPoolException e) {
-            LOGGER.fatal("Error in connection pool: ");
-            throw new RepositoryException(e);
-        }
+        jdbcTemplate.update(specification.sqlQuery(), specification.getParameterQueue().toArray());
     }
 
     @Override
     public Set<Order> query(Specification specification) throws RepositoryException {
-        Set<Order> orderSet = new HashSet<>();
-        PreparedStatement preparedStatement = null;
-        ResultSet resultSet = null;
-        Connection connection = null;
-        try {
-            connection = ProxyConnectionPool.getInstance().takeConnection();
-            preparedStatement = connection.prepareStatement(specification.sqlQuery());
-            setPreparedStatementValues(preparedStatement, specification);
-            resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()) {
-                Specification tourQuery = new FindTourByIdSpecification(resultSet.getInt("id_tour"));
-                Specification ticketQuery = new FindTicketByIdSpecification(resultSet.getInt("id_ticket"));
-                Specification userQuery = new FindClientByIdSpecification(resultSet.getInt("id_client"));
-                Specification agentQuery = new FindAgentByIdSpecification(resultSet.getInt("id_agent"));
-                Order order = new Order.OrderBuilder()
-                .setId(resultSet.getInt("id"))
-                .setPaymentState(Boolean.parseBoolean(resultSet.getString("payment_state")))
-                .setTour(TourRepository.getInstance().query(tourQuery).iterator().next())
-                .setTicket(TicketRepository.getInstance().query(ticketQuery).iterator().next())
-                .setClient(UserRepository.getInstance().query(userQuery).iterator().next())
-                .setAgent(UserRepository.getInstance().query(agentQuery).iterator().next()).build();
-                orderSet.add(order);
-            }
-        } catch (SQLException e) {
-            LOGGER.error("Error in query: ");
-            throw new RepositoryException(e);
-        } catch (ConnectionPoolException e) {
-            LOGGER.fatal("Error in connection pool");
-            throw new RepositoryException(e);
-        } finally {
-            if (resultSet != null) {
-                closeResultSet(resultSet);
-            }
-            if (preparedStatement != null) {
-                closePreparedStatement(preparedStatement);
-            }
-            ProxyConnectionPool.getInstance().returnConnection(connection);
+        Set<Order> orders = new HashSet<>(jdbcTemplate.query(specification.sqlQuery(),
+                specification.getParameterQueue().toArray(), new OrderRowMapper()));
+        for (Order order : orders) {
+            Specification tourQuery = new FindTourByIdSpecification(order.getTourId());
+            Specification ticketQuery = new FindTicketByIdSpecification(order.getTicketId());
+            Specification userQuery = new FindClientByIdSpecification(order.getClientId());
+            Specification agentQuery = new FindAgentByIdSpecification(order.getAgentId());
+            order.setId(order.getId());
+            order.setPaymentState(order.getPaymentState());
+            order.setTour(TourRepository.getInstance().query(tourQuery).iterator().next());
+            order.setTicket(TicketRepository.getInstance().query(ticketQuery).iterator().next());
+            order.setClient(UserRepository.getInstance().query(userQuery).iterator().next());
+            order.setAgent(UserRepository.getInstance().query(agentQuery).iterator().next());
         }
-        return orderSet;
+        return orders;
+    }
+
+    @Autowired
+    public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
     }
 }

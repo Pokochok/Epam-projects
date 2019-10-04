@@ -24,8 +24,8 @@ public class UpdateHotelByIdSpecification implements Specification<Tour> {
     @Override
     public ArrayDeque<Object> getParameterQueue() {
         ArrayDeque<Object> values = new ArrayDeque<>(2);
-        values.push(hotel);
-        values.push(id);
+        values.add(hotel);
+        values.add(id);
         return values;
     }
 }

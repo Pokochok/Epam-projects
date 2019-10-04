@@ -24,8 +24,8 @@ public class UpdateAdultsNumberByIdSpecification implements Specification<Tour> 
     @Override
     public ArrayDeque<Object> getParameterQueue() {
         ArrayDeque<Object> values = new ArrayDeque<>(2);
-        values.push(adultsNumber);
-        values.push(id);
+        values.add(adultsNumber);
+        values.add(id);
         return values;
     }
 }

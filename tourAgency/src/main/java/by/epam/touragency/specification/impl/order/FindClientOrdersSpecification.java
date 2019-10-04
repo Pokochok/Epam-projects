@@ -22,7 +22,7 @@ public class FindClientOrdersSpecification implements Specification<Order> {
     @Override
     public ArrayDeque<Object> getParameterQueue() {
         ArrayDeque<Object> values = new ArrayDeque<>(1);
-        values.push(clientId);
+        values.add(clientId);
         return values;
     }
 }

@@ -1,6 +1,7 @@
 package by.epam.touragency.config;
 
 import by.epam.touragency.connectionpool.PropertyHolder;
+import by.epam.touragency.logic.UserDetailsServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -8,7 +9,9 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.web.context.request.RequestContextListener;
+import org.springframework.web.filter.DelegatingFilterProxy;
 import org.springframework.web.filter.RequestContextFilter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
@@ -23,6 +26,11 @@ public class AppConfig {
         viewResolver.setPrefix("/jsp/");
         viewResolver.setSuffix(".jsp");
         return viewResolver;
+    }
+
+    @Bean
+    public UserDetailsService userDetailsService(){
+        return new UserDetailsServiceImpl();
     }
 
     @Bean
@@ -49,6 +57,11 @@ public class AppConfig {
     public RequestContextFilter requestContextFilter() {
         return new RequestContextFilter();
     }
+
+//    @Bean
+//    public DelegatingFilterProxy webDelegatingFilterProxy(){
+//        return new DelegatingFilterProxy();
+//    }
 
     //    @Bean
     public DataSource embeddedDataSource() {

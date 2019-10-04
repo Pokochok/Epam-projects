@@ -6,6 +6,8 @@ import by.epam.touragency.exception.RepositoryException;
 import by.epam.touragency.repository.impl.UserRepository;
 import by.epam.touragency.specification.Specification;
 import by.epam.touragency.specification.impl.admin.FindAdminByLoginSpecification;
+import by.epam.touragency.specification.impl.agent.FindAgentByLoginSpecification;
+import by.epam.touragency.specification.impl.client.FindClientByLoginSpecification;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -25,14 +27,17 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(@RequestParam(value = PARAM_NAME_LOGIN) String userLogin) throws UsernameNotFoundException {
-        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!  " + userLogin);
-        Specification adminSpecification = new FindAdminByLoginSpecification(userLogin);
         User user = null;
         try {
-            Set<User> userSet = userRepository.query(adminSpecification);
-            if (!userSet.isEmpty()){
-                System.out.println("UserSet is not empty!!!!!!!!!!!!!!!!!");
-                user = userSet.iterator().next();
+            Set<User> adminSet = userRepository.query( new FindAdminByLoginSpecification(userLogin));
+            Set<User> clientSet = userRepository.query( new FindClientByLoginSpecification(userLogin));
+            Set<User> agentSet = userRepository.query( new FindAgentByLoginSpecification(userLogin));
+            if (!adminSet.isEmpty()) {
+                user = adminSet.iterator().next();
+            }else if (!agentSet.isEmpty()){
+                user = agentSet.iterator().next();
+            } else if (!clientSet.isEmpty()){
+                user = clientSet.iterator().next();
             }
         } catch (RepositoryException e) {
             throw new RuntimeException(e);

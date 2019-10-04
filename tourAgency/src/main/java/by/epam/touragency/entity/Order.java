@@ -9,6 +9,10 @@ public class Order {
     private Ticket ticket;
     private User client;
     private User agent;
+    private int tourId;
+    private int ticketId;
+    private int clientId;
+    private int agentId;
 
     private Order(int id, boolean paymentState, Tour tour, Ticket ticket, User client, User agent) {
         this.id = id;
@@ -17,6 +21,10 @@ public class Order {
         this.ticket = ticket;
         this.client = client;
         this.agent = agent;
+        tourId = tour.getId();
+        ticketId = ticket.getId();
+        clientId = client.getId();
+        agentId = agent.getId();
     }
 
     public int getId() {
@@ -43,7 +51,7 @@ public class Order {
         return agent;
     }
 
-    public static class OrderBuilder{
+    public static class OrderBuilder {
         private int id;
         private boolean paymentState;
         private Tour tour;
@@ -75,22 +83,84 @@ public class Order {
         }
 
         public OrderBuilder setClient(User client) {
-            if(Role.CLIENT.equals(client.getRole())) {
+            if (Role.CLIENT.equals(client.getRole())) {
                 this.client = client;
             }
             return this;
         }
 
         public OrderBuilder setAgent(User agent) {
-            if (Role.AGENT.equals(agent.getRole()))
+            if (Role.AGENT.equals(agent.getRole())) {
                 this.agent = agent;
+            }
             return this;
         }
 
-        public Order build(){
+        public Order build() {
             return new Order(id, paymentState, tour, ticket, client, agent);
         }
     }
+
+    public boolean isPaymentState() {
+        return paymentState;
+    }
+
+    public int getTourId() {
+        return tourId;
+    }
+
+    public int getTicketId() {
+        return ticketId;
+    }
+
+    public int getClientId() {
+        return clientId;
+    }
+
+    public int getAgentId() {
+        return agentId;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setPaymentState(boolean paymentState) {
+        this.paymentState = paymentState;
+    }
+
+    public void setTour(Tour tour) {
+        this.tour = tour;
+    }
+
+    public void setTicket(Ticket ticket) {
+        this.ticket = ticket;
+    }
+
+    public void setClient(User client) {
+        this.client = client;
+    }
+
+    public void setAgent(User agent) {
+        this.agent = agent;
+    }
+
+    public void setTourId(int tourId) {
+        this.tourId = tourId;
+    }
+
+    public void setTicketId(int ticketId) {
+        this.ticketId = ticketId;
+    }
+
+    public void setClientId(int clientId) {
+        this.clientId = clientId;
+    }
+
+    public void setAgentId(int agentId) {
+        this.agentId = agentId;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

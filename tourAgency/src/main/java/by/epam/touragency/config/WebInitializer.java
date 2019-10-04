@@ -1,9 +1,10 @@
 package by.epam.touragency.config;
 
-import org.springframework.context.ApplicationContextInitializer;
+import org.springframework.web.filter.DelegatingFilterProxy;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 import javax.servlet.Filter;
+import javax.servlet.ServletContext;
 
 public class WebInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
@@ -13,18 +14,21 @@ public class WebInitializer extends AbstractAnnotationConfigDispatcherServletIni
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        Class[] configClasses = new Class[]{AppConfig.class, SecurityConfiguration.class};
-        return configClasses;
+        return  new Class[]{AppConfig.class, SecurityConfiguration.class};
     }
 
     @Override
     protected String[] getServletMappings() {
-        String[] servletMappings = new String[]{"/"};
-        return servletMappings;
+        return  new String[]{"/"};
+    }
+
+    @Override
+    protected void registerContextLoaderListener(ServletContext servletContext) {
+        super.registerContextLoaderListener(servletContext);
     }
 
     @Override
     protected Filter[] getServletFilters() {
-        return super.getServletFilters();
+        return new Filter[]{};
     }
 }

@@ -23,7 +23,7 @@ public class LoginCommand {
     @Autowired
     private LoginLogic loginLogic;
 
-    @PostMapping(value = "/login")
+    @PostMapping(value = "/login_setter")
     public ModelAndView execute(){
         return new ModelAndView(ConfigurationManager.getProperty(HOME_PAGE_PATH));
     }

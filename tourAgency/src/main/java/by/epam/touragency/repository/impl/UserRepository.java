@@ -11,8 +11,6 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import java.util.HashSet;
 import java.util.Set;
 
-import static by.epam.touragency.util.PageMsgConstant.LOGGER;
-
 @org.springframework.stereotype.Repository
 public class UserRepository implements Repository<User> {
 
@@ -50,14 +48,13 @@ public class UserRepository implements Repository<User> {
 
     @Override
     public void remove(User user, Specification specification) throws RepositoryException {
-        jdbcTemplate.update(specification.sqlQuery(), specification.getParameterQueue());
+        jdbcTemplate.update(specification.sqlQuery(), specification.getParameterQueue().toArray());
     }
 
     @Override
     public Set<User> query(Specification specification) throws RepositoryException {
         return new HashSet<>(jdbcTemplate.query(specification.sqlQuery(), specification.getParameterQueue().toArray(),
                 new UserRowMapper()));
-
     }
 
     @Override

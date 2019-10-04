@@ -22,11 +22,11 @@ public class AddOrderSpecification implements Specification<Order> {
     @Override
     public ArrayDeque<Object> getParameterQueue() {
         ArrayDeque<Object> values = new ArrayDeque<>(5);
-        values.push(Boolean.toString(order.getPaymentState()));
-        values.push(order.getTour().getId());
-        values.push(order.getTicket().getId());
-        values.push(order.getClient().getId());
-        values.push(order.getAgent().getId());
+        values.add(Boolean.toString(order.getPaymentState()));
+        values.add(order.getTour().getId());
+        values.add(order.getTicket().getId());
+        values.add(order.getClient().getId());
+        values.add(order.getAgent().getId());
         return values;
     }
 }

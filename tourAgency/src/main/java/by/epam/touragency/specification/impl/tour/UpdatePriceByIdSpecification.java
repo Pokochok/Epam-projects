@@ -25,8 +25,8 @@ public class UpdatePriceByIdSpecification implements Specification<Tour> {
     @Override
     public ArrayDeque<Object> getParameterQueue() {
         ArrayDeque<Object> values = new ArrayDeque<>(2);
-        values.push(price);
-        values.push(id);
+        values.add(price);
+        values.add(id);
         return values;
     }
 }

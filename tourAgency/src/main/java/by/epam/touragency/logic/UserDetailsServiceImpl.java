@@ -4,7 +4,6 @@ import by.epam.touragency.entity.User;
 import by.epam.touragency.entity.UserPrincipal;
 import by.epam.touragency.exception.RepositoryException;
 import by.epam.touragency.repository.impl.UserRepository;
-import by.epam.touragency.specification.Specification;
 import by.epam.touragency.specification.impl.admin.FindAdminByLoginSpecification;
 import by.epam.touragency.specification.impl.agent.FindAgentByLoginSpecification;
 import by.epam.touragency.specification.impl.client.FindClientByLoginSpecification;

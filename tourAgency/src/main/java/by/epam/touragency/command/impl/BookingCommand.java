@@ -7,6 +7,7 @@ import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.resource.MessageManager;
 import by.epam.touragency.util.ParameterConstant;
 import by.epam.touragency.util.Validation;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -19,6 +20,7 @@ import java.util.Locale;
 
 @Controller
 public class BookingCommand {
+    @Secured({ "ROLE_AGENT", "ROLE_CLIENT" })
     @PostMapping("/booking")
     public ModelAndView execute(
             @RequestParam(value = PARAM_NAME_TICKET_ID, required = false) String ticketId,

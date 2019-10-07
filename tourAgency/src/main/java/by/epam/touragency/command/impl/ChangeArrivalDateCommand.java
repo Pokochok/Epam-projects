@@ -6,6 +6,7 @@ import by.epam.touragency.logic.UpdateTourLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.resource.MessageManager;
 import by.epam.touragency.util.Validation;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -21,6 +22,7 @@ import static by.epam.touragency.util.ParameterConstant.*;
 
 @Controller
 public class ChangeArrivalDateCommand {
+    @Secured("ROLE_ADMIN")
     @PostMapping("/change_arrival_date")
     public ModelAndView execute(
             @RequestParam(PARAM_NAME_DEPARTURE_DATE) String departureDateStr,

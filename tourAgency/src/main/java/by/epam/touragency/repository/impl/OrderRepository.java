@@ -27,6 +27,7 @@ public class OrderRepository implements Repository<Order> {
     @Autowired
     private OrderRepository(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
+        orderRepository = this;
     }
 
     public static OrderRepository getInstance() {

@@ -3,6 +3,7 @@ package by.epam.touragency.command.impl;
 import by.epam.touragency.exception.CommandException;
 import by.epam.touragency.exception.LogicException;
 import by.epam.touragency.logic.OrderChangeLogic;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,6 +16,7 @@ import static by.epam.touragency.util.ParameterConstant.ATTR_NAME_CHANGE_PAGE;
 
 @Controller
 public class PayOrderCommand {
+    @Secured("ROLE_CLIENT")
     @PostMapping("/pay_order")
     public ModelAndView execute(@RequestParam(value = PARAM_NAME_ORDER_ID, required = false) String orderId,
                                 @SessionAttribute(value = ATTR_NAME_USER_ROLE) String userRole,

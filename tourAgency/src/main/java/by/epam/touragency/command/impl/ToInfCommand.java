@@ -2,6 +2,7 @@ package by.epam.touragency.command.impl;
 
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.resource.MessageManager;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -12,6 +13,7 @@ import static by.epam.touragency.util.PageMsgConstant.TO_INF_PAGE_PATH;
 import static by.epam.touragency.util.ParameterConstant.*;
 
 @Controller
+@PreAuthorize("permitAll()")
 public class ToInfCommand {
     @PostMapping("/to_inf")
     public ModelAndView execute(ModelAndView modelAndView) {
@@ -20,7 +22,7 @@ public class ToInfCommand {
                 modelAndView.getModel().get(ATTR_NAME_LANGUAGE).toString() : EN_LOCALE;
         modelAndView.clear();
         modelAndView.addObject(ATTR_NAME_RESULT_INF, MessageManager.getProperty(msgKey, new Locale(language)));
-        modelAndView.setViewName(ConfigurationManager.getProperty(TO_INF_PAGE_PATH));
+        modelAndView.setViewName("redirect:" + ConfigurationManager.getProperty(TO_INF_PAGE_PATH));
         return modelAndView;
     }
 }

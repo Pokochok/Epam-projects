@@ -6,6 +6,7 @@ import by.epam.touragency.logic.UpdateUserLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.resource.MessageManager;
 import by.epam.touragency.util.Validation;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -19,6 +20,7 @@ import static by.epam.touragency.util.ParameterConstant.*;
 
 @Controller
 public class ChangePhoneNumberCommand {
+    @Secured({"ROLE_ADMIN", "ROLE_AGENT", "ROLE_CLIENT"})
     @PostMapping("/change_phone_number")
     public ModelAndView execute(
             @SessionAttribute(value = PARAM_NAME_USER_LOGIN) String login,

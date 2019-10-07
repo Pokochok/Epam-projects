@@ -23,6 +23,7 @@ public class TicketRepository implements Repository<Ticket> {
     @Autowired
     public TicketRepository(JdbcTemplate jdbcTemplate){
         this.jdbcTemplate = jdbcTemplate;
+        ticketRepository = this;
     }
 
     public static TicketRepository getInstance() {

@@ -5,6 +5,7 @@ import by.epam.touragency.exception.LogicException;
 import by.epam.touragency.logic.UpdateTourLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.util.Validation;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,6 +16,7 @@ import static by.epam.touragency.util.ParameterConstant.*;
 
 @Controller
 public class ChangeArrivalCountryCommand {
+    @Secured("ROLE_ADMIN")
     @PostMapping("/change_arrival_country")
     public ModelAndView execute(
             @RequestParam(value = PARAM_NAME_NEW_ARRIVAL_COUNTRY) String newArrivalCountry,

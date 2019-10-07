@@ -23,6 +23,7 @@ public class TourRepository implements Repository<Tour> {
     @Autowired
     public TourRepository(JdbcTemplate jdbcTemplate){
         this.jdbcTemplate = jdbcTemplate;
+        tourRepository = this;
     }
 
     public static TourRepository getInstance() {

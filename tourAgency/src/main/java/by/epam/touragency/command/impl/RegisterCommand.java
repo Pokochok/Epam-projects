@@ -8,6 +8,7 @@ import by.epam.touragency.logic.UserRegistrationLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.resource.MessageManager;
 import by.epam.touragency.util.Validation;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -20,6 +21,7 @@ import static by.epam.touragency.util.ParameterConstant.*;
 
 @Controller
 public class RegisterCommand {
+    @Secured("ROLE_ANONYMOUS")
     @PostMapping("/registration")
     public ModelAndView execute(
             @RequestParam(value = PARAM_NAME_NAME) String name,

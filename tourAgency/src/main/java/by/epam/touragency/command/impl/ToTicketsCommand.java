@@ -5,6 +5,8 @@ import by.epam.touragency.exception.CommandException;
 import by.epam.touragency.exception.LogicException;
 import by.epam.touragency.logic.ToPageWithListLogic;
 import by.epam.touragency.resource.ConfigurationManager;
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,7 +18,9 @@ import static by.epam.touragency.util.PageMsgConstant.TO_FLIGHTS_PAGE_PATH;
 import static by.epam.touragency.util.ParameterConstant.*;
 
 @Controller
+@PreAuthorize("permitAll()")
 public class ToTicketsCommand{
+//    @Secured({"ROLE_ADMIN", "ROLE_AGENT", "ROLE_CLIENT", "ROLE_ANONYMOUS"})
     @RequestMapping("/to_tickets")
     public ModelAndView execute(
             @RequestParam(value = ATTR_NAME_INDEX, required = false) String index,

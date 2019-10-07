@@ -6,6 +6,7 @@ import by.epam.touragency.logic.TicketRegistrationLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.resource.MessageManager;
 import by.epam.touragency.util.Validation;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -20,6 +21,7 @@ import static by.epam.touragency.util.ParameterConstant.*;
 @Controller
 public class TicketRegisterCommand {
 
+    @Secured("ROLE_ADMIN")
     @PostMapping("/ticket_register_command")
     public ModelAndView execute(
             @RequestParam(value = PARAM_NAME_FLIGHT_NUMBER) String flightNumber,

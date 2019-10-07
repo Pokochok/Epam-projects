@@ -5,6 +5,7 @@ import by.epam.touragency.exception.LogicException;
 import by.epam.touragency.logic.UpdateTourLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.util.Validation;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,6 +19,7 @@ import static by.epam.touragency.util.ParameterConstant.PARAM_NAME_TOUR_ID;
 
 @Controller
 public class ChangeStatusCommand {
+    @Secured("ROLE_ADMIN")
     @PostMapping("/change_status")
     public ModelAndView execute(
             @RequestParam(ATTR_NAME_STATUS) String status,

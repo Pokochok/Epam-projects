@@ -7,6 +7,7 @@ import by.epam.touragency.logic.TourRegistrationLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.resource.MessageManager;
 import by.epam.touragency.util.Validation;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -22,6 +23,7 @@ import static by.epam.touragency.util.ParameterConstant.*;
 @Controller
 public class TourRegisterCommand {
 
+    @Secured("ROLE_ADMIN")
     @PostMapping("/tour_register_command")
     public ModelAndView execute(
             @RequestParam(value = PARAM_NAME_TOUR_NAME) String tourName,

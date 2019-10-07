@@ -18,7 +18,7 @@ public class UserPrincipal implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return Collections.singleton(new SimpleGrantedAuthority(user.getRole().toString()));
+        return Collections.singleton(new SimpleGrantedAuthority("ROLE_" + user.getRole().toString()));
     }
 
     @Override
@@ -29,6 +29,34 @@ public class UserPrincipal implements UserDetails {
     @Override
     public String getUsername() {
         return user.getLogin();
+    }
+
+    public String getRealUserName() {
+        return user.getName();
+    }
+
+    public String getUserEmail() {
+        return user.getEmail();
+    }
+
+    public String getUserPhoneNumber() {
+        return user.getPhoneNumber();
+    }
+
+    public String getUserSurname() {
+        return user.getSurname();
+    }
+
+    public int getUserId() {
+        return user.getId();
+    }
+
+    public Role getUserRole(){
+        return user.getRole();
+    }
+
+    public String getUserStatus(){
+        return user.getStatus();
     }
 
     @Override
@@ -50,4 +78,6 @@ public class UserPrincipal implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
+
+
 }

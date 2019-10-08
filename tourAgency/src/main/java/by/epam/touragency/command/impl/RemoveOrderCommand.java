@@ -16,7 +16,7 @@ import static by.epam.touragency.util.ParameterConstant.*;
 public class RemoveOrderCommand {
     @Secured({"ROLE_AGENT", "ROLE_CLIENT"})
     @GetMapping("/remove_order")
-    public ModelAndView execute(@RequestParam(value = PARAM_NAME_ORDER_ID, required = false) String orderId,
+    public ModelAndView execute(@RequestParam(value = PARAM_NAME_ORDER_ID) String orderId,
                                 @SessionAttribute(value = ATTR_NAME_USER_ROLE) String userRole,
                                 @SessionAttribute(value = ATTR_NAME_USER_ID) String userId,
                                 @RequestParam(value = ATTR_NAME_INDEX, required = false) String index,

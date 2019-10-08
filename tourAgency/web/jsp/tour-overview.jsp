@@ -605,6 +605,19 @@
     </form>
 
     <form method="post" action="to_tickets" id="to_tickets">
+        <input type="hidden" name="tourId" value="${param.tourId}"/>
+        <input type="hidden" name="tourName" value="${tourName}"/>
+        <input type="hidden" name="arrivalCountry" value="${arrivalCountry}"/>
+        <input type="hidden" name="arrivalCity" value="${arrivalCity}"/>
+        <input type="hidden" name="departureCity" value="${departureCity}"/>
+        <input type="hidden" name="departureDate" value="${departureDate}"/>
+        <input type="hidden" name="arrivalDate" value="${arrivalDate}"/>
+        <input type="hidden" name="hotel" value="${hotel}"/>
+        <input type="hidden" name="nutrition" value="${nutrition}"/>
+        <input type="hidden" name="adultsNumber" value="${adultsNumber}"/>
+        <input type="hidden" name="childrenNumber" value="${childrenNumber}"/>
+        <input type="hidden" name="price" value="${price}"/>
+        <input type="hidden" name="status" value="${status}"/>
         <div class="contentItem">
             <c:if test="${userRole != 'ADMIN'}">
                 <fmt:message key="notAdmin.submit.ticketSelection" var="ticketSelection"/>

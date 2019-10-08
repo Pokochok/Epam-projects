@@ -3,6 +3,7 @@ package by.epam.touragency.logic;
 import by.epam.touragency.entity.User;
 import by.epam.touragency.exception.LogicException;
 import by.epam.touragency.exception.RepositoryException;
+import by.epam.touragency.repository.Repository;
 import by.epam.touragency.repository.impl.UserRepository;
 import by.epam.touragency.specification.impl.admin.FindAdminByLoginPasswordSpecification;
 import by.epam.touragency.specification.impl.agent.FindAgentByLoginPasswordSpecification;
@@ -10,6 +11,7 @@ import by.epam.touragency.specification.impl.client.FindClientByLoginPasswordSpe
 import by.epam.touragency.specification.Specification;
 import by.epam.touragency.util.Validation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Service;
 
@@ -24,7 +26,8 @@ import static by.epam.touragency.util.PageMsgConstant.LOGGER;
 public class LoginLogic {
 
     @Autowired
-    private UserRepository repository;
+    @Qualifier("userRepository")
+    private Repository repository;
 
     /**
      * Verifies entered login and password
@@ -33,7 +36,7 @@ public class LoginLogic {
      * @return user if verifies completed successfully, and null - if not
      * @throws LogicException if handled RepositoryException
      */
-    private User checkLoginPassword(String enterLogin, String password) throws LogicException {
+    public User checkLoginPassword(String enterLogin, String password) throws LogicException {
         String enterPass = BCrypt.hashpw(password, BCrypt.gensalt());
         User user = null;
         Specification clientSpecification = new FindClientByLoginPasswordSpecification(enterLogin, enterPass);

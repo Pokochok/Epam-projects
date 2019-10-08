@@ -14,6 +14,8 @@ public class Order {
     private int clientId;
     private int agentId;
 
+    private Order(){}
+
     private Order(int id, boolean paymentState, Tour tour, Ticket ticket, User client, User agent) {
         this.id = id;
         this.paymentState = paymentState;
@@ -97,7 +99,11 @@ public class Order {
         }
 
         public Order build() {
-            return new Order(id, paymentState, tour, ticket, client, agent);
+            if(tour == null || ticket == null){
+                return new Order();
+            }else {
+                return new Order(id, paymentState, tour, ticket, client, agent);
+            }
         }
     }
 
@@ -131,18 +137,22 @@ public class Order {
 
     public void setTour(Tour tour) {
         this.tour = tour;
+        this.tourId = tour == null ? 0 : tour.getId();
     }
 
     public void setTicket(Ticket ticket) {
         this.ticket = ticket;
+        this.ticketId = ticket == null ? 0 : ticket.getId();
     }
 
     public void setClient(User client) {
         this.client = client;
+        this.clientId = client == null ? 0 : client.getId();
     }
 
     public void setAgent(User agent) {
         this.agent = agent;
+        this.agentId = agent == null ? 0 : agent.getId();
     }
 
     public void setTourId(int tourId) {
@@ -168,8 +178,8 @@ public class Order {
         Order order = (Order) o;
         return id == order.id &&
                 paymentState == order.paymentState &&
-                tour.equals(order.tour) &&
-                ticket.equals(order.ticket);
+                tourId == order.tourId &&
+                ticketId == order.ticketId;
     }
 
     @Override

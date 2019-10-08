@@ -3,11 +3,13 @@ package by.epam.touragency.logic;
 import by.epam.touragency.entity.User;
 import by.epam.touragency.entity.UserPrincipal;
 import by.epam.touragency.exception.RepositoryException;
+import by.epam.touragency.repository.Repository;
 import by.epam.touragency.repository.impl.UserRepository;
 import by.epam.touragency.specification.impl.admin.FindAdminByLoginSpecification;
 import by.epam.touragency.specification.impl.agent.FindAgentByLoginSpecification;
 import by.epam.touragency.specification.impl.client.FindClientByLoginSpecification;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -22,7 +24,8 @@ import static by.epam.touragency.util.ParameterConstant.PARAM_NAME_LOGIN;
 public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Autowired
-    private UserRepository userRepository;
+    @Qualifier("userRepository")
+    private Repository userRepository;
 
     @Override
     public UserDetails loadUserByUsername(@RequestParam(value = PARAM_NAME_LOGIN) String userLogin) throws UsernameNotFoundException {

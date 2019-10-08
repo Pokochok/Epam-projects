@@ -43,7 +43,9 @@ public class OrderChangeLogic {
      */
     public static void removeOrder(String orderId) throws LogicException {
         try {
+            System.out.println("!!!!!!!!!!REMOVE ORDER ORDER IDDDD: "+orderId);
             if (Validation.validateId(orderId)) {
+                System.out.println("!!!!!!!!!!REMOVE ORDER ORDER after validation true: ");
                 Specification specification = new RemoveOrderByIdSpecification(Integer.parseInt(orderId));
                 Repository repository = OrderRepository.getInstance();
                 repository.remove(null, specification);

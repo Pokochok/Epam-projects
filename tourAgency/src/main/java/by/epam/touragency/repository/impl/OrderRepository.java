@@ -41,7 +41,7 @@ public class OrderRepository implements Repository<Order> {
 
     @Override
     public void add(Order order, Specification specification) throws RepositoryException {
-        jdbcTemplate.update(specification.sqlQuery(), order.getTour().getId(), order.getTicket().getId(),
+        jdbcTemplate.update(specification.sqlQuery(), order.getPaymentState(), order.getTour().getId(), order.getTicket().getId(),
                 order.getClient().getId(), order.getAgent().getId());
     }
 

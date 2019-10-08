@@ -9,6 +9,8 @@ public class OrderRowMapper implements RowMapper<Order> {
     @Override
     public Order mapRow(ResultSet resultSet, int i) throws SQLException {
         Order order = new Order.OrderBuilder().build();
+        order.setId(resultSet.getInt("id"));
+        order.setPaymentState(resultSet.getBoolean("payment_state"));
         order.setTourId(resultSet.getInt("id_tour"));
         order.setTicketId(resultSet.getInt("id_ticket"));
         order.setClientId(resultSet.getInt("id_client"));

@@ -55,14 +55,20 @@ public class PropertyHolder {
      * @param url of database to connect
      */
     private PropertyHolder(String url){
-        System.out.println("constructor with url");
-        PropertyHolder propertyHolder = new PropertyHolder();
-        driverName = propertyHolder.driverName;
-        userName = propertyHolder.userName;
-        password = propertyHolder.password;
-        poolSize = propertyHolder.poolSize;
-        initCount = propertyHolder.initCount;
-        this.url = url;
+        Properties properties = new Properties();
+        try (InputStream inputStream = PropertyHolder.class.getClassLoader().getResourceAsStream(FILE_NAME)) {
+            properties.load(inputStream);
+            LOGGER.info("Properties was loaded");
+            driverName = properties.getProperty(DRIVER_FIELD);
+            userName = properties.getProperty(USER_FIELD);
+            password = properties.getProperty(PASSWORD_FIELD);
+            this.url = properties.getProperty(URL_FIELD);
+            poolSize = Integer.parseInt(properties.getProperty(POOL_SIZE));
+            initCount = Integer.parseInt(properties.getProperty(INIT_COUNT));
+        } catch (IOException e) {
+            LOGGER.fatal("Fatal error in reading file:", e);
+            throw new ConnectionPoolException("Error in reading file: ", e);
+        }
     }
 
     /**
@@ -95,7 +101,6 @@ public class PropertyHolder {
 
     public static PropertyHolder getInstance(String url){
         if (instance == null){
-            System.out.println(url);
             instance = new PropertyHolder(url);
         }
         return instance;

@@ -1,8 +1,9 @@
 package by.epam.touragency.logic;
 
 import by.epam.touragency.exception.LogicException;
-import org.junit.Assert;
-import org.junit.Test;
+import junit.framework.Assert;
+import org.junit.jupiter.api.Test;
+
 
 public class MatchOfUniqueFieldsDetectorTest {
 

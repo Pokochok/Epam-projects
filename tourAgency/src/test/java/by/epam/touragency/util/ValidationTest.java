@@ -1,7 +1,8 @@
 package by.epam.touragency.util;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import junit.framework.Assert;
+import org.junit.jupiter.api.Test;
 
 public class ValidationTest {
     @Test

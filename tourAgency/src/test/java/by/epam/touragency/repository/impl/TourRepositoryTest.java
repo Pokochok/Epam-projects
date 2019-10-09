@@ -9,11 +9,12 @@ import by.epam.touragency.specification.impl.tour.FindAllToursSpecification;
 import by.epam.touragency.specification.impl.tour.FindTourByNameSpecification;
 import by.epam.touragency.specification.impl.tour.UpdateChildrenNumberByIdSpecification;
 import com.opentable.db.postgres.embedded.EmbeddedPostgres;
+import junit.framework.Assert;
 import org.flywaydb.core.Flyway;
-import org.junit.AfterClass;
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+
 
 import java.io.IOException;
 import java.math.BigDecimal;
@@ -23,7 +24,7 @@ import java.sql.SQLException;
 
 public class TourRepositoryTest {
     private static Flyway flyway;
-    @BeforeClass
+    @BeforeAll
     public static void initDb() throws IOException, SQLException {
         EmbeddedPostgres pg = EmbeddedPostgres.start();
         Connection c = pg.getPostgresDatabase().getConnection();
@@ -33,7 +34,7 @@ public class TourRepositoryTest {
         flyway.migrate();
     }
 
-    @AfterClass
+    @AfterAll
     public static void destroy(){
         flyway.clean();
     }

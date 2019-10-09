@@ -14,8 +14,8 @@ import by.epam.touragency.specification.impl.order.FindClientOrdersSpecification
 import by.epam.touragency.specification.impl.ticket.FindAllTicketsSpecification;
 import by.epam.touragency.specification.impl.tour.FindAllToursSpecification;
 import by.epam.touragency.specification.impl.tour.FindAvailableToursSpecification;
-import org.junit.Assert;
-import org.junit.Test;
+import junit.framework.Assert;
+import org.junit.jupiter.api.Test;
 
 import java.util.Date;
 import java.util.Set;

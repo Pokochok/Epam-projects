@@ -4,20 +4,23 @@
     <list default="true" id="e6cf249f-abee-4fa2-b06c-4b2f6579adc5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/RemoveOrderCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/RemoveOrderCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/config/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/BackToMainCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/BackToMainCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/EmptyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/EmptyCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ToAboutCompanyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ToAboutCompanyCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/config/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/connectionpool/PropertyHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/connectionpool/PropertyHolder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/entity/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/entity/OrderRowMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/entity/OrderRowMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/LoginLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/LoginLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/OrderChangeLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/OrderChangeLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/UserDetailsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/repository/impl/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/repository/impl/OrderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/touragency/config/WebAppTestContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/config/WebAppTestContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/touragency/connectionpool/ProxyConnectionPoolTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/connectionpool/ProxyConnectionPoolTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/LoginLogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/LoginLogicTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/log4j2.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/log4j2.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/tour-overview.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/tour-overview.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/MatchOfUniqueFieldsDetectorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/MatchOfUniqueFieldsDetectorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/TicketRegistrationLogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/TicketRegistrationLogicTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/ToPageWithListLogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/ToPageWithListLogicTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/UpdateTourLogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/UpdateTourLogicTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/UpdateUserLogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/UpdateUserLogicTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/touragency/repository/impl/OrderRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/repository/impl/OrderRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/touragency/repository/impl/TicketRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/repository/impl/TicketRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/touragency/repository/impl/TourRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/repository/impl/TourRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/touragency/repository/impl/UserRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/repository/impl/UserRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/touragency/util/ValidationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/util/ValidationTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,6 +32,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -49,12 +54,21 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.29425287" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="by.epam.touragency.command.impl" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Java Lab\touragency\tourAgency\src\main\resources" />
     </key>
@@ -71,73 +85,90 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LoginLogicTest">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="tourAgency" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="All in tourAgency" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tourAgency" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginLogicTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ToInfCommandTest">
+    <configuration name="EmptyCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tourAgency" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="by.epam.touragency.logic.*" />
+          <option name="PATTERN" value="by.epam.touragency.command.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="by.epam.touragency.logic" />
-      <option name="MAIN_CLASS_NAME" value="by.epam.touragency.logic.LoginLogicTest" />
+      <option name="PACKAGE_NAME" value="by.epam.touragency.command.impl" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.touragency.command.impl.EmptyCommandTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TourRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EmptyCommandTest.execute" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tourAgency" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="by.epam.touragency.repository.impl.*" />
+          <option name="PATTERN" value="by.epam.touragency.command.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="by.epam.touragency.repository.impl" />
-      <option name="MAIN_CLASS_NAME" value="by.epam.touragency.repository.impl.TourRepositoryTest" />
+      <option name="PACKAGE_NAME" value="by.epam.touragency.command.impl" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.touragency.command.impl.EmptyCommandTest" />
+      <option name="METHOD_NAME" value="execute" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ToAboutCompanyCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tourAgency" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.epam.touragency.command.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="by.epam.touragency.command.impl" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.touragency.command.impl.ToAboutCompanyCommandTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="by.epam.touragency.repository.impl in tourAgency" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ToBookingCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tourAgency" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="by.epam.touragency.repository.impl.*" />
+          <option name="PATTERN" value="by.epam.touragency.command.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="by.epam.touragency.repository.impl" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="PACKAGE_NAME" value="by.epam.touragency.command.impl" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.touragency.command.impl.ToBookingCommandTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ToInfCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tourAgency" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.epam.touragency.command.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="by.epam.touragency.command.impl" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.touragency.command.impl.ToInfCommandTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LoginLogicTest" />
-        <item itemvalue="JUnit.All in tourAgency" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.by.epam.touragency.repository.impl in tourAgency" />
-        <item itemvalue="JUnit.TourRepositoryTest" />
+        <item itemvalue="JUnit.ToInfCommandTest" />
+        <item itemvalue="JUnit.ToBookingCommandTest" />
+        <item itemvalue="JUnit.ToAboutCompanyCommandTest" />
+        <item itemvalue="JUnit.EmptyCommandTest" />
+        <item itemvalue="JUnit.EmptyCommandTest.execute" />
       </list>
     </recent_temporary>
   </component>

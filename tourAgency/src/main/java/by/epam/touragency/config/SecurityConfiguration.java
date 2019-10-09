@@ -1,6 +1,5 @@
 package by.epam.touragency.config;
 
-import by.epam.touragency.entity.Role;
 import by.epam.touragency.logic.UserDetailsServiceImpl;
 import by.epam.touragency.util.ParameterConstant;
 import org.springframework.beans.factory.annotation.Autowired;

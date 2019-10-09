@@ -9,11 +9,12 @@ import by.epam.touragency.specification.impl.agent.AddAgentSpecification;
 import by.epam.touragency.specification.impl.agent.FindAgentByLoginSpecification;
 import by.epam.touragency.specification.impl.agent.UpdateAgentNameByLoginSpecification;
 import com.opentable.db.postgres.embedded.EmbeddedPostgres;
+import junit.framework.Assert;
 import org.flywaydb.core.Flyway;
-import org.junit.AfterClass;
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -24,7 +25,7 @@ import java.sql.SQLException;
 public class UserRepositoryTest {
     private static Flyway flyway;
 
-    @BeforeClass
+    @BeforeAll
     public static void initDb() throws IOException, SQLException {
         EmbeddedPostgres pg = EmbeddedPostgres.start();
         Connection c = pg.getPostgresDatabase().getConnection();
@@ -34,7 +35,7 @@ public class UserRepositoryTest {
         flyway.migrate();
     }
 
-    @AfterClass
+    @AfterAll
     public static void destroy() {
         flyway.clean();
     }

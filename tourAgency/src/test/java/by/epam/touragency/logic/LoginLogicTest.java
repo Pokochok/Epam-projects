@@ -3,8 +3,6 @@ package by.epam.touragency.logic;
 import by.epam.touragency.config.WebAppTestContext;
 import by.epam.touragency.connectionpool.PropertyHolder;
 import by.epam.touragency.entity.Role;
-import by.epam.touragency.entity.Ticket;
-import by.epam.touragency.entity.Tour;
 import by.epam.touragency.entity.User;
 import by.epam.touragency.exception.LogicException;
 import by.epam.touragency.exception.RepositoryException;
@@ -12,11 +10,14 @@ import by.epam.touragency.repository.impl.UserRepository;
 import by.epam.touragency.specification.Specification;
 import by.epam.touragency.specification.impl.agent.FindAgentByLoginPasswordSpecification;
 import com.opentable.db.postgres.embedded.EmbeddedPostgres;
+import junit.framework.Assert;
 import org.flywaydb.core.Flyway;
-import org.junit.*;
-import org.junit.runner.RunWith;
-import org.mockito.Mock;
-import org.mockito.Mockito;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.MockitoAnnotations;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.test.context.ContextConfiguration;
@@ -26,22 +27,21 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import java.io.IOException;
-import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-@RunWith(MockitoJUnitRunner.class)
+//@RunWith(MockitoJUnitRunner.class)
 @ContextConfiguration(classes = {TestContext.class, WebAppTestContext.class})
 @WebAppConfiguration
 public class LoginLogicTest {
-
-    private MockMvc mockMvc;
-
+    @InjectMocks
+    private LoginLogic loginLogic;
 
 
     private static Flyway flyway;
-    
-    @BeforeClass
+
+
+    @BeforeAll
     public static void initDb() throws IOException, SQLException {
         EmbeddedPostgres pg = EmbeddedPostgres.start();
         Connection c = pg.getPostgresDatabase().getConnection();
@@ -51,7 +51,7 @@ public class LoginLogicTest {
         flyway.migrate();
     }
 
-    @AfterClass
+    @AfterAll
     public static void destroy(){
         flyway.clean();
     }

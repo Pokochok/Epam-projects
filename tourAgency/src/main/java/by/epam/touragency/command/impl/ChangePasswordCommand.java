@@ -6,6 +6,7 @@ import by.epam.touragency.logic.UpdateUserLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.resource.MessageManager;
 import by.epam.touragency.util.Validation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,6 +21,9 @@ import static by.epam.touragency.util.ParameterConstant.*;
 
 @Controller
 public class ChangePasswordCommand {
+    @Autowired
+    private MessageManager messageManager;
+
     @Secured({"ROLE_ADMIN", "ROLE_AGENT", "ROLE_CLIENT"})
     @PostMapping("/change_password")
     public ModelAndView execute(
@@ -35,7 +39,7 @@ public class ChangePasswordCommand {
         ModelAndView modelAndView = new ModelAndView();
         if (!Validation.validatePassword(password) || !Validation.validatePassword(newPassword)){
             modelAndView.addObject(ATTR_NAME_ERROR_CHANGE_PASSWORD,
-                    MessageManager.getProperty(CHANGE_PASSWORD_ERROR_MSG_KEY, language));
+                    messageManager.getProperty(CHANGE_PASSWORD_ERROR_MSG_KEY, language));
             modelAndView.setViewName(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH));
             return modelAndView;
         }
@@ -43,10 +47,10 @@ public class ChangePasswordCommand {
         try {
             if (UpdateUserLogic.updatePassword(role, login, password, newPassword)) {
                 modelAndView.addObject(ATTR_NAME_RESULT_CHANGE_PASSWORD,
-                        MessageManager.getProperty(CHANGE_PASSWORD_SUCCESS_MSG_KEY, language));
+                        messageManager.getProperty(CHANGE_PASSWORD_SUCCESS_MSG_KEY, language));
             } else {
                 modelAndView.addObject(ATTR_NAME_RESULT_CHANGE_PASSWORD,
-                        MessageManager.getProperty(CHANGE_PASSWORD_NOT_FIND_MSG_KEY, language));
+                        messageManager.getProperty(CHANGE_PASSWORD_NOT_FIND_MSG_KEY, language));
             }
         }catch (LogicException e){
             throw new CommandException(e);

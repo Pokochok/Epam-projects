@@ -6,6 +6,7 @@ import by.epam.touragency.logic.UpdateUserLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.resource.MessageManager;
 import by.epam.touragency.util.Validation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,6 +22,9 @@ import static by.epam.touragency.util.ParameterConstant.*;
 
 @Controller
 public class ChangeSurnameCommand {
+    @Autowired
+    private MessageManager messageManager;
+
     @Secured({"ROLE_ADMIN", "ROLE_AGENT", "ROLE_CLIENT"})
     @PostMapping("/change_user_surname")
     public ModelAndView execute(
@@ -35,7 +39,7 @@ public class ChangeSurnameCommand {
         ModelAndView modelAndView = new ModelAndView();
         if (!Validation.validateName(newSurname)){
             modelAndView.addObject(ATTR_NAME_ERROR_CHANGE_USER_SURNAME,
-                    MessageManager.getProperty(CHANGE_SURNAME_ERROR_MSG_KEY, language));
+                    messageManager.getProperty(CHANGE_SURNAME_ERROR_MSG_KEY, language));
             modelAndView.setViewName(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH));
             return modelAndView;
         }

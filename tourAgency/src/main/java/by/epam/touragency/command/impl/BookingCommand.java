@@ -7,6 +7,7 @@ import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.resource.MessageManager;
 import by.epam.touragency.util.ParameterConstant;
 import by.epam.touragency.util.Validation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,6 +21,13 @@ import java.util.Locale;
 
 @Controller
 public class BookingCommand {
+    @Autowired
+    private MessageManager messageManager;
+
+
+    @Autowired
+    private BookingLogic bookingLogic;
+
     @Secured({ "ROLE_AGENT", "ROLE_CLIENT" })
     @PostMapping("/booking")
     public ModelAndView execute(
@@ -35,15 +43,15 @@ public class BookingCommand {
         }
         ModelAndView modelAndView = new ModelAndView();
         try {
-            if (!Validation.validateId(clientId) && (!Validation.validateEmail(clientEmail) || !BookingLogic.isClientExists(clientEmail))) {
+            if (!Validation.validateId(clientId) && (!Validation.validateEmail(clientEmail) || !bookingLogic.isClientExists(clientEmail))) {
                 modelAndView.addObject(ParameterConstant.ATTR_NAME_ERROR_EMAIL_NOT_EXISTS,
-                        MessageManager.getProperty(CLIENT_EMAIL_NOT_EXISTS_MSG_KEY, new Locale(language)));
+                        messageManager.getProperty(CLIENT_EMAIL_NOT_EXISTS_MSG_KEY, new Locale(language)));
                 modelAndView.setViewName(ConfigurationManager.getProperty(BOOKING_PAGE_PATH));
                 return modelAndView;
             }
 
             page = ConfigurationManager.getProperty(INF_PAGE_FLAG);
-            if (BookingLogic.addOrder(tourId, ticketId, clientId, clientEmail, agentId)) {
+            if (bookingLogic.addOrder(tourId, ticketId, clientId, clientEmail, agentId)) {
                 modelAndView.addObject(ATTR_NAME_MSG_KEY, SUCCESSFUL_MSG_KEY);
                 LOGGER.debug("New order was creating");
             } else {

@@ -8,6 +8,7 @@ import by.epam.touragency.logic.UserRegistrationLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.resource.MessageManager;
 import by.epam.touragency.util.Validation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,6 +22,9 @@ import static by.epam.touragency.util.ParameterConstant.*;
 
 @Controller
 public class RegisterCommand {
+    @Autowired
+    private MessageManager messageManager;
+
     @Secured("ROLE_ANONYMOUS")
     @PostMapping("/registration")
     public ModelAndView execute(
@@ -49,15 +53,15 @@ public class RegisterCommand {
             }
                 if (MatchOfUniqueFieldsDetector.isExistsLogin(login)) {
                     isValid = false;
-                    modelAndView.addObject(ATTR_NAME_ERROR_LOGIN_EXISTS, MessageManager.getProperty(LOGIN_EXISTS_MSG_KEY, new Locale(language)));
+                    modelAndView.addObject(ATTR_NAME_ERROR_LOGIN_EXISTS, messageManager.getProperty(LOGIN_EXISTS_MSG_KEY, new Locale(language)));
                 }
             if (MatchOfUniqueFieldsDetector.isExistsEmail(email)) {
                 isValid = false;
-                modelAndView.addObject(ATTR_NAME_ERROR_EMAIL_EXISTS, MessageManager.getProperty(EMAIL_EXISTS_MSG_KEY, new Locale(language)));
+                modelAndView.addObject(ATTR_NAME_ERROR_EMAIL_EXISTS, messageManager.getProperty(EMAIL_EXISTS_MSG_KEY, new Locale(language)));
             }
             if (MatchOfUniqueFieldsDetector.isExistsPhoneNumber(phoneNumber)) {
                 isValid = false;
-                modelAndView.addObject(ATTR_NAME_ERROR_PHONE, MessageManager.getProperty(PHONE_EXISTS_MSG_KEY, new Locale(language)));
+                modelAndView.addObject(ATTR_NAME_ERROR_PHONE, messageManager.getProperty(PHONE_EXISTS_MSG_KEY, new Locale(language)));
             }
 
             if (isValid) {

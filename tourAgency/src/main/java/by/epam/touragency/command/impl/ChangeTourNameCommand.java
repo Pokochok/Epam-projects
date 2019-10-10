@@ -6,6 +6,7 @@ import by.epam.touragency.logic.UpdateTourLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.resource.MessageManager;
 import by.epam.touragency.util.Validation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,6 +22,9 @@ import static by.epam.touragency.util.ParameterConstant.*;
 
 @Controller
 public class ChangeTourNameCommand {
+    @Autowired
+    private MessageManager messageManager;
+
     @Secured("ROLE_ADMIN")
     @PostMapping("/change_tour_name")
     public ModelAndView execute(
@@ -45,7 +49,7 @@ public class ChangeTourNameCommand {
             } else {
                 modelAndView.addObject(ATTR_NAME_TOUR_NAME, tourName);
                 modelAndView.addObject(ATTR_NAME_ERROR_TOUR_NAME_EXISTS_MSG,
-                        MessageManager.getProperty(TOUR_NAME_EXISTS_MSG_KEY, language));
+                        messageManager.getProperty(TOUR_NAME_EXISTS_MSG_KEY, language));
             }
         } catch (LogicException e) {
             throw new CommandException(e);

@@ -6,6 +6,7 @@ import by.epam.touragency.logic.UpdateUserLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.resource.MessageManager;
 import by.epam.touragency.util.Validation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,6 +21,9 @@ import static by.epam.touragency.util.ParameterConstant.*;
 
 @Controller
 public class ChangePhoneNumberCommand {
+    @Autowired
+    private MessageManager messageManager;
+
     @Secured({"ROLE_ADMIN", "ROLE_AGENT", "ROLE_CLIENT"})
     @PostMapping("/change_phone_number")
     public ModelAndView execute(
@@ -34,7 +38,7 @@ public class ChangePhoneNumberCommand {
         ModelAndView modelAndView = new ModelAndView();
         if(!Validation.validatePhoneNumber(newPhoneNumber)){
             modelAndView.addObject(ATTR_NAME_ERROR_CHANGE_PN,
-                    MessageManager.getProperty(CHANGE_PN_ERROR_MSG_KEY, language));
+                    messageManager.getProperty(CHANGE_PN_ERROR_MSG_KEY, language));
             modelAndView.setViewName(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH));
             return modelAndView;
         }
@@ -43,7 +47,7 @@ public class ChangePhoneNumberCommand {
                 modelAndView.addObject(ATTR_NAME_USER_PHONE_NUMBER, newPhoneNumber);
             } else {
                 modelAndView.addObject(ATTR_NAME_ERROR_PN_EXISTS,
-                        MessageManager.getProperty(PHONE_NUMBER_EXISTS_MSG_KEY, language));
+                        messageManager.getProperty(PHONE_NUMBER_EXISTS_MSG_KEY, language));
             }
         }catch (LogicException e){
             throw new CommandException(e);

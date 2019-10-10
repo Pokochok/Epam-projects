@@ -6,6 +6,7 @@ import by.epam.touragency.logic.UpdateTourLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.resource.MessageManager;
 import by.epam.touragency.util.Validation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,6 +23,9 @@ import static by.epam.touragency.util.ParameterConstant.*;
 
 @Controller
 public class ChangeArrivalDateCommand {
+    @Autowired
+    private MessageManager messageManager;
+
     @Secured("ROLE_ADMIN")
     @PostMapping("/change_arrival_date")
     public ModelAndView execute(
@@ -43,7 +47,7 @@ public class ChangeArrivalDateCommand {
         if (newArrivalDate == -1 || departureDate == -1){
             LOGGER.debug("Error in date parsing");
             modelAndView.addObject(ATTR_NAME_ERROR_DATE,
-                    MessageManager.getProperty(DATE_ERROR_MSG_KEY, language));
+                    messageManager.getProperty(DATE_ERROR_MSG_KEY, language));
         }
 
         try {
@@ -52,7 +56,7 @@ public class ChangeArrivalDateCommand {
                 modelAndView.addObject(ATTR_NAME_ARRIVAL_DATE, Validation.dateToFormat(newArrivalDate));
             } else {
                 modelAndView.addObject(ATTR_NAME_ERROR_DATE,
-                        MessageManager.getProperty(DATE_ERROR_MSG_KEY, language));
+                        messageManager.getProperty(DATE_ERROR_MSG_KEY, language));
             }
         }catch (LogicException e){
             throw new CommandException(e);

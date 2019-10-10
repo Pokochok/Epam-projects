@@ -22,6 +22,9 @@ import static by.epam.touragency.util.ParameterConstant.*;
 
 @Controller
 public class LoginCommand {
+    @Autowired
+    private MessageManager messageManager;
+
 
     @Autowired
     private LoginLogic loginLogic;
@@ -53,7 +56,7 @@ public class LoginCommand {
         } else {
             LOGGER.debug("Incorrect login or password");
             modelAndView.addObject(ATTR_NAME_ERROR_LOGIN,
-                    MessageManager.getProperty(LOGIN_ERROR_MSG_KEY, language));
+                    messageManager.getProperty(LOGIN_ERROR_MSG_KEY, language));
             page = ConfigurationManager.getProperty(LOGIN_PAGE_PATH);
         }
         modelAndView.setViewName(page);

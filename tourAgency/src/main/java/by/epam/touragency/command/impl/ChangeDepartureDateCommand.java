@@ -6,6 +6,7 @@ import by.epam.touragency.logic.UpdateTourLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.resource.MessageManager;
 import by.epam.touragency.util.Validation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,6 +24,9 @@ import static by.epam.touragency.util.ParameterConstant.*;
 
 @Controller
 public class ChangeDepartureDateCommand {
+    @Autowired
+    private MessageManager messageManager;
+
     @Secured("ROLE_ADMIN")
     @PostMapping("/change_departure_date")
     public ModelAndView execute(
@@ -52,7 +56,7 @@ public class ChangeDepartureDateCommand {
                 modelAndView.addObject(ATTR_NAME_DEPARTURE_DATE, Validation.dateToFormat(newDepartureDate));
             } else {
                 modelAndView.addObject(ATTR_NAME_ERROR_DATE,
-                        MessageManager.getProperty(DATE_ERROR_MSG_KEY, language));
+                        messageManager.getProperty(DATE_ERROR_MSG_KEY, language));
             }
         }catch (LogicException e){
             throw new CommandException(e);

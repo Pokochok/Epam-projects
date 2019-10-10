@@ -11,10 +11,13 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.ui.freemarker.FreeMarkerConfigurationFactory;
 import org.springframework.web.context.request.RequestContextListener;
 import org.springframework.web.filter.DelegatingFilterProxy;
 import org.springframework.web.filter.RequestContextFilter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
+import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
+import org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver;
 
 import javax.sql.DataSource;
 
@@ -28,6 +31,21 @@ public class AppConfig {
         viewResolver.setPrefix("/jsp/");
         viewResolver.setSuffix(".jsp");
         return viewResolver;
+    }
+
+    @Bean
+    public FreeMarkerConfigurer freeMarkerConfigurer(){
+        FreeMarkerConfigurer configurer = new FreeMarkerConfigurer();
+        configurer.setTemplateLoaderPath("/ftl");
+        return configurer;
+    }
+
+    @Bean
+    public FreeMarkerViewResolver freeMarkerViewResolver(){
+        FreeMarkerViewResolver freeMarkerViewResolver = new FreeMarkerViewResolver();
+        freeMarkerViewResolver.setSuffix(".ftl");
+        freeMarkerViewResolver.setCache(true);
+        return freeMarkerViewResolver;
     }
 
     @Bean

@@ -21,7 +21,6 @@ import static by.epam.touragency.util.ParameterConstant.*;
 @Controller
 @PreAuthorize("permitAll()")
 public class ToToursCommand {
-//    @Secured({"ROLE_ADMIN", "ROLE_AGENT", "ROLE_CLIENT", "ROLE_ANONYMOUS"})
     @RequestMapping("/to_tours")
     public ModelAndView execute(@SessionAttribute(value = ATTR_NAME_USER_ROLE)String role,
                                 @RequestParam(value = ATTR_NAME_INDEX, required = false) String index,

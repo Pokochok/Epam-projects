@@ -6,6 +6,7 @@ import by.epam.touragency.logic.UpdateUserLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.resource.MessageManager;
 import by.epam.touragency.util.Validation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,6 +22,9 @@ import static by.epam.touragency.util.ParameterConstant.*;
 
 @Controller
 public class ChangeLoginCommand {
+    @Autowired
+    private MessageManager messageManager;
+
     @Secured({"ROLE_ADMIN", "ROLE_AGENT", "ROLE_CLIENT"})
     @PostMapping("/change_login")
     public ModelAndView execute(
@@ -35,7 +39,7 @@ public class ChangeLoginCommand {
         ModelAndView modelAndView = new ModelAndView();
         if (!Validation.validateLogin(login)) {
             modelAndView.addObject(ATTR_NAME_ERROR_CHANGE_LOGIN,
-                    MessageManager.getProperty(CHANGE_LOGIN_ERROR_MSG_KEY, language));
+                    messageManager.getProperty(CHANGE_LOGIN_ERROR_MSG_KEY, language));
             modelAndView.setViewName(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH));
         }
 
@@ -44,7 +48,7 @@ public class ChangeLoginCommand {
                 modelAndView.addObject(ATTR_NAME_USER_LOGIN, login);
             } else {
                 modelAndView.addObject(ATTR_NAME_ERROR_LOGIN_EXISTS,
-                        MessageManager.getProperty(LOGIN_EXISTS_MSG_KEY, language));
+                        messageManager.getProperty(LOGIN_EXISTS_MSG_KEY, language));
             }
         } catch (LogicException e) {
             throw new CommandException(e);

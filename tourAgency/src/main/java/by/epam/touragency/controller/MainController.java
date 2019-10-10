@@ -6,6 +6,7 @@ import by.epam.touragency.exception.CommandException;
 import by.epam.touragency.logic.DefineActionCommandLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.resource.MessageManager;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -29,6 +30,8 @@ import static by.epam.touragency.util.ParameterConstant.*;
 @Controller
 @RequestMapping("/controller")
 public class MainController {
+    @Autowired
+    private MessageManager messageManager;
 
     @GetMapping
     public ModelAndView doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
@@ -78,7 +81,7 @@ public class MainController {
             modelAndView.setViewName(page);
         } else {
             page = ConfigurationManager.getProperty(WELCOME_PAGE_PATH);
-            request.getSession().setAttribute(ATTR_NAME_NULL_PAGE, MessageManager.getProperty(NULL_PAGE_MSG_KEY,
+            request.getSession().setAttribute(ATTR_NAME_NULL_PAGE, messageManager.getProperty(NULL_PAGE_MSG_KEY,
                     new Locale(request.getSession().getAttribute(ATTR_NAME_LANGUAGE).toString())));
             modelAndView.setViewName(page);
         }

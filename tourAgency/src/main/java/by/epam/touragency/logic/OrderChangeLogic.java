@@ -8,21 +8,20 @@ import by.epam.touragency.specification.Specification;
 import by.epam.touragency.specification.impl.order.RemoveOrderByIdSpecification;
 import by.epam.touragency.specification.impl.order.UpdatePaymentStateByIdSpecification;
 import by.epam.touragency.util.Validation;
+import org.springframework.stereotype.Service;
 
 /**
  * For order updating logic
  */
+@Service
 public class OrderChangeLogic {
-
-    private OrderChangeLogic() {
-    }
 
     /**
      * Set payment state of order as paid
      * @param orderId order ID
      * @throws LogicException if handled RepositoryException
      */
-    public static boolean payOrder(String orderId) throws LogicException {
+    public boolean payOrder(String orderId) throws LogicException {
         if (!Validation.validateId(orderId)){
             return false;
         }
@@ -41,17 +40,18 @@ public class OrderChangeLogic {
      * @param orderId order ID
      * @throws LogicException if handled RepositoryException
      */
-    public static void removeOrder(String orderId) throws LogicException {
+    public boolean removeOrder(String orderId) throws LogicException {
+        boolean flag = false;
         try {
-            System.out.println("!!!!!!!!!!REMOVE ORDER ORDER IDDDD: "+orderId);
             if (Validation.validateId(orderId)) {
-                System.out.println("!!!!!!!!!!REMOVE ORDER ORDER after validation true: ");
                 Specification specification = new RemoveOrderByIdSpecification(Integer.parseInt(orderId));
                 Repository repository = OrderRepository.getInstance();
                 repository.remove(null, specification);
+                flag = true;
             }
         } catch (RepositoryException e) {
             throw new LogicException(e);
         }
+        return flag;
     }
 }

@@ -6,39 +6,37 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.mockito.InjectMocks;
-import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.test.context.junit.jupiter.web.SpringJUnitWebConfig;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import org.springframework.web.servlet.ModelAndView;
 
-import static by.epam.touragency.util.PageMsgConstant.BOOKING_PAGE_PATH;
-import static by.epam.touragency.util.PageMsgConstant.TO_TOUR_REGISTRATION_PAGE_PATH;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static by.epam.touragency.util.PageMsgConstant.TO_REGISTRATION_PAGE_PATH;
+import static by.epam.touragency.util.PageMsgConstant.TO_TICKET_REGISTRATION_PAGE_PATH;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.forwardedUrl;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-
 @SpringJUnitWebConfig(WebAppTestContext.class)
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-class ToBookingCommandTest {
+class ToRegistrationCommandTest {
 
     @InjectMocks
-    private ToBookingCommand toBookingCommand;
+    ToRegistrationCommand toRegistrationCommand;
 
     private MockMvc mockMvc;
 
     @BeforeAll
     void setUp() {
         MockitoAnnotations.initMocks(this);
-        mockMvc = MockMvcBuilders.standaloneSetup(toBookingCommand).build();
+        mockMvc = MockMvcBuilders.standaloneSetup(toRegistrationCommand).build();
     }
 
     @Test
     void execute() throws Exception {
-        mockMvc.perform(post("/to_booking"))
+        mockMvc.perform(get("/to_registration"))
                 .andExpect(status().isOk())
-                .andExpect(forwardedUrl(ConfigurationManager.getProperty(BOOKING_PAGE_PATH)));
+                .andExpect(forwardedUrl(ConfigurationManager.getProperty(TO_REGISTRATION_PAGE_PATH)));
     }
 }

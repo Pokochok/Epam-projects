@@ -19,12 +19,14 @@ import by.epam.touragency.specification.impl.order.AddOrderSpecification;
 import by.epam.touragency.specification.impl.ticket.FindTicketByIdSpecification;
 import by.epam.touragency.specification.impl.tour.FindTourByIdSpecification;
 import by.epam.touragency.util.Validation;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 /**
  * Contains business logic of booking logic
  */
+@Service
 public class BookingLogic {
 
     /**
@@ -33,7 +35,7 @@ public class BookingLogic {
      * @return true if client exists, false - if not
      * @throws LogicException if handled RepositoryException
      */
-    public static boolean isClientExists(String clientEmail) throws LogicException {
+    public boolean isClientExists(String clientEmail) throws LogicException {
         Specification clientByEmail = new FindClientByEmailSpecification(clientEmail);
         try {
             return UserRepository.getInstance().isExistsQuery(clientByEmail);
@@ -49,7 +51,7 @@ public class BookingLogic {
      * @param agentId agents ID
      * @return specification
      */
-    private static Specification defineClientSpecification(String clientId, String clientEmail, String agentId){
+    private Specification defineClientSpecification(String clientId, String clientEmail, String agentId){
         Specification clientQuery = null;
         if (agentId.equals("0")) {
             clientQuery = new FindClientByIdSpecification(Integer.parseInt(clientId));
@@ -70,7 +72,7 @@ public class BookingLogic {
      * returns null - if not
      * @throws LogicException if handled RepositoryException
      */
-    private static Order orderProcessing(String tourId, String ticketId, String clientId, String clientEmail, String agentId) throws LogicException {
+    private Order orderProcessing(String tourId, String ticketId, String clientId, String clientEmail, String agentId) throws LogicException {
         agentId = Validation.validateId(agentId) ? agentId : "0";
         tourId = Validation.validateId(tourId) ? tourId : "0";
         ticketId = Validation.validateId(ticketId) ? ticketId : "0";
@@ -116,10 +118,10 @@ public class BookingLogic {
      * @return true, if order was added, and false - if not
      * @throws LogicException if handled RepositoryException
      */
-    public static boolean addOrder(String tourId, String ticketId, String clientId, String clientEmail, String agentId)
+    public boolean addOrder(String tourId, String ticketId, String clientId, String clientEmail, String agentId)
             throws LogicException {
         boolean flag = false;
-        Order order = BookingLogic.orderProcessing(tourId, ticketId, clientId, clientEmail, agentId);
+        Order order = orderProcessing(tourId, ticketId, clientId, clientEmail, agentId);
         try {
             if (order != null) {
                 flag = true;

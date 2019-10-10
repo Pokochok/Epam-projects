@@ -3,18 +3,18 @@ package by.epam.touragency.command.impl;
 import by.epam.touragency.config.WebAppTestContext;
 import by.epam.touragency.resource.ConfigurationManager;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.mockito.InjectMocks;
-import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.test.context.junit.jupiter.web.SpringJUnitWebConfig;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import org.springframework.web.servlet.ModelAndView;
 
 import static by.epam.touragency.util.PageMsgConstant.BOOKING_PAGE_PATH;
-import static by.epam.touragency.util.PageMsgConstant.TO_TOUR_REGISTRATION_PAGE_PATH;
+import static by.epam.touragency.util.PageMsgConstant.TOUR_OVERVIEW_PAGE_PATH;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.forwardedUrl;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -22,23 +22,23 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringJUnitWebConfig(WebAppTestContext.class)
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-class ToBookingCommandTest {
+class ToTourOverviewCommandTest {
 
     @InjectMocks
-    private ToBookingCommand toBookingCommand;
+    ToTourOverviewCommand toTourOverviewCommand;
 
     private MockMvc mockMvc;
 
     @BeforeAll
     void setUp() {
         MockitoAnnotations.initMocks(this);
-        mockMvc = MockMvcBuilders.standaloneSetup(toBookingCommand).build();
+        mockMvc = MockMvcBuilders.standaloneSetup(toTourOverviewCommand).build();
     }
 
     @Test
     void execute() throws Exception {
-        mockMvc.perform(post("/to_booking"))
+        mockMvc.perform(post("/to_tour_overview"))
                 .andExpect(status().isOk())
-                .andExpect(forwardedUrl(ConfigurationManager.getProperty(BOOKING_PAGE_PATH)));
+                .andExpect(forwardedUrl(ConfigurationManager.getProperty(TOUR_OVERVIEW_PAGE_PATH)));
     }
 }

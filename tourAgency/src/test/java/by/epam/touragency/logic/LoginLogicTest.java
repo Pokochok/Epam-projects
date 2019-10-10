@@ -30,7 +30,6 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-//@RunWith(MockitoJUnitRunner.class)
 @ContextConfiguration(classes = {TestContext.class, WebAppTestContext.class})
 @WebAppConfiguration
 public class LoginLogicTest {

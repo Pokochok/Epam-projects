@@ -6,6 +6,7 @@ import by.epam.touragency.logic.TicketRegistrationLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.resource.MessageManager;
 import by.epam.touragency.util.Validation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,6 +21,9 @@ import static by.epam.touragency.util.ParameterConstant.*;
 
 @Controller
 public class TicketRegisterCommand {
+    @Autowired
+    private MessageManager messageManager;
+
 
     @Secured("ROLE_ADMIN")
     @PostMapping("/ticket_register_command")
@@ -45,7 +49,7 @@ public class TicketRegisterCommand {
         if(!new Date().before(new Date(departureDate)) || !new Date(departureDate).before(new Date(arrivalDate))){
             LOGGER.debug("Invalid date entered");
             modelAndView.addObject(ATTR_NAME_ERROR_DATE,
-                    MessageManager.getProperty(DATE_ERROR_MSG_KEY, new Locale(language)));
+                    messageManager.getProperty(DATE_ERROR_MSG_KEY, new Locale(language)));
             modelAndView.setViewName(ConfigurationManager.getProperty(TICKET_REGISTRATION_PAGE_PATH));
             return modelAndView;
         }

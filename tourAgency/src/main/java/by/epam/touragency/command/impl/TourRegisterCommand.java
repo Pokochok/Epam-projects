@@ -7,6 +7,7 @@ import by.epam.touragency.logic.TourRegistrationLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.resource.MessageManager;
 import by.epam.touragency.util.Validation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,6 +23,9 @@ import static by.epam.touragency.util.ParameterConstant.*;
 
 @Controller
 public class TourRegisterCommand {
+    @Autowired
+    private MessageManager messageManager;
+
 
     @Secured("ROLE_ADMIN")
     @PostMapping("/tour_register_command")
@@ -61,7 +65,7 @@ public class TourRegisterCommand {
             isValid = false;
             LOGGER.info("Invalid date entered");
             modelAndView.addObject(ATTR_NAME_ERROR_DATE,
-                    MessageManager.getProperty(DATE_ERROR_MSG_KEY, new Locale(language)));
+                    messageManager.getProperty(DATE_ERROR_MSG_KEY, new Locale(language)));
         }
 
         try {
@@ -69,7 +73,7 @@ public class TourRegisterCommand {
                 isValid = false;
                 LOGGER.info("Invalid data entered. Tour name exists");
                 modelAndView.addObject(ATTR_NAME_ERROR_TOUR_NAME_EXISTS,
-                        MessageManager.getProperty(TOUR_NAME_EXISTS_ERROR_MSG_KEY, new Locale(language)));
+                        messageManager.getProperty(TOUR_NAME_EXISTS_ERROR_MSG_KEY, new Locale(language)));
             }
             if (isValid) {
                 TourRegistrationLogic.addTour(tourName, departureDate, arrivalDate, departureCity, arrivalCity, arrivalCountry, hotel,

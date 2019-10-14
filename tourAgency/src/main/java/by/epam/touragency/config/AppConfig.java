@@ -25,18 +25,19 @@ import javax.sql.DataSource;
 @EnableAspectJAutoProxy
 @ComponentScan({"by.epam.touragency"})
 public class AppConfig {
-    //    @Bean
-    public InternalResourceViewResolver viewResolver() {
-        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-        viewResolver.setPrefix("/jsp/");
-        viewResolver.setSuffix(".jsp");
-        return viewResolver;
-    }
+//    @Bean
+//    public InternalResourceViewResolver viewResolver() {
+//        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
+//        viewResolver.setPrefix("/jsp/");
+//        viewResolver.setSuffix(".jsp");
+//        return viewResolver;
+//    }
 
     @Bean
     public FreeMarkerConfigurer freeMarkerConfigurer(){
         FreeMarkerConfigurer configurer = new FreeMarkerConfigurer();
-        configurer.setTemplateLoaderPath("/ftl");
+        configurer.setTemplateLoaderPath("");
+        configurer.setDefaultEncoding("UTF-8");
         return configurer;
     }
 
@@ -44,7 +45,9 @@ public class AppConfig {
     public FreeMarkerViewResolver freeMarkerViewResolver(){
         FreeMarkerViewResolver freeMarkerViewResolver = new FreeMarkerViewResolver();
         freeMarkerViewResolver.setSuffix(".ftl");
+        freeMarkerViewResolver.setPrefix("/templates");
         freeMarkerViewResolver.setCache(true);
+        freeMarkerViewResolver.setContentType("text/html;charset=UTF-8");
         return freeMarkerViewResolver;
     }
 

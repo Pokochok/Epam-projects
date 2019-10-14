@@ -1,6 +1,8 @@
 package by.epam.touragency.command.impl;
 
 import by.epam.touragency.config.WebAppTestContext;
+import by.epam.touragency.resource.ConfigurationManager;
+import by.epam.touragency.util.PageMsgConstant;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -35,6 +37,6 @@ class EmptyCommandTest {
     void execute() throws Exception {
         mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
-                .andExpect(forwardedUrl("/index.jsp"));
+                .andExpect(forwardedUrl(ConfigurationManager.getProperty(PageMsgConstant.HOME_PAGE_PATH)));
     }
 }

@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import static by.epam.touragency.util.PageMsgConstant.MAIN_PAGE_PATH;
 import static by.epam.touragency.util.PageMsgConstant.WELCOME_PAGE_PATH;
 
 @Controller
@@ -13,6 +14,6 @@ import static by.epam.touragency.util.PageMsgConstant.WELCOME_PAGE_PATH;
 public class EmptyCommand{
     @RequestMapping({"/"})
     public ModelAndView execute() {
-        return new ModelAndView(ConfigurationManager.getProperty(WELCOME_PAGE_PATH));
+        return new ModelAndView(ConfigurationManager.getProperty(MAIN_PAGE_PATH));
     }
 }

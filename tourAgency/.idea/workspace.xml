@@ -2,34 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6cf249f-abee-4fa2-b06c-4b2f6579adc5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/5/75be6c9b4d6e4f8e4dd564e5d450f9b06707a88e" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/5/75be6c9b4d6e4f8e4dd564e5d450f9b06707a88e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/6/96eb1d4b473adc6bc9f99011c453a7b0685e4a41" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/6/96eb1d4b473adc6bc9f99011c453a7b0685e4a41" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/6/d61726cfcb03c735571f5e4289cbbfac7b68d4eb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/6/d61726cfcb03c735571f5e4289cbbfac7b68d4eb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/f/efd66b3c5ddffb48a0eb390a2154448f09c3eb00" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/f/efd66b3c5ddffb48a0eb390a2154448f09c3eb00" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeDepartureDateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeDepartureDateCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeEmailCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeEmailCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeHotelCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeHotelCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeLoginCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeLoginCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeNameCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeNameCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangePasswordCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangePasswordCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangePhoneNumberCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangePhoneNumberCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangePriceCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangePriceCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeStatusCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeStatusCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeSurnameCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeSurnameCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeTourNameCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeTourNameCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/LoginCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/LoginCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/LogoutCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/PayOrderCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/PayOrderCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/RegisterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/RegisterCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/TicketRegisterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/TicketRegisterCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/TourRegisterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/TourRegisterCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/entity/UserPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/entity/UserPrincipal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/MatchOfUniqueFieldsDetector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/MatchOfUniqueFieldsDetector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/TicketRegistrationLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/TicketRegistrationLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/UpdateUserLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/UpdateUserLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/UserRegistrationLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/UserRegistrationLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/touragency/command/impl/ChangeArrivalDateCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/command/impl/ChangeArrivalDateCommandTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/MatchOfUniqueFieldsDetectorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/MatchOfUniqueFieldsDetectorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/TicketRegistrationLogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/TicketRegistrationLogicTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/UpdateUserLogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/UpdateUserLogicTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/EmptyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/EmptyCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/config/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/config/WebInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/config/WebInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/filter/PageRedirectSecurityFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/filter/PageRedirectSecurityFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/jsp/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jsp/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/touragency/command/impl/EmptyCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/command/impl/EmptyCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/ftl/home.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/parts/components/main-panel-action.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/home.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/home.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/parts/common_part.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/parts/common_part.ftl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,6 +46,7 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="ProjectId" id="1SC4t3tPeOPyJZ5J7sMfv7eM1JW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -71,7 +60,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -81,6 +70,9 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Java Lab\touragency\tourAgency\web\templates" />
+      <recent name="C:\Java Lab\touragency\tourAgency\web" />
+      <recent name="C:\Java Lab\touragency\tourAgency\web\ftl\templates" />
       <recent name="E:\repositories\Epam-projects\Epam-projects\tourAgency\web\templates\parts" />
     </key>
   </component>
@@ -200,7 +192,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="49a77805-beeb-4d69-b0de-ca3583021001" name="Default Changelist" comment="" />
+      <changelist id="e6cf249f-abee-4fa2-b06c-4b2f6579adc5" name="Default Changelist" comment="" />
       <created>1570776693701</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -215,89 +207,15 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>tourAgency</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

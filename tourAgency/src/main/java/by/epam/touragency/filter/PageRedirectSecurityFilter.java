@@ -12,8 +12,8 @@ import javax.servlet.annotation.WebInitParam;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebFilter(urlPatterns = {"/jsp/*"},
-        initParams = {@WebInitParam(name = "INDEX_PATH", value = "/index.jsp")})
+@WebFilter(urlPatterns = {"/jsp/*", "/templates/*"},
+        initParams = {@WebInitParam(name = "INDEX_PATH", value = "/index")})
 public class PageRedirectSecurityFilter implements Filter {
     private String indexPath;
 

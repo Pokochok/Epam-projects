@@ -26,6 +26,9 @@ import static by.epam.touragency.util.PageMsgConstant.LOGGER;
 public class LoginLogic {
 
     @Autowired
+    Validation validation;
+
+    @Autowired
     @Qualifier("userRepository")
     private Repository repository;
 
@@ -61,7 +64,7 @@ public class LoginLogic {
     }
 
     public User checkedUser(String login, String password) throws LogicException {
-        boolean flag = Validation.validateLogin(login) && Validation.validatePassword(password);
+        boolean flag = validation.validateLogin(login) && validation.validatePassword(password);
         User user = null;
         if (flag) {
             try {

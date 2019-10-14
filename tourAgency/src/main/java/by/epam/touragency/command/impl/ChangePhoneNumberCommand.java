@@ -22,6 +22,9 @@ import static by.epam.touragency.util.ParameterConstant.*;
 @Controller
 public class ChangePhoneNumberCommand {
     @Autowired
+    private Validation validation;
+
+    @Autowired
     private MessageManager messageManager;
 
     @Secured({"ROLE_ADMIN", "ROLE_AGENT", "ROLE_CLIENT"})
@@ -36,7 +39,7 @@ public class ChangePhoneNumberCommand {
             language = new Locale(EN_LOCALE);
         }
         ModelAndView modelAndView = new ModelAndView();
-        if(!Validation.validatePhoneNumber(newPhoneNumber)){
+        if(!validation.validatePhoneNumber(newPhoneNumber)){
             modelAndView.addObject(ATTR_NAME_ERROR_CHANGE_PN,
                     messageManager.getProperty(CHANGE_PN_ERROR_MSG_KEY, language));
             modelAndView.setViewName(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH));

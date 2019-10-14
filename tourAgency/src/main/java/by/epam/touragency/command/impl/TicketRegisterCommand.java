@@ -24,6 +24,8 @@ public class TicketRegisterCommand {
     @Autowired
     private MessageManager messageManager;
 
+    @Autowired
+    private Validation validation;
 
     @Secured("ROLE_ADMIN")
     @PostMapping("/ticket_register_command")
@@ -43,8 +45,8 @@ public class TicketRegisterCommand {
             language = EN_LOCALE;
         }
 
-        long departureDate = Validation.validateDate(departureDateStr);
-        long arrivalDate = Validation.validateDate(arrivalDateStr);
+        long departureDate = validation.validateDate(departureDateStr);
+        long arrivalDate = validation.validateDate(arrivalDateStr);
 
         if(!new Date().before(new Date(departureDate)) || !new Date(departureDate).before(new Date(arrivalDate))){
             LOGGER.debug("Invalid date entered");
@@ -54,8 +56,8 @@ public class TicketRegisterCommand {
             return modelAndView;
         }
 
-        if (!Validation.validateTicketNumbers(flightNumber) || !Validation.validateTicketNumbers(ticketNumber) ||
-                !Validation.validateTourStringItems(departureCity) || !Validation.validateTourStringItems(arrivalCity)) {
+        if (!validation.validateTicketNumbers(flightNumber) || !validation.validateTicketNumbers(ticketNumber) ||
+                !validation.validateTourStringItems(departureCity) || !validation.validateTourStringItems(arrivalCity)) {
             LOGGER.debug("Invalid ticket data");
             isValid = false;
         }

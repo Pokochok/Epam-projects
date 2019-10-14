@@ -5,6 +5,7 @@ import by.epam.touragency.exception.LogicException;
 import by.epam.touragency.logic.UpdateTourLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.util.Validation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,6 +17,12 @@ import static by.epam.touragency.util.ParameterConstant.*;
 
 @Controller
 public class ChangeArrivalCountryCommand {
+    @Autowired
+    Validation  validation;
+
+    @Autowired
+    UpdateTourLogic updateTourLogic;
+
     @Secured("ROLE_ADMIN")
     @PostMapping("/change_arrival_country")
     public ModelAndView execute(
@@ -23,15 +30,15 @@ public class ChangeArrivalCountryCommand {
             @RequestParam(value = PARAM_NAME_TOUR_ID) String tourIdStr
     ) throws CommandException {
         ModelAndView modelAndView = new ModelAndView();
-        if (!Validation.validateTourStringItems(newArrivalCountry) ||
-                !Validation.validateId(tourIdStr)){
+        if (!validation.validateTourStringItems(newArrivalCountry) ||
+                !validation.validateId(tourIdStr)){
             modelAndView.setViewName(ConfigurationManager.getProperty(TOUR_OVERVIEW_PAGE_PATH));
             return modelAndView;
         }
 
         int tourId = Integer.parseInt(tourIdStr);
         try {
-            UpdateTourLogic.updateArrivalCountry(newArrivalCountry, tourId);
+            updateTourLogic.updateArrivalCountry(newArrivalCountry, tourId);
         } catch (LogicException e) {
             throw new CommandException(e);
         }

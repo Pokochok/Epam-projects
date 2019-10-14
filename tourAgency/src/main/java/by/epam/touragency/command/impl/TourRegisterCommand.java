@@ -24,8 +24,13 @@ import static by.epam.touragency.util.ParameterConstant.*;
 @Controller
 public class TourRegisterCommand {
     @Autowired
+    private  TourRegistrationLogic tourRegistrationLogic;
+
+    @Autowired
     private MessageManager messageManager;
 
+    @Autowired
+    private Validation validation;
 
     @Secured("ROLE_ADMIN")
     @PostMapping("/tour_register_command")
@@ -50,7 +55,7 @@ public class TourRegisterCommand {
             language = EN_LOCALE;
         }
 
-        if (!TourRegistrationLogic.isValidData(tourName, departureCity, arrivalCity, arrivalCountry, hotel, nutrition,
+        if (!tourRegistrationLogic.isValidData(tourName, departureCity, arrivalCity, arrivalCountry, hotel, nutrition,
                 childrenNumber, adultsNumber, price)) {
             return new ModelAndView(ConfigurationManager.getProperty(TO_TOUR_REGISTRATION_PAGE_PATH));
         }
@@ -59,8 +64,8 @@ public class TourRegisterCommand {
         int numberOfAdults = Integer.parseInt(adultsNumber);
         int numberOfChildren = Integer.parseInt(childrenNumber);
         BigDecimal priceBD = new BigDecimal(price);
-        long departureDate = Validation.validateDate(departureDateStr);
-        long arrivalDate = Validation.validateDate(arrivalDateStr);
+        long departureDate = validation.validateDate(departureDateStr);
+        long arrivalDate = validation.validateDate(arrivalDateStr);
         if (!new Date().before(new Date(departureDate)) || !new Date(departureDate).before(new Date(arrivalDate))) {
             isValid = false;
             LOGGER.info("Invalid date entered");
@@ -76,7 +81,7 @@ public class TourRegisterCommand {
                         messageManager.getProperty(TOUR_NAME_EXISTS_ERROR_MSG_KEY, new Locale(language)));
             }
             if (isValid) {
-                TourRegistrationLogic.addTour(tourName, departureDate, arrivalDate, departureCity, arrivalCity, arrivalCountry, hotel,
+                tourRegistrationLogic.addTour(tourName, departureDate, arrivalDate, departureCity, arrivalCity, arrivalCountry, hotel,
                         nutrition, numberOfAdults, numberOfChildren, priceBD, isAvailable);
                 modelAndView.addObject(ATTR_NAME_MSG_KEY,  REGISTRATION_SUCCESS_MSG_KEY);
                 page = ConfigurationManager.getProperty(INF_PAGE_FLAG);

@@ -19,6 +19,7 @@ import by.epam.touragency.specification.impl.order.AddOrderSpecification;
 import by.epam.touragency.specification.impl.ticket.FindTicketByIdSpecification;
 import by.epam.touragency.specification.impl.tour.FindTourByIdSpecification;
 import by.epam.touragency.util.Validation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
@@ -29,6 +30,8 @@ import java.util.Set;
 @Service
 public class BookingLogic {
 
+    @Autowired
+    private Validation validation;
     /**
      * Check if client with such email exists
      * @param clientEmail for checking
@@ -73,9 +76,9 @@ public class BookingLogic {
      * @throws LogicException if handled RepositoryException
      */
     private Order orderProcessing(String tourId, String ticketId, String clientId, String clientEmail, String agentId) throws LogicException {
-        agentId = Validation.validateId(agentId) ? agentId : "0";
-        tourId = Validation.validateId(tourId) ? tourId : "0";
-        ticketId = Validation.validateId(ticketId) ? ticketId : "0";
+        agentId = validation.validateId(agentId) ? agentId : "0";
+        tourId = validation.validateId(tourId) ? tourId : "0";
+        ticketId = validation.validateId(ticketId) ? ticketId : "0";
 
         Specification clientQuery = defineClientSpecification(clientId, clientEmail, agentId);
         Specification tourQuery = new FindTourByIdSpecification(Integer.parseInt(tourId));

@@ -23,6 +23,9 @@ import static by.epam.touragency.util.ParameterConstant.*;
 @Controller
 public class ChangeSurnameCommand {
     @Autowired
+    private Validation validation;
+
+    @Autowired
     private MessageManager messageManager;
 
     @Secured({"ROLE_ADMIN", "ROLE_AGENT", "ROLE_CLIENT"})
@@ -37,7 +40,7 @@ public class ChangeSurnameCommand {
             language = new Locale(EN_LOCALE);
         }
         ModelAndView modelAndView = new ModelAndView();
-        if (!Validation.validateName(newSurname)){
+        if (!validation.validateName(newSurname)){
             modelAndView.addObject(ATTR_NAME_ERROR_CHANGE_USER_SURNAME,
                     messageManager.getProperty(CHANGE_SURNAME_ERROR_MSG_KEY, language));
             modelAndView.setViewName(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH));

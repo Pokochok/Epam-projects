@@ -25,6 +25,12 @@ public class ChangeTourNameCommand {
     @Autowired
     private MessageManager messageManager;
 
+    @Autowired
+    private Validation validation;
+
+    @Autowired
+    private UpdateTourLogic updateTourLogic;
+
     @Secured("ROLE_ADMIN")
     @PostMapping("/change_tour_name")
     public ModelAndView execute(
@@ -37,14 +43,14 @@ public class ChangeTourNameCommand {
             language = new Locale(EN_LOCALE);
         }
         ModelAndView modelAndView = new ModelAndView();
-        if (!Validation.validateTourStringItems(newTourName) || !Validation.validateTourStringItems(tourName) ||
-                !Validation.validateId(id)) {
+        if (!validation.validateTourStringItems(newTourName) || !validation.validateTourStringItems(tourName) ||
+                !validation.validateId(id)) {
             modelAndView.setViewName(ConfigurationManager.getProperty(TOUR_OVERVIEW_PAGE_PATH));
             return modelAndView;
         }
         int tourId = Integer.parseInt(id);
         try {
-            if (UpdateTourLogic.updateTourName(newTourName, tourId)) {
+            if (updateTourLogic.updateTourName(newTourName, tourId)) {
                 modelAndView.addObject(ATTR_NAME_TOUR_NAME, newTourName);
             } else {
                 modelAndView.addObject(ATTR_NAME_TOUR_NAME, tourName);

@@ -25,6 +25,9 @@ public class ChangeLoginCommand {
     @Autowired
     private MessageManager messageManager;
 
+    @Autowired
+    private Validation validation;
+
     @Secured({"ROLE_ADMIN", "ROLE_AGENT", "ROLE_CLIENT"})
     @PostMapping("/change_login")
     public ModelAndView execute(
@@ -37,7 +40,7 @@ public class ChangeLoginCommand {
             language = new Locale(EN_LOCALE);
         }
         ModelAndView modelAndView = new ModelAndView();
-        if (!Validation.validateLogin(login)) {
+        if (!validation.validateLogin(login)) {
             modelAndView.addObject(ATTR_NAME_ERROR_CHANGE_LOGIN,
                     messageManager.getProperty(CHANGE_LOGIN_ERROR_MSG_KEY, language));
             modelAndView.setViewName(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH));

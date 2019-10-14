@@ -24,6 +24,8 @@ public class BookingCommand {
     @Autowired
     private MessageManager messageManager;
 
+    @Autowired
+    private Validation validation;
 
     @Autowired
     private BookingLogic bookingLogic;
@@ -43,7 +45,7 @@ public class BookingCommand {
         }
         ModelAndView modelAndView = new ModelAndView();
         try {
-            if (!Validation.validateId(clientId) && (!Validation.validateEmail(clientEmail) || !bookingLogic.isClientExists(clientEmail))) {
+            if (!validation.validateId(clientId) && (!validation.validateEmail(clientEmail) || !bookingLogic.isClientExists(clientEmail))) {
                 modelAndView.addObject(ParameterConstant.ATTR_NAME_ERROR_EMAIL_NOT_EXISTS,
                         messageManager.getProperty(CLIENT_EMAIL_NOT_EXISTS_MSG_KEY, new Locale(language)));
                 modelAndView.setViewName(ConfigurationManager.getProperty(BOOKING_PAGE_PATH));

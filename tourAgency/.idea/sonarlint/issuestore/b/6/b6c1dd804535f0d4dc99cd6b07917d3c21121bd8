@@ -1,7 +1,0 @@
-
-Vsquid:S1118":Add a private constructor to hide the implicit public one.(úüéâùÿÿÿÿ
-Zsquid:S00107%"=Method has 12 parameters, which is greater than 7 authorized.(’à’³ýÿÿÿÿ
-Žsquid:UselessImportCheck"cRemove this unused import 'by.epam.touragency.util.PageMsgConstant.TO_TOUR_REGISTRATION_PAGE_PATH'.(ÿ«¤è8Ò­˜éØ-
-ysquid:UselessImportCheck"IRemove this unused import 'org.springframework.web.servlet.ModelAndView'.(Ç¨ÿäûÿÿÿÿ8Ò­˜éØ-
-`squid:S00107="<Method has 9 parameters, which is greater than 7 authorized.(»­–òýÿÿÿÿ8Êº›éØ-
-xsquid:UselessImportCheck"MRemove this unused import 'by.epam.touragency.resource.ConfigurationManager'.(½¹é·8Ò­˜éØ-

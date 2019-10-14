@@ -1,12 +1,0 @@
-
-c$squid:AssignmentInSubExpressionCheckW".Extract the assignment out of this expression.(Æïûÿÿÿÿ
-Qsquid:S1161!":Add the "@Override" annotation above this method signature(‚“¶î
-hsquid:S1871Y"LThis branch's code block is the same as the block for the branch on line 85.(ñˆè©ıÿÿÿÿ
-Vsquid:S1161b":Add the "@Override" annotation above this method signature(àä™´ıÿÿÿÿ
-˜squid:S1186!"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‚“¶î
-squid:S1186b"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(àä™´ıÿÿÿÿ
-`squid:S2259="IA "NullPointerException" could be thrown; "getByLogin()" can return null.(¨ŒíŞ
-Usquid:S18544">Remove this useless assignment to local variable "dispatcher".( Å¤¬
-c$squid:AssignmentInSubExpressionCheckY".Extract the assignment out of this expression.(ñˆè©ıÿÿÿÿ
-hsquid:S1871W"LThis branch's code block is the same as the block for the branch on line 85.(Æïûÿÿÿÿ
-^$squid:AssignmentInSubExpressionCheckU".Extract the assignment out of this expression.(›İ¢Ü

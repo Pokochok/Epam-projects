@@ -3,6 +3,7 @@ package by.epam.touragency.command.impl;
 import by.epam.touragency.exception.CommandException;
 import by.epam.touragency.exception.LogicException;
 import by.epam.touragency.logic.UpdateTourLogic;
+import by.epam.touragency.logic.UpdateUserLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.resource.MessageManager;
 import by.epam.touragency.util.Validation;
@@ -25,6 +26,12 @@ import static by.epam.touragency.util.ParameterConstant.*;
 @Controller
 public class ChangeDepartureDateCommand {
     @Autowired
+    private Validation validation;
+
+    @Autowired
+    private UpdateTourLogic updateTourLogic;
+
+    @Autowired
     private MessageManager messageManager;
 
     @Secured("ROLE_ADMIN")
@@ -39,21 +46,21 @@ public class ChangeDepartureDateCommand {
             language = new Locale(EN_LOCALE);
         }
         ModelAndView modelAndView = new ModelAndView();
-        if (!Validation.validateId(tourIdStr)){
+        if (!validation.validateId(tourIdStr)){
             modelAndView.setViewName(ConfigurationManager.getProperty(TOUR_OVERVIEW_PAGE_PATH));
             return modelAndView;
         }
         int tourId = Integer.parseInt(tourIdStr);
-        long    newDepartureDate = Validation.validateDate(newDepartureDateStr);
-        long    arrivalDate = Validation.validateDate(arrivalDateStr);
+        long    newDepartureDate = validation.validateDate(newDepartureDateStr);
+        long    arrivalDate = validation.validateDate(arrivalDateStr);
         if (newDepartureDate == -1 || arrivalDate == -1){
             LOGGER.debug("Error in date parsing");
         }
 
         try {
             if (newDepartureDate < arrivalDate && new Date().before(new Date(newDepartureDate))) {
-                UpdateTourLogic.updateDepartureDate(newDepartureDate, tourId);
-                modelAndView.addObject(ATTR_NAME_DEPARTURE_DATE, Validation.dateToFormat(newDepartureDate));
+                updateTourLogic.updateDepartureDate(newDepartureDate, tourId);
+                modelAndView.addObject(ATTR_NAME_DEPARTURE_DATE, validation.dateToFormat(newDepartureDate));
             } else {
                 modelAndView.addObject(ATTR_NAME_ERROR_DATE,
                         messageManager.getProperty(DATE_ERROR_MSG_KEY, language));

@@ -8,6 +8,7 @@ import by.epam.touragency.specification.Specification;
 import by.epam.touragency.specification.impl.order.RemoveOrderByIdSpecification;
 import by.epam.touragency.specification.impl.order.UpdatePaymentStateByIdSpecification;
 import by.epam.touragency.util.Validation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -15,6 +16,8 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class OrderChangeLogic {
+    @Autowired
+    Validation validation;
 
     /**
      * Set payment state of order as paid
@@ -22,7 +25,7 @@ public class OrderChangeLogic {
      * @throws LogicException if handled RepositoryException
      */
     public boolean payOrder(String orderId) throws LogicException {
-        if (!Validation.validateId(orderId)){
+        if (!validation.validateId(orderId)){
             return false;
         }
         Specification specification = new UpdatePaymentStateByIdSpecification(Integer.parseInt(orderId));
@@ -43,7 +46,7 @@ public class OrderChangeLogic {
     public boolean removeOrder(String orderId) throws LogicException {
         boolean flag = false;
         try {
-            if (Validation.validateId(orderId)) {
+            if (validation.validateId(orderId)) {
                 Specification specification = new RemoveOrderByIdSpecification(Integer.parseInt(orderId));
                 Repository repository = OrderRepository.getInstance();
                 repository.remove(null, specification);

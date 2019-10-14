@@ -23,6 +23,9 @@ import static by.epam.touragency.util.ParameterConstant.*;
 @Controller
 public class ChangeEmailCommand {
     @Autowired
+    private Validation validation;
+
+    @Autowired
     private MessageManager messageManager;
 
     @Secured({"ROLE_ADMIN", "ROLE_AGENT", "ROLE_CLIENT"})
@@ -37,7 +40,7 @@ public class ChangeEmailCommand {
             language = new Locale(EN_LOCALE);
         }
         ModelAndView modelAndView = new ModelAndView();
-        if (!Validation.validateEmail(email) || !Validation.validateLogin(login)){
+        if (!validation.validateEmail(email) || !validation.validateLogin(login)){
             modelAndView.setViewName(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH));
             return modelAndView;
         }

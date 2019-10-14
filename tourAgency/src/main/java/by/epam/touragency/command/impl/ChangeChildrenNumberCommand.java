@@ -5,6 +5,7 @@ import by.epam.touragency.exception.LogicException;
 import by.epam.touragency.logic.UpdateTourLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.util.Validation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,6 +17,12 @@ import static by.epam.touragency.util.ParameterConstant.*;
 
 @Controller
 public class ChangeChildrenNumberCommand {
+    @Autowired
+    private UpdateTourLogic updateTourLogic;
+
+    @Autowired
+    private Validation validation;
+
     @Secured("ROLE_ADMIN")
     @PostMapping("/change_children_number")
     public ModelAndView execute(
@@ -23,20 +30,19 @@ public class ChangeChildrenNumberCommand {
             @RequestParam(PARAM_NAME_TOUR_ID) String tourIdStr
     ) throws CommandException {
         ModelAndView modelAndView = new ModelAndView();
-        if (!Validation.validateNumberOfPeople(newChildrenNumberStr) ||
-                !Validation.validateId(tourIdStr)){
-            modelAndView.setViewName(ConfigurationManager.getProperty(TOUR_OVERVIEW_PAGE_PATH));
+        modelAndView.setViewName(ConfigurationManager.getProperty(TOUR_OVERVIEW_PAGE_PATH));
+        if (!validation.validateId(tourIdStr) || !validation.validateNumberOfPeople(newChildrenNumberStr)){
+            return modelAndView;
         }
 
         int tourId = Integer.parseInt(tourIdStr);
         int newChildrenNumber = Integer.parseInt(newChildrenNumberStr);
         try {
-            UpdateTourLogic.updateChildrenNumber(newChildrenNumber, tourId);
+            updateTourLogic.updateChildrenNumber(newChildrenNumber, tourId);
         } catch (LogicException e) {
             throw new CommandException(e);
         }
         modelAndView.addObject(ATTR_NAME_CHILDREN_NUMBER, newChildrenNumber);
-        modelAndView.setViewName(ConfigurationManager.getProperty(TOUR_OVERVIEW_PAGE_PATH));
         return modelAndView;
     }
 }

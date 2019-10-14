@@ -23,6 +23,9 @@ import static by.epam.touragency.util.ParameterConstant.*;
 @Controller
 public class RegisterCommand {
     @Autowired
+    private Validation validation;
+
+    @Autowired
     private MessageManager messageManager;
 
     @Secured("ROLE_ANONYMOUS")
@@ -45,9 +48,9 @@ public class RegisterCommand {
         }
 
         try {
-            if (!Validation.validateName(name) || !Validation.validateName(surname) || !Validation.validateEmail(email) ||
-                    !Validation.validatePhoneNumber(phoneNumber) || !Validation.validateLogin(login) ||
-                    !Validation.validatePassword(password)){
+            if (!validation.validateName(name) || !validation.validateName(surname) || !validation.validateEmail(email) ||
+                    !validation.validatePhoneNumber(phoneNumber) || !validation.validateLogin(login) ||
+                    !validation.validatePassword(password)){
                 modelAndView.setViewName(ConfigurationManager.getProperty(REGISTRATION_PAGE_PATH));
                 return modelAndView;
             }

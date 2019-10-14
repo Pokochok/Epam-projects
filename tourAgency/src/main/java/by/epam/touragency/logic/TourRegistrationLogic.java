@@ -8,6 +8,8 @@ import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.specification.Specification;
 import by.epam.touragency.specification.impl.tour.AddTourSpecification;
 import by.epam.touragency.util.Validation;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.math.BigDecimal;
@@ -17,7 +19,10 @@ import static by.epam.touragency.util.PageMsgConstant.TO_TOUR_REGISTRATION_PAGE_
 /**
  * For tour registration logic
  */
+@Service
 public class TourRegistrationLogic {
+    @Autowired
+    private Validation validation;
     /**
      * Adds tour to database
      * @param tourName tour name
@@ -34,7 +39,7 @@ public class TourRegistrationLogic {
      * @param isAvailable tour status
      * @throws LogicException if handled RepositoryException
      */
-    public static void addTour(String tourName, long departureDate, long arrivalDate, String departureCity, String arrivalCity,
+    public void addTour(String tourName, long departureDate, long arrivalDate, String departureCity, String arrivalCity,
                                String arrivalCountry, String hotel, String nutrition, int numberOfAdults, int numberOfChildren,
                                BigDecimal price, String isAvailable) throws LogicException {
         Tour tour = new Tour.TourBuilder()
@@ -58,14 +63,14 @@ public class TourRegistrationLogic {
         }
     }
 
-    public static boolean isValidData(String tourName, String departureCity, String arrivalCity, String arrivalCountry,
+    public boolean isValidData(String tourName, String departureCity, String arrivalCity, String arrivalCountry,
                                       String hotel, String nutrition, String childrenNumber, String adultsNumber,
                                       String price){
-         return Validation.validateName(tourName) && Validation.validateTourStringItems(departureCity) &&
-                Validation.validateTourStringItems(arrivalCity) && Validation.validateTourStringItems(arrivalCountry) &&
-                Validation.validateTourStringItems(hotel) && Validation.validateNutrition(nutrition) &&
-                Validation.validateNumberOfPeople(childrenNumber) &&
-                Validation.validateNumberOfPeople(adultsNumber) &&
-                Validation.validatePrice(price);
+         return validation.validateName(tourName) && validation.validateTourStringItems(departureCity) &&
+                validation.validateTourStringItems(arrivalCity) && validation.validateTourStringItems(arrivalCountry) &&
+                validation.validateTourStringItems(hotel) && validation.validateNutrition(nutrition) &&
+                validation.validateNumberOfPeople(childrenNumber) &&
+                validation.validateNumberOfPeople(adultsNumber) &&
+                validation.validatePrice(price);
     }
 }

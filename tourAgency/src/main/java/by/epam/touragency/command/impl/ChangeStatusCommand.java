@@ -5,6 +5,7 @@ import by.epam.touragency.exception.LogicException;
 import by.epam.touragency.logic.UpdateTourLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.util.Validation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,6 +20,12 @@ import static by.epam.touragency.util.ParameterConstant.PARAM_NAME_TOUR_ID;
 
 @Controller
 public class ChangeStatusCommand {
+    @Autowired
+    private UpdateTourLogic updateTourLogic;
+
+    @Autowired
+    private Validation validation;
+
     @Secured("ROLE_ADMIN")
     @PostMapping("/change_status")
     public ModelAndView execute(
@@ -27,13 +34,13 @@ public class ChangeStatusCommand {
     ) throws CommandException {
         status = Objects.equals(status, "AVAILABLE") ? "NOT_AVAILABLE" : "AVAILABLE";
         ModelAndView modelAndView = new ModelAndView();
-        if (!Validation.validateId(touridStr)) {
+        if (!validation.validateId(touridStr)) {
             modelAndView.setViewName(ConfigurationManager.getProperty(TOUR_OVERVIEW_PAGE_PATH));
             return modelAndView;
         }
         int tourId = Integer.parseInt(touridStr);
         try {
-            UpdateTourLogic.updateStatus(status, tourId);
+            updateTourLogic.updateStatus(status, tourId);
         } catch (LogicException e) {
             throw new CommandException(e);
         }

@@ -5,6 +5,7 @@ import by.epam.touragency.exception.LogicException;
 import by.epam.touragency.logic.UpdateTourLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.util.Validation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,6 +17,12 @@ import static by.epam.touragency.util.ParameterConstant.*;
 
 @Controller
 public class ChangeNutritionCommand {
+    @Autowired
+    private Validation validation;
+
+    @Autowired
+    private UpdateTourLogic updateTourLogic;
+
     @Secured("ROLE_ADMIN")
     @PostMapping("/change_nutrition")
     public ModelAndView execute(
@@ -23,13 +30,13 @@ public class ChangeNutritionCommand {
             @RequestParam(PARAM_NAME_TOUR_ID) String tourIdStr
     ) throws CommandException {
         ModelAndView modelAndView = new ModelAndView();
-        if (!Validation.validateNutrition(newNutrition) || !Validation.validateId(tourIdStr)) {
+        if (!validation.validateNutrition(newNutrition) || !validation.validateId(tourIdStr)) {
             modelAndView.setViewName(ConfigurationManager.getProperty(TOUR_OVERVIEW_PAGE_PATH));
             return modelAndView;
         }
         int tourId = Integer.parseInt(tourIdStr);
         try {
-            UpdateTourLogic.updateNutrition(newNutrition, tourId);
+            updateTourLogic.updateNutrition(newNutrition, tourId);
         } catch (LogicException e) {
             throw new CommandException(e);
         }

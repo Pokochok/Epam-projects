@@ -1,11 +1,15 @@
 package by.epam.touragency.util;
 
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 /**
  * Class contains validation logic
  */
+@Service
 public class Validation {
     private static final String NAME_SURNAME_FORMAT = "^[^!@#$%^&*().,_\\d=|?`~/<>']{1,30}$";
     private static final String TOUR_STRING_ITEMS_FORMAT = "^[\\sa-zA-Z.,_%+-]{1,40}$";
@@ -22,7 +26,7 @@ public class Validation {
      * @param name name
      * @return true, if validation completed successfully, and false - if not
      */
-    public static boolean validateName(String name){
+    public  boolean validateName(String name){
         return name != null && name.matches(NAME_SURNAME_FORMAT);
     }
 
@@ -31,7 +35,7 @@ public class Validation {
      * @param email email
      * @return true, if validation completed successfully, and false - if not
      */
-    public static boolean validateEmail(String email){
+    public  boolean validateEmail(String email){
         return email != null && email.length() >= 6 && email.length() <= 100 && email.matches(EMAIL_FORMAT);
     }
 
@@ -40,7 +44,7 @@ public class Validation {
      * @param phoneNumber phone number
      * @return true, if validation completed successfully, and false - if not
      */
-    public static boolean validatePhoneNumber(String phoneNumber){
+    public  boolean validatePhoneNumber(String phoneNumber){
         return phoneNumber != null && phoneNumber.matches(PHONE_NUMBER_FORMAT);
     }
 
@@ -49,7 +53,7 @@ public class Validation {
      * @param login login
      * @return true, if validation completed successfully, and false - if not
      */
-    public static boolean validateLogin(String login){
+    public  boolean validateLogin(String login){
         return login != null && login.length() >= 4 && login.length() <= 50;
     }
 
@@ -58,7 +62,7 @@ public class Validation {
      * @param password password
      * @return true, if validation completed successfully, and false - if not
      */
-    public static boolean validatePassword(String password){
+    public  boolean validatePassword(String password){
         return password != null && password.length() >= 6 && password.length() <= 50;
     }
 
@@ -67,7 +71,7 @@ public class Validation {
      * @param tourName tour name
      * @return true, if validation completed successfully, and false - if not
      */
-    public static boolean validateTourStringItems(String tourName){
+    public  boolean validateTourStringItems(String tourName){
         return tourName != null && tourName.matches(TOUR_STRING_ITEMS_FORMAT);
     }
 
@@ -76,7 +80,7 @@ public class Validation {
      * @param nutrition nutrition
      * @return true, if validation completed successfully, and false - if not
      */
-    public static boolean validateNutrition(String nutrition){
+    public boolean validateNutrition(String nutrition){
         return nutrition != null && nutrition.matches(NUTRITION_FORMAT);
     }
 
@@ -85,7 +89,7 @@ public class Validation {
      * @param peopleNumber people number
      * @return true, if validation completed successfully, and false - if not
      */
-    public static boolean validateNumberOfPeople(String peopleNumber){
+    public boolean validateNumberOfPeople(String peopleNumber){
         return peopleNumber != null && peopleNumber.matches(PEOPLE_NUMBER_FORMAT);
     }
 
@@ -94,7 +98,7 @@ public class Validation {
      * @param price price
      * @return true, if validation completed successfully, and false - if not
      */
-    public static boolean validatePrice(String price){
+    public  boolean validatePrice(String price){
         return price != null && price.matches(PRICE_FORMAT);
     }
 
@@ -103,7 +107,7 @@ public class Validation {
      * @param number number
      * @return true, if validation completed successfully, and false - if not
      */
-    public static boolean validateTicketNumbers(String number){
+    public  boolean validateTicketNumbers(String number){
         return number != null && number.matches(TICKET_NUMBERS_FORMAT);
     }
 
@@ -113,7 +117,7 @@ public class Validation {
      * @return -1 if date is null or invalid, and returns related long value
      * if date is valid
      */
-    public static long validateDate(String date){
+    public  long validateDate(String date){
         if (date == null){
             return -1;
         }
@@ -131,7 +135,7 @@ public class Validation {
      * @param dateLong long value related to date
      * @return string representation of related date if it valid, and returns default date - if not
      */
-    public static String dateToFormat(long dateLong){
+    public  String dateToFormat(long dateLong){
         if (dateLong < 0){
             return "1970-01-01";
         }
@@ -144,7 +148,7 @@ public class Validation {
      * @param id ID
      * @return true, if validation completed successfully, and false - if not
      */
-    public static boolean validateId(String id){
+    public  boolean validateId(String id){
         return id != null && id.matches(ID_FORMAT);
     }
 }

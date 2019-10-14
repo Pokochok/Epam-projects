@@ -5,6 +5,7 @@ import by.epam.touragency.exception.LogicException;
 import by.epam.touragency.logic.UpdateTourLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.util.Validation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,6 +17,12 @@ import static by.epam.touragency.util.ParameterConstant.*;
 
 @Controller
 public class ChangeDepartureCityCommand {
+    @Autowired
+    private Validation validation;
+
+    @Autowired
+    private UpdateTourLogic updateTourLogic;
+
     @Secured("ROLE_ADMIN")
     @PostMapping("/change_departure_city")
     public ModelAndView execute(
@@ -23,19 +30,18 @@ public class ChangeDepartureCityCommand {
             @RequestParam(value = PARAM_NAME_TOUR_ID) String tourIdStr
     ) throws CommandException {
         ModelAndView modelAndView = new ModelAndView();
-        if (!Validation.validateTourStringItems(newDepartureCity) || !Validation.validateId(tourIdStr)) {
-            modelAndView.setViewName(ConfigurationManager.getProperty(TOUR_OVERVIEW_PAGE_PATH));
+        modelAndView.setViewName(ConfigurationManager.getProperty(TOUR_OVERVIEW_PAGE_PATH));
+        if (!validation.validateTourStringItems(newDepartureCity) || !validation.validateId(tourIdStr)) {
             return modelAndView;
         }
 
         int tourId = Integer.parseInt(tourIdStr);
         try {
-            UpdateTourLogic.updateDepartureCity(newDepartureCity, tourId);
+            updateTourLogic.updateDepartureCity(newDepartureCity, tourId);
         } catch (LogicException e) {
             throw new CommandException(e);
         }
         modelAndView.addObject(ATTR_NAME_DEPARTURE_CITY, newDepartureCity);
-        modelAndView.setViewName(ConfigurationManager.getProperty(TOUR_OVERVIEW_PAGE_PATH));
         return modelAndView;
     }
 }

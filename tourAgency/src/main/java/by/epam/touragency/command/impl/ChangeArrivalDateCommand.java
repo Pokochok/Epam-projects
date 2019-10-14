@@ -24,6 +24,12 @@ import static by.epam.touragency.util.ParameterConstant.*;
 @Controller
 public class ChangeArrivalDateCommand {
     @Autowired
+    UpdateTourLogic updateTourLogic;
+
+    @Autowired
+    private Validation validation;
+
+    @Autowired
     private MessageManager messageManager;
 
     @Secured("ROLE_ADMIN")
@@ -32,28 +38,30 @@ public class ChangeArrivalDateCommand {
             @RequestParam(PARAM_NAME_DEPARTURE_DATE) String departureDateStr,
             @RequestParam(PARAM_NAME_NEW_ARRIVAL_DATE) String newArrivalDateStr,
             @RequestParam(value = PARAM_NAME_TOUR_ID) String tourIdStr,
-            @SessionAttribute(value = ATTR_NAME_LANGUAGE) Locale language
+            @SessionAttribute(value = ATTR_NAME_LANGUAGE, required = false) Locale language
     ) throws CommandException {
         if (language == null){
             language = new Locale(EN_LOCALE);
         }
         ModelAndView modelAndView = new ModelAndView();
-        if (!Validation.validateId(tourIdStr)){
-            modelAndView.setViewName(ConfigurationManager.getProperty(TOUR_OVERVIEW_PAGE_PATH));
+        modelAndView.setViewName(ConfigurationManager.getProperty(TOUR_OVERVIEW_PAGE_PATH));
+        if (!validation.validateId(tourIdStr)){
+            return modelAndView;
         }
         int tourId = Integer.parseInt(tourIdStr);
-        long newArrivalDate = Validation.validateDate(newArrivalDateStr);
-        long departureDate = Validation.validateDate(departureDateStr);
+        long newArrivalDate = validation.validateDate(newArrivalDateStr);
+        long departureDate = validation.validateDate(departureDateStr);
         if (newArrivalDate == -1 || departureDate == -1){
             LOGGER.debug("Error in date parsing");
             modelAndView.addObject(ATTR_NAME_ERROR_DATE,
                     messageManager.getProperty(DATE_ERROR_MSG_KEY, language));
+            return modelAndView;
         }
 
         try {
             if (departureDate < newArrivalDate) {
-                UpdateTourLogic.updateArrivalDate(newArrivalDate, tourId);
-                modelAndView.addObject(ATTR_NAME_ARRIVAL_DATE, Validation.dateToFormat(newArrivalDate));
+                updateTourLogic.updateArrivalDate(newArrivalDate, tourId);
+                modelAndView.addObject(ATTR_NAME_ARRIVAL_DATE, validation.dateToFormat(newArrivalDate));
             } else {
                 modelAndView.addObject(ATTR_NAME_ERROR_DATE,
                         messageManager.getProperty(DATE_ERROR_MSG_KEY, language));
@@ -61,7 +69,6 @@ public class ChangeArrivalDateCommand {
         }catch (LogicException e){
             throw new CommandException(e);
         }
-        modelAndView.setViewName(ConfigurationManager.getProperty(TOUR_OVERVIEW_PAGE_PATH));
         return modelAndView;
     }
 }

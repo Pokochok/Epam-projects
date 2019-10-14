@@ -23,6 +23,9 @@ import static by.epam.touragency.util.ParameterConstant.*;
 @Controller
 public class ChangeNameCommand {
     @Autowired
+    private UpdateUserLogic updateUserLogic;
+
+    @Autowired
     private Validation validation;
 
     @Autowired
@@ -34,25 +37,24 @@ public class ChangeNameCommand {
             @SessionAttribute(value = PARAM_NAME_USER_LOGIN) String login,
             @RequestParam(value = PARAM_NAME_NEW_NAME) String newName,
             @SessionAttribute(value = PARAM_NAME_ROLE) String role,
-            @SessionAttribute(value = ATTR_NAME_LANGUAGE) Locale language
+            @SessionAttribute(value = ATTR_NAME_LANGUAGE, required = false) Locale language
     ) throws CommandException {
         if (language == null){
             language = new Locale(EN_LOCALE);
         }
         ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH));
         if (!validation.validateName(newName)) {
             modelAndView.addObject(ATTR_NAME_ERROR_CHANGE_USER_NAME,
                     messageManager.getProperty(CHANGE_USER_NAME_ERROR_MSG_KEY, language));
-            modelAndView.setViewName(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH));
             return modelAndView;
         }
         try {
-            UpdateUserLogic.updateName(role, login, newName);
+            updateUserLogic.updateName(role, login, newName);
         } catch (LogicException e) {
             throw new CommandException(e);
         }
         modelAndView.addObject(ATTR_NAME_USER_NAME, newName);
-        modelAndView.setViewName(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH));
         return modelAndView;
     }
 }

@@ -89,7 +89,7 @@ class ChangeArrivalDateCommandTest {
         when(validation.validateDate(anyString())).thenReturn(10000L, 10001L);
         when(validation.validateId(anyString())).thenReturn(true);
         when(messageManager.getProperty(eq(DATE_ERROR_MSG_KEY), any(Locale.class))).thenReturn("errorDate");
-        doNothing().when(updateTourLogic).updateAdultsNumber(anyInt(), anyInt());
+        doNothing().when(updateTourLogic).updateArrivalDate(anyInt(), anyInt());
         mockMvc.perform(post("/change_arrival_date")
                 .param(PARAM_NAME_DEPARTURE_DATE, "date")
                 .param(PARAM_NAME_NEW_ARRIVAL_DATE, "date")

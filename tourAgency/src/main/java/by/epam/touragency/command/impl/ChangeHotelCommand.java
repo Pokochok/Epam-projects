@@ -30,8 +30,8 @@ public class ChangeHotelCommand {
             @RequestParam(PARAM_NAME_TOUR_ID) String tourIdStr
     ) throws CommandException {
         ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName(ConfigurationManager.getProperty(TOUR_OVERVIEW_PAGE_PATH));
         if (!validation.validateTourStringItems(newHotel) || !validation.validateId(tourIdStr)) {
-            modelAndView.setViewName(ConfigurationManager.getProperty(TOUR_OVERVIEW_PAGE_PATH));
             return modelAndView;
         }
 
@@ -42,7 +42,6 @@ public class ChangeHotelCommand {
             throw new CommandException(e);
         }
         modelAndView.addObject(ATTR_NAME_HOTEL, newHotel);
-        modelAndView.setViewName(ConfigurationManager.getProperty(TOUR_OVERVIEW_PAGE_PATH));
         return modelAndView;
     }
 }

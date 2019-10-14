@@ -29,12 +29,8 @@ public class PayOrderCommand {
                                 @RequestParam(value = ATTR_NAME_CHANGE_PAGE, required = false) String changeToPage
     ) throws CommandException {
         try {
-            boolean isSuccess = orderChangeLogic.payOrder(orderId);
-            if (isSuccess) {
-                return new ToOrdersCommand().execute(userRole, userId, index, changeToPage).addObject(ATTR_NAME_PAYMENT_STATE, Boolean.TRUE);
-            } else {
-                return new ToOrdersCommand().execute(userRole, userId, index, changeToPage);
-            }
+            orderChangeLogic.payOrder(orderId);
+            return new ToOrdersCommand().execute(userRole, userId, index, changeToPage);
         } catch (LogicException e) {
             throw new CommandException(e);
         }

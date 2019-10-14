@@ -1,165 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="49a77805-beeb-4d69-b0de-ca3583021001" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="e6cf249f-abee-4fa2-b06c-4b2f6579adc5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/0/00d86881d672e0e40f9de985058f8b57b0a84670" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/9/09368011e95c607272bbfb00720eba1675a18a19" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/c/0ca47370396a14a2892824571673fd2d80747c4c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/d/0d03ac5cc9b3b46e210adc968ebf43caba71a70a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/f/0f40825f4385d5fed56817c96dcc49423923611e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/f/0f5c1cd8b7941b05bf248fca130207046f4828ee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/3/130630280ccdd227a25a9e3ae95f476591529ecd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/3/130865ce0a35adb7947865ac948152c5dbf3a2b7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/5/15568212a68f96e7ed0e5122a863037c030d6b5a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/7/17cf1a5c07ab2f6a353c75634ab13363c18e1366" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/8/1854d6d51e93fcc87d9bfa5032dd025442a3ccb3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/9/19a359136be3ae0f0084464c7462cec05894ccca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/e/1e697a2beb3555caee167884ab0ea2c65ca318ea" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/e/1ef3683c89b8c5e2986c7c409d7d1e53a81b09fd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/f/1f295492ca46f30309bf8a77ec481309909c7b37" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/0/2005d540b078dad1e421d66da820b6eff793102a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/1/211249fa9337c5dc1540bb85bdae2398dd88a32a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/5/2573d9f21119fde56b3445333a19fff738ee4312" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/8/28d44b46d209ff19974f3eada1186c5b5f935545" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/b/2bbc400378fde4224088ed220718f5a57e4ee27d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/b/2bd42af9326e3e98b32361493660e6a554914b2a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/e/2e50ee02f0bf88607a90d426c5ec094561e83fbf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/e/2e9bc0b99df7b865da19a28fbab573b7d47ea69a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/f/2f7dedb2c4e72d3fd754f3eff4b9b81df332b170" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/1/314582ad044e18636785afad72e9e485fb9c4b24" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/b/3b460749f6cb56142a6221b335276026223a203f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/1/41bfcdc0b3133a9767bdc1b311f1cf9be64d6426" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/1/41cc7be03dbe248c1bb2b6d502ff1eab2e013d28" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/6/46de21d552f561f439c3e653b00cb25bed68ef85" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/a/4a6a2aa0b5956d6c316c3b25c2e31e5fa09cd6c3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/1/51d4b9ebd513d3b141d49ee4bfa08cdc948c961d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/2/5231f2eb77b0c6015ebba1a2f3365224d2d399bb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/8/5892b650cecf17557300e588b97d4879000d6898" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/9/5960ad41396e020693f2994342125921413a70b1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/b/5b6e5e92d19c45c6311e3e6b34ccd18ffd44e081" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/c/5c21af74a2fe71e5a8cceae1308f7fde5cdcab38" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/d/5d7836882d354dda1cd27c3cac722b620c35b1db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/e/5e9abd7dfd7a77044cb9328c7ba28fb1d3d5edb4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/e/5ed29a2fdecb59bd72eb3d63ee9f8a44f1442630" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/0/60ebcf81a567ac55abc14ad18aa889032f501041" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/1/612a30925cc40facaa160cf44277ea8a7e7b7922" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/2/6271c811620389cd993adf79216df88aa44ceb9a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/4/64a8a19c24df084fd06ff7fae38240a5610e39ac" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/7/670fb50af4fe3996732758b4210fd0d4fcfeae57" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/7/67205ba2c9780bf9a77bd1c813c98d80d2143456" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/7/678bc9039d488acdcb0b6c6ebb1d2fe7064b61ec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/7/67c359c2c486006545611710f231933b5743a18a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/b/6bc472eea459a2fc2d70542d75f0199ff06a07fd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/c/6c5138df5c60bc19a6329a9f233fea8f6109580a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/0/703074556a4f442ea8f1f3aad1c05dd2947606c1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/3/73c00359b9614f1664410290be6418a1cc29990b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/4/744d0f9a78db7aa875784692830d355f33b2a098" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/8/7892811f9c57542d96282c83d1ca5153e3069f09" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/a/7a7b0a241b9b637622af22e7785a7f8ea1e2c74c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/a/7a847b2683b17334725388102dbb9354468117d1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/c/7c00f03dc09b8261ac7eb1220a3e9979dee4f611" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/d/7d2e3cbebb8070ecfd644998256aefc677aaa62b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/d/7d74711d5690c1f48a121002ec96e23517417a90" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/1/81120be8b7fd1f8821fabba279f365b7fe14cc14" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/2/822221ee45b31e01ceaea5e4f620317c913833ca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/7/8704c26b3c0754c694af77304dfbba7c344c0a46" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/9/89ccdf47d1ab3ebcf9cfc58fe9b72c21404fd2f1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/d/8d4d8d0c43d4bceb99560aaf86263be1c618dc0d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/4/9490b9dd2f4abd792398227d1c7e562834096ba5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/4/94af19a2ecbb23070be7e347c9be994b762105f5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/9551a27f5e7731b1b10e0416d76a6bda5367de14" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/9573c94e6e5106ce308e2c74b28e95b9d394bf1e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/6/96898deef8aa3caa07b372ac9126e48f2b7a1790" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/6/96af1442a3f2450ea5cf3a030fbeb15495280321" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/8/982b0e10391835f7cf7ed10983692b15986cc4aa" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/c/9c0e4530a7f6779d925f402fddcc7b72a161fb84" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/e/9e5b3597b8d74ae353b38f2840e0961ead932808" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/f/9f5a75ff0da0ddd4b29462f3dbf59f2f81325d28" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/6/a6db3356e9bc43e66f63b26fec9ff9eb0089fa8d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/8/a8ecd069eaef789277fb9de2727a0854876f07fb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/a/aacebb2d21e39b080b8e39d8268855c33e4af7fb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/e/ae839a402ca15e4f9e89bd41ed496feadbbbbfad" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/0/b044c69a024ff2989321834e6c58d975536503f4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/0/b052508a10e3df6b588d0a6aa264c6eee24bf849" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/2/b28d413f2268881bae99701b6ce891fec89ddbc7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/4/b42e00a2a68bc8f4b508a4a44242700e4ce1997a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/4/b44b893ea9334fb4cac2e04e7556570e1c9b244f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/5/b5ebe6b18042bf0bbec969ea5757291ff658463e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/6/b6c1dd804535f0d4dc99cd6b07917d3c21121bd8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/7/b75b4f250036ab9d5f701378716391f8575dbbf6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/9/b901838ce903925ef3223379a7fec3d36a9814ae" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/b/bb4884522bc72b47a0e51c13ad152a616d8378f6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/c/bcedae85e662d708427eb8f04919a7e2073d6472" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/5/c5805cb191efc19cc6403846fbd8ee669707401d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/6/c6eeb749e061a796a029bbe43e0046e77d1dab9f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/8/c82c955b663869648a993355a3b2fdecd15adaac" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/b/cb092cd62f1ebb5b6c0756b865afe3b273cbfa74" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/b/cbdfaf3176c39bb8742a73dec61085ef0c4afaa1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/d/cdcc12da5c4054f6995aab32914d7e0243194c05" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/2/d22624c5edab658f6f35d250b2a5b116223a0f7c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/3/d3295fcca8474dc98cbdba83ee0f3f2161fab0c0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/d/dda8120e0634dcafc52d69dd5804d116fafe8e36" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/e/def6410f6e87046c8095e317253897ebc4506970" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/0/e0097b42c701ccd208b30281cf94b93444492c84" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/1/e1e2356bd9355ef7cec3d6e713dd448af4aad98c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/3/e3488be648bbab5d683609c9338b5688567b5fd3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/4/e47374faf1c736ad284e85a2fc73809e108e401d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/6/e690df7cd2b976c810496e13a0b8119870e0a7d7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/9/e9c8241a8589ff9718b1396ea4b1f1af34265138" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/a/ea20e41317e4cf26540d9b4c621ff28d3e439362" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/b/eb5f2007638a14ac8fd8928a022969856a920e4e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/e/eeb0ce6f12d604adb2d3f040adfd0d70826595d4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/1/f137ec24019a92d04db0e64ff63bf1b7a065cd94" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/2/f2028dd2911ac0e269892a8fc38ac88bc11147a3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/2/f29b07a93df1a4e1b9bd594caf7cce3f5ee9d6ae" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/3/f3a13d8363dea65631a2c38df514fddb987ec015" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/5/f580fbd97cba2a938f1979bb814b9748904cd746" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/6/f6052adda535f141e2e2d2b8451a01bba7108b63" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/6/f67ccb7e6f735cc2beec6ba7d3912098f93e2d08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/8/f80b1d5c8f56b87b80b6ead0c8643143bb4599c9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/8/f8c9fc622931e04235330299ac66601a224714dd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/9/f9b4f1f1d9a3b75a36ec0491c9c9da08843b9f90" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/d/fdcf1a8f50118bd3ec53741930826c40c7790cb6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/e/fea64bb8a6bae9dc7ea14901cca25e965497eb8a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/BookingCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/BookingCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeAdultsNumberCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeAdultsNumberCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeArrivalCityCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeArrivalCityCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeArrivalCountryCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeArrivalCountryCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeArrivalDateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeArrivalDateCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeChildrenNumberCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeChildrenNumberCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeDepartureCityCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeDepartureCityCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeDepartureDateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeDepartureDateCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeEmailCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeEmailCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeHotelCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeHotelCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeLoginCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeLoginCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeNameCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeNameCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeNutritionCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeNutritionCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangePasswordCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangePasswordCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangePhoneNumberCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangePhoneNumberCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangePriceCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangePriceCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeStatusCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeStatusCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeSurnameCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeSurnameCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeTourNameCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeTourNameCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/LoginCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/LoginCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/LogoutCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/PayOrderCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/PayOrderCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/RegisterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/RegisterCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/TicketRegisterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/TicketRegisterCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/TourRegisterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/TourRegisterCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/BookingLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/BookingLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/LoginLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/LoginLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/OrderChangeLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/OrderChangeLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/TourRegistrationLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/TourRegistrationLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/UpdateTourLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/UpdateTourLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/util/Validation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/util/Validation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/UpdateTourLogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/UpdateTourLogicTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/touragency/util/ValidationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/util/ValidationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/entity/UserPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/entity/UserPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/MatchOfUniqueFieldsDetector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/MatchOfUniqueFieldsDetector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/TicketRegistrationLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/TicketRegistrationLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/UpdateUserLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/UpdateUserLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/UserRegistrationLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/UserRegistrationLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/touragency/command/impl/ChangeArrivalDateCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/command/impl/ChangeArrivalDateCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/MatchOfUniqueFieldsDetectorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/MatchOfUniqueFieldsDetectorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/TicketRegistrationLogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/TicketRegistrationLogicTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/UpdateUserLogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/UpdateUserLogicTest.java" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,37 +39,6 @@
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeDepartureDateCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="25" column="11" lean-forward="true" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/by/epam/touragency/command/impl/ChangeArrivalDateCommandTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="74" column="59" selection-start-line="74" selection-start-column="59" selection-end-line="74" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -210,53 +50,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/web/templates/home.ftl" />
-        <option value="$PROJECT_DIR$/web/templates/test.ftl" />
-        <option value="$PROJECT_DIR$/web/templates/parts/test.ftl" />
-        <option value="$PROJECT_DIR$/web/templates/parts/common_part.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeAdultsNumberCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeArrivalCityCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeArrivalCountryCommand.java" />
-        <option value="$PROJECT_DIR$/src/test/java/by/epam/touragency/command/impl/ChangeAdultsNumberCommandTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangePriceCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/OrderChangeLogic.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeLoginCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeHotelCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/BookingLogic.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/BookingCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeDepartureDateCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/LoginLogic.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeNutritionCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeTourNameCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/RegisterCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangePhoneNumberCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeEmailCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangePasswordCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeStatusCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/TicketRegisterCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeSurnameCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeNameCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/TourRegisterCommand.java" />
-        <option value="$PROJECT_DIR$/src/test/java/by/epam/touragency/util/ValidationTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/UpdateTourLogicTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/touragency/util/Validation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/TourRegistrationLogic.java" />
-        <option value="$PROJECT_DIR$/src/test/java/by/epam/touragency/command/impl/ChangeArrivalCountryCommandTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/by/epam/touragency/command/impl/ChangeArrivalCityCommandTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeArrivalDateCommand.java" />
-        <option value="$PROJECT_DIR$/src/test/java/by/epam/touragency/command/impl/ChangeArrivalDateCommandTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/UpdateTourLogic.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeChildrenNumberCommand.java" />
-        <option value="$PROJECT_DIR$/src/test/java/by/epam/touragency/command/impl/ChangeChildrenNumberCommandTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/by/epam/touragency/command/impl/ChangeDepartureCityCommandTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeDepartureCityCommand.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-      </list>
-    </option>
-  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -265,130 +58,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="tourAgency" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-      </expand>
-      <select />
-    </treeState>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="472" />
-    <option name="y" value="60" />
-    <option name="width" value="752" />
-    <option name="height" value="609" />
-  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="tourAgency" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tourAgency" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tourAgency" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tourAgency" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tourAgency" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tourAgency" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tourAgency" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tourAgency" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tourAgency" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tourAgency" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="touragency" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tourAgency" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tourAgency" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="touragency" type="462c0819:PsiDirectoryNode" />
-              <item name="command" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tourAgency" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tourAgency" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="touragency" type="462c0819:PsiDirectoryNode" />
-              <item name="command" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tourAgency" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tourAgency" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tourAgency" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tourAgency" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tourAgency" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tourAgency" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="touragency" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tourAgency" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tourAgency" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="touragency" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tourAgency" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tourAgency" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tourAgency" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tourAgency" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-    </panes>
-  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -426,8 +96,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ChangeDepartureCityCommandTest">
-    <configuration name="ChangeAdultsNumberCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TourRegisterCommandTest">
+    <configuration name="TicketRegisterCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tourAgency" />
       <extension name="coverage">
         <pattern>
@@ -436,13 +106,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="by.epam.touragency.command.impl" />
-      <option name="MAIN_CLASS_NAME" value="by.epam.touragency.command.impl.ChangeAdultsNumberCommandTest" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.touragency.command.impl.TicketRegisterCommandTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ChangeArrivalCityCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TicketRegisterCommandTest.executeFailValidation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tourAgency" />
       <extension name="coverage">
         <pattern>
@@ -451,13 +121,29 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="by.epam.touragency.command.impl" />
-      <option name="MAIN_CLASS_NAME" value="by.epam.touragency.command.impl.ChangeArrivalCityCommandTest" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.touragency.command.impl.TicketRegisterCommandTest" />
+      <option name="METHOD_NAME" value="executeFailValidation" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TourRegisterCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tourAgency" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.epam.touragency.command.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="by.epam.touragency.command.impl" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.touragency.command.impl.TourRegisterCommandTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ChangeArrivalDateCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TourRegisterCommandTest.executeFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tourAgency" />
       <extension name="coverage">
         <pattern>
@@ -466,13 +152,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="by.epam.touragency.command.impl" />
-      <option name="MAIN_CLASS_NAME" value="by.epam.touragency.command.impl.ChangeArrivalDateCommandTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.touragency.command.impl.TourRegisterCommandTest" />
+      <option name="METHOD_NAME" value="executeFail" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ChangeChildrenNumberCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TourRegisterCommandTest.executeSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tourAgency" />
       <extension name="coverage">
         <pattern>
@@ -481,36 +168,32 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="by.epam.touragency.command.impl" />
-      <option name="MAIN_CLASS_NAME" value="by.epam.touragency.command.impl.ChangeChildrenNumberCommandTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ChangeDepartureCityCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tourAgency" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="by.epam.touragency.command.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="by.epam.touragency.command.impl" />
-      <option name="MAIN_CLASS_NAME" value="by.epam.touragency.command.impl.ChangeDepartureCityCommandTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.touragency.command.impl.TourRegisterCommandTest" />
+      <option name="METHOD_NAME" value="executeSuccess" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ChangeDepartureCityCommandTest" />
-        <item itemvalue="JUnit.ChangeChildrenNumberCommandTest" />
-        <item itemvalue="JUnit.ChangeArrivalDateCommandTest" />
-        <item itemvalue="JUnit.ChangeArrivalCityCommandTest" />
-        <item itemvalue="JUnit.ChangeAdultsNumberCommandTest" />
+        <item itemvalue="JUnit.TourRegisterCommandTest" />
+        <item itemvalue="JUnit.TourRegisterCommandTest.executeSuccess" />
+        <item itemvalue="JUnit.TourRegisterCommandTest.executeFail" />
+        <item itemvalue="JUnit.TicketRegisterCommandTest" />
+        <item itemvalue="JUnit.TicketRegisterCommandTest.executeFailValidation" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand />
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -526,395 +209,11 @@
     </task>
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="ChangeArrivalDateCommandTest - 2019.10.14 at 08h 48m 44s.xml">
-      <configuration name="ChangeArrivalDateCommandTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ChangeArrivalDateCommandTest - 2019.10.14 at 08h 51m 01s.xml">
-      <configuration name="ChangeArrivalDateCommandTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ChangeArrivalDateCommandTest - 2019.10.14 at 08h 52m 20s.xml">
-      <configuration name="ChangeArrivalDateCommandTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ChangeArrivalDateCommandTest - 2019.10.14 at 08h 54m 37s.xml">
-      <configuration name="ChangeArrivalDateCommandTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ChangeArrivalDateCommandTest - 2019.10.14 at 09h 01m 48s.xml">
-      <configuration name="ChangeArrivalDateCommandTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ChangeArrivalDateCommandTest - 2019.10.14 at 09h 02m 35s.xml">
-      <configuration name="ChangeArrivalDateCommandTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ChangeArrivalDateCommandTest - 2019.10.14 at 09h 04m 41s.xml">
-      <configuration name="ChangeArrivalDateCommandTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ChangeChildrenNumberCommandTest - 2019.10.14 at 09h 21m 28s.xml">
-      <configuration name="ChangeChildrenNumberCommandTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ChangeChildrenNumberCommandTest - 2019.10.14 at 09h 22m 24s.xml">
-      <configuration name="ChangeChildrenNumberCommandTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ChangeDepartureCityCommandTest - 2019.10.14 at 09h 31m 21s.xml">
-      <configuration name="ChangeDepartureCityCommandTest" configurationId="JUnit" />
-    </history-entry>
-  </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="4871000" />
   </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.32843137" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.34640524" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Jelastic" order="12" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" />
-      <window_info anchor="bottom" id="Database Changes" order="14" />
-      <window_info anchor="bottom" id="Version Control" order="15" weight="0.32843137" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Database" order="5" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info anchor="right" id="Maven" order="8" weight="0.32980332" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/templates/parts.ftl" />
-    <entry file="file://$PROJECT_DIR$/web/templates/home.ftl" />
-    <entry file="file://$PROJECT_DIR$/web/templates/parts/security.ftl" />
-    <entry file="file://$PROJECT_DIR$/web/templates/parts/common_part.ftl" />
-    <entry file="file://$PROJECT_DIR$/web/jsp/home.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/jsp/inf.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/touragency/entity/UserPrincipal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="53" column="27" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/by/epam/touragency/command/impl/BookingCommandTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="58" column="78" selection-start-line="56" selection-start-column="27" selection-end-line="58" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangePriceCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/OrderChangeLogic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="56" column="9" lean-forward="true" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeLoginCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeHotelCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/LoginLogic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="75" column="20" lean-forward="true" selection-start-line="75" selection-start-column="20" selection-end-line="75" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeNutritionCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="27" column="4" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeTourNameCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/RegisterCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangePhoneNumberCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeEmailCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangePasswordCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeStatusCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/TicketRegisterCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeSurnameCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeNameCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/by/epam/touragency/util/ValidationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/touragency/resource/MessageManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/BookingLogic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/BookingCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/touragency/util/Validation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/TourRegisterCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/TourRegistrationLogic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/UpdateTourLogicTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeAdultsNumberCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="28" column="62" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/by/epam/touragency/command/impl/ChangeAdultsNumberCommandTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43">
-          <caret line="52" selection-start-line="52" selection-end-line="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeArrivalCountryCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="28" column="64" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/by/epam/touragency/command/impl/ChangeArrivalCountryCommandTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="73" column="64" lean-forward="true" selection-start-line="73" selection-start-column="64" selection-end-line="73" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-core/3.0.0/mockito-core-3.0.0.jar!/org/mockito/Mockito.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="73" column="41" selection-start-line="73" selection-start-column="41" selection-end-line="73" selection-end-column="41" />
-          <folding>
-            <element signature="e#2741#2742#0" expanded="true" />
-            <element signature="e#2793#2794#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeArrivalDateCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="62" column="49" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/UpdateTourLogic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1533">
-          <caret line="109" column="10" selection-start-line="109" selection-start-column="10" selection-end-line="109" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeChildrenNumberCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="30" column="31" lean-forward="true" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeArrivalCityCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/by/epam/touragency/command/impl/ChangeChildrenNumberCommandTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="45" column="16" lean-forward="true" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/by/epam/touragency/command/impl/ChangeArrivalCityCommandTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="74" column="28" lean-forward="true" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeDepartureCityCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/by/epam/touragency/command/impl/ChangeDepartureCityCommandTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="64" column="37" lean-forward="true" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/by/epam/touragency/command/impl/ChangeArrivalDateCommandTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="74" column="59" selection-start-line="74" selection-start-column="59" selection-end-line="74" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/touragency/command/impl/ChangeDepartureDateCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="25" column="11" lean-forward="true" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
   </component>
   <component name="masterDetails">
     <states>

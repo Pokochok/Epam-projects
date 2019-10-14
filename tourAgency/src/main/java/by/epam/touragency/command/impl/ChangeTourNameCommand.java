@@ -36,16 +36,16 @@ public class ChangeTourNameCommand {
     public ModelAndView execute(
             @RequestParam(value = PARAM_NAME_NEW_TOUR_NAME) String newTourName,
             @RequestParam(value = PARAM_NAME_TOUR_NAME) String tourName,
-            @SessionAttribute(value = ATTR_NAME_LANGUAGE) Locale language,
+            @SessionAttribute(value = ATTR_NAME_LANGUAGE, required = false) Locale language,
             @RequestParam(value = PARAM_NAME_TOUR_ID) String id
     ) throws CommandException {
         if (language == null){
             language = new Locale(EN_LOCALE);
         }
         ModelAndView modelAndView = new ModelAndView();
-        if (!validation.validateTourStringItems(newTourName) || !validation.validateTourStringItems(tourName) ||
-                !validation.validateId(id)) {
-            modelAndView.setViewName(ConfigurationManager.getProperty(TOUR_OVERVIEW_PAGE_PATH));
+        modelAndView.setViewName(ConfigurationManager.getProperty(TOUR_OVERVIEW_PAGE_PATH));
+        if (!validation.validateId(id)|| !validation.validateTourStringItems(tourName) ||
+                !validation.validateTourStringItems(newTourName) ) {
             return modelAndView;
         }
         int tourId = Integer.parseInt(id);
@@ -60,7 +60,6 @@ public class ChangeTourNameCommand {
         } catch (LogicException e) {
             throw new CommandException(e);
         }
-        modelAndView.setViewName(ConfigurationManager.getProperty(TOUR_OVERVIEW_PAGE_PATH));
         return modelAndView;
     }
 }

@@ -25,21 +25,17 @@ public class LoginCommand {
     @Autowired
     private MessageManager messageManager;
 
-
-    @Autowired
-    private LoginLogic loginLogic;
-
     @RequestMapping(value = "/login_setter")
     public ModelAndView execute(@RequestParam(value = "language", required = false) Locale language
                                 ) throws CommandException {
         if (language == null){
-            language = new Locale("en");
+            language = new Locale(EN_LOCALE);
         }
         ModelAndView modelAndView = new ModelAndView();
         String page = null;
         UserPrincipal userPrincipal = null;
         SecurityContext securityContext = SecurityContextHolder.getContext();
-        if (!(securityContext.getAuthentication() instanceof AnonymousAuthenticationToken)) {
+        if (isValid(securityContext)) {
               userPrincipal = (UserPrincipal)securityContext.getAuthentication().getPrincipal();
         }
 
@@ -63,5 +59,7 @@ public class LoginCommand {
         return modelAndView;
     }
 
-
+    public boolean isValid(SecurityContext securityContext){
+        return !(securityContext.getAuthentication() instanceof AnonymousAuthenticationToken);
+    }
 }

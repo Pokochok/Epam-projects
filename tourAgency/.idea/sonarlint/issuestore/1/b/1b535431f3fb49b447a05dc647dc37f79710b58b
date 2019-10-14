@@ -1,0 +1,4 @@
+
+csquid:S00112-"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ
+Δ%squid:RedundantThrowsDeclarationCheck"’Remove the declaration of thrown exception 'org.springframework.security.core.userdetails.UsernameNotFoundException' which is a runtime exception.(«•
+~squid:UselessImportCheck"NRemove this unused import 'by.epam.touragency.repository.impl.UserRepository'.(Φªεψÿÿÿÿ8†ω¶βΪ-

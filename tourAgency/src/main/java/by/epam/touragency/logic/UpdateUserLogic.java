@@ -8,14 +8,20 @@ import by.epam.touragency.specification.Specification;
 import by.epam.touragency.specification.impl.admin.*;
 import by.epam.touragency.specification.impl.agent.*;
 import by.epam.touragency.specification.impl.client.*;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCrypt;
+import org.springframework.stereotype.Service;
 
 import static by.epam.touragency.util.PageMsgConstant.LOGGER;
 
 /**
  * For user updates logic
  */
+@Service
 public class UpdateUserLogic {
+    @Autowired
+    private MatchOfUniqueFieldsDetector matchOfUniqueFieldsDetector;
+
     /**
      * Updates user email
      * @param role user role
@@ -24,14 +30,14 @@ public class UpdateUserLogic {
      * @return true, if updating completed successfully, and false - if not
      * @throws LogicException if handled RepositoryException
      */
-    public static boolean updateEmail(String role, String email, String login) throws LogicException {
+    public boolean updateEmail(String role, String email, String login) throws LogicException {
         boolean flag = false;
         Specification specification = defineSpecificationForEmail(role, email, login);
 
         UserRepository repository = UserRepository.getInstance();
         try {
-            if (flag = !(MatchOfUniqueFieldsDetector.isExistsEmail(email)
-                    || !MatchOfUniqueFieldsDetector.isExistsLogin(login))) {
+            if (flag = !(matchOfUniqueFieldsDetector.isExistsEmail(email)
+                    || !matchOfUniqueFieldsDetector.isExistsLogin(login))) {
                 repository.update(null, specification);
             }
         } catch (RepositoryException e) {
@@ -48,7 +54,7 @@ public class UpdateUserLogic {
      * @return specification
      * @throws LogicException if if user role is not defined
      */
-    private static Specification defineSpecificationForEmail(String role, String email, String login) throws LogicException {
+    private Specification defineSpecificationForEmail(String role, String email, String login) throws LogicException {
         Specification specification = null;
         switch (Role.valueOf(role)) {
             case AGENT: {
@@ -79,14 +85,14 @@ public class UpdateUserLogic {
      * @return true, if updating completed successfully, and false - if not
      * @throws LogicException if handled RepositoryException
      */
-    public static boolean updatePhoneNumber(String role, String newPhoneNumber, String login) throws LogicException {
+    public boolean updatePhoneNumber(String role, String newPhoneNumber, String login) throws LogicException {
         boolean flag = false;
         Specification specification = defineSpecificationForPhoneNumber(role, newPhoneNumber, login);
 
         UserRepository repository = UserRepository.getInstance();
         try {
-            if (flag = !(MatchOfUniqueFieldsDetector.isExistsPhoneNumber(newPhoneNumber)
-                    || !MatchOfUniqueFieldsDetector.isExistsLogin(login))) {
+            if (flag = !(matchOfUniqueFieldsDetector.isExistsPhoneNumber(newPhoneNumber)
+                    || !matchOfUniqueFieldsDetector.isExistsLogin(login))) {
                 repository.update(null, specification);
             }
         } catch (RepositoryException e) {
@@ -103,7 +109,7 @@ public class UpdateUserLogic {
      * @return specification
      * @throws LogicException if if user role is not defined
      */
-    private static Specification defineSpecificationForPhoneNumber(String role, String newPhoneNumber, String login) throws LogicException {
+    private Specification defineSpecificationForPhoneNumber(String role, String newPhoneNumber, String login) throws LogicException {
         Specification specification = null;
         switch (Role.valueOf(role)) {
             case AGENT: {
@@ -134,14 +140,14 @@ public class UpdateUserLogic {
      * @return true, if updating completed successfully, and false - if not
      * @throws LogicException if handled RepositoryException
      */
-    public static boolean updateLogin(String role, String login, String email) throws LogicException {
+    public boolean updateLogin(String role, String login, String email) throws LogicException {
         boolean flag = false;
         Specification specification = defineSpecificationForLogin(role, login, email);
 
         UserRepository repository = UserRepository.getInstance();
         try {
-            if (flag = !(MatchOfUniqueFieldsDetector.isExistsLogin(login)
-                    || !MatchOfUniqueFieldsDetector.isExistsEmail(email))) {
+            if (flag = !(matchOfUniqueFieldsDetector.isExistsLogin(login)
+                    || !matchOfUniqueFieldsDetector.isExistsEmail(email))) {
                 repository.update(null, specification);
             }
         } catch (RepositoryException e) {
@@ -158,7 +164,7 @@ public class UpdateUserLogic {
      * @return specification
      * @throws LogicException if if user role is not defined
      */
-    private static Specification defineSpecificationForLogin(String role, String login, String email) throws LogicException {
+    private Specification defineSpecificationForLogin(String role, String login, String email) throws LogicException {
         Specification specification = null;
         switch (Role.valueOf(role)) {
             case AGENT: {
@@ -190,7 +196,7 @@ public class UpdateUserLogic {
      * @return true, if updating completed successfully, and false - if not
      * @throws LogicException if handled RepositoryException or if user role is not defined
      */
-    public static boolean updatePassword(String role, String login, String password, String newPassword) throws LogicException {
+    public boolean updatePassword(String role, String login, String password, String newPassword) throws LogicException {
         String encryptedPassword = BCrypt.hashpw(password, BCrypt.gensalt());
         String encryptedNewPassword =  BCrypt.hashpw(password, BCrypt.gensalt());
         boolean flag = false;
@@ -237,13 +243,13 @@ public class UpdateUserLogic {
      * @return true, if updating completed successfully, and false - if not
      * @throws LogicException if handled RepositoryException
      */
-    public static boolean updateName(String role, String login, String newName) throws LogicException {
+    public boolean updateName(String role, String login, String newName) throws LogicException {
         Specification specification = defineSpecificationForName(role, newName, login);
 
         boolean flag = false;
         UserRepository repository = UserRepository.getInstance();
         try {
-            if (flag = MatchOfUniqueFieldsDetector.isExistsLogin(login)) {
+            if (flag = matchOfUniqueFieldsDetector.isExistsLogin(login)) {
                 repository.update(null, specification);
             }
         } catch (RepositoryException e) {
@@ -260,7 +266,7 @@ public class UpdateUserLogic {
      * @return specification
      * @throws LogicException if if user role is not defined
      */
-    private static Specification defineSpecificationForName(String role, String newName, String login) throws LogicException {
+    private Specification defineSpecificationForName(String role, String newName, String login) throws LogicException {
         Specification specification = null;
         switch (Role.valueOf(role)) {
             case AGENT: {
@@ -291,13 +297,13 @@ public class UpdateUserLogic {
      * @return true, if updating completed successfully, and false - if not
      * @throws LogicException if handled RepositoryException
      */
-    public static boolean updateSurname(String role, String login, String newSurname) throws LogicException {
+    public boolean updateSurname(String role, String login, String newSurname) throws LogicException {
         Specification specification = defineSpecificationForSurname(role, newSurname, login);
 
         boolean flag = false;
         UserRepository repository = UserRepository.getInstance();
         try {
-            if (flag = MatchOfUniqueFieldsDetector.isExistsLogin(login)) {
+            if (flag = matchOfUniqueFieldsDetector.isExistsLogin(login)) {
                 repository.update(null, specification);
             }
         } catch (RepositoryException e) {
@@ -314,7 +320,7 @@ public class UpdateUserLogic {
      * @return specification
      * @throws LogicException if user role is not defined
      */
-    private static Specification defineSpecificationForSurname(String role, String newSurname, String login) throws LogicException {
+    private Specification defineSpecificationForSurname(String role, String newSurname, String login) throws LogicException {
         Specification specification = null;
         switch (Role.valueOf(role)) {
             case AGENT: {

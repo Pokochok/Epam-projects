@@ -33,9 +33,9 @@ public class ChangePriceCommand {
             @RequestParam(PARAM_NAME_TOUR_ID) String tourIdStr
     ) throws CommandException {
         ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName(ConfigurationManager.getProperty(TOUR_OVERVIEW_PAGE_PATH));
         if (!validation.validatePrice(newPriceStr) ||
                 !validation.validateId(tourIdStr)){
-            modelAndView.setViewName(ConfigurationManager.getProperty(TOUR_OVERVIEW_PAGE_PATH));
             return modelAndView;
         }
 
@@ -47,7 +47,6 @@ public class ChangePriceCommand {
             throw new CommandException(e);
         }
         modelAndView.addObject(ATTR_NAME_PRICE, newPrice);
-        modelAndView.setViewName(ConfigurationManager.getProperty(TOUR_OVERVIEW_PAGE_PATH));
         return modelAndView;
     }
 }

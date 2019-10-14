@@ -23,6 +23,9 @@ import static by.epam.touragency.util.ParameterConstant.*;
 @Controller
 public class ChangeEmailCommand {
     @Autowired
+    private UpdateUserLogic updateUserLogic;
+
+    @Autowired
     private Validation validation;
 
     @Autowired
@@ -34,18 +37,18 @@ public class ChangeEmailCommand {
             @SessionAttribute(value = PARAM_NAME_USER_LOGIN) String login,
             @RequestParam(value = PARAM_NAME_NEW_EMAIL) String email,
             @SessionAttribute(value = PARAM_NAME_ROLE) String role,
-            @SessionAttribute(value = ATTR_NAME_LANGUAGE) Locale language
+            @SessionAttribute(value = ATTR_NAME_LANGUAGE, required = false) Locale language
     ) throws CommandException {
         if (language == null){
             language = new Locale(EN_LOCALE);
         }
         ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH));
         if (!validation.validateEmail(email) || !validation.validateLogin(login)){
-            modelAndView.setViewName(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH));
             return modelAndView;
         }
         try {
-            if (UpdateUserLogic.updateEmail(role, email, login)) {
+            if (updateUserLogic.updateEmail(role, email, login)) {
                 modelAndView.addObject(ATTR_NAME_USER_EMAIL, email);
             } else {
                 modelAndView.addObject(ATTR_NAME_ERROR_EMAIL_EXISTS,
@@ -54,7 +57,6 @@ public class ChangeEmailCommand {
         }catch (LogicException e){
             throw new CommandException(e);
         }
-        modelAndView.setViewName(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH));
         return modelAndView;
         }
 }

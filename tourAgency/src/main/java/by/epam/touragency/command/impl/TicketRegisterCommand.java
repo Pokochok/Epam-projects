@@ -22,6 +22,9 @@ import static by.epam.touragency.util.ParameterConstant.*;
 @Controller
 public class TicketRegisterCommand {
     @Autowired
+    private TicketRegistrationLogic ticketRegistrationLogic;
+
+    @Autowired
     private MessageManager messageManager;
 
     @Autowired
@@ -63,24 +66,24 @@ public class TicketRegisterCommand {
         }
 
         try {
-            if (TicketRegistrationLogic.isTicketExists(flightNumber, ticketNumber, departureCity,
+            if (isValid && ticketRegistrationLogic.isTicketExists(flightNumber, ticketNumber, departureCity,
                     arrivalCity, departureDate, arrivalDate)) {
                 LOGGER.debug("Ticket is exists");
                 isValid = false;
             }
             if (isValid) {
-                TicketRegistrationLogic.addTicket(flightNumber, ticketNumber, departureCity,
+                ticketRegistrationLogic.addTicket(flightNumber, ticketNumber, departureCity,
                         arrivalCity, departureDate, arrivalDate);
                 modelAndView.addObject(ATTR_NAME_MSG_KEY, REGISTRATION_SUCCESS_MSG_KEY);
-                page = ConfigurationManager.getProperty(INF_PAGE_FLAG);
+                page = ConfigurationManager.getProperty(TO_INF_PAGE_PATH);
             } else {
                 modelAndView.addObject(ATTR_NAME_MSG_KEY, REGISTRATION_NOT_SUCCESS_MSG_KEY);
-                page = ConfigurationManager.getProperty(INF_PAGE_FLAG);
+                page = ConfigurationManager.getProperty(TO_INF_PAGE_PATH);
             }
         }catch (LogicException e){
             throw new CommandException(e);
         }
         modelAndView.setViewName(page);
-        return new ToInfCommand().execute(modelAndView);
+        return modelAndView;
     }
 }

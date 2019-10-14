@@ -7,10 +7,12 @@ import by.epam.touragency.repository.impl.TicketRepository;
 import by.epam.touragency.specification.Specification;
 import by.epam.touragency.specification.impl.ticket.AddTicketSpecification;
 import by.epam.touragency.specification.impl.ticket.FindTicketsByAllContentSpecification;
+import org.springframework.stereotype.Service;
 
 /**
  * For ticket registration logic
  */
+@Service
 public class TicketRegistrationLogic {
     /**
      * Checks, if ticket with such parameters exists
@@ -23,7 +25,7 @@ public class TicketRegistrationLogic {
      * @return true, if ticket exists, and false - if not
      * @throws LogicException if handled RepositoryException
      */
-    public static boolean isTicketExists(String flightNumber, String ticketNumber, String departureCity,
+    public boolean isTicketExists(String flightNumber, String ticketNumber, String departureCity,
                                          String arrivalCity, long departureDate, long arrivalDate) throws LogicException {
         boolean flag = false;
         Specification specificationForValidate = new FindTicketsByAllContentSpecification(Integer.parseInt(flightNumber),
@@ -48,7 +50,7 @@ public class TicketRegistrationLogic {
      * @param arrivalDate arrival date
      * @throws LogicException if handled RepositoryException
      */
-    public static void addTicket(String flightNumber, String ticketNumber, String departureCity,
+    public void addTicket(String flightNumber, String ticketNumber, String departureCity,
                                  String arrivalCity, long departureDate, long arrivalDate) throws LogicException {
         Ticket ticket = new Ticket.TicketBuilder()
                 .setFlightNumber(Integer.parseInt(flightNumber))

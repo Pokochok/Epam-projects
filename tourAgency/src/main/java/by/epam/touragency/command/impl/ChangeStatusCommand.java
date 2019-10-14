@@ -34,8 +34,8 @@ public class ChangeStatusCommand {
     ) throws CommandException {
         status = Objects.equals(status, "AVAILABLE") ? "NOT_AVAILABLE" : "AVAILABLE";
         ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName(ConfigurationManager.getProperty(TOUR_OVERVIEW_PAGE_PATH));
         if (!validation.validateId(touridStr)) {
-            modelAndView.setViewName(ConfigurationManager.getProperty(TOUR_OVERVIEW_PAGE_PATH));
             return modelAndView;
         }
         int tourId = Integer.parseInt(touridStr);
@@ -45,7 +45,6 @@ public class ChangeStatusCommand {
             throw new CommandException(e);
         }
         modelAndView.addObject(ATTR_NAME_STATUS, status);
-        modelAndView.setViewName(ConfigurationManager.getProperty(TOUR_OVERVIEW_PAGE_PATH));
         return modelAndView;
     }
 }

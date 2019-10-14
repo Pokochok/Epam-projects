@@ -16,10 +16,12 @@ import by.epam.touragency.specification.impl.client.FindClientByEmailSpecificati
 import by.epam.touragency.specification.impl.client.FindClientByLoginSpecification;
 import by.epam.touragency.specification.impl.client.FindClientByPhoneNumberSpecification;
 import by.epam.touragency.specification.impl.tour.FindTourByNameSpecification;
+import org.springframework.stereotype.Service;
 
 /**
  * For matching unique fields
  */
+@Service
 public class MatchOfUniqueFieldsDetector {
     /**
      * Checks, if such email exists
@@ -27,7 +29,7 @@ public class MatchOfUniqueFieldsDetector {
      * @return true, if email exists, and false - if not
      * @throws LogicException if handled RepositoryException
      */
-    public static boolean isExistsEmail(String email) throws LogicException {
+    public boolean isExistsEmail(String email) throws LogicException {
         boolean flag = false;
         Repository repository = UserRepository.getInstance();
         Specification clientSpecification = new FindClientByEmailSpecification(email);
@@ -49,7 +51,7 @@ public class MatchOfUniqueFieldsDetector {
      * @return true, if phone number exists, and false - if not
      * @throws LogicException if handled RepositoryException
      */
-    public static boolean isExistsPhoneNumber(String phoneNumber) throws LogicException {
+    public boolean isExistsPhoneNumber(String phoneNumber) throws LogicException {
         boolean flag = false;
         Repository repository = UserRepository.getInstance();
         Specification clientSpecification = new FindClientByPhoneNumberSpecification(phoneNumber);
@@ -71,7 +73,7 @@ public class MatchOfUniqueFieldsDetector {
      * @return true, if phone number exists, and false - if not
      * @throws LogicException if handled RepositoryException
      */
-    public static boolean isExistsLogin(String login) throws LogicException {
+    public boolean isExistsLogin(String login) throws LogicException {
         boolean flag = false;
         Repository repository = UserRepository.getInstance();
         Specification clientSpecification = new FindClientByLoginSpecification(login);
@@ -93,7 +95,7 @@ public class MatchOfUniqueFieldsDetector {
      * @return true, if phone number exists, and false - if not
      * @throws LogicException if handled RepositoryException
      */
-    public static boolean isExistsTourName(String tourName) throws LogicException {
+    public boolean isExistsTourName(String tourName) throws LogicException {
         Specification specification = new FindTourByNameSpecification(tourName);
         try {
             return TourRepository.getInstance().isExistsQuery(specification);

@@ -10,12 +10,14 @@ import by.epam.touragency.specification.Specification;
 import by.epam.touragency.specification.impl.agent.AddAgentSpecification;
 import by.epam.touragency.specification.impl.client.AddClientSpecification;
 import org.springframework.security.crypto.bcrypt.BCrypt;
+import org.springframework.stereotype.Service;
 
 import static by.epam.touragency.util.PageMsgConstant.LOGGER;
 
 /**
  * For user registration logic
  */
+@Service
 public class UserRegistrationLogic {
     /**
      * Adds new user to database
@@ -28,7 +30,7 @@ public class UserRegistrationLogic {
      * @param role user rolee
      * @throws LogicException if handled RepositoryException
      */
-    public static void addUser(String name, String surname, String email, String phoneNumber, String login,
+    public void addUser(String name, String surname, String email, String phoneNumber, String login,
                                String password, Role role) throws LogicException {
         Repository repository = UserRepository.getInstance();
         User user = new User.UserBuilder()
@@ -54,7 +56,7 @@ public class UserRegistrationLogic {
      * @return specification
      * @throws LogicException if user role not defined
      */
-    private static Specification defineAddUserSpecification(Role role, User user) throws LogicException {
+    private Specification defineAddUserSpecification(Role role, User user) throws LogicException {
         Specification specification = null;
         switch (role) {
             case CLIENT: {

@@ -23,6 +23,9 @@ import static by.epam.touragency.util.ParameterConstant.*;
 @Controller
 public class ChangeLoginCommand {
     @Autowired
+    private UpdateUserLogic updateUserLogic;
+
+    @Autowired
     private MessageManager messageManager;
 
     @Autowired
@@ -34,20 +37,21 @@ public class ChangeLoginCommand {
             @SessionAttribute(value = PARAM_NAME_USER_EMAIL) String email,
             @RequestParam(value = PARAM_NAME_NEW_LOGIN) String login,
             @SessionAttribute(value = PARAM_NAME_ROLE) String role,
-            @SessionAttribute(value = ATTR_NAME_LANGUAGE) Locale language
+            @SessionAttribute(value = ATTR_NAME_LANGUAGE, required = false) Locale language
     ) throws CommandException {
         if (language == null){
             language = new Locale(EN_LOCALE);
         }
         ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH));
         if (!validation.validateLogin(login)) {
             modelAndView.addObject(ATTR_NAME_ERROR_CHANGE_LOGIN,
                     messageManager.getProperty(CHANGE_LOGIN_ERROR_MSG_KEY, language));
-            modelAndView.setViewName(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH));
+            return modelAndView;
         }
 
         try {
-            if (UpdateUserLogic.updateLogin(role, login, email)) {
+            if (updateUserLogic.updateLogin(role, login, email)) {
                 modelAndView.addObject(ATTR_NAME_USER_LOGIN, login);
             } else {
                 modelAndView.addObject(ATTR_NAME_ERROR_LOGIN_EXISTS,
@@ -56,7 +60,6 @@ public class ChangeLoginCommand {
         } catch (LogicException e) {
             throw new CommandException(e);
         }
-        modelAndView.setViewName(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH));
         return modelAndView;
     }
 }

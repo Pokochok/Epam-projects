@@ -24,6 +24,9 @@ import static by.epam.touragency.util.ParameterConstant.*;
 @Controller
 public class TourRegisterCommand {
     @Autowired
+    MatchOfUniqueFieldsDetector matchOfUniqueFieldsDetector;
+
+    @Autowired
     private  TourRegistrationLogic tourRegistrationLogic;
 
     @Autowired
@@ -42,13 +45,13 @@ public class TourRegisterCommand {
             @RequestParam(value = ATTR_NAME_HOTEL) String hotel,
             @RequestParam(value = ATTR_NAME_NUTRITION) String nutrition,
             @RequestParam(value = PARAM_NAME_TOUR_STATUS) String isAvailable,
-            @RequestParam(value = ATTR_NAME_LANGUAGE, required = false)String language,
             @RequestParam(value = ATTR_NAME_CHILDREN_NUMBER) String childrenNumber,
             @RequestParam(value = ATTR_NAME_ADULTS_NUMBER) String adultsNumber,
             @RequestParam(value = ATTR_NAME_PRICE) String price,
             @RequestParam(value = PARAM_NAME_DEPARTURE_DATE) String departureDateStr,
-            @RequestParam(value = PARAM_NAME_ARRIVAL_DATE) String arrivalDateStr
-    ) throws CommandException {
+            @RequestParam(value = PARAM_NAME_ARRIVAL_DATE) String arrivalDateStr,
+            @RequestParam(value = ATTR_NAME_LANGUAGE, required = false)String language
+            ) throws CommandException {
         String page = null;
         boolean isValid = true;
         if (language == null){
@@ -74,7 +77,7 @@ public class TourRegisterCommand {
         }
 
         try {
-            if (MatchOfUniqueFieldsDetector.isExistsTourName(tourName)){
+            if (matchOfUniqueFieldsDetector.isExistsTourName(tourName)){
                 isValid = false;
                 LOGGER.info("Invalid data entered. Tour name exists");
                 modelAndView.addObject(ATTR_NAME_ERROR_TOUR_NAME_EXISTS,
@@ -84,7 +87,7 @@ public class TourRegisterCommand {
                 tourRegistrationLogic.addTour(tourName, departureDate, arrivalDate, departureCity, arrivalCity, arrivalCountry, hotel,
                         nutrition, numberOfAdults, numberOfChildren, priceBD, isAvailable);
                 modelAndView.addObject(ATTR_NAME_MSG_KEY,  REGISTRATION_SUCCESS_MSG_KEY);
-                page = ConfigurationManager.getProperty(INF_PAGE_FLAG);
+                page = ConfigurationManager.getProperty(INF_PAGE_PATH);
                 modelAndView.setViewName(page);
             } else {
                 page = ConfigurationManager.getProperty(TO_TOUR_REGISTRATION_PAGE_PATH);
@@ -94,6 +97,6 @@ public class TourRegisterCommand {
         } catch (LogicException e) {
             throw new CommandException(e);
         }
-        return new ToInfCommand().execute(modelAndView);
+        return modelAndView;
     }
 }

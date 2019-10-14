@@ -23,6 +23,9 @@ import static by.epam.touragency.util.ParameterConstant.*;
 @Controller
 public class ChangeSurnameCommand {
     @Autowired
+    private UpdateUserLogic updateUserLogic;
+
+    @Autowired
     private Validation validation;
 
     @Autowired
@@ -40,19 +43,18 @@ public class ChangeSurnameCommand {
             language = new Locale(EN_LOCALE);
         }
         ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH));
         if (!validation.validateName(newSurname)){
             modelAndView.addObject(ATTR_NAME_ERROR_CHANGE_USER_SURNAME,
                     messageManager.getProperty(CHANGE_SURNAME_ERROR_MSG_KEY, language));
-            modelAndView.setViewName(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH));
             return modelAndView;
         }
         try {
-            UpdateUserLogic.updateSurname(role, login, newSurname);
+            updateUserLogic.updateSurname(role, login, newSurname);
         } catch (LogicException e) {
             throw new CommandException(e);
         }
         modelAndView.addObject(ATTR_NAME_USER_SURNAME, newSurname);
-        modelAndView.setViewName(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH));
         return modelAndView;
     }
 }

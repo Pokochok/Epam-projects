@@ -22,8 +22,15 @@ import static by.epam.touragency.util.ParameterConstant.*;
 
 @Controller
 public class RegisterCommand {
+
+    @Autowired
+    MatchOfUniqueFieldsDetector matchOfUniqueFieldsDetector;
+
     @Autowired
     private Validation validation;
+
+    @Autowired
+    UserRegistrationLogic userRegistrationLogic;
 
     @Autowired
     private MessageManager messageManager;
@@ -43,34 +50,34 @@ public class RegisterCommand {
         String page = null;
         boolean isValid = true;
         ModelAndView modelAndView = new ModelAndView();
-        if (language == null){
+        if (language == null) {
             language = EN_LOCALE;
         }
 
         try {
             if (!validation.validateName(name) || !validation.validateName(surname) || !validation.validateEmail(email) ||
                     !validation.validatePhoneNumber(phoneNumber) || !validation.validateLogin(login) ||
-                    !validation.validatePassword(password)){
+                    !validation.validatePassword(password)) {
                 modelAndView.setViewName(ConfigurationManager.getProperty(REGISTRATION_PAGE_PATH));
                 return modelAndView;
             }
-                if (MatchOfUniqueFieldsDetector.isExistsLogin(login)) {
-                    isValid = false;
-                    modelAndView.addObject(ATTR_NAME_ERROR_LOGIN_EXISTS, messageManager.getProperty(LOGIN_EXISTS_MSG_KEY, new Locale(language)));
-                }
-            if (MatchOfUniqueFieldsDetector.isExistsEmail(email)) {
+            if (matchOfUniqueFieldsDetector.isExistsLogin(login)) {
+                isValid = false;
+                modelAndView.addObject(ATTR_NAME_ERROR_LOGIN_EXISTS, messageManager.getProperty(LOGIN_EXISTS_MSG_KEY, new Locale(language)));
+            }
+            if (matchOfUniqueFieldsDetector.isExistsEmail(email)) {
                 isValid = false;
                 modelAndView.addObject(ATTR_NAME_ERROR_EMAIL_EXISTS, messageManager.getProperty(EMAIL_EXISTS_MSG_KEY, new Locale(language)));
             }
-            if (MatchOfUniqueFieldsDetector.isExistsPhoneNumber(phoneNumber)) {
+            if (matchOfUniqueFieldsDetector.isExistsPhoneNumber(phoneNumber)) {
                 isValid = false;
                 modelAndView.addObject(ATTR_NAME_ERROR_PHONE, messageManager.getProperty(PHONE_EXISTS_MSG_KEY, new Locale(language)));
             }
 
             if (isValid) {
-                UserRegistrationLogic.addUser(name, surname, email, phoneNumber, login, password, Role.valueOf(role.toUpperCase()));
+                userRegistrationLogic.addUser(name, surname, email, phoneNumber, login, password, Role.valueOf(role.toUpperCase()));
                 modelAndView.addObject(ATTR_NAME_MSG_KEY, REGISTRATION_SUCCESS_MSG_KEY);
-                page = ConfigurationManager.getProperty(INF_PAGE_FLAG);
+                page = ConfigurationManager.getProperty(TO_INF_PAGE_PATH);
             } else {
                 page = ConfigurationManager.getProperty(REGISTRATION_PAGE_PATH);
                 modelAndView.setViewName(page);
@@ -80,6 +87,6 @@ public class RegisterCommand {
             throw new CommandException(e);
         }
         modelAndView.setViewName(page);
-        return new ToInfCommand().execute(modelAndView);
+        return modelAndView;
     }
 }

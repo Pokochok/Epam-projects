@@ -1,0 +1,5 @@
+
+lsquid:UselessImportCheck"<Remove this unused import 'org.apache.logging.log4j.Logger'.(»¯øÿÿÿÿ8§¯½ßÚ-
+Ÿsquid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ðÙàø8ûõÉÞÚ-
+Zsquid:S2629"7Use the built-in formatting to construct this argument.(™Æ°¼øÿÿÿÿ8áÓâÚ-
+dsquid:S3457"AFormat specifiers should be used instead of string concatenation.(™Æ°¼øÿÿÿÿ8áÓâÚ-

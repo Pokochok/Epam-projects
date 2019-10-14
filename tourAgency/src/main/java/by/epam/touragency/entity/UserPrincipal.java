@@ -4,10 +4,11 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.security.Principal;
 import java.util.Collection;
 import java.util.Collections;
 
-public class UserPrincipal implements UserDetails {
+public class UserPrincipal implements UserDetails, Principal {
 
     private User user;
 
@@ -80,4 +81,8 @@ public class UserPrincipal implements UserDetails {
     }
 
 
+    @Override
+    public String getName() {
+        return user.getName();
+    }
 }

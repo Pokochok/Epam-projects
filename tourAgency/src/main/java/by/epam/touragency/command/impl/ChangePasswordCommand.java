@@ -22,6 +22,9 @@ import static by.epam.touragency.util.ParameterConstant.*;
 @Controller
 public class ChangePasswordCommand {
     @Autowired
+    private UpdateUserLogic updateUserLogic;
+
+    @Autowired
     private Validation validation;
 
     @Autowired
@@ -34,21 +37,21 @@ public class ChangePasswordCommand {
             @RequestParam(value = PARAM_NAME_NEW_PASSWORD) String newPassword,
             @RequestParam(value = PARAM_NAME_PASSWORD) String password,
             @SessionAttribute(value = PARAM_NAME_ROLE) String role,
-            @SessionAttribute(value = ATTR_NAME_LANGUAGE) Locale language
+            @SessionAttribute(value = ATTR_NAME_LANGUAGE, required = false) Locale language
     ) throws CommandException {
         if (language == null){
             language = new Locale(EN_LOCALE);
         }
         ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH));
         if (!validation.validatePassword(password) || !validation.validatePassword(newPassword)){
             modelAndView.addObject(ATTR_NAME_ERROR_CHANGE_PASSWORD,
                     messageManager.getProperty(CHANGE_PASSWORD_ERROR_MSG_KEY, language));
-            modelAndView.setViewName(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH));
             return modelAndView;
         }
 
         try {
-            if (UpdateUserLogic.updatePassword(role, login, password, newPassword)) {
+            if (updateUserLogic.updatePassword(role, login, password, newPassword)) {
                 modelAndView.addObject(ATTR_NAME_RESULT_CHANGE_PASSWORD,
                         messageManager.getProperty(CHANGE_PASSWORD_SUCCESS_MSG_KEY, language));
             } else {
@@ -58,7 +61,6 @@ public class ChangePasswordCommand {
         }catch (LogicException e){
             throw new CommandException(e);
         }
-        modelAndView.setViewName(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH));
         return modelAndView;
     }
 }

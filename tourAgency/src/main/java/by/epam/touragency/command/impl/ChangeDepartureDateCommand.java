@@ -40,35 +40,37 @@ public class ChangeDepartureDateCommand {
             @RequestParam(PARAM_NAME_NEW_DEPARTURE_DATE) String newDepartureDateStr,
             @RequestParam(PARAM_NAME_ARRIVAL_DATE) String arrivalDateStr,
             @RequestParam(value = PARAM_NAME_TOUR_ID) String tourIdStr,
-            @SessionAttribute(value = ATTR_NAME_LANGUAGE) Locale language
+            @SessionAttribute(value = ATTR_NAME_LANGUAGE, required = false) Locale language
     ) throws CommandException {
         if (language == null){
             language = new Locale(EN_LOCALE);
         }
         ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName(ConfigurationManager.getProperty(TOUR_OVERVIEW_PAGE_PATH));
         if (!validation.validateId(tourIdStr)){
-            modelAndView.setViewName(ConfigurationManager.getProperty(TOUR_OVERVIEW_PAGE_PATH));
             return modelAndView;
         }
         int tourId = Integer.parseInt(tourIdStr);
-        long    newDepartureDate = validation.validateDate(newDepartureDateStr);
-        long    arrivalDate = validation.validateDate(arrivalDateStr);
+        long  newDepartureDate = validation.validateDate(newDepartureDateStr);
+        long  arrivalDate = validation.validateDate(arrivalDateStr);
+        boolean isValidDate = true;
         if (newDepartureDate == -1 || arrivalDate == -1){
+            isValidDate = false;
             LOGGER.debug("Error in date parsing");
         }
 
         try {
-            if (newDepartureDate < arrivalDate && new Date().before(new Date(newDepartureDate))) {
+            if (isValidDate && newDepartureDate < arrivalDate && new Date().before(new Date(newDepartureDate))) {
                 updateTourLogic.updateDepartureDate(newDepartureDate, tourId);
                 modelAndView.addObject(ATTR_NAME_DEPARTURE_DATE, validation.dateToFormat(newDepartureDate));
             } else {
+                LOGGER.debug("Invalid date entered");
                 modelAndView.addObject(ATTR_NAME_ERROR_DATE,
                         messageManager.getProperty(DATE_ERROR_MSG_KEY, language));
             }
         }catch (LogicException e){
             throw new CommandException(e);
         }
-        modelAndView.setViewName(ConfigurationManager.getProperty(TOUR_OVERVIEW_PAGE_PATH));
         return modelAndView;
     }
 }

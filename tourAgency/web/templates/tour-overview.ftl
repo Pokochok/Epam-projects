@@ -1,29 +1,14 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<c:set value="${not empty tourName ? tourName : param.tourName}" scope="page" var="tourName"/>
-<c:set value="${not empty arrivalCountry ? arrivalCountry : param.arrivalCountry}" scope="page"
-       var="arrivalCountry"/>
-<c:set value="${not empty arrivalCity ? arrivalCity : param.arrivalCity}" scope="page" var="arrivalCity"/>
-<c:set value="${not empty departureCity ? departureCity : param.departureCity}" scope="page" var="departureCity"/>
-<c:set value="${not empty departureDate ? departureDate : param.departureDate}" scope="page" var="departureDate"/>
-<c:set value="${not empty arrivalDate ? arrivalDate : param.arrivalDate}" scope="page" var="arrivalDate"/>
-<c:set value="${not empty hotel ? hotel : param.hotel}" scope="page" var="hotel"/>
-<c:set value="${not empty nutrition ? nutrition : param.nutrition}" scope="page" var="nutrition"/>
-<c:set value="${not empty adultsNumber ? adultsNumber : param.adultsNumber}" scope="page" var="adultsNumber"/>
-<c:set value="${not empty childrenNumber ? childrenNumber : param.childrenNumber}" scope="page" var="childrenNumber"/>
-<c:set value="${not empty price ? price : param.price}" scope="page" var="price"/>
-<c:set value="${not empty status ? status : param.status}" scope="page" var="status"/>
-
+<#import "components/main-panel.ftl" as mainPanel/>
+<#import "/spring.ftl" as spring/>
+<#import "components/security.ftl" as secutity/>
+<#assign param = RequestParameters/>
 <!DOCTYPE html>
 <html>
 <head>
-    <%@include file="components/main-panel.jsp" %>
-    <style>
-        <%@include file="../css/tour-overview-style.css"%>
-    </style>
-    <fmt:setBundle basename="jsp/tour-overview"/>
-    <title><c:out value="${tourName}"/></title>
+    <@mainPanel.page>
+        <#include "../css/tour-overview-style.css"/>
+    </@mainPanel.page>
+    <title>${tourName}</title>
 </head>
 <body>
 <div class="contentForm">
@@ -44,34 +29,33 @@
             <input type="hidden" name="status" value="${status}"/>
             <div class="contentItem">
                 <div class="tourName">
-                    <c:out value="${tourName}"/>
+                   ${tourName}
                 </div>
 
-                <c:if test="${userRole == 'ADMIN'}">
+                <#if secutity.isAdmin>
                     <a id="changeTourNameMsg" onclick="document.getElementById('changeTourNameMsg').hidden=true;
                     document.getElementById('changeTourNameDiv').hidden=false;
                     document.getElementById('newTourName').required=true">
-                        <fmt:message key="admin.change"/>
+                        <@spring.message "admin.change"/>
                     </a>
                     <div hidden id="changeTourNameDiv">
                         <a id="closeTourName" onclick="document.getElementById('changeTourNameMsg').hidden=false;
                     document.getElementById('changeTourNameDiv').hidden=true;
                     document.getElementById('newTourName').required=false">
-                            <fmt:message key="admin.close"/>
+                            <@spring.message "admin.close"/>
                         </a>
 
                         <div id="changeTourName">
                             <label>
                                 <input type="text" id="newTourName" name="newTourName"
                                        pattern="^[\sa-zA-Z.,_%+-]{1,40}$">
-                                <fmt:message key="admin.changeTourName" var="changeTourNameButton"/>
-                                <input type="submit" value="${changeTourNameButton}"
+                                <input type="submit" value="<@spring.message "admin.changeTourName"/>"
                                        onclick="document.getElementById('change_tour_name').disabled=false">
                             </label>
                         </div>
                     </div>
-                    ${errorTourNameExistsMessage}
-                </c:if>
+                    ${errorTourNameExistsMessage!}
+                </#if>
             </div>
         </form>
 
@@ -92,35 +76,34 @@
             <div class="contentItem">
                 <div class="arrivalCountry">
                     <div class="itemMsg">
-                        <fmt:message key="common.message.arrivalCountry"/>
+                        <@spring.message "common.message.arrivalCountry"/>
                     </div>
-                    <c:out value="${arrivalCountry}"/>
+                    ${arrivalCountry}
                 </div>
 
-                <c:if test="${userRole == 'ADMIN'}">
+                <#if secutity.isAdmin>
                     <a id="changeArrivalCountryMsg" onclick="document.getElementById('changeArrivalCountryMsg').hidden=true;
                     document.getElementById('changeArrivalCountryDiv').hidden=false;
                     document.getElementById('newArrivalCountry').required=true">
-                        <fmt:message key="admin.change"/>
+                        <@spring.message "admin.change"/>
                     </a>
                     <div hidden id="changeArrivalCountryDiv">
                         <a id="closeArrivalCountry" onclick="document.getElementById('changeArrivalCountryMsg').hidden=false;
                     document.getElementById('changeArrivalCountryDiv').hidden=true;
                     document.getElementById('newArrivalCountry').required=false">
-                            <fmt:message key="admin.close"/>
+                            <@spring.message "admin.close"/>
                         </a>
 
                         <div id="changeArrivalCountry">
                             <label>
                                 <input type="text" id="newArrivalCountry" name="newArrivalCountry"
                                        pattern="^[\sa-zA-Z.,_%+-]{1,40}$">
-                                <fmt:message key="admin.changeArrivalCountry" var="changeArrivalCountryButton"/>
-                                <input type="submit" value="${changeArrivalCountryButton}"
+                                <input type="submit" value="<@spring.message "admin.changeArrivalCountry"/>"
                                        onclick="document.getElementById('change_arrival_country').disabled=false">
                             </label>
                         </div>
                     </div>
-                </c:if>
+                </#if>
             </div>
         </form>
 
@@ -141,35 +124,34 @@
             <div class="contentItem">
                 <div class="arrivalCity">
                     <div class="itemMsg">
-                        <fmt:message key="common.message.arrivalCity"/>
+                        <@spring.message "common.message.arrivalCity"/>
                     </div>
-                    <c:out value="${arrivalCity}"/>
+                    ${arrivalCity}
                 </div>
 
-                <c:if test="${userRole == 'ADMIN'}">
+                <#if secutity.isAdmin>
                     <a id="changeArrivalCityMsg" onclick="document.getElementById('changeArrivalCityMsg').hidden=true;
                     document.getElementById('changeArrivalCityDiv').hidden=false;
                     document.getElementById('newArrivalCity').required=true">
-                        <fmt:message key="admin.change"/>
+                        <@spring.message "admin.change"/>
                     </a>
                     <div hidden id="changeArrivalCityDiv">
                         <a id="closeArrivalCity" onclick="document.getElementById('changeArrivalCityMsg').hidden=false;
                     document.getElementById('changeArrivalCityDiv').hidden=true;
                     document.getElementById('newArrivalCity').required=false">
-                            <fmt:message key="admin.close"/>
+                            <@spring.message "admin.close"/>
                         </a>
 
                         <div id="changeArrivalCity">
                             <label>
                                 <input type="text" id="newArrivalCity" name="newArrivalCity"
                                        pattern="^[\sa-zA-Z.,_%+-]{1,40}$">
-                                <fmt:message key="admin.changeArrivalCity" var="changeArrivalCityButton"/>
-                                <input type="submit" value="${changeArrivalCityButton}"
+                                <input type="submit" value="<@spring.message "admin.changeArrivalCity"/>"
                                        onclick="document.getElementById('change_arrival_city').disabled=false">
                             </label>
                         </div>
                     </div>
-                </c:if>
+                </#if>
             </div>
         </form>
 
@@ -191,36 +173,35 @@
             <div class="contentItem">
                 <div class="departureCity">
                     <div class="itemMsg">
-                        <fmt:message key="common.message.departureCity"/>
+                        <@spring.message "common.message.departureCity"/>
                     </div>
-                    <c:out value="${departureCity}"/>
+                    ${departureCity}
                 </div>
 
-                <c:if test="${userRole == 'ADMIN'}">
+                <#if secutity.isAdmin>
                     <a id="changeDepartureCityMsg" onclick="document.getElementById('changeDepartureCityMsg').hidden=true;
                     document.getElementById('changeDepartureCityDiv').hidden=false;
                     document.getElementById('newDepartureCity').required=true">
-                        <fmt:message key="admin.change"/>
+                        <@spring.message "admin.change"/>
                     </a>
                     <div hidden
                          id="changeDepartureCityDiv">
                         <a id="closeDepartureCity" onclick="document.getElementById('changeDepartureCityMsg').hidden=false;
                     document.getElementById('changeDepartureCityDiv').hidden=true;
                     document.getElementById('newDepartureCity').required=false">
-                            <fmt:message key="admin.close"/>
+                            <@spring.message "admin.close"/>
                         </a>
 
                         <div id="changeDepartureCity">
                             <label>
                                 <input type="text" id="newDepartureCity" name="newDepartureCity"
                                        pattern="^[\sa-zA-Z.,_%+-]{1,40}$">
-                                <fmt:message key="admin.changeDepartureCity" var="changeDepartureCityButton"/>
-                                <input type="submit" value="${changeDepartureCityButton}"
+                                <input type="submit" value="<@spring.message "admin.changeDepartureCity"/>"
                                        onclick="document.getElementById('change_departure_city').disabled=false">
                             </label>
                         </div>
                     </div>
-                </c:if>
+                </#if>
             </div>
         </form>
 
@@ -241,34 +222,33 @@
             <div class="contentItem">
                 <div class="departureDate">
                     <div class="itemMsg">
-                        <fmt:message key="common.message.departureDate"/>
+                        <@spring.message "common.message.departureDate"/>
                     </div>
-                    <c:out value="${departureDate}"/>
+                    ${departureDate}
                 </div>
 
-                <c:if test="${userRole == 'ADMIN'}">
+                <#if secutity.isAdmin>
                     <a id="changeDepartureDateMsg" onclick="document.getElementById('changeDepartureDateMsg').hidden=true;
                     document.getElementById('changeDepartureDateDiv').hidden=false;
                     document.getElementById('newDepartureDate').required=true">
-                        <fmt:message key="admin.change"/>
+                        <@spring.message "admin.change"/>
                     </a>
                     <div hidden id="changeDepartureDateDiv">
                         <a id="closeDepartureDate" onclick="document.getElementById('changeDepartureDateMsg').hidden=false;
                     document.getElementById('changeDepartureDateDiv').hidden=true;
                     document.getElementById('newDepartureDate').required=false">
-                            <fmt:message key="admin.close"/>
+                            <@spring.message "admin.close"/>
                         </a>
 
                         <div id="changeDepartureDate">
                             <label>
                                 <input type="date" id="newDepartureDate" name="newDepartureDate">
-                                <fmt:message key="admin.changeDepartureDate" var="changeDepartureDateButton"/>
-                                <input type="submit" value="${changeDepartureDateButton}"
+                                <input type="submit" value="<@spring.message "admin.changeDepartureDate"/>"
                                        onclick="document.getElementById('change_departure_date').disabled=false">
                             </label>
                         </div>
                     </div>
-                </c:if>
+                </#if>
             </div>
         </form>
 
@@ -289,35 +269,34 @@
             <div class="contentItem">
                 <div class="arrivalDate">
                     <div class="itemMsg">
-                        <fmt:message key="common.message.arrivalDate"/>
+                        <@spring.message "common.message.arrivalDate"/>
                     </div>
-                    <c:out value="${arrivalDate}"/>
+                    ${arrivalDate!}
                 </div>
 
-                <c:if test="${userRole == 'ADMIN'}">
+                <#if secutity.isAdmin>
                     <a id="changeArrivalDateMsg" onclick="document.getElementById('changeArrivalDateMsg').hidden=true;
                     document.getElementById('changeArrivalDateDiv').hidden=false;
                     document.getElementById('newArrivalDate').required=true">
-                        <fmt:message key="admin.change"/>
+                        <@spring.message "admin.change"/>
                     </a>
                     <div hidden id="changeArrivalDateDiv">
                         <a id="closeArrivalDate" onclick="document.getElementById('changeArrivalDateMsg').hidden=false;
                     document.getElementById('changeArrivalDateDiv').hidden=true;
                     document.getElementById('newArrivalDate').required=false">
-                            <fmt:message key="admin.close"/>
+                            <@spring.message "admin.close"/>
                         </a>
 
                         <div id="changeArrivalDate">
                             <label>
                                 <input type="date" id="newArrivalDate" name="newArrivalDate">
-                                <fmt:message key="admin.changeArrivalDate" var="changeArrivalDateButton"/>
-                                <input type="submit" value="${changeArrivalDateButton}"
+                                <input type="submit" value="<@spring.message "admin.changeArrivalDate"/>"
                                        onclick="document.getElementById('change_arrival_date').disabled=false">
                             </label>
                         </div>
                     </div>
-                    ${errorInvalidDate}
-                </c:if>
+                    ${errorInvalidDate!}
+                </#if>
             </div>
         </form>
 
@@ -338,35 +317,34 @@
             <div class="contentItem">
                 <div class="hotel">
                     <div class="itemMsg">
-                        <fmt:message key="common.message.hotel"/>
+                        <@spring.message "common.message.hotel"/>
                     </div>
-                    <c:out value="${hotel}"/>
+                    ${hotel}
                 </div>
 
-                <c:if test="${userRole == 'ADMIN'}">
+                <#if secutity.isAdmin>
                     <a id="changeHotelMsg" onclick="document.getElementById('changeHotelMsg').hidden=true;
                     document.getElementById('changeHotelDiv').hidden=false;
                     document.getElementById('newHotel').required=true">
-                        <fmt:message key="admin.change"/>
+                        <@spring.message "admin.change"/>
                     </a>
                     <div hidden id="changeHotelDiv">
                         <a id="closeHotel" onclick="document.getElementById('changeHotelMsg').hidden=false;
                     document.getElementById('changeHotelDiv').hidden=true;
                     document.getElementById('newHotel').required=false">
-                            <fmt:message key="admin.close"/>
+                            <@spring.message "admin.close"/>
                         </a>
 
                         <div id="changeHotel">
                             <label>
                                 <input type="text" id="newHotel" name="newHotel" minlength="1" maxlength="40"
                                        pattern="^[\sa-zA-Z.,_%+-]{1,40}$">
-                                <fmt:message key="admin.changeHotel" var="changeHotelButton"/>
-                                <input type="submit" value="${changeHotelButton}"
+                                <input type="submit" value="<@spring.message "admin.changeHotel"/>"
                                        onclick="document.getElementById('change_hotel').disabled=false">
                             </label>
                         </div>
                     </div>
-                </c:if>
+                </#if>
             </div>
         </form>
 
@@ -387,35 +365,34 @@
             <div class="contentItem">
                 <div class="nutrition">
                     <div class="itemMsg">
-                        <fmt:message key="common.message.nutrition"/>
+                        <@spring.message "common.message.nutrition"/>
                     </div>
-                    <c:out value="${nutrition}"/>
+                    ${nutrition}
                 </div>
 
-                <c:if test="${userRole == 'ADMIN'}">
+                <#if secutity.isAdmin>
                     <a id="changeNutritionMsg" onclick="document.getElementById('changeNutritionMsg').hidden=true;
                     document.getElementById('changeNutritionDiv').hidden=false;
                     document.getElementById('newNutrition').required=true">
-                        <fmt:message key="admin.change"/>
+                        <@spring.message "admin.change"/>
                     </a>
                     <div hidden id="changeNutritionDiv">
                         <a id="closeNutrition" onclick="document.getElementById('changeNutritionMsg').hidden=false;
                     document.getElementById('changeNutritionDiv').hidden=true;
                     document.getElementById('newNutrition').required=false">
-                            <fmt:message key="admin.close"/>
+                            <@spring.message "admin.close"/>
                         </a>
 
                         <div id="changeNutrition">
                             <label>
                                 <input type="text" id="newNutrition" name="newNutrition" minlength="2" maxlength="3"
                                        pattern="^[A-Z]{2,3}[+]?$">
-                                <fmt:message key="admin.changeNutrition" var="changeNutritionButton"/>
-                                <input type="submit" value="${changeNutritionButton}"
+                                <input type="submit" value="<@spring.message "admin.changeNutrition"/>"
                                        onclick="document.getElementById('change_nutrition').disabled=false">
                             </label>
                         </div>
                     </div>
-                </c:if>
+                </#if>
             </div>
         </form>
 
@@ -436,35 +413,34 @@
             <div class="contentItem">
                 <div class="adultsNumber">
                     <div class="itemMsg">
-                        <fmt:message key="common.message.numberOfAdults"/>
+                        <@spring.message "common.message.numberOfAdults"/>
                     </div>
-                    <c:out value="${adultsNumber}"/>
+                    ${adultsNumber}
                 </div>
 
-                <c:if test="${userRole == 'ADMIN'}">
+                <#if secutity.isAdmin>
                     <a id="changeAdultsNumberMsg" onclick="document.getElementById('changeAdultsNumberMsg').hidden=true;
                     document.getElementById('changeAdultsNumberDiv').hidden=false;
                     document.getElementById('newAdultsNumber').required=true">
-                        <fmt:message key="admin.change"/>
+                        <@spring.message "admin.change"/>
                     </a>
                     <div hidden id="changeAdultsNumberDiv">
                         <a id="closeAdultsNumber" onclick="document.getElementById('changeAdultsNumberMsg').hidden=false;
                     document.getElementById('changeAdultsNumberDiv').hidden=true;
                     document.getElementById('newAdultsNumber').required=false">
-                            <fmt:message key="admin.close"/>
+                            <@spring.message "admin.close"/>
                         </a>
 
                         <div id="changeAdultsNumber">
                             <label>
                                 <input type="text" id="newAdultsNumber" name="newAdultsNumber" min="0" max="50"
                                        pattern="^([0-4]?\d|50)$">
-                                <fmt:message key="admin.changeAdultsNumber" var="changeAdultsNumberButton"/>
-                                <input type="submit" value="${changeAdultsNumberButton}"
+                                <input type="submit" value="<@spring.message "admin.changeAdultsNumber" />"
                                        onclick="document.getElementById('change_adults_number').disabled=false">
                             </label>
                         </div>
                     </div>
-                </c:if>
+                </#if>
             </div>
         </form>
 
@@ -485,35 +461,34 @@
             <div class="contentItem">
                 <div class="childrenNumber">
                     <div class="itemMsg">
-                        <fmt:message key="common.message.numberOfChildren"/>
+                        <@spring.message "common.message.numberOfChildren"/>
                     </div>
-                    <c:out value="${childrenNumber}"/>
+                    ${childrenNumber}
                 </div>
 
-                <c:if test="${userRole == 'ADMIN'}">
+                <#if secutity.isAdmin>
                     <a id="changeChildrenNumberMsg" onclick="document.getElementById('changeChildrenNumberMsg').hidden=true;
                     document.getElementById('changeChildrenNumberDiv').hidden=false;
                     document.getElementById('newChildrenNumber').required=true">
-                        <fmt:message key="admin.change"/>
+                        <@spring.message "admin.change"/>
                     </a>
                     <div hidden id="changeChildrenNumberDiv">
                         <a id="closeChildrenNumber" onclick="document.getElementById('changeChildrenNumberMsg').hidden=false;
                     document.getElementById('changeChildrenNumberDiv').hidden=true;
                     document.getElementById('newChildrenNumber').required=false">
-                            <fmt:message key="admin.close"/>
+                            <@spring.message "admin.close"/>
                         </a>
 
                         <div id="changeChildrenNumber">
                             <label>
                                 <input type="text" id="newChildrenNumber" name="newChildrenNumber" min="0" max="50"
                                        pattern="^([0-4]?\d|50)$">
-                                <fmt:message key="admin.changeChildrenNumber" var="changeChildrenNumberButton"/>
-                                <input type="submit" value="${changeChildrenNumberButton}"
+                                <input type="submit" value="<@spring.message "admin.changeChildrenNumber" />"
                                        onclick="document.getElementById('change_children_number').disabled=false">
                             </label>
                         </div>
                     </div>
-                </c:if>
+                </#if>
             </div>
         </form>
 
@@ -534,35 +509,34 @@
             <div class="contentItem">
                 <div class="price">
                     <div class="itemMsg">
-                        <fmt:message key="common.message.price"/>
+                        <@spring.message "common.message.price"/>
                     </div>
-                    <c:out value="${price}$"/>
+                    ${price}$
                 </div>
 
-                <c:if test="${userRole == 'ADMIN'}">
+                <#if secutity.isAdmin>
                     <a id="changePriceMsg" onclick="document.getElementById('changePriceMsg').hidden=true;
                     document.getElementById('changePriceDiv').hidden=false;
                     document.getElementById('newPrice').required=true">
-                        <fmt:message key="admin.change"/>
+                        <@spring.message "admin.change"/>
                     </a>
                     <div hidden id="changePriceDiv">
                         <a id="closePrice" onclick="document.getElementById('changePriceMsg').hidden=false;
                     document.getElementById('changePriceDiv').hidden=true;
                     document.getElementById('newPrice').required=false">
-                            <fmt:message key="admin.close"/>
+                            <@spring.message "admin.close"/>
                         </a>
 
                         <div id="changePrice">
                             <label>
                                 <input type="text" id="newPrice" name="newPrice" min="1" max="200000"
                                        pattern="^([1]?\d?\d?\d?\d?\d([.]\d\d)?|200000([.]\d\d)?)$">
-                                <fmt:message key="admin.changePrice" var="changePriceButton"/>
-                                <input type="submit" value="${changePriceButton}"
+                                <input type="submit" value="<@spring.message "admin.changePrice" />"
                                        onclick="document.getElementById('change_price').disabled=false">
                             </label>
                         </div>
                     </div>
-                </c:if>
+                </#if>
             </div>
         </form>
 
@@ -580,26 +554,24 @@
             <input type="hidden" name="childrenNumber" value="${childrenNumber}"/>
             <input type="hidden" name="price" value="${price}"/>
             <input type="hidden" name="status" value="${status}"/>
-            <c:if test="${userRole == 'ADMIN'}">
+            <#if secutity.isAdmin>
                 <div class="contentItem">
-                    <c:if test="${status == 'AVAILABLE'}">
-                        <fmt:message key="admin.changeStatusNotAvailable" var="changeStatusMsg"/>
-                    </c:if>
-                    <c:if test="${status == 'NOT_AVAILABLE'}">
-                        <fmt:message key="admin.changeStatusAvailable" var="changeStatusMsg"/>
-                    </c:if>
-                    <input type="submit" value="${changeStatusMsg}"
-                           onclick="document.getElementById('change_status').disabled=false">
+                    <#if test="${status == 'AVAILABLE'}">
+                        <input type="submit" value="<@spring.message "admin.changeStatusNotAvailable"/>"
+                               onclick="document.getElementById('change_status').disabled=false">
+                    </#if>
+                    <#if test="${status == 'NOT_AVAILABLE'}">
+                        <input type="submit" value="<@spring.message "admin.changeStatusAvailable"/>"
+                               onclick="document.getElementById('change_status').disabled=false">
+                    </#if>
                 </div>
-            </c:if>
+            </#if>
         </form>
-        <div/>
 
         <form method="post" action="to_tours">
             <div class="contentItem">
-                <fmt:message key="common.submit.back" var="back"/>
                 <label>
-                    <input type="submit" name="back" value="${back}">
+                    <input type="submit" name="back" value="<@spring.message "common.submit.back"/>">
                 </label>
             </div>
         </form>
@@ -619,17 +591,17 @@
             <input type="hidden" name="price" value="${price}"/>
             <input type="hidden" name="status" value="${status}"/>
             <div class="contentItem">
-                <c:if test="${userRole != 'ADMIN'}">
-                    <fmt:message key="notAdmin.submit.ticketSelection" var="ticketSelection"/>
+                <#if secutity.isAdmin>
                     <label>
-                        <input type="submit" name="ticketSelection" value="${ticketSelection}">
+                        <input type="submit" name="ticketSelection" value="<@spring.message "notAdmin.submit.ticketSelection"/>">
                     </label>
-                </c:if>
+                </#if>
             </div>
         </form>
 
     </div>
 </div>
 </body>
-<c:import url="components/timestamp.jsp"></c:import>
+<#import "components/timestamp.ftl" as timestamp/>
+<@timestamp.page/>
 </html>

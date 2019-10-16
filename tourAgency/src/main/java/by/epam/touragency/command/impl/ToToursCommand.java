@@ -22,12 +22,13 @@ import static by.epam.touragency.util.ParameterConstant.*;
 @PreAuthorize("permitAll()")
 public class ToToursCommand {
     @RequestMapping("/to_tours")
-    public ModelAndView execute(@SessionAttribute(value = ATTR_NAME_USER_ROLE)String role,
+    public ModelAndView execute(@SessionAttribute(value = ATTR_NAME_USER_ROLE, required = false)String role,
                                 @RequestParam(value = ATTR_NAME_INDEX, required = false) String index,
                                 @RequestParam(value = ATTR_NAME_CHANGE_PAGE, required = false) String toChangePage) throws CommandException {
         ModelAndView modelAndView = new ModelAndView();
         int newIndex;
-        String userRole = String.valueOf(role);
+//        String userRole = String.valueOf(role);
+        String userRole = "CLIENT";
 
         if (index == null) {
             newIndex = 1;

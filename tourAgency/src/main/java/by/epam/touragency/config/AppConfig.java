@@ -6,6 +6,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.context.support.ReloadableResourceBundleMessageSource;
+import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
@@ -15,16 +17,24 @@ import org.springframework.ui.freemarker.FreeMarkerConfigurationFactory;
 import org.springframework.web.context.request.RequestContextListener;
 import org.springframework.web.filter.DelegatingFilterProxy;
 import org.springframework.web.filter.RequestContextFilter;
+import org.springframework.web.servlet.LocaleResolver;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.i18n.CookieLocaleResolver;
+import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
+import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver;
 
 import javax.sql.DataSource;
+import java.io.File;
+import java.util.Locale;
 
 @Configuration
 @EnableAspectJAutoProxy
 @ComponentScan({"by.epam.touragency"})
-public class AppConfig {
+public class AppConfig implements WebMvcConfigurer {
 //    @Bean
 //    public InternalResourceViewResolver viewResolver() {
 //        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
@@ -32,6 +42,31 @@ public class AppConfig {
 //        viewResolver.setSuffix(".jsp");
 //        return viewResolver;
 //    }
+
+    @Bean
+    public LocaleResolver localeResolver(){
+        SessionLocaleResolver sessionLocaleResolver = new SessionLocaleResolver();
+        sessionLocaleResolver.setDefaultLocale(new Locale("ru"));
+        return sessionLocaleResolver;
+    }
+
+    @Bean
+    public ResourceBundleMessageSource messageSource(){
+        ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
+        messageSource.setBasenames("jsp/home", "jsp/about-company", "jsp/booking", "jsp/login", "jsp/orders",
+                "jsp/registration", "jsp/ticket-registration", "jsp/tickets", "jsp/timestamp", "jsp/tour-overview",
+                "jsp/tour-registration", "jsp/tours", "jsp/user-profile");
+        messageSource.setUseCodeAsDefaultMessage(true);
+        messageSource.setDefaultEncoding("UTF-8");
+        return messageSource;
+    }
+
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        LocaleChangeInterceptor interceptor = new LocaleChangeInterceptor();
+        interceptor.setParamName("language");
+        registry.addInterceptor(interceptor);
+    }
 
     @Bean
     public FreeMarkerConfigurer freeMarkerConfigurer(){

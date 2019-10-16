@@ -9,6 +9,7 @@ known = Session.SPRING_SECURITY_CONTEXT??
     isAdmin=user.getRole() == "ADMIN"
     isClient=user.getRole() == "CLIENT"
     isAgent=user.getRole() == "AGENT"
+    isAnonymous=false
     isActive = true
     >
 <#else>
@@ -18,5 +19,6 @@ known = Session.SPRING_SECURITY_CONTEXT??
     isAdmin=false
     isClient=false
     isAgent=false
+    isAnonymous=true
     >
 </#if>

@@ -1,11 +1,8 @@
 package by.epam.touragency.repository;
 
-import by.epam.touragency.connectionpool.ProxyConnectionPool;
 import by.epam.touragency.exception.ConnectionPoolException;
 import by.epam.touragency.exception.RepositoryException;
 import by.epam.touragency.specification.Specification;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.math.BigDecimal;
 import java.sql.Connection;
@@ -67,7 +64,7 @@ public interface Repository<T> {
         Connection connection = null;
         boolean flag = false;
         try {
-            connection = ProxyConnectionPool.getInstance().takeConnection();
+//            connection = ProxyConnectionPool.getInstance().takeConnection();
             preparedStatement = connection.prepareStatement(specification.sqlQuery());
             setPreparedStatementValues(preparedStatement, specification);
             resultSet = preparedStatement.executeQuery();
@@ -85,7 +82,7 @@ public interface Repository<T> {
             if (preparedStatement != null) {
                 closePreparedStatement(preparedStatement);
             }
-            ProxyConnectionPool.getInstance().returnConnection(connection);
+//            ProxyConnectionPool.getInstance().returnConnection(connection);
         }
         return flag;
     }

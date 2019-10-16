@@ -1,30 +1,34 @@
+<#import "components/main-panel.ftl" as mainPanel/>
+<#import "/spring.ftl" as spring/>
 <!DOCTYPE html>
 <html>
 <head>
-<#import "parts/common_part.ftl" as common>
-<title class="header"><fmt:message key="common.title"/></title>
-<style>
-<%@include file="../../css/home-content-style.css"%>
-    </style>
+    <title class="header">
+        <@spring.message "common.title"/>
+    </title>
+    <@mainPanel.page>
+        <#include "../css/home-content-style.css"/>
+    </@mainPanel.page>
 </head>
 <body>
-<@common>
 <div class="startMessage">
-    <fmt:message key="common.message.startTravel"/>
+    <@spring.message "common.message.startTravel"/>
 </div>
 
 <form class="contentForm">
     <div class="time-inf">
-<#--        <ctg:time-inf/>-->
+        <#--        <ctg:time-inf/>-->
     </div>
 
-<div class="contentHeader">
-        <a href="to_tours"> <fmt:message key="common.message.availableTours"/> </a>
-</div>
+    <div class="contentHeader">
+        <a href="to_tours">
+            <@spring.message "common.message.availableTours"/>
+        </a>
+    </div>
 
 </form>
-</@common>
 </body>
-<#--<#import "components/timestamp.jsp"></c:import>-->
+<#import "components/timestamp.ftl" as timestamp/>
+<@timestamp.page/>
 </html>
 <#assign known=Session.SPRING_SECURITY_CONTEXT??>

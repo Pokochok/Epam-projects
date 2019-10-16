@@ -1,7 +1,6 @@
 package by.epam.touragency.controller;
 
 import by.epam.touragency.command.ActionCommand;
-import by.epam.touragency.connectionpool.ProxyConnectionPool;
 import by.epam.touragency.exception.CommandException;
 import by.epam.touragency.logic.DefineActionCommandLogic;
 import by.epam.touragency.resource.ConfigurationManager;
@@ -14,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.PreDestroy;
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -45,7 +43,7 @@ public class MainController {
 
     @PreDestroy
     public void destroy() {
-        ProxyConnectionPool.getInstance().closePool();
+//        ProxyConnectionPool.getInstance().closePool();
     }
 
     /**

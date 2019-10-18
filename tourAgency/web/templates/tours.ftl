@@ -17,7 +17,7 @@
 <div class="contentForm" >
 
     <div class="menu">
-        <#if secutity.isAdmin>
+        <#if (secutity.isAdmin)!false>
             <div class="registerNewTour">
                 <a class="menuRef" href="to_tour_registration">
                     <@spring.message "admin.ref.registerNewTour"/>
@@ -36,8 +36,12 @@
             </div>
 
             <div class="tours">
-                <#list tourList as tourItem>
-                    <@tourForm.page tour=tourItem/>
+                <#list tourList>
+                    <ul>
+                        <#items as tourItem>
+                            <li type="none"><@tourForm.page tour=tourItem/></li>
+                        </#items>
+                    </ul>
                 </#list>
 <#--                <c:forEach begin="${startIndexOfTours}" end="${startIndexOfTours + toursPerPage - 1}" var="tour"-->
 <#--                           items="${tourList}">-->
@@ -63,12 +67,12 @@
                 <form class="pagination" id="paginationForm" method="post" action="to_tours">
                     <input type="hidden" name="index" value="${startIndexOfTours/toursPerPage + 1}"/>
 
-                    <#if startIndexOfTours == 0>
+                    <#if ((startIndexOfTours!0) == 0)>
                         <div class="page-item disabled">
                             <a class="page-link"><@spring.message "common.ref.previousPage"/> </a>
                         </div>
                     </#if>
-                    <#if startIndexOfTours > 0>
+                    <#if ((startIndexOfTours!0) > 0)>
                         <div class="page-item">
                             <div id="previousPageForm">
                                 <input type="hidden" id="previousPage" name="changePage" value="-1" disabled>
@@ -81,7 +85,7 @@
 
                     <div class="page-item"><a class="page-link">${index}</a></div>
 
-                    <#if startIndexOfTours + toursPerPage < numberOfTours>
+                    <#if ((startIndexOfTours!0) + (toursPerPage!8) < (numberOfTours!8))>
                         <div class="page-item">
                             <div id="nextPageForm">
                                 <input type="hidden" id="nextPage" name="changePage" value="1" disabled>
@@ -91,7 +95,7 @@
                             </div>
                         </div>
                     </#if>
-                    <#if startIndexOfTours + toursPerPage >= numberOfTours>
+                    <#if ((startIndexOfTours!0) + (toursPerPage!8) >= (numberOfTours!8))>
                         <div class="page-item disabled">
                             <a class="page-link"><@spring.message "common.ref.nextPage"/></a>
                         </div>

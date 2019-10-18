@@ -58,34 +58,34 @@ public interface Repository<T> {
      * @return true if database found element, false - if not
      * @throws RepositoryException if handled ConnectionPoolException or other
      */
-    default boolean isExistsQuery(Specification specification) throws RepositoryException {
-        PreparedStatement preparedStatement = null;
-        ResultSet resultSet = null;
-        Connection connection = null;
-        boolean flag = false;
-        try {
-//            connection = ProxyConnectionPool.getInstance().takeConnection();
-            preparedStatement = connection.prepareStatement(specification.sqlQuery());
-            setPreparedStatementValues(preparedStatement, specification);
-            resultSet = preparedStatement.executeQuery();
-            flag = resultSet.next();
-        } catch (SQLException e) {
-            LOGGER.error("Error thrown by prepared statement: ", e);
-            throw new RepositoryException(e);
-        } catch (ConnectionPoolException e) {
-            LOGGER.fatal("Error in connection pool: ", e);
-            throw new RepositoryException(e);
-        } finally {
-            if (resultSet != null) {
-                closeResultSet(resultSet);
-            }
-            if (preparedStatement != null) {
-                closePreparedStatement(preparedStatement);
-            }
-//            ProxyConnectionPool.getInstance().returnConnection(connection);
-        }
-        return flag;
-    }
+    boolean isExistsQuery(Specification specification) throws RepositoryException;
+//        PreparedStatement preparedStatement = null;
+//        ResultSet resultSet = null;
+//        Connection connection = null;
+//        boolean flag = false;
+//        try {
+////            connection = ProxyConnectionPool.getInstance().takeConnection();
+//            preparedStatement = connection.prepareStatement(specification.sqlQuery());
+//            setPreparedStatementValues(preparedStatement, specification);
+//            resultSet = preparedStatement.executeQuery();
+//            flag = resultSet.next();
+//        } catch (SQLException e) {
+//            LOGGER.error("Error thrown by prepared statement: ", e);
+//            throw new RepositoryException(e);
+//        } catch (ConnectionPoolException e) {
+//            LOGGER.fatal("Error in connection pool: ", e);
+//            throw new RepositoryException(e);
+//        } finally {
+//            if (resultSet != null) {
+//                closeResultSet(resultSet);
+//            }
+//            if (preparedStatement != null) {
+//                closePreparedStatement(preparedStatement);
+//            }
+////            ProxyConnectionPool.getInstance().returnConnection(connection);
+//        }
+//        return flag;
+//    }
 
     /**
      * Sets values from specification to prepared statement

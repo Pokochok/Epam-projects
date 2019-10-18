@@ -49,7 +49,7 @@
         </div>
 
         <div class="contentItem">
-            <fmt:message key="registration.message.login"/>
+            <@spring.message "registration.message.login"/>
             <label>
                 <input type="text" name="login" minlength="4" maxlength="50" required
                        placeholder=

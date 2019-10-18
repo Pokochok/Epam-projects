@@ -15,6 +15,8 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import java.util.HashSet;
 import java.util.Set;
 
+import static by.epam.touragency.util.PageMsgConstant.LOGGER;
+
 @org.springframework.stereotype.Repository
 public class OrderRepository implements Repository<Order> {
 
@@ -72,6 +74,17 @@ public class OrderRepository implements Repository<Order> {
             order.setAgent(UserRepository.getInstance().query(agentQuery).iterator().next());
         }
         return orders;
+    }
+
+    @Override
+    public boolean isExistsQuery(Specification specification) throws RepositoryException {
+        try {
+            return !new HashSet<>(jdbcTemplate.query(specification.sqlQuery(),
+                    specification.getParameterQueue().toArray(), new OrderRowMapper())).isEmpty();
+        }catch (RuntimeException e){
+            LOGGER.error("Error while getting is exists query ");
+            throw new RepositoryException(e);
+        }
     }
 
     @Autowired

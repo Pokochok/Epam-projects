@@ -5,10 +5,15 @@ known = Session.SPRING_SECURITY_CONTEXT??
 <#if known>
     <#assign
     user = Session.SPRING_SECURITY_CONTEXT.authentication.principal
-    name = user.getUsername()
-    isAdmin=user.getRole() == "ADMIN"
-    isClient=user.getRole() == "CLIENT"
-    isAgent=user.getRole() == "AGENT"
+    userName = (user.getRealUserName())!""
+    userSurname = (user.getUserSurname())!""
+    userLogin = (user.getUsername())!""
+    userEmail = (user.getUserEmail())!""
+    userPhoneNumber = (user.getUserPhoneNumber())!""
+    role = (user.getUserRole())!""
+    isAdmin= role == "ADMIN"
+    isClient= role == "CLIENT"
+    isAgent= role == "AGENT"
     isAnonymous=false
     isActive = true
     >

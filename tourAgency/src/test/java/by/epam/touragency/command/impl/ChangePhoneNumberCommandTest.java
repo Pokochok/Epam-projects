@@ -54,6 +54,7 @@ class ChangePhoneNumberCommandTest {
     @Test
     @DisplayName("Invalid parameters entered. Validation failed")
     void execute() throws Exception {
+        when(updateUserLogic.checkPrincipal()).thenReturn(false);
         when(validation.validatePhoneNumber(anyString())).thenReturn(false);
         when(messageManager.getProperty(eq(CHANGE_PN_ERROR_MSG_KEY), any(Locale.class))).thenReturn("invalidPhoneNumber");
         mockMvc.perform(post("/change_phone_number")
@@ -70,6 +71,7 @@ class ChangePhoneNumberCommandTest {
     @Test
     @DisplayName("Successful execution")
     void executeSuccess() throws Exception {
+        when(updateUserLogic.checkPrincipal()).thenReturn(false);
         when(validation.validatePhoneNumber(anyString())).thenReturn(true);
         when(updateUserLogic.updatePhoneNumber(anyString(), anyString(), anyString())).thenReturn(true);
         mockMvc.perform(post("/change_phone_number")
@@ -78,13 +80,14 @@ class ChangePhoneNumberCommandTest {
                 .sessionAttr(PARAM_NAME_ROLE, "role"))
                 .andExpect(status().isOk())
                 .andExpect(forwardedUrl(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH)))
-                .andExpect(MockMvcResultMatchers.view().name(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH)))
-                .andExpect(model().attribute(ATTR_NAME_USER_PHONE_NUMBER,"newPhoneNumber"));
+                .andExpect(MockMvcResultMatchers.view().name(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH)));
     }
 
     @Test
     @DisplayName("Phone number exists error")
     void executeEmailExists() throws Exception {
+        when(updateUserLogic.checkPrincipal()).thenReturn(false);
+        when(updateUserLogic.checkPrincipal()).thenReturn(false);
         when(validation.validatePhoneNumber(anyString())).thenReturn(true);
         when(updateUserLogic.updatePhoneNumber(anyString(), anyString(), anyString())).thenReturn(false);
         when(messageManager.getProperty(eq(PHONE_NUMBER_EXISTS_MSG_KEY), any(Locale.class))).thenReturn("phoneNumberExists");

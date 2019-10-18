@@ -12,84 +12,83 @@
 </head>
 <body>
 <form class="contentForm" method="post" action="booking">
-    <#if secutity.isClient || secutity.isAgent>
         <div class="contentContainer">
             <div class="allInf">
                 <div class="tourContent">
-                    <#if !(param.tourId??)>
-                        <input type="hidden" name="tourId" value="${param.tourId}"/>
+                    <#if param.tourId??>
+                        <input type="hidden" name="tourId" value="${param.tourId!}"/>
                         <div class="tourName">
-                            ${param.tourName}
+                            ${param.tourName!}
                         </div>
 
                         <div class="contentItem">
                             <div class="itemMsg">
                                 <@spring.message "common.message.arrivalCountry"/>
                             </div>
-                            ${param.arrivalCountry}
+                            ${param.arrivalCountry!}
                         </div>
 
                         <div class="contentItem">
                             <div class="itemMsg">
                                 <@spring.message "common.message.arrivalCity"/>
                             </div>
-                            ${param.arrivalCity}
+                            ${param.arrivalCity!}
                         </div>
 
                         <div class="contentItem">
                             <div class="itemMsg">
                                 <@spring.message "common.message.departureCity"/>
                             </div>
-                            ${param.departureCity}
+                            ${param.departureCity!}
                         </div>
 
                         <div class="contentItem">
                             <div class="itemMsg">
                                 <@spring.message "common.message.departureDate"/>
                             </div>
-                            ${param.departureDate}
+                            ${param.departureDate!}
                         </div>
 
                         <div class="contentItem">
                             <div class="itemMsg">
                                 <@spring.message "common.message.arrivalDate"/>
                             </div>
-                            ${param.arrivalDate}
+                            ${param.arrivalDate!}
                         </div>
 
                         <div class="contentItem">
                             <div class="itemMsg">
                                 <@spring.message "common.message.hotel"/>
                             </div>
-                            ${param.hotel}
+                            ${param.hotel!}
                         </div>
 
                         <div class="contentItem">
                             <div class="itemMsg">
                                 <@spring.message "common.message.nutrition"/>
                             </div>
-                            ${param.nutrition}
+                            ${param.nutrition!}
                                                     </div>
 
                         <div class="contentItem">
                             <div class="itemMsg">
                                 <@spring.message "common.message.numberOfAdults"/>
                             </div>
-                            ${param.adultsNumber}
+                            ${param.adultsNumber!}
                         </div>
 
                         <div class="contentItem">
                             <div class="itemMsg">
                                 <@spring.message "common.message.numberOfChildren"/>
                             </div>
-                            ${param.childrenNumber}
+                            ${param.childrenNumber!}
                         </div>
 
                         <div class="contentItem">
                             <div class="itemMsg">
                                 <@spring.message "common.message.price"/>
                             </div>
-                            ${param.price}$
+                            ${param.price!}$
                         </div>
                     <#else>
                         <div class="notDefined">
@@ -100,23 +99,23 @@
 
 
                 <div class="ticketContent">
-                    <#if !(param.ticketId??)>
-                        <input type="hidden" name="ticketId" value="${param.ticketId}"/>
+                    <#if param.ticketId??>
+                        <input type="hidden" name="ticketId" value="${param.ticketId!}"/>
                         <div class="flightPlace">
-                            ${param.departureCity} - ${param.arrivalCity}
+                            ${param.departureCity!} - ${param.arrivalCity!}
                         </div>
 
                         <div class="contentItem">
                             <div class="itemMsg">
                                 <@spring.message "common.message.flightNumber"/>
                             </div>
-                            ${param.flightNumber}
+                            ${param.flightNumber!}
                         </div>
 
                         <div class="contentItem">
-                            ${param.departureDateTime} - ${param.arrivalDateTime}
+                            ${param.departureDateTime!} - ${param.arrivalDateTime!}
                         </div>
-                    <#elseif param.ticketId??>
+                    <#else>
                         <div class="notDefined">
                             <@spring.message "clientAgent.message.notDefined"/>
                         </div>
@@ -125,18 +124,18 @@
 
             </div>
 
-            <#if secutity.isAgent>
-                <input type="hidden" name="agentId" value="${userId}">
+            <#if (secutity.isAgent)!false>
+                <input type="hidden" name="agentId" value="${userId!}">
                 <div class="emailInput">
                     <@spring.message "agent.message.inputClientEmail"/>
                     <label>
                         <input type="text" name="clientEmail" required
                                minlength="6" maxlength="100"  pattern="^[a-zA-Z0-9.,_%+-]+@(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}$">
                     </label>
-                    <br>${errorEmail}
+                    <br>${errorEmail!}
                 </div>
             <#else>
-                <input type="hidden" name="clientId" value="${userId}">
+                <input type="hidden" name="clientId" value="${userId!}">
             </#if>
 
             <label>
@@ -147,8 +146,6 @@
                 <input type="submit" name="confirmReservation" value="<@spring.message "clientAgent.submit.confirmReservation" />">
             </label>
         </div>
-    </#if>
-
 </form>
 </body>
 

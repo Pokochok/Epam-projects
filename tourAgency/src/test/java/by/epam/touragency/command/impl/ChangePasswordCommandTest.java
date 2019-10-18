@@ -56,6 +56,7 @@ class ChangePasswordCommandTest {
     @Test
     @DisplayName("Invalid password entered. Validation failed")
     void execute() throws Exception {
+        when(updateUserLogic.checkPrincipal()).thenReturn(false);
         when(validation.validatePassword(anyString())).thenReturn(false);
         when(messageManager.getProperty(eq(CHANGE_PASSWORD_ERROR_MSG_KEY), any(Locale.class))).thenReturn("errorPassword");
         mockMvc.perform(post("/change_password")
@@ -72,6 +73,7 @@ class ChangePasswordCommandTest {
     @Test
     @DisplayName("Successful execution")
     void executeSuccess() throws Exception {
+        when(updateUserLogic.checkPrincipal()).thenReturn(false);
         when(validation.validatePassword(anyString())).thenReturn(true);
         when(messageManager.getProperty(eq(CHANGE_PASSWORD_SUCCESS_MSG_KEY), any(Locale.class))).thenReturn("newPassword");
         when(updateUserLogic.updatePassword(anyString(), anyString(), anyString(), anyString())).thenReturn(true);
@@ -82,13 +84,13 @@ class ChangePasswordCommandTest {
                 .sessionAttr(PARAM_NAME_ROLE, "role"))
                 .andExpect(status().isOk())
                 .andExpect(forwardedUrl(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH)))
-                .andExpect(MockMvcResultMatchers.view().name(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH)))
-                .andExpect(model().attribute(ATTR_NAME_RESULT_CHANGE_PASSWORD,"newPassword"));
+                .andExpect(MockMvcResultMatchers.view().name(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH)));
     }
 
     @Test
     @DisplayName("User not find")
     void executeLoginExists() throws Exception {
+        when(updateUserLogic.checkPrincipal()).thenReturn(false);
         when(validation.validatePassword(anyString())).thenReturn(true);
         when(updateUserLogic.updatePassword(anyString(), anyString(), anyString(), anyString())).thenReturn(false);
         when(messageManager.getProperty(eq(CHANGE_PASSWORD_NOT_FIND_MSG_KEY), any(Locale.class))).thenReturn("userNotFind");

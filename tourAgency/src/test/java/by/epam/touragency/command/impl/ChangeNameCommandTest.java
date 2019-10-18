@@ -55,6 +55,7 @@ class ChangeNameCommandTest {
     @Test
     @DisplayName("Invalid name entered. Validation failed")
     void execute() throws Exception {
+        when(updateUserLogic.checkPrincipal()).thenReturn(false);
         when(validation.validateName(anyString())).thenReturn(false);
         when(messageManager.getProperty(eq(CHANGE_USER_NAME_ERROR_MSG_KEY), any(Locale.class))).thenReturn("invalidName");
         mockMvc.perform(post("/change_user_name")
@@ -70,6 +71,7 @@ class ChangeNameCommandTest {
     @Test
     @DisplayName("Successful execution")
     void executeSuccess() throws Exception {
+        when(updateUserLogic.checkPrincipal()).thenReturn(false);
         when(validation.validateName(anyString())).thenReturn(true);
         when(updateUserLogic.updateName(anyString(), anyString(), anyString())).thenReturn(true);
         mockMvc.perform(post("/change_user_name")

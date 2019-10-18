@@ -56,11 +56,10 @@ class ChangeLoginCommandTest {
     @DisplayName("Invalid login entered. Validation failed")
     void execute() throws Exception {
         when(validation.validateEmail(anyString())).thenReturn(false);
+        when(updateUserLogic.checkPrincipal()).thenReturn(false);
         when(messageManager.getProperty(eq(CHANGE_LOGIN_ERROR_MSG_KEY), any(Locale.class))).thenReturn("errorLogin");
         mockMvc.perform(post("/change_login")
-                .sessionAttr(PARAM_NAME_USER_EMAIL, "email")
-                .param(PARAM_NAME_NEW_LOGIN, "newLogin")
-                .sessionAttr(PARAM_NAME_ROLE, "role"))
+                .param(PARAM_NAME_NEW_LOGIN, "newLogin"))
                 .andExpect(status().isOk())
                 .andExpect(MockMvcResultMatchers.view().name(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH)))
                 .andExpect(forwardedUrl(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH)))
@@ -70,30 +69,27 @@ class ChangeLoginCommandTest {
     @Test
     @DisplayName("Successful execution")
     void executeSuccess() throws Exception {
+        when(updateUserLogic.checkPrincipal()).thenReturn(false);
         when(validation.validateEmail(anyString())).thenReturn(true);
         when(validation.validateLogin(anyString())).thenReturn(true);
         when(updateUserLogic.updateLogin(anyString(), anyString(), anyString())).thenReturn(true);
         mockMvc.perform(post("/change_login")
-                .sessionAttr(PARAM_NAME_USER_EMAIL, "email")
-                .param(PARAM_NAME_NEW_LOGIN, "newLogin")
-                .sessionAttr(PARAM_NAME_ROLE, "role"))
+                .param(PARAM_NAME_NEW_LOGIN, "newLogin"))
                 .andExpect(status().isOk())
                 .andExpect(forwardedUrl(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH)))
-                .andExpect(MockMvcResultMatchers.view().name(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH)))
-                .andExpect(model().attribute(ATTR_NAME_USER_LOGIN,"newLogin"));
+                .andExpect(MockMvcResultMatchers.view().name(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH)));
     }
 
     @Test
     @DisplayName("Login exists error")
     void executeLoginExists() throws Exception {
+        when(updateUserLogic.checkPrincipal()).thenReturn(false);
         when(validation.validateEmail(anyString())).thenReturn(true);
         when(validation.validateLogin(anyString())).thenReturn(true);
         when(updateUserLogic.updateLogin(anyString(), anyString(), anyString())).thenReturn(false);
         when(messageManager.getProperty(eq(LOGIN_EXISTS_MSG_KEY), any(Locale.class))).thenReturn("loginExists");
         mockMvc.perform(post("/change_login")
-                .sessionAttr(PARAM_NAME_USER_EMAIL, "email")
-                .param(PARAM_NAME_NEW_LOGIN, "newLogin")
-                .sessionAttr(PARAM_NAME_ROLE, "role"))
+                .param(PARAM_NAME_NEW_LOGIN, "newLogin"))
                 .andExpect(status().isOk())
                 .andExpect(forwardedUrl(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH)))
                 .andExpect(MockMvcResultMatchers.view().name(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH)))

@@ -26,6 +26,9 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.*;
 
 import static by.epam.touragency.util.PageMsgConstant.INF_PAGE_PATH;
+import static by.epam.touragency.util.PageMsgConstant.TO_INF_PAGE_PATH;
+import static by.epam.touragency.util.ParameterConstant.ATTR_NAME_RESULT_INF;
+import static by.epam.touragency.util.ParameterConstant.PARAM_NAME_MSG_KEY;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
@@ -62,15 +65,13 @@ class ToInfCommandTest {
     }
 
     @Test
-    @WithMockUser(username="admin", roles={"CLIENT","ADMIN", "AGENT"})
+    @WithMockUser(username = "admin", roles = {"CLIENT", "ADMIN", "AGENT"})
     void execute() throws Exception {
-        Map map = new HashMap();
-        map.put("test", "testValue");
-        when(modelAndView.getModel()).thenReturn(map);
         when(messageManager.getProperty(anyString(), any(Locale.class))).thenReturn("testValue");
-        mockMvc.perform(post("/to_inf"))
-                .andExpect(status().is(302))
-        .andExpect(MockMvcResultMatchers.view().name("redirect:" +
-                ConfigurationManager.getProperty(INF_PAGE_PATH)));
+        mockMvc.perform(post("/to_inf")
+                .param(PARAM_NAME_MSG_KEY, "msg"))
+                .andExpect(status().is(200))
+                .andExpect(MockMvcResultMatchers.view().name(ConfigurationManager.getProperty(TO_INF_PAGE_PATH)))
+                .andExpect(model().attribute(ATTR_NAME_RESULT_INF, "testValue"));
     }
 }

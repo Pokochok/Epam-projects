@@ -11,6 +11,8 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import java.util.HashSet;
 import java.util.Set;
 
+import static by.epam.touragency.util.PageMsgConstant.LOGGER;
+
 @org.springframework.stereotype.Repository
 public class TourRepository implements Repository<Tour> {
 
@@ -57,6 +59,17 @@ public class TourRepository implements Repository<Tour> {
     public Set<Tour> query(Specification specification) throws RepositoryException {
         return new HashSet<>(jdbcTemplate.query(specification.sqlQuery(), specification.getParameterQueue().toArray(),
                 new TourRowMapper()));
+    }
+
+    @Override
+    public boolean isExistsQuery(Specification specification) throws RepositoryException {
+        try {
+            return !new HashSet<>(jdbcTemplate.query(specification.sqlQuery(), specification.getParameterQueue().toArray(),
+                    new TourRowMapper())).isEmpty();
+        }catch (RuntimeException e){
+            LOGGER.error("Error while getting is exists query ");
+            throw new RepositoryException(e);
+        }
     }
 
     @Autowired

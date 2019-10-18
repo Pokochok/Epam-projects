@@ -3,6 +3,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!-- jQuery Core -->
+<script src="../uui/js/lib/jquery-1.12.0.min.js"></script>
+
+<!-- Bootstrap Core -->
+<link rel="stylesheet" href="../uui/bootstrap/css/bootstrap.min.css" />
+<script src="../uui/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- EPAM UUI JavaScript Core -->
+<script src="../uui/js/uui-core.min.js" type="text/javascript"></script>
+
+<!-- EPAM UUI Styles Core -->
+<link rel="stylesheet" href="../uui/css/uui-all.css" />
+<!-- Your custom CSS Styles -->
+<#--<link rel="stylesheet" href="css/custom-styles.css" />-->
+
+<!-- Scroll for UUI Sidebar -->
+<link rel="stylesheet" href="../uui/css/lib/components/jquery.mCustomScrollbar.min.css" />
+<script src="../uui/js/lib/components/jquery.mCustomScrollbar.concat.min.js"></script>
     <@anotherPanel.page>
         <#include "../css/login-style.css"/>
     </@anotherPanel.page>
@@ -48,6 +66,10 @@
         <label>
             <input type="submit" name="logIn" value="<@spring.message "login.submit.login"/>"/>
         </label>
+
+<button class="uui-button">Default button</button>
+
+<a href="" class="uui-button">Button link</a>
         <br/>
         <br/>
         <a href="to_registration">

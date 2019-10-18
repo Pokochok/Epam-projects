@@ -2,10 +2,7 @@ package by.epam.touragency.config;
 
 import by.epam.touragency.connectionpool.PropertyHolder;
 import by.epam.touragency.logic.UserDetailsServiceImpl;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.context.annotation.*;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -19,6 +16,7 @@ import org.springframework.web.filter.DelegatingFilterProxy;
 import org.springframework.web.filter.RequestContextFilter;
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.i18n.CookieLocaleResolver;
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
@@ -27,6 +25,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver;
 
+import javax.annotation.Resources;
 import javax.sql.DataSource;
 import java.io.File;
 import java.util.Locale;
@@ -80,7 +79,7 @@ public class AppConfig implements WebMvcConfigurer {
     public FreeMarkerViewResolver freeMarkerViewResolver(){
         FreeMarkerViewResolver freeMarkerViewResolver = new FreeMarkerViewResolver();
         freeMarkerViewResolver.setSuffix(".ftl");
-        freeMarkerViewResolver.setPrefix("/templates");
+        freeMarkerViewResolver.setPrefix("/");
         freeMarkerViewResolver.setCache(true);
         freeMarkerViewResolver.setContentType("text/html;charset=UTF-8");
         return freeMarkerViewResolver;
@@ -116,10 +115,6 @@ public class AppConfig implements WebMvcConfigurer {
         return new RequestContextFilter();
     }
 
-//    @Bean
-//    public DelegatingFilterProxy webDelegatingFilterProxy(){
-//        return new DelegatingFilterProxy();
-//    }
 
     //    @Bean
     public DataSource embeddedDataSource() {
@@ -127,5 +122,10 @@ public class AppConfig implements WebMvcConfigurer {
                 .setType(EmbeddedDatabaseType.H2)
                 .addScript("classpath:jdbc/schema.sql")
                 .addScript("classpath:jdbc/test-data.sql").build();
+    }
+
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/**").addResourceLocations("/picture", "/uui");
     }
 }

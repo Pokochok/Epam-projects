@@ -1,11 +1,14 @@
 package by.epam.touragency.command.impl;
 
 import by.epam.touragency.entity.Order;
+import by.epam.touragency.entity.Role;
+import by.epam.touragency.entity.UserPrincipal;
 import by.epam.touragency.exception.CommandException;
 import by.epam.touragency.exception.LogicException;
 import by.epam.touragency.logic.ToPageWithListLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -22,13 +25,17 @@ public class ToOrdersCommand {
     @Secured({"ROLE_ADMIN", "ROLE_AGENT", "ROLE_CLIENT"})
     @GetMapping("/to_orders")
     public ModelAndView execute(
-            @SessionAttribute(value = ATTR_NAME_USER_ROLE) String userRole,
-            @SessionAttribute(value = ATTR_NAME_USER_ID) String userId,
+            @RequestParam(value = ATTR_NAME_USER_ROLE, required = false) String userRole,
+            @RequestParam(value = ATTR_NAME_USER_ID, required = false) String userId,
             @RequestParam(value = ATTR_NAME_INDEX, required = false)String index,
             @RequestParam(value = ATTR_NAME_CHANGE_PAGE, required = false) String changeToPage
     ) throws CommandException {
         int newIndex;
-
+        if((userId == null && userRole == null) && SecurityContextHolder.getContext().getAuthentication().getPrincipal() instanceof UserPrincipal) {
+            UserPrincipal userDetails = (UserPrincipal) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+            userRole = userDetails.getUserRole().toString();
+            userId = String.valueOf(userDetails.getUserId());
+        }
         if (index == null) {
             newIndex = 1;
         } else {

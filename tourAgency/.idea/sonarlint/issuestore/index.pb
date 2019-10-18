@@ -121,3 +121,7 @@ z
 Jsrc/test/java/by/epam/touragency/command/impl/TourRegisterCommandTest.java,8\c\8c4e5f6ab9adf39cc8de977f87b1419ce06b0144
 o
 ?src/main/java/by/epam/touragency/command/impl/ToInfCommand.java,6\0\60ebcf81a567ac55abc14ad18aa889032f501041
+F
+web/templates/home.ftl,2\f\2f0a410c6f3f76838478c70ad0fa31a8b292097b
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec

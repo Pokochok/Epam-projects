@@ -11,7 +11,7 @@
     <@mainPanel.page>
     <#include "../css/componentsstyle/ticket-form.css"/>
     <#include "../css/flights-style.css"/>
-    <@mainPanel.page>
+    </@mainPanel.page>
     <title><@spring.message "common.title.flights"/></title>
 </head>
 <body>
@@ -19,7 +19,7 @@
 <div class="contentForm">
 
     <div class="menu">
-        <#if secutity.isAdmin>
+        <#if (secutity.isAdmin)!false>
             <div class="registerNewTicket">
                 <a class="menuRef" href="to_ticket_registration">
                     <@spring.message "admin.ref.registerNewTicket"/>
@@ -56,78 +56,53 @@
                 </div>
 
                 <@spring.message "common.message.tour"/>
-                <#if param.toutId == '' || param.tourId??>
-                    <@spring.message "common.message.notChosen"/>
-                </#if>
                 ${(param.tourName)!}
 
-                <#if !(param.tourId??)>
-                    <div class="continueBooking">
-
-                        <#if !secutity.isAnonymous>
-                            <form method="post" action="to_booking">
-                                <input type="hidden" name="tourId" value="${param.tourId}"/>
-                                <input type="hidden" name="tourName" value="${param.tourName}"/>
-                                <input type="hidden" name="arrivalCountry" value="${param.arrivalCountry}"/>
-                                <input type="hidden" name="arrivalCity" value="${param.arrivalCity}"/>
-                                <input type="hidden" name="departureCity" value="${param.departureCity}"/>
-                                <input type="hidden" name="departureDate" value="${param.departureDate}"/>
-                                <input type="hidden" name="arrivalDate" value="${param.arrivalDate}"/>
-                                <input type="hidden" name="hotel" value="${param.hotel}"/>
-                                <input type="hidden" name="nutrition" value="${param.nutrition}"/>
-                                <input type="hidden" name="adultsNumber" value="${param.adultsNumber}"/>
-                                <input type="hidden" name="childrenNumber" value="${param.childrenNumber}"/>
-                                <input type="hidden" name="price" value="${param.price}"/>
-                            </form>
-                        </#if>
-                        <#if secutity.isAnonymous>
-                            <form method="post" action="to_login">
-                                <input type="hidden" name="tourId" value="${param.tourId}"/>
-                                <input type="hidden" name="tourName" value="${param.tourName}"/>
-                                <input type="hidden" name="arrivalCountry" value="${param.arrivalCountry}"/>
-                                <input type="hidden" name="arrivalCity" value="${param.arrivalCity}"/>
-                                <input type="hidden" name="departureCity" value="${param.departureCity}"/>
-                                <input type="hidden" name="departureDate" value="${param.departureDate}"/>
-                                <input type="hidden" name="arrivalDate" value="${param.arrivalDate}"/>
-                                <input type="hidden" name="hotel" value="${param.hotel}"/>
-                                <input type="hidden" name="nutrition" value="${param.nutrition}"/>
-                                <input type="hidden" name="adultsNumber" value="${param.adultsNumber}"/>
-                                <input type="hidden" name="childrenNumber" value="${param.childrenNumber}"/>
-                                <input type="hidden" name="price" value="${param.price}"/>
-                                <input type="hidden" name="notAuthorized"
-                                       value="<@spring.message "guest.attrValue.notAuthorized"/>"/>
-                            </form>
-                        </#if>
-
+                <#if param.tourId??>
+                    <form class="continueBooking" method="post" action="to_booking">
+                        <input type="hidden" name="tourId" value="${param.tourId!}"/>
+                        <input type="hidden" name="tourName" value="${param.tourName!}"/>
+                        <input type="hidden" name="arrivalCountry" value="${param.arrivalCountry!}"/>
+                        <input type="hidden" name="arrivalCity" value="${param.arrivalCity!}"/>
+                        <input type="hidden" name="departureCity" value="${param.departureCity!}"/>
+                        <input type="hidden" name="departureDate" value="${param.departureDate!}"/>
+                        <input type="hidden" name="arrivalDate" value="${param.arrivalDate!}"/>
+                        <input type="hidden" name="hotel" value="${param.hotel!}"/>
+                        <input type="hidden" name="nutrition" value="${param.nutrition!}"/>
+                        <input type="hidden" name="adultsNumber" value="${param.adultsNumber!}"/>
+                        <input type="hidden" name="childrenNumber" value="${param.childrenNumber!}"/>
+                        <input type="hidden" name="price" value="${param.price!}"/>
                         <label>
                             <input type="submit" name="continueBooking"
                                    value="<@spring.message "common.submit.continueBooking"/>">
                         </label>
-                    </div>
+                    </form>
+                <#else>
+                        <@spring.message "common.message.notChosen"/>
                 </#if>
 
                 <nav>
                     <form class="pagination" id="paginationForm" method="post" action="to_tickets">
-                        <input type="hidden" name="index" value="${startIndexOfTicket/ticketsPerPage + 1}"/>
+                        <input type="hidden" name="index" value="${(startIndexOfTicket!0)/(ticketsPerPage!0) + 1}"/>
 
-                        <input type="hidden" name="tourId" value="${param.tourId}"/>
-                        <input type="hidden" name="tourName" value="${param.tourName}"/>
-                        <input type="hidden" name="arrivalCountry" value="${param.arrivalCountry}"/>
-                        <input type="hidden" name="arrivalCity" value="${param.arrivalCity}"/>
-                        <input type="hidden" name="departureCity" value="${param.departureCity}"/>
-                        <input type="hidden" name="departureDate" value="${param.departureDate}"/>
-                        <input type="hidden" name="arrivalDate" value="${param.arrivalDate}"/>
-                        <input type="hidden" name="hotel" value="${param.hotel}"/>
-                        <input type="hidden" name="nutrition" value="${param.nutrition}"/>
-                        <input type="hidden" name="adultsNumber" value="${param.adultsNumber}"/>
-                        <input type="hidden" name="childrenNumber" value="${param.childrenNumber}"/>
-                        <input type="hidden" name="price" value="${param.price}"/>
-                        <#if startIndexOfTicket == 0>
+                        <input type="hidden" name="tourId" value="${param.tourId!}"/>
+                                <input type="hidden" name="tourName" value="${param.tourName!}"/>
+                                <input type="hidden" name="arrivalCountry" value="${param.arrivalCountry!}"/>
+                                <input type="hidden" name="arrivalCity" value="${param.arrivalCity!}"/>
+                                <input type="hidden" name="departureCity" value="${param.departureCity!}"/>
+                                <input type="hidden" name="departureDate" value="${param.departureDate!}"/>
+                                <input type="hidden" name="arrivalDate" value="${param.arrivalDate!}"/>
+                                <input type="hidden" name="hotel" value="${param.hotel!}"/>
+                                <input type="hidden" name="nutrition" value="${param.nutrition!}"/>
+                                <input type="hidden" name="adultsNumber" value="${param.adultsNumber!}"/>
+                                <input type="hidden" name="childrenNumber" value="${param.childrenNumber!}"/>
+                                <input type="hidden" name="price" value="${param.price!}"/>
+                        <#if ((startIndexOfTicket!0) == 0)>
                             <div class="page-item">
                                 <a class="page-link"><@spring.message "common.ref.previousPage"/> </a>
                             </div>
                         </#if>
-                        <#if startIndexOfTicket > 0>
+                        <#if ((startIndexOfTicket!0) > 0)>
                             <div class="page-item">
                                 <div id="previousPageForm">
                                     <input type="hidden" id="previousPage" name="changePage" value="-1"
@@ -139,9 +114,9 @@
                             </div>
                         </#if>
 
-                        <div class="page-item"><a class="page-link">${index}</a></div>
+                        <div class="page-item"><a class="page-link">${index!}</a></div>
 
-                        <#if startIndexOfTicket + ticketsPerPage < numberOfTickets>
+                        <#if ((startIndexOfTicket!0) + (ticketsPerPage!8) < (numberOfTickets!8))>
                             <div class="page-item">
                                 <div id="nextPageForm">
                                     <input type="hidden" id="nextPage" name="changePage" value="1" disabled>
@@ -151,7 +126,7 @@
                                 </div>
                             </div>
                         </#if>
-                        <#if startIndexOfTicket + ticketsPerPage >= ${numberOfTickets}>
+                        <#if ((startIndexOfTicket!0) + (ticketsPerPage!8) >= (numberOfTickets!8))>
                             <div class="page-item">
                                 <a class="page-link"><@spring.message "common.ref.nextPage"/></a>
                             </div>

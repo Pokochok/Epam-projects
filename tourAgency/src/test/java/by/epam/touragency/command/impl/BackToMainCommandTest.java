@@ -1,6 +1,7 @@
 package by.epam.touragency.command.impl;
 
 import by.epam.touragency.config.WebAppTestContext;
+import by.epam.touragency.resource.ConfigurationManager;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -11,6 +12,8 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
+import static by.epam.touragency.util.PageMsgConstant.HOME_PAGE_PATH;
+import static by.epam.touragency.util.PageMsgConstant.TOUR_OVERVIEW_PAGE_PATH;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.forwardedUrl;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -33,8 +36,8 @@ public class BackToMainCommandTest {
 
     @Test
     public void execute() throws Exception {
-        ResultActions resultActions = mockMvc.perform(get("/home"));
-        resultActions.andExpect(status().isOk())
-                .andExpect(forwardedUrl("/jsp/home.jsp"));
+        mockMvc.perform(get("/back_to_main"))
+                .andExpect(status().isOk())
+                .andExpect(forwardedUrl(ConfigurationManager.getProperty(HOME_PAGE_PATH)));
     }
 }

@@ -57,10 +57,9 @@ class ChangeEmailCommandTest {
     @DisplayName("Invalid parameters entered. Validation failed")
     void execute() throws Exception {
         when(validation.validateEmail(anyString())).thenReturn(false);
+        when(updateUserLogic.checkPrincipal()).thenReturn(false);
         mockMvc.perform(post("/change_email")
-                .sessionAttr(PARAM_NAME_USER_LOGIN, "login")
-                .param(PARAM_NAME_NEW_EMAIL, "newEmail")
-                .sessionAttr(PARAM_NAME_ROLE, "role"))
+                .param(PARAM_NAME_NEW_EMAIL, "newEmail"))
                 .andExpect(status().isOk())
                 .andExpect(MockMvcResultMatchers.view().name(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH)))
                 .andExpect(forwardedUrl(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH)));
@@ -71,15 +70,13 @@ class ChangeEmailCommandTest {
     void executeSuccess() throws Exception {
         when(validation.validateEmail(anyString())).thenReturn(true);
         when(validation.validateLogin(anyString())).thenReturn(true);
+        when(updateUserLogic.checkPrincipal()).thenReturn(false);
         when(updateUserLogic.updateEmail(anyString(), anyString(), anyString())).thenReturn(true);
         mockMvc.perform(post("/change_email")
-                .sessionAttr(PARAM_NAME_USER_LOGIN, "login")
-                .param(PARAM_NAME_NEW_EMAIL, "newEmail")
-                .sessionAttr(PARAM_NAME_ROLE, "role"))
+                .param(PARAM_NAME_NEW_EMAIL, "newEmail"))
                 .andExpect(status().isOk())
                 .andExpect(forwardedUrl(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH)))
-                .andExpect(MockMvcResultMatchers.view().name(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH)))
-                .andExpect(model().attribute(ATTR_NAME_USER_EMAIL,"newEmail"));
+                .andExpect(MockMvcResultMatchers.view().name(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH)));
     }
 
     @Test
@@ -87,15 +84,13 @@ class ChangeEmailCommandTest {
     void executeEmailExists() throws Exception {
         when(validation.validateEmail(anyString())).thenReturn(true);
         when(validation.validateLogin(anyString())).thenReturn(true);
-        when(updateUserLogic.updateEmail(anyString(), anyString(), anyString())).thenReturn(false);
         when(messageManager.getProperty(eq(EMAIL_EXISTS_MSG_KEY), any(Locale.class))).thenReturn("emailExists");
+        when(updateUserLogic.checkPrincipal()).thenReturn(false);
+        when(updateUserLogic.updateEmail(any(), anyString(), any())).thenReturn(false);
         mockMvc.perform(post("/change_email")
-                .sessionAttr(PARAM_NAME_USER_LOGIN, "login")
-                .param(PARAM_NAME_NEW_EMAIL, "newEmail")
-                .sessionAttr(PARAM_NAME_ROLE, "role"))
+                .param(PARAM_NAME_NEW_EMAIL, "newEmail"))
                 .andExpect(status().isOk())
                 .andExpect(forwardedUrl(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH)))
-                .andExpect(MockMvcResultMatchers.view().name(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH)))
-                .andExpect(model().attribute(ATTR_NAME_ERROR_EMAIL_EXISTS,"emailExists"));
+                .andExpect(MockMvcResultMatchers.view().name(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH)));
     }
 }

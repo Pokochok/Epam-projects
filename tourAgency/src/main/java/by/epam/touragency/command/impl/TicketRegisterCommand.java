@@ -11,6 +11,7 @@ import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttribute;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Date;
@@ -39,19 +40,19 @@ public class TicketRegisterCommand {
             @RequestParam(value = PARAM_NAME_ARRIVAL_CITY) String arrivalCity,
             @RequestParam(value = PARAM_NAME_DEPARTURE_DATE) String departureDateStr,
             @RequestParam(value = PARAM_NAME_ARRIVAL_DATE) String arrivalDateStr,
-            @RequestParam(value = ATTR_NAME_LANGUAGE, required = false) String language
+            @SessionAttribute(value = ATTR_NAME_LANGUAGE, required = false) String language
     ) throws CommandException {
         ModelAndView modelAndView = new ModelAndView();
         String page = null;
         boolean isValid = true;
-        if (language == null){
+        if (language == null) {
             language = EN_LOCALE;
         }
 
         long departureDate = validation.validateDate(departureDateStr);
         long arrivalDate = validation.validateDate(arrivalDateStr);
 
-        if(!new Date().before(new Date(departureDate)) || !new Date(departureDate).before(new Date(arrivalDate))){
+        if (!new Date().before(new Date(departureDate)) || !new Date(departureDate).before(new Date(arrivalDate))) {
             LOGGER.debug("Invalid date entered");
             modelAndView.addObject(ATTR_NAME_ERROR_DATE,
                     messageManager.getProperty(DATE_ERROR_MSG_KEY, new Locale(language)));
@@ -71,16 +72,17 @@ public class TicketRegisterCommand {
                 LOGGER.debug("Ticket is exists");
                 isValid = false;
             }
+            String msg = null;
             if (isValid) {
                 ticketRegistrationLogic.addTicket(flightNumber, ticketNumber, departureCity,
                         arrivalCity, departureDate, arrivalDate);
-                modelAndView.addObject(ATTR_NAME_MSG_KEY, REGISTRATION_SUCCESS_MSG_KEY);
-                page = ConfigurationManager.getProperty(TO_INF_PAGE_PATH);
+                msg = REGISTRATION_SUCCESS_MSG_KEY;
+                page = "redirect:" + ConfigurationManager.getProperty(INF_URL_PATH) + "?" + ATTR_NAME_MSG_KEY + "=" + msg;
             } else {
-                modelAndView.addObject(ATTR_NAME_MSG_KEY, REGISTRATION_NOT_SUCCESS_MSG_KEY);
-                page = ConfigurationManager.getProperty(TO_INF_PAGE_PATH);
+                msg = REGISTRATION_NOT_SUCCESS_MSG_KEY;
+                page = "redirect:" + ConfigurationManager.getProperty(INF_URL_PATH) + "?" + ATTR_NAME_MSG_KEY + "=" + msg;
             }
-        }catch (LogicException e){
+        } catch (LogicException e) {
             throw new CommandException(e);
         }
         modelAndView.setViewName(page);

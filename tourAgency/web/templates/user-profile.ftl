@@ -16,7 +16,7 @@
         <form class="userContentItem" method="POST" action="change_user_name">
             <div class="userContentItemMsg"><@spring.message "common.message.name"/></div>
 
-            ${userName}
+            ${secutity.userName!}
 
             <a id="changeUserNameMsg" onclick="document.getElementById('changeUserNameMsg').hidden=true;
                document.getElementById('changeUserNameDiv').hidden=false;
@@ -47,7 +47,7 @@
         <form class="userContentItem" method="POST" action="change_user_surname">
             <div class="userContentItemMsg"><@spring.message "common.message.surname"/></div>
 
-            ${userSurname}
+            ${secutity.userSurname!}
 
             <a id="changeUserSurnameMsg" onclick="document.getElementById('changeUserSurnameMsg').hidden=true;
                document.getElementById('changeUserSurnameDiv').hidden=false;
@@ -79,7 +79,7 @@
         <form class="userContentItem" method="POST" action="change_phone_number">
             <div class="userContentItemMsg"><@spring.message "common.message.phoneNumber"/></div>
 
-            ${userPhoneNumber}
+            ${secutity.userPhoneNumber!}
 
             <a id="changePhoneNumberMsg" onclick="document.getElementById('changePhoneNumberMsg').hidden=true;
                document.getElementById('changePhoneNumberDiv').hidden=false;
@@ -110,7 +110,7 @@
         <form class="userContentItem" method="POST" action="change_email">
             <div class="userContentItemMsg"><@spring.message "common.message.email"/></div>
 
-            ${userEmail}
+            ${secutity.userEmail!}
 
             <a id="changeEmailMsg" onclick="document.getElementById('changeEmailMsg').hidden=true;
                document.getElementById('changeEmailDiv').hidden=false;
@@ -142,7 +142,7 @@
         <form class="userContentItem" method="POST" action="change_login">
             <div class="userContentItemMsg"><@spring.message "common.message.login"/></div>
 
-            ${userLogin}
+            ${secutity.userLogin!}
 
             <a id="changeLoginMsg" onclick="document.getElementById('changeLoginMsg').hidden=true;
                document.getElementById('changeLoginDiv').hidden=false;

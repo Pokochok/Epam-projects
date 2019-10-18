@@ -98,10 +98,11 @@ class RegisterCommandTest {
                 .param(PARAM_NAME_LOGIN, "login")
                 .param(PARAM_NAME_PASSWORD, "password")
                 .param(PARAM_NAME_USER_ROLE, "ADMIN"))
-                .andExpect(status().isOk())
-                .andExpect(forwardedUrl(ConfigurationManager.getProperty(TO_INF_PAGE_PATH)))
-                .andExpect(MockMvcResultMatchers.view().name(ConfigurationManager.getProperty(TO_INF_PAGE_PATH)))
-        .andExpect(model().attribute(ATTR_NAME_MSG_KEY, REGISTRATION_SUCCESS_MSG_KEY));
+                .andExpect(status().is(302))
+                .andExpect(redirectedUrl(ConfigurationManager.getProperty(INF_URL_PATH) + "?" +
+                        ATTR_NAME_MSG_KEY + "=" + REGISTRATION_SUCCESS_MSG_KEY))
+                .andExpect(MockMvcResultMatchers.view().name("redirect:" +
+                        ConfigurationManager.getProperty(INF_URL_PATH) + "?" + ATTR_NAME_MSG_KEY + "=" + REGISTRATION_SUCCESS_MSG_KEY));
     }
 
     @Test

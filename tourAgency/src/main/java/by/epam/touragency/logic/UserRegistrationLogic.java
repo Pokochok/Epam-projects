@@ -39,7 +39,7 @@ public class UserRegistrationLogic {
                 .setEmail(email)
                 .setPhoneNumber(phoneNumber)
                 .setLogin(login)
-                .setPassword(BCrypt.hashpw(password, BCrypt.gensalt()))
+                .setPassword(BCrypt.hashpw(password, BCrypt.gensalt(12)))
                 .setRole(role).build();
         Specification specification = defineAddUserSpecification(role, user);
         try {

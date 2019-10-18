@@ -12,6 +12,8 @@ import by.epam.touragency.specification.Specification;
 import by.epam.touragency.util.Validation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
+import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Service;
 
@@ -74,5 +76,9 @@ public class LoginLogic {
             }
         }
         return user;
+    }
+
+    public boolean isValid(SecurityContext securityContext){
+        return !(securityContext.getAuthentication() instanceof AnonymousAuthenticationToken);
     }
 }

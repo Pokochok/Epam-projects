@@ -3,6 +3,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!-- jQuery Core -->
+<script src="/uui/js/lib/jquery-1.12.0.min.js"></script>
+
+<!-- Bootstrap Core -->
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+<script src="uui/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- EPAM UUI JavaScript Core -->
+<script src="/uui/js/uui-core.min.js" type="text/javascript"></script>
+
+<!-- EPAM UUI Styles Core -->
+<link rel="stylesheet" href="css/uui-all.css" />
+<!-- Your custom CSS Styles -->
+<#--<link rel="stylesheet" href="css/custom-styles.css" />-->
+
+<!-- Scroll for UUI Sidebar -->
+<link rel="stylesheet" href="css/lib/components/jquery.mCustomScrollbar.min.css" />
+<script src="/uui/js/lib/components/jquery.mCustomScrollbar.concat.min.js"></script>
+
     <title class="header">
         <@spring.message "common.title"/>
     </title>

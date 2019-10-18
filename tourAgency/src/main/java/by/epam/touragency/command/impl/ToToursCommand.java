@@ -1,12 +1,16 @@
 package by.epam.touragency.command.impl;
 
+import by.epam.touragency.entity.Role;
 import by.epam.touragency.entity.Tour;
+import by.epam.touragency.entity.UserPrincipal;
 import by.epam.touragency.exception.CommandException;
 import by.epam.touragency.exception.LogicException;
 import by.epam.touragency.logic.ToPageWithListLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -22,13 +26,15 @@ import static by.epam.touragency.util.ParameterConstant.*;
 @PreAuthorize("permitAll()")
 public class ToToursCommand {
     @RequestMapping("/to_tours")
-    public ModelAndView execute(@SessionAttribute(value = ATTR_NAME_USER_ROLE, required = false)String role,
-                                @RequestParam(value = ATTR_NAME_INDEX, required = false) String index,
+    public ModelAndView execute(@RequestParam(value = ATTR_NAME_INDEX, required = false) String index,
                                 @RequestParam(value = ATTR_NAME_CHANGE_PAGE, required = false) String toChangePage) throws CommandException {
         ModelAndView modelAndView = new ModelAndView();
         int newIndex;
-//        String userRole = String.valueOf(role);
-        String userRole = "CLIENT";
+        String userRole = Role.GUEST.toString();
+        if(SecurityContextHolder.getContext().getAuthentication().getPrincipal() instanceof UserPrincipal) {
+            UserPrincipal userDetails = (UserPrincipal) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+            userRole = userDetails.getUserRole().toString();
+        }
 
         if (index == null) {
             newIndex = 1;

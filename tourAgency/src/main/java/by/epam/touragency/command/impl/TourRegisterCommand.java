@@ -12,6 +12,7 @@ import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttribute;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.math.BigDecimal;
@@ -50,7 +51,7 @@ public class TourRegisterCommand {
             @RequestParam(value = ATTR_NAME_PRICE) String price,
             @RequestParam(value = PARAM_NAME_DEPARTURE_DATE) String departureDateStr,
             @RequestParam(value = PARAM_NAME_ARRIVAL_DATE) String arrivalDateStr,
-            @RequestParam(value = ATTR_NAME_LANGUAGE, required = false)String language
+            @SessionAttribute(value = ATTR_NAME_LANGUAGE, required = false)String language
             ) throws CommandException {
         String page = null;
         boolean isValid = true;
@@ -83,20 +84,19 @@ public class TourRegisterCommand {
                 modelAndView.addObject(ATTR_NAME_ERROR_TOUR_NAME_EXISTS,
                         messageManager.getProperty(TOUR_NAME_EXISTS_ERROR_MSG_KEY, new Locale(language)));
             }
+            String msg = null;
             if (isValid) {
                 tourRegistrationLogic.addTour(tourName, departureDate, arrivalDate, departureCity, arrivalCity, arrivalCountry, hotel,
                         nutrition, numberOfAdults, numberOfChildren, priceBD, isAvailable);
-                modelAndView.addObject(ATTR_NAME_MSG_KEY,  REGISTRATION_SUCCESS_MSG_KEY);
-                page = ConfigurationManager.getProperty(INF_PAGE_PATH);
-                modelAndView.setViewName(page);
+                msg = REGISTRATION_SUCCESS_MSG_KEY;
+                page = "redirect:" + ConfigurationManager.getProperty(INF_URL_PATH) + "?" + ATTR_NAME_MSG_KEY + "=" + msg;
             } else {
                 page = ConfigurationManager.getProperty(TO_TOUR_REGISTRATION_PAGE_PATH);
-                modelAndView.setViewName(page);
-                return modelAndView;
             }
         } catch (LogicException e) {
             throw new CommandException(e);
         }
+        modelAndView.setViewName(page);
         return modelAndView;
     }
 }

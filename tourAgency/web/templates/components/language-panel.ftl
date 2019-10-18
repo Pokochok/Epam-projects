@@ -1,7 +1,7 @@
 <#macro page>
     <#import "/spring.ftl" as spring/>
     <#assign language = (.locale)! "en"/>
-    <form class="language" action="/lang">
+    <form class="language" action="/tour-agency/lang" method="get">
         <@spring.message "common.message.language"/>
         <#if language??>
             <label for=${language}>

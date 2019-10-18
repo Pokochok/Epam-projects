@@ -11,6 +11,8 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import java.util.HashSet;
 import java.util.Set;
 
+import static by.epam.touragency.util.PageMsgConstant.LOGGER;
+
 @org.springframework.stereotype.Repository
 public class UserRepository implements Repository<User> {
 
@@ -59,8 +61,13 @@ public class UserRepository implements Repository<User> {
 
     @Override
     public boolean isExistsQuery(Specification specification) throws RepositoryException {
-        return !jdbcTemplate.query(specification.sqlQuery(), specification.getParameterQueue().toArray(),
-                new UserRowMapper()).isEmpty();
+        try {
+            return !jdbcTemplate.query(specification.sqlQuery(), specification.getParameterQueue().toArray(),
+                    new UserRowMapper()).isEmpty();
+        } catch (RuntimeException e) {
+            LOGGER.error("Error while getting is exists query ");
+            throw new RepositoryException(e);
+        }
     }
 
     @Autowired

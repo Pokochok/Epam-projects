@@ -10,10 +10,10 @@
         <#include "../css/componentsstyle/order-form.css"/>
         <#include "../css/orders-style.css"/>
     </@mainPanel.page>
-    <#if secutity.isClient>
+    <#if (secutity.isClient)!false>
         <title><@spring.message "client.title.orders"/></title>
     </#if>
-    <#if !secutity.isClient>
+    <#if !((secutity.isClient)!false)>
         <title><@spring.message "adminAgent.title.order"/></title>
     </#if>
 </head>
@@ -23,10 +23,10 @@
 
     <div class="contentContainer">
         <div class="contentHeader">
-            <#if secutity.isClient>
+            <#if (secutity.isClient)!false>
                 <@spring.message "client.title.orders"/>
             </#if>
-            <#if !secutity.isClient>
+            <#if !((secutity.isClient)!false)>
                 <@spring.message "adminAgent.title.order"/>
             </#if>
             <hr/>
@@ -34,9 +34,6 @@
 
         <#assign orderList = (Request.orderList)/>
         <div class="orders">
-            <#if orderList.isEmpty>
-                <@spring.message "common.message.noReservations"/>
-            </#if>
 
             <#list orderList as orderItem>
                 <@orderForm.page order = orderItem/>
@@ -54,6 +51,8 @@
 <#--                <c:param name="agentEmail" value="${order.getAgent().getEmail()}"/>-->
 <#--                <c:param name="paymentState" value="${order.getPaymentState()}"/>-->
 <#--            </import>-->
+            <#else>
+                <@spring.message "common.message.noReservations"/>
             </#list>
         </div>
 
@@ -61,42 +60,42 @@
             <form class="pagination" id="paginationForm" method="get" action="to_orders">
                 <input type="hidden" name="index" value="${startIndexOfOrders/ordersPerPage + 1}"/>
 
-                <#if startIndexOfOrders == 0>
+                <#if ((startIndexOfOrders!0) == 0)>
                     <div class="page-item disabled">
                         <a class="page-link">
-                            <@secutity.message "common.ref.previousPage"/>
+                            <@spring.message "common.ref.previousPage"/>
                         </a>
                     </div>
                 </#if>
-                <#if startIndexOfOrders > 0>
+                <#if ((startIndexOfOrders!0) > 0)>
                     <div class="page-item">
                         <div id="previousPageForm">
                             <input type="hidden" id="previousPage" name="changePage" value="-1" disabled>
                             <a class="page-link" href="#" onclick="document.getElementById('previousPage').disabled=false;
                                     document.getElementById('paginationForm').submit()">
-                                <@secutity.message "common.ref.previousPage"/>
+                                <@spring.message "common.ref.previousPage"/>
                             </a>
                         </div>
                     </div>
                 </#if>
 
-                <div class="page-item"><a class="page-link">${index}</a></div>
+                <div class="page-item"><a class="page-link">${index!}</a></div>
 
-                <#if startIndexOfOrders + ordersPerPage < numberOfOrders>
+                <#if ((startIndexOfOrders!0) + (ordersPerPage!8) < (numberOfOrders!8))>
                     <div class="page-item">
                         <div id="nextPageForm">
                             <input type="hidden" id="nextPage" name="changePage" value="1" disabled>
                             <a class="page-link" href="#" onclick="document.getElementById('nextPage').disabled = false;
                                     document.getElementById('paginationForm').submit()">
-                                <@secutity.message "common.ref.nextPage"/>
+                                <@spring.message "common.ref.nextPage"/>
                             </a>
                         </div>
                     </div>
                 </#if>
-                <#if startIndexOfOrders + ordersPerPage >= numberOfOrders>
+                <#if ((startIndexOfOrders!0) + (ordersPerPage!8) >= (numberOfOrders!8))>
                     <div class="page-item disabled">
                         <a class="page-link">
-                            <@secutity.message "common.ref.nextPage"/>
+                            <@spring.message "common.ref.nextPage"/>
                         </a>
                     </div>
                 </#if>

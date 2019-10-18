@@ -167,9 +167,11 @@ class TourRegisterCommandTest {
                 .param(ATTR_NAME_PRICE, "200")
                 .param(PARAM_NAME_DEPARTURE_DATE, "departureDateStr")
                 .param(PARAM_NAME_ARRIVAL_DATE, "arrivalDateStr"))
-                .andExpect(status().isOk())
-                .andExpect(forwardedUrl(ConfigurationManager.getProperty(INF_PAGE_PATH)))
-                .andExpect(MockMvcResultMatchers.view().name(ConfigurationManager.getProperty(INF_PAGE_PATH)))
-                .andExpect(model().attribute(ATTR_NAME_MSG_KEY, REGISTRATION_SUCCESS_MSG_KEY));
+                .andExpect(status().is(302))
+                .andExpect(redirectedUrl(ConfigurationManager.getProperty(INF_URL_PATH) + "?"
+                        + ATTR_NAME_MSG_KEY + "=" + REGISTRATION_SUCCESS_MSG_KEY))
+                .andExpect(MockMvcResultMatchers.view().name("redirect:" +
+                        ConfigurationManager.getProperty(INF_URL_PATH) + "?"
+                        + ATTR_NAME_MSG_KEY + "=" + REGISTRATION_SUCCESS_MSG_KEY));
     }
 }

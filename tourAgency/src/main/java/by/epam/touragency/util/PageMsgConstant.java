@@ -6,10 +6,11 @@ import org.apache.logging.log4j.Logger;
 public class PageMsgConstant {
     public static final Logger LOGGER = LogManager.getLogger();
 
-    public static final String HEADER_VALUE = "controller?command=to_inf&msg_key=";
+    public static final String HEADER_VALUE = "to_inf?msg_key=";
     public static final String HEADER_NAME = "Location";
 
     public static final String INF_PAGE_PATH = "path.page.inf";
+    public static final String INF_URL_PATH = "path.page.inf.url";
     public static final String BOOKING_PAGE_PATH = "path.page.booking";
     public static final String TOUR_OVERVIEW_PAGE_PATH = "path.page.tourOverview";
     public static final String USER_PROFILE_PAGE_PATH = "path.page.userProfile";

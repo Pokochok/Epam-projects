@@ -39,6 +39,9 @@ public class BookingLogic {
      * @throws LogicException if handled RepositoryException
      */
     public boolean isClientExists(String clientEmail) throws LogicException {
+        if (!validation.validateEmail(clientEmail)){
+            return false;
+        }
         Specification clientByEmail = new FindClientByEmailSpecification(clientEmail);
         try {
             return UserRepository.getInstance().isExistsQuery(clientByEmail);

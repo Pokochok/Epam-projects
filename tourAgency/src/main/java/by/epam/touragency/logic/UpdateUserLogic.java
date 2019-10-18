@@ -1,6 +1,8 @@
 package by.epam.touragency.logic;
 
 import by.epam.touragency.entity.Role;
+import by.epam.touragency.entity.User;
+import by.epam.touragency.entity.UserPrincipal;
 import by.epam.touragency.exception.LogicException;
 import by.epam.touragency.exception.RepositoryException;
 import by.epam.touragency.repository.impl.UserRepository;
@@ -9,7 +11,9 @@ import by.epam.touragency.specification.impl.admin.*;
 import by.epam.touragency.specification.impl.agent.*;
 import by.epam.touragency.specification.impl.client.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCrypt;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import static by.epam.touragency.util.PageMsgConstant.LOGGER;
@@ -24,7 +28,8 @@ public class UpdateUserLogic {
 
     /**
      * Updates user email
-     * @param role user role
+     *
+     * @param role  user role
      * @param email user email
      * @param login user login
      * @return true, if updating completed successfully, and false - if not
@@ -48,7 +53,8 @@ public class UpdateUserLogic {
 
     /**
      * Defines specification for email updating
-     * @param role role
+     *
+     * @param role  role
      * @param email email
      * @param login login
      * @return specification
@@ -79,9 +85,10 @@ public class UpdateUserLogic {
 
     /**
      * Updates phone number
-     * @param role role
+     *
+     * @param role           role
      * @param newPhoneNumber new phone number
-     * @param login login
+     * @param login          login
      * @return true, if updating completed successfully, and false - if not
      * @throws LogicException if handled RepositoryException
      */
@@ -103,9 +110,10 @@ public class UpdateUserLogic {
 
     /**
      * Defines specification for phone number updating
-     * @param role role
+     *
+     * @param role           role
      * @param newPhoneNumber new phone number
-     * @param login login
+     * @param login          login
      * @return specification
      * @throws LogicException if if user role is not defined
      */
@@ -134,7 +142,8 @@ public class UpdateUserLogic {
 
     /**
      * Updates user login
-     * @param role role
+     *
+     * @param role  role
      * @param login login
      * @param email email
      * @return true, if updating completed successfully, and false - if not
@@ -158,7 +167,8 @@ public class UpdateUserLogic {
 
     /**
      * Defines specification for login updating
-     * @param role role
+     *
+     * @param role  role
      * @param login login
      * @param email email
      * @return specification
@@ -189,44 +199,46 @@ public class UpdateUserLogic {
 
     /**
      * Updates user password
-     * @param role role
-     * @param login login
-     * @param password password
+     *
+     * @param role        role
+     * @param login       login
+     * @param password    password
      * @param newPassword new password
      * @return true, if updating completed successfully, and false - if not
      * @throws LogicException if handled RepositoryException or if user role is not defined
      */
     public boolean updatePassword(String role, String login, String password, String newPassword) throws LogicException {
-        String encryptedPassword = BCrypt.hashpw(password, BCrypt.gensalt());
-        String encryptedNewPassword =  BCrypt.hashpw(password, BCrypt.gensalt());
+        String encryptedNewPassword = BCrypt.hashpw(newPassword, BCrypt.gensalt(10));
         boolean flag = false;
         Specification specificationForValidate = null;
         Specification specification = null;
-        switch (Role.valueOf(role)) {
-            case AGENT: {
-                specificationForValidate = new FindAgentByLoginPasswordSpecification(login, encryptedPassword);
-                specification = new UpdateAgentPasswordByLoginPasswordSpecification(encryptedNewPassword, login, encryptedPassword);
-                break;
-            }
-            case CLIENT: {
-                specificationForValidate = new FindClientByLoginPasswordSpecification(login, encryptedPassword);
-                specification = new UpdateClientPasswordByLoginPasswordSpecification(encryptedNewPassword, login, encryptedPassword);
-                break;
-            }
-            case ADMIN: {
-                specificationForValidate = new FindAdminByLoginPasswordSpecification(login, encryptedPassword);
-                specification = new UpdateAdminPasswordByLoginPasswordSpecification(encryptedNewPassword, login, encryptedPassword);
-                break;
-            }
-            default: {
-                LOGGER.error("User role is not defined while updating password");
-                throw new LogicException("User role is not defined");
-            }
-        }
-
-        UserRepository repository = UserRepository.getInstance();
+        User user= null;
         try {
-            if (flag = repository.isExistsQuery(specificationForValidate)) {
+            switch (Role.valueOf(role)) {
+                case AGENT: {
+                    specificationForValidate = new FindAgentByLoginSpecification(login);
+                    specification = new UpdateAgentPasswordByLoginSpecification(login, encryptedNewPassword);
+                    break;
+                }
+                case CLIENT: {
+                    specificationForValidate = new FindClientByLoginSpecification(login);
+                    specification = new UpdateClientPasswordByLoginSpecification(login, encryptedNewPassword);
+                    break;
+                }
+                case ADMIN: {
+                    specificationForValidate = new FindAdminByLoginSpecification(login);
+                    specification = new UpdateAdminPasswordByLoginSpecification(login, encryptedNewPassword);
+                    break;
+                }
+                default: {
+                    LOGGER.error("User role is not defined while updating password");
+                    throw new LogicException("User role is not defined");
+                }
+            }
+
+            UserRepository repository = UserRepository.getInstance();
+            user = repository.query(specificationForValidate).iterator().next();
+            if (flag = BCrypt.checkpw(password, user.getPassword())) {
                 repository.update(null, specification);
             }
         } catch (RepositoryException e) {
@@ -237,8 +249,9 @@ public class UpdateUserLogic {
 
     /**
      * Updates user name
-     * @param role role
-     * @param login login
+     *
+     * @param role    role
+     * @param login   login
      * @param newName new name
      * @return true, if updating completed successfully, and false - if not
      * @throws LogicException if handled RepositoryException
@@ -260,9 +273,10 @@ public class UpdateUserLogic {
 
     /**
      * Defines specification for usr name updating
-     * @param role role
+     *
+     * @param role    role
      * @param newName new name
-     * @param login login
+     * @param login   login
      * @return specification
      * @throws LogicException if if user role is not defined
      */
@@ -291,8 +305,9 @@ public class UpdateUserLogic {
 
     /**
      * Updates user surname
-     * @param role role
-     * @param login login
+     *
+     * @param role       role
+     * @param login      login
      * @param newSurname new surname
      * @return true, if updating completed successfully, and false - if not
      * @throws LogicException if handled RepositoryException
@@ -314,9 +329,10 @@ public class UpdateUserLogic {
 
     /**
      * Defines specification for user surname Updating
-     * @param role role
+     *
+     * @param role       role
      * @param newSurname new surname
-     * @param login login
+     * @param login      login
      * @return specification
      * @throws LogicException if user role is not defined
      */
@@ -341,5 +357,9 @@ public class UpdateUserLogic {
             }
         }
         return specification;
+    }
+
+    public boolean checkPrincipal(){
+        return SecurityContextHolder.getContext().getAuthentication().getPrincipal() instanceof UserPrincipal;
     }
 }

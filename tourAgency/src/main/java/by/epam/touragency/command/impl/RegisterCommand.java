@@ -13,6 +13,7 @@ import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttribute;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Locale;
@@ -45,7 +46,7 @@ public class RegisterCommand {
             @RequestParam(value = PARAM_NAME_LOGIN) String login,
             @RequestParam(value = PARAM_NAME_PASSWORD) String password,
             @RequestParam(value = PARAM_NAME_USER_ROLE) String role,
-            @RequestParam(value = ATTR_NAME_LANGUAGE, required = false) String language
+            @SessionAttribute(value = ATTR_NAME_LANGUAGE, required = false) String language
     ) throws CommandException {
         String page = null;
         boolean isValid = true;
@@ -74,14 +75,14 @@ public class RegisterCommand {
                 modelAndView.addObject(ATTR_NAME_ERROR_PHONE, messageManager.getProperty(PHONE_EXISTS_MSG_KEY, new Locale(language)));
             }
 
+            String msg = null;
             if (isValid) {
                 userRegistrationLogic.addUser(name, surname, email, phoneNumber, login, password, Role.valueOf(role.toUpperCase()));
-                modelAndView.addObject(ATTR_NAME_MSG_KEY, REGISTRATION_SUCCESS_MSG_KEY);
-                page = ConfigurationManager.getProperty(TO_INF_PAGE_PATH);
+                msg = REGISTRATION_SUCCESS_MSG_KEY;
+                page = "redirect:" + ConfigurationManager.getProperty(INF_URL_PATH) + "?" + ATTR_NAME_MSG_KEY + "=" + msg;
             } else {
+                modelAndView.addObject(ATTR_NAME_MSG_KEY, REGISTRATION_NOT_SUCCESS_MSG_KEY);
                 page = ConfigurationManager.getProperty(REGISTRATION_PAGE_PATH);
-                modelAndView.setViewName(page);
-                return modelAndView;
             }
         } catch (LogicException e) {
             throw new CommandException(e);

@@ -11,6 +11,8 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import java.util.HashSet;
 import java.util.Set;
 
+import static by.epam.touragency.util.PageMsgConstant.LOGGER;
+
 @org.springframework.stereotype.Repository
 public class TicketRepository implements Repository<Ticket> {
 
@@ -21,7 +23,7 @@ public class TicketRepository implements Repository<Ticket> {
     }
 
     @Autowired
-    public TicketRepository(JdbcTemplate jdbcTemplate){
+    public TicketRepository(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
         ticketRepository = this;
     }
@@ -56,6 +58,17 @@ public class TicketRepository implements Repository<Ticket> {
     public Set<Ticket> query(Specification specification) throws RepositoryException {
         return new HashSet<>(jdbcTemplate.query(specification.sqlQuery(), specification.getParameterQueue().toArray(),
                 new TicketRowMapper()));
+    }
+
+    @Override
+    public boolean isExistsQuery(Specification specification) throws RepositoryException {
+        try {
+            return !new HashSet<>(jdbcTemplate.query(specification.sqlQuery(), specification.getParameterQueue().toArray(),
+                    new TicketRowMapper())).isEmpty();
+        } catch (RuntimeException e) {
+            LOGGER.error("Error while getting is exists query ");
+            throw new RepositoryException(e);
+        }
     }
 
     @Autowired

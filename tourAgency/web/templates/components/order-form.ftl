@@ -5,7 +5,7 @@
 
         <div class="MinInf">
             <div class="TourName"
-                    <#if order.paymentState>
+                    <#if order.paymentState!>
                         style="color: green"
                     <#else>
                         style="color: orange"
@@ -14,11 +14,10 @@
                 <div class="MinInfMsg">
                     <@spring.message "common.message.tourName"/>
                 </div>
-                <#if order.tourName == 'not defined'>
-                    <c:out value="--"/>
-                </#if>
-                <#if order.tourName != 'not defined'>
-                    <c:out value="${order.tourName}"/>
+                <#if ((order.tour.tourName!"not defined") == "not defined")>
+                    --
+                <#else>
+                    ${order.tour.tourName!}
                 </#if>
             </div>
 
@@ -26,14 +25,14 @@
                 <div class="MinInfMsg">
                     <@spring.message "common.message.ticketInf"/>
                 </div>
-                <#if order.ticketId != '0'>
+                <#if ((order.getTicketId()!0) != 0)>
                     <div class="ticketPlace">
-                        ${order.departureCity} - ${order.arrivalCity}"
+                        ${order.ticket.departureCity!} - ${order.ticket.arrivalCity!}
                     </div>
                     <div class="ticketDate">
-                        ${order.departureDate} - ${order.arrivalDate}"
+                        ${order.ticket.getArrivalDateTime()!} - ${order.ticket.getDepartureDateTime()!}
                     </div>
-                <#elseif order.ticketId == '0'>
+                <#elseif ((order.getTicketId()!0) == 0)>
                     --
                 </#if>
             </div>
@@ -43,10 +42,10 @@
                     <@spring.message "common.message.clientInf"/>
                 </div>
                 <div>
-                    ${order.clientName}"
+                    ${order.client.name!}
                 </div>
                 <div>
-                    ${order.clientEmail}"
+                    ${order.client.email!}
                 </div>
             </div>
 
@@ -55,12 +54,12 @@
                 <div class="MinInfMsg">
                     <@spring.message "common.message.agentInf"/>
                 </div>
-                <#if order.agentName != 'not defined'>
+                <#if ((order.agentName!"not defined") != "not defined")>
                     <div>
-                        ${order.agentName}
+                        ${order.agent.name!}
                     </div>
                     <div>
-                        ${order.agentEmail}
+                        ${order.agent.email!}
                     </div>
                 <#else>
                     --
@@ -70,9 +69,9 @@
 
         <div class="orderMore">
             <form method="POST" action="pay_order">
-                <input type="hidden" name="orderId" value="${order.orderId}"/>
+                <input type="hidden" name="orderId" value="${order.id!1}"/>
 
-                <#if order.paymentState == 'false' && springSecurity.isClient>
+                <#if (!(order.paymentState!false) && (springSecurity.isClient!false))>
                     <div class="submitMore">
                         <label>
                             <input type="submit" value="<@spring.message "clientAgent.orderForm.submit.pay"/>">
@@ -82,8 +81,8 @@
             </form>
 
             <form class="remove" method="post" action="remove_order">
-                <#if springSecurity.isAgent || springSecurity.isClient>
-                    <a href="remove_order?orderId=${order.orderId}">
+                <#if ((springSecurity.isAgent!false) || (springSecurity.isClient!false))>
+                    <a href="remove_order?orderId=${order.id!1}">
                         <@spring.message "clientAgent.orderForm.ref.removeOrder"/>
                     </a>
                 </#if>

@@ -12,13 +12,13 @@
             <@spring.message "common.ref.page.flights"/>
         </a>
 
-        <#if springSecurity.isClient>
+        <#if (springSecurity.isClient)!false>
             <a class="navigationRef" href="to_orders">
                 <@spring.message "client.ref.page.myReservation"/>
             </a>
         </#if>
 
-        <#if springSecurity.isAgent || springSecurity.isAdmin>
+        <#if (((springSecurity.isAgent)!false) || ((springSecurity.isAdmin)!false))>
             <a class="navigationRef" href="to_orders">
                 <@spring.message "agentAdmin.ref.page.reservation"/>
             </a>

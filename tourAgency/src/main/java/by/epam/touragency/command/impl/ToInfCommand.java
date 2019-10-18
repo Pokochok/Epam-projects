@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Locale;
@@ -19,13 +20,12 @@ public class ToInfCommand {
     private MessageManager messageManager;
 
     @RequestMapping("/to_inf")
-    public ModelAndView execute(ModelAndView modelAndView) {
-        String msgKey = (String) modelAndView.getModel().get(PARAM_NAME_MSG_KEY);
+    public ModelAndView execute(ModelAndView modelAndView, @RequestParam(PARAM_NAME_MSG_KEY) String msgKey) {
         String language = modelAndView.getModel().get(ATTR_NAME_LANGUAGE) != null ?
                 modelAndView.getModel().get(ATTR_NAME_LANGUAGE).toString() : EN_LOCALE;
         modelAndView.clear();
         modelAndView.addObject(ATTR_NAME_RESULT_INF, messageManager.getProperty(msgKey, new Locale(language)));
-        modelAndView.setViewName("redirect:" + ConfigurationManager.getProperty(TO_INF_PAGE_PATH));
+        modelAndView.setViewName(ConfigurationManager.getProperty(TO_INF_PAGE_PATH));
         return modelAndView;
     }
 }

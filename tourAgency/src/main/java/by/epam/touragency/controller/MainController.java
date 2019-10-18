@@ -25,18 +25,18 @@ import static by.epam.touragency.util.ParameterConstant.*;
 /**
  * Main application servlet
  */
-@Controller
-@RequestMapping("/controller")
+//@Controller
+//@RequestMapping("/controller")
 public class MainController {
-    @Autowired
+//    @Autowired
     private MessageManager messageManager;
 
-    @GetMapping
+//    @GetMapping
     public ModelAndView doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         return processRequest(req, resp);
     }
 
-    @PostMapping
+//    @PostMapping
     public ModelAndView doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         return processRequest(req, resp);
     }

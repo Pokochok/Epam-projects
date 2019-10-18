@@ -48,7 +48,7 @@
                                 <input type="hidden" name="price" value="${param.price!}"/>
                                 </#if>
                                 <label>
-                                    <input type="submit" value="<@spring.message "common.submit.choose"/>">
+                                    <input class="uui-button transparent blue" type="submit" value="<@spring.message "common.submit.choose"/>">
                                 </label>
                             </form>
                     </div>

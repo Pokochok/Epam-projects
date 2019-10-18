@@ -18,21 +18,21 @@
         <div class="contentItem">
             <@spring.message "registration.message.name"/>
             <label>
-                <input type="text" name="name" required pattern="^[^!@#$%^&*().,_\d=|?`~/<>']{1,30}$"/>
+                <input type="text" class="uui-form-element" name="name" required pattern="^[^!@#$%^&*().,_\d=|?`~/<>']{1,30}$"/>
             </label>
         </div>
 
         <div class="contentItem">
             <@spring.message "registration.message.surname"/>
             <label>
-                <input type="text" name="surname" required pattern="^[^!@#$%^&*().,_\d=|?`'~/<>]{1,30}$"/>
+                <input type="text" class="uui-form-element" name="surname" required pattern="^[^!@#$%^&*().,_\d=|?`'~/<>]{1,30}$"/>
             </label>
         </div>
 
         <div class="contentItem">
             <@spring.message "registration.message.email"/>
             <label>
-                <input type="text" name="email" minlength="6" maxlength="100"
+                <input type="text" class="uui-form-element" name="email" minlength="6" maxlength="100"
                        pattern="^[a-zA-Z0-9.,_%+-]+@(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}$"
                        placeholder="<@spring.message "registration.placeholder.email" />" />
             </label>
@@ -42,7 +42,7 @@
         <div class="contentItem">
             <@spring.message "registration.message.phoneNumber"/>
             <label>
-                <input type="text" name="phoneNumber" pattern="^[+]\d{10,12}$"
+                <input type="text" class="uui-form-element" name="phoneNumber" pattern="^[+]\d{10,12}$"
                        placeholder="<@spring.message "registration.placeholder.phoneNumber" />" />
             </label>
             ${errorPhoneNumberExistsMessage!}
@@ -51,7 +51,7 @@
         <div class="contentItem">
             <@spring.message "registration.message.login"/>
             <label>
-                <input type="text" name="login" minlength="4" maxlength="50" required
+                <input type="text" class="uui-form-element" name="login" minlength="4" maxlength="50" required
                        placeholder=
                        <@spring.message "registration.placeholder.login"/>/>
             </label>
@@ -61,7 +61,7 @@
         <div class="contentItem">
             <@spring.message "registration.message.password"/>
             <label>
-                <input type="password" name="password" minlength="6" maxlength="50" required
+                <input type="password" class="uui-form-element" name="password" minlength="6" maxlength="50" required
                        placeholder="<@spring.message "registration.placeholder.password"/>"/>
             </label>
         </div>
@@ -75,7 +75,7 @@
         </div>
 
         <br/>
-        <input type="submit" name="register" value="<@spring.message "registration.submit.register"/>"/>
+        <input type="submit" class="transparent uui-button lime-green" name="register" value="<@spring.message "registration.submit.register"/>"/>
     </div>
 </form>
 </body>

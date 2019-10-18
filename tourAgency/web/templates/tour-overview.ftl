@@ -557,11 +557,11 @@
             <#if (secutity.isAdmin)!false>
                 <div class="contentItem">
                     <#if (status == "AVAILABLE")>
-                        <input type="submit" value="<@spring.message "admin.changeStatusNotAvailable"/>"
+                        <input class="uui-button raspberry" type="submit" value="<@spring.message "admin.changeStatusNotAvailable"/>"
                                onclick="document.getElementById('change_status').disabled=false">
                     </#if>
                     <#if (status == "NOT_AVAILABLE")>
-                        <input type="submit" value="<@spring.message "admin.changeStatusAvailable"/>"
+                        <input class="uui-button lime-green" type="submit" value="<@spring.message "admin.changeStatusAvailable"/>"
                                onclick="document.getElementById('change_status').disabled=false">
                     </#if>
                 </div>
@@ -571,7 +571,7 @@
         <form method="post" action="to_tours">
             <div class="contentItem">
                 <label>
-                    <input type="submit" name="back" value="<@spring.message "common.submit.back"/>">
+                    <input  class="uui-button raspberry" type="submit" name="back" value="<@spring.message "common.submit.back"/>">
                 </label>
             </div>
         </form>
@@ -593,7 +593,7 @@
             <div class="contentItem">
                 <#if !((secutity.isAdmin)!false)>
                     <label>
-                        <input type="submit" name="ticketSelection" value="<@spring.message "notAdmin.submit.ticketSelection"/>">
+                        <input class="uui-button lime-green" type="submit" name="ticketSelection" value="<@spring.message "notAdmin.submit.ticketSelection"/>">
                     </label>
                 </#if>
             </div>

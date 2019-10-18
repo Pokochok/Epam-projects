@@ -5,6 +5,9 @@
         <#nested>
         <#include "../../css/componentsstyle/main-navigation.css"/>
         <#include "../../css/componentsstyle/main-panel-container.css"/>
+    <#include "/uui/bootstrap/css/bootstrap.min.css"/>
+    <#include "/uui/css/uui-all.css"/>
+    <#include "/uui/css/lib/components/jquery.mCustomScrollbar.min.css"/>
     </style>
     <header class="container">
         <div class="logo">

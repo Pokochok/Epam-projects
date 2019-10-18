@@ -40,7 +40,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable()
-                .authorizeRequests().antMatchers("/images/**").permitAll()
+                .authorizeRequests().antMatchers("/images/**", "/uui/**").permitAll()
                 .anyRequest().permitAll()
                 .and()
                 .formLogin().loginPage("/to_login").loginProcessingUrl("/login")
@@ -58,7 +58,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     public void configure(WebSecurity web) {
         web.ignoring()
-                .antMatchers("images/**");
+                .antMatchers("/images/**", "/uui/**");
     }
 
     @Bean

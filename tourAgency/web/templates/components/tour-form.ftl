@@ -36,7 +36,7 @@
             </div>
             <div class="submitMore">
                 <label>
-                    <input type="submit" value="<@spring.message "common.tourForm.submit.more"/>">
+                    <input  class="uui-button transparent blue" type="submit" value="<@spring.message "common.tourForm.submit.more"/>">
                 </label>
             </div>
         </form>

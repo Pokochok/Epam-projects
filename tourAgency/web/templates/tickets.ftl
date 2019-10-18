@@ -58,7 +58,7 @@
                 <@spring.message "common.message.tour"/>
                 ${(param.tourName)!}
 
-                <#if param.tourId??>
+                <#if ((param.tourId??) && ((param.tourId!"0") != "0"))>
                     <form class="continueBooking" method="post" action="to_booking">
                         <input type="hidden" name="tourId" value="${param.tourId!}"/>
                         <input type="hidden" name="tourName" value="${param.tourName!}"/>
@@ -73,8 +73,10 @@
                         <input type="hidden" name="childrenNumber" value="${param.childrenNumber!}"/>
                         <input type="hidden" name="price" value="${param.price!}"/>
                         <label>
-                            <input type="submit" name="continueBooking"
-                                   value="<@spring.message "common.submit.continueBooking"/>">
+                            <button class="uui-button blue left-icon">
+                                <img src="/images/icons/search-icon-white.svg" alt="" /><@spring.message "common.submit.continueBooking"/>
+                            </button>
+<#--                                   value="<@spring.message "common.submit.continueBooking"/><i class="fa fa-long-arrow-right"></i>"/>-->
                         </label>
                     </form>
                 <#else>
@@ -85,7 +87,7 @@
                     <form class="pagination" id="paginationForm" method="post" action="to_tickets">
                         <input type="hidden" name="index" value="${(startIndexOfTicket!0)/(ticketsPerPage!0) + 1}"/>
 
-                        <input type="hidden" name="tourId" value="${param.tourId!}"/>
+                        <input type="hidden" name="tourId" value="${param.tourId!0}"/>
                                 <input type="hidden" name="tourName" value="${param.tourName!}"/>
                                 <input type="hidden" name="arrivalCountry" value="${param.arrivalCountry!}"/>
                                 <input type="hidden" name="arrivalCity" value="${param.arrivalCity!}"/>

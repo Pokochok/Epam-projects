@@ -139,11 +139,11 @@
             </#if>
 
             <label>
-                <input type="button" name="ticketSelection" onclick="history.back()" value="<@spring.message "clientAgent.submit.backToTicketSelection"/>">
+                <input class="uui-button blue" type="button" name="ticketSelection" onclick="history.back()" value="<@spring.message "clientAgent.submit.backToTicketSelection"/>">
             </label>
 
             <label>
-                <input type="submit" name="confirmReservation" value="<@spring.message "clientAgent.submit.confirmReservation" />">
+                <input class="uui-button lime-green" type="submit" name="confirmReservation" value="<@spring.message "clientAgent.submit.confirmReservation" />">
             </label>
         </div>
 </form>

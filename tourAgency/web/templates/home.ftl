@@ -29,12 +29,21 @@
         <#include "../css/home-content-style.css"/>
     </@mainPanel.page>
 </head>
+
 <body>
 <div class="startMessage">
     <@spring.message "common.message.startTravel"/>
 </div>
 
-<form class="contentForm">
+<div class="container-fluid">
+    <h1> 3 diff blocks</h1>
+    <div class="row">
+        <div class="col-md-4" style="background-color: $ff9999">left</div>
+        <div class="col-md-4" style="background-color: $ff99CC">middle</div>
+        <div class="col-md-4" style="background-color: $ff99ff">right</div>
+    </div>
+</div>
+<#--<form class="contentForm">-->
     <div class="time-inf">
         <#--        <ctg:time-inf/>-->
     </div>
@@ -45,9 +54,9 @@
         </a>
     </div>
 
-</form>
+<#--</form>-->
 </body>
 <#import "components/timestamp.ftl" as timestamp/>
-<@timestamp.page/>
+<#--<@timestamp.page/>-->
 </html>
 <#assign known=Session.SPRING_SECURITY_CONTEXT??>

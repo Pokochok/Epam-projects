@@ -4,32 +4,46 @@
 <html>
 <head>
 <!-- jQuery Core -->
-<script src="../uui/js/lib/jquery-1.12.0.min.js"></script>
+<script src="/uui/js/lib/jquery-1.12.0.min.js"></script>
 
 <!-- Bootstrap Core -->
-<link rel="stylesheet" href="../uui/bootstrap/css/bootstrap.min.css" />
-<script src="../uui/bootstrap/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="/uui/bootstrap/css/bootstrap.min.css" />
+<script src="/uui/bootstrap/js/bootstrap.min.js"></script>
 
 <!-- EPAM UUI JavaScript Core -->
-<script src="../uui/js/uui-core.min.js" type="text/javascript"></script>
+<script src="/uui/js/uui-core.min.js" type="text/javascript"></script>
 
 <!-- EPAM UUI Styles Core -->
-<link rel="stylesheet" href="../uui/css/uui-all.css" />
+<link rel="stylesheet" href="/uui/css/uui-all.css" />
 <!-- Your custom CSS Styles -->
 <#--<link rel="stylesheet" href="css/custom-styles.css" />-->
 
 <!-- Scroll for UUI Sidebar -->
-<link rel="stylesheet" href="../uui/css/lib/components/jquery.mCustomScrollbar.min.css" />
-<script src="../uui/js/lib/components/jquery.mCustomScrollbar.concat.min.js"></script>
+<link rel="stylesheet" href="/uui/css/lib/components/jquery.mCustomScrollbar.min.css" />
+<script src="/uui/js/lib/components/jquery.mCustomScrollbar.concat.min.js"></script>
     <@anotherPanel.page>
         <#include "../css/login-style.css"/>
-    </@anotherPanel.page>
-    <title>
-        <@spring.message "login.title"/>
-    </title>
-</head>
-<body>
 
+    </@anotherPanel.page>
+</head>
+<title>
+<@spring.message "login.title"/>
+</title>
+<body>
+<div class = "uui-loader spinner">
+    <div  class = "dot dot-1"></div>
+    <div  class = "dot dot-2"></div>
+    <div  class = "dot dot-3"></div>
+    <div  class = "dot dot-4"></div>
+    <div  class = "dot dot-5"></div>
+    <div  class = "dot dot-6"></div>
+    <div class = "dot dot-7"></div>
+    <div class = "dot dot-8"></div>
+    <div class = "dot dot-9"></div>
+    <div  class = "dot dot-10"></div>
+    <div  class = "dot dot-11"></div>
+    <div  class = "dot dot-12"></div>
+</div>
 <form class="loginForm" method="POST" action="login">
 
     <div class="userContent">
@@ -43,7 +57,7 @@
                 <@spring.message "login.message.login"/>
             </div>
             <label>
-                <input type="text" name="login"/>
+                <input type="text" class="uui-form-element" name="login"/>
             </label>
         </div>
 
@@ -52,7 +66,7 @@
                 <@spring.message "login.message.password"/>
             </div>
             <label>
-                <input type="password" name="password"/>
+                <input type="password" class="uui-form-element" name="password"/>
             </label>
         </div>
 
@@ -64,15 +78,10 @@
         </div>
 
         <label>
-            <input type="submit" name="logIn" value="<@spring.message "login.submit.login"/>"/>
+            <input type="submit" class="blue uui-button" name="logIn" value="<@spring.message "login.submit.login"/>"/>
         </label>
 
-<button class="uui-button">Default button</button>
-
-<a href="" class="uui-button">Button link</a>
-        <br/>
-        <br/>
-        <a href="to_registration">
+        <a href="to_registration" class="lime-green uui-button">
             <@spring.message "login.ref.page.register"/>
         </a>
     </div>

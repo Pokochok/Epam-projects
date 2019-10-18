@@ -1,39 +1,39 @@
 <#macro page>
     <#import "/spring.ftl" as spring/>
     <#import "security.ftl" as springSecurity/>
-    <div class="role">
-        <a class="userName" href="to_user_profile">
-            <p> ${(springSecurity.userName!"")}</p>
-            <p>${(springSecurity.userSurname!"")}</p>
-        </a>
+    <#if (springSecurity.userName)??>
+        <li><a class="userName" href="to_user_profile">
+            ${(springSecurity.userName!"")}
+            ${(springSecurity.userSurname!"")}
+        </a></li>
+    </#if>
         <#if (springSecurity.isClient)!false>
-            <div class="client">
-                <@spring.message "client.message.role"/>
-            </div>
+            <li class="client role">
+                <span><@spring.message "client.message.role"/></span>
+            </li>
         <#elseif (springSecurity.isAgent)!false>
-            <div class="agent">
-                <@spring.message "agent.message.role"/>
-            </div>
+            <li class="agent role">
+                <span><@spring.message "agent.message.role"/></span>
+            </li>
         <#elseif (springSecurity.isAdmin)!false>
-            <div class="admin">
-                <@spring.message "admin.message.role"/>
-            </div>
+            <li class="admin role">
+                <span><@spring.message "admin.message.role"/></span>
+            </li>
         <#else >
-            <div class="guest">
-                <@spring.message "guest.message.role"/>
-            </div>
+            <li class="guest role">
+                <span><@spring.message "guest.message.role"/></span>
+            </li>
         </#if>
 
         <#if !((springSecurity.isActive)!false)>
-            <a class="navigationRef" href="to_login">
+            <li class="login"><a class="navigationRef" href="to_login"><i class="fa fa-sign-in"></i>
                 <@spring.message "guest.ref.page.login"/>
-            </a>
+            </a></li>
         </#if>
         <#if (springSecurity.isActive)!false>
-            <a class="navigationRef" href="logout">
+            <li><a class="navigationRef" href="logout"><i class="fa fa-sign-out"></i>
                 <@spring.message "common.ref.logout"/>
-            </a>
+            </a></li>
         </#if>
-    </div>
 </#macro>
 

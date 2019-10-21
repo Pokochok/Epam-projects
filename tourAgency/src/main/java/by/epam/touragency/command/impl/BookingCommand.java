@@ -16,6 +16,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttribute;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
@@ -24,7 +25,6 @@ import javax.servlet.http.HttpServletResponse;
 import static by.epam.touragency.util.ParameterConstant.*;
 import static by.epam.touragency.util.PageMsgConstant.*;
 
-import java.net.http.HttpResponse;
 import java.util.Locale;
 
 @Controller
@@ -44,7 +44,7 @@ public class BookingCommand {
                                 @RequestParam(value = PARAM_NAME_TICKET_ID, required = false) String ticketId,
                                 @RequestParam(value = PARAM_NAME_CLIENT_EMAIL, required = false) String clientEmail,
                                 @RequestParam(value = PARAM_NAME_TOUR_ID, required = false) String tourId,
-                                @RequestParam(value = ATTR_NAME_LANGUAGE, required = false) String language) throws CommandException {
+                                @SessionAttribute(value = ATTR_NAME_LANGUAGE, required = false) String language) throws CommandException {
         String page = null;
         if (language == null){
             language = EN_LOCALE;

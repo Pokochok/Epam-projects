@@ -43,15 +43,12 @@ public class ChangeLoginCommand {
         if (language == null) {
             language = new Locale(EN_LOCALE);
         }
-        String email = null;
-        String role = null;
-        User user = null;
-        if (updateUserLogic.checkPrincipal()) {
-            UserPrincipal userDetails = (UserPrincipal) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-            role = userDetails.getUserRole().toString();
-            email = userDetails.getUserEmail();
-            user = userDetails.getUser();
+        if (!updateUserLogic.checkPrincipal()) {
+            return new ModelAndView(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH));
         }
+        UserPrincipal userDetails = updateUserLogic.getUserPrincipal();
+        String role = userDetails.getUserRole().toString();
+        String email = userDetails.getUserEmail();
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH));
         if (!validation.validateLogin(login)) {
@@ -63,9 +60,6 @@ public class ChangeLoginCommand {
         try {
             if (updateUserLogic.updateLogin(role, login, email)) {
                 modelAndView.addObject(ATTR_NAME_USER_LOGIN, login);
-                if (user != null) {
-                    user.setLogin(login);
-                }
             } else {
                 modelAndView.addObject(ATTR_NAME_ERROR_LOGIN_EXISTS,
                         messageManager.getProperty(LOGIN_EXISTS_MSG_KEY, language));

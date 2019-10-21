@@ -5,15 +5,16 @@ import by.epam.touragency.entity.User;
 import by.epam.touragency.entity.UserPrincipal;
 import by.epam.touragency.exception.LogicException;
 import by.epam.touragency.exception.RepositoryException;
+import by.epam.touragency.repository.Repository;
 import by.epam.touragency.repository.impl.UserRepository;
 import by.epam.touragency.specification.Specification;
 import by.epam.touragency.specification.impl.admin.*;
 import by.epam.touragency.specification.impl.agent.*;
 import by.epam.touragency.specification.impl.client.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.crypto.bcrypt.BCrypt;
-import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import static by.epam.touragency.util.PageMsgConstant.LOGGER;
@@ -23,6 +24,13 @@ import static by.epam.touragency.util.PageMsgConstant.LOGGER;
  */
 @Service
 public class UpdateUserLogic {
+    @Autowired
+    @Qualifier("userRepository")
+    Repository<User> userRepository;
+
+    @Autowired
+    private BCryptPasswordEncoder bCrypt;
+
     @Autowired
     private MatchOfUniqueFieldsDetector matchOfUniqueFieldsDetector;
 
@@ -39,11 +47,10 @@ public class UpdateUserLogic {
         boolean flag = false;
         Specification specification = defineSpecificationForEmail(role, email, login);
 
-        UserRepository repository = UserRepository.getInstance();
         try {
             if (flag = !(matchOfUniqueFieldsDetector.isExistsEmail(email)
                     || !matchOfUniqueFieldsDetector.isExistsLogin(login))) {
-                repository.update(null, specification);
+                userRepository.update(null, specification);
             }
         } catch (RepositoryException e) {
             throw new LogicException(e);
@@ -96,11 +103,10 @@ public class UpdateUserLogic {
         boolean flag = false;
         Specification specification = defineSpecificationForPhoneNumber(role, newPhoneNumber, login);
 
-        UserRepository repository = UserRepository.getInstance();
         try {
             if (flag = !(matchOfUniqueFieldsDetector.isExistsPhoneNumber(newPhoneNumber)
                     || !matchOfUniqueFieldsDetector.isExistsLogin(login))) {
-                repository.update(null, specification);
+                userRepository.update(null, specification);
             }
         } catch (RepositoryException e) {
             throw new LogicException(e);
@@ -153,11 +159,10 @@ public class UpdateUserLogic {
         boolean flag = false;
         Specification specification = defineSpecificationForLogin(role, login, email);
 
-        UserRepository repository = UserRepository.getInstance();
         try {
             if (flag = !(matchOfUniqueFieldsDetector.isExistsLogin(login)
                     || !matchOfUniqueFieldsDetector.isExistsEmail(email))) {
-                repository.update(null, specification);
+                userRepository.update(null, specification);
             }
         } catch (RepositoryException e) {
             e.printStackTrace();
@@ -208,7 +213,7 @@ public class UpdateUserLogic {
      * @throws LogicException if handled RepositoryException or if user role is not defined
      */
     public boolean updatePassword(String role, String login, String password, String newPassword) throws LogicException {
-        String encryptedNewPassword = BCrypt.hashpw(newPassword, BCrypt.gensalt(10));
+        String encryptedNewPassword = bCrypt.encode(newPassword);
         boolean flag = false;
         Specification specificationForValidate = null;
         Specification specification = null;
@@ -236,10 +241,9 @@ public class UpdateUserLogic {
                 }
             }
 
-            UserRepository repository = UserRepository.getInstance();
-            user = repository.query(specificationForValidate).iterator().next();
-            if (flag = BCrypt.checkpw(password, user.getPassword())) {
-                repository.update(null, specification);
+            user = userRepository.query(specificationForValidate).iterator().next();
+            if (flag = bCrypt.matches(password, user.getPassword())) {
+                userRepository.update(null, specification);
             }
         } catch (RepositoryException e) {
             throw new LogicException(e);
@@ -260,10 +264,9 @@ public class UpdateUserLogic {
         Specification specification = defineSpecificationForName(role, newName, login);
 
         boolean flag = false;
-        UserRepository repository = UserRepository.getInstance();
         try {
             if (flag = matchOfUniqueFieldsDetector.isExistsLogin(login)) {
-                repository.update(null, specification);
+                userRepository.update(null, specification);
             }
         } catch (RepositoryException e) {
             throw new LogicException(e);
@@ -316,10 +319,9 @@ public class UpdateUserLogic {
         Specification specification = defineSpecificationForSurname(role, newSurname, login);
 
         boolean flag = false;
-        UserRepository repository = UserRepository.getInstance();
         try {
             if (flag = matchOfUniqueFieldsDetector.isExistsLogin(login)) {
-                repository.update(null, specification);
+                userRepository.update(null, specification);
             }
         } catch (RepositoryException e) {
             throw new LogicException(e);
@@ -361,5 +363,9 @@ public class UpdateUserLogic {
 
     public boolean checkPrincipal(){
         return SecurityContextHolder.getContext().getAuthentication().getPrincipal() instanceof UserPrincipal;
+    }
+
+    public UserPrincipal getUserPrincipal(){
+        return (UserPrincipal) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
     }
 }

@@ -1,14 +1,54 @@
 package by.epam.touragency.logic;
 
+import by.epam.touragency.config.WebAppTestContext;
+import by.epam.touragency.entity.User;
 import by.epam.touragency.exception.LogicException;
+import by.epam.touragency.exception.RepositoryException;
+import by.epam.touragency.repository.impl.UserRepository;
+import by.epam.touragency.specification.Specification;
 import junit.framework.Assert;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCrypt;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.test.context.junit.jupiter.web.SpringJUnitWebConfig;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
+import java.util.HashSet;
+import java.util.Iterator;
 
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.Mockito.doNothing;
+import static org.mockito.Mockito.when;
+
+@SpringJUnitWebConfig(WebAppTestContext.class)
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class UpdateUserLogicTest {
-    @Autowired
+    @Mock
+    Iterator<User> iterator;
+
+    @Mock
+    HashSet<User> userHashSet;
+
+    @Mock
+    UserRepository  userRepository;
+
+    @Mock
+    BCryptPasswordEncoder bCrypt;
+
+    @InjectMocks
     private UpdateUserLogic updateUserLogic;
+
+    @BeforeAll
+    public void setUp(){
+        MockitoAnnotations.initMocks(this);
+    }
 
     @Test
     public void testUpdateEmailTrue() throws LogicException {
@@ -50,7 +90,13 @@ public class UpdateUserLogicTest {
     }
 
     @Test
-    public void testUpdatePasswordTrue() throws LogicException {
+    public void testUpdatePassword_Agent_Success() throws LogicException, RepositoryException {
+        when(bCrypt.encode(anyString())).thenReturn("password");
+        when(bCrypt.matches(anyString(), any())).thenReturn(true);
+        when(userRepository.query(any(Specification.class))).thenReturn(userHashSet);
+        when(userHashSet.iterator()).thenReturn(iterator);
+        when(iterator.next()).thenReturn(new User.UserBuilder().build());
+        doNothing().when(userRepository).update(any(), any(Specification.class));
         boolean actual = updateUserLogic.updatePassword("AGENT", "not defined", "1234567890", "1234567890");
         Assert.assertTrue(actual);
     }

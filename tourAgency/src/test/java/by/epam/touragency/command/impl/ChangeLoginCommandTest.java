@@ -1,6 +1,8 @@
 package by.epam.touragency.command.impl;
 
 import by.epam.touragency.config.WebAppTestContext;
+import by.epam.touragency.entity.Role;
+import by.epam.touragency.entity.UserPrincipal;
 import by.epam.touragency.logic.UpdateUserLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.resource.MessageManager;
@@ -32,6 +34,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class ChangeLoginCommandTest {
     @Mock
+    UserPrincipal userPrincipal;
+
+    @Mock
     Validation validation;
 
     @Mock
@@ -56,7 +61,10 @@ class ChangeLoginCommandTest {
     @DisplayName("Invalid login entered. Validation failed")
     void execute() throws Exception {
         when(validation.validateEmail(anyString())).thenReturn(false);
-        when(updateUserLogic.checkPrincipal()).thenReturn(false);
+        when(updateUserLogic.checkPrincipal()).thenReturn(true);
+        when(updateUserLogic.getUserPrincipal()).thenReturn(userPrincipal);
+        when(userPrincipal.getUserRole()).thenReturn(Role.CLIENT);
+        when(userPrincipal.getUserEmail()).thenReturn("email");
         when(messageManager.getProperty(eq(CHANGE_LOGIN_ERROR_MSG_KEY), any(Locale.class))).thenReturn("errorLogin");
         mockMvc.perform(post("/change_login")
                 .param(PARAM_NAME_NEW_LOGIN, "newLogin"))
@@ -69,7 +77,10 @@ class ChangeLoginCommandTest {
     @Test
     @DisplayName("Successful execution")
     void executeSuccess() throws Exception {
-        when(updateUserLogic.checkPrincipal()).thenReturn(false);
+        when(updateUserLogic.checkPrincipal()).thenReturn(true);
+        when(updateUserLogic.getUserPrincipal()).thenReturn(userPrincipal);
+        when(userPrincipal.getUserRole()).thenReturn(Role.CLIENT);
+        when(userPrincipal.getUserEmail()).thenReturn("email");
         when(validation.validateEmail(anyString())).thenReturn(true);
         when(validation.validateLogin(anyString())).thenReturn(true);
         when(updateUserLogic.updateLogin(anyString(), anyString(), anyString())).thenReturn(true);
@@ -83,7 +94,10 @@ class ChangeLoginCommandTest {
     @Test
     @DisplayName("Login exists error")
     void executeLoginExists() throws Exception {
-        when(updateUserLogic.checkPrincipal()).thenReturn(false);
+        when(updateUserLogic.checkPrincipal()).thenReturn(true);
+        when(updateUserLogic.getUserPrincipal()).thenReturn(userPrincipal);
+        when(userPrincipal.getUserRole()).thenReturn(Role.CLIENT);
+        when(userPrincipal.getUserEmail()).thenReturn("email");
         when(validation.validateEmail(anyString())).thenReturn(true);
         when(validation.validateLogin(anyString())).thenReturn(true);
         when(updateUserLogic.updateLogin(anyString(), anyString(), anyString())).thenReturn(false);

@@ -20,7 +20,6 @@ import static by.epam.touragency.util.ParameterConstant.*;
 @Controller
 @PreAuthorize("permitAll()")
 public class ToTicketsCommand{
-//    @Secured({"ROLE_ADMIN", "ROLE_AGENT", "ROLE_CLIENT", "ROLE_ANONYMOUS"})
     @RequestMapping("/to_tickets")
     public ModelAndView execute(
             @RequestParam(value = ATTR_NAME_INDEX, required = false) String index,

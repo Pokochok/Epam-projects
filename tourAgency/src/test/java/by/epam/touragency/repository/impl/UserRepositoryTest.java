@@ -1,6 +1,6 @@
 package by.epam.touragency.repository.impl;
 
-import by.epam.touragency.connectionpool.PropertyHolder;
+import by.epam.touragency.config.PropertyHolder;
 import by.epam.touragency.entity.Role;
 import by.epam.touragency.entity.User;
 import by.epam.touragency.exception.RepositoryException;

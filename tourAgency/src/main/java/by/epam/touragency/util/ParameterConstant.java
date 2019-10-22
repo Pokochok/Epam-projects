@@ -2,7 +2,7 @@ package by.epam.touragency.util;
 
 public class ParameterConstant {
     public static final int NUMBER_ORDERS_PER_PAGE = 8;
-    public static final int NUMBER_TICKETS_PER_PAGE = 10;
+    public static final int NUMBER_TICKETS_PER_PAGE = 8;
     public static final int NUMBER_TOURS_PER_PAGE = 8;
 
     public static final String PARAM_NAME_TICKET_ID = "ticketId";

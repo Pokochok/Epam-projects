@@ -1,0 +1,47 @@
+.tourItem{
+    background-color: ghostwhite;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: auto;
+    left: auto;
+    height: 4cm;
+    margin: 30px 0;
+    width: 27cm;
+}
+.MinInf{
+    display: flex;
+}
+.MinInfMsg{
+    color: black;
+    font-weight: bold;
+}
+.ticketDate, .ticketPlace{
+    display: flex;
+}
+.TourName{
+    margin-left: 30px;
+    font-weight: bold;
+    font-size: medium;
+    justify-content: center;
+    display: block;
+}
+.TourName:hover{
+    color: purple;
+}
+.ticketInf, .clientInf, .agentInf{
+    font-weight: normal;
+    font-size: medium;
+    color: dimgray;
+    justify-content: center;
+    text-align: center;
+    display: block;
+    margin: 0 30px;
+}
+
+.orderMore{
+    margin-top: 40px;
+    margin-right: 30px;
+    justify-content: flex-end;
+    display: block;
+}

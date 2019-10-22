@@ -1,48 +1,32 @@
 package by.epam.touragency.config;
 
-import by.epam.touragency.connectionpool.PropertyHolder;
 import by.epam.touragency.logic.UserDetailsServiceImpl;
 import org.springframework.context.annotation.*;
-import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.ui.freemarker.FreeMarkerConfigurationFactory;
 import org.springframework.web.context.request.RequestContextListener;
-import org.springframework.web.filter.DelegatingFilterProxy;
 import org.springframework.web.filter.RequestContextFilter;
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import org.springframework.web.servlet.i18n.CookieLocaleResolver;
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
-import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver;
 
-import javax.annotation.Resources;
 import javax.sql.DataSource;
-import java.io.File;
 import java.util.Locale;
 
 @Configuration
 @EnableAspectJAutoProxy
 @ComponentScan({"by.epam.touragency"})
 public class AppConfig implements WebMvcConfigurer {
-//    @Bean
-//    public InternalResourceViewResolver viewResolver() {
-//        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-//        viewResolver.setPrefix("/jsp/");
-//        viewResolver.setSuffix(".jsp");
-//        return viewResolver;
-//    }
 
     @Bean
     public BCryptPasswordEncoder bCryptPasswordEncoder(){
@@ -133,6 +117,8 @@ public class AppConfig implements WebMvcConfigurer {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/**").addResourceLocations("/picture", "/uui");
+        registry.addResourceHandler("/tour-agency/images/logo.png").addResourceLocations("/images/logo.png");
+        registry.addResourceHandler("/uui/**").addResourceLocations("classpath:/uui/");
     }
+
 }

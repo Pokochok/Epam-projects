@@ -1,7 +1,7 @@
 package by.epam.touragency.logic;
 
 import by.epam.touragency.config.WebAppTestContext;
-import by.epam.touragency.connectionpool.PropertyHolder;
+import by.epam.touragency.config.PropertyHolder;
 import by.epam.touragency.entity.Role;
 import by.epam.touragency.entity.User;
 import by.epam.touragency.exception.LogicException;
@@ -17,14 +17,10 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
-import org.mockito.MockitoAnnotations;
-import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestContext;
 import org.springframework.test.context.web.WebAppConfiguration;
-import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import java.io.IOException;
 import java.sql.Connection;

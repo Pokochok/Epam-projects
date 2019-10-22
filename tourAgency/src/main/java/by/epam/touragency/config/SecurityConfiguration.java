@@ -42,6 +42,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http.csrf().disable()
                 .authorizeRequests().antMatchers("/images/**", "/uui/**").permitAll()
                 .anyRequest().permitAll()
+                .and().exceptionHandling().accessDeniedPage("/error")
                 .and()
                 .formLogin().loginPage("/to_login").loginProcessingUrl("/login")
                 .usernameParameter(ParameterConstant.PARAM_NAME_LOGIN)

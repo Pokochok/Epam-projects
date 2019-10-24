@@ -245,7 +245,7 @@ public class UpdateUserLogic {
             if (flag = bCrypt.matches(password, user.getPassword())) {
                 userRepository.update(null, specification);
             }
-        } catch (RepositoryException e) {
+        } catch (RepositoryException | IllegalArgumentException e) {
             throw new LogicException(e);
         }
         return flag;

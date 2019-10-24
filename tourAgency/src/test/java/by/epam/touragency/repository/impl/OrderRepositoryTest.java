@@ -1,6 +1,6 @@
 package by.epam.touragency.repository.impl;
 
-import by.epam.touragency.config.PropertyHolder;
+import by.epam.touragency.config.WebAppTestContext;
 import by.epam.touragency.entity.*;
 import by.epam.touragency.exception.RepositoryException;
 import by.epam.touragency.specification.Specification;
@@ -12,22 +12,55 @@ import org.flywaydb.core.Flyway;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.test.context.junit.jupiter.web.SpringJUnitWebConfig;
 
 
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.*;
 
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.Mockito.when;
+
+@SpringJUnitWebConfig(WebAppTestContext.class)
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class OrderRepositoryTest {
     private static Flyway flyway;
+    @Mock
+    Set set;
+
+    @Mock
+    Iterator iterator;
+
+    @Mock
+    UserRepository userRepository;
+
+    @Mock
+    TicketRepository ticketRepository;
+
+    @Mock
+    TourRepository tourRepository;
+
+    @Mock
+    JdbcTemplate jdbcTemplate;
+
+    @InjectMocks
+    OrderRepository orderRepository;
 
     @BeforeAll
-    public static void initDb() throws IOException, SQLException {
-        EmbeddedPostgres pg = EmbeddedPostgres.start();
+    public void init() throws IOException, SQLException {
+        MockitoAnnotations.initMocks(this);
+        EmbeddedPostgres pg = EmbeddedPostgres.builder().setPort(58423).start();
         Connection c = pg.getPostgresDatabase().getConnection();
         String url = pg.getJdbcUrl("postgres", "postgres");
-        PropertyHolder propertyHolder = PropertyHolder.getInstance(url);
         flyway = Flyway.configure().dataSource(url, "postgres", "").load();
         flyway.migrate();
     }
@@ -48,25 +81,23 @@ public class OrderRepositoryTest {
             .setDepartureDateTime(1000l).setFlightNumber(0).setId(0).build();
 
     @Test
-    public void getInstance() {
-        OrderRepository orderRepository = OrderRepository.getInstance();
-        boolean actual = orderRepository != null;
-        Assert.assertTrue(actual);
-    }
-
-    @Test
-    public void add() throws RepositoryException {
-        Order order = new Order.OrderBuilder().setTour(tour).setTicket(ticket).setPaymentState(true).setClient(client).setAgent(agent).setId(1000).build();
-        Specification specification = new AddOrderSpecification(order);
-        int expected = OrderRepository.getInstance().query(new FindAllOrdersSpecification()).size() + 1;
-        OrderRepository.getInstance().add(order, specification);
-        int actual = OrderRepository.getInstance().query(new FindAllOrdersSpecification()).size();
-        Assert.assertEquals(expected, actual);
-    }
-
-    @Test
     public void query() throws RepositoryException {
-        boolean actual = OrderRepository.getInstance().query(new FindAllOrdersSpecification()).isEmpty();
+        List<Order> list = new ArrayList<>();
+        list.add(new Order.OrderBuilder().build());
+        when(jdbcTemplate.query(anyString(), any(Object[].class), any(OrderRowMapper.class))).thenReturn(list);
+        when(tourRepository.query(any(Specification.class))).thenReturn(set);
+        when(ticketRepository.query(any(Specification.class))).thenReturn(set);
+        when(userRepository.query(any(Specification.class))).thenReturn(set);
+        when(set.iterator()).thenReturn(iterator);
+        when(iterator.next()).thenReturn(null);
+        boolean actual = orderRepository.query(new FindAllOrdersSpecification()).isEmpty();
         Assert.assertFalse(actual);
+    }
+
+    @Test
+    public void query_Empty() throws RepositoryException {
+        when(jdbcTemplate.query(anyString(), any(Object[].class), any(OrderRowMapper.class))).thenReturn(new ArrayList<>());
+        boolean actual = orderRepository.query(new FindAllOrdersSpecification()).isEmpty();
+        Assert.assertTrue(actual);
     }
 }

@@ -21,6 +21,10 @@ public class PayOrderCommand {
     @Autowired
     OrderChangeLogic orderChangeLogic;
 
+    @Autowired
+    private ToOrdersCommand toOrdersCommand;
+
+
     @Secured("ROLE_CLIENT")
     @PostMapping("/pay_order")
     public ModelAndView execute(@RequestParam(value = PARAM_NAME_ORDER_ID, required = false) String orderId,
@@ -36,7 +40,7 @@ public class PayOrderCommand {
         }
         try {
             orderChangeLogic.payOrder(orderId);
-            return new ToOrdersCommand().execute(userRole, userId, index, changeToPage);
+            return toOrdersCommand.execute(userRole, userId, index, changeToPage);
         } catch (LogicException e) {
             throw new ControllerException(e);
         }

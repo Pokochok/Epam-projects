@@ -312,7 +312,7 @@ CREATE TABLE public.tours (
     nutrition character varying(40) NOT NULL,
     adults_number integer NOT NULL,
     children_number integer NOT NULL,
-    price money NOT NULL,
+    price numeric(7,2) NOT NULL,
     id integer NOT NULL,
     status character varying(40) DEFAULT 'AVAILABLE'::character varying NOT NULL,
     tour_name character varying(40) NOT NULL

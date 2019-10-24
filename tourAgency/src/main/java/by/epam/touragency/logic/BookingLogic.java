@@ -20,6 +20,7 @@ import by.epam.touragency.specification.impl.ticket.FindTicketByIdSpecification;
 import by.epam.touragency.specification.impl.tour.FindTourByIdSpecification;
 import by.epam.touragency.util.Validation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
@@ -29,6 +30,9 @@ import java.util.Set;
  */
 @Service
 public class BookingLogic {
+    @Autowired
+    @Qualifier("orderRepository")
+    private Repository<Order> orderRepository;
 
     @Autowired
     private Validation validation;
@@ -132,8 +136,7 @@ public class BookingLogic {
             if (order != null) {
                 flag = true;
                 Specification specification = new AddOrderSpecification(order);
-                Repository repository = OrderRepository.getInstance();
-                repository.add(order, specification);
+                orderRepository.add(order, specification);
             }
         } catch (RepositoryException e) {
             throw new LogicException(e);

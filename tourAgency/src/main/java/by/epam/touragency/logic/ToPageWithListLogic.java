@@ -6,6 +6,7 @@ import by.epam.touragency.entity.Ticket;
 import by.epam.touragency.entity.Tour;
 import by.epam.touragency.exception.LogicException;
 import by.epam.touragency.exception.RepositoryException;
+import by.epam.touragency.repository.Repository;
 import by.epam.touragency.repository.impl.OrderRepository;
 import by.epam.touragency.repository.impl.TicketRepository;
 import by.epam.touragency.repository.impl.TourRepository;
@@ -15,6 +16,9 @@ import by.epam.touragency.specification.impl.order.FindClientOrdersSpecification
 import by.epam.touragency.specification.impl.ticket.FindAllTicketsSpecification;
 import by.epam.touragency.specification.impl.tour.FindAllToursSpecification;
 import by.epam.touragency.specification.impl.tour.FindAvailableToursSpecification;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.Set;
@@ -22,13 +26,18 @@ import java.util.Set;
 /**
  * For pages with element list logic
  */
+@Service
 public class ToPageWithListLogic {
+    @Autowired
+    @Qualifier("orderRepository")
+    private Repository<Order> orderRepository;
+
     /**
      * Creates ticket set
      * @return ticket set
      * @throws LogicException if handled RepositoryException
      */
-    public static Set<Ticket> getTicketSet() throws LogicException {
+    public Set<Ticket> getTicketSet() throws LogicException {
         Specification specification = new FindAllTicketsSpecification();
         TicketRepository repository = TicketRepository.getInstance();
         Set<Ticket> ticketSet = null;
@@ -46,7 +55,7 @@ public class ToPageWithListLogic {
      * @return tour set
      * @throws LogicException if handled RepositoryException
      */
-    public static Set<Tour> getTourSet(String userRole) throws LogicException {
+    public Set<Tour> getTourSet(String userRole) throws LogicException {
         Specification specification = defineTourSpecification(userRole);
 
         TourRepository repository = TourRepository.getInstance();
@@ -64,7 +73,7 @@ public class ToPageWithListLogic {
      * @param userRole user Role
      * @return specification
      */
-    private static Specification defineTourSpecification(String userRole){
+    private Specification defineTourSpecification(String userRole){
         Specification specification = null;
         if (Role.ADMIN.equals(Role.valueOf(userRole))) {
             specification = new FindAllToursSpecification();
@@ -81,13 +90,12 @@ public class ToPageWithListLogic {
      * @return order set
      * @throws LogicException if handled RepositoryException
      */
-    public static Set<Order> getOrderSet(String userRole, String userId) throws LogicException {
+    public Set<Order> getOrderSet(String userRole, String userId) throws LogicException {
         Specification specification = defineOrderSpecification(userRole, userId);
 
-        OrderRepository repository = OrderRepository.getInstance();
         Set<Order> orderSet = null;
         try {
-            orderSet = repository.query(specification);
+            orderSet = orderRepository.query(specification);
         } catch (RepositoryException e) {
             throw new LogicException(e);
         }
@@ -100,7 +108,7 @@ public class ToPageWithListLogic {
      * @param userId user ID
      * @return specification
      */
-    private static Specification defineOrderSpecification(String userRole, String userId){
+    private Specification defineOrderSpecification(String userRole, String userId){
         Specification specification = null;
         if (Role.CLIENT.equals(Role.valueOf(userRole))) {
             specification = new FindClientOrdersSpecification(Integer.parseInt(userId));

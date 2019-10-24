@@ -6,6 +6,7 @@ import by.epam.touragency.exception.ControllerException;
 import by.epam.touragency.exception.LogicException;
 import by.epam.touragency.logic.ToPageWithListLogic;
 import by.epam.touragency.resource.ConfigurationManager;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
@@ -20,6 +21,9 @@ import static by.epam.touragency.util.ParameterConstant.*;
 
 @Controller
 public class ToOrdersCommand {
+    @Autowired
+    private ToPageWithListLogic toPageWithListLogic;
+
     @Secured({"ROLE_ADMIN", "ROLE_AGENT", "ROLE_CLIENT"})
     @GetMapping("/to_orders")
     public ModelAndView execute(
@@ -42,7 +46,7 @@ public class ToOrdersCommand {
 
         Set<Order> orderSet = null;
         try {
-            orderSet = ToPageWithListLogic.getOrderSet(userRole, userId);
+            orderSet = toPageWithListLogic.getOrderSet(userRole, userId);
         } catch (LogicException e) {
             throw new ControllerException(e);
         }

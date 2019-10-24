@@ -1,11 +1,16 @@
 package by.epam.touragency.util;
 
 
+import by.epam.touragency.config.WebAppTestContext;
 import junit.framework.Assert;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.junit.jupiter.web.SpringJUnitWebConfig;
 
+@SpringJUnitWebConfig(WebAppTestContext.class)
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class ValidationTest {
     @Autowired
     Validation validation;

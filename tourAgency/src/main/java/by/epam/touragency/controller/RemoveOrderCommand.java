@@ -20,6 +20,9 @@ public class RemoveOrderCommand {
     @Autowired
     private OrderChangeLogic orderChangeLogic;
 
+    @Autowired
+    private ToOrdersCommand toOrdersCommand;
+
     @Secured({"ROLE_AGENT", "ROLE_CLIENT"})
     @GetMapping("/remove_order")
     public ModelAndView execute(@RequestParam(value = PARAM_NAME_ORDER_ID) String orderId,
@@ -38,6 +41,6 @@ public class RemoveOrderCommand {
         } catch (LogicException e) {
             throw new ControllerException(e);
         }
-        return new ToOrdersCommand().execute(userRole, userId, index, changeToPage);
+        return toOrdersCommand.execute(userRole, userId, index, changeToPage);
     }
 }

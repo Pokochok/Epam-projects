@@ -1,5 +1,6 @@
 package by.epam.touragency.logic;
 
+import by.epam.touragency.entity.Order;
 import by.epam.touragency.exception.LogicException;
 import by.epam.touragency.exception.RepositoryException;
 import by.epam.touragency.repository.Repository;
@@ -9,6 +10,7 @@ import by.epam.touragency.specification.impl.order.RemoveOrderByDepartureDateSpe
 import by.epam.touragency.specification.impl.order.UpdatePaymentStateByIdSpecification;
 import by.epam.touragency.util.Validation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 /**
@@ -18,6 +20,10 @@ import org.springframework.stereotype.Service;
 public class OrderChangeLogic {
     @Autowired
     Validation validation;
+
+    @Autowired
+    @Qualifier("orderRepository")
+    private Repository<Order> orderRepository;
 
     /**
      * Set payment state of order as paid
@@ -30,8 +36,7 @@ public class OrderChangeLogic {
         }
         Specification specification = new UpdatePaymentStateByIdSpecification(Integer.parseInt(orderId));
         try {
-            Repository repository = OrderRepository.getInstance();
-            repository.update(null, specification);
+            orderRepository.update(null, specification);
         } catch (RepositoryException e) {
             throw new LogicException(e);
         }
@@ -48,8 +53,7 @@ public class OrderChangeLogic {
         try {
             if (validation.validateId(orderId)) {
                 Specification specification = new RemoveOrderByDepartureDateSpecification(Integer.parseInt(orderId));
-                Repository repository = OrderRepository.getInstance();
-                repository.remove(null, specification);
+                orderRepository.remove(null, specification);
                 flag = true;
             }
         } catch (RepositoryException e) {

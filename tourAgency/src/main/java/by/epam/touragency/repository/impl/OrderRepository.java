@@ -1,7 +1,6 @@
 package by.epam.touragency.repository.impl;
 
-import by.epam.touragency.entity.Order;
-import by.epam.touragency.entity.OrderRowMapper;
+import by.epam.touragency.entity.*;
 import by.epam.touragency.exception.RepositoryException;
 import by.epam.touragency.repository.Repository;
 import by.epam.touragency.specification.Specification;
@@ -10,6 +9,7 @@ import by.epam.touragency.specification.impl.client.FindClientByIdSpecification;
 import by.epam.touragency.specification.impl.ticket.FindTicketByIdSpecification;
 import by.epam.touragency.specification.impl.tour.FindTourByIdSpecification;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.util.HashSet;
@@ -21,24 +21,24 @@ import static by.epam.touragency.util.PageMsgConstant.LOGGER;
 public class OrderRepository implements Repository<Order> {
 
     private JdbcTemplate jdbcTemplate;
-    private static OrderRepository orderRepository;
 
-    private OrderRepository() {
+    private Repository<Tour> tourRepository;
+
+    private Repository<User> userRepository;
+
+    private Repository<Ticket> ticketRepository;
+
+    public OrderRepository(){
     }
 
     @Autowired
-    private OrderRepository(JdbcTemplate jdbcTemplate) {
+    public OrderRepository(JdbcTemplate jdbcTemplate, @Qualifier("tourRepository") Repository tourRepository,
+                           @Qualifier("userRepository") Repository userRepository,
+                           @Qualifier("ticketRepository") Repository ticketRepository) {
         this.jdbcTemplate = jdbcTemplate;
-        orderRepository = this;
-    }
-
-    public static OrderRepository getInstance() {
-        if (orderRepository != null) {
-            return orderRepository;
-        } else {
-            orderRepository = new OrderRepository();
-            return orderRepository;
-        }
+        this.tourRepository = tourRepository;
+        this.userRepository = userRepository;
+        this.ticketRepository = ticketRepository;
     }
 
     @Override
@@ -68,10 +68,10 @@ public class OrderRepository implements Repository<Order> {
             Specification agentQuery = new FindAgentByIdSpecification(order.getAgentId());
             order.setId(order.getId());
             order.setPaymentState(order.getPaymentState());
-            order.setTour(TourRepository.getInstance().query(tourQuery).iterator().next());
-            order.setTicket(TicketRepository.getInstance().query(ticketQuery).iterator().next());
-            order.setClient(UserRepository.getInstance().query(userQuery).iterator().next());
-            order.setAgent(UserRepository.getInstance().query(agentQuery).iterator().next());
+            order.setTour(tourRepository.query(tourQuery).iterator().next());
+            order.setTicket(ticketRepository.query(ticketQuery).iterator().next());
+            order.setClient(userRepository.query(userQuery).iterator().next());
+            order.setAgent(userRepository.query(agentQuery).iterator().next());
         }
         return orders;
     }

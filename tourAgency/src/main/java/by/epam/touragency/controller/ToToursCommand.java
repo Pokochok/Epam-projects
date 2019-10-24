@@ -7,6 +7,7 @@ import by.epam.touragency.exception.ControllerException;
 import by.epam.touragency.exception.LogicException;
 import by.epam.touragency.logic.ToPageWithListLogic;
 import by.epam.touragency.resource.ConfigurationManager;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
@@ -22,6 +23,9 @@ import static by.epam.touragency.util.ParameterConstant.*;
 @Controller
 @PreAuthorize("permitAll()")
 public class ToToursCommand {
+    @Autowired
+    private ToPageWithListLogic toPageWithListLogic;
+
     @RequestMapping("/to_tours")
     public ModelAndView execute(@RequestParam(value = ATTR_NAME_INDEX, required = false) String index,
                                 @RequestParam(value = ATTR_NAME_CHANGE_PAGE, required = false) String toChangePage) throws ControllerException {
@@ -41,7 +45,7 @@ public class ToToursCommand {
 
         Set<Tour> tourSet = null;
         try {
-            tourSet = ToPageWithListLogic.getTourSet(userRole);
+            tourSet = toPageWithListLogic.getTourSet(userRole);
         } catch (LogicException e) {
             throw new ControllerException(e);
         }

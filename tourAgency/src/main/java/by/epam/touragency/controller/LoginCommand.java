@@ -1,7 +1,6 @@
 package by.epam.touragency.controller;
 
 import by.epam.touragency.exception.ControllerException;
-import by.epam.touragency.logic.LoginLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.resource.MessageManager;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,9 +16,6 @@ import static by.epam.touragency.util.ParameterConstant.*;
 
 @Controller
 public class LoginCommand {
-    @Autowired
-    LoginLogic loginLogic;
-
     @Autowired
     private MessageManager messageManager;
 

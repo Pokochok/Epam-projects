@@ -5,6 +5,7 @@ import by.epam.touragency.exception.ControllerException;
 import by.epam.touragency.exception.LogicException;
 import by.epam.touragency.logic.ToPageWithListLogic;
 import by.epam.touragency.resource.ConfigurationManager;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,6 +20,9 @@ import static by.epam.touragency.util.ParameterConstant.*;
 @Controller
 @PreAuthorize("permitAll()")
 public class ToTicketsCommand{
+    @Autowired
+    private ToPageWithListLogic toPageWithListLogic;
+
     @RequestMapping("/to_tickets")
     public ModelAndView execute(
             @RequestParam(value = ATTR_NAME_INDEX, required = false) String index,
@@ -34,7 +38,7 @@ public class ToTicketsCommand{
 
         Set<Ticket> ticketSet = null;
         try {
-            ticketSet = ToPageWithListLogic.getTicketSet();
+            ticketSet = toPageWithListLogic.getTicketSet();
         } catch (LogicException e) {
             throw new ControllerException(e);
         }

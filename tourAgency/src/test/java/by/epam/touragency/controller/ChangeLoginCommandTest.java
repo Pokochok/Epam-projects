@@ -59,12 +59,12 @@ class ChangeLoginCommandTest {
     @Test
     @DisplayName("Invalid login entered. Validation failed")
     void execute() throws Exception {
-        when(validation.validateEmail(anyString())).thenReturn(false);
+        when(validation.validateLogin(anyString())).thenReturn(false);
         when(updateUserLogic.checkPrincipal()).thenReturn(true);
         when(updateUserLogic.getUserPrincipal()).thenReturn(userPrincipal);
         when(userPrincipal.getUserRole()).thenReturn(Role.CLIENT);
         when(userPrincipal.getUserEmail()).thenReturn("email");
-        when(messageManager.getProperty(eq(CHANGE_LOGIN_ERROR_MSG_KEY), any(Locale.class))).thenReturn("errorLogin");
+        when(messageManager.getProperty(eq(CHANGE_LOGIN_ERROR_MSG_KEY), any())).thenReturn("errorLogin");
         mockMvc.perform(post("/change_login")
                 .param(PARAM_NAME_NEW_LOGIN, "newLogin"))
                 .andExpect(status().isOk())
@@ -74,7 +74,41 @@ class ChangeLoginCommandTest {
     }
 
     @Test
-    @DisplayName("Successful execution")
+    @DisplayName("Successful execution with role AGENT")
+    void executeSuccessAgent() throws Exception {
+        when(updateUserLogic.checkPrincipal()).thenReturn(true);
+        when(updateUserLogic.getUserPrincipal()).thenReturn(userPrincipal);
+        when(userPrincipal.getUserRole()).thenReturn(Role.AGENT);
+        when(userPrincipal.getUserEmail()).thenReturn("email");
+        when(validation.validateEmail(anyString())).thenReturn(true);
+        when(validation.validateLogin(anyString())).thenReturn(true);
+        when(updateUserLogic.updateLogin(anyString(), anyString(), anyString())).thenReturn(true);
+        mockMvc.perform(post("/change_login")
+                .param(PARAM_NAME_NEW_LOGIN, "newLogin"))
+                .andExpect(status().isOk())
+                .andExpect(forwardedUrl(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH)))
+                .andExpect(MockMvcResultMatchers.view().name(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH)));
+    }
+
+    @Test
+    @DisplayName("Successful execution with role ADMIN")
+    void executeSuccessAdmin() throws Exception {
+        when(updateUserLogic.checkPrincipal()).thenReturn(true);
+        when(updateUserLogic.getUserPrincipal()).thenReturn(userPrincipal);
+        when(userPrincipal.getUserRole()).thenReturn(Role.ADMIN);
+        when(userPrincipal.getUserEmail()).thenReturn("email");
+        when(validation.validateEmail(anyString())).thenReturn(true);
+        when(validation.validateLogin(anyString())).thenReturn(true);
+        when(updateUserLogic.updateLogin(anyString(), anyString(), anyString())).thenReturn(true);
+        mockMvc.perform(post("/change_login")
+                .param(PARAM_NAME_NEW_LOGIN, "newLogin"))
+                .andExpect(status().isOk())
+                .andExpect(forwardedUrl(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH)))
+                .andExpect(MockMvcResultMatchers.view().name(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH)));
+    }
+
+    @Test
+    @DisplayName("Successful execution whth role CLIENT")
     void executeSuccess() throws Exception {
         when(updateUserLogic.checkPrincipal()).thenReturn(true);
         when(updateUserLogic.getUserPrincipal()).thenReturn(userPrincipal);
@@ -91,8 +125,8 @@ class ChangeLoginCommandTest {
     }
 
     @Test
-    @DisplayName("Login exists error")
-    void executeLoginExists() throws Exception {
+    @DisplayName("Login exists error with role CLIENT")
+    void executeLoginExistsClietn() throws Exception {
         when(updateUserLogic.checkPrincipal()).thenReturn(true);
         when(updateUserLogic.getUserPrincipal()).thenReturn(userPrincipal);
         when(userPrincipal.getUserRole()).thenReturn(Role.CLIENT);
@@ -100,7 +134,7 @@ class ChangeLoginCommandTest {
         when(validation.validateEmail(anyString())).thenReturn(true);
         when(validation.validateLogin(anyString())).thenReturn(true);
         when(updateUserLogic.updateLogin(anyString(), anyString(), anyString())).thenReturn(false);
-        when(messageManager.getProperty(eq(LOGIN_EXISTS_MSG_KEY), any(Locale.class))).thenReturn("loginExists");
+        when(messageManager.getProperty(eq(LOGIN_EXISTS_MSG_KEY), any())).thenReturn("loginExists");
         mockMvc.perform(post("/change_login")
                 .param(PARAM_NAME_NEW_LOGIN, "newLogin"))
                 .andExpect(status().isOk())
@@ -109,4 +143,41 @@ class ChangeLoginCommandTest {
                 .andExpect(model().attribute(ATTR_NAME_ERROR_LOGIN_EXISTS,"loginExists"));
     }
 
+    @Test
+    @DisplayName("Login exists error whith role AGENT")
+    void executeLoginExistsAgent() throws Exception {
+        when(updateUserLogic.checkPrincipal()).thenReturn(true);
+        when(updateUserLogic.getUserPrincipal()).thenReturn(userPrincipal);
+        when(userPrincipal.getUserRole()).thenReturn(Role.AGENT);
+        when(userPrincipal.getUserEmail()).thenReturn("email");
+        when(validation.validateEmail(anyString())).thenReturn(true);
+        when(validation.validateLogin(anyString())).thenReturn(true);
+        when(updateUserLogic.updateLogin(anyString(), anyString(), anyString())).thenReturn(false);
+        when(messageManager.getProperty(eq(LOGIN_EXISTS_MSG_KEY), any())).thenReturn("loginExists");
+        mockMvc.perform(post("/change_login")
+                .param(PARAM_NAME_NEW_LOGIN, "newLogin"))
+                .andExpect(status().isOk())
+                .andExpect(forwardedUrl(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH)))
+                .andExpect(MockMvcResultMatchers.view().name(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH)))
+                .andExpect(model().attribute(ATTR_NAME_ERROR_LOGIN_EXISTS,"loginExists"));
+    }
+
+    @Test
+    @DisplayName("Login exists error with role ADMIN")
+    void executeLoginExistsAdmin() throws Exception {
+        when(updateUserLogic.checkPrincipal()).thenReturn(true);
+        when(updateUserLogic.getUserPrincipal()).thenReturn(userPrincipal);
+        when(userPrincipal.getUserRole()).thenReturn(Role.ADMIN);
+        when(userPrincipal.getUserEmail()).thenReturn("email");
+        when(validation.validateEmail(anyString())).thenReturn(true);
+        when(validation.validateLogin(anyString())).thenReturn(true);
+        when(updateUserLogic.updateLogin(anyString(), anyString(), anyString())).thenReturn(false);
+        when(messageManager.getProperty(eq(LOGIN_EXISTS_MSG_KEY), any())).thenReturn("loginExists");
+        mockMvc.perform(post("/change_login")
+                .param(PARAM_NAME_NEW_LOGIN, "newLogin"))
+                .andExpect(status().isOk())
+                .andExpect(forwardedUrl(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH)))
+                .andExpect(MockMvcResultMatchers.view().name(ConfigurationManager.getProperty(USER_PROFILE_PAGE_PATH)))
+                .andExpect(model().attribute(ATTR_NAME_ERROR_LOGIN_EXISTS,"loginExists"));
+    }
 }

@@ -7,84 +7,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6cf249f-abee-4fa2-b06c-4b2f6579adc5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/0/0048992864a7ab43e7cf2dbf666f5fedf09a9d51" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/0/00d86881d672e0e40f9de985058f8b57b0a84670" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/3/03e784ef857ff31e61664eef61daa4b626e47dd2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/6/065f6c4d12641dfb52c7e20bb3366985af16675c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/5/15d21c2c2c0e07be3df522c75e9c6a2dfb04df3e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/e/1e697a2beb3555caee167884ab0ea2c65ca318ea" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/e/1ef3683c89b8c5e2986c7c409d7d1e53a81b09fd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/3/23d49f7a857ec6a67bc8476cda7b9696f5f2f6bf" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/3/23d49f7a857ec6a67bc8476cda7b9696f5f2f6bf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/1/314582ad044e18636785afad72e9e485fb9c4b24" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/5/359ff945728ddb7b55eefbfe7f05a9b251d6bf0f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/1/41bfcdc0b3133a9767bdc1b311f1cf9be64d6426" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/2/5231f2eb77b0c6015ebba1a2f3365224d2d399bb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/b/5b6e5e92d19c45c6311e3e6b34ccd18ffd44e081" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/d/5d7836882d354dda1cd27c3cac722b620c35b1db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/0/60ebcf81a567ac55abc14ad18aa889032f501041" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/1/617fa7e3396747e69196e3386570f001021fa0cf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/9/69d24b7d667ccc82fbc3e7b7ed2ebff8532c081a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/b/6bc472eea459a2fc2d70542d75f0199ff06a07fd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/f/6f07ad2bfd53e50d12157521d9aa81a27e5095f9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/d/7d1b0b943a259e5b62930c4466eeee3c1d96d03e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/2/822221ee45b31e01ceaea5e4f620317c913833ca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/2/823bc5d371767c0fac2b8fa30e17f5ece3d876e6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/7/87e364c40ea17ab01a3630999a1784529e986d60" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/c/8c4e5f6ab9adf39cc8de977f87b1419ce06b0144" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/3/9329497642bee23198939b0a88053f748a5df1c0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/3/9370e64263e0f8d14b13e5e932223f4fcf7fb79f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/3/939b602958470ed14bbd73bc845bdcb6d13c5d9b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/4/9490b9dd2f4abd792398227d1c7e562834096ba5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/6/96af1442a3f2450ea5cf3a030fbeb15495280321" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/e/9e5b3597b8d74ae353b38f2840e0961ead932808" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/f/9f23d278ee3ad458f3f2d44c35f33c3e7a504714" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/0/b044c69a024ff2989321834e6c58d975536503f4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/2/b28d413f2268881bae99701b6ce891fec89ddbc7" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/2/b28d413f2268881bae99701b6ce891fec89ddbc7" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/4/b44b893ea9334fb4cac2e04e7556570e1c9b244f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/4/b4c7d8ba4b3a261601e59b56a901fdba765c17bd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/a/ba8bc0cdfa3e9d245d02d9ef4fc931ff06b68e0a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/3/c3136b03199cfbcdd97438c4c22c2fa3bfa3501c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/5/c5805cb191efc19cc6403846fbd8ee669707401d" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/5/c5805cb191efc19cc6403846fbd8ee669707401d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/6/c61157a3dbf3cef771fef45f7e0bdd859a1548d3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/8/c819c0085f5c52ead8851ea0cfb06172645a689f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/d/cd174c29d88b286f3d62d400fe84ecf74223ff09" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/d/cdb53d06d2c06a841f899d53601208863bf6b616" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/2/d22624c5edab658f6f35d250b2a5b116223a0f7c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/2/d297257ccce9a3e8042ff6188b155f2c0e650604" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/3/d3310e13b4cfde3d760697ad621ba4129f1061d9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/6/d61726cfcb03c735571f5e4289cbbfac7b68d4eb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/c/dc34122b1df06caac131f7898b63648a708ef1d3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/e/def6410f6e87046c8095e317253897ebc4506970" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/0/e0097b42c701ccd208b30281cf94b93444492c84" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/1/e1e2356bd9355ef7cec3d6e713dd448af4aad98c" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/1/e1e2356bd9355ef7cec3d6e713dd448af4aad98c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/6/e6b1a38992baed8d0896fdfb024142ad4e7fbde4" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/6/e6b1a38992baed8d0896fdfb024142ad4e7fbde4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/a/ead52a9aee27ec159c117912691d54997922e217" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/b/eb5f2007638a14ac8fd8928a022969856a920e4e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/f/efd66b3c5ddffb48a0eb390a2154448f09c3eb00" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/1/f137ec24019a92d04db0e64ff63bf1b7a065cd94" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/config/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/config/PropertyHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/config/PropertyHolder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/controller/ToInfCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/controller/ToInfCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/exception/ConnectionPoolException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/exception/ConnectionPoolException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/handler/ExceptionHandlerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/handler/ExceptionHandlerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/controller/LoginCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/controller/LoginCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/controller/PayOrderCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/controller/PayOrderCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/controller/RemoveOrderCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/controller/RemoveOrderCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/controller/ToOrdersCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/controller/ToOrdersCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/controller/ToTicketsCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/controller/ToTicketsCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/controller/ToToursCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/controller/ToToursCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/BookingLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/BookingLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/LoginLogic.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/OrderChangeLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/OrderChangeLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/order/RemoveOrderByIdSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/specification/impl/order/RemoveOrderByDepartureDateSpecification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/util/PageMsgConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/util/PageMsgConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/jsp/infMessages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jsp/infMessages.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/jsp/infMessages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jsp/infMessages_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/jsp/infMessages_pl.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jsp/infMessages_pl.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/jsp/infMessages_ru.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jsp/infMessages_ru.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/jsp/tickets.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jsp/tickets.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/jsp/tickets_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jsp/tickets_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/jsp/tickets_pl.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jsp/tickets_pl.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/jsp/tickets_ru.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jsp/tickets_ru.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/touragency/config/WebAppTestContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/config/WebAppTestContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/ToPageWithListLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/ToPageWithListLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/UpdateUserLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/logic/UpdateUserLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/touragency/repository/impl/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/touragency/repository/impl/OrderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/touragency/controller/ChangeLoginCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/controller/ChangeLoginCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/touragency/controller/PayOrderCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/controller/PayOrderCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/touragency/controller/RemoveOrderCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/controller/RemoveOrderCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/LoginLogicTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/MatchOfUniqueFieldsDetectorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/MatchOfUniqueFieldsDetectorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/TicketRegistrationLogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/TicketRegistrationLogicTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/ToPageWithListLogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/ToPageWithListLogicTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/UpdateTourLogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/UpdateTourLogicTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/UpdateUserLogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/logic/UpdateUserLogicTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/touragency/repository/impl/OrderRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/repository/impl/OrderRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/touragency/repository/impl/TicketRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/repository/impl/TicketRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/touragency/repository/impl/TourRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/repository/impl/TourRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/touragency/repository/impl/UserRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/repository/impl/UserRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/touragency/util/ValidationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/touragency/util/ValidationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/db/migration/V1__init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/db/migration/V1__init.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/templates/components/ticket-form.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/templates/components/ticket-form.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/templates/ticket-registration.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/templates/ticket-registration.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/templates/tickets.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/templates/tickets.ftl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -178,7 +128,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TicketServiceTest">
+  <component name="RunManager" selected="JUnit.All in tourAgency">
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.21" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -251,7 +201,15 @@
         </option>
       </method>
     </configuration>
-    <configuration name="ChangeLoginCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in tourAgency" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tourAgency" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PayOrderCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tourAgency" />
       <extension name="coverage">
         <pattern>
@@ -260,69 +218,54 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="by.epam.touragency.controller" />
-      <option name="MAIN_CLASS_NAME" value="by.epam.touragency.controller.ChangeLoginCommandTest" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.touragency.controller.PayOrderCommandTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TicketServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PayOrderCommandTest.executeSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tourAgency" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="by.epam.touragency.logic.*" />
+          <option name="PATTERN" value="by.epam.touragency.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="by.epam.touragency.logic" />
-      <option name="MAIN_CLASS_NAME" value="by.epam.touragency.logic.TicketServiceTest" />
+      <option name="PACKAGE_NAME" value="by.epam.touragency.controller" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.touragency.controller.PayOrderCommandTest" />
+      <option name="METHOD_NAME" value="executeSuccess" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RemoveOrderCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tourAgency" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.epam.touragency.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="by.epam.touragency.controller" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.touragency.controller.RemoveOrderCommandTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TicketServiceTest.testRemoveInvalidTicketsWithOrdersFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TourRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tourAgency" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="by.epam.touragency.logic.*" />
+          <option name="PATTERN" value="by.epam.touragency.repository.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="by.epam.touragency.logic" />
-      <option name="MAIN_CLASS_NAME" value="by.epam.touragency.logic.TicketServiceTest" />
-      <option name="METHOD_NAME" value="testRemoveInvalidTicketsWithOrdersFail" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UpdateUserLogicTest.testUpdatePassword_Agent_Success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tourAgency" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="by.epam.touragency.logic.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="by.epam.touragency.logic" />
-      <option name="MAIN_CLASS_NAME" value="by.epam.touragency.logic.UpdateUserLogicTest" />
-      <option name="METHOD_NAME" value="testUpdatePassword_Agent_Success" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="by.epam.touragency.logic in tourAgency" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tourAgency" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="by.epam.touragency.logic.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="by.epam.touragency.logic" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="PACKAGE_NAME" value="by.epam.touragency.repository.impl" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.touragency.repository.impl.TourRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -400,19 +343,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.by.epam.touragency.logic in tourAgency" />
-      <item itemvalue="JUnit.UpdateUserLogicTest.testUpdatePassword_Agent_Success" />
-      <item itemvalue="JUnit.ChangeLoginCommandTest" />
-      <item itemvalue="JUnit.TicketServiceTest.testRemoveInvalidTicketsWithOrdersFail" />
-      <item itemvalue="JUnit.TicketServiceTest" />
+      <item itemvalue="JUnit.TourRepositoryTest" />
+      <item itemvalue="JUnit.All in tourAgency" />
+      <item itemvalue="JUnit.RemoveOrderCommandTest" />
+      <item itemvalue="JUnit.PayOrderCommandTest.executeSuccess" />
+      <item itemvalue="JUnit.PayOrderCommandTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TicketServiceTest" />
-        <item itemvalue="JUnit.TicketServiceTest.testRemoveInvalidTicketsWithOrdersFail" />
-        <item itemvalue="JUnit.ChangeLoginCommandTest" />
-        <item itemvalue="JUnit.UpdateUserLogicTest.testUpdatePassword_Agent_Success" />
-        <item itemvalue="JUnit.by.epam.touragency.logic in tourAgency" />
+        <item itemvalue="JUnit.All in tourAgency" />
+        <item itemvalue="JUnit.PayOrderCommandTest" />
+        <item itemvalue="JUnit.RemoveOrderCommandTest" />
+        <item itemvalue="JUnit.PayOrderCommandTest.executeSuccess" />
+        <item itemvalue="JUnit.TourRepositoryTest" />
       </list>
     </recent_temporary>
   </component>

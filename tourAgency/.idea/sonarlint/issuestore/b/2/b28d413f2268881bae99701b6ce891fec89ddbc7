@@ -1,33 +1,34 @@
 
-Jsquid:S1199"-Extract this nested code block into a method.(²”ì‹øÿÿÿÿ
-Isquid:S1199@"-Extract this nested code block into a method.(¡–ıùüÿÿÿÿ
-Jsquid:S1199”"-Extract this nested code block into a method.(¡–ıùüÿÿÿÿ
-Isquid:S1199"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ
-Isquid:S1199w"-Extract this nested code block into a method.(¡–ıùüÿÿÿÿ
-_$squid:AssignmentInSubExpressionCheck•".Extract the assignment out of this expression.(ƒ¯®Û
-d$squid:AssignmentInSubExpressionCheckü".Extract the assignment out of this expression.(ë§¥áøÿÿÿÿ
-Jsquid:S1199¶"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ
-Jsquid:S1199Î"-Extract this nested code block into a method.(¥’¬…úÿÿÿÿ
-Jsquid:S1199Ó"-Extract this nested code block into a method.(¡–ıùüÿÿÿÿ
-_$squid:AssignmentInSubExpressionCheckå".Extract the assignment out of this expression.(¦™Îù
-Jsquid:S1199Ø"-Extract this nested code block into a method.(¥’¬…úÿÿÿÿ
-Isquid:S1199D"-Extract this nested code block into a method.(¥’¬…úÿÿÿÿ
-Isquid:S1199H"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ
-Jsquid:S1199ª"-Extract this nested code block into a method.(²”ì‹øÿÿÿÿ
-Jsquid:S1199˜"-Extract this nested code block into a method.(¥’¬…úÿÿÿÿ
-Isquid:S1199s"-Extract this nested code block into a method.(²”ì‹øÿÿÿÿ
-Jsquid:S1199®"-Extract this nested code block into a method.(¡–ıùüÿÿÿÿ
-Jsquid:S1199²"-Extract this nested code block into a method.(¥’¬…úÿÿÿÿ
-Jsquid:S1199Ò"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ
-Jsquid:S1199Î"-Extract this nested code block into a method.(²”ì‹øÿÿÿÿ
-Isquid:S1199<"-Extract this nested code block into a method.(²”ì‹øÿÿÿÿ
-Jsquid:S1199œ"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ
-Isquid:S1199{"-Extract this nested code block into a method.(¥’¬…úÿÿÿÿ
-psquid:S1192J"YDefine a constant instead of duplicating this literal "User role is not defined" 6 times.(î—À
-^$squid:AssignmentInSubExpressionCheck^".Extract the assignment out of this expression.(¿¤Ü
-@squid:S1148š"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-Jsquid:S1199Ê"-Extract this nested code block into a method.(¡–ıùüÿÿÿÿ
-Jsquid:S1199İ"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ
-Jsquid:S1199Æ"-Extract this nested code block into a method.(²”ì‹øÿÿÿÿ
-^$squid:AssignmentInSubExpressionCheck'".Extract the assignment out of this expression.(é™Ò’
-d$squid:AssignmentInSubExpressionCheck²".Extract the assignment out of this expression.(ë§¥áøÿÿÿÿ
+Jsquid:S1199Å"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ
+^$squid:AssignmentInSubExpressionCheck3".Extract the assignment out of this expression.(é™Ò’
+Jsquid:S1199Ü"-Extract this nested code block into a method.(¡–ıùüÿÿÿÿ
+Jsquid:S1199"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ
+Jsquid:S1199­"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ
+Isquid:S1199Q"-Extract this nested code block into a method.(¥’¬…úÿÿÿÿ
+Jsquid:S1199½"-Extract this nested code block into a method.(¡–ıùüÿÿÿÿ
+Jsquid:S1199¥"-Extract this nested code block into a method.(¡–ıùüÿÿÿÿ
+Jsquid:S1199¹"-Extract this nested code block into a method.(²”ì‹øÿÿÿÿ
+Isquid:S1199M"-Extract this nested code block into a method.(¡–ıùüÿÿÿÿ
+Jsquid:S1199Á"-Extract this nested code block into a method.(¥’¬…úÿÿÿÿ
+Jsquid:S1199©"-Extract this nested code block into a method.(¥’¬…úÿÿÿÿ
+Isquid:S1199I"-Extract this nested code block into a method.(²”ì‹øÿÿÿÿ
+^$squid:AssignmentInSubExpressionCheckk".Extract the assignment out of this expression.(¿¤Ü
+d$squid:AssignmentInSubExpressionCheckÃ".Extract the assignment out of this expression.(ë§¥áøÿÿÿÿ
+_$squid:AssignmentInSubExpressionCheck£".Extract the assignment out of this expression.(ƒ¯®Û
+Isquid:S1199U"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ
+Jsquid:S1199…"-Extract this nested code block into a method.(¡–ıùüÿÿÿÿ
+@squid:S1148¨"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+Jsquid:S1199"-Extract this nested code block into a method.(²”ì‹øÿÿÿÿ
+Jsquid:S1199¡"-Extract this nested code block into a method.(²”ì‹øÿÿÿÿ
+Jsquid:S1199‰"-Extract this nested code block into a method.(¥’¬…úÿÿÿÿ
+Jsquid:S1199ß"-Extract this nested code block into a method.(²”ì‹øÿÿÿÿ
+Jsquid:S1199ä"-Extract this nested code block into a method.(¡–ıùüÿÿÿÿ
+Jsquid:S1199à"-Extract this nested code block into a method.(¥’¬…úÿÿÿÿ
+Jsquid:S1199ä"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ
+psquid:S1192W"YDefine a constant instead of duplicating this literal "User role is not defined" 6 times.(î—À
+Jsquid:S1199î"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ
+Jsquid:S1199Ø"-Extract this nested code block into a method.(²”ì‹øÿÿÿÿ
+Jsquid:S1199é"-Extract this nested code block into a method.(¥’¬…úÿÿÿÿ
+d$squid:AssignmentInSubExpressionCheckŒ".Extract the assignment out of this expression.(ë§¥áøÿÿÿÿ
+e$squid:AssignmentInSubExpressionCheckõ".Extract the assignment out of this expression.(ÿÖğ68ÿğíß-
+~squid:UselessImportCheck	"NRemove this unused import 'by.epam.touragency.repository.impl.UserRepository'.(Öªåøÿÿÿÿ8ÿğíß-

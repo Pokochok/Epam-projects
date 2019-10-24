@@ -33,6 +33,7 @@ public class PageMsgConstant {
     public static final String TO_TOUR_SEARCH_PAGE_PATH = "path.page.tourSearch";
     public static final String MAIN_PAGE_PATH = "path.page.main";
 
+    public static final String ACCESS_DENIED_ERROR_MSG_KEY = "inf.accessDenied.message";
     public static final String TOUR_NAME_EXISTS_ERROR_MSG_KEY = "tourRegistration.message.tourNameExists";
     public static final String OPERATION_SUCCESS_MSG_KEY = "result.message.successful";
     public static final String OPERATION_NOT_SUCCESS_MSG_KEY = "result.message.notSuccessful";

@@ -4,11 +4,14 @@ import by.epam.touragency.logic.UserDetailsServiceImpl;
 import org.springframework.context.annotation.*;
 import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.context.request.RequestContextListener;
 import org.springframework.web.filter.RequestContextFilter;
 import org.springframework.web.servlet.LocaleResolver;
@@ -25,6 +28,7 @@ import java.util.Locale;
 
 @Configuration
 @EnableAspectJAutoProxy
+@EnableTransactionManagement
 @ComponentScan({"by.epam.touragency"})
 public class AppConfig implements WebMvcConfigurer {
 
@@ -36,8 +40,14 @@ public class AppConfig implements WebMvcConfigurer {
     @Bean
     public LocaleResolver localeResolver(){
         SessionLocaleResolver sessionLocaleResolver = new SessionLocaleResolver();
-        sessionLocaleResolver.setDefaultLocale(new Locale("ru"));
+        sessionLocaleResolver.setDefaultLocale(new Locale("en"));
         return sessionLocaleResolver;
+    }
+
+    @Bean
+    @Lazy
+    public PlatformTransactionManager platformTransactionManager(){
+        return new DataSourceTransactionManager(pgSqlDataSource());
     }
 
     @Bean
@@ -82,6 +92,7 @@ public class AppConfig implements WebMvcConfigurer {
     }
 
     @Bean
+    @Lazy
     public DataSource pgSqlDataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName(PropertyHolder.getInstance().getDriverName());
@@ -92,11 +103,12 @@ public class AppConfig implements WebMvcConfigurer {
     }
 
     @Bean
+    @Lazy
     public JdbcTemplate jdbcTemplate() {
         return new JdbcTemplate(pgSqlDataSource());
     }
 
-    @Bean
+//    @Bean
     public RequestContextListener requestContextListener() {
         return new RequestContextListener();
     }

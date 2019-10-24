@@ -3,6 +3,7 @@ package by.epam.touragency.controller;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.resource.MessageManager;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,6 +16,7 @@ import static by.epam.touragency.util.PageMsgConstant.TO_INF_PAGE_PATH;
 import static by.epam.touragency.util.ParameterConstant.*;
 
 @Controller
+@PreAuthorize("permitAll()")
 public class ToInfCommand {
     @Autowired
     private MessageManager messageManager;

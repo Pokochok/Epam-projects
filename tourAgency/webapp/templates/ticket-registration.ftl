@@ -33,7 +33,7 @@
             </div>
 
             <label>
-                <inputclass="uui-form-element" type="text" name="ticketNumber" required pattern="^([1]?\d{1,9}|2000000000)$"/>
+                <input class="uui-form-element" type="text" name="ticketNumber" required pattern="^([1]?\d{1,9}|2000000000)$"/>
             </label>
         </div>
 

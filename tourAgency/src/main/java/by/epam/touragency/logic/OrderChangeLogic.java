@@ -5,7 +5,7 @@ import by.epam.touragency.exception.RepositoryException;
 import by.epam.touragency.repository.Repository;
 import by.epam.touragency.repository.impl.OrderRepository;
 import by.epam.touragency.specification.Specification;
-import by.epam.touragency.specification.impl.order.RemoveOrderByIdSpecification;
+import by.epam.touragency.specification.impl.order.RemoveOrderByDepartureDateSpecification;
 import by.epam.touragency.specification.impl.order.UpdatePaymentStateByIdSpecification;
 import by.epam.touragency.util.Validation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,7 +47,7 @@ public class OrderChangeLogic {
         boolean flag = false;
         try {
             if (validation.validateId(orderId)) {
-                Specification specification = new RemoveOrderByIdSpecification(Integer.parseInt(orderId));
+                Specification specification = new RemoveOrderByDepartureDateSpecification(Integer.parseInt(orderId));
                 Repository repository = OrderRepository.getInstance();
                 repository.remove(null, specification);
                 flag = true;

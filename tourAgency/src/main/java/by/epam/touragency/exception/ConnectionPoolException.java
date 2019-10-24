@@ -2,7 +2,6 @@ package by.epam.touragency.exception;
 
 /**
  * Can be thrown in connection pool layer
- * @see by.epam.touragency.connectionpool.ProxyConnectionPool
  */
 public class ConnectionPoolException extends RuntimeException{
     public ConnectionPoolException() {

@@ -43,9 +43,14 @@
                     </#list>
                 </div>
 
+                <#if (secutity.isAdmin)!false>
+                    <form action="remove_tickets" method="post">
+                        <input class="uui-button transparent raspberry" type="submit" value="<@spring.message "admin.submit.deleteInvalidTicketsAndOrders"/>">
+                    </form>
+                </#if>
+
                 <@spring.message "common.message.tour"/>
                 ${(param.tourName)!}
-
                 <#if ((param.tourId??) && ((param.tourId!"0") != "0"))>
                     <form class="continueBooking" method="post" action="to_booking">
                         <input type="hidden" name="tourId" value="${param.tourId!}"/>

@@ -1,6 +1,8 @@
 package by.epam.touragency.config;
 
 import by.epam.touragency.exception.ConnectionPoolException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -12,6 +14,7 @@ import static by.epam.touragency.util.PageMsgConstant.LOGGER;
  * Class, which contains all properties, to connect
  * with database, the connection pool needs
  */
+@Component
 public class PropertyHolder {
     private static final String FILE_NAME = "dbdriver/driverProp.properties";
     private static final String DRIVER_FIELD = "driverName";
@@ -36,7 +39,7 @@ public class PropertyHolder {
     /**
      * Contains a url
      */
-    private final String url;
+    private String url;
     /**
      * Contains a size of connection pool
      */
@@ -100,9 +103,7 @@ public class PropertyHolder {
 
 
     public static PropertyHolder getInstance(String url){
-        if (instance == null){
-            instance = new PropertyHolder(url);
-        }
+        instance = new PropertyHolder(url);
         return instance;
     }
 
@@ -128,5 +129,9 @@ public class PropertyHolder {
 
     public int getPoolSize() {
         return poolSize;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 }

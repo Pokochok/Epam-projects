@@ -18,7 +18,7 @@
 <p>${secutity.getUserRole!}</p>
 </div>
 <div class="person-profile-photo">
-                <img src="/images/icons/no_photo.png" alt="" />
+                <img src="uui/images/icons/no_photo.png" alt="" />
             </div>
 </div>
 </div>

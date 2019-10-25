@@ -1,0 +1,152 @@
+
+ojavascript:S2259× "MTypeError can be thrown as "outerDimensions" might be null or undefined here.(…å…‰úÿÿÿÿ
+javascript:S2583ä"lChange this condition so that it does not always evaluate to "true"; some subsequent code is never executed.(Î¹Ã¹üÿÿÿÿ
+njavascript:S2589Ê9"LRefactor this code so that this expression does not always evaluate to true.(ï€ÀÀûÿÿÿÿ
+njavascript:S2589ôH"LRefactor this code so that this expression does not always evaluate to true.(êÚ³ªüÿÿÿÿ
+njavascript:S2589’~"LRefactor this code so that this expression does not always evaluate to true.(…ğ‘íıÿÿÿÿ
+„javascript:S2692»x"bThis check ignores index 0; consider using 'includes' method to make this check safe and explicit.(Äü¢¤ÿÿÿÿÿ
+]javascript:S2137’o"ADo not use "undefined" to declare a parameter - use another name.(•ƒŠP
+sjavascript:S1117Ã,"V"event" hides or potentially hides a variable declared in an outer scope at line 5653.( Õ
+|javascript:S1117à"Z"draggable" hides or potentially hides a variable declared in an outer scope at line 2666.(ŒñÒ´ùÿÿÿÿ
+xjavascript:S1117º,"V"event" hides or potentially hides a variable declared in an outer scope at line 5653.(œ™ÃØşÿÿÿÿ
+rjavascript:S1117üI"U"date" hides or potentially hides a variable declared in an outer scope at line 9466.(ş°Û‚
+vjavascript:S1117é	"Y"position" hides or potentially hides a variable declared in an outer scope at line 1549.(§¸µ”
+|javascript:S1117ë"Z"draggable" hides or potentially hides a variable declared in an outer scope at line 2666.(ŒñÒ´ùÿÿÿÿ
+{javascript:S1117‰]"Y"position" hides or potentially hides a variable declared in an outer scope at line 1549.(êºä†ûÿÿÿÿ
+tjavascript:S1117¶m"W"event" hides or potentially hides a variable declared in an outer scope at line 13958.(êšä¬
+wjavascript:S1117î"Z"draggable" hides or potentially hides a variable declared in an outer scope at line 2666.(æÀÊ
+ujavascript:S1117è["S"i" hides or potentially hides a variable declared in an outer scope at line 11731.(”¯üöúÿÿÿÿ
+{javascript:S1117Íz"Y"position" hides or potentially hides a variable declared in an outer scope at line 1549.(™£…šüÿÿÿÿ
+wjavascript:S1117°"Z"draggable" hides or potentially hides a variable declared in an outer scope at line 2666.(§”º
+rjavascript:S1117¾"U"event" hides or potentially hides a variable declared in an outer scope at line 912.(±¨ƒî
+vjavascript:S1117Ç
+"Y"position" hides or potentially hides a variable declared in an outer scope at line 1549.(¨ëÍ‡
+xjavascript:S1117Ÿ8"V"event" hides or potentially hides a variable declared in an outer scope at line 7180.(ÿå´÷ùÿÿÿÿ
+xjavascript:S1117°,"V"event" hides or potentially hides a variable declared in an outer scope at line 5653.(˜©ˆÁşÿÿÿÿ
+|javascript:S1117Ä"Z"droppable" hides or potentially hides a variable declared in an outer scope at line 3063.(ÜíŞ¹úÿÿÿÿ
+tjavascript:S1117’o"X"jQuery" hides or potentially hides a variable declared in an outer scope at line 14210.(•ƒŠP
+vjavascript:S1117Ö/"Y"position" hides or potentially hides a variable declared in an outer scope at line 1549.(Ûî
+vjavascript:S1117ÕR"Y"position" hides or potentially hides a variable declared in an outer scope at line 1549.(–úˆ“
+xjavascript:S1117³,"V"event" hides or potentially hides a variable declared in an outer scope at line 5653.(à…ƒéşÿÿÿÿ
+vjavascript:S1117Ïh"Y"position" hides or potentially hides a variable declared in an outer scope at line 1549.(Ûî
+ujavascript:S1117ƒ"Y"sortable" hides or potentially hides a variable declared in an outer scope at line 4487.(¦äêf
+yjavascript:S1117İm"W"event" hides or potentially hides a variable declared in an outer scope at line 14043.(Õé‚‘øÿÿÿÿ
+vjavascript:S1117‡m"Y"tooltip" hides or potentially hides a variable declared in an outer scope at line 13748.(î§„
+vjavascript:S1117Ğn"Y"tooltip" hides or potentially hides a variable declared in an outer scope at line 13748.(ÔğîÉ
+{javascript:S1117ì
+"Y"position" hides or potentially hides a variable declared in an outer scope at line 1549.(€šÙÿøÿÿÿÿ
+sjavascript:S1117»,"V"event" hides or potentially hides a variable declared in an outer scope at line 5653.(©¸˜ú
+tjavascript:S1117¬"R"i" hides or potentially hides a variable declared in an outer scope at line 3138.(ˆğİşÿÿÿÿ
+wjavascript:S1117‰J"U"date" hides or potentially hides a variable declared in an outer scope at line 9466.(şşò¼ùÿÿÿÿ
+zjavascript:S1117•w"X"effect" hides or potentially hides a variable declared in an outer scope at line 15482.(¢ Øôıÿÿÿÿ
+{javascript:S1117øm"Y"tooltip" hides or potentially hides a variable declared in an outer scope at line 13748.(ÈÎè˜şÿÿÿÿ
+wjavascript:S1117»"U"event" hides or potentially hides a variable declared in an outer scope at line 912.(ÁÖËùÿÿÿÿ
+{javascript:S1117ß"Y"sortable" hides or potentially hides a variable declared in an outer scope at line 4487.(øëíúÿÿÿÿ
+vjavascript:S1117°\"Y"position" hides or potentially hides a variable declared in an outer scope at line 1549.(º‹¸“
+|javascript:S1117×"Z"draggable" hides or potentially hides a variable declared in an outer scope at line 2666.(ì×ùıÿÿÿÿ
+|javascript:S1117ı"Z"draggable" hides or potentially hides a variable declared in an outer scope at line 2666.(ŒñÒ´ùÿÿÿÿ
+{javascript:S1117µ"Y"position" hides or potentially hides a variable declared in an outer scope at line 1549.(€šÙÿøÿÿÿÿ
+{javascript:S1117€"Y"position" hides or potentially hides a variable declared in an outer scope at line 1549.(Êõèæøÿÿÿÿ
+ujavascript:S1117È>"Y"position" hides or potentially hides a variable declared in an outer scope at line 1549.(öÓ‰U
+vjavascript:S1117û4"Y"position" hides or potentially hides a variable declared in an outer scope at line 1549.(šÁ‰
+sjavascript:S1117ùw"V"mode" hides or potentially hides a variable declared in an outer scope at line 15333.(ü›¿
+sjavascript:S1117Ås"V"hook" hides or potentially hides a variable declared in an outer scope at line 14787.(¤èó·
+vjavascript:S1117¸"Z"draggable" hides or potentially hides a variable declared in an outer scope at line 2666.(‚öúg
+tjavascript:S1117Ïo"W"color" hides or potentially hides a variable declared in an outer scope at line 14287.(Òˆûß
+wjavascript:S1117âL"U"year" hides or potentially hides a variable declared in an outer scope at line 9788.(ÔˆÃıÿÿÿÿ
+|javascript:S1117Ä"Z"draggable" hides or potentially hides a variable declared in an outer scope at line 2666.(ÜíŞ¹úÿÿÿÿ
+ujavascript:S1117:"Y"position" hides or potentially hides a variable declared in an outer scope at line 1549.(©å®Å
+xjavascript:S1117¼,"V"event" hides or potentially hides a variable declared in an outer scope at line 5653.(ÃÈ²Œşÿÿÿÿ
+vjavascript:S1117“"Y"position" hides or potentially hides a variable declared in an outer scope at line 1549.(¨ëÍ‡
+wjavascript:S1117¬"U"axis" hides or potentially hides a variable declared in an outer scope at line 3138.(ˆğİşÿÿÿÿ
+wjavascript:S1117€"Z"draggable" hides or potentially hides a variable declared in an outer scope at line 2666.(ãÁ¢ı
+vjavascript:S1117È}"Y"position" hides or potentially hides a variable declared in an outer scope at line 1549.(˜ëõÁ
+wjavascript:S1117"Z"draggable" hides or potentially hides a variable declared in an outer scope at line 2666.(ĞÚÂ‚
+|javascript:S1117Ö"Z"draggable" hides or potentially hides a variable declared in an outer scope at line 2666.(ŒñÒ´ùÿÿÿÿ
+|javascript:S1117Ã"Z"draggable" hides or potentially hides a variable declared in an outer scope at line 2666.(’ÈÙ ÿÿÿÿÿ
+yjavascript:S1117¹h"W"event" hides or potentially hides a variable declared in an outer scope at line 13358.(ÕöÔİÿÿÿÿÿ
+vjavascript:S1117ï\"Y"position" hides or potentially hides a variable declared in an outer scope at line 1549.(¼ïÅş
+pjavascript:S1117±q"S"_" hides or potentially hides a variable declared in an outer scope at line 14508.(òìŞ
+vjavascript:S1117“E"Y"position" hides or potentially hides a variable declared in an outer scope at line 1549.(³¯×º
+wjavascript:S1117ç3"U"menu" hides or potentially hides a variable declared in an outer scope at line 6363.(ãúÏÿÿÿÿÿ
+{javascript:S1117Ê"Y"sortable" hides or potentially hides a variable declared in an outer scope at line 4487.(ÁëËïıÿÿÿÿ
+vjavascript:S1117¹n"Y"tooltip" hides or potentially hides a variable declared in an outer scope at line 13748.(¿ƒÖ
+|javascript:S1117™"Z"draggable" hides or potentially hides a variable declared in an outer scope at line 2666.(µ‡Æ·ÿÿÿÿÿ
+>javascript:S905ÚK""Refactor or remove this statement.(õ»çÒ
+Jjavascript:EmptyBlockçx")Either remove or fill this block of code.(Ï‰åb
+jjavascript:UnusedVariableˆ€">Remove the declaration of the unused 'effectPulsate' variable.(¸Õ˜üÿÿÿÿ
+ejavascript:UnusedVariable÷":Remove the declaration of the unused 'droppable' variable.(ù–­âşÿÿÿÿ
+bjavascript:UnusedVariable"<Remove the declaration of the unused 'effectScale' variable.(¾œäË
+bjavascript:UnusedVariable´>"7Remove the declaration of the unused 'button' variable.(Á§ï–ûÿÿÿÿ
+bjavascript:UnusedVariableÚN"7Remove the declaration of the unused 'dialog' variable.(²ÑÈûÿÿÿÿ
+fjavascript:UnusedVariable„{";Remove the declaration of the unused 'effectDrop' variable.(¢ú‘äıÿÿÿÿ
+ajavascript:UnusedVariable»|";Remove the declaration of the unused 'effectFold' variable.(Á©·ƒ
+fjavascript:UnusedVariable³}";Remove the declaration of the unused 'effectSize' variable.(¼¨Ã²øÿÿÿÿ
+fjavascript:UnusedVariable÷ ";Remove the declaration of the unused 'selectable' variable.(üŒëüÿÿÿÿ
+ajavascript:UnusedVariableì"6Remove the declaration of the unused 'mouse' variable.(Äìæÿÿÿÿÿ
+hjavascript:UnusedVariable§;"=Remove the declaration of the unused 'autocomplete' variable.(ûö²šüÿÿÿÿ
+`javascript:UnusedVariableê":Remove the declaration of the unused 'draggable' variable.(™ÖÓ 
+djavascript:UnusedVariable‡#"9Remove the declaration of the unused 'sortable' variable.(ú ÆŸùÿÿÿÿ
+bjavascript:UnusedVariable‰y"<Remove the declaration of the unused 'effectBlind' variable.(æ¸¼ç
+kjavascript:UnusedVariableÈ"?Remove the declaration of the unused 'effectTransfer' variable.(‚âÛßüÿÿÿÿ
+]javascript:UnusedVariableúx"7Remove the declaration of the unused 'effect' variable.(µœÿÓ
+hjavascript:UnusedVariableÖy"=Remove the declaration of the unused 'effectBounce' variable.(—°»Äşÿÿÿÿ
+`javascript:UnusedVariable›-":Remove the declaration of the unused 'accordion' variable.(µ«¹·
+fjavascript:UnusedVariable„}"@Remove the declaration of the unused 'effectHighlight' variable.(ÃôÊò
+cjavascript:UnusedVariable‹"<Remove the declaration of the unused 'effectSlide' variable.(õ·ò±
+_javascript:UnusedVariable"9Remove the declaration of the unused 'position' variable.(ÚÜÇ
+ajavascript:UnusedVariableËN";Remove the declaration of the unused 'datepicker' variable.(Êç¥ë
+bjavascript:UnusedVariableØ"7Remove the declaration of the unused 'widget' variable.(»¹¥Ùüÿÿÿÿ
+cjavascript:UnusedVariableä`"8Remove the declaration of the unused 'spinner' variable.(·ñøúÿÿÿÿ
+`javascript:UnusedVariableÌd"5Remove the declaration of the unused 'tabs' variable.(äºáùÿÿÿÿ
+ajavascript:UnusedVariableÄV";Remove the declaration of the unused 'selectmenu' variable.(‘š©µ
+ijavascript:UnusedVariableÂ{">Remove the declaration of the unused 'effectExplode' variable.(•”µÁşÿÿÿÿ
+bjavascript:UnusedVariableÄ€"<Remove the declaration of the unused 'effectShake' variable.(¾Ò÷9
+]javascript:UnusedVariable›["7Remove the declaration of the unused 'slider' variable.(‘õËÏ
+[javascript:UnusedVariableÛ1"5Remove the declaration of the unused 'menu' variable.(Îµò
+ajavascript:UnusedVariable |";Remove the declaration of the unused 'effectFade' variable.(æ•ÉÁ
+cjavascript:UnusedVariable´k"8Remove the declaration of the unused 'tooltip' variable.(–Ÿ”˜şÿÿÿÿ
+fjavascript:UnusedVariableÄz";Remove the declaration of the unused 'effectClip' variable.(Ğø­ øÿÿÿÿ
+gjavascript:UnusedVariable³U"<Remove the declaration of the unused 'progressbar' variable.(›Àê³ùÿÿÿÿ
+fjavascript:UnusedVariableÚ";Remove the declaration of the unused 'effectPuff' variable.(Å·œºùÿÿÿÿ
+_javascript:UnusedVariableè ":Remove the declaration of the unused 'resizable' variable.(«½Ç
+Vjavascript:S1854›["9Remove this useless assignment to local variable "slider"(‘õËÏ
+Zjavascript:S1854ËN"=Remove this useless assignment to local variable "datepicker"(Êç¥ë
+[javascript:S1854´>"9Remove this useless assignment to local variable "button"(Á§ï–ûÿÿÿÿ
+Tjavascript:S1854Û1"7Remove this useless assignment to local variable "menu"(Îµò
+ajavascript:S1854Öy"?Remove this useless assignment to local variable "effectBounce"(—°»Äşÿÿÿÿ
+djavascript:S1854È"ARemove this useless assignment to local variable "effectTransfer"(‚âÛßüÿÿÿÿ
+^javascript:S1854÷"<Remove this useless assignment to local variable "droppable"(ù–­âşÿÿÿÿ
+[javascript:S1854ÚN"9Remove this useless assignment to local variable "dialog"(²ÑÈûÿÿÿÿ
+]javascript:S1854‡#";Remove this useless assignment to local variable "sortable"(ú ÆŸùÿÿÿÿ
+\javascript:S1854ä`":Remove this useless assignment to local variable "spinner"(·ñøúÿÿÿÿ
+bjavascript:S1854Â{"@Remove this useless assignment to local variable "effectExplode"(•”µÁşÿÿÿÿ
+Zjavascript:S1854ì"8Remove this useless assignment to local variable "mouse"(Äìæÿÿÿÿÿ
+_javascript:S1854Ú"=Remove this useless assignment to local variable "effectPuff"(Å·œºùÿÿÿÿ
+Yjavascript:S1854ê"<Remove this useless assignment to local variable "draggable"(™ÖÓ 
+ajavascript:S1854§;"?Remove this useless assignment to local variable "autocomplete"(ûö²šüÿÿÿÿ
+[javascript:S1854Ø"9Remove this useless assignment to local variable "widget"(»¹¥Ùüÿÿÿÿ
+Zjavascript:S1854ÄV"=Remove this useless assignment to local variable "selectmenu"(‘š©µ
+Yjavascript:S1854Ìd"7Remove this useless assignment to local variable "tabs"(äºáùÿÿÿÿ
+Zjavascript:S1854»|"=Remove this useless assignment to local variable "effectFold"(Á©·ƒ
+`javascript:S1854³U">Remove this useless assignment to local variable "progressbar"(›Àê³ùÿÿÿÿ
+Xjavascript:S1854è "<Remove this useless assignment to local variable "resizable"(«½Ç
+[javascript:S1854‰y">Remove this useless assignment to local variable "effectBlind"(æ¸¼ç
+Xjavascript:S1854";Remove this useless assignment to local variable "position"(ÚÜÇ
+_javascript:S1854„}"BRemove this useless assignment to local variable "effectHighlight"(ÃôÊò
+_javascript:S1854„{"=Remove this useless assignment to local variable "effectDrop"(¢ú‘äıÿÿÿÿ
+[javascript:S1854Ä€">Remove this useless assignment to local variable "effectShake"(¾Ò÷9
+cjavascript:S1854ˆ€"@Remove this useless assignment to local variable "effectPulsate"(¸Õ˜üÿÿÿÿ
+\javascript:S1854´k":Remove this useless assignment to local variable "tooltip"(–Ÿ”˜şÿÿÿÿ
+\javascript:S1854‹">Remove this useless assignment to local variable "effectSlide"(õ·ò±
+_javascript:S1854³}"=Remove this useless assignment to local variable "effectSize"(¼¨Ã²øÿÿÿÿ
+Yjavascript:S1854›-"<Remove this useless assignment to local variable "accordion"(µ«¹·
+Zjavascript:S1854 |"=Remove this useless assignment to local variable "effectFade"(æ•ÉÁ
+Vjavascript:S1854úx"9Remove this useless assignment to local variable "effect"(µœÿÓ
+_javascript:S1854Äz"=Remove this useless assignment to local variable "effectClip"(Ğø­ øÿÿÿÿ
+[javascript:S1854">Remove this useless assignment to local variable "effectScale"(¾œäË
+_javascript:S1854÷ "=Remove this useless assignment to local variable "selectable"(üŒëüÿÿÿÿ
+]javascript:S1854Ì]";Remove this useless assignment to local variable "otherVal"(¯Æ»ğüÿÿÿÿ
+Djavascript:Parenthesesô+"!Remove those useless parentheses.(…º…´
+Djavascript:Parenthesesû+"!Remove those useless parentheses.(Œ’Åß
+Ijavascript:ParenthesesİE"!Remove those useless parentheses.(¡Ò´ƒÿÿÿÿÿ

@@ -1,0 +1,79 @@
+
+gjavascript:S3403ø@"JRemove this "!==" check; it will always be true. Did you mean to use "!="?(è¸ºù
+ljavascript:S3403«n"JRemove this "!==" check; it will always be true. Did you mean to use "!="?(–¡òÏúÿÿÿÿ
+javascript:S4165ã."_Review this useless assignment: "i" already holds the assigned value along all execution paths.(¡Ï·ãüÿÿÿÿ
+†javascript:S4165Ûk"dReview this useless assignment: "_empty" already holds the assigned value along all execution paths.(£Óø¸üÿÿÿÿ
+javascript:S2583½3"mChange this condition so that it does not always evaluate to "false"; some subsequent code is never executed.(æ¿•âüÿÿÿÿ
+‰javascript:S2583ø@"lChange this condition so that it does not always evaluate to "true"; some subsequent code is never executed.(è¸ºù
+njavascript:S2589¸"LRefactor this code so that this expression does not always evaluate to true.(íï²¢üÿÿÿÿ
+jjavascript:S2589Â"MRefactor this code so that this expression does not always evaluate to false.(‘ê¨ş
+ojavascript:S2589Á"MRefactor this code so that this expression does not always evaluate to false.(¤š«›şÿÿÿÿ
+ijavascript:S2589ğ2"LRefactor this code so that this expression does not always evaluate to true.(šÛ´»
+njavascript:S2589«n"LRefactor this code so that this expression does not always evaluate to true.(–¡òÏúÿÿÿÿ
+bjavascript:S2137"ADo not use "undefined" to declare a parameter - use another name.( ¯Óûıÿÿÿÿ
+vjavascript:S1117·6"T"ien" hides or potentially hides a variable declared in an outer scope at line 6961.(¨™âöşÿÿÿÿ
+sjavascript:S1117ê5"V"scope" hides or potentially hides a variable declared in an outer scope at line 6879.(£…›
+tjavascript:S1117å@"R"i" hides or potentially hides a variable declared in an outer scope at line 8266.(œ‹ÓÆûÿÿÿÿ
+xjavascript:S1117Úk"V"_empty" hides or potentially hides a variable declared in an outer scope at line 119.(Û´¹ûÿÿÿÿ
+ojavascript:S1117¢"R"i" hides or potentially hides a variable declared in an outer scope at line 2208.(îá™
+ojavascript:S1117°#"R"k" hides or potentially hides a variable declared in an outer scope at line 4435.(•ÄŞ„
+{javascript:S1117Êl"Y"buttons" hides or potentially hides a variable declared in an outer scope at line 13893.(àâ¸ïûÿÿÿÿ
+tjavascript:S1117É:"R"i" hides or potentially hides a variable declared in an outer scope at line 7466.(Ğ¦Åüÿÿÿÿ
+tjavascript:S1117÷"R"i" hides or potentially hides a variable declared in an outer scope at line 2485.(ºÙü¦ûÿÿÿÿ
+tjavascript:S1117¨E"R"i" hides or potentially hides a variable declared in an outer scope at line 8797.(è†Š±ûÿÿÿÿ
+tjavascript:S1117·6"R"i" hides or potentially hides a variable declared in an outer scope at line 6961.(¨™âöşÿÿÿÿ
+qjavascript:S1117&"T"col" hides or potentially hides a variable declared in an outer scope at line 4889.(ıŠ³Ÿ
+ujavascript:S1117ã"S"td" hides or potentially hides a variable declared in an outer scope at line 1503.(ƒù¨ªûÿÿÿÿ
+ojavascript:S1117·1"R"i" hides or potentially hides a variable declared in an outer scope at line 5961.(•ÿÌ
+pjavascript:S1117¶6"T"src" hides or potentially hides a variable declared in an outer scope at line 6981.(‰øŒP
+ojavascript:S1117&"R"i" hides or potentially hides a variable declared in an outer scope at line 4835.(ıŠ³Ÿ
+tjavascript:S1117û0"R"i" hides or potentially hides a variable declared in an outer scope at line 5961.(¨â¶‘ıÿÿÿÿ
+tjavascript:S1117”#"R"k" hides or potentially hides a variable declared in an outer scope at line 4435.(ã€©ÿÿÿÿÿ
+ojavascript:S1117£"R"k" hides or potentially hides a variable declared in an outer scope at line 2208.(–öË‰
+vjavascript:S1117Ÿ"Y"settings" hides or potentially hides a variable declared in an outer scope at line 3337.(Êøä•
+tjavascript:S1117Æ0"R"i" hides or potentially hides a variable declared in an outer scope at line 5961.(÷ŸµÀûÿÿÿÿ
+vjavascript:S1117"Y"settings" hides or potentially hides a variable declared in an outer scope at line 3337.(Ã­ãã
+qjavascript:S1117¶6"U"name" hides or potentially hides a variable declared in an outer scope at line 6951.(‰øŒP
+Fjavascript:S1472."*Make those call arguments start on line 45(Ãı€
+ojavascript:S3812½3"MAdd parentheses to perform "instanceof" operator before logical NOT operator.(æ¿•âüÿÿÿÿ
+\javascript:UnusedVariableÙ""6Remove the declaration of the unused 'sType' variable.(‚¶Îç
+Zjavascript:UnusedVariableè5"4Remove the declaration of the unused 'jen' variable.(ĞãÌÀ
+_javascript:UnusedVariableÔ"":Remove the declaration of the unused 'sDataType' variable.(°r
+`javascript:UnusedVariableß":Remove the declaration of the unused 'iOpenRows' variable.(‡±İ 
+`javascript:UnusedVariable³"5Remove the declaration of the unused 'cell' variable.(î­Ñşÿÿÿÿÿ
+]javascript:UnusedVariablel"2Remove the declaration of the unused 'i' variable.(ÍĞÇ³øÿÿÿÿ
+[javascript:UnusedVariableÚ"5Remove the declaration of the unused 'iLen' variable.(¶î¨Ã
+]javascript:UnusedVariableÉ."2Remove the declaration of the unused 'j' variable.(Üº™ìúÿÿÿÿ
+Xjavascript:UnusedVariableè5"2Remove the declaration of the unused 'j' variable.(ĞãÌÀ
+Xjavascript:UnusedVariableİD"2Remove the declaration of the unused 'i' variable.(™Ûœ
+Zjavascript:UnusedVariableÉ"4Remove the declaration of the unused 'nTd' variable.(øÁ¼î
+[javascript:UnusedVariableÙ""5Remove the declaration of the unused 'iCol' variable.(‚¶Îç
+`javascript:UnusedVariableÙ"":Remove the declaration of the unused 'aDataSort' variable.(‚¶Îç
+`javascript:UnusedVariable "5Remove the declaration of the unused 'jLen' variable.(÷Ü²€øÿÿÿÿ
+bjavascript:UnusedVariable‘""7Remove the declaration of the unused 'aiOrig' variable.(ñÇÈÇùÿÿÿÿ
+]javascript:UnusedVariableÓ""2Remove the declaration of the unused 'j' variable.(Ø¼Óûşÿÿÿÿ
+[javascript:UnusedVariableÙ""5Remove the declaration of the unused 'data' variable.(‚¶Îç
+`javascript:UnusedVariableÉ."5Remove the declaration of the unused 'kLen' variable.(Üº™ìúÿÿÿÿ
+]javascript:UnusedVariableÓ""2Remove the declaration of the unused 'k' variable.(Ø¼Óûşÿÿÿÿ
+`javascript:UnusedVariableÉ."5Remove the declaration of the unused 'jLen' variable.(Üº™ìúÿÿÿÿ
+]javascript:UnusedVariableù"2Remove the declaration of the unused 'n' variable.(î§¥‘ıÿÿÿÿ
+Xjavascript:UnusedVariableÚ"2Remove the declaration of the unused 'n' variable.(¶î¨Ã
+Zjavascript:UnusedVariable""5Remove the declaration of the unused 'iLen' variable.(Ãê®S
+\javascript:UnusedVariableé5"6Remove the declaration of the unused 'inner' variable.(ß«õì
+`javascript:UnusedVariableÓ""5Remove the declaration of the unused 'kLen' variable.(Ø¼Óûşÿÿÿÿ
+[javascript:UnusedVariableğ"5Remove the declaration of the unused 'kLen' variable.(áÊ’¬
+Xjavascript:UnusedVariable°#"2Remove the declaration of the unused 'l' variable.(•ÄŞ„
+]javascript:UnusedVariableÉ."2Remove the declaration of the unused 'k' variable.(Üº™ìúÿÿÿÿ
+`javascript:UnusedVariableØ"":Remove the declaration of the unused 'aoColumns' variable.(èû÷¶
+Yjavascript:UnusedVariableÔ""4Remove the declaration of the unused 'nTh' variable.(°r
+Xjavascript:UnusedVariableÚ"2Remove the declaration of the unused 'i' variable.(¶î¨Ã
+`javascript:UnusedVariableÓ""5Remove the declaration of the unused 'jLen' variable.(Ø¼Óûşÿÿÿÿ
+_javascript:UnusedVariable?"4Remove the declaration of the unused 'row' variable.(›Àåµıÿÿÿÿ
+cjavascript:UnusedVariableê;"=Remove the declaration of the unused 'displayIndex' variable.(Úê½ª
+\javascript:UnusedVariableÙ""6Remove the declaration of the unused 'oSort' variable.(‚¶Îç
+`javascript:UnusedVariableÉ":Remove the declaration of the unused 'sThisType' variable.(øÁ¼î
+Yjavascript:S1854ß"<Remove this useless assignment to local variable "iOpenRows"(‡±İ 
+Vjavascript:S1854ù"4Remove this useless assignment to local variable "n"(î§¥‘ıÿÿÿÿ
+Yjavascript:S1854Ø""<Remove this useless assignment to local variable "aoColumns"(èû÷¶
+\javascript:S1854ê;"?Remove this useless assignment to local variable "displayIndex"(Úê½ª
+Ijavascript:Parentheses˜"!Remove those useless parentheses.(ç•ş«ûÿÿÿÿ

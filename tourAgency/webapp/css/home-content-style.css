@@ -15,6 +15,9 @@ a:hover{
     color: purple;
 }
 .startMessage{
+background: linear-gradient(rgba(0, 78, 90, 0.45), rgba(0, 78, 90, 0.45)),  url(img/background.jpg) center center no-repeat;
+    background-size: cover;
+    padding: 10%;
     font-size: 45px;
     font-family: Arial, serif;
     font-weight: bold;
@@ -22,13 +25,12 @@ a:hover{
     color: white;
     text-align: center;
     position: relative;
-    margin-top: 6cm;
     left: 0;
     width: -webkit-fill-available;
-    padding: 0 15px
 }
 
 .contentHeader{
+
     font-size: 35px;
     font-family: Arial, serif;
     font-weight: bold;

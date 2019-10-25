@@ -1,20 +1,20 @@
 package by.epam.touragency.config;
 
 import by.epam.touragency.logic.UserDetailsServiceImpl;
-import org.springframework.context.annotation.*;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
-import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-import org.springframework.web.context.request.RequestContextListener;
-import org.springframework.web.filter.RequestContextFilter;
 import org.springframework.web.servlet.LocaleResolver;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -29,6 +29,7 @@ import java.util.Locale;
 @Configuration
 @EnableAspectJAutoProxy
 @EnableTransactionManagement
+@EnableWebMvc
 @ComponentScan({"by.epam.touragency"})
 public class AppConfig implements WebMvcConfigurer {
 
@@ -45,7 +46,6 @@ public class AppConfig implements WebMvcConfigurer {
     }
 
     @Bean
-    @Lazy
     public PlatformTransactionManager platformTransactionManager(){
         return new DataSourceTransactionManager(pgSqlDataSource());
     }
@@ -92,7 +92,6 @@ public class AppConfig implements WebMvcConfigurer {
     }
 
     @Bean
-    @Lazy
     public DataSource pgSqlDataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName(PropertyHolder.getInstance().getDriverName());
@@ -103,34 +102,19 @@ public class AppConfig implements WebMvcConfigurer {
     }
 
     @Bean
-    @Lazy
     public JdbcTemplate jdbcTemplate() {
         return new JdbcTemplate(pgSqlDataSource());
     }
 
-//    @Bean
-    public RequestContextListener requestContextListener() {
-        return new RequestContextListener();
-    }
-
-    @Bean
-    public RequestContextFilter requestContextFilter() {
-        return new RequestContextFilter();
-    }
-
-
-    //    @Bean
-    public DataSource embeddedDataSource() {
-        return new EmbeddedDatabaseBuilder()
-                .setType(EmbeddedDatabaseType.H2)
-                .addScript("classpath:jdbc/schema.sql")
-                .addScript("classpath:jdbc/test-data.sql").build();
-    }
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/tour-agency/images/logo.png").addResourceLocations("/images/logo.png");
-        registry.addResourceHandler("/uui/**").addResourceLocations("classpath:/uui/");
+        registry
+                .addResourceHandler("/img/**")
+                .addResourceLocations("/img/");
+        registry
+                .addResourceHandler("/uui/**")
+                .addResourceLocations("/uui/");
     }
 
 }

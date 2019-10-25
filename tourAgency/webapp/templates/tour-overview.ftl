@@ -8,28 +8,28 @@
     <@mainPanel.page>
         <#include "../css/tour-overview-style.css"/>
     </@mainPanel.page>
-    <title>${tourName!}</title>
+    <title>${tourName!param.tourName!}</title>
 </head>
 <body>
 <div class="contentForm">
     <div class="contentContainer">
         <form method="post" action="change_tour_name" id="change_tour_name">
-            <input type="hidden" name="tourId" value="${param.tourId!}"/>
-            <input type="hidden" name="tourName" value="${param.tourName!}"/>
-            <input type="hidden" name="arrivalCountry" value="${param.arrivalCountry!}"/>
-            <input type="hidden" name="arrivalCity" value="${param.arrivalCity!}"/>
-            <input type="hidden" name="departureCity" value="${param.departureCity!}"/>
-            <input type="hidden" name="departureDate" value="${param.departureDate!}"/>
-            <input type="hidden" name="arrivalDate" value="${param.arrivalDate!}"/>
-            <input type="hidden" name="hotel" value="${param.hotel!}"/>
-            <input type="hidden" name="nutrition" value="${param.nutrition!}"/>
-            <input type="hidden" name="adultsNumber" value="${param.adultsNumber!}"/>
-            <input type="hidden" name="childrenNumber" value="${param.childrenNumber!}"/>
-            <input type="hidden" name="price" value="${param.price!}"/>
-            <input type="hidden" name="status" value="${param.status!}"/>
+            <input type="hidden" name="tourId" value="${tourId!param.tourId!}"/>
+            <input type="hidden" name="tourName" value="${tourName!param.tourName!}"/>
+            <input type="hidden" name="arrivalCountry" value="${arrivalCountry!param.arrivalCountry!}"/>
+            <input type="hidden" name="arrivalCity" value="${arrivalCity!param.arrivalCity!}"/>
+            <input type="hidden" name="departureCity" value="${departureCity!param.departureCity!}"/>
+            <input type="hidden" name="departureDate" value="${departureDate!param.departureDate!}"/>
+            <input type="hidden" name="arrivalDate" value="${arrivalDate!param.arrivalDate!}"/>
+            <input type="hidden" name="hotel" value="${hotel!param.hotel!}"/>
+            <input type="hidden" name="nutrition" value="${nutrition!param.nutrition!}"/>
+            <input type="hidden" name="adultsNumber" value="${adultsNumber!param.adultsNumber!}"/>
+            <input type="hidden" name="childrenNumber" value="${childrenNumber!param.childrenNumber!}"/>
+            <input type="hidden" name="price" value="${price!param.price!}"/>
+            <input type="hidden" name="status" value="${status!param.status!}"/>
             <div class="contentItem">
                 <div class="tourName">
-                   ${param.tourName!}
+                   ${tourName!param.tourName!}
                 </div>
 
                 <#if (secutity.isAdmin)!false>
@@ -47,9 +47,9 @@
 
                         <div id="changeTourName">
                             <label>
-                                <input type="text" id="newTourName" name="newTourName"
+                                <input class="uui-form-element small" type="text" id="newTourName" name="newTourName"
                                        pattern="^[\sa-zA-Z.,_%+-]{1,40}$">
-                                <input type="submit" value="<@spring.message "admin.changeTourName"/>"
+                                <input class="uui-button" type="submit" value="<@spring.message "admin.changeTourName"/>"
                                        onclick="document.getElementById('change_tour_name').disabled=false">
                             </label>
                         </div>
@@ -60,25 +60,25 @@
         </form>
 
         <form method="post" action="change_arrival_country">
-            <input type="hidden" name="tourId" value="${param.tourId!}"/>
-            <input type="hidden" name="tourName" value="${param.tourName!}"/>
-            <input type="hidden" name="arrivalCountry" value="${param.arrivalCountry!}"/>
-            <input type="hidden" name="arrivalCity" value="${param.arrivalCity!}"/>
-            <input type="hidden" name="departureCity" value="${param.departureCity!}"/>
-            <input type="hidden" name="departureDate" value="${param.departureDate!}"/>
-            <input type="hidden" name="arrivalDate" value="${param.arrivalDate!}"/>
-            <input type="hidden" name="hotel" value="${param.hotel!}"/>
-            <input type="hidden" name="nutrition" value="${param.nutrition!}"/>
-            <input type="hidden" name="adultsNumber" value="${param.adultsNumber!}"/>
-            <input type="hidden" name="childrenNumber" value="${param.childrenNumber!}"/>
-            <input type="hidden" name="price" value="${param.price!}"/>
-            <input type="hidden" name="status" value="${param.status!}"/>
+            <input type="hidden" name="tourId" value="${tourId!param.tourId!}"/>
+            <input type="hidden" name="tourName" value="${tourName!param.tourName!}"/>
+            <input type="hidden" name="arrivalCountry" value="${arrivalCountry!param.arrivalCountry!}"/>
+            <input type="hidden" name="arrivalCity" value="${arrivalCity!param.arrivalCity!}"/>
+            <input type="hidden" name="departureCity" value="${departureCity!param.departureCity!}"/>
+            <input type="hidden" name="departureDate" value="${departureDate!param.departureDate!}"/>
+            <input type="hidden" name="arrivalDate" value="${arrivalDate!param.arrivalDate!}"/>
+            <input type="hidden" name="hotel" value="${hotel!param.hotel!}"/>
+            <input type="hidden" name="nutrition" value="${nutrition!param.nutrition!}"/>
+            <input type="hidden" name="adultsNumber" value="${adultsNumber!param.adultsNumber!}"/>
+            <input type="hidden" name="childrenNumber" value="${childrenNumber!param.childrenNumber!}"/>
+            <input type="hidden" name="price" value="${price!param.price!}"/>
+            <input type="hidden" name="status" value="${status!param.status!}"/>
             <div class="contentItem">
                 <div class="arrivalCountry">
                     <div class="itemMsg">
                         <@spring.message "common.message.arrivalCountry"/>
                     </div>
-                    ${param.arrivalCountry!}
+                    ${arrivalCountry!param.arrivalCountry!}
                 </div>
 
                 <#if (secutity.isAdmin)!false>
@@ -96,9 +96,9 @@
 
                         <div id="changeArrivalCountry">
                             <label>
-                                <input type="text" id="newArrivalCountry" name="newArrivalCountry"
+                                <input class="uui-form-element small" type="text" id="newArrivalCountry" name="newArrivalCountry"
                                        pattern="^[\sa-zA-Z.,_%+-]{1,40}$">
-                                <input type="submit" value="<@spring.message "admin.changeArrivalCountry"/>"
+                                <input class="uui-button" type="submit" value="<@spring.message "admin.changeArrivalCountry"/>"
                                        onclick="document.getElementById('change_arrival_country').disabled=false">
                             </label>
                         </div>
@@ -108,25 +108,25 @@
         </form>
 
         <form method="post" action="change_arrival_city">
-            <input type="hidden" name="tourId" value="${param.tourId!}"/>
-            <input type="hidden" name="tourName" value="${param.tourName!}"/>
-            <input type="hidden" name="arrivalCountry" value="${param.arrivalCountry!}"/>
-            <input type="hidden" name="arrivalCity" value="${param.arrivalCity!}"/>
-            <input type="hidden" name="departureCity" value="${param.departureCity!}"/>
-            <input type="hidden" name="departureDate" value="${param.departureDate!}"/>
-            <input type="hidden" name="arrivalDate" value="${param.arrivalDate!}"/>
-            <input type="hidden" name="hotel" value="${param.hotel!}"/>
-            <input type="hidden" name="nutrition" value="${param.nutrition!}"/>
-            <input type="hidden" name="adultsNumber" value="${param.adultsNumber!}"/>
-            <input type="hidden" name="childrenNumber" value="${param.childrenNumber!}"/>
-            <input type="hidden" name="price" value="${param.price!}"/>
-            <input type="hidden" name="status" value="${param.status!}"/>
+            <input type="hidden" name="tourId" value="${tourId!param.tourId!}"/>
+            <input type="hidden" name="tourName" value="${tourName!param.tourName!}"/>
+            <input type="hidden" name="arrivalCountry" value="${arrivalCountry!param.arrivalCountry!}"/>
+            <input type="hidden" name="arrivalCity" value="${arrivalCity!param.arrivalCity!}"/>
+            <input type="hidden" name="departureCity" value="${departureCity!param.departureCity!}"/>
+            <input type="hidden" name="departureDate" value="${departureDate!param.departureDate!}"/>
+            <input type="hidden" name="arrivalDate" value="${arrivalDate!param.arrivalDate!}"/>
+            <input type="hidden" name="hotel" value="${hotel!param.hotel!}"/>
+            <input type="hidden" name="nutrition" value="${nutrition!param.nutrition!}"/>
+            <input type="hidden" name="adultsNumber" value="${adultsNumber!param.adultsNumber!}"/>
+            <input type="hidden" name="childrenNumber" value="${childrenNumber!param.childrenNumber!}"/>
+            <input type="hidden" name="price" value="${price!param.price!}"/>
+            <input type="hidden" name="status" value="${status!param.status!}"/>
             <div class="contentItem">
                 <div class="arrivalCity">
                     <div class="itemMsg">
                         <@spring.message "common.message.arrivalCity"/>
                     </div>
-                    ${param.arrivalCity!}
+                    ${arrivalCity!param.arrivalCity!}
                 </div>
 
                 <#if (secutity.isAdmin)!false>
@@ -144,9 +144,9 @@
 
                         <div id="changeArrivalCity">
                             <label>
-                                <input type="text" id="newArrivalCity" name="newArrivalCity"
+                                <input class="uui-form-element small"  type="text" id="newArrivalCity" name="newArrivalCity"
                                        pattern="^[\sa-zA-Z.,_%+-]{1,40}$">
-                                <input type="submit" value="<@spring.message "admin.changeArrivalCity"/>"
+                                <input class="uui-button" type="submit" value="<@spring.message "admin.changeArrivalCity"/>"
                                        onclick="document.getElementById('change_arrival_city').disabled=false">
                             </label>
                         </div>
@@ -157,25 +157,25 @@
 
 
         <form method="post" action="change_departure_city">
-            <input type="hidden" name="tourId" value="${param.tourId!}"/>
-            <input type="hidden" name="tourName" value="${param.tourName!}"/>
-            <input type="hidden" name="arrivalCountry" value="${param.arrivalCountry!}"/>
-            <input type="hidden" name="arrivalCity" value="${param.arrivalCity!}"/>
-            <input type="hidden" name="departureCity" value="${param.departureCity!}"/>
-            <input type="hidden" name="departureDate" value="${param.departureDate!}"/>
-            <input type="hidden" name="arrivalDate" value="${param.arrivalDate!}"/>
-            <input type="hidden" name="hotel" value="${param.hotel!}"/>
-            <input type="hidden" name="nutrition" value="${param.nutrition!}"/>
-            <input type="hidden" name="adultsNumber" value="${param.adultsNumber!}"/>
-            <input type="hidden" name="childrenNumber" value="${param.childrenNumber!}"/>
-            <input type="hidden" name="price" value="${param.price!}"/>
-            <input type="hidden" name="status" value="${param.status!}"/>
+            <input type="hidden" name="tourId" value="${tourId!param.tourId!}"/>
+            <input type="hidden" name="tourName" value="${tourName!param.tourName!}"/>
+            <input type="hidden" name="arrivalCountry" value="${arrivalCountry!param.arrivalCountry!}"/>
+            <input type="hidden" name="arrivalCity" value="${arrivalCity!param.arrivalCity!}"/>
+            <input type="hidden" name="departureCity" value="${departureCity!param.departureCity!}"/>
+            <input type="hidden" name="departureDate" value="${departureDate!param.departureDate!}"/>
+            <input type="hidden" name="arrivalDate" value="${arrivalDate!param.arrivalDate!}"/>
+            <input type="hidden" name="hotel" value="${hotel!param.hotel!}"/>
+            <input type="hidden" name="nutrition" value="${nutrition!param.nutrition!}"/>
+            <input type="hidden" name="adultsNumber" value="${adultsNumber!param.adultsNumber!}"/>
+            <input type="hidden" name="childrenNumber" value="${childrenNumber!param.childrenNumber!}"/>
+            <input type="hidden" name="price" value="${price!param.price!}"/>
+            <input type="hidden" name="status" value="${status!param.status!}"/>
             <div class="contentItem">
                 <div class="departureCity">
                     <div class="itemMsg">
                         <@spring.message "common.message.departureCity"/>
                     </div>
-                    ${param.departureCity!}
+                    ${departureCity!(param.departureCity)!}
                 </div>
 
                 <#if (secutity.isAdmin)!false>
@@ -194,9 +194,9 @@
 
                         <div id="changeDepartureCity">
                             <label>
-                                <input type="text" id="newDepartureCity" name="newDepartureCity"
+                                <input class="uui-form-element small" type="text" id="newDepartureCity" name="newDepartureCity"
                                        pattern="^[\sa-zA-Z.,_%+-]{1,40}$">
-                                <input type="submit" value="<@spring.message "admin.changeDepartureCity"/>"
+                                <input class="uui-button" type="submit" value="<@spring.message "admin.changeDepartureCity"/>"
                                        onclick="document.getElementById('change_departure_city').disabled=false">
                             </label>
                         </div>
@@ -206,25 +206,25 @@
         </form>
 
         <form method="post" action="change_departure_date">
-            <input type="hidden" name="tourId" value="${param.tourId!}"/>
-            <input type="hidden" name="tourName" value="${param.tourName!}"/>
-            <input type="hidden" name="arrivalCountry" value="${param.arrivalCountry!}"/>
-            <input type="hidden" name="arrivalCity" value="${param.arrivalCity!}"/>
-            <input type="hidden" name="departureCity" value="${param.departureCity!}"/>
-            <input type="hidden" name="departureDate" value="${param.departureDate!}"/>
-            <input type="hidden" name="arrivalDate" value="${param.arrivalDate!}"/>
-            <input type="hidden" name="hotel" value="${param.hotel!}"/>
-            <input type="hidden" name="nutrition" value="${param.nutrition!}"/>
-            <input type="hidden" name="adultsNumber" value="${param.adultsNumber!}"/>
-            <input type="hidden" name="childrenNumber" value="${param.childrenNumber!}"/>
-            <input type="hidden" name="price" value="${param.price!}"/>
-            <input type="hidden" name="status" value="${param.status!}"/>
+            <input type="hidden" name="tourId" value="${tourId!param.tourId!}"/>
+            <input type="hidden" name="tourName" value="${tourName!param.tourName!}"/>
+            <input type="hidden" name="arrivalCountry" value="${arrivalCountry!param.arrivalCountry!}"/>
+            <input type="hidden" name="arrivalCity" value="${arrivalCity!param.arrivalCity!}"/>
+            <input type="hidden" name="departureCity" value="${departureCity!param.departureCity!}"/>
+            <input type="hidden" name="departureDate" value="${departureDate!param.departureDate!}"/>
+            <input type="hidden" name="arrivalDate" value="${arrivalDate!param.arrivalDate!}"/>
+            <input type="hidden" name="hotel" value="${hotel!param.hotel!}"/>
+            <input type="hidden" name="nutrition" value="${nutrition!param.nutrition!}"/>
+            <input type="hidden" name="adultsNumber" value="${adultsNumber!param.adultsNumber!}"/>
+            <input type="hidden" name="childrenNumber" value="${childrenNumber!param.childrenNumber!}"/>
+            <input type="hidden" name="price" value="${price!param.price!}"/>
+            <input type="hidden" name="status" value="${status!param.status!}"/>
             <div class="contentItem">
                 <div class="departureDate">
                     <div class="itemMsg">
                         <@spring.message "common.message.departureDate"/>
                     </div>
-                    ${param.departureDate!}
+                    ${departureDate!param.departureDate!}
                 </div>
 
                 <#if (secutity.isAdmin)!false>
@@ -242,8 +242,8 @@
 
                         <div id="changeDepartureDate">
                             <label>
-                                <input type="date" id="newDepartureDate" name="newDepartureDate">
-                                <input type="submit" value="<@spring.message "admin.changeDepartureDate"/>"
+                                <input class="uui-form-element small" type="date" id="newDepartureDate" name="newDepartureDate">
+                                <input class="uui-button" type="submit" value="<@spring.message "admin.changeDepartureDate"/>"
                                        onclick="document.getElementById('change_departure_date').disabled=false">
                             </label>
                         </div>
@@ -253,25 +253,25 @@
         </form>
 
         <form method="post" action="change_arrival_date">
-            <input type="hidden" name="tourId" value="${param.tourId!}"/>
-            <input type="hidden" name="tourName" value="${param.tourName!}"/>
-            <input type="hidden" name="arrivalCountry" value="${param.arrivalCountry!}"/>
-            <input type="hidden" name="arrivalCity" value="${param.arrivalCity!}"/>
-            <input type="hidden" name="departureCity" value="${param.departureCity!}"/>
-            <input type="hidden" name="departureDate" value="${param.departureDate!}"/>
-            <input type="hidden" name="arrivalDate" value="${param.arrivalDate!}"/>
-            <input type="hidden" name="hotel" value="${param.hotel!}"/>
-            <input type="hidden" name="nutrition" value="${param.nutrition!}"/>
-            <input type="hidden" name="adultsNumber" value="${param.adultsNumber!}"/>
-            <input type="hidden" name="childrenNumber" value="${param.childrenNumber!}"/>
-            <input type="hidden" name="price" value="${param.price!}"/>
-            <input type="hidden" name="status" value="${param.status!}"/>
+            <input type="hidden" name="tourId" value="${tourId!param.tourId!}"/>
+            <input type="hidden" name="tourName" value="${tourName!param.tourName!}"/>
+            <input type="hidden" name="arrivalCountry" value="${arrivalCountry!param.arrivalCountry!}"/>
+            <input type="hidden" name="arrivalCity" value="${arrivalCity!param.arrivalCity!}"/>
+            <input type="hidden" name="departureCity" value="${departureCity!param.departureCity!}"/>
+            <input type="hidden" name="departureDate" value="${departureDate!param.departureDate!}"/>
+            <input type="hidden" name="arrivalDate" value="${arrivalDate!param.arrivalDate!}"/>
+            <input type="hidden" name="hotel" value="${hotel!param.hotel!}"/>
+            <input type="hidden" name="nutrition" value="${nutrition!param.nutrition!}"/>
+            <input type="hidden" name="adultsNumber" value="${adultsNumber!param.adultsNumber!}"/>
+            <input type="hidden" name="childrenNumber" value="${childrenNumber!param.childrenNumber!}"/>
+            <input type="hidden" name="price" value="${price!param.price!}"/>
+            <input type="hidden" name="status" value="${status!param.status!}"/>
             <div class="contentItem">
                 <div class="arrivalDate">
                     <div class="itemMsg">
                         <@spring.message "common.message.arrivalDate"/>
                     </div>
-                    ${param.arrivalDate!}
+                    ${arrivalDate!param.arrivalDate!}
                 </div>
 
                 <#if (secutity.isAdmin)!false>
@@ -289,8 +289,8 @@
 
                         <div id="changeArrivalDate">
                             <label>
-                                <input type="date" id="newArrivalDate" name="newArrivalDate">
-                                <input type="submit" value="<@spring.message "admin.changeArrivalDate"/>"
+                                <input class="uui-form-element small" type="date" id="newArrivalDate" name="newArrivalDate">
+                                <input class="uui-button" type="submit" value="<@spring.message "admin.changeArrivalDate"/>"
                                        onclick="document.getElementById('change_arrival_date').disabled=false">
                             </label>
                         </div>
@@ -301,25 +301,25 @@
         </form>
 
         <form method="post" action="change_hotel">
-            <input type="hidden" name="tourId" value="${param.tourId!}"/>
-            <input type="hidden" name="tourName" value="${param.tourName!}"/>
-            <input type="hidden" name="arrivalCountry" value="${param.arrivalCountry!}"/>
-            <input type="hidden" name="arrivalCity" value="${param.arrivalCity!}"/>
-            <input type="hidden" name="departureCity" value="${param.departureCity!}"/>
-            <input type="hidden" name="departureDate" value="${param.departureDate!}"/>
-            <input type="hidden" name="arrivalDate" value="${param.arrivalDate!}"/>
-            <input type="hidden" name="hotel" value="${param.hotel!}"/>
-            <input type="hidden" name="nutrition" value="${param.nutrition!}"/>
-            <input type="hidden" name="adultsNumber" value="${param.adultsNumber!}"/>
-            <input type="hidden" name="childrenNumber" value="${param.childrenNumber!}"/>
-            <input type="hidden" name="price" value="${param.price!}"/>
-            <input type="hidden" name="status" value="${param.status!}"/>
+            <input type="hidden" name="tourId" value="${tourId!param.tourId!}"/>
+            <input type="hidden" name="tourName" value="${tourName!param.tourName!}"/>
+            <input type="hidden" name="arrivalCountry" value="${arrivalCountry!param.arrivalCountry!}"/>
+            <input type="hidden" name="arrivalCity" value="${arrivalCity!param.arrivalCity!}"/>
+            <input type="hidden" name="departureCity" value="${departureCity!param.departureCity!}"/>
+            <input type="hidden" name="departureDate" value="${departureDate!param.departureDate!}"/>
+            <input type="hidden" name="arrivalDate" value="${arrivalDate!param.arrivalDate!}"/>
+            <input type="hidden" name="hotel" value="${hotel!param.hotel!}"/>
+            <input type="hidden" name="nutrition" value="${nutrition!param.nutrition!}"/>
+            <input type="hidden" name="adultsNumber" value="${adultsNumber!param.adultsNumber!}"/>
+            <input type="hidden" name="childrenNumber" value="${childrenNumber!param.childrenNumber!}"/>
+            <input type="hidden" name="price" value="${price!param.price!}"/>
+            <input type="hidden" name="status" value="${status!param.status!}"/>
             <div class="contentItem">
                 <div class="hotel">
                     <div class="itemMsg">
                         <@spring.message "common.message.hotel"/>
                     </div>
-                    ${param.hotel!}
+                    ${hotel!param.hotel!}
                 </div>
 
                 <#if (secutity.isAdmin)!false>
@@ -337,9 +337,9 @@
 
                         <div id="changeHotel">
                             <label>
-                                <input type="text" id="newHotel" name="newHotel" minlength="1" maxlength="40"
+                                <input class="uui-form-element small" type="text" id="newHotel" name="newHotel" minlength="1" maxlength="40"
                                        pattern="^[\sa-zA-Z.,_%+-]{1,40}$">
-                                <input type="submit" value="<@spring.message "admin.changeHotel"/>"
+                                <input class="uui-button" type="submit" value="<@spring.message "admin.changeHotel"/>"
                                        onclick="document.getElementById('change_hotel').disabled=false">
                             </label>
                         </div>
@@ -349,25 +349,25 @@
         </form>
 
         <form method="post" action="change_nutrition">
-            <input type="hidden" name="tourId" value="${param.tourId!}"/>
-            <input type="hidden" name="tourName" value="${param.tourName!}"/>
-            <input type="hidden" name="arrivalCountry" value="${param.arrivalCountry!}"/>
-            <input type="hidden" name="arrivalCity" value="${param.arrivalCity!}"/>
-            <input type="hidden" name="departureCity" value="${param.departureCity!}"/>
-            <input type="hidden" name="departureDate" value="${param.departureDate!}"/>
-            <input type="hidden" name="arrivalDate" value="${param.arrivalDate!}"/>
-            <input type="hidden" name="hotel" value="${param.hotel!}"/>
-            <input type="hidden" name="nutrition" value="${param.nutrition!}"/>
-            <input type="hidden" name="adultsNumber" value="${param.adultsNumber!}"/>
-            <input type="hidden" name="childrenNumber" value="${param.childrenNumber!}"/>
-            <input type="hidden" name="price" value="${param.price!}"/>
-            <input type="hidden" name="status" value="${param.status!}"/>
+            <input type="hidden" name="tourId" value="${tourId!param.tourId!}"/>
+            <input type="hidden" name="tourName" value="${tourName!param.tourName!}"/>
+            <input type="hidden" name="arrivalCountry" value="${arrivalCountry!param.arrivalCountry!}"/>
+            <input type="hidden" name="arrivalCity" value="${arrivalCity!param.arrivalCity!}"/>
+            <input type="hidden" name="departureCity" value="${departureCity!param.departureCity!}"/>
+            <input type="hidden" name="departureDate" value="${departureDate!param.departureDate!}"/>
+            <input type="hidden" name="arrivalDate" value="${arrivalDate!param.arrivalDate!}"/>
+            <input type="hidden" name="hotel" value="${hotel!param.hotel!}"/>
+            <input type="hidden" name="nutrition" value="${nutrition!param.nutrition!}"/>
+            <input type="hidden" name="adultsNumber" value="${adultsNumber!param.adultsNumber!}"/>
+            <input type="hidden" name="childrenNumber" value="${childrenNumber!param.childrenNumber!}"/>
+            <input type="hidden" name="price" value="${price!param.price!}"/>
+            <input type="hidden" name="status" value="${status!param.status!}"/>
             <div class="contentItem">
                 <div class="nutrition">
                     <div class="itemMsg">
                         <@spring.message "common.message.nutrition"/>
                     </div>
-                    ${param.nutrition!}
+                    ${nutrition!param.nutrition!}
                 </div>
 
                 <#if (secutity.isAdmin)!false>
@@ -385,9 +385,9 @@
 
                         <div id="changeNutrition">
                             <label>
-                                <input type="text" id="newNutrition" name="newNutrition" minlength="2" maxlength="3"
+                                <input class="uui-form-element small" type="text" id="newNutrition" name="newNutrition" minlength="2" maxlength="3"
                                        pattern="^[A-Z]{2,3}[+]?$">
-                                <input type="submit" value="<@spring.message "admin.changeNutrition"/>"
+                                <input class="uui-button" type="submit" value="<@spring.message "admin.changeNutrition"/>"
                                        onclick="document.getElementById('change_nutrition').disabled=false">
                             </label>
                         </div>
@@ -397,25 +397,25 @@
         </form>
 
         <form method="post" action="change_adults_number">
-            <input type="hidden" name="tourId" value="${param.tourId!}"/>
-            <input type="hidden" name="tourName" value="${param.tourName!}"/>
-            <input type="hidden" name="arrivalCountry" value="${param.arrivalCountry!}"/>
-            <input type="hidden" name="arrivalCity" value="${param.arrivalCity!}"/>
-            <input type="hidden" name="departureCity" value="${param.departureCity!}"/>
-            <input type="hidden" name="departureDate" value="${param.departureDate!}"/>
-            <input type="hidden" name="arrivalDate" value="${param.arrivalDate!}"/>
-            <input type="hidden" name="hotel" value="${param.hotel!}"/>
-            <input type="hidden" name="nutrition" value="${param.nutrition!}"/>
-            <input type="hidden" name="adultsNumber" value="${param.adultsNumber!}"/>
-            <input type="hidden" name="childrenNumber" value="${param.childrenNumber!}"/>
-            <input type="hidden" name="price" value="${param.price!}"/>
-            <input type="hidden" name="status" value="${param.status!}"/>
+            <input type="hidden" name="tourId" value="${tourId!param.tourId!}"/>
+            <input type="hidden" name="tourName" value="${tourName!param.tourName!}"/>
+            <input type="hidden" name="arrivalCountry" value="${arrivalCountry!param.arrivalCountry!}"/>
+            <input type="hidden" name="arrivalCity" value="${arrivalCity!param.arrivalCity!}"/>
+            <input type="hidden" name="departureCity" value="${departureCity!param.departureCity!}"/>
+            <input type="hidden" name="departureDate" value="${departureDate!param.departureDate!}"/>
+            <input type="hidden" name="arrivalDate" value="${arrivalDate!param.arrivalDate!}"/>
+            <input type="hidden" name="hotel" value="${hotel!param.hotel!}"/>
+            <input type="hidden" name="nutrition" value="${nutrition!param.nutrition!}"/>
+            <input type="hidden" name="adultsNumber" value="${adultsNumber!param.adultsNumber!}"/>
+            <input type="hidden" name="childrenNumber" value="${childrenNumber!param.childrenNumber!}"/>
+            <input type="hidden" name="price" value="${price!param.price!}"/>
+            <input type="hidden" name="status" value="${status!param.status!}"/>
             <div class="contentItem">
                 <div class="adultsNumber">
                     <div class="itemMsg">
                         <@spring.message "common.message.numberOfAdults"/>
                     </div>
-                    ${param.adultsNumber!}
+                    ${adultsNumber!param.adultsNumber!}
                 </div>
 
                 <#if (secutity.isAdmin)!false>
@@ -433,9 +433,9 @@
 
                         <div id="changeAdultsNumber">
                             <label>
-                                <input type="text" id="newAdultsNumber" name="newAdultsNumber" min="0" max="50"
+                                <input class="uui-form-element small" type="text" id="newAdultsNumber" name="newAdultsNumber" min="0" max="50"
                                        pattern="^([0-4]?\d|50)$">
-                                <input type="submit" value="<@spring.message "admin.changeAdultsNumber" />"
+                                <input class="uui-button" type="submit" value="<@spring.message "admin.changeAdultsNumber" />"
                                        onclick="document.getElementById('change_adults_number').disabled=false">
                             </label>
                         </div>
@@ -445,25 +445,25 @@
         </form>
 
         <form method="post" action="change_children_number">
-            <input type="hidden" name="tourId" value="${param.tourId!}"/>
-            <input type="hidden" name="tourName" value="${param.tourName!}"/>
-            <input type="hidden" name="arrivalCountry" value="${param.arrivalCountry!}"/>
-            <input type="hidden" name="arrivalCity" value="${param.arrivalCity!}"/>
-            <input type="hidden" name="departureCity" value="${param.departureCity!}"/>
-            <input type="hidden" name="departureDate" value="${param.departureDate!}"/>
-            <input type="hidden" name="arrivalDate" value="${param.arrivalDate!}"/>
-            <input type="hidden" name="hotel" value="${param.hotel!}"/>
-            <input type="hidden" name="nutrition" value="${param.nutrition!}"/>
-            <input type="hidden" name="adultsNumber" value="${param.adultsNumber!}"/>
-            <input type="hidden" name="childrenNumber" value="${param.childrenNumber!}"/>
-            <input type="hidden" name="price" value="${param.price!}"/>
-            <input type="hidden" name="status" value="${param.status!}"/>
+            <input type="hidden" name="tourId" value="${tourId!param.tourId!}"/>
+            <input type="hidden" name="tourName" value="${tourName!param.tourName!}"/>
+            <input type="hidden" name="arrivalCountry" value="${arrivalCountry!param.arrivalCountry!}"/>
+            <input type="hidden" name="arrivalCity" value="${arrivalCity!param.arrivalCity!}"/>
+            <input type="hidden" name="departureCity" value="${departureCity!param.departureCity!}"/>
+            <input type="hidden" name="departureDate" value="${departureDate!param.departureDate!}"/>
+            <input type="hidden" name="arrivalDate" value="${arrivalDate!param.arrivalDate!}"/>
+            <input type="hidden" name="hotel" value="${hotel!param.hotel!}"/>
+            <input type="hidden" name="nutrition" value="${nutrition!param.nutrition!}"/>
+            <input type="hidden" name="adultsNumber" value="${adultsNumber!param.adultsNumber!}"/>
+            <input type="hidden" name="childrenNumber" value="${childrenNumber!param.childrenNumber!}"/>
+            <input type="hidden" name="price" value="${price!param.price!}"/>
+            <input type="hidden" name="status" value="${status!param.status!}"/>
             <div class="contentItem">
                 <div class="childrenNumber">
                     <div class="itemMsg">
                         <@spring.message "common.message.numberOfChildren"/>
                     </div>
-                    ${param.childrenNumber!}
+                    ${childrenNumber!param.childrenNumber!}
                 </div>
 
                 <#if (secutity.isAdmin)!false>
@@ -481,9 +481,9 @@
 
                         <div id="changeChildrenNumber">
                             <label>
-                                <input type="text" id="newChildrenNumber" name="newChildrenNumber" min="0" max="50"
+                                <input class="uui-form-element small" type="text" id="newChildrenNumber" name="newChildrenNumber" min="0" max="50"
                                        pattern="^([0-4]?\d|50)$">
-                                <input type="submit" value="<@spring.message "admin.changeChildrenNumber" />"
+                                <input class="uui-button" type="submit" value="<@spring.message "admin.changeChildrenNumber" />"
                                        onclick="document.getElementById('change_children_number').disabled=false">
                             </label>
                         </div>
@@ -493,25 +493,25 @@
         </form>
 
         <form method="post" action="change_price">
-            <input type="hidden" name="tourId" value="${param.tourId!}"/>
-            <input type="hidden" name="tourName" value="${param.tourName!}"/>
-            <input type="hidden" name="arrivalCountry" value="${param.arrivalCountry!}"/>
-            <input type="hidden" name="arrivalCity" value="${param.arrivalCity!}"/>
-            <input type="hidden" name="departureCity" value="${param.departureCity!}"/>
-            <input type="hidden" name="departureDate" value="${param.departureDate!}"/>
-            <input type="hidden" name="arrivalDate" value="${param.arrivalDate!}"/>
-            <input type="hidden" name="hotel" value="${param.hotel!}"/>
-            <input type="hidden" name="nutrition" value="${param.nutrition!}"/>
-            <input type="hidden" name="adultsNumber" value="${param.adultsNumber!}"/>
-            <input type="hidden" name="childrenNumber" value="${param.childrenNumber!}"/>
-            <input type="hidden" name="price" value="${param.price!}"/>
-            <input type="hidden" name="status" value="${param.status!}"/>
+            <input type="hidden" name="tourId" value="${tourId!param.tourId!}"/>
+            <input type="hidden" name="tourName" value="${tourName!param.tourName!}"/>
+            <input type="hidden" name="arrivalCountry" value="${arrivalCountry!param.arrivalCountry!}"/>
+            <input type="hidden" name="arrivalCity" value="${arrivalCity!param.arrivalCity!}"/>
+            <input type="hidden" name="departureCity" value="${departureCity!param.departureCity!}"/>
+            <input type="hidden" name="departureDate" value="${departureDate!param.departureDate!}"/>
+            <input type="hidden" name="arrivalDate" value="${arrivalDate!param.arrivalDate!}"/>
+            <input type="hidden" name="hotel" value="${hotel!param.hotel!}"/>
+            <input type="hidden" name="nutrition" value="${nutrition!param.nutrition!}"/>
+            <input type="hidden" name="adultsNumber" value="${adultsNumber!param.adultsNumber!}"/>
+            <input type="hidden" name="childrenNumber" value="${childrenNumber!param.childrenNumber!}"/>
+            <input type="hidden" name="price" value="${price!param.price!}"/>
+            <input type="hidden" name="status" value="${status!param.status!}"/>
             <div class="contentItem">
                 <div class="price">
                     <div class="itemMsg">
                         <@spring.message "common.message.price"/>
                     </div>
-                    ${param.price!}$
+                    ${price!param.price!}$
                 </div>
 
                 <#if (secutity.isAdmin)!false>
@@ -529,9 +529,9 @@
 
                         <div id="changePrice">
                             <label>
-                                <input type="text" id="newPrice" name="newPrice" min="1" max="200000"
+                                <input class="uui-form-element small" type="text" id="newPrice" name="newPrice" min="1" max="200000"
                                        pattern="^([1]?\d?\d?\d?\d?\d([.]\d\d)?|200000([.]\d\d)?)$">
-                                <input type="submit" value="<@spring.message "admin.changePrice" />"
+                                <input class="uui-button" type="submit" value="<@spring.message "admin.changePrice" />"
                                        onclick="document.getElementById('change_price').disabled=false">
                             </label>
                         </div>
@@ -541,26 +541,25 @@
         </form>
 
         <form method="post" action="change_status">
-            <input type="hidden" name="tourId" value="${param.tourId!}"/>
-            <input type="hidden" name="tourName" value="${param.tourName!}"/>
-            <input type="hidden" name="arrivalCountry" value="${param.arrivalCountry!}"/>
-            <input type="hidden" name="arrivalCity" value="${param.arrivalCity!}"/>
-            <input type="hidden" name="departureCity" value="${param.departureCity!}"/>
-            <input type="hidden" name="departureDate" value="${param.departureDate!}"/>
-            <input type="hidden" name="arrivalDate" value="${param.arrivalDate!}"/>
-            <input type="hidden" name="hotel" value="${param.hotel!}"/>
-            <input type="hidden" name="nutrition" value="${param.nutrition!}"/>
-            <input type="hidden" name="adultsNumber" value="${param.adultsNumber!}"/>
-            <input type="hidden" name="childrenNumber" value="${param.childrenNumber!}"/>
-            <input type="hidden" name="price" value="${param.price!}"/>
-            <input type="hidden" name="status" value="${param.status!}"/>
+            <input type="hidden" name="tourId" value="${tourId!param.tourId!}"/>
+            <input type="hidden" name="tourName" value="${tourName!param.tourName!}"/>
+            <input type="hidden" name="arrivalCountry" value="${arrivalCountry!param.arrivalCountry!}"/>
+            <input type="hidden" name="arrivalCity" value="${arrivalCity!param.arrivalCity!}"/>
+            <input type="hidden" name="departureCity" value="${departureCity!param.departureCity!}"/>
+            <input type="hidden" name="departureDate" value="${departureDate!param.departureDate!}"/>
+            <input type="hidden" name="arrivalDate" value="${arrivalDate!param.arrivalDate!}"/>
+            <input type="hidden" name="hotel" value="${hotel!param.hotel!}"/>
+            <input type="hidden" name="nutrition" value="${nutrition!param.nutrition!}"/>
+            <input type="hidden" name="adultsNumber" value="${adultsNumber!param.adultsNumber!}"/>
+            <input type="hidden" name="childrenNumber" value="${childrenNumber!param.childrenNumber!}"/>
+            <input type="hidden" name="price" value="${price!param.price!}"/>
+            <input type="hidden" name="status" value="${status!param.status!}"/>
             <#if (secutity.isAdmin)!false>
                 <div class="contentItem">
-                    <#if (status == "AVAILABLE")>
+                    <#if ((status!param.status!"NOT_AVAILABLE") == "AVAILABLE")>
                         <input class="uui-button raspberry" type="submit" value="<@spring.message "admin.changeStatusNotAvailable"/>"
                                onclick="document.getElementById('change_status').disabled=false">
-                    </#if>
-                    <#if (status == "NOT_AVAILABLE")>
+                    <#else>
                         <input class="uui-button lime-green" type="submit" value="<@spring.message "admin.changeStatusAvailable"/>"
                                onclick="document.getElementById('change_status').disabled=false">
                     </#if>
@@ -577,19 +576,19 @@
         </form>
 
         <form method="post" action="to_tickets" id="to_tickets">
-            <input type="hidden" name="tourId" value="${param.tourId!}"/>
-            <input type="hidden" name="tourName" value="${param.tourName!}"/>
-            <input type="hidden" name="arrivalCountry" value="${param.arrivalCountry!}"/>
-            <input type="hidden" name="arrivalCity" value="${param.arrivalCity!}"/>
-            <input type="hidden" name="departureCity" value="${param.departureCity!}"/>
-            <input type="hidden" name="departureDate" value="${param.departureDate!}"/>
-            <input type="hidden" name="arrivalDate" value="${param.arrivalDate!}"/>
-            <input type="hidden" name="hotel" value="${param.hotel!}"/>
-            <input type="hidden" name="nutrition" value="${param.nutrition!}"/>
-            <input type="hidden" name="adultsNumber" value="${param.adultsNumber!}"/>
-            <input type="hidden" name="childrenNumber" value="${param.childrenNumber!}"/>
-            <input type="hidden" name="price" value="${param.price!}"/>
-            <input type="hidden" name="status" value="${param.status!}"/>
+            <input type="hidden" name="tourId" value="${tourId!param.tourId!}"/>
+            <input type="hidden" name="tourName" value="${tourName!param.tourName!}"/>
+            <input type="hidden" name="arrivalCountry" value="${arrivalCountry!param.arrivalCountry!}"/>
+            <input type="hidden" name="arrivalCity" value="${arrivalCity!param.arrivalCity!}"/>
+            <input type="hidden" name="departureCity" value="${departureCity!param.departureCity!}"/>
+            <input type="hidden" name="departureDate" value="${departureDate!param.departureDate!}"/>
+            <input type="hidden" name="arrivalDate" value="${arrivalDate!param.arrivalDate!}"/>
+            <input type="hidden" name="hotel" value="${hotel!param.hotel!}"/>
+            <input type="hidden" name="nutrition" value="${nutrition!param.nutrition!}"/>
+            <input type="hidden" name="adultsNumber" value="${adultsNumber!param.adultsNumber!}"/>
+            <input type="hidden" name="childrenNumber" value="${childrenNumber!param.childrenNumber!}"/>
+            <input type="hidden" name="price" value="${price!param.price!}"/>
+            <input type="hidden" name="status" value="${status!param.status!}"/>
             <div class="contentItem">
                 <#if !((secutity.isAdmin)!false)>
                     <label>

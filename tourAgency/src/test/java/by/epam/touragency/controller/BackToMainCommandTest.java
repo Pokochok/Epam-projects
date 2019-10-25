@@ -31,7 +31,6 @@ public class BackToMainCommandTest {
         mockMvc = MockMvcBuilders.standaloneSetup(backToMainCommand).build();
     }
 
-
     @Test
     public void execute() throws Exception {
         mockMvc.perform(get("/back_to_main"))

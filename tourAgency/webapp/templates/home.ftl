@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title class="header">
+    <title>
         <@spring.message "common.title"/>
     </title>
     <@mainPanel.page>
@@ -16,12 +16,11 @@
 <div class="startMessage">
     <@spring.message "common.message.startTravel"/>
 </div>
+
     <div class="contentHeader">
         <a href="to_tours">
             <@spring.message "common.message.availableTours"/>
         </a>
-        <img src="images/logo.png" alt=""/>
-
     </div>
 
 <@timestamp.page/>

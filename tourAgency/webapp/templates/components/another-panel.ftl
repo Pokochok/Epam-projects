@@ -1,6 +1,17 @@
 <#macro page>
     <#import "main-navigation.ftl" as mainNavigation>
     <#import "/spring.ftl" as spring/>
+<script src="uui/js/lib/components/bootstrap3-typeahead.min.js"></script>
+<script src="uui/js/uui/uui-autocomplete.min.js"></script>
+<script src="uui/js/lib/jquery-1.12.0.min.js"></script>
+<link rel="stylesheet" href="uui/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="uui/css/uui-all.css" />
+<script src="uui/bootstrap/js/bootstrap.min.js"></script>
+<script src="uui/js/uui-core.min.js" type="text/javascript"></script>
+<link rel="stylesheet/less" type="text/css" href="uui/less/custom-styles.less" />
+<script src="uui/js/lib/less.js" type="text/javascript"></script>
+<link rel="stylesheet" href="uui/css/lib/components/jquery.mCustomScrollbar.min.css" />
+<script src="uui/js/lib/components/jquery.mCustomScrollbar.concat.min.js"></script>
     <style>
         <#nested>
     <#include "/uui/bootstrap/css/bootstrap.min.css"/>

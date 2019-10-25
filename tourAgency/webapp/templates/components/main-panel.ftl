@@ -5,24 +5,23 @@
 
     <#import "/spring.ftl" as spring/>
     <#import "main-panel-action.ftl" as mainPanelAction>
+<script src="uui/js/lib/components/bootstrap3-typeahead.min.js"></script>
+<script src="uui/js/uui/uui-autocomplete.min.js"></script>
+<script src="uui/js/lib/jquery-1.12.0.min.js"></script>
+<link rel="stylesheet" href="uui/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="uui/css/uui-all.css" />
 <script src="uui/bootstrap/js/bootstrap.min.js"></script>
-<script src="/uui/js/uui-core.min.js" type="text/javascript"></script>
-<script src="/uui/js/lib/components/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="uui/js/uui-core.min.js" type="text/javascript"></script>
+<link rel="stylesheet/less" type="text/css" href="uui/less/custom-styles.less" />
+<script src="uui/js/lib/less.js" type="text/javascript"></script>
+<link rel="stylesheet" href="uui/css/lib/components/jquery.mCustomScrollbar.min.css" />
+<script src="uui/js/lib/components/jquery.mCustomScrollbar.concat.min.js"></script>
+<link rel = "stylesheet" href = "uui/fonts/font-awesome/css/font-awesome.min.css" />
 <style>
     <#include "../../css/componentsstyle/language-panel.css"/>
     <#include "../../css/componentsstyle/role.css"/>
-    <#include "/uui/bootstrap/css/bootstrap.min.css"/>
-    <#include "/uui/fonts/font-awesome/css/font-awesome.min.css"/>
-    <#include "/uui/css/uui-all.css"/>
-    <#include "/uui/css/lib/components/jquery.mCustomScrollbar.min.css"/>
     <#nested/>
 </style>
-<#--<header class="container">-->
-<#--        <div class="logo">-->
-<#--            <a href="back_to_main"> <img src="images/logo.png" alt=""/></a>-->
-<#--</div>-->
-<#--    --><#--        <@mainPanelAction.page/>-->-->
-<#--</header>-->
 <header>
 <div class="row uui-header navigation-header green" >
         <nav>
@@ -40,7 +39,7 @@
         <a href="back_to_main" class="responsive-brand-logo">
             <span class="arrow fa fa-angle-left"></span>
             <span class="logo">
-                <img src="images/logo.png" alt=""/>
+                <img src="uui/images/ic_logo_UUi.svg" alt=""/>
             </span>
         <span class="title">EUROTOUR</span>
         </a>
@@ -56,9 +55,9 @@
     </div>
 </div>
 <!---->
-<a href="#" class="brand-logo">
+<a href="back_to_main" class="brand-logo">
     <span class="logo">
-        <img src="images/logo.png" alt="" />
+        <img src="uui/images/ic_logo_UUi.svg" alt="" />
     </span>
     EUROTOUR
 </a>

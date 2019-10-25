@@ -67,7 +67,7 @@
                         <input type="hidden" name="price" value="${param.price!}"/>
                         <label>
                             <button class="uui-button blue left-icon">
-                                <img src="/images/icons/search-icon-white.svg" alt="" /><@spring.message "common.submit.continueBooking"/>
+                                <img src="uui/images/icons/search-icon-white.svg" alt="" /><@spring.message "common.submit.continueBooking"/>
                             </button>
                         </label>
                     </form>

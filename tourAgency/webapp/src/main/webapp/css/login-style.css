@@ -1,0 +1,39 @@
+.loginForm{
+    margin: 10cm 0;
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:  fit-content;
+}
+.header{
+    margin: 50px;
+}
+a{
+    font-size: medium;
+}
+.userContent{
+    padding: 10px 40px 50px 40px;
+    background-color: white;
+    display: block;
+    font-size: 20px;
+    text-transform: none;
+    color: black;
+    text-align: center;
+    position: absolute;
+    width: 16cm;
+    margin: 10px;
+    top: 4cm
+}
+.contentItemMsg{
+    font-weight: bold;
+    color: darkgray;
+}
+.InfMsg{
+    color: crimson;
+}
+.contentItem{
+    margin: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+}

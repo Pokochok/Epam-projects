@@ -1,0 +1,7 @@
+
+Lsquid:S1854>"5Remove this useless assignment to local variable "c".(ô„¼­
+Msquid:S2696@"6Make the enclosing method "static" or remove this set.(™ï™à
+esquid:S1192?"IDefine a constant instead of duplicating this literal "postgres" 3 times.(‡°ˆùûÿÿÿÿ
+ksquid:S00100b"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²°´Åÿÿÿÿÿ
+_squid:S2095>"HUse try-with-resources or close this "Connection" in a "finally" clause.(ô„¼­
+=squid:S1481>"&Remove this unused "c" local variable.(ô„¼­

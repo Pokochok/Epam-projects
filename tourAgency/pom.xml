@@ -7,8 +7,36 @@
     <groupId>by.epam.maven</groupId>
     <artifactId>tourAgency</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <modules>
+        <module>webapp</module>
+        <module>model</module>
+        <module>controller</module>
+        <module>service</module>
+        <module>hibernaterepository</module>
+        <module>jdbctemplaterepository</module>
+    </modules>
+    <packaging>pom</packaging>
 
+    <profiles>
+        <profile>
+            <id>webapp</id>
+        </profile>
+        <profile>
+            <id>model</id>
+        </profile>
+        <profile>
+            <id>controller</id>
+        </profile>
+        <profile>
+            <id>service</id>
+        </profile>
+        <profile>
+            <id>hibernaterepository</id>
+        </profile>
+        <profile>
+            <id>jdbctemplaterepository</id>
+        </profile>
+    </profiles>
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
@@ -66,8 +94,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <configuration>
-                    <webXml>webapp\WEB-INF\web.xml</webXml>
-                    <warSourceDirectory>webapp</warSourceDirectory>
+                    <webXml>src\main\webapp\WEB-INF\web.xml</webXml>
+                    <warSourceDirectory>src\main\webapp</warSourceDirectory>
                     <failOnMissingWebXml>true</failOnMissingWebXml>
                 </configuration>
             </plugin>
@@ -91,11 +119,15 @@
                     <path>/tour-agency</path>
                 </configuration>
             </plugin>
+
+
         </plugins>
     </build>
 
     <dependencies>
 
+
+<!--//-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
         <dependency>
             <groupId>org.freemarker</groupId>
             <artifactId>freemarker</artifactId>
@@ -213,11 +245,7 @@
             <version>5.2.0.RELEASE</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-jdbc</artifactId>
-            <version>5.2.0.RELEASE</version>
-        </dependency>
+
 
         <dependency>
             <groupId>org.springframework</groupId>
@@ -237,11 +265,11 @@
             <version>2.6</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>9.3-1102-jdbc41</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.postgresql</groupId>-->
+<!--            <artifactId>postgresql</artifactId>-->
+<!--            <version>9.3-1102-jdbc41</version>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>javax.servlet.jsp</groupId>

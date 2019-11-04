@@ -1,0 +1,58 @@
+.contentForm{
+    padding-top: 40px;
+    position: static;
+    display: flex;
+    align-items: normal;
+    justify-content: center;
+    height:  fit-content;
+}
+.companyInf{
+    text-align: left;
+}
+.contentHeader{
+    margin: 50px;
+}
+a{
+    font-size: medium;
+}
+.contentContainer{
+    padding: 10px 70px 50px 70px;
+    background-color: white;
+    display: block;
+    font-size: 20px;
+    text-transform: none;
+    color: black;
+    text-align: center;
+    position: inherit;
+    width: -webkit-fill-available;
+    height: fit-content;
+    justify-content: space-between;
+    margin: 2cm 3cm;
+}
+.tourName, .notDefined, .flightPlace{
+    font-size: x-large;
+    font-weight: bold;
+}
+.itemMsg{
+    font-weight: bold;
+}
+.contentItem{
+    margin: 30px 15px;
+    justify-content: space-between;
+    display: flex;
+}
+.allInf{
+    display: flex;
+    justify-content: space-between;
+}
+.tourContent, .ticketContent{
+    border: #aaaaaa;
+    padding: 20px;
+    border-style: double;
+    width: 10cm;
+    justify-content: space-between;
+    display: block;
+}
+.ticketContent{
+    width: 8cm;
+}

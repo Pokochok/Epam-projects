@@ -1,5 +1,0 @@
-
-‡squid:UselessImportCheck"WRemove this unused import 'by.epam.touragency.util.PageMsgConstant.TO_LOGIN_PAGE_PATH'.(¹ª¼¶þÿÿÿÿ8ûçƒúÞ-
-xsquid:UselessImportCheck"MRemove this unused import 'by.epam.touragency.resource.ConfigurationManager'.(½¹é·8ûçƒúÞ-
-~squid:UselessImportCheck"SRemove this unused import 'by.epam.touragency.util.PageMsgConstant.HOME_PAGE_PATH'.(Ð¦°¥8ûçƒúÞ-
-€squid:S3305"]Inject this field value directly into "authenticationProvider", the only method that uses it.(³ò×‡üÿÿÿÿ8³øô¥ß-

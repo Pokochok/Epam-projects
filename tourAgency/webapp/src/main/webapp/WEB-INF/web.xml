@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         id="WebApp_ID" version="4.0">
+<!--    <display-name> MainServlet </display-name>-->
+<!--    <welcome-file-list>-->
+<!--        <welcome-file>index.ftl</welcome-file>-->
+<!--    </welcome-file-list>-->
+
+<!--    <session-config>-->
+<!--        <session-timeout>30</session-timeout>-->
+<!--    </session-config>-->
+
+<!--    <jsp-config>-->
+<!--        <taglib>-->
+<!--            <taglib-uri>customtags</taglib-uri>-->
+<!--            <taglib-location>/WEB-INF/tld/customtag.tld</taglib-location>-->
+<!--        </taglib>-->
+<!--    </jsp-config>-->
+
+<!--    <error-page>-->
+<!--    <error-code>404</error-code>-->
+<!--        <location>/jsp/error/error.jsp</location>-->
+<!--    </error-page>-->
+
+<!--    <error-page>-->
+<!--        <error-code>400</error-code>-->
+<!--        <location>/jsp/error/error.jsp</location>-->
+<!--    </error-page>-->
+
+<!--    <error-page>-->
+<!--        <error-code>500</error-code>-->
+<!--        <location>/jsp/error/error.jsp</location>-->
+<!--    </error-page>-->
+
+    <error-page>
+        <exception-type>java.lang.RuntimeException</exception-type>
+        <location>/templates/error.ftl</location>
+    </error-page>
+
+<!--    <listener>-->
+<!--        <listener-class>by.epam.SimpleContextListener</listener-class>-->
+<!--    </listener>-->
+
+<!--    <listener>-->
+<!--        <listener-class>by.epam.SessionListenerImpl</listener-class>-->
+<!--    </listener>-->
+
+<!--    <listener>-->
+<!--        <listener-class>by.epam.SimpleRequestListener</listener-class>-->
+<!--    </listener>-->
+
+<!--    <context-param>-->
+<!--        <param-name>log4jConfigLocation</param-name>-->
+<!--        <param-value>/WEB-INF/log4j2.properties</param-value>-->
+<!--    </context-param>-->
+</web-app>

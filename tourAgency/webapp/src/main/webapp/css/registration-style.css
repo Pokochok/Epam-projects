@@ -1,0 +1,39 @@
+.registrationForm{
+    margin:3cm 0;
+    padding-top: 40px;
+    position: static;
+    display: flex;
+    align-items: normal;
+    justify-content: center;
+    height:  fit-content;
+}
+.radio-button{
+    text-align: left;
+}
+a{
+    color: skyblue;
+}
+.tourContent, .ticketContent, .userContent{
+    align-items: center;
+    justify-content: center;
+    padding: 10px 40px 50px 40px;
+    background-color: white;
+    display: block;
+    font-size: 20px;
+    text-transform: none;
+    color: black;
+    text-align: center;
+    position: relative;
+    width: 16cm;
+    margin-top: 2cm;
+    height: fit-content;
+}
+.contentItemMsg{
+    font-weight: bold;
+    color: darkgray;
+}
+.contentItem{
+    margin: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+}

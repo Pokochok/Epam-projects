@@ -1,0 +1,32 @@
+.ticketItem{
+    background-color: ghostwhite;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: auto;
+    left: auto;
+    height: 4cm;
+    margin: 30px 0;
+    width: 15cm;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.MinInf{
+    display: flex;
+    align-items: center;
+}
+.flightNumber_flightPlace{
+    display: block;
+    margin-right: 50px;
+}
+.flightNumber{
+    font-weight: normal;
+    font-size: medium;
+    color: gray;
+}
+.flightPlace .flightDate{
+    margin-right: 120px;
+    margin-left: 200px;
+    display: block;
+}

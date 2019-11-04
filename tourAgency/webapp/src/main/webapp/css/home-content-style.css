@@ -1,0 +1,45 @@
+.contentForm{
+     background-color: white;
+     position: relative;
+     margin-right: 3cm;
+     margin-left: 2.5cm;
+     margin: 6cm 0;
+     left: auto;
+     height: fit-content;
+     width: initial;
+ }
+a{
+    color: darkturquoise;
+}
+a:hover{
+    color: purple;
+}
+.startMessage{
+background: linear-gradient(rgba(0, 78, 90, 0.45), rgba(0, 78, 90, 0.45)),  url(img/background.jpg) center center no-repeat;
+    background-size: cover;
+    padding: 10%;
+    font-size: 45px;
+    font-family: Arial, serif;
+    font-weight: bold;
+    text-transform: none;
+    color: white;
+    text-align: center;
+    position: relative;
+    left: 0;
+    width: -webkit-fill-available;
+}
+
+.contentHeader{
+
+    font-size: 35px;
+    font-family: Arial, serif;
+    font-weight: bold;
+    text-transform: none;
+    color: black;
+    text-align: center;
+    position: initial;
+    top: 0.6cm;
+    width: -webkit-fill-available;
+    margin: 30px;
+
+}

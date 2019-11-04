@@ -1,0 +1,7 @@
+
+esquid:S1192"IDefine a constant instead of duplicating this literal "postgres" 3 times.(‡°ˆùûÿÿÿÿ
+=squid:S1481"&Remove this unused "c" local variable.(ô„¼­
+Msquid:S2696 "6Make the enclosing method "static" or remove this set.(™ï™à
+Lsquid:S1854"5Remove this useless assignment to local variable "c".(ô„¼­
+_squid:S2095"HUse try-with-resources or close this "Connection" in a "finally" clause.(ô„¼­
+squid:UselessImportCheck"TRemove this unnecessary import: same package classes are always implicitly imported.(„¹ø8è¬À”â-

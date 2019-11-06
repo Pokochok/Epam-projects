@@ -3,12 +3,8 @@ package by.epam.touragency.logic;
 import by.epam.touragency.entity.Role;
 import by.epam.touragency.entity.User;
 import by.epam.touragency.repository.Repository;
-import by.epam.touragency.repository.impl.UserRepository;
-import by.epam.touragency.specification.Specification;
-import by.epam.touragency.specification.impl.agent.AddAgentSpecification;
-import by.epam.touragency.specification.impl.client.AddClientSpecification;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +14,9 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class UserRegistrationLogic {
-    private static final Logger LOGGER = LogManager.getLogger();
+    @Autowired
+    @Qualifier("hibernateUserRepository") // FIXME: 11/5/2019
+    private Repository<User> userRepository;
 
     /**
      * Adds new user to database
@@ -33,7 +31,6 @@ public class UserRegistrationLogic {
      */
     public void addUser(String name, String surname, String email, String phoneNumber, String login,
                         String password, Role role) {
-        Repository repository = UserRepository.getInstance();
         User user = new User.UserBuilder()
                 .setName(name)
                 .setSurname(surname)
@@ -41,34 +38,8 @@ public class UserRegistrationLogic {
                 .setPhoneNumber(phoneNumber)
                 .setLogin(login)
                 .setPassword(BCrypt.hashpw(password, BCrypt.gensalt(12)))
-                .setRole(role).build();
-        Specification specification = defineAddUserSpecification(role, user);
-        repository.add(user, specification);
-    }
-
-    /**
-     * Defines for what role specification needed
-     *
-     * @param role user role
-     * @param user user instance
-     * @return specification
-     */
-    private Specification defineAddUserSpecification(Role role, User user) {
-        Specification specification = null;
-        switch (role) {
-            case CLIENT: {
-                specification = new AddClientSpecification(user);
-                break;
-            }
-            case AGENT: {
-                specification = new AddAgentSpecification(user);
-                break;
-            }
-            default: {
-                LOGGER.error("User role is not defined at user registration");
-                throw new RuntimeException("Registered user role is not defined");
-            }
-        }
-        return specification;
+                .setRole(role)
+                .setStatus("ACTIVE").build();
+        userRepository.add(user, null);
     }
 }

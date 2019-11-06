@@ -1,14 +1,25 @@
 package by.epam.touragency.entity;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "users")
+@Table(name = "users", uniqueConstraints = {
+        @UniqueConstraint(columnNames = "phone_number"),
+        @UniqueConstraint(columnNames = "login"),
+        @UniqueConstraint(columnNames = "email")})
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @GeneratedValue(
+            generator="generator"
+    )
+    @GenericGenerator(
+            name = "generator",
+            strategy = "increment"
+    )
+    private Long id;
     private String name;
     private String surname;
     private String email;
@@ -23,8 +34,7 @@ public class User {
     public User() {
     }
 
-    private User(int id, String name, String surname, String email, String phoneNumber, String login, String password, Role role, String status) {
-        this.id = id;
+    private User(String name, String surname, String email, String phoneNumber, String login, String password, Role role, String status) {
         this.name = name;
         this.surname = surname;
         this.email = email;
@@ -39,7 +49,7 @@ public class User {
         return status;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
@@ -71,7 +81,7 @@ public class User {
         return role;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -108,7 +118,7 @@ public class User {
     }
 
     public static class UserBuilder {
-        private int id;
+        private Long id;
         private String name;
         private String surname;
         private String email;
@@ -121,7 +131,7 @@ public class User {
         public UserBuilder() {
         }
 
-        public UserBuilder setId(int id) {
+        public UserBuilder setId(Long id) {
             this.id = id;
             return this;
         }
@@ -167,7 +177,7 @@ public class User {
         }
 
         public User build() {
-            return new User(id, name, surname, email, phoneNumber, login, password, role, status);
+            return new User(name, surname, email, phoneNumber, login, password, role, status);
         }
     }
 

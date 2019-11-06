@@ -1,19 +1,27 @@
 package by.epam.touragency.handler;
 
+import by.epam.touragency.controller.LoginCommand;
 import by.epam.touragency.resource.ConfigurationManager;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.security.access.AccessDeniedException;
+import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 
+import java.util.Locale;
+
 import static by.epam.touragency.util.PageMsgConstant.*;
 import static by.epam.touragency.util.ParameterConstant.ATTR_NAME_MSG_KEY;
 
 @ControllerAdvice
 public class ExceptionHandlerController {
+    @Autowired
+    private LoginCommand loginCommand;
+
     @ExceptionHandler(Throwable.class)
     public ModelAndView handleError(HttpServletRequest req, Exception ex) {
         ModelAndView modelAndView = new ModelAndView();

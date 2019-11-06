@@ -23,12 +23,20 @@ public class HibernateUserRepository  implements Repository<User> {
 
     @Override
     public void add(User item, Specification specification) {
-
+        Session session = session();
+        session.beginTransaction();
+        session.save(item);
+        session.getTransaction().commit();
+        session.close();
     }
 
     @Override
     public void update(User entity, Specification specification) {
-
+        Query<User> query = session().createQuery(specification.sqlQuery(), User.class);
+        ArrayDeque parameterQueue = specification.getParameterQueue();
+        for (int i = 1; i <= parameterQueue.size(); i++){
+            query.setParameter(i, parameterQueue.getFirst());
+        }
     }
 
     @Override

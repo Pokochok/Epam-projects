@@ -8,9 +8,9 @@ import java.util.ArrayDeque;
 public class FindAgentByIdSpecification implements Specification<User> {
     private static final String FIND_SPECIFICATION_SQL_BY_ID = "SELECT id, name, surname, email, phone_number, login, " +
             "password, role, status FROM users WHERE id=?;";
-    private int id;
+    private long id;
 
-    public FindAgentByIdSpecification(int id) {
+    public FindAgentByIdSpecification(long id) {
         this.id = id;
     }
 

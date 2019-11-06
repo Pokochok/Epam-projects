@@ -70,7 +70,7 @@ public class OrderRepositoryTest {
     }
 
     User client = new User.UserBuilder().setName("test").setSurname("test").setEmail("test@test.com").setLogin("test")
-            .setPassword("test").setPhoneNumber("+0000000000").setRole(Role.CLIENT).setStatus("ACTIVE").setId(1).build();
+            .setPassword("test").setPhoneNumber("+0000000000").setRole(Role.CLIENT).setStatus("ACTIVE").setId(1L).build();
     User agent = new User.UserBuilder().setName("test").setSurname("test").setEmail("test@test.com").setLogin("test")
             .setPassword("test").setPhoneNumber("+0000000000").setRole(Role.AGENT).setStatus("ACTIVE").build();
     Tour tour = new Tour.TourBuilder().setTourName("test").setAdultsNumber(0).setArrivalCity("test").setArrivalCountry("test")

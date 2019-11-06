@@ -72,8 +72,8 @@ public class UserRepositoryTest {
 
     @Test
     public void query() {
-        int expected = 0;
-        int actual = UserRepository.getInstance().query(new FindAgentByLoginSpecification("not defined")).iterator().next().getId();
+        long expected = 0;
+        long actual = UserRepository.getInstance().query(new FindAgentByLoginSpecification("not defined")).iterator().next().getId();
         Assert.assertEquals(expected, actual);
     }
 }

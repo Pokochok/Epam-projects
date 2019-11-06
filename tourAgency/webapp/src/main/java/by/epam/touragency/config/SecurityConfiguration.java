@@ -1,5 +1,6 @@
 package by.epam.touragency.config;
 
+import by.epam.touragency.handler.AuthenticationFailureHandlerImpl;
 import by.epam.touragency.logic.UserDetailsServiceImpl;
 import by.epam.touragency.util.ParameterConstant;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,11 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     private UserDetailsServiceImpl userDetailsService;
 
     @Bean
+    public AuthenticationFailureHandlerImpl authenticationFailureHandler(){
+        return new AuthenticationFailureHandlerImpl();
+    }
+
+    @Bean
     public AuthenticationProvider authenticationProvider(){
         DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
         provider.setUserDetailsService(userDetailsService);
@@ -41,10 +47,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .and().exceptionHandling().accessDeniedPage("/error")
                 .and()
                 .formLogin().loginPage("/to_login").loginProcessingUrl("/login")
+                .defaultSuccessUrl("/home")
+                .failureForwardUrl("/fail_login")
                 .usernameParameter(ParameterConstant.PARAM_NAME_LOGIN)
                 .passwordParameter(ParameterConstant.PARAM_NAME_PASSWORD)
-                .successForwardUrl("/home")
-                .failureUrl("/fail_login")
                 .permitAll()
                 .and()
                 .logout().invalidateHttpSession(true).clearAuthentication(true)

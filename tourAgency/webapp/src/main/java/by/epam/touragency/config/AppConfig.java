@@ -26,7 +26,10 @@ import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver;
 
 import javax.sql.DataSource;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Locale;
+import java.util.Properties;
 
 @Configuration
 @EnableAspectJAutoProxy
@@ -35,24 +38,24 @@ import java.util.Locale;
 @ComponentScan({"by.epam.touragency"})
 public class AppConfig implements WebMvcConfigurer {
     @Bean
-    public UserDetailsService userDetailsService(){
+    public UserDetailsService userDetailsService() {
         return new UserDetailsServiceImpl();
     }
 
     @Bean
-    public BCryptPasswordEncoder bCryptPasswordEncoder(){
+    public BCryptPasswordEncoder bCryptPasswordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
     @Bean
-    public LocaleResolver localeResolver(){
+    public LocaleResolver localeResolver() {
         SessionLocaleResolver sessionLocaleResolver = new SessionLocaleResolver();
         sessionLocaleResolver.setDefaultLocale(new Locale("en"));
         return sessionLocaleResolver;
     }
 
     @Bean
-    public ResourceBundleMessageSource messageSource(){
+    public ResourceBundleMessageSource messageSource() {
         ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
         messageSource.setBasenames("jsp/home", "jsp/about-company", "jsp/booking", "jsp/login", "jsp/orders",
                 "jsp/registration", "jsp/ticket-registration", "jsp/tickets", "jsp/timestamp", "jsp/tour-overview",
@@ -70,7 +73,7 @@ public class AppConfig implements WebMvcConfigurer {
     }
 
     @Bean
-    public FreeMarkerConfigurer freeMarkerConfigurer(){
+    public FreeMarkerConfigurer freeMarkerConfigurer() {
         FreeMarkerConfigurer configurer = new FreeMarkerConfigurer();
         configurer.setTemplateLoaderPath("");
         configurer.setDefaultEncoding("UTF-8");
@@ -78,7 +81,7 @@ public class AppConfig implements WebMvcConfigurer {
     }
 
     @Bean
-    public FreeMarkerViewResolver freeMarkerViewResolver(){
+    public FreeMarkerViewResolver freeMarkerViewResolver() {
         FreeMarkerViewResolver freeMarkerViewResolver = new FreeMarkerViewResolver();
         freeMarkerViewResolver.setSuffix(".ftl");
         freeMarkerViewResolver.setPrefix("/");
@@ -102,21 +105,27 @@ public class AppConfig implements WebMvcConfigurer {
                 .addResourceHandler("/templates/**")
                 .addResourceLocations("/templates/");
     }
+
     @Bean
-    public LocalSessionFactoryBean sessionFactory() {
+    public LocalSessionFactoryBean sessionFactory() throws IOException {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
+        Properties properties = new Properties();
+        InputStream inputStream = AppConfig.class.getClassLoader().getResourceAsStream("hibernate.properties");
+        properties.load(inputStream);
+        sessionFactory.setHibernateProperties(properties);
         sessionFactory.setDataSource(pgSqlDataSource());
         sessionFactory.setPackagesToScan("by.epam.touragency.entity");
         return sessionFactory;
     }
 
     @Bean
-    public PlatformTransactionManager hibernateTransactionManager() {
+    public PlatformTransactionManager hibernateTransactionManager() throws IOException {
         HibernateTransactionManager transactionManager
                 = new HibernateTransactionManager();
         transactionManager.setSessionFactory(sessionFactory().getObject());
         return transactionManager;
     }
+
     @Bean
     public DataSource pgSqlDataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
@@ -126,13 +135,14 @@ public class AppConfig implements WebMvcConfigurer {
         dataSource.setPassword(PropertyHolder.getInstance().getPassword());
         return dataSource;
     }
+
     @Bean
     public JdbcTemplate jdbcTemplate() {
         return new JdbcTemplate(pgSqlDataSource());
     }
 
     @Bean
-    public PlatformTransactionManager platformTransactionManager(){
+    public PlatformTransactionManager platformTransactionManager() {
         return new DataSourceTransactionManager(pgSqlDataSource());
     }
 

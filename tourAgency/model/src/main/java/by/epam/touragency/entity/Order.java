@@ -11,8 +11,8 @@ public class Order {
     private User agent;
     private int tourId;
     private int ticketId;
-    private int clientId;
-    private int agentId;
+    private long clientId;
+    private long agentId;
 
     private Order(){}
 
@@ -119,11 +119,11 @@ public class Order {
         return ticketId;
     }
 
-    public int getClientId() {
+    public long getClientId() {
         return clientId;
     }
 
-    public int getAgentId() {
+    public long getAgentId() {
         return agentId;
     }
 

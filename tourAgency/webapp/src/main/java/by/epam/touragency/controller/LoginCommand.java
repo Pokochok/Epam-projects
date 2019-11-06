@@ -27,7 +27,7 @@ public class LoginCommand {
             language = new Locale(ParameterConstant.EN_LOCALE);
         }
         LOGGER.debug("Incorrect login or password");
-        String page = ConfigurationManager.getProperty(PageMsgConstant.HOME_PAGE_PATH);
+        String page = ConfigurationManager.getProperty(PageMsgConstant.LOGIN_PAGE_PATH);
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject(ParameterConstant.ATTR_NAME_ERROR_LOGIN, messageManager.getProperty(PageMsgConstant.LOGIN_ERROR_MSG_KEY, language));
         modelAndView.setViewName(page);

@@ -25,8 +25,8 @@ import java.util.Set;
  */
 @Service
 public class ToPageWithListLogic {
-//    @Autowired
-//    @Qualifier("orderRepository")
+    @Autowired
+    @Qualifier("orderRepository")
     private Repository<Order> orderRepository;
 
     /**

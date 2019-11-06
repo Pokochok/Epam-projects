@@ -6,9 +6,7 @@ by\epam\touragency\logic\TourRegistrationLogic.class
 by\epam\touragency\logic\UserRegistrationLogic.class
 by\epam\touragency\logic\UpdateTourLogic.class
 by\epam\touragency\logic\TicketRegistrationLogic.class
-by\epam\touragency\logic\UserRegistrationLogic$1.class
 by\epam\touragency\logic\BookingLogic.class
 by\epam\touragency\logic\ToPageWithListLogic.class
-by\epam\touragency\logic\UpdateUserLogic$1.class
 by\epam\touragency\logic\UpdateUserLogic.class
 by\epam\touragency\util\Validation.class

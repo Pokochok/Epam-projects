@@ -1,8 +1,8 @@
 
-bsquid:S1192?"FDefine a constant instead of duplicating this literal "test2" 6 times.(Ì”‘ıÿÿÿÿ
-Lsquid:S1854 "5Remove this useless assignment to local variable "c".(ô„¼­
-=squid:S1481 "&Remove this unused "c" local variable.(ô„¼­
-_squid:S2095 "HUse try-with-resources or close this "Connection" in a "finally" clause.(ô„¼­
-esquid:S1192!"IDefine a constant instead of duplicating this literal "postgres" 3 times.(‡°ˆùûÿÿÿÿ
-Msquid:S2696""6Make the enclosing method "static" or remove this set.(™ï™à
-„squid:UselessImportCheck"TRemove this unnecessary import: same package classes are always implicitly imported.(Öªåøÿÿÿÿ8ë­À”â-
+Tsquid:S2696""6Make the enclosing method "static" or remove this set.(™ï™à8Èê•ãã-
+isquid:S1192?"FDefine a constant instead of duplicating this literal "test2" 6 times.(Ì”‘ıÿÿÿÿ8Èê•ãã-
+fsquid:S2095 "HUse try-with-resources or close this "Connection" in a "finally" clause.(ô„¼­8Èê•ãã-
+Dsquid:S1481 "&Remove this unused "c" local variable.(ô„¼­8Èê•ãã-
+lsquid:S1192!"IDefine a constant instead of duplicating this literal "postgres" 3 times.(‡°ˆùûÿÿÿÿ8Èê•ãã-
+Ssquid:S1854 "5Remove this useless assignment to local variable "c".(ô„¼­8Èê•ãã-
+„squid:UselessImportCheck"TRemove this unnecessary import: same package classes are always implicitly imported.(Öªåøÿÿÿÿ8Èê•ãã-

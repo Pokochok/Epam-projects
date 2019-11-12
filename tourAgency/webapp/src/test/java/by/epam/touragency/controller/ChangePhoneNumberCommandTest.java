@@ -1,6 +1,7 @@
 package by.epam.touragency.controller;
 
 import by.epam.touragency.config.WebAppTestContext;
+import by.epam.touragency.entity.User;
 import by.epam.touragency.logic.UpdateUserLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.resource.MessageManager;
@@ -73,7 +74,7 @@ class ChangePhoneNumberCommandTest {
     void executeSuccess() throws Exception {
         when(updateUserLogic.checkPrincipal()).thenReturn(false);
         when(validation.validatePhoneNumber(anyString())).thenReturn(true);
-        when(updateUserLogic.updatePhoneNumber(anyString(), anyString(), anyString())).thenReturn(true);
+        when(updateUserLogic.updatePhoneNumber(any(User.class), anyString(), anyString())).thenReturn(true);
         mockMvc.perform(post("/change_phone_number")
                 .sessionAttr(PARAM_NAME_USER_LOGIN, "login")
                 .param(PARAM_NAME_NEW_PHONE_NUMBER, "newPhoneNumber")
@@ -89,7 +90,7 @@ class ChangePhoneNumberCommandTest {
         when(updateUserLogic.checkPrincipal()).thenReturn(false);
         when(updateUserLogic.checkPrincipal()).thenReturn(false);
         when(validation.validatePhoneNumber(anyString())).thenReturn(true);
-        when(updateUserLogic.updatePhoneNumber(anyString(), anyString(), anyString())).thenReturn(false);
+        when(updateUserLogic.updatePhoneNumber(any(User.class), anyString(), anyString())).thenReturn(false);
         when(messageManager.getProperty(eq(PHONE_NUMBER_EXISTS_MSG_KEY), any(Locale.class))).thenReturn("phoneNumberExists");
         mockMvc.perform(post("/change_phone_number")
                 .sessionAttr(PARAM_NAME_USER_LOGIN, "login")

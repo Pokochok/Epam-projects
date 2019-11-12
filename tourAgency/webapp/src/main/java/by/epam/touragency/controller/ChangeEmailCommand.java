@@ -35,33 +35,27 @@ public class ChangeEmailCommand {
     public ModelAndView execute(
             @RequestParam(value = ParameterConstant.PARAM_NAME_NEW_EMAIL) String email,
             @SessionAttribute(value = ParameterConstant.ATTR_NAME_LANGUAGE, required = false) Locale language
-    )  {
+    ) {
         if (language == null) {
             language = new Locale(ParameterConstant.EN_LOCALE);
         }
-        String login = null;
-        String role = null;
-        User user = null;
-        if (updateUserLogic.checkPrincipal()) {
-            UserPrincipal userDetails = (UserPrincipal) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-            role = userDetails.getUserRole().toString();
-            login = userDetails.getUsername();
-            user = userDetails.getUser();
+
+        ModelAndView modelAndView = new ModelAndView(ConfigurationManager.getProperty(PageMsgConstant.USER_PROFILE_PAGE_PATH));
+        if (!updateUserLogic.checkPrincipal()) {
+            return modelAndView;
         }
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName(ConfigurationManager.getProperty(PageMsgConstant.USER_PROFILE_PAGE_PATH));
+        UserPrincipal userDetails = updateUserLogic.getUserPrincipal();
+        String login = userDetails.getUsername();
+        User user = userDetails.getUser();
         if (!validation.validateEmail(email) || !validation.validateLogin(login)) {
             return modelAndView;
         }
-            if (updateUserLogic.updateEmail(role, email, login)) {
-                modelAndView.addObject(ParameterConstant.ATTR_NAME_USER_EMAIL, email);
-                if (user != null) {
-                    user.setEmail(email);
-                }
-            } else {
-                modelAndView.addObject(ParameterConstant.ATTR_NAME_ERROR_EMAIL_EXISTS,
-                        messageManager.getProperty(PageMsgConstant.EMAIL_EXISTS_MSG_KEY, language));
-            }
+        if (updateUserLogic.updateEmail(user, email, login)) {
+            modelAndView.addObject(ParameterConstant.ATTR_NAME_USER_EMAIL, email);
+        } else {
+            modelAndView.addObject(ParameterConstant.ATTR_NAME_ERROR_EMAIL_EXISTS,
+                    messageManager.getProperty(PageMsgConstant.EMAIL_EXISTS_MSG_KEY, language));
+        }
         return modelAndView;
     }
 }

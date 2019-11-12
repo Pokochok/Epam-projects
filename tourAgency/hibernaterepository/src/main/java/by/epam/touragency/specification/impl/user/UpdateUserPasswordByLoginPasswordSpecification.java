@@ -7,7 +7,7 @@ import java.util.ArrayDeque;
 
 public class UpdateUserPasswordByLoginPasswordSpecification implements Specification<User> {
     private static final String UPDATE_PASSWORD_BY_LOGIN_PASSWORD_SQL =
-            "UPDATE User SET password=?1 WHERE login=?2 AND password=?3;";
+            "UPDATE User SET password=?1 WHERE login=?2 AND password=?3";
     private String newPassword;
     private String login;
     private String password;

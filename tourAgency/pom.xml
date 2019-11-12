@@ -10,7 +10,6 @@
     <modules>
         <module>webapp</module>
         <module>model</module>
-        <module>controller</module>
         <module>service</module>
         <module>hibernaterepository</module>
         <module>jdbctemplaterepository</module>
@@ -126,6 +125,12 @@
 
     <dependencies>
 
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
+            <version>5.5.2</version>
+            <scope>test</scope>
+        </dependency>
 
 <!--//-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
         <dependency>

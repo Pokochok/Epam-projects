@@ -40,11 +40,9 @@ public class ChangeSurnameCommand {
             language = new Locale(ParameterConstant.EN_LOCALE);
         }
         String login = null;
-        String role = null;
         User user = null;
         if (updateUserLogic.checkPrincipal()) {
             UserPrincipal userDetails = (UserPrincipal) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-            role = userDetails.getUserRole().toString();
             login = userDetails.getUsername();
             user = userDetails.getUser();
         }
@@ -55,9 +53,9 @@ public class ChangeSurnameCommand {
                     messageManager.getProperty(PageMsgConstant.CHANGE_SURNAME_ERROR_MSG_KEY, language));
             return modelAndView;
         }
-        updateUserLogic.updateSurname(role, login, newSurname);
         if (user != null) {
             user.setSurname(newSurname);
+            updateUserLogic.updateSurname(user, login, newSurname);
         }
         modelAndView.addObject(ParameterConstant.ATTR_NAME_USER_SURNAME, newSurname);
         return modelAndView;

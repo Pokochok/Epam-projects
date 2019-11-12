@@ -10,6 +10,7 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +22,7 @@ import org.springframework.stereotype.Service;
 public class UpdateUserLogic {
     @Autowired
     @Qualifier("hibernateUserRepository")
-    Repository<User> userRepository;
+    private Repository<User> userRepository;
 
     @Autowired
     private BCryptPasswordEncoder bCrypt;
@@ -32,18 +33,18 @@ public class UpdateUserLogic {
     /**
      * Updates user email
      *
-     * @param role  user role
+     * @param user  user
      * @param email user email
      * @param login user login
      * @return true, if updating completed successfully, and false - if not
      */
-    public boolean updateEmail(String role, String email, String login) {
-        boolean flag = false;
-        Specification specification = new UpdateUserEmailByLoginSpecification(email, login);
-
-        if (flag = !(matchOfUniqueFieldsDetector.isExistsEmail(email)
-                || !matchOfUniqueFieldsDetector.isExistsLogin(login))) {
-            userRepository.update(null, specification);
+    public boolean updateEmail(User user, String email, String login) {
+        boolean flag = !(matchOfUniqueFieldsDetector.isExistsEmail(email)
+                || !matchOfUniqueFieldsDetector.isExistsLogin(login));
+        if (flag) {
+            Specification specification = new UpdateUserEmailByLoginSpecification(email, login);
+            user.setEmail(email);
+            userRepository.update(user, specification);
         }
         return flag;
     }
@@ -51,18 +52,18 @@ public class UpdateUserLogic {
     /**
      * Updates phone number
      *
-     * @param role           role
+     * @param user           user
      * @param newPhoneNumber new phone number
      * @param login          login
      * @return true, if updating completed successfully, and false - if not
      */
-    public boolean updatePhoneNumber(String role, String newPhoneNumber, String login) {
-        boolean flag = false;
-        Specification specification = new UpdateUserPhoneNumberByLoginSpecification(newPhoneNumber, login);
-
-        if (flag = !(matchOfUniqueFieldsDetector.isExistsPhoneNumber(newPhoneNumber)
-                || !matchOfUniqueFieldsDetector.isExistsLogin(login))) {
-            userRepository.update(null, specification);
+    public boolean updatePhoneNumber(User user, String newPhoneNumber, String login) {
+        boolean flag = !(matchOfUniqueFieldsDetector.isExistsPhoneNumber(newPhoneNumber)
+                || !matchOfUniqueFieldsDetector.isExistsLogin(login));
+        if (flag) {
+            Specification specification = new UpdateUserPhoneNumberByLoginSpecification(newPhoneNumber, login);
+            user.setPhoneNumber(newPhoneNumber);
+            userRepository.update(user, specification);
         }
         return flag;
     }
@@ -70,18 +71,18 @@ public class UpdateUserLogic {
     /**
      * Updates user login
      *
-     * @param role  role
+     * @param user  user
      * @param login login
      * @param email email
      * @return true, if updating completed successfully, and false - if not
      */
-    public boolean updateLogin(String role, String login, String email) {
-        boolean flag = false;
-        Specification specification = new UpdateUserLoginByEmailSpecification(login, email);
-
-        if (flag = !(matchOfUniqueFieldsDetector.isExistsLogin(login)
-                || !matchOfUniqueFieldsDetector.isExistsEmail(email))) {
-            userRepository.update(null, specification);
+    public boolean updateLogin(User user, String login, String email) {
+        boolean flag = !(matchOfUniqueFieldsDetector.isExistsLogin(login)
+                || !matchOfUniqueFieldsDetector.isExistsEmail(email));
+        if (flag) {
+            Specification specification = new UpdateUserLoginByEmailSpecification(login, email);
+            user.setLogin(login);
+            userRepository.update(user, specification);
         }
         return flag;
     }
@@ -89,23 +90,19 @@ public class UpdateUserLogic {
     /**
      * Updates user password
      *
-     * @param role        role
+     * @param user        user
      * @param login       login
      * @param password    password
      * @param newPassword new password
      * @return true, if updating completed successfully, and false - if not
      */
-    public boolean updatePassword(String role, String login, String password, String newPassword) {
-        String encryptedNewPassword = bCrypt.encode(newPassword);
-        boolean flag = false;
-        Specification specificationForValidate = null;
-        Specification specification = null;
-        User user = null;
-        specificationForValidate = new FindUserByLoginSpecification(login);
-        specification = new UpdateUserPasswordByLoginSpecification(login, encryptedNewPassword);
-        user = userRepository.query(specificationForValidate).iterator().next();
-        if (flag = bCrypt.matches(password, user.getPassword())) {
-            userRepository.update(null, specification);
+    public boolean updatePassword(User user, String login, String password, String newPassword) {
+        boolean flag = BCrypt.checkpw(password, user.getPassword());
+        if (flag) {
+            String encryptedNewPassword = BCrypt.hashpw(newPassword, BCrypt.gensalt(12));
+            Specification specification = new UpdateUserPasswordByLoginSpecification(login, encryptedNewPassword);
+            user.setPassword(encryptedNewPassword);
+            userRepository.update(user, specification);
         }
         return flag;
     }
@@ -113,17 +110,17 @@ public class UpdateUserLogic {
     /**
      * Updates user name
      *
-     * @param role    role
+     * @param user    user
      * @param login   login
      * @param newName new name
      * @return true, if updating completed successfully, and false - if not
      */
-    public boolean updateName(String role, String login, String newName) {
+    public boolean updateName(User user, String login, String newName) {
         Specification specification = new UpdateUserNameByLoginSpecification(newName, login);
 
-        boolean flag = false;
-        if (flag = matchOfUniqueFieldsDetector.isExistsLogin(login)) {
-            userRepository.update(null, specification);
+        boolean flag = matchOfUniqueFieldsDetector.isExistsLogin(login);
+        if (flag) {
+            userRepository.update(user, specification);
         }
         return flag;
     }
@@ -131,17 +128,17 @@ public class UpdateUserLogic {
     /**
      * Updates user surname
      *
-     * @param role       role
+     * @param user       user
      * @param login      login
      * @param newSurname new surname
      * @return true, if updating completed successfully, and false - if not
      */
-    public boolean updateSurname(String role, String login, String newSurname) {
+    public boolean updateSurname(User user, String login, String newSurname) {
         Specification specification = new UpdateUserSurnameByLoginSpecification(newSurname, login);
 
-        boolean flag = false;
-        if (flag = matchOfUniqueFieldsDetector.isExistsLogin(login)) {
-            userRepository.update(null, specification);
+        boolean flag = matchOfUniqueFieldsDetector.isExistsLogin(login);
+        if (flag) {
+            userRepository.update(user, specification);
         }
         return flag;
     }

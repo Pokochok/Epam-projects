@@ -3,22 +3,25 @@ package by.epam.touragency.util;
 
 import by.epam.touragency.config.WebAppTestContext;
 import junit.framework.Assert;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.NullAndEmptySource;
+import org.junit.jupiter.params.provider.ValueSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.junit.jupiter.web.SpringJUnitWebConfig;
 
 @SpringJUnitWebConfig(WebAppTestContext.class)
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class ValidationTest {
-    @Autowired
-    Validation validation;
+    Validation validation = new Validation();
 
     @Test
     public void testValidateNameValid() {
         boolean actual = validation.validateName("Alexander");
         Assert.assertTrue(actual);
     }
+
     @Test
     public void testValidateNameInvalid() {
         boolean actual = validation.validateName("Alexander23*&");
@@ -97,15 +100,20 @@ public class ValidationTest {
         Assert.assertFalse(actual);
     }
 
-    @Test
-    public void testValidateNumberOfPeopleValid() {
-        boolean actual = validation.validateNumberOfPeople("5");
+    @DisplayName("Valid people number parameter")
+    @ParameterizedTest
+    @ValueSource(strings = {"0", "1", "2", "49", "50"})
+    public void testValidateNumberOfPeople_Valid_True(String numberOfPeople) {
+        boolean actual = validation.validateNumberOfPeople(numberOfPeople);
         Assert.assertTrue(actual);
     }
 
-    @Test
-    public void testValidateNumberOfPeopleInvalid() {
-        boolean actual = validation.validateNumberOfPeople("5ghd");
+    @DisplayName("Invalid people number parameter")
+    @ParameterizedTest
+    @NullAndEmptySource
+    @ValueSource(strings = {"-1", "abc", " ", "/"})
+    public void testValidateNumberOfPeople_Invalid_False(String numberOfPeople) {
+        boolean actual = validation.validateNumberOfPeople(numberOfPeople);
         Assert.assertFalse(actual);
     }
 
@@ -121,15 +129,18 @@ public class ValidationTest {
         Assert.assertFalse(actual);
     }
 
-    @Test
-    public void testValidateTicketNumbersValid() {
-        boolean actual = validation.validateTicketNumbers("3219");
+    @ParameterizedTest
+    @ValueSource(strings = {"0", "2", "1000", "2000000000"})
+    public void testValidateTicketNumbers_Valid_True(String ticketNumber) {
+        boolean actual = validation.validateTicketNumbers(ticketNumber);
         Assert.assertTrue(actual);
     }
 
-    @Test
-    public void testValidateTicketNumbersInvalid() {
-        boolean actual = validation.validateTicketNumbers("3254dc19");
+    @ParameterizedTest
+    @NullAndEmptySource
+    @ValueSource(strings = {"-1", "/", "asd"})
+    public void testValidateTicketNumbers_Invalid_False(String ticketNumber) {
+        boolean actual = validation.validateTicketNumbers(ticketNumber);
         Assert.assertFalse(actual);
     }
 

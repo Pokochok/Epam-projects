@@ -6,7 +6,7 @@ import by.epam.touragency.specification.Specification;
 import java.util.ArrayDeque;
 
 public class FindUserByLoginPasswordSpecification implements Specification<User> {
-    private static final String FIND_SPECIFICATION_SQL_BY_LOGIN_PASSWORD = "FROM User WHERE login=?1 AND password=?2;";
+    private static final String FIND_SPECIFICATION_SQL_BY_LOGIN_PASSWORD = "FROM User WHERE login=?1 AND password=?2";
     private String login;
     private String password;
 

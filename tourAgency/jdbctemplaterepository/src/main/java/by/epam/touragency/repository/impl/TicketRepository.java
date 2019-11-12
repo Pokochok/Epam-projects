@@ -4,6 +4,7 @@ import by.epam.touragency.entity.Ticket;
 import by.epam.touragency.entity.TicketRowMapper;
 import by.epam.touragency.repository.Repository;
 import by.epam.touragency.specification.Specification;
+import by.epam.touragency.specification.impl.ticket.AddTicketSpecification;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 
@@ -36,7 +37,8 @@ public class TicketRepository implements Repository<Ticket> {
 
     @Override
     public void add(Ticket ticket, Specification specification){
-        jdbcTemplate.update(specification.sqlQuery(), ticket.getFlightNumber(), ticket.getTicketNumber(),
+        Specification addSpecification = new AddTicketSpecification(ticket);
+        jdbcTemplate.update(addSpecification.sqlQuery(), ticket.getFlightNumber(), ticket.getTicketNumber(),
                 ticket.getDepartureCity(), ticket.getArrivalCity(), ticket.getDepartureDateTimeLong(),
                 ticket.getArrivalDateTimeLong());
     }

@@ -11,9 +11,11 @@
         <module name="hibernaterepository" />
         <module name="webapp" />
         <module name="service" />
-        <module name="controller" />
         <module name="jdbctemplaterepository" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="controller" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>

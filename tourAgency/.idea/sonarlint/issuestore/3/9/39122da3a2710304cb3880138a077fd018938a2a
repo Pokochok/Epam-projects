@@ -1,39 +1,9 @@
 
-Isquid:S1199G"-Extract this nested code block into a method.(¡–ıùüÿÿÿÿ
-Jsquid:S1199½"-Extract this nested code block into a method.(¡–ıùüÿÿÿÿ
-Jsquid:S1199¯"-Extract this nested code block into a method.(¥’¬…úÿÿÿÿ
-Jsquid:S1199Ñ"-Extract this nested code block into a method.(¡–ıùüÿÿÿÿ
-^$squid:AssignmentInSubExpressionCheck1".Extract the assignment out of this expression.(é™Ò’
-Isquid:S1199}"-Extract this nested code block into a method.(¥’¬…úÿÿÿÿ
-ksquid:S00112–"FDefine and throw a dedicated exception instead of using a generic one.(™Å£Ôÿÿÿÿÿ8¡»‘â-
-d$squid:AssignmentInSubExpressionCheck¨".Extract the assignment out of this expression.(ë§¥áøÿÿÿÿ
-Jsquid:S1199ˆ"-Extract this nested code block into a method.(²”ì‹øÿÿÿÿ
-Isquid:S1199u"-Extract this nested code block into a method.(²”ì‹øÿÿÿÿ
-ksquid:S00112æ"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8…¥º‘â-
-Jsquid:S1199«"-Extract this nested code block into a method.(¡–ıùüÿÿÿÿ
-Jsquid:S1199”"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ
-Jsquid:S1199Œ"-Extract this nested code block into a method.(¡–ıùüÿÿÿÿ
-Isquid:S1199O"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ
-Jsquid:S1199³"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ
-^$squid:AssignmentInSubExpressionCheckc".Extract the assignment out of this expression.(¿¤Ü
-Jsquid:S1199Û"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ
-Jsquid:S1199§"-Extract this nested code block into a method.(²”ì‹øÿÿÿÿ
-d$squid:AssignmentInSubExpressionCheck÷".Extract the assignment out of this expression.(ë§¥áøÿÿÿÿ
-Jsquid:S1199Ì"-Extract this nested code block into a method.(²”ì‹øÿÿÿÿ
-Jsquid:S1199"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ
-Isquid:S1199y"-Extract this nested code block into a method.(¡–ıùüÿÿÿÿ
-_$squid:AssignmentInSubExpressionCheck•".Extract the assignment out of this expression.(ƒ¯®Û
-Jsquid:S1199Ö"-Extract this nested code block into a method.(¥’¬…úÿÿÿÿ
-Jsquid:S1199Å"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ
-Jsquid:S1199Á"-Extract this nested code block into a method.(¥’¬…úÿÿÿÿ
-ksquid:S00112µ"FDefine and throw a dedicated exception instead of using a generic one.(™Å£Ôÿÿÿÿÿ8Ó¤¸‘â-
-Isquid:S1199K"-Extract this nested code block into a method.(¥’¬…úÿÿÿÿ
-^$squid:AssignmentInSubExpressionCheckâ".Extract the assignment out of this expression.(ÿÖğ6
-ksquid:S00112ƒ"FDefine and throw a dedicated exception instead of using a generic one.(™Å£Ôÿÿÿÿÿ8ø•·‘â-
-ksquid:S00112Ç"FDefine and throw a dedicated exception instead of using a generic one.(™Å£Ôÿÿÿÿÿ8Á»‘â-
-Jsquid:S1199¹"-Extract this nested code block into a method.(²”ì‹øÿÿÿÿ
-Isquid:S1199C"-Extract this nested code block into a method.(²”ì‹øÿÿÿÿ
-jsquid:S00112Q"FDefine and throw a dedicated exception instead of using a generic one.(™Å£Ôÿÿÿÿÿ8¾™¶‘â-
-ksquid:S00112İ"FDefine and throw a dedicated exception instead of using a generic one.(™Å£Ôÿÿÿÿÿ8î††”â-
-usquid:S1192Q"YDefine a constant instead of duplicating this literal "User role is not defined" 6 times.(™Å£Ôÿÿÿÿÿ
-Jsquid:S1199"-Extract this nested code block into a method.(¥’¬…úÿÿÿÿ
+^$squid:AssignmentInSubExpressionCheck?".Extract the assignment out of this expression.(¿¤Ü
+c$squid:AssignmentInSubExpressionCheck}".Extract the assignment out of this expression.(ë§¥áøÿÿÿÿ
+]$squid:AssignmentInSubExpressionCheckk".Extract the assignment out of this expression.(ÿÖğ6
+^$squid:AssignmentInSubExpressionCheck,".Extract the assignment out of this expression.(é™Ò’
+^$squid:AssignmentInSubExpressionCheckR".Extract the assignment out of this expression.(ƒ¯®Û
+lsquid:UselessImportCheck	"<Remove this unused import 'org.apache.logging.log4j.Logger'.(»¯øÿÿÿÿ8Í½¢âã-
+ksquid:UselessImportCheck"@Remove this unused import 'org.apache.logging.log4j.LogManager'.(Ë”Ëé8Í½¢âã-
+d$squid:AssignmentInSubExpressionCheck".Extract the assignment out of this expression.(ë§¥áøÿÿÿÿ

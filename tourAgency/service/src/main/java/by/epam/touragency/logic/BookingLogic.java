@@ -5,7 +5,6 @@ import by.epam.touragency.entity.Ticket;
 import by.epam.touragency.entity.Tour;
 import by.epam.touragency.entity.User;
 import by.epam.touragency.repository.Repository;
-import by.epam.touragency.repository.impl.TicketRepository;
 import by.epam.touragency.repository.impl.TourRepository;
 import by.epam.touragency.repository.impl.UserRepository;
 import by.epam.touragency.specification.Specification;
@@ -30,6 +29,10 @@ public class BookingLogic {
     @Autowired
     @Qualifier("orderRepository")
     private Repository<Order> orderRepository;
+
+    @Autowired
+    @Qualifier("hibernateTicketRepository")
+    private Repository<Ticket> ticketRepository;
 
     @Autowired
     private Validation validation;
@@ -93,7 +96,7 @@ public class BookingLogic {
         Set<User> clients = null;
         Set<User> agents = null;
 
-        tickets = TicketRepository.getInstance().query(ticketQuery);
+        tickets = ticketRepository.query(ticketQuery);
         clients = UserRepository.getInstance().query(clientQuery);
         agents = UserRepository.getInstance().query(agentQuery);
         tours = TourRepository.getInstance().query(tourQuery);

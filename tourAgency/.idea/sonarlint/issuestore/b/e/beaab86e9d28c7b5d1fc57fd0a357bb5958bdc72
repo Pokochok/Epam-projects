@@ -1,7 +1,6 @@
 
-Lsquid:S1854>"5Remove this useless assignment to local variable "c".(τ„Ό­
-Msquid:S2696@"6Make the enclosing method "static" or remove this set.(™ο™ΰ
-esquid:S1192?"IDefine a constant instead of duplicating this literal "postgres" 3 times.(‡°ωϋÿÿÿÿ
-ksquid:S00100b"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²°΄Εÿÿÿÿÿ
-_squid:S2095>"HUse try-with-resources or close this "Connection" in a "finally" clause.(τ„Ό­
-=squid:S1481>"&Remove this unused "c" local variable.(τ„Ό­
+rsquid:S00100a"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²°΄Εÿÿÿÿÿ8ίοίγ-
+lsquid:S1192>"IDefine a constant instead of duplicating this literal "postgres" 3 times.(‡°ωϋÿÿÿÿ8ίοίγ-
+¥%squid:RedundantThrowsDeclarationCheck;"nRemove the declaration of thrown exception 'java.sql.SQLException', as it cannot be thrown from method's body.(ΧίX8ίοίγ-
+[squid:UselessImportCheck"0Remove this unused import 'java.sql.Connection'.(¥ΛτΦ8ίοίγ-
+Tsquid:S2696?"6Make the enclosing method "static" or remove this set.(™ο™ΰ8ίοίγ-

@@ -75,7 +75,7 @@ class ChangePasswordCommandTest {
         when(updateUserLogic.checkPrincipal()).thenReturn(false);
         when(validation.validatePassword(anyString())).thenReturn(true);
         when(messageManager.getProperty(eq(CHANGE_PASSWORD_SUCCESS_MSG_KEY), any(Locale.class))).thenReturn("newPassword");
-        when(updateUserLogic.updatePassword(anyString(), anyString(), anyString(), anyString())).thenReturn(true);
+        when(updateUserLogic.updatePassword(any(), anyString(), anyString(), anyString())).thenReturn(true);
         mockMvc.perform(post("/change_password")
                 .sessionAttr(PARAM_NAME_USER_LOGIN, "login")
                 .param(PARAM_NAME_NEW_PASSWORD, "newPassword")
@@ -91,7 +91,7 @@ class ChangePasswordCommandTest {
     void executeLoginExists() throws Exception {
         when(updateUserLogic.checkPrincipal()).thenReturn(false);
         when(validation.validatePassword(anyString())).thenReturn(true);
-        when(updateUserLogic.updatePassword(anyString(), anyString(), anyString(), anyString())).thenReturn(false);
+        when(updateUserLogic.updatePassword(any(), anyString(), anyString(), anyString())).thenReturn(false);
         when(messageManager.getProperty(eq(CHANGE_PASSWORD_NOT_FIND_MSG_KEY), any(Locale.class))).thenReturn("userNotFind");
         mockMvc.perform(post("/change_password")
                 .sessionAttr(PARAM_NAME_USER_LOGIN, "login")

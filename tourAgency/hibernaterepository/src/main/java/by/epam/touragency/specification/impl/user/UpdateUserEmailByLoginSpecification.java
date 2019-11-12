@@ -7,7 +7,7 @@ import java.util.ArrayDeque;
 
 public class UpdateUserEmailByLoginSpecification implements Specification<User> {
     private static final String UPDATE_EMAIL_SPECIFICATION_SQL_BY_LOGIN =
-            "UPDATE User SET email=?1 WHERE login=?2;";
+            "UPDATE User SET email=?1 WHERE login=?2";
     private String email;
     private String login;
 

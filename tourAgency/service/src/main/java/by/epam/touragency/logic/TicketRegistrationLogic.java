@@ -1,10 +1,11 @@
 package by.epam.touragency.logic;
 
 import by.epam.touragency.entity.Ticket;
-import by.epam.touragency.repository.impl.TicketRepository;
+import by.epam.touragency.repository.Repository;
 import by.epam.touragency.specification.Specification;
-import by.epam.touragency.specification.impl.ticket.AddTicketSpecification;
 import by.epam.touragency.specification.impl.ticket.FindTicketsByAllContentSpecification;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 /**
@@ -12,6 +13,11 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class TicketRegistrationLogic {
+
+    @Autowired
+    @Qualifier("hibernateTicketRepository")
+    private Repository<Ticket> ticketRepository;
+
     /**
      * Checks, if ticket with such parameters exists
      *
@@ -25,13 +31,9 @@ public class TicketRegistrationLogic {
      */
     public boolean isTicketExists(String flightNumber, String ticketNumber, String departureCity,
                                   String arrivalCity, long departureDate, long arrivalDate) {
-        boolean flag = false;
         Specification specificationForValidate = new FindTicketsByAllContentSpecification(Integer.parseInt(flightNumber),
                 Integer.parseInt(ticketNumber), departureCity, arrivalCity, departureDate, arrivalDate);
-        if (TicketRepository.getInstance().isExistsQuery(specificationForValidate)) {
-            flag = true;
-        }
-        return flag;
+        return ticketRepository.isExistsQuery(specificationForValidate);
     }
 
     /**
@@ -53,8 +55,6 @@ public class TicketRegistrationLogic {
                 .setArrivalCity(arrivalCity)
                 .setDepartureDateTime(departureDate)
                 .setArrivalDateTime(arrivalDate).build();
-        Specification specification = new AddTicketSpecification(ticket);
-        TicketRepository.getInstance().add(ticket, specification);
-
+        ticketRepository.add(ticket, null);
     }
 }

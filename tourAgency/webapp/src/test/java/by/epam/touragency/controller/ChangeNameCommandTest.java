@@ -1,6 +1,7 @@
 package by.epam.touragency.controller;
 
 import by.epam.touragency.config.WebAppTestContext;
+import by.epam.touragency.entity.User;
 import by.epam.touragency.logic.UpdateUserLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.resource.MessageManager;
@@ -72,7 +73,7 @@ class ChangeNameCommandTest {
     void executeSuccess() throws Exception {
         when(updateUserLogic.checkPrincipal()).thenReturn(false);
         when(validation.validateName(anyString())).thenReturn(true);
-        when(updateUserLogic.updateName(anyString(), anyString(), anyString())).thenReturn(true);
+        when(updateUserLogic.updateName(any(User.class), anyString(), anyString())).thenReturn(true);
         mockMvc.perform(post("/change_user_name")
                 .sessionAttr(PARAM_NAME_USER_LOGIN, "login")
                 .param(PARAM_NAME_NEW_NAME, "newName")

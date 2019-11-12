@@ -7,6 +7,8 @@ import by.epam.touragency.specification.Specification;
 import com.opentable.db.postgres.embedded.EmbeddedPostgres;
 import org.flywaydb.core.Flyway;
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
@@ -66,7 +68,7 @@ public class UpdateUserLogicTest {
     public void testUpdateEmailTrue(){
         when(matchOfUniqueFieldsDetector.isExistsEmail(anyString())).thenReturn(false);
         when(matchOfUniqueFieldsDetector.isExistsLogin(anyString())).thenReturn(true);
-        boolean actual = updateUserLogic.updateEmail("AGENT", "notdefined", "not defined");
+        boolean actual = updateUserLogic.updateEmail(new User(), "notdefined", "not defined");
         Assertions.assertTrue(actual);
     }
 
@@ -74,7 +76,7 @@ public class UpdateUserLogicTest {
     public void testUpdateEmailFalse() {
         when(matchOfUniqueFieldsDetector.isExistsEmail(anyString())).thenReturn(false);
         when(matchOfUniqueFieldsDetector.isExistsLogin(anyString())).thenReturn(false);
-        boolean actual = updateUserLogic.updateEmail("AGENT", "not defined", "login");
+        boolean actual = updateUserLogic.updateEmail(new User(), "not defined", "login");
         Assertions.assertFalse(actual);
     }
 
@@ -82,7 +84,7 @@ public class UpdateUserLogicTest {
     public void testUpdatePhoneNumberTrue() {
         when(matchOfUniqueFieldsDetector.isExistsPhoneNumber(anyString())).thenReturn(false);
         when(matchOfUniqueFieldsDetector.isExistsLogin(anyString())).thenReturn(true);
-        boolean actual = updateUserLogic.updatePhoneNumber("AGENT", "notdefined", "not defined");
+        boolean actual = updateUserLogic.updatePhoneNumber(new User(), "notdefined", "not defined");
         Assertions.assertTrue(actual);
     }
 
@@ -90,7 +92,7 @@ public class UpdateUserLogicTest {
     public void testUpdatePhoneNumberFalse()  {
         when(matchOfUniqueFieldsDetector.isExistsPhoneNumber(anyString())).thenReturn(false);
         when(matchOfUniqueFieldsDetector.isExistsLogin(anyString())).thenReturn(false);
-        boolean actual = updateUserLogic.updatePhoneNumber("AGENT", "not defined", "login");
+        boolean actual = updateUserLogic.updatePhoneNumber(new User(), "not defined", "login");
         Assertions.assertFalse(actual);
     }
 
@@ -98,7 +100,7 @@ public class UpdateUserLogicTest {
     public void testUpdateLoginTrue() {
         when(matchOfUniqueFieldsDetector.isExistsEmail(anyString())).thenReturn(true);
         when(matchOfUniqueFieldsDetector.isExistsLogin(anyString())).thenReturn(false);
-        boolean actual = updateUserLogic.updateLogin("AGENT", "notdefined", "not defined");
+        boolean actual = updateUserLogic.updateLogin(new User(), "notdefined", "not defined");
         Assertions.assertTrue(actual);
     }
 
@@ -106,7 +108,7 @@ public class UpdateUserLogicTest {
     public void testUpdateLoginFalse() {
         when(matchOfUniqueFieldsDetector.isExistsEmail(anyString())).thenReturn(true);
         when(matchOfUniqueFieldsDetector.isExistsLogin(anyString())).thenReturn(true);
-        boolean actual = updateUserLogic.updateLogin("AGENT", "not defined", "email");
+        boolean actual = updateUserLogic.updateLogin(new User(), "not defined", "email");
         Assertions.assertFalse(actual);
     }
 
@@ -118,7 +120,7 @@ public class UpdateUserLogicTest {
         when(userHashSet.iterator()).thenReturn(iterator);
         when(iterator.next()).thenReturn(new User.UserBuilder().build());
         doNothing().when(userRepository).update(any(), any(Specification.class));
-        boolean actual = updateUserLogic.updatePassword("AGENT", "not defined", "1234567890", "1234567890");
+        boolean actual = updateUserLogic.updatePassword(new User(), "not defined", "1234567890", "1234567890");
         Assertions.assertTrue(actual);
     }
 
@@ -130,7 +132,7 @@ public class UpdateUserLogicTest {
         when(userHashSet.iterator()).thenReturn(iterator);
         when(iterator.next()).thenReturn(new User.UserBuilder().build());
         doNothing().when(userRepository).update(any(), any(Specification.class));
-        boolean actual = updateUserLogic.updatePassword("CLIENT", "not defined", "1234567890", "1234567890");
+        boolean actual = updateUserLogic.updatePassword(new User(), "not defined", "1234567890", "1234567890");
         Assertions.assertTrue(actual);
     }
     @Test
@@ -141,7 +143,7 @@ public class UpdateUserLogicTest {
         when(userHashSet.iterator()).thenReturn(iterator);
         when(iterator.next()).thenReturn(new User.UserBuilder().build());
         doNothing().when(userRepository).update(any(), any(Specification.class));
-        boolean actual = updateUserLogic.updatePassword("ADMIN", "not defined", "1234567890", "1234567890");
+        boolean actual = updateUserLogic.updatePassword(new User(), "not defined", "1234567890", "1234567890");
         Assertions.assertTrue(actual);
     }
     @Test
@@ -152,7 +154,7 @@ public class UpdateUserLogicTest {
         when(userHashSet.iterator()).thenReturn(iterator);
         when(iterator.next()).thenReturn(new User.UserBuilder().build());
         doNothing().when(userRepository).update(any(), any(Specification.class));
-        boolean actual = updateUserLogic.updatePassword("AGENT", "not defined", "1234567890", "1234567890");
+        boolean actual = updateUserLogic.updatePassword(new User(), "not defined", "1234567890", "1234567890");
         Assertions.assertFalse(actual);
     }
     @Test
@@ -163,7 +165,7 @@ public class UpdateUserLogicTest {
         when(userHashSet.iterator()).thenReturn(iterator);
         when(iterator.next()).thenReturn(new User.UserBuilder().build());
         doNothing().when(userRepository).update(any(), any(Specification.class));
-        boolean actual = updateUserLogic.updatePassword("CLIENT", "not defined", "1234567890", "1234567890");
+        boolean actual = updateUserLogic.updatePassword(new User(), "not defined", "1234567890", "1234567890");
         Assertions.assertFalse(actual);
     }
     @Test
@@ -174,35 +176,35 @@ public class UpdateUserLogicTest {
         when(userHashSet.iterator()).thenReturn(iterator);
         when(iterator.next()).thenReturn(new User.UserBuilder().build());
         doNothing().when(userRepository).update(any(), any(Specification.class));
-        boolean actual = updateUserLogic.updatePassword("ADMIN", "not defined", "1234567890", "1234567890");
+        boolean actual = updateUserLogic.updatePassword(new User(), "not defined", "1234567890", "1234567890");
         Assertions.assertFalse(actual);
     }
 
     @Test
     public void testUpdateNameTrue() {
         when(matchOfUniqueFieldsDetector.isExistsLogin(anyString())).thenReturn(true);
-        boolean actual = updateUserLogic.updateName("AGENT", "not defined", "not defined");
+        boolean actual = updateUserLogic.updateName(new User(), "not defined", "not defined");// FIXME: 11/11/2019
         Assertions.assertTrue(actual);
     }
 
     @Test
     public void testUpdateNameFalse(){
         when(matchOfUniqueFieldsDetector.isExistsLogin(anyString())).thenReturn(false);
-        boolean actual = updateUserLogic.updateName("AGENT", "login", "not defined");
+        boolean actual = updateUserLogic.updateName(new User(), "login", "not defined");// FIXME: 11/11/2019
         Assertions.assertFalse(actual);
     }
 
     @Test
     public void testUpdateSurnameTrue() {
         when(matchOfUniqueFieldsDetector.isExistsLogin(anyString())).thenReturn(true);
-        boolean actual = updateUserLogic.updateSurname("AGENT", "not defined", "not defined");
+        boolean actual = updateUserLogic.updateSurname(new User(), "not defined", "not defined");
         Assertions.assertTrue(actual);
     }
 
     @Test
     public void testUpdateSurnameFalse()  {
         when(matchOfUniqueFieldsDetector.isExistsLogin(anyString())).thenReturn(false);
-        boolean actual = updateUserLogic.updateSurname("AGENT", "login", "not defined");
+        boolean actual = updateUserLogic.updateSurname(new User(), "login", "not defined");
         Assertions.assertFalse(actual);
     }
 }

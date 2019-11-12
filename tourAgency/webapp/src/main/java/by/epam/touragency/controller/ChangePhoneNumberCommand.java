@@ -40,11 +40,9 @@ public class ChangePhoneNumberCommand {
             language = new Locale(ParameterConstant.EN_LOCALE);
         }
         String login = null;
-        String role = null;
         User user = null;
         if (updateUserLogic.checkPrincipal()) {
             UserPrincipal userDetails = (UserPrincipal) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-            role = userDetails.getUserRole().toString();
             login = userDetails.getUsername();
             user = userDetails.getUser();
         }
@@ -55,14 +53,13 @@ public class ChangePhoneNumberCommand {
                     messageManager.getProperty(PageMsgConstant.CHANGE_PN_ERROR_MSG_KEY, language));
             return modelAndView;
         }
-        if (updateUserLogic.updatePhoneNumber(role, newPhoneNumber, login)) {
-            modelAndView.addObject(ParameterConstant.ATTR_NAME_USER_PHONE_NUMBER, newPhoneNumber);
-            if (user != null) {
-                user.setPhoneNumber(newPhoneNumber);
+        if (user != null) {
+            if (updateUserLogic.updatePhoneNumber(user, newPhoneNumber, login)) {
+                modelAndView.addObject(ParameterConstant.ATTR_NAME_USER_PHONE_NUMBER, newPhoneNumber);
+            } else {
+                modelAndView.addObject(ParameterConstant.ATTR_NAME_ERROR_PN_EXISTS,
+                        messageManager.getProperty(PageMsgConstant.PHONE_NUMBER_EXISTS_MSG_KEY, language));
             }
-        } else {
-            modelAndView.addObject(ParameterConstant.ATTR_NAME_ERROR_PN_EXISTS,
-                    messageManager.getProperty(PageMsgConstant.PHONE_NUMBER_EXISTS_MSG_KEY, language));
         }
         return modelAndView;
     }

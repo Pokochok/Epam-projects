@@ -1,20 +1,41 @@
 package by.epam.touragency.entity;
 
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Objects;
-
+@Entity
+@Table(name = "tickets")
 public class Ticket {
+    @Id
+    @GeneratedValue(
+            generator="generator"
+    )
+    @GenericGenerator(
+            name = "generator",
+            strategy = "increment"
+    )
     private int id;
+    @Column(name = "flight_number")
     private int flightNumber;
+    @Column(name = "ticket_number")
     private int ticketNumber;
+    @Column(name = "departure_city")
     private String departureCity;
+    @Column(name = "arrival_city")
     private String arrivalCity;
+    @Column(name = "departure_datetime")
     private long departureDateTime;
+    @Column(name = "arrival_datetime")
     private long arrivalDateTime;
 
+    public Ticket() {
+    }
+
     private Ticket(int id, int flightNumber, int ticketNumber, String departureCity, String arrivalCity,
-                  long departureDateTime, long arrivalDateTime) {
+                   long departureDateTime, long arrivalDateTime) {
         this.id = id;
         this.flightNumber = flightNumber;
         this.ticketNumber = ticketNumber;

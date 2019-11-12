@@ -6,7 +6,7 @@ import by.epam.touragency.specification.Specification;
 import java.util.ArrayDeque;
 
 public class FindUserByPhoneNumberSpecification implements Specification<User> {
-    private static final String FIND_SPECIFICATION_SQL_BY_PHONE_NUMBER = "FROM users WHERE phone_number=?1;";
+    private static final String FIND_SPECIFICATION_SQL_BY_PHONE_NUMBER = "FROM User WHERE phone_number=?1";
     private String phoneNumber;
 
     public FindUserByPhoneNumberSpecification(String phoneNumber) {

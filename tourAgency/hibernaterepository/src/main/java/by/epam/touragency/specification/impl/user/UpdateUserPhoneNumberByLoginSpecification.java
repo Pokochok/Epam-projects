@@ -7,7 +7,7 @@ import java.util.ArrayDeque;
 
 public class UpdateUserPhoneNumberByLoginSpecification implements Specification<User> {
     private static final String UPDATE_PHONE_SPECIFICATION_SQL_BY_LOGIN =
-            "UPDATE user SET phone_number=?1 WHERE login=?2;";
+            "UPDATE user SET phone_number=?1 WHERE login=?2";
     private String phoneNumber;
     private String login;
 

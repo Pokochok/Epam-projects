@@ -5,7 +5,7 @@ import by.epam.touragency.entity.Role;
 import by.epam.touragency.entity.Ticket;
 import by.epam.touragency.entity.Tour;
 import by.epam.touragency.repository.Repository;
-import by.epam.touragency.repository.impl.TicketRepository;
+import by.epam.touragency.repository.impl.HibernateTicketRepository;
 import by.epam.touragency.repository.impl.TourRepository;
 import by.epam.touragency.specification.Specification;
 import by.epam.touragency.specification.impl.order.FindAllOrdersSpecification;
@@ -29,6 +29,10 @@ public class ToPageWithListLogic {
     @Qualifier("orderRepository")
     private Repository<Order> orderRepository;
 
+    @Autowired
+    @Qualifier("hibernateTicketRepository")
+    private Repository<Ticket> ticketRepository;
+
     /**
      * Creates ticket set
      *
@@ -36,9 +40,8 @@ public class ToPageWithListLogic {
      */
     public Set<Ticket> getTicketSet() {
         Specification specification = new FindAllTicketsSpecification();
-        TicketRepository repository = TicketRepository.getInstance();
         Set<Ticket> ticketSet = null;
-        ticketSet = repository.query(specification);
+        ticketSet = ticketRepository.query(specification);
         return ticketSet;
     }
 

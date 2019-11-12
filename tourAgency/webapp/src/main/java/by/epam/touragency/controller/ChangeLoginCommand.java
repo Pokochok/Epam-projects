@@ -1,5 +1,6 @@
 package by.epam.touragency.controller;
 
+import by.epam.touragency.entity.User;
 import by.epam.touragency.entity.UserPrincipal;
 import by.epam.touragency.logic.UpdateUserLogic;
 import by.epam.touragency.resource.ConfigurationManager;
@@ -37,21 +38,20 @@ public class ChangeLoginCommand {
         if (language == null) {
             language = new Locale(ParameterConstant.EN_LOCALE);
         }
+        ModelAndView modelAndView = new ModelAndView(ConfigurationManager.getProperty(PageMsgConstant.USER_PROFILE_PAGE_PATH));
         if (!updateUserLogic.checkPrincipal()) {
-            return new ModelAndView(ConfigurationManager.getProperty(PageMsgConstant.USER_PROFILE_PAGE_PATH));
+            return modelAndView;
         }
         UserPrincipal userDetails = updateUserLogic.getUserPrincipal();
-        String role = userDetails.getUserRole().toString();
+        User user = userDetails.getUser();
         String email = userDetails.getUserEmail();
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName(ConfigurationManager.getProperty(PageMsgConstant.USER_PROFILE_PAGE_PATH));
         if (!validation.validateLogin(login)) {
             modelAndView.addObject(ParameterConstant.ATTR_NAME_ERROR_CHANGE_LOGIN,
                     messageManager.getProperty(PageMsgConstant.CHANGE_LOGIN_ERROR_MSG_KEY, language));
             return modelAndView;
         }
 
-        if (updateUserLogic.updateLogin(role, login, email)) {
+        if (updateUserLogic.updateLogin(user, login, email)) {
             modelAndView.addObject(ParameterConstant.ATTR_NAME_USER_LOGIN, login);
         } else {
             modelAndView.addObject(ParameterConstant.ATTR_NAME_ERROR_LOGIN_EXISTS,

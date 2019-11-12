@@ -80,7 +80,7 @@ class ChangeLoginCommandTest {
         when(userPrincipal.getUserEmail()).thenReturn("email");
         when(validation.validateEmail(anyString())).thenReturn(true);
         when(validation.validateLogin(anyString())).thenReturn(true);
-        when(updateUserLogic.updateLogin(anyString(), anyString(), anyString())).thenReturn(true);
+        when(updateUserLogic.updateLogin(any(), anyString(), anyString())).thenReturn(true);
         mockMvc.perform(post("/change_login")
                 .param(PARAM_NAME_NEW_LOGIN, "newLogin"))
                 .andExpect(status().isOk())
@@ -97,7 +97,7 @@ class ChangeLoginCommandTest {
         when(userPrincipal.getUserEmail()).thenReturn("email");
         when(validation.validateEmail(anyString())).thenReturn(true);
         when(validation.validateLogin(anyString())).thenReturn(true);
-        when(updateUserLogic.updateLogin(anyString(), anyString(), anyString())).thenReturn(true);
+        when(updateUserLogic.updateLogin(any(), anyString(), anyString())).thenReturn(true);
         mockMvc.perform(post("/change_login")
                 .param(PARAM_NAME_NEW_LOGIN, "newLogin"))
                 .andExpect(status().isOk())
@@ -114,7 +114,7 @@ class ChangeLoginCommandTest {
         when(userPrincipal.getUserEmail()).thenReturn("email");
         when(validation.validateEmail(anyString())).thenReturn(true);
         when(validation.validateLogin(anyString())).thenReturn(true);
-        when(updateUserLogic.updateLogin(anyString(), anyString(), anyString())).thenReturn(true);
+        when(updateUserLogic.updateLogin(any(), anyString(), anyString())).thenReturn(true);
         mockMvc.perform(post("/change_login")
                 .param(PARAM_NAME_NEW_LOGIN, "newLogin"))
                 .andExpect(status().isOk())
@@ -131,7 +131,7 @@ class ChangeLoginCommandTest {
         when(userPrincipal.getUserEmail()).thenReturn("email");
         when(validation.validateEmail(anyString())).thenReturn(true);
         when(validation.validateLogin(anyString())).thenReturn(true);
-        when(updateUserLogic.updateLogin(anyString(), anyString(), anyString())).thenReturn(false);
+        when(updateUserLogic.updateLogin(any(), anyString(), anyString())).thenReturn(false);
         when(messageManager.getProperty(eq(LOGIN_EXISTS_MSG_KEY), any())).thenReturn("loginExists");
         mockMvc.perform(post("/change_login")
                 .param(PARAM_NAME_NEW_LOGIN, "newLogin"))
@@ -150,7 +150,7 @@ class ChangeLoginCommandTest {
         when(userPrincipal.getUserEmail()).thenReturn("email");
         when(validation.validateEmail(anyString())).thenReturn(true);
         when(validation.validateLogin(anyString())).thenReturn(true);
-        when(updateUserLogic.updateLogin(anyString(), anyString(), anyString())).thenReturn(false);
+        when(updateUserLogic.updateLogin(any(), anyString(), anyString())).thenReturn(false);
         when(messageManager.getProperty(eq(LOGIN_EXISTS_MSG_KEY), any())).thenReturn("loginExists");
         mockMvc.perform(post("/change_login")
                 .param(PARAM_NAME_NEW_LOGIN, "newLogin"))
@@ -169,7 +169,7 @@ class ChangeLoginCommandTest {
         when(userPrincipal.getUserEmail()).thenReturn("email");
         when(validation.validateEmail(anyString())).thenReturn(true);
         when(validation.validateLogin(anyString())).thenReturn(true);
-        when(updateUserLogic.updateLogin(anyString(), anyString(), anyString())).thenReturn(false);
+        when(updateUserLogic.updateLogin(any(), anyString(), anyString())).thenReturn(false);
         when(messageManager.getProperty(eq(LOGIN_EXISTS_MSG_KEY), any())).thenReturn("loginExists");
         mockMvc.perform(post("/change_login")
                 .param(PARAM_NAME_NEW_LOGIN, "newLogin"))

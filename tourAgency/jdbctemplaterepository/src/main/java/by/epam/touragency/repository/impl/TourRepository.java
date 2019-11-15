@@ -4,6 +4,7 @@ import by.epam.touragency.entity.Tour;
 import by.epam.touragency.entity.TourRowMapper;
 import by.epam.touragency.repository.Repository;
 import by.epam.touragency.specification.Specification;
+import by.epam.touragency.specification.impl.tour.AddTourSpecification;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,8 +40,9 @@ public class TourRepository implements Repository<Tour> {
 
     @Override
     public void add(Tour tour, Specification specification) {
-        jdbcTemplate.update(specification.sqlQuery(), tour.getTourName(), tour.getDepartureDateLong(),
-                tour.getArrivalDateLong(), tour.getDepartureCity(), tour.getArrivalCity(), tour.getArrivalCountry(),
+        Specification addSpecification = new AddTourSpecification(tour);
+        jdbcTemplate.update(addSpecification.sqlQuery(), tour.getTourName(), tour.getDepartureDate(),
+                tour.getArrivalDate(), tour.getDepartureCity(), tour.getArrivalCity(), tour.getArrivalCountry(),
                 tour.getHotel(), tour.getNutrition(), tour.getAdultsNumber(), tour.getChildrenNumber(), tour.getPrice(),
                 tour.getStatus());
     }

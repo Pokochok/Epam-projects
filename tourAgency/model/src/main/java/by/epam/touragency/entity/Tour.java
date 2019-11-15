@@ -1,27 +1,53 @@
 package by.epam.touragency.entity;
 
+import org.hibernate.annotations.GenericGenerator;
+import org.springframework.stereotype.Component;
+
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Objects;
-
+@Entity
+@Component
+@Table(name = "tours", uniqueConstraints = {
+        @UniqueConstraint(columnNames = "tour_name")})
 public class Tour {
+    @Id
+    @GeneratedValue(
+            generator="generator"
+    )
+    @GenericGenerator(
+            name = "generator",
+            strategy = "increment"
+    )
     private int id;
+    @Column(name = "tour_name")
     private String tourName;
+    @Column(name = "departure_date")
     private Long departureDate;
+    @Column(name = "arrival_date")
     private Long arrivalDate;
+    @Column(name = "departure_city")
     private String departureCity;
+    @Column(name = "arrival_city")
     private String arrivalCity;
+    @Column(name = "arrival_country")
     private String arrivalCountry;
     private String hotel;
     private String nutrition;
+    @Column(name = "adults_number")
     private int adultsNumber;
+    @Column(name = "children_number")
     private int childrenNumber;
     private BigDecimal price;
     private String status;
 
-    private Tour(int id, String tourName, Long departureDate, Long arrivalDate, String departureCity, String arrivalCity, String arrivalCountry,
-                String hotel, String nutrition, int adultsNumber, int childrenNumber, BigDecimal price, String status) {
+    public Tour() {
+    }
+
+    public Tour(int id, String tourName, Long departureDate, Long arrivalDate, String departureCity, String arrivalCity, String arrivalCountry,
+                 String hotel, String nutrition, int adultsNumber, int childrenNumber, BigDecimal price, String status) {
         this.id = id;
         this.tourName = tourName;
         this.departureDate = departureDate;
@@ -50,21 +76,21 @@ public class Tour {
         return id;
     }
 
-    public String getDepartureDate() {
+    public String departureDateString() {
         SimpleDateFormat formatForDateNow = new SimpleDateFormat("yyyy-MM-dd");
         return formatForDateNow.format(new Date(departureDate));
     }
 
-    public Long getDepartureDateLong() {
+    public Long getDepartureDate() {
         return departureDate;
     }
 
-    public String getArrivalDate() {
+    public String arrivalDateString() {
         SimpleDateFormat formatForDateNow = new SimpleDateFormat("yyyy-MM-dd");
         return formatForDateNow.format(new Date(arrivalDate));
     }
 
-    public Long getArrivalDateLong() {
+    public Long getArrivalDate() {
         return arrivalDate;
     }
 
@@ -102,6 +128,54 @@ public class Tour {
 
     public BigDecimal getPrice() {
         return price;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setTourName(String tourName) {
+        this.tourName = tourName;
+    }
+
+    public void setDepartureDate(Long departureDate) {
+        this.departureDate = departureDate;
+    }
+
+    public void setArrivalDate(Long arrivalDate) {
+        this.arrivalDate = arrivalDate;
+    }
+
+    public void setDepartureCity(String departureCity) {
+        this.departureCity = departureCity;
+    }
+
+    public void setArrivalCountry(String arrivalCountry) {
+        this.arrivalCountry = arrivalCountry;
+    }
+
+    public void setHotel(String hotel) {
+        this.hotel = hotel;
+    }
+
+    public void setNutrition(String nutrition) {
+        this.nutrition = nutrition;
+    }
+
+    public void setAdultsNumber(int adultsNumber) {
+        this.adultsNumber = adultsNumber;
+    }
+
+    public void setChildrenNumber(int childrenNumber) {
+        this.childrenNumber = childrenNumber;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public static class TourBuilder{

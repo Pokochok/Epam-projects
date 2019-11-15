@@ -24,8 +24,8 @@ public class AddTourSpecification implements Specification<Tour> {
     public ArrayDeque<Object> getParameterQueue() {
         ArrayDeque<Object> values = new ArrayDeque<>(12);
         values.add(tour.getTourName());
-        values.add(tour.getDepartureDateLong());
-        values.add(tour.getArrivalDateLong());
+        values.add(tour.getDepartureDate());
+        values.add(tour.getArrivalDate());
         values.add(tour.getDepartureCity());
         values.add(tour.getArrivalCity());
         values.add(tour.getArrivalCountry());

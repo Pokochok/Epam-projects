@@ -1,5 +1,6 @@
 package by.epam.touragency.controller;
 
+import by.epam.touragency.entity.Tour;
 import by.epam.touragency.logic.UpdateTourLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.resource.MessageManager;
@@ -30,35 +31,38 @@ public class ChangeArrivalDateCommand {
     @Secured("ROLE_ADMIN")
     @PostMapping("/change_arrival_date")
     public ModelAndView execute(
-            @RequestParam(ParameterConstant.PARAM_NAME_DEPARTURE_DATE) String departureDateStr,
+            @RequestParam(ParameterConstant.PARAM_NAME_DEPARTURE_DATE) long departureDate,
             @RequestParam(ParameterConstant.PARAM_NAME_NEW_ARRIVAL_DATE) String newArrivalDateStr,
             @RequestParam(value = ParameterConstant.PARAM_NAME_TOUR_ID) String tourIdStr,
-            @SessionAttribute(value = ParameterConstant.ATTR_NAME_LANGUAGE, required = false) Locale language
+            @SessionAttribute(value = ParameterConstant.ATTR_NAME_LANGUAGE, required = false) Locale language,
+            Tour tour
     ) {
+
         if (language == null) {
             language = new Locale(ParameterConstant.EN_LOCALE);
         }
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName(ConfigurationManager.getProperty(PageMsgConstant.TOUR_OVERVIEW_PAGE_PATH));
+        ModelAndView modelAndView = new ModelAndView(ConfigurationManager.getProperty(PageMsgConstant.TOUR_OVERVIEW_PAGE_PATH));
         if (!validation.validateId(tourIdStr)) {
+            modelAndView.addObject(ParameterConstant.PARAM_NAME_TOUR_INSTANCE, tour);
             return modelAndView;
         }
         int tourId = Integer.parseInt(tourIdStr);
         long newArrivalDate = validation.validateDate(newArrivalDateStr);
-        long departureDate = validation.validateDate(departureDateStr);
-        if (newArrivalDate == -1 || departureDate == -1) {
+        if (newArrivalDate == -1) {
             modelAndView.addObject(ParameterConstant.ATTR_NAME_ERROR_DATE,
                     messageManager.getProperty(PageMsgConstant.DATE_ERROR_MSG_KEY, language));
+            modelAndView.addObject(ParameterConstant.PARAM_NAME_TOUR_INSTANCE, tour);
             return modelAndView;
         }
 
         if (departureDate < newArrivalDate) {
-            updateTourLogic.updateArrivalDate(newArrivalDate, tourId);
-            modelAndView.addObject(ParameterConstant.ATTR_NAME_ARRIVAL_DATE, validation.dateToFormat(newArrivalDate));
+            updateTourLogic.updateArrivalDate(newArrivalDate, tourId, tour);
+            modelAndView.addObject(ParameterConstant.ATTR_NAME_ARRIVAL_DATE, newArrivalDate);
         } else {
             modelAndView.addObject(ParameterConstant.ATTR_NAME_ERROR_DATE,
                     messageManager.getProperty(PageMsgConstant.DATE_ERROR_MSG_KEY, language));
         }
+        modelAndView.addObject(ParameterConstant.PARAM_NAME_TOUR_INSTANCE, tour);
         return modelAndView;
     }
 }

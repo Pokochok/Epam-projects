@@ -8,7 +8,8 @@ public class ParameterConstant {
     public static final String PARAM_NAME_TICKET_ID = "ticketId";
     public static final String PARAM_NAME_CLIENT_ID = "clientId";
     public static final String PARAM_NAME_AGENT_ID = "agentId";
-    public static final String PARAM_NAME_TOUR_ID = "tourId";
+    public static final String PARAM_NAME_TOUR_ID = "id";
+    public static final String PARAM_NAME_TOUR_INSTANCE = "tourInstance";
     public static final String PARAM_NAME_CLIENT_EMAIL = "clientEmail";
     public static final String PARAM_NAME_NEW_ADULTS_NUMBER = "newAdultsNumber";
     public static final String PARAM_NAME_NEW_ARRIVAL_CITY = "newArrivalCity";

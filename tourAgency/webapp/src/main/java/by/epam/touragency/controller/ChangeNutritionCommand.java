@@ -1,5 +1,6 @@
 package by.epam.touragency.controller;
 
+import by.epam.touragency.entity.Tour;
 import by.epam.touragency.logic.UpdateTourLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.util.PageMsgConstant;
@@ -24,17 +25,18 @@ public class ChangeNutritionCommand {
     @PostMapping("/change_nutrition")
     public ModelAndView execute(
             @RequestParam(ParameterConstant.PARAM_NAME_NEW_NUTRITION) String newNutrition,
-            @RequestParam(ParameterConstant.PARAM_NAME_TOUR_ID) String tourIdStr
+            @RequestParam(ParameterConstant.PARAM_NAME_TOUR_ID) String tourIdStr,
+            Tour tour
     ) {
-        ModelAndView modelAndView = new ModelAndView();
+        ModelAndView modelAndView = new ModelAndView(ConfigurationManager.getProperty(PageMsgConstant.TOUR_OVERVIEW_PAGE_PATH));
         if (!validation.validateNutrition(newNutrition) || !validation.validateId(tourIdStr)) {
-            modelAndView.setViewName(ConfigurationManager.getProperty(PageMsgConstant.TOUR_OVERVIEW_PAGE_PATH));
+            modelAndView.addObject(ParameterConstant.PARAM_NAME_TOUR_INSTANCE, tour);
             return modelAndView;
         }
         int tourId = Integer.parseInt(tourIdStr);
-        updateTourLogic.updateNutrition(newNutrition, tourId);
+        updateTourLogic.updateNutrition(newNutrition, tourId, tour);
+        modelAndView.addObject(ParameterConstant.PARAM_NAME_TOUR_INSTANCE, tour);
         modelAndView.addObject(ParameterConstant.ATTR_NAME_NUTRITION, newNutrition);
-        modelAndView.setViewName(ConfigurationManager.getProperty(PageMsgConstant.TOUR_OVERVIEW_PAGE_PATH));
         return modelAndView;
     }
 }

@@ -1,5 +1,6 @@
 package by.epam.touragency.controller;
 
+import by.epam.touragency.entity.Tour;
 import by.epam.touragency.logic.UpdateTourLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.util.PageMsgConstant;
@@ -24,20 +25,21 @@ public class ChangeAdultsNumberCommand {
     @PostMapping("/change_adults_number")
     public ModelAndView execute(
             @RequestParam(value = ParameterConstant.PARAM_NAME_NEW_ADULTS_NUMBER) String newAdultsNumberStr,
-            @RequestParam(value = ParameterConstant.PARAM_NAME_TOUR_ID) String tourIdStr
-    ) {
-        ModelAndView modelAndView = new ModelAndView();
-        if (!validation.validateNumberOfPeople(newAdultsNumberStr) ||
+            @RequestParam(value = ParameterConstant.PARAM_NAME_TOUR_ID) String tourIdStr,
+            Tour tour
+            ) {
+        ModelAndView modelAndView = new ModelAndView(ConfigurationManager.getProperty(PageMsgConstant.TOUR_OVERVIEW_PAGE_PATH));
+        if (tour == null || !validation.validateNumberOfPeople(newAdultsNumberStr) ||
                 !validation.validateId(tourIdStr)) {
-            modelAndView.setViewName(ConfigurationManager.getProperty(PageMsgConstant.TOUR_OVERVIEW_PAGE_PATH));
+            modelAndView.addObject(ParameterConstant.PARAM_NAME_TOUR_INSTANCE, tour);
             return modelAndView;
         }
 
         int tourId = Integer.parseInt(tourIdStr);
         int newAdultsNumber = Integer.parseInt(newAdultsNumberStr);
-        updateTourLogic.updateAdultsNumber(newAdultsNumber, tourId);
+        updateTourLogic.updateAdultsNumber(newAdultsNumber, tourId, tour);
+        modelAndView.addObject(ParameterConstant.PARAM_NAME_TOUR_INSTANCE, tour);
         modelAndView.addObject(ParameterConstant.ATTR_NAME_ADULTS_NUMBER, newAdultsNumber);
-        modelAndView.setViewName(ConfigurationManager.getProperty(PageMsgConstant.TOUR_OVERVIEW_PAGE_PATH));
         return modelAndView;
     }
 }

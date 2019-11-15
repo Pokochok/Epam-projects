@@ -73,7 +73,7 @@ class ChangeDepartureDateCommandTest {
         when(validation.validateDate(anyString())).thenReturn(new Date().getTime() + 1000, new Date().getTime() + 1001);
         when(validation.validateId(anyString())).thenReturn(true);
         when(validation.dateToFormat(any(Long.class))).thenReturn("testDate");
-        doNothing().when(updateTourLogic).updateDepartureDate(anyInt(), anyInt());
+        doNothing().when(updateTourLogic).updateDepartureDate(anyInt(), anyInt(),any());
         mockMvc.perform(post("/change_departure_date")
                 .param(PARAM_NAME_ARRIVAL_DATE, "arrivalDate")
                 .param(PARAM_NAME_NEW_DEPARTURE_DATE, "date")
@@ -90,7 +90,7 @@ class ChangeDepartureDateCommandTest {
         when(validation.validateDate(anyString())).thenReturn(10000L, 10001L);
         when(validation.validateId(anyString())).thenReturn(true);
         when(messageManager.getProperty(eq(DATE_ERROR_MSG_KEY), any(Locale.class))).thenReturn("errorDate");
-        doNothing().when(updateTourLogic).updateDepartureDate(anyInt(), anyInt());
+        doNothing().when(updateTourLogic).updateDepartureDate(anyInt(), anyInt(), any());
         mockMvc.perform(post("/change_departure_date")
                 .param(PARAM_NAME_ARRIVAL_DATE, "arrivalDate")
                 .param(PARAM_NAME_NEW_DEPARTURE_DATE, "date")

@@ -1,11 +1,10 @@
 package by.epam.touragency.logic;
 
 import by.epam.touragency.entity.Tour;
-import by.epam.touragency.repository.impl.TourRepository;
-import by.epam.touragency.specification.Specification;
-import by.epam.touragency.specification.impl.tour.AddTourSpecification;
+import by.epam.touragency.repository.Repository;
 import by.epam.touragency.util.Validation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -17,6 +16,10 @@ import java.math.BigDecimal;
 public class TourRegistrationLogic {
     @Autowired
     private Validation validation;
+
+    @Autowired
+    @Qualifier("hibernateTourRepository")
+    private Repository<Tour> tourRepository;
 
     /**
      * Adds tour to database
@@ -50,8 +53,7 @@ public class TourRegistrationLogic {
                 .setChildrenNumber(numberOfChildren)
                 .setPrice(price)
                 .setStatus(isAvailable).build();
-        Specification specification = new AddTourSpecification(tour);
-        TourRepository.getInstance().add(tour, specification);
+        tourRepository.add(tour, null);
     }
 
     public boolean isValidData(String tourName, String departureCity, String arrivalCity, String arrivalCountry,

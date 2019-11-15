@@ -30,6 +30,10 @@ public class ToPageWithListLogic {
     private Repository<Order> orderRepository;
 
     @Autowired
+    @Qualifier("hibernateTourRepository")
+    private Repository<Tour> tourRepository;
+
+    @Autowired
     @Qualifier("hibernateTicketRepository")
     private Repository<Ticket> ticketRepository;
 
@@ -40,9 +44,7 @@ public class ToPageWithListLogic {
      */
     public Set<Ticket> getTicketSet() {
         Specification specification = new FindAllTicketsSpecification();
-        Set<Ticket> ticketSet = null;
-        ticketSet = ticketRepository.query(specification);
-        return ticketSet;
+        return ticketRepository.query(specification);
     }
 
     /**
@@ -53,11 +55,7 @@ public class ToPageWithListLogic {
      */
     public Set<Tour> getTourSet(String userRole) {
         Specification specification = defineTourSpecification(userRole);
-
-        TourRepository repository = TourRepository.getInstance();
-        Set<Tour> tourSet = null;
-        tourSet = repository.query(specification);
-        return tourSet;
+        return tourRepository.query(specification);
     }
 
     /**
@@ -85,10 +83,7 @@ public class ToPageWithListLogic {
      */
     public Set<Order> getOrderSet(String userRole, String userId) {
         Specification specification = defineOrderSpecification(userRole, userId);
-
-        Set<Order> orderSet = null;
-        orderSet = orderRepository.query(specification);
-        return orderSet;
+        return orderRepository.query(specification);
     }
 
     /**

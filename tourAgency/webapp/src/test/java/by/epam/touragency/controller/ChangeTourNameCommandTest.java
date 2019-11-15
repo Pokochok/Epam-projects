@@ -68,7 +68,7 @@ class ChangeTourNameCommandTest {
     void executeSuccess() throws Exception {
         when(validation.validateTourStringItems(anyString())).thenReturn(true);
         when(validation.validateId(anyString())).thenReturn(true);
-        when(updateTourLogic.updateTourName(anyString(), anyInt())).thenReturn(true);
+        when(updateTourLogic.updateTourName(anyString(), anyInt(), any())).thenReturn(true);
         mockMvc.perform(post("/change_tour_name")
                 .param(PARAM_NAME_NEW_TOUR_NAME, "newTourName")
                 .param(PARAM_NAME_TOUR_NAME, "tourName")
@@ -85,7 +85,7 @@ class ChangeTourNameCommandTest {
         when(validation.validateTourStringItems(anyString())).thenReturn(true);
         when(validation.validateId(anyString())).thenReturn(true);
         when(messageManager.getProperty(eq(TOUR_NAME_EXISTS_MSG_KEY), any(Locale.class))).thenReturn("TourNameExists");
-        when(updateTourLogic.updateTourName(anyString(), anyInt())).thenReturn(false);
+        when(updateTourLogic.updateTourName(anyString(), anyInt(), any())).thenReturn(false);
         mockMvc.perform(post("/change_tour_name")
                 .param(PARAM_NAME_NEW_TOUR_NAME, "newTourName")
                 .param(PARAM_NAME_TOUR_NAME, "tourName")

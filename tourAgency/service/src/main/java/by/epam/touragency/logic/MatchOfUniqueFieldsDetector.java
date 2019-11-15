@@ -1,5 +1,6 @@
 package by.epam.touragency.logic;
 
+import by.epam.touragency.entity.Tour;
 import by.epam.touragency.repository.Repository;
 import by.epam.touragency.repository.impl.TourRepository;
 import by.epam.touragency.repository.impl.UserRepository;
@@ -14,6 +15,8 @@ import by.epam.touragency.specification.impl.client.FindClientByEmailSpecificati
 import by.epam.touragency.specification.impl.client.FindClientByLoginSpecification;
 import by.epam.touragency.specification.impl.client.FindClientByPhoneNumberSpecification;
 import by.epam.touragency.specification.impl.tour.FindTourByNameSpecification;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 /**
@@ -21,6 +24,10 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class MatchOfUniqueFieldsDetector {
+    @Autowired
+    @Qualifier("hibernateTourRepository")
+    private Repository<Tour> tourRepository;
+
     /**
      * Checks, if such email exists
      *
@@ -30,7 +37,7 @@ public class MatchOfUniqueFieldsDetector {
     public boolean isExistsEmail(String email) {
         boolean flag = false;
         Repository repository = UserRepository.getInstance();
-        Specification clientSpecification = new FindClientByEmailSpecification(email);
+        Specification clientSpecification = new FindClientByEmailSpecification(email); // FIXME: 11/13/2019 change all this specifications
         Specification agentSpecification = new FindAgentByEmailSpecification(email);
         Specification adminSpecification = new FindAdminByEmailSpecification(email);
         flag = repository.isExistsQuery(clientSpecification)
@@ -83,6 +90,6 @@ public class MatchOfUniqueFieldsDetector {
      */
     public boolean isExistsTourName(String tourName) {
         Specification specification = new FindTourByNameSpecification(tourName);
-        return TourRepository.getInstance().isExistsQuery(specification);
+        return tourRepository.isExistsQuery(specification);
     }
 }

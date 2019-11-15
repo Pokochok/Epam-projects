@@ -14,22 +14,22 @@
 <div class="contentForm">
     <div class="contentContainer">
         <form method="post" action="change_tour_name" id="change_tour_name">
-            <input type="hidden" name="tourId" value="${tourId!param.tourId!}"/>
-            <input type="hidden" name="tourName" value="${tourName!param.tourName!}"/>
-            <input type="hidden" name="arrivalCountry" value="${arrivalCountry!param.arrivalCountry!}"/>
-            <input type="hidden" name="arrivalCity" value="${arrivalCity!param.arrivalCity!}"/>
-            <input type="hidden" name="departureCity" value="${departureCity!param.departureCity!}"/>
-            <input type="hidden" name="departureDate" value="${departureDate!param.departureDate!}"/>
-            <input type="hidden" name="arrivalDate" value="${arrivalDate!param.arrivalDate!}"/>
-            <input type="hidden" name="hotel" value="${hotel!param.hotel!}"/>
-            <input type="hidden" name="nutrition" value="${nutrition!param.nutrition!}"/>
-            <input type="hidden" name="adultsNumber" value="${adultsNumber!param.adultsNumber!}"/>
-            <input type="hidden" name="childrenNumber" value="${childrenNumber!param.childrenNumber!}"/>
-            <input type="hidden" name="price" value="${price!param.price!}"/>
-            <input type="hidden" name="status" value="${status!param.status!}"/>
+            <input type="hidden" name="id" value="${id!(tourInstance.id)!}"/>
+            <input type="hidden" name="tourName" value="${tourName!(tourInstance.tourName)!}"/>
+            <input type="hidden" name="arrivalCountry" value="${arrivalCountry!(tourInstance.arrivalCountry)!}"/>
+            <input type="hidden" name="arrivalCity" value="${arrivalCity!(tourInstance.arrivalCity)!}"/>
+            <input type="hidden" name="departureCity" value="${departureCity!(tourInstance.departureCity)!}"/>
+            <input type="hidden" name="departureDate" value="${(departureDate?long?c)!(tourInstance.departureDate?long?c)!}"/>
+            <input type="hidden" name="arrivalDate" value="${(arrivalDate?long?c)!(tourInstance.arrivalDate?long?c)!}"/>
+            <input type="hidden" name="hotel" value="${hotel!(tourInstance.hotel)!}"/>
+            <input type="hidden" name="nutrition" value="${nutrition!(tourInstance.nutrition)!}"/>
+            <input type="hidden" name="adultsNumber" value="${adultsNumber!(tourInstance.adultsNumber?int?c)!}"/>
+            <input type="hidden" name="childrenNumber" value="${childrenNumber!(tourInstance.childrenNumber?int?c)!}"/>
+            <input type="hidden" name="price" value="${(price?long?c)!(tourInstance.price?long?c)!}"/>
+            <input type="hidden" name="status" value="${status!(tourInstance.status)!}"/>
             <div class="contentItem">
                 <div class="tourName">
-                   ${tourName!param.tourName!}
+                   ${tourName!(tourInstance.tourName)!}
                 </div>
 
                 <#if (secutity.isAdmin)!false>
@@ -60,25 +60,25 @@
         </form>
 
         <form method="post" action="change_arrival_country">
-            <input type="hidden" name="tourId" value="${tourId!param.tourId!}"/>
-            <input type="hidden" name="tourName" value="${tourName!param.tourName!}"/>
-            <input type="hidden" name="arrivalCountry" value="${arrivalCountry!param.arrivalCountry!}"/>
-            <input type="hidden" name="arrivalCity" value="${arrivalCity!param.arrivalCity!}"/>
-            <input type="hidden" name="departureCity" value="${departureCity!param.departureCity!}"/>
-            <input type="hidden" name="departureDate" value="${departureDate!param.departureDate!}"/>
-            <input type="hidden" name="arrivalDate" value="${arrivalDate!param.arrivalDate!}"/>
-            <input type="hidden" name="hotel" value="${hotel!param.hotel!}"/>
-            <input type="hidden" name="nutrition" value="${nutrition!param.nutrition!}"/>
-            <input type="hidden" name="adultsNumber" value="${adultsNumber!param.adultsNumber!}"/>
-            <input type="hidden" name="childrenNumber" value="${childrenNumber!param.childrenNumber!}"/>
-            <input type="hidden" name="price" value="${price!param.price!}"/>
-            <input type="hidden" name="status" value="${status!param.status!}"/>
+            <input type="hidden" name="id" value="${id!(tourInstance.id)!}"/>
+            <input type="hidden" name="tourName" value="${tourName!(tourInstance.tourName)!}"/>
+            <input type="hidden" name="arrivalCountry" value="${arrivalCountry!(tourInstance.arrivalCountry)!}"/>
+            <input type="hidden" name="arrivalCity" value="${arrivalCity!(tourInstance.arrivalCity)!}"/>
+            <input type="hidden" name="departureCity" value="${departureCity!(tourInstance.departureCity)!}"/>
+            <input type="hidden" name="departureDate" value="${(departureDate?long?c)!(tourInstance.departureDate?long?c)!}"/>
+            <input type="hidden" name="arrivalDate" value="${(arrivalDate?long?c)!(tourInstance.arrivalDate?long?c)!}"/>
+            <input type="hidden" name="hotel" value="${hotel!(tourInstance.hotel)!}"/>
+            <input type="hidden" name="nutrition" value="${nutrition!(tourInstance.nutrition)!}"/>
+            <input type="hidden" name="adultsNumber" value="${adultsNumber!(tourInstance.adultsNumber?int?c)!}"/>
+            <input type="hidden" name="childrenNumber" value="${childrenNumber!(tourInstance.childrenNumber?int?c)!}"/>
+            <input type="hidden" name="price" value="${(price?long?c)!(tourInstance.price?long?c)!}"/>
+            <input type="hidden" name="status" value="${status!(tourInstance.status)!}"/>
             <div class="contentItem">
                 <div class="arrivalCountry">
                     <div class="itemMsg">
                         <@spring.message "common.message.arrivalCountry"/>
                     </div>
-                    ${arrivalCountry!param.arrivalCountry!}
+                    ${arrivalCountry!(tourInstance.arrivalCountry)!}
                 </div>
 
                 <#if (secutity.isAdmin)!false>
@@ -108,25 +108,25 @@
         </form>
 
         <form method="post" action="change_arrival_city">
-            <input type="hidden" name="tourId" value="${tourId!param.tourId!}"/>
-            <input type="hidden" name="tourName" value="${tourName!param.tourName!}"/>
-            <input type="hidden" name="arrivalCountry" value="${arrivalCountry!param.arrivalCountry!}"/>
-            <input type="hidden" name="arrivalCity" value="${arrivalCity!param.arrivalCity!}"/>
-            <input type="hidden" name="departureCity" value="${departureCity!param.departureCity!}"/>
-            <input type="hidden" name="departureDate" value="${departureDate!param.departureDate!}"/>
-            <input type="hidden" name="arrivalDate" value="${arrivalDate!param.arrivalDate!}"/>
-            <input type="hidden" name="hotel" value="${hotel!param.hotel!}"/>
-            <input type="hidden" name="nutrition" value="${nutrition!param.nutrition!}"/>
-            <input type="hidden" name="adultsNumber" value="${adultsNumber!param.adultsNumber!}"/>
-            <input type="hidden" name="childrenNumber" value="${childrenNumber!param.childrenNumber!}"/>
-            <input type="hidden" name="price" value="${price!param.price!}"/>
-            <input type="hidden" name="status" value="${status!param.status!}"/>
+           <input type="hidden" name="id" value="${id!(tourInstance.id)!}"/>
+            <input type="hidden" name="tourName" value="${tourName!(tourInstance.tourName)!}"/>
+            <input type="hidden" name="arrivalCountry" value="${arrivalCountry!(tourInstance.arrivalCountry)!}"/>
+            <input type="hidden" name="arrivalCity" value="${arrivalCity!(tourInstance.arrivalCity)!}"/>
+            <input type="hidden" name="departureCity" value="${departureCity!(tourInstance.departureCity)!}"/>
+            <input type="hidden" name="departureDate" value="${(departureDate?long?c)!(tourInstance.departureDate?long?c)!}"/>
+            <input type="hidden" name="arrivalDate" value="${(arrivalDate?long?c)!(tourInstance.arrivalDate?long?c)!}"/>
+            <input type="hidden" name="hotel" value="${hotel!(tourInstance.hotel)!}"/>
+            <input type="hidden" name="nutrition" value="${nutrition!(tourInstance.nutrition)!}"/>
+            <input type="hidden" name="adultsNumber" value="${adultsNumber!(tourInstance.adultsNumber?int?c)!}"/>
+            <input type="hidden" name="childrenNumber" value="${childrenNumber!(tourInstance.childrenNumber?int?c)!}"/>
+            <input type="hidden" name="price" value="${(price?long?c)!(tourInstance.price?long?c)!}"/>
+            <input type="hidden" name="status" value="${status!(tourInstance.status)!}"/>
             <div class="contentItem">
                 <div class="arrivalCity">
                     <div class="itemMsg">
                         <@spring.message "common.message.arrivalCity"/>
                     </div>
-                    ${arrivalCity!param.arrivalCity!}
+                    ${arrivalCity!(tourInstance.arrivalCity)!}
                 </div>
 
                 <#if (secutity.isAdmin)!false>
@@ -157,25 +157,25 @@
 
 
         <form method="post" action="change_departure_city">
-            <input type="hidden" name="tourId" value="${tourId!param.tourId!}"/>
-            <input type="hidden" name="tourName" value="${tourName!param.tourName!}"/>
-            <input type="hidden" name="arrivalCountry" value="${arrivalCountry!param.arrivalCountry!}"/>
-            <input type="hidden" name="arrivalCity" value="${arrivalCity!param.arrivalCity!}"/>
-            <input type="hidden" name="departureCity" value="${departureCity!param.departureCity!}"/>
-            <input type="hidden" name="departureDate" value="${departureDate!param.departureDate!}"/>
-            <input type="hidden" name="arrivalDate" value="${arrivalDate!param.arrivalDate!}"/>
-            <input type="hidden" name="hotel" value="${hotel!param.hotel!}"/>
-            <input type="hidden" name="nutrition" value="${nutrition!param.nutrition!}"/>
-            <input type="hidden" name="adultsNumber" value="${adultsNumber!param.adultsNumber!}"/>
-            <input type="hidden" name="childrenNumber" value="${childrenNumber!param.childrenNumber!}"/>
-            <input type="hidden" name="price" value="${price!param.price!}"/>
-            <input type="hidden" name="status" value="${status!param.status!}"/>
+            <input type="hidden" name="id" value="${id!(tourInstance.id)!}"/>
+            <input type="hidden" name="tourName" value="${tourName!(tourInstance.tourName)!}"/>
+            <input type="hidden" name="arrivalCountry" value="${arrivalCountry!(tourInstance.arrivalCountry)!}"/>
+            <input type="hidden" name="arrivalCity" value="${arrivalCity!(tourInstance.arrivalCity)!}"/>
+            <input type="hidden" name="departureCity" value="${departureCity!(tourInstance.departureCity)!}"/>
+            <input type="hidden" name="departureDate" value="${(departureDate?long?c)!(tourInstance.departureDate?long?c)!}"/>
+            <input type="hidden" name="arrivalDate" value="${(arrivalDate?long?c)!(tourInstance.arrivalDate?long?c)!}"/>
+            <input type="hidden" name="hotel" value="${hotel!(tourInstance.hotel)!}"/>
+            <input type="hidden" name="nutrition" value="${nutrition!(tourInstance.nutrition)!}"/>
+            <input type="hidden" name="adultsNumber" value="${adultsNumber!(tourInstance.adultsNumber?int?c)!}"/>
+            <input type="hidden" name="childrenNumber" value="${childrenNumber!(tourInstance.childrenNumber?int?c)!}"/>
+            <input type="hidden" name="price" value="${(price?long?c)!(tourInstance.price?long?c)!}"/>
+            <input type="hidden" name="status" value="${status!(tourInstance.status)!}"/>
             <div class="contentItem">
                 <div class="departureCity">
                     <div class="itemMsg">
                         <@spring.message "common.message.departureCity"/>
                     </div>
-                    ${departureCity!(param.departureCity)!}
+                    ${departureCity!(tourInstance.departureCity)!}
                 </div>
 
                 <#if (secutity.isAdmin)!false>
@@ -206,25 +206,25 @@
         </form>
 
         <form method="post" action="change_departure_date">
-            <input type="hidden" name="tourId" value="${tourId!param.tourId!}"/>
-            <input type="hidden" name="tourName" value="${tourName!param.tourName!}"/>
-            <input type="hidden" name="arrivalCountry" value="${arrivalCountry!param.arrivalCountry!}"/>
-            <input type="hidden" name="arrivalCity" value="${arrivalCity!param.arrivalCity!}"/>
-            <input type="hidden" name="departureCity" value="${departureCity!param.departureCity!}"/>
-            <input type="hidden" name="departureDate" value="${departureDate!param.departureDate!}"/>
-            <input type="hidden" name="arrivalDate" value="${arrivalDate!param.arrivalDate!}"/>
-            <input type="hidden" name="hotel" value="${hotel!param.hotel!}"/>
-            <input type="hidden" name="nutrition" value="${nutrition!param.nutrition!}"/>
-            <input type="hidden" name="adultsNumber" value="${adultsNumber!param.adultsNumber!}"/>
-            <input type="hidden" name="childrenNumber" value="${childrenNumber!param.childrenNumber!}"/>
-            <input type="hidden" name="price" value="${price!param.price!}"/>
-            <input type="hidden" name="status" value="${status!param.status!}"/>
+            <input type="hidden" name="id" value="${id!(tourInstance.id)!}"/>
+            <input type="hidden" name="tourName" value="${tourName!(tourInstance.tourName)!}"/>
+            <input type="hidden" name="arrivalCountry" value="${arrivalCountry!(tourInstance.arrivalCountry)!}"/>
+            <input type="hidden" name="arrivalCity" value="${arrivalCity!(tourInstance.arrivalCity)!}"/>
+            <input type="hidden" name="departureCity" value="${departureCity!(tourInstance.departureCity)!}"/>
+            <input type="hidden" name="departureDate" value="${(departureDate?long?c)!(tourInstance.departureDate?long?c)!}"/>
+            <input type="hidden" name="arrivalDate" value="${(arrivalDate?long?c)!(tourInstance.arrivalDate?long?c)!}"/>
+            <input type="hidden" name="hotel" value="${hotel!(tourInstance.hotel)!}"/>
+            <input type="hidden" name="nutrition" value="${nutrition!(tourInstance.nutrition)!}"/>
+            <input type="hidden" name="adultsNumber" value="${adultsNumber!(tourInstance.adultsNumber?int?c)!}"/>
+            <input type="hidden" name="childrenNumber" value="${childrenNumber!(tourInstance.childrenNumber?int?c)!}"/>
+            <input type="hidden" name="price" value="${(price?long?c)!(tourInstance.price?long?c)!}"/>
+            <input type="hidden" name="status" value="${status!(tourInstance.status)!}"/>
             <div class="contentItem">
                 <div class="departureDate">
                     <div class="itemMsg">
                         <@spring.message "common.message.departureDate"/>
                     </div>
-                    ${departureDate!param.departureDate!}
+                    ${(tourInstance.departureDateString())!}
                 </div>
 
                 <#if (secutity.isAdmin)!false>
@@ -253,25 +253,25 @@
         </form>
 
         <form method="post" action="change_arrival_date">
-            <input type="hidden" name="tourId" value="${tourId!param.tourId!}"/>
-            <input type="hidden" name="tourName" value="${tourName!param.tourName!}"/>
-            <input type="hidden" name="arrivalCountry" value="${arrivalCountry!param.arrivalCountry!}"/>
-            <input type="hidden" name="arrivalCity" value="${arrivalCity!param.arrivalCity!}"/>
-            <input type="hidden" name="departureCity" value="${departureCity!param.departureCity!}"/>
-            <input type="hidden" name="departureDate" value="${departureDate!param.departureDate!}"/>
-            <input type="hidden" name="arrivalDate" value="${arrivalDate!param.arrivalDate!}"/>
-            <input type="hidden" name="hotel" value="${hotel!param.hotel!}"/>
-            <input type="hidden" name="nutrition" value="${nutrition!param.nutrition!}"/>
-            <input type="hidden" name="adultsNumber" value="${adultsNumber!param.adultsNumber!}"/>
-            <input type="hidden" name="childrenNumber" value="${childrenNumber!param.childrenNumber!}"/>
-            <input type="hidden" name="price" value="${price!param.price!}"/>
-            <input type="hidden" name="status" value="${status!param.status!}"/>
+            <input type="hidden" name="id" value="${id!(tourInstance.id)!}"/>
+            <input type="hidden" name="tourName" value="${tourName!(tourInstance.tourName)!}"/>
+            <input type="hidden" name="arrivalCountry" value="${arrivalCountry!(tourInstance.arrivalCountry)!}"/>
+            <input type="hidden" name="arrivalCity" value="${arrivalCity!(tourInstance.arrivalCity)!}"/>
+            <input type="hidden" name="departureCity" value="${departureCity!(tourInstance.departureCity)!}"/>
+            <input type="hidden" name="departureDate" value="${(departureDate?long?c)!(tourInstance.departureDate?long?c)!}"/>
+            <input type="hidden" name="arrivalDate" value="${(arrivalDate?long?c)!(tourInstance.arrivalDate?long?c)!}"/>
+            <input type="hidden" name="hotel" value="${hotel!(tourInstance.hotel)!}"/>
+            <input type="hidden" name="nutrition" value="${nutrition!(tourInstance.nutrition)!}"/>
+            <input type="hidden" name="adultsNumber" value="${adultsNumber!(tourInstance.adultsNumber?int?c)!}"/>
+            <input type="hidden" name="childrenNumber" value="${childrenNumber!(tourInstance.childrenNumber?int?c)!}"/>
+            <input type="hidden" name="price" value="${(price?long?c)!(tourInstance.price?long?c)!}"/>
+            <input type="hidden" name="status" value="${status!(tourInstance.status)!}"/>
             <div class="contentItem">
                 <div class="arrivalDate">
                     <div class="itemMsg">
                         <@spring.message "common.message.arrivalDate"/>
                     </div>
-                    ${arrivalDate!param.arrivalDate!}
+                    ${(tourInstance.arrivalDateString())!}
                 </div>
 
                 <#if (secutity.isAdmin)!false>
@@ -301,25 +301,25 @@
         </form>
 
         <form method="post" action="change_hotel">
-            <input type="hidden" name="tourId" value="${tourId!param.tourId!}"/>
-            <input type="hidden" name="tourName" value="${tourName!param.tourName!}"/>
-            <input type="hidden" name="arrivalCountry" value="${arrivalCountry!param.arrivalCountry!}"/>
-            <input type="hidden" name="arrivalCity" value="${arrivalCity!param.arrivalCity!}"/>
-            <input type="hidden" name="departureCity" value="${departureCity!param.departureCity!}"/>
-            <input type="hidden" name="departureDate" value="${departureDate!param.departureDate!}"/>
-            <input type="hidden" name="arrivalDate" value="${arrivalDate!param.arrivalDate!}"/>
-            <input type="hidden" name="hotel" value="${hotel!param.hotel!}"/>
-            <input type="hidden" name="nutrition" value="${nutrition!param.nutrition!}"/>
-            <input type="hidden" name="adultsNumber" value="${adultsNumber!param.adultsNumber!}"/>
-            <input type="hidden" name="childrenNumber" value="${childrenNumber!param.childrenNumber!}"/>
-            <input type="hidden" name="price" value="${price!param.price!}"/>
-            <input type="hidden" name="status" value="${status!param.status!}"/>
+            <input type="hidden" name="id" value="${id!(tourInstance.id)!}"/>
+            <input type="hidden" name="tourName" value="${tourName!(tourInstance.tourName)!}"/>
+            <input type="hidden" name="arrivalCountry" value="${arrivalCountry!(tourInstance.arrivalCountry)!}"/>
+            <input type="hidden" name="arrivalCity" value="${arrivalCity!(tourInstance.arrivalCity)!}"/>
+            <input type="hidden" name="departureCity" value="${departureCity!(tourInstance.departureCity)!}"/>
+            <input type="hidden" name="departureDate" value="${(departureDate?long?c)!(tourInstance.departureDate?long?c)!}"/>
+            <input type="hidden" name="arrivalDate" value="${(arrivalDate?long?c)!(tourInstance.arrivalDate?long?c)!}"/>
+            <input type="hidden" name="hotel" value="${hotel!(tourInstance.hotel)!}"/>
+            <input type="hidden" name="nutrition" value="${nutrition!(tourInstance.nutrition)!}"/>
+            <input type="hidden" name="adultsNumber" value="${adultsNumber!(tourInstance.adultsNumber?int?c)!}"/>
+            <input type="hidden" name="childrenNumber" value="${childrenNumber!(tourInstance.childrenNumber?int?c)!}"/>
+            <input type="hidden" name="price" value="${(price?long?c)!(tourInstance.price?long?c)!}"/>
+            <input type="hidden" name="status" value="${status!(tourInstance.status)!}"/>
             <div class="contentItem">
                 <div class="hotel">
                     <div class="itemMsg">
                         <@spring.message "common.message.hotel"/>
                     </div>
-                    ${hotel!param.hotel!}
+                    ${hotel!(tourInstance.hotel)!}
                 </div>
 
                 <#if (secutity.isAdmin)!false>
@@ -349,25 +349,25 @@
         </form>
 
         <form method="post" action="change_nutrition">
-            <input type="hidden" name="tourId" value="${tourId!param.tourId!}"/>
-            <input type="hidden" name="tourName" value="${tourName!param.tourName!}"/>
-            <input type="hidden" name="arrivalCountry" value="${arrivalCountry!param.arrivalCountry!}"/>
-            <input type="hidden" name="arrivalCity" value="${arrivalCity!param.arrivalCity!}"/>
-            <input type="hidden" name="departureCity" value="${departureCity!param.departureCity!}"/>
-            <input type="hidden" name="departureDate" value="${departureDate!param.departureDate!}"/>
-            <input type="hidden" name="arrivalDate" value="${arrivalDate!param.arrivalDate!}"/>
-            <input type="hidden" name="hotel" value="${hotel!param.hotel!}"/>
-            <input type="hidden" name="nutrition" value="${nutrition!param.nutrition!}"/>
-            <input type="hidden" name="adultsNumber" value="${adultsNumber!param.adultsNumber!}"/>
-            <input type="hidden" name="childrenNumber" value="${childrenNumber!param.childrenNumber!}"/>
-            <input type="hidden" name="price" value="${price!param.price!}"/>
-            <input type="hidden" name="status" value="${status!param.status!}"/>
+            <input type="hidden" name="id" value="${id!(tourInstance.id)!}"/>
+            <input type="hidden" name="tourName" value="${tourName!(tourInstance.tourName)!}"/>
+            <input type="hidden" name="arrivalCountry" value="${arrivalCountry!(tourInstance.arrivalCountry)!}"/>
+            <input type="hidden" name="arrivalCity" value="${arrivalCity!(tourInstance.arrivalCity)!}"/>
+            <input type="hidden" name="departureCity" value="${departureCity!(tourInstance.departureCity)!}"/>
+            <input type="hidden" name="departureDate" value="${(departureDate?long?c)!(tourInstance.departureDate?long?c)!}"/>
+            <input type="hidden" name="arrivalDate" value="${(arrivalDate?long?c)!(tourInstance.arrivalDate?long?c)!}"/>
+            <input type="hidden" name="hotel" value="${hotel!(tourInstance.hotel)!}"/>
+            <input type="hidden" name="nutrition" value="${nutrition!(tourInstance.nutrition)!}"/>
+            <input type="hidden" name="adultsNumber" value="${adultsNumber!(tourInstance.adultsNumber?int?c)!}"/>
+            <input type="hidden" name="childrenNumber" value="${childrenNumber!(tourInstance.childrenNumber?int?c)!}"/>
+            <input type="hidden" name="price" value="${(price?long?c)!(tourInstance.price?long?c)!}"/>
+            <input type="hidden" name="status" value="${status!(tourInstance.status)!}"/>
             <div class="contentItem">
                 <div class="nutrition">
                     <div class="itemMsg">
                         <@spring.message "common.message.nutrition"/>
                     </div>
-                    ${nutrition!param.nutrition!}
+                    ${nutrition!(tourInstance.nutrition)!}
                 </div>
 
                 <#if (secutity.isAdmin)!false>
@@ -397,25 +397,25 @@
         </form>
 
         <form method="post" action="change_adults_number">
-            <input type="hidden" name="tourId" value="${tourId!param.tourId!}"/>
-            <input type="hidden" name="tourName" value="${tourName!param.tourName!}"/>
-            <input type="hidden" name="arrivalCountry" value="${arrivalCountry!param.arrivalCountry!}"/>
-            <input type="hidden" name="arrivalCity" value="${arrivalCity!param.arrivalCity!}"/>
-            <input type="hidden" name="departureCity" value="${departureCity!param.departureCity!}"/>
-            <input type="hidden" name="departureDate" value="${departureDate!param.departureDate!}"/>
-            <input type="hidden" name="arrivalDate" value="${arrivalDate!param.arrivalDate!}"/>
-            <input type="hidden" name="hotel" value="${hotel!param.hotel!}"/>
-            <input type="hidden" name="nutrition" value="${nutrition!param.nutrition!}"/>
-            <input type="hidden" name="adultsNumber" value="${adultsNumber!param.adultsNumber!}"/>
-            <input type="hidden" name="childrenNumber" value="${childrenNumber!param.childrenNumber!}"/>
-            <input type="hidden" name="price" value="${price!param.price!}"/>
-            <input type="hidden" name="status" value="${status!param.status!}"/>
+            <input type="hidden" name="id" value="${id!(tourInstance.id)!}"/>
+            <input type="hidden" name="tourName" value="${tourName!(tourInstance.tourName)!}"/>
+            <input type="hidden" name="arrivalCountry" value="${arrivalCountry!(tourInstance.arrivalCountry)!}"/>
+            <input type="hidden" name="arrivalCity" value="${arrivalCity!(tourInstance.arrivalCity)!}"/>
+            <input type="hidden" name="departureCity" value="${departureCity!(tourInstance.departureCity)!}"/>
+            <input type="hidden" name="departureDate" value="${(departureDate?long?c)!(tourInstance.departureDate?long?c)!}"/>
+            <input type="hidden" name="arrivalDate" value="${(arrivalDate?long?c)!(tourInstance.arrivalDate?long?c)!}"/>
+            <input type="hidden" name="hotel" value="${hotel!(tourInstance.hotel)!}"/>
+            <input type="hidden" name="nutrition" value="${nutrition!(tourInstance.nutrition)!}"/>
+            <input type="hidden" name="adultsNumber" value="${adultsNumber!(tourInstance.adultsNumber?int?c)!}"/>
+            <input type="hidden" name="childrenNumber" value="${childrenNumber!(tourInstance.childrenNumber?int?c)!}"/>
+            <input type="hidden" name="price" value="${(price?long?c)!(tourInstance.price?long?c)!}"/>
+            <input type="hidden" name="status" value="${status!(tourInstance.status)!}"/>
             <div class="contentItem">
                 <div class="adultsNumber">
                     <div class="itemMsg">
                         <@spring.message "common.message.numberOfAdults"/>
                     </div>
-                    ${adultsNumber!param.adultsNumber!}
+                    ${adultsNumber!(tourInstance.adultsNumber?int?c)!}
                 </div>
 
                 <#if (secutity.isAdmin)!false>
@@ -445,25 +445,25 @@
         </form>
 
         <form method="post" action="change_children_number">
-            <input type="hidden" name="tourId" value="${tourId!param.tourId!}"/>
-            <input type="hidden" name="tourName" value="${tourName!param.tourName!}"/>
-            <input type="hidden" name="arrivalCountry" value="${arrivalCountry!param.arrivalCountry!}"/>
-            <input type="hidden" name="arrivalCity" value="${arrivalCity!param.arrivalCity!}"/>
-            <input type="hidden" name="departureCity" value="${departureCity!param.departureCity!}"/>
-            <input type="hidden" name="departureDate" value="${departureDate!param.departureDate!}"/>
-            <input type="hidden" name="arrivalDate" value="${arrivalDate!param.arrivalDate!}"/>
-            <input type="hidden" name="hotel" value="${hotel!param.hotel!}"/>
-            <input type="hidden" name="nutrition" value="${nutrition!param.nutrition!}"/>
-            <input type="hidden" name="adultsNumber" value="${adultsNumber!param.adultsNumber!}"/>
-            <input type="hidden" name="childrenNumber" value="${childrenNumber!param.childrenNumber!}"/>
-            <input type="hidden" name="price" value="${price!param.price!}"/>
-            <input type="hidden" name="status" value="${status!param.status!}"/>
+            <input type="hidden" name="id" value="${id!(tourInstance.id)!}"/>
+            <input type="hidden" name="tourName" value="${tourName!(tourInstance.tourName)!}"/>
+            <input type="hidden" name="arrivalCountry" value="${arrivalCountry!(tourInstance.arrivalCountry)!}"/>
+            <input type="hidden" name="arrivalCity" value="${arrivalCity!(tourInstance.arrivalCity)!}"/>
+            <input type="hidden" name="departureCity" value="${departureCity!(tourInstance.departureCity)!}"/>
+            <input type="hidden" name="departureDate" value="${(departureDate?long?c)!(tourInstance.departureDate?long?c)!}"/>
+            <input type="hidden" name="arrivalDate" value="${(arrivalDate?long?c)!(tourInstance.arrivalDate?long?c)!}"/>
+            <input type="hidden" name="hotel" value="${hotel!(tourInstance.hotel)!}"/>
+            <input type="hidden" name="nutrition" value="${nutrition!(tourInstance.nutrition)!}"/>
+            <input type="hidden" name="adultsNumber" value="${adultsNumber!(tourInstance.adultsNumber?int?c)!}"/>
+            <input type="hidden" name="childrenNumber" value="${childrenNumber!(tourInstance.childrenNumber?int?c)!}"/>
+            <input type="hidden" name="price" value="${(price?long?c)!(tourInstance.price?long?c)!}"/>
+            <input type="hidden" name="status" value="${status!(tourInstance.status)!}"/>
             <div class="contentItem">
                 <div class="childrenNumber">
                     <div class="itemMsg">
                         <@spring.message "common.message.numberOfChildren"/>
                     </div>
-                    ${childrenNumber!param.childrenNumber!}
+                    ${childrenNumber!(tourInstance.childrenNumber?int?c)!}
                 </div>
 
                 <#if (secutity.isAdmin)!false>
@@ -493,25 +493,25 @@
         </form>
 
         <form method="post" action="change_price">
-            <input type="hidden" name="tourId" value="${tourId!param.tourId!}"/>
-            <input type="hidden" name="tourName" value="${tourName!param.tourName!}"/>
-            <input type="hidden" name="arrivalCountry" value="${arrivalCountry!param.arrivalCountry!}"/>
-            <input type="hidden" name="arrivalCity" value="${arrivalCity!param.arrivalCity!}"/>
-            <input type="hidden" name="departureCity" value="${departureCity!param.departureCity!}"/>
-            <input type="hidden" name="departureDate" value="${departureDate!param.departureDate!}"/>
-            <input type="hidden" name="arrivalDate" value="${arrivalDate!param.arrivalDate!}"/>
-            <input type="hidden" name="hotel" value="${hotel!param.hotel!}"/>
-            <input type="hidden" name="nutrition" value="${nutrition!param.nutrition!}"/>
-            <input type="hidden" name="adultsNumber" value="${adultsNumber!param.adultsNumber!}"/>
-            <input type="hidden" name="childrenNumber" value="${childrenNumber!param.childrenNumber!}"/>
-            <input type="hidden" name="price" value="${price!param.price!}"/>
-            <input type="hidden" name="status" value="${status!param.status!}"/>
+            <input type="hidden" name="id" value="${id!(tourInstance.id)!}"/>
+            <input type="hidden" name="tourName" value="${tourName!(tourInstance.tourName)!}"/>
+            <input type="hidden" name="arrivalCountry" value="${arrivalCountry!(tourInstance.arrivalCountry)!}"/>
+            <input type="hidden" name="arrivalCity" value="${arrivalCity!(tourInstance.arrivalCity)!}"/>
+            <input type="hidden" name="departureCity" value="${departureCity!(tourInstance.departureCity)!}"/>
+            <input type="hidden" name="departureDate" value="${(departureDate?long?c)!(tourInstance.departureDate?long?c)!}"/>
+            <input type="hidden" name="arrivalDate" value="${(arrivalDate?long?c)!(tourInstance.arrivalDate?long?c)!}"/>
+            <input type="hidden" name="hotel" value="${hotel!(tourInstance.hotel)!}"/>
+            <input type="hidden" name="nutrition" value="${nutrition!(tourInstance.nutrition)!}"/>
+            <input type="hidden" name="adultsNumber" value="${adultsNumber!(tourInstance.adultsNumber?int?c)!}"/>
+            <input type="hidden" name="childrenNumber" value="${childrenNumber!(tourInstance.childrenNumber?int?c)!}"/>
+            <input type="hidden" name="price" value="${(price?long?c)!(tourInstance.price?long?c)!}"/>
+            <input type="hidden" name="status" value="${status!(tourInstance.status)!}"/>
             <div class="contentItem">
                 <div class="price">
                     <div class="itemMsg">
                         <@spring.message "common.message.price"/>
                     </div>
-                    ${price!param.price!}$
+                    ${(price?long?c)!(tourInstance.price?long?c)!}$
                 </div>
 
                 <#if (secutity.isAdmin)!false>
@@ -541,22 +541,22 @@
         </form>
 
         <form method="post" action="change_status">
-            <input type="hidden" name="tourId" value="${tourId!param.tourId!}"/>
-            <input type="hidden" name="tourName" value="${tourName!param.tourName!}"/>
-            <input type="hidden" name="arrivalCountry" value="${arrivalCountry!param.arrivalCountry!}"/>
-            <input type="hidden" name="arrivalCity" value="${arrivalCity!param.arrivalCity!}"/>
-            <input type="hidden" name="departureCity" value="${departureCity!param.departureCity!}"/>
-            <input type="hidden" name="departureDate" value="${departureDate!param.departureDate!}"/>
-            <input type="hidden" name="arrivalDate" value="${arrivalDate!param.arrivalDate!}"/>
-            <input type="hidden" name="hotel" value="${hotel!param.hotel!}"/>
-            <input type="hidden" name="nutrition" value="${nutrition!param.nutrition!}"/>
-            <input type="hidden" name="adultsNumber" value="${adultsNumber!param.adultsNumber!}"/>
-            <input type="hidden" name="childrenNumber" value="${childrenNumber!param.childrenNumber!}"/>
-            <input type="hidden" name="price" value="${price!param.price!}"/>
-            <input type="hidden" name="status" value="${status!param.status!}"/>
+            <input type="hidden" name="id" value="${id!(tourInstance.id)!}"/>
+            <input type="hidden" name="tourName" value="${tourName!(tourInstance.tourName)!}"/>
+            <input type="hidden" name="arrivalCountry" value="${arrivalCountry!(tourInstance.arrivalCountry)!}"/>
+            <input type="hidden" name="arrivalCity" value="${arrivalCity!(tourInstance.arrivalCity)!}"/>
+            <input type="hidden" name="departureCity" value="${departureCity!(tourInstance.departureCity)!}"/>
+            <input type="hidden" name="departureDate" value="${(departureDate?long?c)!(tourInstance.departureDate?long?c)!}"/>
+            <input type="hidden" name="arrivalDate" value="${(arrivalDate?long?c)!(tourInstance.arrivalDate?long?c)!}"/>
+            <input type="hidden" name="hotel" value="${hotel!(tourInstance.hotel)!}"/>
+            <input type="hidden" name="nutrition" value="${nutrition!(tourInstance.nutrition)!}"/>
+            <input type="hidden" name="adultsNumber" value="${adultsNumber!(tourInstance.adultsNumber?int?c)!}"/>
+            <input type="hidden" name="childrenNumber" value="${childrenNumber!(tourInstance.childrenNumber?int?c)!}"/>
+            <input type="hidden" name="price" value="${(price?long?c)!(tourInstance.price?long?c)!}"/>
+            <input type="hidden" name="status" value="${status!(tourInstance.status)!}"/>
             <#if (secutity.isAdmin)!false>
                 <div class="contentItem">
-                    <#if ((status!param.status!"NOT_AVAILABLE") == "AVAILABLE")>
+                    <#if ((status!(tourInstance.status)!"NOT_AVAILABLE") == "AVAILABLE")>
                         <input class="uui-button raspberry" type="submit" value="<@spring.message "admin.changeStatusNotAvailable"/>"
                                onclick="document.getElementById('change_status').disabled=false">
                     <#else>
@@ -576,19 +576,19 @@
         </form>
 
         <form method="post" action="to_tickets" id="to_tickets">
-            <input type="hidden" name="tourId" value="${tourId!param.tourId!}"/>
-            <input type="hidden" name="tourName" value="${tourName!param.tourName!}"/>
-            <input type="hidden" name="arrivalCountry" value="${arrivalCountry!param.arrivalCountry!}"/>
-            <input type="hidden" name="arrivalCity" value="${arrivalCity!param.arrivalCity!}"/>
-            <input type="hidden" name="departureCity" value="${departureCity!param.departureCity!}"/>
-            <input type="hidden" name="departureDate" value="${departureDate!param.departureDate!}"/>
-            <input type="hidden" name="arrivalDate" value="${arrivalDate!param.arrivalDate!}"/>
-            <input type="hidden" name="hotel" value="${hotel!param.hotel!}"/>
-            <input type="hidden" name="nutrition" value="${nutrition!param.nutrition!}"/>
-            <input type="hidden" name="adultsNumber" value="${adultsNumber!param.adultsNumber!}"/>
-            <input type="hidden" name="childrenNumber" value="${childrenNumber!param.childrenNumber!}"/>
-            <input type="hidden" name="price" value="${price!param.price!}"/>
-            <input type="hidden" name="status" value="${status!param.status!}"/>
+            <input type="hidden" name="id" value="${id!(tourInstance.id)!}"/>
+            <input type="hidden" name="tourName" value="${tourName!(tourInstance.tourName)!}"/>
+            <input type="hidden" name="arrivalCountry" value="${arrivalCountry!(tourInstance.arrivalCountry)!}"/>
+            <input type="hidden" name="arrivalCity" value="${arrivalCity!(tourInstance.arrivalCity)!}"/>
+            <input type="hidden" name="departureCity" value="${departureCity!(tourInstance.departureCity)!}"/>
+            <input type="hidden" name="departureDate" value="${(departureDate?long?c)!(tourInstance.departureDate?long?c)!}"/>
+            <input type="hidden" name="arrivalDate" value="${(arrivalDate?long?c)!(tourInstance.arrivalDate?long?c)!}"/>
+            <input type="hidden" name="hotel" value="${hotel!(tourInstance.hotel)!}"/>
+            <input type="hidden" name="nutrition" value="${nutrition!(tourInstance.nutrition)!}"/>
+            <input type="hidden" name="adultsNumber" value="${adultsNumber!(tourInstance.adultsNumber?int?c)!}"/>
+            <input type="hidden" name="childrenNumber" value="${childrenNumber!(tourInstance.childrenNumber?int?c)!}"/>
+            <input type="hidden" name="price" value="${(price?long?c)!(tourInstance.price?long?c)!}"/>
+            <input type="hidden" name="status" value="${status!(tourInstance.status)!}"/>
             <div class="contentItem">
                 <#if !((secutity.isAdmin)!false)>
                     <label>

@@ -61,7 +61,7 @@ class ChangeAdultsNumberCommandTest {
     void executeSuccess() throws Exception {
         when(validation.validateNumberOfPeople(anyString())).thenReturn(true);
         when(validation.validateId(anyString())).thenReturn(true);
-        doNothing().when(updateTourLogic).updateAdultsNumber(anyInt(), anyInt());
+        doNothing().when(updateTourLogic).updateAdultsNumber(anyInt(), anyInt(), any());
         mockMvc.perform(post("/change_adults_number")
                 .param(PARAM_NAME_NEW_ADULTS_NUMBER, "9")
                 .param(PARAM_NAME_TOUR_ID, "6"))

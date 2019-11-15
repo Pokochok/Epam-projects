@@ -1,6 +1,7 @@
 package by.epam.touragency.logic;
 
 import by.epam.touragency.config.WebAppTestContext;
+import by.epam.touragency.entity.Tour;
 import com.opentable.db.postgres.embedded.EmbeddedPostgres;
 import junit.framework.Assert;
 import org.flywaydb.core.Flyway;
@@ -39,13 +40,13 @@ public class UpdateTourLogicTest {
 
     @Test
     public void testUpdateTourNameFalse() {
-        boolean actual = updateTourLogic.updateTourName("not defined", -1);
+        boolean actual = updateTourLogic.updateTourName("not defined", -1, new Tour());
         Assert.assertFalse(actual);
     }
 
     @Test
     public void testUpdateTourNameTrue()  {
-        boolean actual = updateTourLogic.updateTourName("some tour", -1);
+        boolean actual = updateTourLogic.updateTourName("some tour", -1, new Tour());
         Assert.assertTrue(actual);
     }
 }

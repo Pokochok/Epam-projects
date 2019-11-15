@@ -1,5 +1,6 @@
 package by.epam.touragency.controller;
 
+import by.epam.touragency.entity.Tour;
 import by.epam.touragency.logic.UpdateTourLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.resource.MessageManager;
@@ -36,35 +37,35 @@ public class ChangeDepartureDateCommand {
     @PostMapping("/change_departure_date")
     public ModelAndView execute(
             @RequestParam(ParameterConstant.PARAM_NAME_NEW_DEPARTURE_DATE) String newDepartureDateStr,
-            @RequestParam(ParameterConstant.PARAM_NAME_ARRIVAL_DATE) String arrivalDateStr,
+            @RequestParam(ParameterConstant.PARAM_NAME_ARRIVAL_DATE) long arrivalDate,
             @RequestParam(value = ParameterConstant.PARAM_NAME_TOUR_ID) String tourIdStr,
-            @SessionAttribute(value = ParameterConstant.ATTR_NAME_LANGUAGE, required = false) Locale language
+            @SessionAttribute(value = ParameterConstant.ATTR_NAME_LANGUAGE, required = false) Locale language,
+            Tour tour
     ) {
         if (language == null) {
             language = new Locale(ParameterConstant.EN_LOCALE);
         }
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName(ConfigurationManager.getProperty(PageMsgConstant.TOUR_OVERVIEW_PAGE_PATH));
+        ModelAndView modelAndView = new ModelAndView(ConfigurationManager.getProperty(PageMsgConstant.TOUR_OVERVIEW_PAGE_PATH));
         if (!validation.validateId(tourIdStr)) {
             return modelAndView;
         }
         int tourId = Integer.parseInt(tourIdStr);
         long newDepartureDate = validation.validateDate(newDepartureDateStr);
-        long arrivalDate = validation.validateDate(arrivalDateStr);
         boolean isValidDate = true;
-        if (newDepartureDate == -1 || arrivalDate == -1) {
+        if (newDepartureDate == -1) {
             isValidDate = false;
             LOGGER.debug("Error in date parsing");
         }
 
         if (isValidDate && newDepartureDate < arrivalDate && new Date().before(new Date(newDepartureDate))) {
-            updateTourLogic.updateDepartureDate(newDepartureDate, tourId);
-            modelAndView.addObject(ParameterConstant.ATTR_NAME_DEPARTURE_DATE, validation.dateToFormat(newDepartureDate));
+            updateTourLogic.updateDepartureDate(newDepartureDate, tourId, tour);
+            modelAndView.addObject(ParameterConstant.ATTR_NAME_DEPARTURE_DATE, newDepartureDate);
         } else {
             LOGGER.debug("Invalid date entered");
             modelAndView.addObject(ParameterConstant.ATTR_NAME_ERROR_DATE,
                     messageManager.getProperty(PageMsgConstant.DATE_ERROR_MSG_KEY, language));
         }
+        modelAndView.addObject(ParameterConstant.PARAM_NAME_TOUR_INSTANCE, tour);
         return modelAndView;
     }
 }

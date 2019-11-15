@@ -1,5 +1,6 @@
 package by.epam.touragency.controller;
 
+import by.epam.touragency.entity.Tour;
 import by.epam.touragency.logic.UpdateTourLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.util.PageMsgConstant;
@@ -24,19 +25,20 @@ public class ChangeArrivalCountryCommand {
     @PostMapping("/change_arrival_country")
     public ModelAndView execute(
             @RequestParam(value = ParameterConstant.PARAM_NAME_NEW_ARRIVAL_COUNTRY) String newArrivalCountry,
-            @RequestParam(value = ParameterConstant.PARAM_NAME_TOUR_ID) String tourIdStr
+            @RequestParam(value = ParameterConstant.PARAM_NAME_TOUR_ID) String tourIdStr,
+            Tour tour
     ) {
-        ModelAndView modelAndView = new ModelAndView();
+        ModelAndView modelAndView = new ModelAndView(ConfigurationManager.getProperty(PageMsgConstant.TOUR_OVERVIEW_PAGE_PATH));
         if (!validation.validateTourStringItems(newArrivalCountry) ||
                 !validation.validateId(tourIdStr)) {
-            modelAndView.setViewName(ConfigurationManager.getProperty(PageMsgConstant.TOUR_OVERVIEW_PAGE_PATH));
+            modelAndView.addObject(ParameterConstant.PARAM_NAME_TOUR_INSTANCE, tour);
             return modelAndView;
         }
 
         int tourId = Integer.parseInt(tourIdStr);
-        updateTourLogic.updateArrivalCountry(newArrivalCountry, tourId);
+        updateTourLogic.updateArrivalCountry(newArrivalCountry, tourId, tour);
+        modelAndView.addObject(ParameterConstant.PARAM_NAME_TOUR_INSTANCE, tour);
         modelAndView.addObject(ParameterConstant.ATTR_NAME_ARRIVAL_COUNTRY, newArrivalCountry);
-        modelAndView.setViewName(ConfigurationManager.getProperty(PageMsgConstant.TOUR_OVERVIEW_PAGE_PATH));
         return modelAndView;
     }
 }

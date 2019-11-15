@@ -63,7 +63,7 @@ class ChangePriceCommandTest {
     void executeSuccess() throws Exception {
         when(validation.validatePrice(anyString())).thenReturn(true);
         when(validation.validateId(anyString())).thenReturn(true);
-        doNothing().when(updateTourLogic).updatePrice(any(BigDecimal.class), anyInt());
+        doNothing().when(updateTourLogic).updatePrice(any(BigDecimal.class), anyInt(), any());
         mockMvc.perform(post("/change_price")
                 .param(PARAM_NAME_NEW_PRICE, "400")
                 .param(PARAM_NAME_TOUR_ID, "6"))

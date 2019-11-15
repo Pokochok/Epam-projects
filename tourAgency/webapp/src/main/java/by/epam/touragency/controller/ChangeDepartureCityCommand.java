@@ -1,5 +1,6 @@
 package by.epam.touragency.controller;
 
+import by.epam.touragency.entity.Tour;
 import by.epam.touragency.logic.UpdateTourLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.util.PageMsgConstant;
@@ -24,16 +25,18 @@ public class ChangeDepartureCityCommand {
     @PostMapping("/change_departure_city")
     public ModelAndView execute(
             @RequestParam(value = ParameterConstant.PARAM_NAME_NEW_DEPARTURE_CITY) String newDepartureCity,
-            @RequestParam(value = ParameterConstant.PARAM_NAME_TOUR_ID) String tourIdStr
+            @RequestParam(value = ParameterConstant.PARAM_NAME_TOUR_ID) String tourIdStr,
+            Tour tour
     ) {
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName(ConfigurationManager.getProperty(PageMsgConstant.TOUR_OVERVIEW_PAGE_PATH));
+        ModelAndView modelAndView = new ModelAndView(ConfigurationManager.getProperty(PageMsgConstant.TOUR_OVERVIEW_PAGE_PATH));
         if (!validation.validateTourStringItems(newDepartureCity) || !validation.validateId(tourIdStr)) {
+            modelAndView.addObject(ParameterConstant.PARAM_NAME_TOUR_INSTANCE, tour);
             return modelAndView;
         }
 
         int tourId = Integer.parseInt(tourIdStr);
-        updateTourLogic.updateDepartureCity(newDepartureCity, tourId);
+        updateTourLogic.updateDepartureCity(newDepartureCity, tourId, tour);
+        modelAndView.addObject(ParameterConstant.PARAM_NAME_TOUR_INSTANCE, tour);
         modelAndView.addObject(ParameterConstant.ATTR_NAME_DEPARTURE_CITY, newDepartureCity);
         return modelAndView;
     }

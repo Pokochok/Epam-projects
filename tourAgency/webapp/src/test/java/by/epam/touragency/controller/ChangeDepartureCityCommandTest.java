@@ -18,8 +18,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import static by.epam.touragency.util.PageMsgConstant.TOUR_OVERVIEW_PAGE_PATH;
 import static by.epam.touragency.util.ParameterConstant.*;
-import static org.mockito.ArgumentMatchers.anyInt;
-import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -62,7 +61,7 @@ class ChangeDepartureCityCommandTest {
     void executeSuccess() throws Exception {
         when(validation.validateTourStringItems(anyString())).thenReturn(true);
         when(validation.validateId(anyString())).thenReturn(true);
-        doNothing().when(updateTourLogic).updateDepartureCity(anyString(), anyInt());
+        doNothing().when(updateTourLogic).updateDepartureCity(anyString(), anyInt(), any());
         mockMvc.perform(post("/change_departure_city")
                 .param(PARAM_NAME_NEW_DEPARTURE_CITY, "city")
                 .param(PARAM_NAME_TOUR_ID, "6"))

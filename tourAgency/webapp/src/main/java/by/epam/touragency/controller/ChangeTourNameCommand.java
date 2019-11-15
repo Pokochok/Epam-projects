@@ -1,5 +1,6 @@
 package by.epam.touragency.controller;
 
+import by.epam.touragency.entity.Tour;
 import by.epam.touragency.logic.UpdateTourLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.resource.MessageManager;
@@ -33,25 +34,27 @@ public class ChangeTourNameCommand {
             @RequestParam(value = ParameterConstant.PARAM_NAME_NEW_TOUR_NAME) String newTourName,
             @RequestParam(value = ParameterConstant.PARAM_NAME_TOUR_NAME) String tourName,
             @SessionAttribute(value = ParameterConstant.ATTR_NAME_LANGUAGE, required = false) Locale language,
-            @RequestParam(value = ParameterConstant.PARAM_NAME_TOUR_ID) String id
+            @RequestParam(value = ParameterConstant.PARAM_NAME_TOUR_ID) String id,
+            Tour tour
     ) {
         if (language == null) {
             language = new Locale(ParameterConstant.EN_LOCALE);
         }
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName(ConfigurationManager.getProperty(PageMsgConstant.TOUR_OVERVIEW_PAGE_PATH));
+        ModelAndView modelAndView = new ModelAndView(ConfigurationManager.getProperty(PageMsgConstant.TOUR_OVERVIEW_PAGE_PATH));
         if (!validation.validateId(id) || !validation.validateTourStringItems(tourName) ||
                 !validation.validateTourStringItems(newTourName)) {
+            modelAndView.addObject(ParameterConstant.PARAM_NAME_TOUR_INSTANCE, tour);
             return modelAndView;
         }
         int tourId = Integer.parseInt(id);
-        if (updateTourLogic.updateTourName(newTourName, tourId)) {
+        if (updateTourLogic.updateTourName(newTourName, tourId, tour)) {
             modelAndView.addObject(ParameterConstant.ATTR_NAME_TOUR_NAME, newTourName);
         } else {
             modelAndView.addObject(ParameterConstant.ATTR_NAME_TOUR_NAME, tourName);
             modelAndView.addObject(ParameterConstant.ATTR_NAME_ERROR_TOUR_NAME_EXISTS_MSG,
                     messageManager.getProperty(PageMsgConstant.TOUR_NAME_EXISTS_MSG_KEY, language));
         }
+        modelAndView.addObject(ParameterConstant.PARAM_NAME_TOUR_INSTANCE, tour);
         return modelAndView;
     }
 }

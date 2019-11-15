@@ -18,8 +18,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import static by.epam.touragency.util.PageMsgConstant.TOUR_OVERVIEW_PAGE_PATH;
 import static by.epam.touragency.util.ParameterConstant.*;
-import static org.mockito.ArgumentMatchers.anyInt;
-import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -62,7 +61,7 @@ class ChangeHotelCommandTest {
     void executeSuccess() throws Exception {
         when(validation.validateTourStringItems(anyString())).thenReturn(true);
         when(validation.validateId(anyString())).thenReturn(true);
-        doNothing().when(updateTourLogic).updateHotel(anyString(), anyInt());
+        doNothing().when(updateTourLogic).updateHotel(anyString(), anyInt(), any());
         mockMvc.perform(post("/change_hotel")
                 .param(PARAM_NAME_NEW_HOTEL, "hotel")
                 .param(PARAM_NAME_TOUR_ID, "6"))

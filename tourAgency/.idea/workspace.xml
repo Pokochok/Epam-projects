@@ -15,818 +15,111 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6cf249f-abee-4fa2-b06c-4b2f6579adc5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/c/1ce5afd004c265fc49ad00c0fc4a0b3484bf039b" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/c/1ce5afd004c265fc49ad00c0fc4a0b3484bf039b" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/6/26deab6edd7d7f05e9639b8432d2dd81a9e32252" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/6/26deab6edd7d7f05e9639b8432d2dd81a9e32252" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/e/2e18cf6b205b23d132a42861cadd14480a30777d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/9/39122da3a2710304cb3880138a077fd018938a2a" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/9/39122da3a2710304cb3880138a077fd018938a2a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/c/3c673bdcd84ae62aaa4f32f1ed7d08fb8058ad7c" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/c/3c673bdcd84ae62aaa4f32f1ed7d08fb8058ad7c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/2/52e62af2bdf497098f180f3864114c56213acd2c" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/2/52e62af2bdf497098f180f3864114c56213acd2c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/1/61684cb751b9e300f4a297ce5422f8487cc1f2b8" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/1/61684cb751b9e300f4a297ce5422f8487cc1f2b8" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/2/62dfe6711aec5431ee4e6d1df513934d779bcefa" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/2/62dfe6711aec5431ee4e6d1df513934d779bcefa" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/3/83fe896469b52b6920492ddea0fe2cd441110f87" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/3/83fe896469b52b6920492ddea0fe2cd441110f87" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/8/88daf6924bf09bf2332c8c3bdd8fc75b40c7a87e" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/8/88daf6924bf09bf2332c8c3bdd8fc75b40c7a87e" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/b/8b4c4d215ed4b0498cf9b6e8a3e274b957b2e37a" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/b/8b4c4d215ed4b0498cf9b6e8a3e274b957b2e37a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/d/9d3746f07c03e87362944b5b64ef5beca8c65a57" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/d/9d3746f07c03e87362944b5b64ef5beca8c65a57" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/f/afd6202bd26cfac8143dcaf05d86d5989226e2f6" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/f/afd6202bd26cfac8143dcaf05d86d5989226e2f6" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/2/b24ee72bcabb2c076345569cb64fa3a4b885b473" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/e/beaab86e9d28c7b5d1fc57fd0a357bb5958bdc72" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/e/beaab86e9d28c7b5d1fc57fd0a357bb5958bdc72" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/a/ca102c224d10b47a98331dcce86ed97af9e5f076" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/a/ca102c224d10b47a98331dcce86ed97af9e5f076" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/2/d2f7894e1ec9c5c03506ee94d1d172390fc0e3d6" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/2/d2f7894e1ec9c5c03506ee94d1d172390fc0e3d6" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/b/ebc293cb46fc5101dc7ca4cc1c70fd875c4320f7" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/b/ebc293cb46fc5101dc7ca4cc1c70fd875c4320f7" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/c/fcb6cce06e37ebab4065d5b8623cdb6b85ca1d42" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/c/fcb6cce06e37ebab4065d5b8623cdb6b85ca1d42" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/.classpath" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/src/test/resources/db/migration/V1__init.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/src/test/resources/dbdriver/driverProp.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hibernaterepository/src/main/java/by/epam/touragency/repository/impl/HibernateUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/hibernaterepository/src/main/java/by/epam/touragency/repository/impl/HibernateUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hibernaterepository/src/main/java/by/epam/touragency/specification/impl/user/FindUserByEmailSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/hibernaterepository/src/main/java/by/epam/touragency/specification/impl/user/FindUserByEmailSpecification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hibernaterepository/src/main/java/by/epam/touragency/specification/impl/user/FindUserByLoginPasswordSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/hibernaterepository/src/main/java/by/epam/touragency/specification/impl/user/FindUserByLoginPasswordSpecification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hibernaterepository/src/main/java/by/epam/touragency/specification/impl/user/FindUserByPhoneNumberSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/hibernaterepository/src/main/java/by/epam/touragency/specification/impl/user/FindUserByPhoneNumberSpecification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hibernaterepository/src/main/java/by/epam/touragency/specification/impl/user/UpdateUserEmailByLoginSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/hibernaterepository/src/main/java/by/epam/touragency/specification/impl/user/UpdateUserEmailByLoginSpecification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hibernaterepository/src/main/java/by/epam/touragency/specification/impl/user/UpdateUserLoginByEmailSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/hibernaterepository/src/main/java/by/epam/touragency/specification/impl/user/UpdateUserLoginByEmailSpecification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hibernaterepository/src/main/java/by/epam/touragency/specification/impl/user/UpdateUserNameByLoginSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/hibernaterepository/src/main/java/by/epam/touragency/specification/impl/user/UpdateUserNameByLoginSpecification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hibernaterepository/src/main/java/by/epam/touragency/specification/impl/user/UpdateUserPasswordByLoginPasswordSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/hibernaterepository/src/main/java/by/epam/touragency/specification/impl/user/UpdateUserPasswordByLoginPasswordSpecification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hibernaterepository/src/main/java/by/epam/touragency/specification/impl/user/UpdateUserPasswordByLoginSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/hibernaterepository/src/main/java/by/epam/touragency/specification/impl/user/UpdateUserPasswordByLoginSpecification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hibernaterepository/src/main/java/by/epam/touragency/specification/impl/user/UpdateUserPhoneNumberByLoginSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/hibernaterepository/src/main/java/by/epam/touragency/specification/impl/user/UpdateUserPhoneNumberByLoginSpecification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hibernaterepository/src/main/java/by/epam/touragency/specification/impl/user/UpdateUserSurnameByLoginSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/hibernaterepository/src/main/java/by/epam/touragency/specification/impl/user/UpdateUserSurnameByLoginSpecification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdbctemplaterepository/src/main/java/by/epam/touragency/repository/impl/TicketRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/jdbctemplaterepository/src/main/java/by/epam/touragency/repository/impl/TicketRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/main/java/by/epam/touragency/entity/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/by/epam/touragency/entity/Ticket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/by/epam/touragency/logic/BookingLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/by/epam/touragency/logic/BookingLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/by/epam/touragency/logic/TicketRegistrationLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/by/epam/touragency/logic/TicketRegistrationLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdbctemplaterepository/src/main/java/by/epam/touragency/repository/impl/TourRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/jdbctemplaterepository/src/main/java/by/epam/touragency/repository/impl/TourRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdbctemplaterepository/src/main/java/by/epam/touragency/specification/impl/tour/AddTourSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/jdbctemplaterepository/src/main/java/by/epam/touragency/specification/impl/tour/AddTourSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/by/epam/touragency/entity/Tour.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/by/epam/touragency/entity/Tour.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/by/epam/touragency/logic/MatchOfUniqueFieldsDetector.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/by/epam/touragency/logic/MatchOfUniqueFieldsDetector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/src/main/java/by/epam/touragency/logic/ToPageWithListLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/by/epam/touragency/logic/ToPageWithListLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/by/epam/touragency/logic/UpdateUserLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/by/epam/touragency/logic/UpdateUserLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/test/java/by/epam/touragency/config/WebAppTestContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/test/java/by/epam/touragency/config/WebAppTestContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/test/java/by/epam/touragency/logic/UpdateUserLogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/test/java/by/epam/touragency/logic/UpdateUserLogicTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/test/java/by/epam/touragency/util/ValidationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/test/java/by/epam/touragency/util/ValidationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/by/epam/touragency/logic/BookingLogic.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/by/epam/touragency/logic/BookingLogic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/by/epam/touragency/logic/TicketRegistrationLogic.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/by/epam/touragency/logic/TicketRegistrationLogic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/by/epam/touragency/logic/TourRegistrationLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/by/epam/touragency/logic/TourRegistrationLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/by/epam/touragency/logic/UpdateTourLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/by/epam/touragency/logic/UpdateTourLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/test/java/by/epam/touragency/logic/UpdateTourLogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/test/java/by/epam/touragency/logic/UpdateTourLogicTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/target/classes/by/epam/touragency/logic/MatchOfUniqueFieldsDetector.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/by/epam/touragency/logic/MatchOfUniqueFieldsDetector.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/target/classes/by/epam/touragency/logic/ToPageWithListLogic.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/by/epam/touragency/logic/ToPageWithListLogic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/by/epam/touragency/logic/UpdateUserLogic.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/by/epam/touragency/logic/UpdateUserLogic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/target/classes/by/epam/touragency/logic/TourRegistrationLogic.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/by/epam/touragency/logic/TourRegistrationLogic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/target/classes/by/epam/touragency/logic/UpdateTourLogic.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/by/epam/touragency/logic/UpdateTourLogic.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/target/service-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/service-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/test-classes/by/epam/touragency/config/WebAppTestContext$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/test-classes/by/epam/touragency/config/WebAppTestContext$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/test-classes/by/epam/touragency/config/WebAppTestContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/test-classes/by/epam/touragency/config/WebAppTestContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/test-classes/by/epam/touragency/logic/UpdateUserLogicTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/test-classes/by/epam/touragency/logic/UpdateUserLogicTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/test-classes/by/epam/touragency/util/ValidationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/test-classes/by/epam/touragency/util/ValidationTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/config/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/controller/ChangeEmailCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/controller/ChangeEmailCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/controller/ChangeLoginCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/controller/ChangeLoginCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/controller/ChangeNameCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/controller/ChangeNameCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/controller/ChangePasswordCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/controller/ChangePasswordCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/controller/ChangePhoneNumberCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/controller/ChangePhoneNumberCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/controller/ChangeSurnameCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/controller/ChangeSurnameCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/test/java/by/epam/touragency/controller/ChangeEmailCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/test/java/by/epam/touragency/controller/ChangeEmailCommandTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/test/java/by/epam/touragency/controller/ChangeLoginCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/test/java/by/epam/touragency/controller/ChangeLoginCommandTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/test/java/by/epam/touragency/controller/ChangeNameCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/test/java/by/epam/touragency/controller/ChangeNameCommandTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/test/java/by/epam/touragency/controller/ChangePasswordCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/test/java/by/epam/touragency/controller/ChangePasswordCommandTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/test/java/by/epam/touragency/controller/ChangePhoneNumberCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/test/java/by/epam/touragency/controller/ChangePhoneNumberCommandTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/test/java/by/epam/touragency/controller/ChangeSurnameCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/test/java/by/epam/touragency/controller/ChangeSurnameCommandTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/config/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/config/AppConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/ChangeEmailCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/ChangeEmailCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/ChangeLoginCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/ChangeLoginCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/ChangeNameCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/ChangeNameCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/ChangePasswordCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/ChangePasswordCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/ChangePhoneNumberCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/ChangePhoneNumberCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/ChangeSurnameCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/ChangeSurnameCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/target/test-classes/by/epam/touragency/logic/UpdateTourLogicTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/test-classes/by/epam/touragency/logic/UpdateTourLogicTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/controller/ChangeAdultsNumberCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/controller/ChangeAdultsNumberCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/controller/ChangeArrivalCityCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/controller/ChangeArrivalCityCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/controller/ChangeArrivalCountryCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/controller/ChangeArrivalCountryCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/controller/ChangeArrivalDateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/controller/ChangeArrivalDateCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/controller/ChangeChildrenNumberCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/controller/ChangeChildrenNumberCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/controller/ChangeDepartureCityCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/controller/ChangeDepartureCityCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/controller/ChangeDepartureDateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/controller/ChangeDepartureDateCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/controller/ChangeHotelCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/controller/ChangeHotelCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/controller/ChangeNutritionCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/controller/ChangeNutritionCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/controller/ChangePriceCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/controller/ChangePriceCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/controller/ChangeStatusCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/controller/ChangeStatusCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/controller/ChangeTourNameCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/controller/ChangeTourNameCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/controller/ToTourOverviewCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/controller/ToTourOverviewCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/util/ParameterConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/by/epam/touragency/util/ParameterConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/templates/components/tour-form.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/templates/components/tour-form.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main/webapp/templates/tour-overview.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/webapp/templates/tour-overview.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/test/java/by/epam/touragency/controller/ChangeAdultsNumberCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/test/java/by/epam/touragency/controller/ChangeAdultsNumberCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/test/java/by/epam/touragency/controller/ChangeArrivalCityCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/test/java/by/epam/touragency/controller/ChangeArrivalCityCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/test/java/by/epam/touragency/controller/ChangeArrivalCountryCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/test/java/by/epam/touragency/controller/ChangeArrivalCountryCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/test/java/by/epam/touragency/controller/ChangeArrivalDateCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/test/java/by/epam/touragency/controller/ChangeArrivalDateCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/test/java/by/epam/touragency/controller/ChangeChildrenNumberCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/test/java/by/epam/touragency/controller/ChangeChildrenNumberCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/test/java/by/epam/touragency/controller/ChangeDepartureCityCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/test/java/by/epam/touragency/controller/ChangeDepartureCityCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/test/java/by/epam/touragency/controller/ChangeDepartureDateCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/test/java/by/epam/touragency/controller/ChangeDepartureDateCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/test/java/by/epam/touragency/controller/ChangeHotelCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/test/java/by/epam/touragency/controller/ChangeHotelCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/test/java/by/epam/touragency/controller/ChangeNutritionCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/test/java/by/epam/touragency/controller/ChangeNutritionCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/test/java/by/epam/touragency/controller/ChangePriceCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/test/java/by/epam/touragency/controller/ChangePriceCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/test/java/by/epam/touragency/controller/ChangeStatusCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/test/java/by/epam/touragency/controller/ChangeStatusCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/test/java/by/epam/touragency/controller/ChangeTourNameCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/test/java/by/epam/touragency/controller/ChangeTourNameCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/BookingCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/BookingCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/ChangeAdultsNumberCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/ChangeAdultsNumberCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/ChangeArrivalCityCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/ChangeArrivalCityCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/ChangeArrivalCountryCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/ChangeArrivalCountryCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/ChangeArrivalDateCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/ChangeArrivalDateCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/ChangeChildrenNumberCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/ChangeChildrenNumberCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/ChangeDepartureCityCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/ChangeDepartureCityCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/ChangeDepartureDateCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/ChangeDepartureDateCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/ChangeHotelCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/ChangeHotelCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/ChangeNutritionCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/ChangeNutritionCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/ChangePriceCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/ChangePriceCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/ChangeStatusCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/ChangeStatusCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/ChangeTourNameCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/ChangeTourNameCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/ToTourOverviewCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/controller/ToTourOverviewCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/util/ParameterConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/classes/by/epam/touragency/util/ParameterConstant.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/target/classes/jsp/home_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/classes/jsp/home_en.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/target/classes/jsp/timestamp.properties" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/classes/jsp/timestamp.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/target/classes/jsp/timestamp_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/classes/jsp/timestamp_en.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/target/classes/jsp/timestamp_pl.properties" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/classes/jsp/timestamp_pl.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/target/classes/jsp/timestamp_ru.properties" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/classes/jsp/timestamp_ru.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/test-classes/by/epam/touragency/controller/ChangeEmailCommandTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/test-classes/by/epam/touragency/controller/ChangeEmailCommandTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/test-classes/by/epam/touragency/controller/ChangeLoginCommandTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/test-classes/by/epam/touragency/controller/ChangeLoginCommandTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/test-classes/by/epam/touragency/controller/ChangeNameCommandTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/test-classes/by/epam/touragency/controller/ChangeNameCommandTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/test-classes/by/epam/touragency/controller/ChangePasswordCommandTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/test-classes/by/epam/touragency/controller/ChangePasswordCommandTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/test-classes/by/epam/touragency/controller/ChangePhoneNumberCommandTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/test-classes/by/epam/touragency/controller/ChangePhoneNumberCommandTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/test-classes/by/epam/touragency/controller/ChangeSurnameCommandTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/test-classes/by/epam/touragency/controller/ChangeSurnameCommandTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/test-classes/by/epam/touragency/controller/BookingCommandTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/test-classes/by/epam/touragency/controller/BookingCommandTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/test-classes/by/epam/touragency/controller/ChangeAdultsNumberCommandTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/test-classes/by/epam/touragency/controller/ChangeAdultsNumberCommandTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/test-classes/by/epam/touragency/controller/ChangeArrivalCityCommandTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/test-classes/by/epam/touragency/controller/ChangeArrivalCityCommandTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/test-classes/by/epam/touragency/controller/ChangeArrivalCountryCommandTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/test-classes/by/epam/touragency/controller/ChangeArrivalCountryCommandTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/test-classes/by/epam/touragency/controller/ChangeArrivalDateCommandTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/test-classes/by/epam/touragency/controller/ChangeArrivalDateCommandTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/test-classes/by/epam/touragency/controller/ChangeChildrenNumberCommandTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/test-classes/by/epam/touragency/controller/ChangeChildrenNumberCommandTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/test-classes/by/epam/touragency/controller/ChangeDepartureCityCommandTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/test-classes/by/epam/touragency/controller/ChangeDepartureCityCommandTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/test-classes/by/epam/touragency/controller/ChangeDepartureDateCommandTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/test-classes/by/epam/touragency/controller/ChangeDepartureDateCommandTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/test-classes/by/epam/touragency/controller/ChangeHotelCommandTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/test-classes/by/epam/touragency/controller/ChangeHotelCommandTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/test-classes/by/epam/touragency/controller/ChangeNutritionCommandTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/test-classes/by/epam/touragency/controller/ChangeNutritionCommandTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/test-classes/by/epam/touragency/controller/ChangePriceCommandTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/test-classes/by/epam/touragency/controller/ChangePriceCommandTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/test-classes/by/epam/touragency/controller/ChangeStatusCommandTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/test-classes/by/epam/touragency/controller/ChangeStatusCommandTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/test-classes/by/epam/touragency/controller/ChangeTourNameCommandTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/test-classes/by/epam/touragency/controller/ChangeTourNameCommandTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/config/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/config/AppConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/ChangeEmailCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/ChangeEmailCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/ChangeLoginCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/ChangeLoginCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/ChangeNameCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/ChangeNameCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/ChangePasswordCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/ChangePasswordCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/ChangePhoneNumberCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/ChangePhoneNumberCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/ChangeSurnameCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/ChangeSurnameCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/BookingCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/BookingCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/ChangeAdultsNumberCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/ChangeAdultsNumberCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/ChangeArrivalCityCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/ChangeArrivalCityCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/ChangeArrivalCountryCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/ChangeArrivalCountryCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/ChangeArrivalDateCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/ChangeArrivalDateCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/ChangeChildrenNumberCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/ChangeChildrenNumberCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/ChangeDepartureCityCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/ChangeDepartureCityCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/ChangeDepartureDateCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/ChangeDepartureDateCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/ChangeHotelCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/ChangeHotelCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/ChangeNutritionCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/ChangeNutritionCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/ChangePriceCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/ChangePriceCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/ChangeStatusCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/ChangeStatusCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/ChangeTourNameCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/ChangeTourNameCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/ToTourOverviewCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/controller/ToTourOverviewCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/util/ParameterConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/by/epam/touragency/util/ParameterConstant.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/jsp/home_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/jsp/home_en.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/jsp/timestamp.properties" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/jsp/timestamp.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/jsp/timestamp_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/jsp/timestamp_en.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/jsp/timestamp_pl.properties" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/jsp/timestamp_pl.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/jsp/timestamp_ru.properties" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/jsp/timestamp_ru.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/FastInfoset-1.2.15.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/HikariCP-3.4.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/aether-api-1.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/aether-impl-1.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/aether-spi-1.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/aether-util-1.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/antlr-2.7.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/asm-7.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/asm-analysis-7.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/asm-commons-7.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/asm-tree-7.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/aspectjrt-1.9.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/aspectjweaver-1.9.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/byte-buddy-1.9.10.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/classmate-1.3.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/classworlds-1.1-alpha-2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/commons-beanutils-1.7.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/commons-codec-1.11.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/commons-collections-3.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/commons-digester-1.6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/commons-httpclient-3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/commons-io-2.6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/commons-lang-2.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/commons-logging-1.0.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/commons-validator-1.2.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/controller-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/dom4j-2.1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/doxia-core-1.1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/doxia-decoration-model-1.1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/doxia-logging-api-1.1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/doxia-module-fml-1.1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/doxia-module-xhtml-1.1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/doxia-sink-api-1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/doxia-site-renderer-1.1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/file-management-1.2.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/flyway-core-6.0.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/freemarker-2.3.29.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/hibernate-commons-annotations-5.1.0.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/hibernate-core-5.4.7.Final.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/hibernaterepository-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/hibernaterepository-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/istack-commons-runtime-3.0.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/jacoco-maven-plugin-0.8.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/jandex-2.0.5.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/javassist-3.24.0-GA.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/javax.activation-api-1.2.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/javax.annotation-api-1.3.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/javax.persistence-api-2.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/javax.servlet-api-4.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/javax.servlet.jsp-api-2.3.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/jaxb-api-2.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/jaxb-runtime-2.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/jboss-logging-3.3.2.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/jboss-transaction-api_1.2_spec-1.1.1.Final.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/jdbctemplaterepository-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/jdbctemplaterepository-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/junit-3.8.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/log4j-api-2.12.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/log4j-core-2.12.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/log4j-slf4j-impl-2.12.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/log4j-web-2.11.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/maven-aether-provider-3.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/maven-artifact-3.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/maven-artifact-manager-2.0.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/maven-core-3.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/maven-model-3.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/maven-model-builder-3.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/maven-plugin-api-3.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/maven-plugin-registry-2.0.10.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/maven-profile-2.0.10.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/maven-project-2.0.10.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/maven-reporting-api-3.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/maven-reporting-impl-2.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/maven-repository-metadata-3.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/maven-settings-3.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/maven-settings-builder-3.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/maven-shared-io-1.1.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/model-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/model-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/org.jacoco.agent-0.8.4-runtime.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/org.jacoco.core-0.8.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/org.jacoco.report-0.8.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/oro-2.0.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/plexus-cipher-1.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/plexus-classworlds-2.2.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/plexus-component-annotations-1.5.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/plexus-container-default-1.0-alpha-9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/plexus-i18n-1.0-beta-7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/plexus-interpolation-1.14.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/plexus-sec-dispatcher-1.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/plexus-utils-3.0.22.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/plexus-velocity-1.1.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/postgresql-42.2.8.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/service-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/service-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/sisu-guice-2.1.7-noaop.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/sisu-inject-bean-1.4.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/sisu-inject-plexus-1.4.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/slf4j-api-1.7.25.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/spring-aop-5.2.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/spring-beans-5.2.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/spring-context-5.2.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/spring-context-support-5.1.9.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/spring-core-5.2.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/spring-expression-5.2.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/spring-jcl-5.2.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/spring-jdbc-5.1.7.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/spring-orm-5.1.7.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/spring-security-acl-5.2.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/spring-security-config-5.2.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/spring-security-core-5.2.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/spring-security-taglibs-5.2.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/spring-security-test-5.1.6.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/spring-security-web-5.2.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/spring-tx-5.2.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/spring-web-5.2.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/spring-webmvc-5.1.9.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/stax-ex-1.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/txw2-2.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/velocity-1.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/wagon-provider-api-1.0-alpha-6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/xercesImpl-2.8.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/lib/xml-apis-1.0.b2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/log4j2.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/tld/customtag.tld" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/css/booking-style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/css/componentsstyle/language-panel.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/css/componentsstyle/main-navigation.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/css/componentsstyle/main-panel-action-style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/css/componentsstyle/main-panel-container.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/css/componentsstyle/order-form.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/css/componentsstyle/role.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/css/componentsstyle/ticket-form.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/css/componentsstyle/tour-form.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/css/flights-style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/css/home-content-style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/css/login-style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/css/orders-style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/css/profile-style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/css/registration-style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/css/tour-overview-style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/css/tours-style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/img/background.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/img/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/templates/about-company.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/templates/booking.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/templates/components/another-panel.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/templates/components/language-panel.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/templates/components/main-navigation.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/templates/components/main-panel-action.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/templates/components/main-panel.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/templates/components/order-form.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/templates/components/role.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/templates/components/security.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/templates/components/ticket-form.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/templates/components/timestamp.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/templates/components/tour-form.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/templates/error.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/templates/home.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/templates/inf.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/templates/login.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/templates/orders.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/templates/registration.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/templates/ticket-registration.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/templates/tickets.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/templates/tour-overview.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/templates/tour-registration.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/templates/tours.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/templates/user-profile.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/bootstrap/css/bootstrap-theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/bootstrap/css/bootstrap-theme.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/bootstrap/css/bootstrap-theme.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/bootstrap/css/bootstrap-theme.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/bootstrap/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/bootstrap/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/bootstrap/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/bootstrap/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/bootstrap/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/bootstrap/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/bootstrap/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/bootstrap/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/bootstrap/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/bootstrap/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/bootstrap/js/npm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/lib/components/bootstrap-select.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/lib/components/datepicker3.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/lib/components/jasny-bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/lib/components/jquery-ui-timepicker-addon.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/lib/components/jquery.mCustomScrollbar.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/lib/components/jquery.tagit.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/lib/components/mCSB_buttons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/lib/components/tagit.ui-zendesk.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/lib/components/timepicker.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-accordion.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-accordion.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-alerts.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-alerts.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-all.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-all.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-animated-image-panel.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-animated-image-panel.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-autocomplete.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-autocomplete.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-breadcrumbs.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-breadcrumbs.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-buttons.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-buttons.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-carousel.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-carousel.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-core.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-core.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-datepicker-2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-datepicker-2.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-datepicker.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-datepicker.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-file-uploader.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-file-uploader.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-form-elements.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-form-elements.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-image-text.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-image-text.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-items-list.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-items-list.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-labels.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-labels.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-loaders.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-loaders.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-login-panel.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-login-panel.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-modal.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-modal.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-multiswitch.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-multiswitch.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-pagination.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-pagination.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-panels.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-panels.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-popovers.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-popovers.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-profile-menu.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-profile-menu.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-profile.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-profile.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-progress-bars.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-progress-bars.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-rating.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-rating.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-search.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-search.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-show-text.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-show-text.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-sliders.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-sliders.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-switch.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-switch.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-tables.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-tables.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-tabs.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-tabs.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-tagit.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-tagit.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-timeline.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-timeline.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-timepicker.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-timepicker.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-tooltips.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/css/uui-tooltips.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-awesome/css/font-awesome.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-awesome/css/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-awesome/fonts/FontAwesome.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-awesome/fonts/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-awesome/fonts/fontawesome-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-awesome/fonts/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-awesome/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-awesome/fonts/fontawesome-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-awesome/less/animated.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-awesome/less/bordered-pulled.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-awesome/less/core.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-awesome/less/fixed-width.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-awesome/less/font-awesome.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-awesome/less/icons.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-awesome/less/larger.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-awesome/less/list.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-awesome/less/mixins.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-awesome/less/path.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-awesome/less/rotated-flipped.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-awesome/less/spinning.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-awesome/less/stacked.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-awesome/less/variables.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-awesome/scss/_animated.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-awesome/scss/_bordered-pulled.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-awesome/scss/_core.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-awesome/scss/_fixed-width.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-awesome/scss/_icons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-awesome/scss/_larger.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-awesome/scss/_list.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-awesome/scss/_mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-awesome/scss/_path.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-awesome/scss/_rotated-flipped.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-awesome/scss/_spinning.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-awesome/scss/_stacked.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-awesome/scss/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-awesome/scss/font-awesome.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-oswald/oswald-bold.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-oswald/oswald-bold.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-oswald/oswald-bold.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-oswald/oswald-bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-oswald/oswald-bold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-oswald/oswald-light.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-oswald/oswald-light.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-oswald/oswald-light.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-oswald/oswald-light.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-oswald/oswald-light.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-oswald/oswald-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-oswald/oswald-regular.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-oswald/oswald-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-oswald/oswald-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-oswald/oswald-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-sourcesanspro/sourcesanspro-bold.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-sourcesanspro/sourcesanspro-bold.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-sourcesanspro/sourcesanspro-bold.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-sourcesanspro/sourcesanspro-bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-sourcesanspro/sourcesanspro-bold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-sourcesanspro/sourcesanspro-it.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-sourcesanspro/sourcesanspro-it.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-sourcesanspro/sourcesanspro-it.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-sourcesanspro/sourcesanspro-it.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-sourcesanspro/sourcesanspro-it.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-sourcesanspro/sourcesanspro-light.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-sourcesanspro/sourcesanspro-light.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-sourcesanspro/sourcesanspro-light.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-sourcesanspro/sourcesanspro-light.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-sourcesanspro/sourcesanspro-light.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-sourcesanspro/sourcesanspro-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-sourcesanspro/sourcesanspro-regular.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-sourcesanspro/sourcesanspro-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-sourcesanspro/sourcesanspro-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-sourcesanspro/sourcesanspro-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-sourcesanspro/sourcesanspro-semibold.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-sourcesanspro/sourcesanspro-semibold.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-sourcesanspro/sourcesanspro-semibold.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-sourcesanspro/sourcesanspro-semibold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/fonts/font-sourcesanspro/sourcesanspro-semibold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/images/Logo_Epam_Color.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/images/Logo_Epam_Gray.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/images/Logo_Epam_White.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/images/ic_logo_UUi.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/images/ic_logo_UUi_blue.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/images/icons/datepicker-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/images/icons/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/images/icons/no-results-responsive.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/images/icons/no-results.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/images/icons/no_photo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/jquery-ui/images/ui-bg_glass_55_fbf9ee_1x400.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/jquery-ui/images/ui-bg_glass_65_ffffff_1x400.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/jquery-ui/images/ui-bg_glass_75_dadada_1x400.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/jquery-ui/images/ui-bg_glass_75_e6e6e6_1x400.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/jquery-ui/images/ui-bg_glass_95_fef1ec_1x400.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/jquery-ui/images/ui-bg_highlight-soft_75_cccccc_1x100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/jquery-ui/images/ui-icons_222222_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/jquery-ui/images/ui-icons_2e83ff_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/jquery-ui/images/ui-icons_454545_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/jquery-ui/images/ui-icons_888888_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/jquery-ui/images/ui-icons_cd0a0a_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/jquery-ui/jquery-ui.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/jquery-ui/jquery-ui.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/jquery-ui/jquery-ui.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/jquery-ui/jquery-ui.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/jquery-ui/jquery-ui.structure.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/jquery-ui/jquery-ui.structure.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/jquery-ui/jquery-ui.theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/jquery-ui/jquery-ui.theme.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/lib/components/DataTables-1.10.2/css/jquery.dataTables.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/lib/components/DataTables-1.10.2/css/jquery.dataTables.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/lib/components/DataTables-1.10.2/css/jquery.dataTables_themeroller.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/lib/components/DataTables-1.10.2/images/Sorting icons.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/lib/components/DataTables-1.10.2/images/back_disabled.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/lib/components/DataTables-1.10.2/images/back_enabled.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/lib/components/DataTables-1.10.2/images/back_enabled_hover.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/lib/components/DataTables-1.10.2/images/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/lib/components/DataTables-1.10.2/images/forward_disabled.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/lib/components/DataTables-1.10.2/images/forward_enabled.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/lib/components/DataTables-1.10.2/images/forward_enabled_hover.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/lib/components/DataTables-1.10.2/images/sort_asc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/lib/components/DataTables-1.10.2/images/sort_asc_disabled.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/lib/components/DataTables-1.10.2/images/sort_both.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/lib/components/DataTables-1.10.2/images/sort_desc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/lib/components/DataTables-1.10.2/images/sort_desc_disabled.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/lib/components/DataTables-1.10.2/js/jquery.dataTables.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/lib/components/DataTables-1.10.2/js/jquery.dataTables.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/lib/components/DataTables-1.10.2/js/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/lib/components/bootstrap-datepicker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/lib/components/bootstrap-select.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/lib/components/bootstrap-timepicker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/lib/components/bootstrap3-typeahead.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/lib/components/c3-0.4.2/c3.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/lib/components/c3-0.4.2/c3.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/lib/components/d3-3.4.13/d3.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/lib/components/jasny-bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/lib/components/jquery.mCustomScrollbar.concat.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/lib/components/jquery.sparkline.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/lib/components/tag-it.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/lib/jquery-1.12.0.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/lib/less.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/uui-autocomplete.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/uui-core.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/uui-datepicker-2.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/uui-datepicker.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/uui-dropdown.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/uui-global-search.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/uui-multiswitch.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/uui-panel.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/uui-popover.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/uui-rating.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/uui-show-text.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/uui-tabs.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/uui-tagit.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/uui-timepicker.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/uui-tooltip.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/js/uui-tree-grid.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-accordion.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-alerts.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-all.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-animated-image-panel.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-autocomplete.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-breadcrumbs.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-buttons.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-carousel.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-colors.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-core.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-datepicker-2.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-datepicker.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-file-uploader.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-fonts.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-form-elements.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-icons.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-image-text.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-items-list.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-labels.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-loaders.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-login-panel.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-modal.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-multiswitch.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-pagination.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-panels.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-popovers.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-profile-menu.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-profile.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-progress-bars.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-rating.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-search.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-show-text.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-sliders.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-switch.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-tables.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-tabs.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-tagit.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-timeline.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-timepicker.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/less/uui-tooltips.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/slick/ajax-loader.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/slick/config.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/slick/fonts/slick.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/slick/fonts/slick.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/slick/fonts/slick.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/slick/fonts/slick.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/slick/slick-theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/slick/slick-theme.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/slick/slick-theme.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/slick/slick.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/slick/slick.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/slick/slick.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/slick/slick.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/slick/slick.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/jquery.tinymce.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/langs/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/license.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/advlist/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/advlist/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/anchor/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/anchor/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/autolink/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/autolink/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/autoresize/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/autoresize/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/autosave/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/autosave/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/bbcode/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/bbcode/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/charmap/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/charmap/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/code/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/code/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/colorpicker/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/colorpicker/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/compat3x/css/dialog.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/compat3x/img/buttons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/compat3x/img/icons.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/compat3x/img/items.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/compat3x/img/menu_arrow.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/compat3x/img/menu_check.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/compat3x/img/progress.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/compat3x/img/tabs.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/compat3x/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/compat3x/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/compat3x/tiny_mce_popup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/compat3x/utils/editable_selects.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/compat3x/utils/form_utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/compat3x/utils/mctabs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/compat3x/utils/validate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/contextmenu/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/contextmenu/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/directionality/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/directionality/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/emoticons/img/smiley-cool.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/emoticons/img/smiley-cry.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/emoticons/img/smiley-embarassed.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/emoticons/img/smiley-foot-in-mouth.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/emoticons/img/smiley-frown.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/emoticons/img/smiley-innocent.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/emoticons/img/smiley-kiss.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/emoticons/img/smiley-laughing.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/emoticons/img/smiley-money-mouth.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/emoticons/img/smiley-sealed.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/emoticons/img/smiley-smile.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/emoticons/img/smiley-surprised.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/emoticons/img/smiley-tongue-out.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/emoticons/img/smiley-undecided.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/emoticons/img/smiley-wink.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/emoticons/img/smiley-yell.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/emoticons/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/emoticons/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/example/dialog.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/example/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/example/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/example_dependency/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/example_dependency/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/fullpage/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/fullpage/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/fullscreen/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/fullscreen/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/hr/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/hr/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/image/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/image/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/imagetools/classes/Canvas.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/imagetools/classes/ColorMatrix.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/imagetools/classes/Conversions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/imagetools/classes/CropRect.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/imagetools/classes/Dialog.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/imagetools/classes/Filters.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/imagetools/classes/ImagePanel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/imagetools/classes/ImageSize.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/imagetools/classes/ImageTools.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/imagetools/classes/Mime.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/imagetools/classes/Plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/imagetools/classes/UndoStack.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/imagetools/plugin.dev.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/imagetools/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/imagetools/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/importcss/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/importcss/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/insertdatetime/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/insertdatetime/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/layer/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/layer/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/legacyoutput/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/legacyoutput/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/link/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/link/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/lists/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/lists/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/media/moxieplayer.swf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/media/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/media/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/nonbreaking/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/nonbreaking/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/noneditable/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/noneditable/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/pagebreak/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/pagebreak/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/paste/classes/Clipboard.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/paste/classes/Plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/paste/classes/Quirks.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/paste/classes/Utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/paste/classes/WordFilter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/paste/plugin.dev.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/paste/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/paste/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/preview/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/preview/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/print/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/print/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/save/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/save/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/searchreplace/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/searchreplace/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/spellchecker/classes/DomTextMatcher.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/spellchecker/classes/Plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/spellchecker/plugin.dev.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/spellchecker/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/spellchecker/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/tabfocus/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/tabfocus/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/table/classes/CellSelection.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/table/classes/Dialogs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/table/classes/Plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/table/classes/Quirks.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/table/classes/TableGrid.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/table/classes/Utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/table/plugin.dev.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/table/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/table/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/template/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/template/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/textcolor/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/textcolor/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/textpattern/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/textpattern/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/visualblocks/css/visualblocks.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/visualblocks/img/address.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/visualblocks/img/article.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/visualblocks/img/aside.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/visualblocks/img/blockquote.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/visualblocks/img/div.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/visualblocks/img/dl.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/visualblocks/img/figure.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/visualblocks/img/h1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/visualblocks/img/h2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/visualblocks/img/h3.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/visualblocks/img/h4.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/visualblocks/img/h5.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/visualblocks/img/h6.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/visualblocks/img/hgroup.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/visualblocks/img/ol.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/visualblocks/img/p.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/visualblocks/img/pre.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/visualblocks/img/section.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/visualblocks/img/ul.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/visualblocks/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/visualblocks/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/visualchars/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/visualchars/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/wordcount/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/plugins/wordcount/plugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/content.inline.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/content.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-oswald/oswald-bold.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-oswald/oswald-bold.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-oswald/oswald-bold.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-oswald/oswald-bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-oswald/oswald-bold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-oswald/oswald-light.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-oswald/oswald-light.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-oswald/oswald-light.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-oswald/oswald-light.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-oswald/oswald-light.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-oswald/oswald-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-oswald/oswald-regular.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-oswald/oswald-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-oswald/oswald-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-oswald/oswald-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-bold.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-bold.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-bold.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-bold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-it.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-it.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-it.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-it.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-it.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-light.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-light.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-light.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-light.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-light.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-regular.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-semibold.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-semibold.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-semibold.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-semibold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-semibold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/tinymce-small.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/tinymce-small.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/tinymce-small.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/tinymce-small.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/tinymce-small.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/tinymce.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/tinymce.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/tinymce.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/tinymce.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/fonts/tinymce.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/img/anchor.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/img/loader.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/img/object.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/img/trans.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/skin.ie7.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/skins/epamuui/skin.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/themes/modern/theme.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/themes/modern/theme.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/uui/tinymce/tinymce.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/templates/components/tour-form.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/templates/components/tour-form.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/templates/tour-overview.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/templates/tour-overview.ftl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

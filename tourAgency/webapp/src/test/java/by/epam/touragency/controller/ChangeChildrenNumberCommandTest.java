@@ -69,7 +69,7 @@ class ChangeChildrenNumberCommandTest {
         when(validation.validateId(anyString())).thenReturn(true);
         when(validation.validateNumberOfPeople(anyString())).thenReturn(true);
         when(validation.dateToFormat(any(Long.class))).thenReturn("testDate");
-        doNothing().when(updateTourLogic).updateChildrenNumber(anyInt(), anyInt());
+        doNothing().when(updateTourLogic).updateChildrenNumber(anyInt(), anyInt(), any());
         mockMvc.perform(post("/change_children_number")
                 .param(PARAM_NAME_NEW_CHILDREN_NUMBER, "3")
                 .param(PARAM_NAME_TOUR_ID, "6"))

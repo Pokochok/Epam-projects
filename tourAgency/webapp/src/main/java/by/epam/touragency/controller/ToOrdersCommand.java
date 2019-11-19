@@ -3,6 +3,7 @@ package by.epam.touragency.controller;
 import by.epam.touragency.entity.Order;
 import by.epam.touragency.entity.UserPrincipal;
 import by.epam.touragency.logic.ToPageWithListLogic;
+import by.epam.touragency.logic.UpdateUserLogic;
 import by.epam.touragency.resource.ConfigurationManager;
 import by.epam.touragency.util.PageMsgConstant;
 import by.epam.touragency.util.ParameterConstant;
@@ -41,8 +42,7 @@ public class ToOrdersCommand {
             newIndex = (int) (Double.parseDouble(index) + Integer.parseInt(changeToPage));
         }
 
-        Set<Order> orderSet = null;
-        orderSet = toPageWithListLogic.getOrderSet(userRole, userId);
+        Set<Order> orderSet = toPageWithListLogic.getOrderSet(userRole, userId);
 
         ModelAndView modelAndView = new ModelAndView(ConfigurationManager.getProperty(PageMsgConstant.TO_ORDERS_PAGE_PATH));
         modelAndView.addObject(ParameterConstant.ATTR_NAME_ORDERS_PER_PAGE, ParameterConstant.NUMBER_ORDERS_PER_PAGE);

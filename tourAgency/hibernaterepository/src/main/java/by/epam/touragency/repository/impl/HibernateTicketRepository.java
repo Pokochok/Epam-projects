@@ -12,7 +12,7 @@ import java.util.ArrayDeque;
 import java.util.HashSet;
 import java.util.Set;
 
-@org.springframework.stereotype.Repository
+@org.springframework.stereotype.Repository("ticketRepository")
 public class HibernateTicketRepository implements Repository<Ticket> {
 
     private Session session;

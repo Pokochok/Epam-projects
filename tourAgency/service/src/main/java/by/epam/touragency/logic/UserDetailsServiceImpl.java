@@ -19,7 +19,7 @@ import java.util.Set;
 public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Autowired
-    @Qualifier("hibernateUserRepository")
+    @Qualifier("userRepository")
     private Repository<User> userRepository;
 
     @Override

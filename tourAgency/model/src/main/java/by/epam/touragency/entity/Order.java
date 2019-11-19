@@ -1,18 +1,41 @@
 package by.epam.touragency.entity;
 
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
 import java.util.Objects;
 
+@Entity
+@Table(name = "orders")
 public class Order {
+    @Id
+    @GeneratedValue(
+            generator="generator"
+    )
+    @GenericGenerator(
+            name = "generator",
+            strategy = "increment"
+    )
     private int id;
+    @Column(name = "payment_state")
     private boolean paymentState;
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_tour")
     private Tour tour;
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_ticket")
     private Ticket ticket;
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_client")
     private User client;
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_agent")
     private User agent;
     private int tourId;
     private int ticketId;
     private long clientId;
     private long agentId;
+
 
     private Order(){}
 

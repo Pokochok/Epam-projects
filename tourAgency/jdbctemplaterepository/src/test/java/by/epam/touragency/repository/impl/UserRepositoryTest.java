@@ -3,11 +3,10 @@ package by.epam.touragency.repository.impl;
 import by.epam.touragency.config.WebAppTestContext;
 import by.epam.touragency.entity.Role;
 import by.epam.touragency.entity.User;
-import by.epam.touragency.repository.impl.UserRepository;
 import by.epam.touragency.specification.Specification;
-import by.epam.touragency.specification.impl.agent.AddAgentSpecification;
-import by.epam.touragency.specification.impl.agent.FindAgentByLoginSpecification;
-import by.epam.touragency.specification.impl.agent.UpdateAgentNameByLoginSpecification;
+import by.epam.touragency.specification.impl.user.AddUserSpecification;
+import by.epam.touragency.specification.impl.client.FindUserByLoginSpecification;
+import by.epam.touragency.specification.impl.user.UpdateUserNameByLoginSpecification;
 import com.opentable.db.postgres.embedded.EmbeddedPostgres;
 import junit.framework.Assert;
 import org.flywaydb.core.Flyway;
@@ -51,10 +50,10 @@ public class UserRepositoryTest {
     public void add() {
         User user = new User.UserBuilder().setName("test").setSurname("test").setEmail("test@test.com").setLogin("test")
                 .setPassword("test").setPhoneNumber("+0000000000").setRole(Role.AGENT).setStatus("ACTIVE").build();
-        Specification specification = new AddAgentSpecification(user);
+        Specification specification = new AddUserSpecification(user);
         UserRepository.getInstance().add(user, specification);
         String expected = "test";
-        String actual = UserRepository.getInstance().query(new FindAgentByLoginSpecification("test")).iterator().next().getLogin();
+        String actual = UserRepository.getInstance().query(new FindUserByLoginSpecification("test")).iterator().next().getLogin();
         Assert.assertEquals(expected, actual);
     }
 
@@ -62,18 +61,18 @@ public class UserRepositoryTest {
     public void update() {
         User user = new User.UserBuilder().setName("test2").setSurname("test2").setEmail("test2@test.com").setLogin("test2")
                 .setPassword("test2").setPhoneNumber("+0000000000").setRole(Role.AGENT).setStatus("ACTIVE").build();
-        Specification specification = new AddAgentSpecification(user);
+        Specification specification = new AddUserSpecification(user);
         UserRepository.getInstance().add(user, specification);
         String expected = "test2updated";
-        UserRepository.getInstance().update(user, new UpdateAgentNameByLoginSpecification("test2updated", "test2"));
-        String actual = UserRepository.getInstance().query(new FindAgentByLoginSpecification("test2")).iterator().next().getName();
+        UserRepository.getInstance().update(user, new UpdateUserNameByLoginSpecification("test2updated", "test2"));
+        String actual = UserRepository.getInstance().query(new FindUserByLoginSpecification("test2")).iterator().next().getName();
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void query() {
         long expected = 0;
-        long actual = UserRepository.getInstance().query(new FindAgentByLoginSpecification("not defined")).iterator().next().getId();
+        long actual = UserRepository.getInstance().query(new FindUserByLoginSpecification("not defined")).iterator().next().getId();
         Assert.assertEquals(expected, actual);
     }
 }

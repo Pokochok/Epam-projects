@@ -1,6 +1,0 @@
-
-fsquid:S20952"HUse try-with-resources or close this "Connection" in a "finally" clause.(ô„¼­8ê¿•â-
-Ssquid:S18542"5Remove this useless assignment to local variable "c".(ô„¼­8ê¿•â-
-Tsquid:S26964"6Make the enclosing method "static" or remove this set.(™ï™à8ê¿•â-
-lsquid:S11923"IDefine a constant instead of duplicating this literal "postgres" 3 times.(‡°ˆùûÿÿÿÿ8ê¿•â-
-Dsquid:S14812"&Remove this unused "c" local variable.(ô„¼­8ê¿•â-

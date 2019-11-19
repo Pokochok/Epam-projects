@@ -1,9 +1,0 @@
-
-^$squid:AssignmentInSubExpressionCheck?".Extract the assignment out of this expression.(¿ž¤Ü
-c$squid:AssignmentInSubExpressionCheck}".Extract the assignment out of this expression.(ë§¥áøÿÿÿÿ
-]$squid:AssignmentInSubExpressionCheckk".Extract the assignment out of this expression.(ÿÖð6
-^$squid:AssignmentInSubExpressionCheck,".Extract the assignment out of this expression.(é™Ò’
-^$squid:AssignmentInSubExpressionCheckR".Extract the assignment out of this expression.(ƒ¯®Û
-lsquid:UselessImportCheck	"<Remove this unused import 'org.apache.logging.log4j.Logger'.(»¯øÿÿÿÿ8Í½¢âã-
-ksquid:UselessImportCheck"@Remove this unused import 'org.apache.logging.log4j.LogManager'.(Ë”Ëé8Í½¢âã-
-d$squid:AssignmentInSubExpressionCheck".Extract the assignment out of this expression.(ë§¥áøÿÿÿÿ

@@ -4,7 +4,7 @@ import by.epam.touragency.entity.User;
 import by.epam.touragency.entity.UserRowMapper;
 import by.epam.touragency.repository.Repository;
 import by.epam.touragency.specification.Specification;
-import by.epam.touragency.specification.impl.client.AddClientSpecification;
+import by.epam.touragency.specification.impl.user.AddUserSpecification;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,7 +40,7 @@ public class UserRepository implements Repository<User> {
 
     @Override
     public void add(User user, Specification specification) {
-        Specification addSpecification = new AddClientSpecification(user);
+        Specification addSpecification = new AddUserSpecification(user);
         jdbcTemplate.update(addSpecification.sqlQuery(), user.getName(), user.getSurname(), user.getEmail(),
                 user.getPhoneNumber(), user.getLogin(), user.getPassword(), user.getRole().toString());
     }

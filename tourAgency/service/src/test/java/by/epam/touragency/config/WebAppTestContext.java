@@ -32,7 +32,7 @@ public class WebAppTestContext {
         InputStream inputStream = WebAppTestContext.class.getClassLoader().getResourceAsStream("hibernate.properties");
         properties.load(inputStream);
         sessionFactory.setHibernateProperties(properties);
-        sessionFactory.setDataSource(pgSqlDataSource());
+//        sessionFactory.setDataSource(pgSqlDataSource());
         sessionFactory.setPackagesToScan("by.epam.touragency.entity");
         return sessionFactory;
     }
@@ -74,24 +74,24 @@ public class WebAppTestContext {
         };
     }
 
-    @Bean
-    public JdbcTemplate jdbcTemplate() {
-        return new JdbcTemplate(pgSqlDataSource());
-    }
-
-    @Bean
-    public PlatformTransactionManager platformTransactionManager(){
-        return new DataSourceTransactionManager(pgSqlDataSource());
-    }
-    @Bean
-    public DataSource pgSqlDataSource() {
-        DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName(PropertyHolder.getInstance().getDriverName());
-        dataSource.setUrl(PropertyHolder.getInstance().getUrl());
-        dataSource.setUsername(PropertyHolder.getInstance().getUserName());
-        dataSource.setPassword(PropertyHolder.getInstance().getPassword());
-        return dataSource;
-    }
+//    @Bean
+//    public JdbcTemplate jdbcTemplate() {
+//        return new JdbcTemplate(pgSqlDataSource());
+//    }
+//
+//    @Bean
+//    public PlatformTransactionManager platformTransactionManager(){
+//        return new DataSourceTransactionManager(pgSqlDataSource());
+//    }
+//    @Bean
+//    public DataSource pgSqlDataSource() {
+//        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+//        dataSource.setDriverClassName(PropertyHolder.getInstance().getDriverName());
+//        dataSource.setUrl(PropertyHolder.getInstance().getUrl());
+//        dataSource.setUsername(PropertyHolder.getInstance().getUserName());
+//        dataSource.setPassword(PropertyHolder.getInstance().getPassword());
+//        return dataSource;
+//    }
 
     @Bean
     public BCryptPasswordEncoder bCryptPasswordEncoder(){

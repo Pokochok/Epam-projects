@@ -1,18 +1,0 @@
-
-nsquid:S00100Ÿ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øþöÈ8¦§À•â-
-isquid:S1192E"KDefine a constant instead of duplicating this literal "notdefined" 3 times.(Îªïº8¦§À•â-
-fsquid:S20956"HUse try-with-resources or close this "Connection" in a "finally" clause.(ô„¼­8¦§À•â-
-rsquid:S00100r"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Šä¬Èúÿÿÿÿ8¦§À•â-
-jsquid:S1192y"LDefine a constant instead of duplicating this literal "1234567890" 12 times.(Ôª§ÿ8¦§À•â-
-Tsquid:S26968"6Make the enclosing method "static" or remove this set.(™ï™à8¦§À•â-
-rsquid:S00100~"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ë³Ö„ûÿÿÿÿ8¦§À•â-
-ksquid:S1192E"MDefine a constant instead of duplicating this literal "not defined" 18 times.(Îªïº8¦§À•â-
-dsquid:S1192M"FDefine a constant instead of duplicating this literal "login" 4 times.(Î‰Ðè8¦§À•â-
-lsquid:S1192s"IDefine a constant instead of duplicating this literal "password" 6 times.(¾þÓûûÿÿÿÿ8¦§À•â-
-esquid:S1192E"GDefine a constant instead of duplicating this literal "AGENT" 12 times.(Îªïº8¦§À•â-
-Ssquid:S18546"5Remove this useless assignment to local variable "c".(ô„¼­8¦§À•â-
-ssquid:S00100ª"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·… Ãúÿÿÿÿ8¦§À•â-
-ssquid:S00100‰"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(þÞ¢Ñúÿÿÿÿ8¦§À•â-
-lsquid:S11927"IDefine a constant instead of duplicating this literal "postgres" 3 times.(‡°ˆùûÿÿÿÿ8¦§À•â-
-Dsquid:S14816"&Remove this unused "c" local variable.(ô„¼­8¦§À•â-
-nsquid:S00100”"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„ÜŽÙ8¦§À•â-

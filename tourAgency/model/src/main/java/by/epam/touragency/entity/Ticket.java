@@ -4,7 +4,9 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 @Entity
 @Table(name = "tickets")
@@ -30,6 +32,13 @@ public class Ticket {
     private long departureDateTime;
     @Column(name = "arrival_datetime")
     private long arrivalDateTime;
+
+    @OneToMany(
+            mappedBy = "ticket",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    private List<Order> orders = new ArrayList<>();
 
     public Ticket() {
     }

@@ -7,7 +7,7 @@ import java.util.ArrayDeque;
 
 public class FindClientBySurnameSpecification implements Specification<User> {
     private static final String FIND_SPECIFICATION_SQL_BY_SURNAME = "SELECT id, name, surname, email, phone_number, login, " +
-            "password, role, status FROM users WHERE surname=?;";
+            "password, role, status FROM users WHERE surname=? AND role='CLIENT';";
     private String surname;
 
     public FindClientBySurnameSpecification(String surname) {

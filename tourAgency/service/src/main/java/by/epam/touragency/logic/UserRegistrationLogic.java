@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserRegistrationLogic {
     @Autowired
-    @Qualifier("hibernateUserRepository") // FIXME: 11/5/2019
+    @Qualifier("userRepository") // FIXME: 11/5/2019
     private Repository<User> userRepository;
 
     /**

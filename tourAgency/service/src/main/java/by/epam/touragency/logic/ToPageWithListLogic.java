@@ -5,8 +5,6 @@ import by.epam.touragency.entity.Role;
 import by.epam.touragency.entity.Ticket;
 import by.epam.touragency.entity.Tour;
 import by.epam.touragency.repository.Repository;
-import by.epam.touragency.repository.impl.HibernateTicketRepository;
-import by.epam.touragency.repository.impl.TourRepository;
 import by.epam.touragency.specification.Specification;
 import by.epam.touragency.specification.impl.order.FindAllOrdersSpecification;
 import by.epam.touragency.specification.impl.order.FindClientOrdersSpecification;
@@ -30,11 +28,11 @@ public class ToPageWithListLogic {
     private Repository<Order> orderRepository;
 
     @Autowired
-    @Qualifier("hibernateTourRepository")
+    @Qualifier("tourRepository")
     private Repository<Tour> tourRepository;
 
     @Autowired
-    @Qualifier("hibernateTicketRepository")
+    @Qualifier("ticketRepository")
     private Repository<Ticket> ticketRepository;
 
     /**

@@ -3,6 +3,8 @@ package by.epam.touragency.entity;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -30,6 +32,20 @@ public class User {
     @Enumerated(EnumType.STRING)
     private Role role;
     private String status;
+
+    @OneToMany(
+            mappedBy = "client",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    private List<Order> clientOrders = new ArrayList<>();
+
+    @OneToMany(
+            mappedBy = "agent",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    private List<Order> agentOrders = new ArrayList<>();
 
     public User() {
     }

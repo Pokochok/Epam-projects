@@ -1,20 +1,13 @@
 package by.epam.touragency.logic;
 
 import by.epam.touragency.entity.Tour;
+import by.epam.touragency.entity.User;
 import by.epam.touragency.repository.Repository;
-import by.epam.touragency.repository.impl.TourRepository;
-import by.epam.touragency.repository.impl.UserRepository;
-import by.epam.touragency.specification.*;
-import by.epam.touragency.specification.impl.admin.FindAdminByEmailSpecification;
-import by.epam.touragency.specification.impl.admin.FindAdminByLoginSpecification;
-import by.epam.touragency.specification.impl.admin.FindAdminByPhoneNumberSpecification;
-import by.epam.touragency.specification.impl.agent.FindAgentByEmailSpecification;
-import by.epam.touragency.specification.impl.agent.FindAgentByLoginSpecification;
-import by.epam.touragency.specification.impl.agent.FindAgentByPhoneNumberSpecification;
-import by.epam.touragency.specification.impl.client.FindClientByEmailSpecification;
-import by.epam.touragency.specification.impl.client.FindClientByLoginSpecification;
-import by.epam.touragency.specification.impl.client.FindClientByPhoneNumberSpecification;
+import by.epam.touragency.specification.Specification;
 import by.epam.touragency.specification.impl.tour.FindTourByNameSpecification;
+import by.epam.touragency.specification.impl.user.FindUserByEmailSpecification;
+import by.epam.touragency.specification.impl.user.FindUserByLoginSpecification;
+import by.epam.touragency.specification.impl.user.FindUserByPhoneNumberSpecification;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -25,8 +18,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class MatchOfUniqueFieldsDetector {
     @Autowired
-    @Qualifier("hibernateTourRepository")
+    @Qualifier("tourRepository")
     private Repository<Tour> tourRepository;
+
+    @Autowired
+    @Qualifier("userRepository")
+    private Repository<User> userRepository;
 
     /**
      * Checks, if such email exists
@@ -35,15 +32,8 @@ public class MatchOfUniqueFieldsDetector {
      * @return true, if email exists, and false - if not
      */
     public boolean isExistsEmail(String email) {
-        boolean flag = false;
-        Repository repository = UserRepository.getInstance();
-        Specification clientSpecification = new FindClientByEmailSpecification(email); // FIXME: 11/13/2019 change all this specifications
-        Specification agentSpecification = new FindAgentByEmailSpecification(email);
-        Specification adminSpecification = new FindAdminByEmailSpecification(email);
-        flag = repository.isExistsQuery(clientSpecification)
-                || repository.isExistsQuery(agentSpecification)
-                || repository.isExistsQuery(adminSpecification);
-        return flag;
+        Specification userSpecification = new FindUserByEmailSpecification(email);
+        return tourRepository.isExistsQuery(userSpecification);
     }
 
     /**
@@ -53,15 +43,8 @@ public class MatchOfUniqueFieldsDetector {
      * @return true, if phone number exists, and false - if not
      */
     public boolean isExistsPhoneNumber(String phoneNumber) {
-        boolean flag = false;
-        Repository repository = UserRepository.getInstance();
-        Specification clientSpecification = new FindClientByPhoneNumberSpecification(phoneNumber);
-        Specification agentSpecification = new FindAgentByPhoneNumberSpecification(phoneNumber);
-        Specification adminSpecification = new FindAdminByPhoneNumberSpecification(phoneNumber);
-        flag = repository.isExistsQuery(clientSpecification)
-                || repository.isExistsQuery(agentSpecification)
-                || repository.isExistsQuery(adminSpecification);
-        return flag;
+        Specification userSpecification = new FindUserByPhoneNumberSpecification(phoneNumber);
+        return tourRepository.isExistsQuery(userSpecification);
     }
 
     /**
@@ -71,15 +54,8 @@ public class MatchOfUniqueFieldsDetector {
      * @return true, if phone number exists, and false - if not
      */
     public boolean isExistsLogin(String login) {
-        boolean flag = false;
-        Repository repository = UserRepository.getInstance();
-        Specification clientSpecification = new FindClientByLoginSpecification(login);
-        Specification agentSpecification = new FindAgentByLoginSpecification(login);
-        Specification adminSpecification = new FindAdminByLoginSpecification(login);
-        flag = repository.isExistsQuery(clientSpecification)
-                || repository.isExistsQuery(agentSpecification)
-                || repository.isExistsQuery(adminSpecification);
-        return flag;
+        Specification userSpecification = new FindUserByLoginSpecification(login);
+        return userRepository.isExistsQuery(userSpecification);
     }
 
     /**

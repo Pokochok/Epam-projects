@@ -18,7 +18,7 @@ public class TourRegistrationLogic {
     private Validation validation;
 
     @Autowired
-    @Qualifier("hibernateTourRepository")
+    @Qualifier("tourRepository")
     private Repository<Tour> tourRepository;
 
     /**

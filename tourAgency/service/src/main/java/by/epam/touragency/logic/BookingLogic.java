@@ -5,8 +5,6 @@ import by.epam.touragency.entity.Ticket;
 import by.epam.touragency.entity.Tour;
 import by.epam.touragency.entity.User;
 import by.epam.touragency.repository.Repository;
-import by.epam.touragency.repository.impl.TourRepository;
-import by.epam.touragency.repository.impl.UserRepository;
 import by.epam.touragency.specification.Specification;
 import by.epam.touragency.specification.impl.agent.FindAgentByIdSpecification;
 import by.epam.touragency.specification.impl.client.FindClientByEmailSpecification;
@@ -31,8 +29,16 @@ public class BookingLogic {
     private Repository<Order> orderRepository;
 
     @Autowired
-    @Qualifier("hibernateTicketRepository")
+    @Qualifier("ticketRepository")
     private Repository<Ticket> ticketRepository;
+
+    @Autowired
+    @Qualifier("userRepository")
+    private Repository<User> userRepository;
+
+    @Autowired
+    @Qualifier("tourRepository")
+    private Repository<Tour> tourRepository;
 
     @Autowired
     private Validation validation;
@@ -48,7 +54,7 @@ public class BookingLogic {
             return false;
         }
         Specification clientByEmail = new FindClientByEmailSpecification(clientEmail);
-        return UserRepository.getInstance().isExistsQuery(clientByEmail);
+        return userRepository.isExistsQuery(clientByEmail);
     }
 
 
@@ -63,7 +69,7 @@ public class BookingLogic {
     private Specification defineClientSpecification(String clientId, String clientEmail, String agentId) {
         Specification clientQuery = null;
         if (agentId.equals("0")) {
-            clientQuery = new FindClientByIdSpecification(Integer.parseInt(clientId));
+            clientQuery = new FindClientByIdSpecification(Integer.parseInt(clientId)); // FIXME: 11/15/2019 FindUserByIdSpecification
         } else {
             clientQuery = new FindClientByEmailSpecification(clientEmail);
         }
@@ -97,9 +103,9 @@ public class BookingLogic {
         Set<User> agents = null;
 
         tickets = ticketRepository.query(ticketQuery);
-        clients = UserRepository.getInstance().query(clientQuery);
-        agents = UserRepository.getInstance().query(agentQuery);
-        tours = TourRepository.getInstance().query(tourQuery);
+        clients = userRepository.query(clientQuery);
+        agents = userRepository.query(agentQuery);
+        tours = tourRepository.query(tourQuery);
 
         Order order = null;
         if (!(clients.isEmpty() || agents.isEmpty())) {

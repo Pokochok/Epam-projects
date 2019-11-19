@@ -12,14 +12,14 @@ import java.util.ArrayDeque;
 import java.util.HashSet;
 import java.util.Set;
 
-@org.springframework.stereotype.Repository
+@org.springframework.stereotype.Repository("tourRepository")
 public class HibernateTourRepository implements Repository<Tour> {
 
     private Session session;
 
     @Autowired
-    public HibernateTourRepository(SessionFactory sessionFactory) {
-        this.session = sessionFactory.openSession();
+    public HibernateTourRepository(Session session) {
+        this.session = session;
     }
 
     @Override

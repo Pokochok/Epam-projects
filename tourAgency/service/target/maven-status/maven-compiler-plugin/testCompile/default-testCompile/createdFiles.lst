@@ -3,7 +3,6 @@ by\epam\touragency\logic\ToPageWithListLogicTest.class
 by\epam\touragency\config\WebAppTestContext.class
 by\epam\touragency\util\ValidationTest.class
 by\epam\touragency\config\WebAppTestContext$1.class
-by\epam\touragency\logic\UpdateUserLogicTest.class
 by\epam\touragency\logic\TicketServiceTest.class
 by\epam\touragency\logic\TicketRegistrationLogicTest.class
 by\epam\touragency\logic\MatchOfUniqueFieldsDetectorTest.class

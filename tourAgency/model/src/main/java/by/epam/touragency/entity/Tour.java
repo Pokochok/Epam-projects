@@ -6,7 +6,9 @@ import org.springframework.stereotype.Component;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 @Entity
 @Component
@@ -42,6 +44,13 @@ public class Tour {
     private int childrenNumber;
     private BigDecimal price;
     private String status;
+
+    @OneToMany(
+            mappedBy = "tour",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    private List<Order> orders = new ArrayList<>();
 
     public Tour() {
     }

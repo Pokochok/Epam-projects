@@ -1,0 +1,6 @@
+
+~squid:UselessImportCheck"SRemove this unused import 'org.springframework.web.bind.annotation.ModelAttribute'.(®ùæé8Ñ“ÓÓæ-
+^squid:S4684"@Replace this persistent entity with a simple POJO or DTO object.(×’ä¦8àüÊĞæ-
+squid:UselessImportCheck
+"QRemove this unused import 'org.springframework.web.bind.annotation.RequestParam'.(Â¬À·ùÿÿÿÿ8Ò¿ĞÔæ-
+€squid:UselessImportCheck	"URemove this unused import 'org.springframework.web.bind.annotation.RequestAttribute'.(³º„„8‹ÂĞÓæ-

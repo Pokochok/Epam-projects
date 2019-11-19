@@ -16,7 +16,7 @@ import java.math.BigDecimal;
 @Service
 public class UpdateTourLogic {
     @Autowired
-    @Qualifier("hibernateTourRepository")
+    @Qualifier("tourRepository")
     private Repository<Tour> tourRepository;
 
     /**

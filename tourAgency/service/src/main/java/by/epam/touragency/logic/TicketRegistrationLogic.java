@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 public class TicketRegistrationLogic {
 
     @Autowired
-    @Qualifier("hibernateTicketRepository")
+    @Qualifier("ticketRepository")
     private Repository<Ticket> ticketRepository;
 
     /**

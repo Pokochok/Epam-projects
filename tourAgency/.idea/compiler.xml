@@ -7,11 +7,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="jdbctemplaterepository" />
         <module name="model" />
         <module name="hibernaterepository" />
         <module name="webapp" />
         <module name="service" />
-        <module name="jdbctemplaterepository" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

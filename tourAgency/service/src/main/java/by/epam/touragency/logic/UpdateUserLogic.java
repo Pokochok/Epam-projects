@@ -5,8 +5,6 @@ import by.epam.touragency.entity.UserPrincipal;
 import by.epam.touragency.repository.Repository;
 import by.epam.touragency.specification.Specification;
 import by.epam.touragency.specification.impl.user.*;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -21,7 +19,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class UpdateUserLogic {
     @Autowired
-    @Qualifier("hibernateUserRepository")
+    @Qualifier("userRepository")
     private Repository<User> userRepository;
 
     @Autowired
@@ -61,7 +59,7 @@ public class UpdateUserLogic {
         boolean flag = !(matchOfUniqueFieldsDetector.isExistsPhoneNumber(newPhoneNumber)
                 || !matchOfUniqueFieldsDetector.isExistsLogin(login));
         if (flag) {
-            Specification specification = new UpdateUserPhoneNumberByLoginSpecification(newPhoneNumber, login);
+            Specification specification = new UpdateUserPhoneByLoginSpecification(newPhoneNumber, login);
             user.setPhoneNumber(newPhoneNumber);
             userRepository.update(user, specification);
         }
@@ -117,7 +115,6 @@ public class UpdateUserLogic {
      */
     public boolean updateName(User user, String login, String newName) {
         Specification specification = new UpdateUserNameByLoginSpecification(newName, login);
-
         boolean flag = matchOfUniqueFieldsDetector.isExistsLogin(login);
         if (flag) {
             userRepository.update(user, specification);

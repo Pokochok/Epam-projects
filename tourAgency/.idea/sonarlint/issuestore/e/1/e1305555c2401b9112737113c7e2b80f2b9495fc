@@ -1,8 +1,0 @@
-
-esquid:S1192"IDefine a constant instead of duplicating this literal "postgres" 3 times.(‡°ˆùûÿÿÿÿ
-Msquid:S2696"6Make the enclosing method "static" or remove this set.(™ï™à
-csquid:S1192$"LDefine a constant instead of duplicating this literal "not defined" 4 times.(Ò¤ìÍ
-Lsquid:S1854"5Remove this useless assignment to local variable "c".(ô„¼­
-_squid:S2095"HUse try-with-resources or close this "Connection" in a "finally" clause.(ô„¼­
-=squid:S1481"&Remove this unused "c" local variable.(ô„¼­
-qsquid:S1450"URemove the "flyway" field and declare it as a local variable in the relevant methods.(¹¬‹ùýÿÿÿÿ

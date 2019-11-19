@@ -4,7 +4,6 @@ import by.epam.touragency.entity.User;
 import by.epam.touragency.repository.Repository;
 import by.epam.touragency.specification.Specification;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -12,14 +11,14 @@ import java.util.ArrayDeque;
 import java.util.HashSet;
 import java.util.Set;
 
-@org.springframework.stereotype.Repository
+@org.springframework.stereotype.Repository("userRepository")
 public class HibernateUserRepository  implements Repository<User> {
 
     private Session session;
 
     @Autowired
-    public HibernateUserRepository(SessionFactory sessionFactory){
-        session = sessionFactory.openSession();
+    public HibernateUserRepository(Session session){
+        this.session = session;
     }
 
     @Override
